@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>nzbgetvpn</Name>
+  <Overview>
+    NZBGet is a cross-platform binary newsgrabber for nzb files, written in C++. It supports client/server mode, automatic par-check/-repair, web-interface, command-line interface, etc. NZBGet requires low system resources and runs great on routers, NAS-devices and media players.
+	This Docker includes OpenVPN to ensure a secure and private connection to the Internet
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Registry>https://registry.hub.docker.com/r/jshridha/docker-nzbgetvpn/</Registry>
+  <GitHub>https://github.com/jshridha/docker-nzbgetvpn</GitHub>
+  <Repository>jshridha/docker-nzbgetvpn</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6789</HostPort>
+        <ContainerPort>6789</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>VPN_ENABLED</Name>
+      <Value>yes</Value>
+    </Variable>
+    <Variable>
+      <Name>STRONG_CERTS</Name>
+      <Value>no</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_USER</Name>
+      <Value>username</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PASS</Name>
+      <Value>password</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_REMOTE</Name>
+      <Value>nl.privateinternetaccess.com</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PORT</Name>
+      <Value>1198</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PROV</Name>
+      <Value>pia</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PROTOCOL</Name>
+      <Value>udp</Value>
+    </Variable>
+    <Variable>
+      <Name>LAN_NETWORK</Name>
+      <Value>192.168.1.0/24</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nzbgetvpn/downloads</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nzbgetvpn/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:6789]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/nzbget-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/nzbgetvpn.xml</TemplateURL>
+  <Category>Downloaders:</Category>
+  <Description>NZBGet is a cross-platform binary newsgrabber for nzb files, written in C++. It supports client/server mode, automatic par-check/-repair, web-interface, command-line interface, etc. NZBGet requires low system resources and runs great on routers, NAS-devices and media players.
+	This Docker includes OpenVPN to ensure a secure and private connection to the Internet</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BungysRepository/Bungy/nzbgetvpn.xml</templatePath>
+</Container>

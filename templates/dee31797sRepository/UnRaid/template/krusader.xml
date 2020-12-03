@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>krusader</Name>
+  <Repository>djaydev/krusader</Repository>
+  <Registry>https://hub.docker.com/r/djaydev/krusader</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/77603-virt-manager-intel-gpu-tools-and-more-dockers/</Support>
+  <Project>https://krusader.org/</Project>
+  <Overview>Krusader is an advanced twin panel (commander style) file manager similar to Midnight or Total Commander.  It supports extensive archive handling, mounted filesystem support, advanced search, viewer/editor, directory synchronisation, file content comparisons, batch renaming, etc.
+  [br][br]
+  The GUI of the application is accessed through a modern web browser (no installation or configuration needed on client side) or via any VNC client.
+  Also, being based on Alpine Linux, container size is somewhat smaller than standard distros.</Overview>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/djaydev/docker-virt-manager/master/UnRaid/template/krusader.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/krusader-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6090</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/krusader</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/</HostDir>
+      <ContainerDir>/unraid_unassigned_disks</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/unraid_shares</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/boot/</HostDir>
+      <ContainerDir>/unraid_flashdrive</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1280</Value>
+      <Name>DISPLAY_WIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>768</Value>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>KEEP_APP_RUNNING</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="webvnc" Target="5800" Default="5800" Mode="tcp" Description="webvnc container port 5800" Type="Port" Display="always" Required="false" Mask="false">6080</Config>
+  <Config Name="vnc" Target="5900" Default="5900" Mode="tcp" Description="vnc container port 5900" Type="Port" Display="always" Required="false" Mask="false">6090</Config>
+  <Config Name="USER_ID" Target="USER_ID" Default="99" Mode="" Description="USER_ID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="GROUP_ID" Target="GROUP_ID" Default="100" Mode="" Description="GROUP_ID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="always" Required="false" Mask="false">1280</Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="always" Required="false" Mask="false">768</Config>
+  <Config Name="KEEP_APP_RUNNING" Target="KEEP_APP_RUNNING" Default="" Mode="" Description="KEEP_APP_RUNNING" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw" Description="Container Path:  /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/krusader</Config>
+  <Config Name="Host Path 2" Target="/unraid_unassigned_disks" Default="" Mode="rw,slave" Description="Container Path: /unraid_unassigned_disks" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/</Config>
+  <Config Name="Host Path 3" Target="/unraid_shares" Default="" Mode="rw" Description="Container Path: /unraid_shares" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Host Path 4" Target="/unraid_flashdrive" Default="" Mode="rw" Description="Container Path: /unraid_flashdrive" Type="Path" Display="always" Required="false" Mask="false">/boot/</Config>
+  <DonateLink>https://www.paypal.me/djaydev/0usd</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Category>Tools:Utilities</Category>
+  <Description>Krusader is an advanced twin panel (commander style) file manager similar to Midnight or Total Commander.  It supports extensive archive handling, mounted filesystem support, advanced search, viewer/editor, directory synchronisation, file content comparisons, batch renaming, etc.
+  
+  The GUI of the application is accessed through a modern web browser (no installation or configuration needed on client side) or via any VNC client.
+  Also, being based on Alpine Linux, container size is somewhat smaller than standard distros.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dee31797sRepository/UnRaid/template/krusader.xml</templatePath>
+</Container>

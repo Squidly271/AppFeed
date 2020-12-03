@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1605070800</Date>
+  <Name>Portainer-CE</Name>
+  <Project>https://www.portainer.io/</Project>
+  <Overview>
+    Portainer is a lightweight management UI which allows you to easily manage your Docker AND Kubernetes clusters.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/portainer/portainer-ce</Registry>
+  <GitHub>https://github.com/DanRegalia/Portainer-CE-Unraid</GitHub>
+  <Repository>portainer/portainer-ce</Repository>
+  <Support>https://forums.unraid.net/topic/38974-support-limetechs-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/portainer-ce</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Icon>https://d36jcksde1wxzq.cloudfront.net/be7833db9bddb4494d2a7c3dd659199a.png</Icon>
+  <Network Default="bridge">bridge</Network>
+  <Config Type="Port" Name="Web Interface Port" Target="9000" Default="9000" Mode="tcp" Display="always-visible" Required="true" Description="This is Portainer's Web UI port you can access via a web browser.">9000</Config>
+  <Config Type="Path" Name="Config Storage Path" Target="/config" Default="/mnt/user/appdata/portainer-ce" Mode="rw" Display="always-visible" Required="true" Description="This is where Portainer will store its databases and configuration.">/mnt/user/appdata/portainer-ce</Config>
+  <Config Type="Socket" Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Display="advanced-hide" Required="true" Description="This is needed for Portainer to connect to Docker.">/var/run/docker.sock</Config>
+  <TemplateURL>https://raw.githubusercontent.com/DanRegalia/Portainer-CE-Unraid/main/portainer-ce-unraid.xml</TemplateURL>
+  <Category>Other:Uncategorized</Category>
+  <Description>Portainer is a lightweight management UI which allows you to easily manage your Docker AND Kubernetes clusters.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/DanRegaliasRepository/portainer-ce-unraid.xml</templatePath>
+</Container>

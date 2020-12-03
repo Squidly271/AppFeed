@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>zabbix-agent</Name>
+  <Repository>zabbix/zabbix-agent:latest</Repository>
+  <Registry>https://hub.docker.com/r/zabbix/zabbix-agent</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Overview>This container is just the Zabbix Agent for UNRAID. Any Zabbix Server configuration/setup will need to be completed by yourself. [br]&#13;
+To set this container up just edit the following:&#13;
+"HOSTNAME" to your unraid server hostname&#13;
+"ZABBIX SERVER/PROXY IP" to the IP address of your Zabbix Server or Proxy&#13;
+[br]&#13;
+If you would like Zabbix to monitor disks as well as system resources you will need to add each one as a path manually.&#13;
+Please view the guide available on the forums.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/HNGamingUK/unraid-docker-templates/master/zabbix-agent/zabbix-agent.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/HNGamingUK/unraid-docker-templates/master/zabbix-agent/images/Zabbix-Logo.png</Icon>
+  <Support>https://forums.unraid.net/topic/83221-support-conmyster-zabbix-agent/</Support>
+  <Date>1568433600</Date>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>HOSTNAME</Value>
+      <Name>ZBX_HOSTNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ZABBIX SERVER/PROXY IP</Value>
+      <Name>ZBX_SERVER_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>unencrypted</Value>
+      <Name>ZBX_TLSCONNECT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>unencrypted</Value>
+      <Name>ZBX_TLSACCEPT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="ZBX_HOSTNAME" Target="ZBX_HOSTNAME" Default="" Mode="" Description="Container Variable: ZBX_HOSTNAME" Type="Variable" Display="always" Required="false" Mask="false">HOSTNAME</Config>
+  <Config Name="ZBX_SERVER_HOST" Target="ZBX_SERVER_HOST" Default="" Mode="" Description="Container Variable: ZBX_SERVER_HOST" Type="Variable" Display="always" Required="false" Mask="false">ZABBIX SERVER/PROXY IP</Config>
+  <Config Name="ZBX_TLSCONNECT" Target="ZBX_TLSCONNECT" Default="" Mode="" Description="Container Variable: ZBX_TLSCONNECT" Type="Variable" Display="always" Required="false" Mask="false">unencrypted</Config>
+  <Config Name="ZBX_TLSACCEPT" Target="ZBX_TLSACCEPT" Default="" Mode="" Description="Container Variable: ZBX_TLSACCEPT" Type="Variable" Display="always" Required="false" Mask="false">unencrypted</Config>
+  <Category>Network:Management</Category>
+  <Description>This container is just the Zabbix Agent for UNRAID. Any Zabbix Server configuration/setup will need to be completed by yourself. &#13;
+To set this container up just edit the following:&#13;
+"HOSTNAME" to your unraid server hostname&#13;
+"ZABBIX SERVER/PROXY IP" to the IP address of your Zabbix Server or Proxy&#13;
+&#13;
+If you would like Zabbix to monitor disks as well as system resources you will need to add each one as a path manually.&#13;
+Please view the guide available on the forums.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ConmystersRepository/zabbix-agent/zabbix-agent.xml</templatePath>
+</Container>

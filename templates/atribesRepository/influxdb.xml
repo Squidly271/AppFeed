@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1472788800</Date>
+  <Name>Influxdb</Name>
+  <Overview>
+    InfluxDB is an open source time series database with no external dependencies. It's useful for recording metrics, events, and performing analytics.
+  </Overview>
+  <Project>https://influxdata.com/</Project>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Registry>https://hub.docker.com/_/influxdb/</Registry>
+  <GitHub>https://github.com/influxdata/influxdb</GitHub>
+  <Repository>influxdb:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8086</HostPort>
+        <ContainerPort>8086</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/influxdb</HostDir>
+      <ContainerDir>/var/lib/influxdb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8083]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/pootzko/InfluxData.Net/master/nuget-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/atribe/unRAID-docker/master/influxdb.xml</TemplateURL>
+  <Category>Network:Management Tools:Utilities</Category>
+  <Description>InfluxDB is an open source time series database with no external dependencies. It's useful for recording metrics, events, and performing analytics.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/atribesRepository/influxdb.xml</templatePath>
+</Container>

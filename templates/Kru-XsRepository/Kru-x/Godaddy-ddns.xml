@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Godaddy-ddns</Name>
+  <Repository>jwater7/godaddy-publicip-updater</Repository>
+  <Registry>https://hub.docker.com/r/jwater7/godaddy-publicip-updater/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/86922-support-kru-x-godaddy-ddns/</Support>
+  <Overview>Docker image to provide a DDNS service for godaddy domains. Uses the GoDaddy REST API to update the given domain's DNS IP address to the public IP address of the host it is executing on. Performs a check every 10 minutes, but you can alter this if you like by modifying /etc/cron.d/godaddy-ddns inside the container.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/Godaddy-ddns.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/img/GoDaddy.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>GODADDY_API_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>GODADDY_API_SECRET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>GODADDY_DOMAINS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Godaddy's API Key" Target="GODADDY_API_KEY" Default="Use the 'key' from your godaddy account" Mode="" Description="Use the 'key' from your godaddy account" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Godaddy's API Secret" Target="GODADDY_API_SECRET" Default="Use the 'secret' from your godaddy account " Mode="" Description="Use the 'secret' from your godaddy account " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Domain Name" Target="GODADDY_DOMAINS" Default="Domain Name" Mode="" Description="A comma-separated list of domains that you'd like to update. For example: mydomain.com or mydomain.com,anotherdomain.com" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Category>Network:Web</Category>
+  <Description>Docker image to provide a DDNS service for godaddy domains. Uses the GoDaddy REST API to update the given domain's DNS IP address to the public IP address of the host it is executing on. Performs a check every 10 minutes, but you can alter this if you like by modifying /etc/cron.d/godaddy-ddns inside the container.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Kru-XsRepository/Kru-x/Godaddy-ddns.xml</templatePath>
+</Container>

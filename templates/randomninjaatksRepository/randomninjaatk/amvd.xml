@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>amvd</Name>
+  <Repository>randomninjaatk/amvd</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/amvd</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-amvd</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/amvd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/amvd.png</Icon>
+  <Overview>Automated Music Video Downloader :: AMVD is a Lidarr Companion script to automatically download and tag Music Videos for use in various media applications</Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI></WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /downloads-amvd" Target="/downloads-amvd" Default="" Mode="rw" Description="Container Path: /downloads-amvd" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Enable Automatic Script Start" Target="AUTOSTART" Default="true" Mode="" Description="true = Enabled :: Runs script automatically on startup" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Script Interval" Target="SCRIPTINTERVAL" Default="15m" Mode="" Description="#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d = days :: Amount of time between each script run, when AUTOSTART is enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Musicbrainz Mirror URL" Target="MBRAINZMIRROR" Default="https://musicbrainz.org" Mode="" Description="OPTIONAL: Only change if using a different mirror" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Musicbrainz Rate Limit" Target="MBRATELIMIT" Default="1" Mode="" Description="OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection per second, max setting is 10" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Music Videos Source Connection" Target="SOURCE_CONNECTION" Default="lidarr" Mode="" Description="lidarr or ama :: ama requires the AMA config folder to be mounted as a volume: /ama" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Lidarr Url" Target="LidarrUrl" Default="http://127.0.0.1:8686" Mode="" Description="Set domain or IP to your Lidarr instance including port. If using reverse proxy, do not use a trailing slash. Ensure you specify http/s." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Lidarr API Key" Target="LidarrAPIkey" Default="" Mode="" Description="Lidarr API key" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Music Videos Country Code" Target="CountryCode" Default="us" Mode="" Description="Set the country code for preferred video matching, uses Musicbrainz Country Codes, lowercase only." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Require Match" Target="RequireVideoMatch" Default="true" Mode="" Description="true = enabled :: Only keep videos that could be matched to a Musicbrainz music track." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Format" Target="videoformat" Default="--format bestvideo[vcodec*=avc1]+bestaudio" Mode="" Description="For guidence, please see youtube-dl documentation" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Subtitle Langauge" Target="subtitlelanguage" Default="en" Mode="" Description="Desired Language Code :: For guidence, please see youtube-dl documentation" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Filter Match" Target="videofilter" Default="live" Mode="" Description="This will filter out videos Matching MusicBrainz secondary release type and album disambiguation (single word only)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Write NFO" Target="WriteNFOs" Default="false" Mode="" Description="true = enabled :: Create NFO and Local Thumbnail for use in applications such as Kodi" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Use Folders" Target="USEFOLDERS" Default="false" Mode="" Description="true = enabled :: Creates subfolders using the Lidarr Artist folder name" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Use Video Folders" Target="USEVIDEOFOLDERS" Default="false" Mode="" Description="true = enabled :: Creates subfolders using Video File Name only, requires USEFOLDERS to be enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos Folder Permissions" Target="FolderPermissions" Default="766" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Videos File Permissions" Target="FilePermissions" Default="666" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: USER_ID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: GROUP_ID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Description>Automated Music Video Downloader :: AMVD is a Lidarr Companion script to automatically download and tag Music Videos for use in various media applications</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/amvd.xml</templatePath>
+</Container>

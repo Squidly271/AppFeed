@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>NGINXPageSpeed</Name>
+  <Date>1549170000</Date>
+  <Repository>siwatinc/nginx-pagespeed</Repository>
+  <Registry>https://registry.hub.docker.com/r/siwatinc/nginx-pagespeed</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <Overview>NGINX OpenSource Build with PageSpeed, The PageSpeed modules are open-source server modules that optimize your site automatically.</Overview>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/pagespeed_32dp.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>81</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>444</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-pagespeed</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-pagespeed/cache</HostDir>
+      <ContainerDir>/var/cache/nginx</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Environment></Environment>
+  <Config Name="Configuration Folder" Target="/config" Default="/mnt/user/appdata/nginx-pagespeed" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/nginx-pagespeed</Config>
+  <Config Name="HTTP Port" Target="80" Default="81" Mode="tcp" Description="Port for the HTTP Protocol" Type="Port" Display="advanced" Required="true" Mask="false">81</Config>
+  <Config Name="HTTPS Port" Target="443" Default="444" Mode="tcp" Description="Port for the HTTPS Protocol (Not enabled by default)" Type="Port" Display="advanced" Required="true" Mask="false">444</Config>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/nginxpagespeed.xml</TemplateURL>
+  <Category>Network:Web</Category>
+  <Description>NGINX OpenSource Build with PageSpeed, The PageSpeed modules are open-source server modules that optimize your site automatically.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/nginxpagespeed.xml</templatePath>
+</Container>

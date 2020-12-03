@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>traefik</Name>
+  <Repository>traefik:latest</Repository>
+  <Registry>https://registry.hub.docker.com/_/traefik</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/benderstwin/docker-templates/issues</Support>
+  <Overview>Traefik is a modern reverse-proxy.  You must have a traefik.toml config located in your appdata/traefik directory.  Example template with very little modification needed is available here https://raw.githubusercontent.com/benderstwin/Portainer-Templates/master/traefik.toml&#13;
+&#13;
+Note on SSL - easiest method is to use a free account at cloudflare.  &#13;
+&#13;
+In cloudflare:&#13;
+&#13;
+Set up DNS records.&#13;
+-use CNAMES for subdomains to point to TLD&#13;
+&#13;
+On the crypto tab in cloudflare&#13;
+-request wildcard ssl cert (universal) for edge&#13;
+-generate origin cert and key&#13;
+-enable SSL client authentication&#13;
+-turn on SSL Full (strict)&#13;
+&#13;
+NOTE:  It is possible to use Traefik with ACME (Lets Encrypt).  This will require modification beyond the scope of this template (although you could modify the traefik.toml pretty easily to enable this).&#13;
+&#13;
+TO ADD APPS TO TRAEFIK:&#13;
+Traefik uses labels to assign proxy behavior&#13;
+Add these labels to your other containers to enable proxy&#13;
+Available Labels:&#13;
+traefik.enable=true  #required to proxy:Enable Traefik to expose app to the frontend and proxy&#13;
+traefik.backend=ombi  #required:name of the container Traefik should map to on the back end (sonarr, radarr, jackett etc...)&#13;
+traefik.frontend.rule=Host:ombi.domain.com  #required/optional: Sets the subdomain rule.&#13;
+traefik.frontend.rule=Host:domain.com; PathPrefixStrip: /ombi #optional for using subfolders&#13;
+traefik.port=3579 #required:container port to send traffic to.  Source container port, not the mapping in unraid&#13;
+traefik.frontend.auth.basic.usersFile=/shared/.htpasswd  ## This is what sets up the front end interface to use the generated .htaccess file.  Add this line to any site you want additional security on.&#13;
+traefik.docker.network=bridge  #required: Specify the docker network&#13;
+traefik.frontend.headers.SSLRedirect=true #optional but might as well if you are using SSL&#13;
+traefik.frontend.headers.STSSeconds=315360000 #optional&#13;
+traefik.frontend.headers.browserXSSFilter=true #optional&#13;
+traefik.frontend.headers.contentTypeNosniff=true #optional&#13;
+traefik.frontend.headers.forceSTSHeader=true #may be required&#13;
+traefik.frontend.headers.SSLHost=domain.com #required&#13;
+traefik.frontend.headers.STSIncludeSubdomains=true #may be required&#13;
+traefik.frontend.headers.STSPreload=true #optional&#13;
+traefik.frontend.headers.frameDeny=true #optional</Overview>
+  <WebUI>http://127.0.0.1:8080</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/benderstwin/docker-templates/master/Bender-traefik.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/traefik.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>I do it for the fame</DonateText>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/traefik</HostDir>
+      <ContainerDir>/etc/traefik</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/traefik/shared</HostDir>
+      <ContainerDir>/shared</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Labels>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.enable</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>traefik</Value>
+      <Name>traefik.backend</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>Host:traefikhome.domain.com</Value>
+      <Name>traefik.frontend.rule</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>domain.com</Value>
+      <Name>traefik.frontend.headers.SSLHost</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>/shared/.htpasswd</Value>
+      <Name>traefik.frontend.auth.basic.usersFile</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>bridge</Value>
+      <Name>traefik.docker.network</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.SSLRedirect</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>315360000</Value>
+      <Name>traefik.frontend.headers.STSSeconds</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.browserXSSFilter</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.contentTypeNosniff</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.forceSTSHeader</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.STSIncludeSubdomains</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.STSPreload</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>true</Value>
+      <Name>traefik.frontend.headers.frameDeny</Name>
+      <Mode></Mode>
+    </Label>
+    <Label>
+      <Value>8080</Value>
+      <Name>traefik.port</Name>
+      <Mode></Mode>
+    </Label>
+  </Labels>
+  <Config Name="Enable Traefik" Target="traefik.enable" Default="true" Mode="" Description="set to false to NOT proxy this application" Type="Label" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Backend container name" Target="traefik.backend" Default="traefik" Mode="" Description="Name of the container to route traffic to" Type="Label" Display="always" Required="true" Mask="false">traefik</Config>
+  <Config Name="Traefik frontend host" Target="traefik.frontend.rule" Default="Host:traefik.domain.fun" Mode="" Description="Only use one fromtend rule.  This one is for using subdomains instead of subfolders.  &#13;&#10;&#13;&#10;YOU MUST REMOVE THIS RULE TO USE SUB FOLDERS." Type="Label" Display="always" Required="false" Mask="false">Host:traefikhome.domain.com</Config>
+  <Config Name="Domain Name (TLD)" Target="traefik.frontend.headers.SSLHost" Default="domain.fun" Mode="" Description="Change to your TLD" Type="Label" Display="always" Required="true" Mask="false">domain.com</Config>
+  <Config Name="Config" Target="/etc/traefik" Default="/mnt/user/appdata/traefik" Mode="rw" Description="path to config directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/traefik</Config>
+  <Config Name="/shared" Target="/shared" Default="/mnt/user/appdata/traefik/shared" Mode="rw" Description="should contain:&#13;&#10;&#13;&#10;SSL CERT as .crt&#13;&#10;SSL KEY as .key&#13;&#10;.htpasswd file if using http basic auth" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/traefik/shared</Config>
+  <Config Name="443:443" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="8080:8080" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="http auth file" Target="traefik.frontend.auth.basic.usersFile" Default="/shared/.htpasswd" Mode="" Description="Container Label: traefik.frontend.auth.basic.usersFile" Type="Label" Display="always" Required="false" Mask="false">/shared/.htpasswd</Config>
+  <Config Name="Docker Network" Target="traefik.docker.network" Default="bridge" Mode="" Description="connect to default bridge network.  " Type="Label" Display="advanced" Required="true" Mask="false">bridge</Config>
+  <Config Name="traefik.frontend.headers.SSLRedirect" Target="traefik.frontend.headers.SSLRedirect" Default="true" Mode="" Description="traefik.frontend.headers.SSLRedirect" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="traefik.frontend.headers.STSSeconds" Target="traefik.frontend.headers.STSSeconds" Default="315360000" Mode="" Description="traefik.frontend.headers.STSSeconds" Type="Label" Display="advanced" Required="true" Mask="false">315360000</Config>
+  <Config Name="traefik.frontend.headers.browserXSSFilter" Target="traefik.frontend.headers.browserXSSFilter" Default="true" Mode="" Description="traefik.frontend.headers.browserXSSFilter" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="traefik.frontend.headers.contentTypeNosniff" Target="traefik.frontend.headers.contentTypeNosniff" Default="true" Mode="" Description="traefik.frontend.headers.contentTypeNosniff" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="traefik.frontend.headers.forceSTSHeader" Target="traefik.frontend.headers.forceSTSHeader" Default="true" Mode="" Description="traefik.frontend.headers.forceSTSHeader" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="traefik.frontend.headers.STSIncludeSubdomains" Target="traefik.frontend.headers.STSIncludeSubdomains" Default="true" Mode="" Description="traefik.frontend.headers.STSIncludeSubdomains" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="traefik.frontend.headers.STSPreload" Target="traefik.frontend.headers.STSPreload" Default="true" Mode="" Description="traefik.frontend.headers.STSPreload" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="traefik.frontend.headers.frameDeny" Target="traefik.frontend.headers.frameDeny" Default="true" Mode="" Description="traefik.frontend.headers.frameDeny" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Path to docker socket" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="traefik.port" Target="traefik.port" Default="8080" Mode="" Description="What port does your traefik container listen on?" Type="Label" Display="advanced" Required="true" Mask="false">8080</Config>
+  <Date>1543869167</Date>
+  <Category>Network:Web Network:Proxy</Category>
+  <Description>Traefik is a modern reverse-proxy.  You must have a traefik.toml config located in your appdata/traefik directory.  Example template with very little modification needed is available here https://raw.githubusercontent.com/benderstwin/Portainer-Templates/master/traefik.toml&#13;
+&#13;
+Note on SSL - easiest method is to use a free account at cloudflare.  &#13;
+&#13;
+In cloudflare:&#13;
+&#13;
+Set up DNS records.&#13;
+-use CNAMES for subdomains to point to TLD&#13;
+&#13;
+On the crypto tab in cloudflare&#13;
+-request wildcard ssl cert (universal) for edge&#13;
+-generate origin cert and key&#13;
+-enable SSL client authentication&#13;
+-turn on SSL Full (strict)&#13;
+&#13;
+NOTE:  It is possible to use Traefik with ACME (Lets Encrypt).  This will require modification beyond the scope of this template (although you could modify the traefik.toml pretty easily to enable this).&#13;
+&#13;
+TO ADD APPS TO TRAEFIK:&#13;
+Traefik uses labels to assign proxy behavior&#13;
+Add these labels to your other containers to enable proxy&#13;
+Available Labels:&#13;
+traefik.enable=true  #required to proxy:Enable Traefik to expose app to the frontend and proxy&#13;
+traefik.backend=ombi  #required:name of the container Traefik should map to on the back end (sonarr, radarr, jackett etc...)&#13;
+traefik.frontend.rule=Host:ombi.domain.com  #required/optional: Sets the subdomain rule.&#13;
+traefik.frontend.rule=Host:domain.com; PathPrefixStrip: /ombi #optional for using subfolders&#13;
+traefik.port=3579 #required:container port to send traffic to.  Source container port, not the mapping in unraid&#13;
+traefik.frontend.auth.basic.usersFile=/shared/.htpasswd  ## This is what sets up the front end interface to use the generated .htaccess file.  Add this line to any site you want additional security on.&#13;
+traefik.docker.network=bridge  #required: Specify the docker network&#13;
+traefik.frontend.headers.SSLRedirect=true #optional but might as well if you are using SSL&#13;
+traefik.frontend.headers.STSSeconds=315360000 #optional&#13;
+traefik.frontend.headers.browserXSSFilter=true #optional&#13;
+traefik.frontend.headers.contentTypeNosniff=true #optional&#13;
+traefik.frontend.headers.forceSTSHeader=true #may be required&#13;
+traefik.frontend.headers.SSLHost=domain.com #required&#13;
+traefik.frontend.headers.STSIncludeSubdomains=true #may be required&#13;
+traefik.frontend.headers.STSPreload=true #optional&#13;
+traefik.frontend.headers.frameDeny=true #optional</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BendersRepository/Bender-traefik.xml</templatePath>
+</Container>

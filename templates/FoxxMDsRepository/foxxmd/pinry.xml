@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>pinry</Name>
+  <Repository>getpinry/pinry</Repository>
+  <Registry>https://hub.docker.com/r/getpinry/pinry/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/93052-support-foxxmd-pinry/</Support>
+  <Project>https://docs.getpinry.com/</Project>
+  <Overview>A tiling image board system for people who want to save, tag, and share images, videos and webpages in an easy to skim through format. Basically self-hosted Pinterest. Project includes a chrome/firefox extension bookmarklet.</Overview>
+  <Date>1590724800</Date>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/pinry.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/icons/pinry.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8438</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pinry</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Web UI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8438</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pinry</Config>
+  <Category>Cloud: MediaServer:Photos MediaServer:Other</Category>
+  <Description>A tiling image board system for people who want to save, tag, and share images, videos and webpages in an easy to skim through format. Basically self-hosted Pinterest. Project includes a chrome/firefox extension bookmarklet.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/pinry.xml</templatePath>
+</Container>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Snapcast</Name>
+  <Repository>kevineye/snapcast</Repository>
+  <Registry>https://hub.docker.com/r/kevineye/snapcast</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://hub.docker.com/r/kevineye/snapcast</Project>
+  <Overview>use this Audio option in  mopidy.conf in mopidy docker to use Snapcast:&#13;
+&#13;
+[audio]&#13;
+output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-Snapcast.xml</TemplateURL>
+  <Icon>https://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Player-Audio-icon.png</Icon>
+  <PostArgs>snapserver -s pipe:///data/snapfifo?name=Example&amp;amp;sampleformat=44100:16:2</PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mopidy/tmp/</HostDir>
+      <ContainerDir>/data/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 1" Target="/data/" Default="" Mode="rw" Description="Container Path: /data/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mopidy/tmp/</Config>
+  <Date>1551269670</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>use this Audio option in  mopidy.conf in mopidy docker to use Snapcast:&#13;
+&#13;
+&#13;
+output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-Snapcast.xml</templatePath>
+</Container>

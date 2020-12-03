@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/ubooquity.xml</TemplateURL>
+  <Date>1481259600</Date>
+  <Name>ubooquity</Name>
+  <Project>https://vaemendis.net/ubooquity/</Project>
+  <Repository>linuxserver/ubooquity</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/ubooquity/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/52806-support-linuxserverio-ubooquity/</Support>
+  <Overview>Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.</Overview>
+  <WebUI>http://[IP]:[PORT:2202]/ubooquity/admin</WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ubooquity-icon.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2202</HostPort>
+        <ContainerPort>2202</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2203</HostPort>
+        <ContainerPort>2203</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/comics</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>512</Value>
+      <Name>MAXMEM</Name>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+    </Variable>
+  </Environment>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/alpine</BaseImage>
+  <Category>Cloud: MediaApp:Books MediaServer:Books</Category>
+  <Description>Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/ubooquity.xml</templatePath>
+</Container>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>BackupSQL</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=40386.0</Support>
+  <Registry>https://registry.hub.docker.com/r/soana/backupsql/</Registry>
+  <Repository>soana/backupsql</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name>bkpMinute</Name>
+      <Value>0</Value>
+    </Variable>
+    <Variable>
+      <Name>bkpHour</Name>
+      <Value>3</Value>
+    </Variable>
+    <Variable>
+      <Name>bkpDayOfMonth</Name>
+      <Value>*</Value>
+    </Variable>
+    <Variable>
+      <Name>bkpMonth</Name>
+      <Value>*</Value>
+    </Variable>
+    <Variable>
+      <Name>bkpDayOfWeek</Name>
+      <Value>*</Value>
+    </Variable>
+    <Variable>
+      <Name>MySQLIP</Name>
+      <Value>192.168.99.99</Value>
+    </Variable>
+    <Variable>
+      <Name>SQL_userid</Name>
+      <Value>xbmc</Value>
+    </Variable>
+    <Variable>
+      <Name>SQL_pwd</Name>
+      <Value>xbmc</Value>
+    </Variable>
+    <Variable>
+      <Name>TOKEN</Name>
+      <Value>xxxxxxxxxxxxxxxxx</Value>
+    </Variable>
+    <Variable>
+      <Name>BackupCopies</Name>
+      <Value>7</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MySQL/Backup/</HostDir>
+      <ContainerDir>/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>27eb8e69</Version>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/soana/unraid-docker-templates/master/soana/BackupSQL.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>Cron backup of MySQL database.&#13;
+Pleasae specify:&#13;
+IP of the SQL server.&#13;
+Cron parameters&#13;
+Pushbullet token&#13;
+Number of backup copies&#13;
+</Overview>
+  <Category>Backup:</Category>
+  <Description>Cron backup of MySQL database.&#13;
+Pleasae specify:&#13;
+IP of the SQL server.&#13;
+Cron parameters&#13;
+Pushbullet token&#13;
+Number of backup copies</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/soanasRepository/soana/BackupSQL.xml</templatePath>
+</Container>

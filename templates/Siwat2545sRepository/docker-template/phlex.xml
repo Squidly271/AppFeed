@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1542690000</Date>
+  <Name>Phlex</Name>
+  <Project>https://github.com/d8ahazard/Phlex</Project>
+  <Overview>
+    Flex TV. is a web application that interfaces between google Assistant and Plex to allow you to control playback of media using Actions for Google or IFTTT.
+    Additionally, it interfaces with the API’s for Sonarr, Radarr, Couchpotato, Sickbeard, and Sickrage.
+    It also has customizeable webhooks, so you can basically control anything that has an open API with your voice. If you can send data to a URL to do a thing, you can program it in Flex TV.
+    It is recomended to use reverse proxy to enable https
+  </Overview>
+  <Registry>https://hub.docker.com/r/siwatinc/phlex_unraid/</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>siwatinc/phlex</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/phlex</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8063</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/d8ahazard/Phlex/master/img/android-icon-144x144.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/phlex.xml</TemplateURL>
+  <Category>Tools:</Category>
+  <Description>Flex TV. is a web application that interfaces between google Assistant and Plex to allow you to control playback of media using Actions for Google or IFTTT.
+    Additionally, it interfaces with the API’s for Sonarr, Radarr, Couchpotato, Sickbeard, and Sickrage.
+    It also has customizeable webhooks, so you can basically control anything that has an open API with your voice. If you can send data to a URL to do a thing, you can program it in Flex TV.
+    It is recomended to use reverse proxy to enable https</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/phlex.xml</templatePath>
+</Container>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Home-Automation-Bridge</Name>
+  <Overview>
+    Bridge Amazon Echo with your home automation controller or Harmony Hub for voice control of connected devices (Vera and Harmony devices retrieved automatically)[br]
+    This is a docker implementation of bwssystems' home automation bridge - https://github.com/bwssytems/ha-bridge [br]
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/home-automation-bridge/</Registry>
+  <GitHub>https://github.com/aptalca/docker-ha-bridge/</GitHub>
+  <Repository>aptalca/home-automation-bridge</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>SERVERIP</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>SERVERPORT</Name>
+      <Value>3080</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3080]/</WebUI>
+  <Icon>https://www.cdrinfo.com/Images/Uploaded/Amazon_Echo_logo_120.jpg</Icon>
+  <Date>1462420800</Date>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/home-automation-bridge.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>HomeAutomation:</Category>
+  <Description>Bridge Amazon Echo with your home automation controller or Harmony Hub for voice control of connected devices (Vera and Harmony devices retrieved automatically)
+    This is a docker implementation of bwssystems' home automation bridge - https://github.com/bwssytems/ha-bridge</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/home-automation-bridge.xml</templatePath>
+</Container>

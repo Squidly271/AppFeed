@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>activ-transmissionvpn</Name>
+  <Overview>
+    Transmission is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. [br]
+    This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=48899.0</Support>
+  <Registry>https://registry.hub.docker.com/r/activ/arch-transmissionvpn/</Registry>
+  <GitHub>https://github.com/activ/arch-transmissionvpn</GitHub>
+  <Repository>activ/arch-transmissionvpn</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9091</HostPort>
+        <ContainerPort>9091</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>VPN_ENABLED</Name>
+      <Value>yes</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_USER</Name>
+      <Value>vpn username</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PASS</Name>
+      <Value>vpn password</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_REMOTE</Name>
+      <Value>nl.privateinternetaccess.com</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PORT</Name>
+      <Value>1194</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PROTOCOL</Name>
+      <Value>udp</Value>
+    </Variable>
+    <Variable>
+      <Name>VPN_PROV</Name>
+      <Value>pia|airvpn|custom</Value>
+    </Variable>
+    <Variable>
+      <Name>ENABLE_PRIVOXY</Name>
+      <Value>no</Value>
+    </Variable>
+    <Variable>
+      <Name>LAN_NETWORK</Name>
+      <Value>192.168.1.0/24</Value>
+    </Variable>
+    <Variable>
+      <Name>WHITELIST</Name>
+      <Value>192.168.*.*</Value>
+    </Variable>
+    <Variable>
+      <Name>DEBUG</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path for downloads</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>05616fd2</Version>
+  <WebUI>http://[IP]:[PORT:9091]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/transmission-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/activ/docker-templates/master/activ/transmissionvpn.xml</TemplateURL>
+  <Category>Downloaders:</Category>
+  <Description>Transmission is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. 
+    This Docker includes OpenVPN to ensure a secure and private connection to the Internet, including use of iptables to prevent IP leakage when the tunnel is down. It also includes Privoxy to allow unfiltered access to index sites, to use Privoxy please point your application at "host ip:8118"</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/activsRepository/activ/transmissionvpn.xml</templatePath>
+</Container>

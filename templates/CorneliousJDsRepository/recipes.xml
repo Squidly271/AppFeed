@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Recipes</Name>
+  <Repository>vabene1111/recipes</Repository>
+  <Registry>https://hub.docker.com/r/vabene1111/recipes/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/98179-support-recipes-corneliousjd-repo/</Support>
+  <Project>https://github.com/vabene1111/recipes</Project>
+  <Overview>Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/recipes.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/recipes.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8154</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/recipes/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/recipes/media</HostDir>
+      <ContainerDir>/opt/recipes/mediafiles/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>django.db.backends.sqlite3</Value>
+      <Name>DB_ENGINE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SECRET_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>*</Value>
+      <Name>ALLOWED_HOSTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>COMMENT_PREF_DEFAULT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>SHOPPING_MIN_AUTOSYNC_INTERVAL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>DEBUG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>GUNICORN_MEDIA</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5432</Value>
+      <Name>POSTGRES_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>/data/recipes.db</Value>
+      <Name>POSTGRES_DB</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Port" Target="8080" Default="8154" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8154</Config>
+  <Config Name="Timezone" Target="TIMEZONE" Default="America/New_York" Mode="" Description="Timezone in TZ format. See here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+  <Config Name="Database Engine" Target="DB_ENGINE" Default="django.db.backends.sqlite3" Mode="" Description="Either SQLite (default for unRAID) or PostgreSQL with: django.db.backends.postgresql" Type="Variable" Display="always" Required="true" Mask="false">django.db.backends.sqlite3</Config>
+  <Config Name="Database Location" Target="/data" Default="/mnt/user/appdata/recipes/data" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/recipes/data</Config>
+  <Config Name="Media Location" Target="/opt/recipes/mediafiles/" Default="/mnt/user/appdata/recipes/media" Mode="rw" Description="Container Path: /opt/recipes/mediafiles/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/recipes/media</Config>
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="" Mode="" Description="Randomly generate a secret key please." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Allowed Hosts" Target="ALLOWED_HOSTS" Default="*" Mode="" Description="Either * for all, or specific domains/subdomains, etc." Type="Variable" Display="always" Required="false" Mask="false">*</Config>
+  <Config Name="Comment System" Target="COMMENT_PREF_DEFAULT" Default="1" Mode="" Description="Enables or disables the comment system." Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Shopping List Min Refresh" Target="SHOPPING_MIN_AUTOSYNC_INTERVAL" Default="5" Mode="" Description="Minimum shopping list refresh interval." Type="Variable" Display="always" Required="false" Mask="false">5</Config>
+  <Config Name="Debug Mode" Target="DEBUG" Default="0" Mode="" Description="Debug mode disabled (default) or enabled." Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="Serve Gunicorn Meida" Target="GUNICORN_MEDIA" Default="1" Mode="" Description="Enables serving media files directly from Gunicorn." Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
+  <Config Name="PostgreSQL Host" Target="POSTGRES_HOST" Default="" Mode="" Description="Host for PostgreSQL, should you choose to use it." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PostgreSQL Port" Target="POSTGRES_PORT" Default="5432" Mode="" Description="Port for PostgreSQL server shouldy you choose to use it." Type="Variable" Display="advanced" Required="false" Mask="false">5432</Config>
+  <Config Name="PostgreSQL User" Target="POSTGRES_USER" Default="" Mode="" Description="User for PostgreSQL should you choose to use it." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PostgreSQL Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Password for PostgreSQL should you choose to use it." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Database" Target="POSTGRES_DB" Default="/data/recipes.db" Mode="" Description="Name of SQLite database, or the name of your PostgreSQL database if you are using that." Type="Variable" Display="advanced" Required="false" Mask="false">/data/recipes.db</Config>
+  <Date>1603505691</Date>
+  <Category>Productivity:</Category>
+  <Description>Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CorneliousJDsRepository/recipes.xml</templatePath>
+</Container>

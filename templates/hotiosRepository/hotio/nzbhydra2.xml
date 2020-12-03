@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>nzbhydra2</Name>
+  <Repository>hotio/nzbhydra2</Repository>
+  <Registry>https://hub.docker.com/r/hotio/nzbhydra2</Registry>
+  <Branch>
+    <Tag>release-dockerhub</Tag>
+    <TagDescription>Releases</TagDescription>
+    <Repository>hotio/nzbhydra2:release</Repository>
+    <Registry>https://hub.docker.com/r/hotio/nzbhydra2</Registry>
+  </Branch>
+  <Branch>
+    <Tag>testing-dockerhub</Tag>
+    <TagDescription>Pre-releases</TagDescription>
+    <Repository>hotio/nzbhydra2:testing</Repository>
+    <Registry>https://hub.docker.com/r/hotio/nzbhydra2</Registry>
+  </Branch>
+  <Branch>
+    <Tag>release-ghcr</Tag>
+    <TagDescription>Releases</TagDescription>
+    <Repository>ghcr.io/hotio/nzbhydra2:release</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/nzbhydra2</Registry>
+  </Branch>
+  <Branch>
+    <Tag>testing-ghcr</Tag>
+    <TagDescription>Pre-releases</TagDescription>
+    <Repository>ghcr.io/hotio/nzbhydra2:testing</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/nzbhydra2</Registry>
+  </Branch>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hotio.dev/discord</Support>
+  <Project>https://hotio.dev/containers/nzbhydra2</Project>
+  <Icon>https://raw.githubusercontent.com/docker-hotio/unraid-templates/master/hotio/img/nzbhydra2.png</Icon>
+  <Overview>NZBHydra 2 is a meta search for newznab indexers and torznab trackers.</Overview>
+  <Description>NZBHydra 2 is a meta search for newznab indexers and torznab trackers.</Description>
+  <WebUI>http://[IP]:[PORT:5076]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 5076" Target="5076" Default="5076" Mode="tcp" Description="Container Port: 5076" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="ARGS" Target="ARGS" Default="" Mode="" Description="Container Variable: ARGS" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="no|yes" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Other</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hotiosRepository/hotio/nzbhydra2.xml</templatePath>
+</Container>

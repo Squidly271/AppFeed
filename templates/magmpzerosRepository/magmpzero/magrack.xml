@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>MagRack</Name>
+  <Overview>
+  MagRack is a lightweight java based application to make reading PDF files (magazines) more convienent.  This application does not download magazines.  It is expected the user aleady has automation setup for magazine downloading.
+  </Overview>
+  <Support>https://lime-technology.com/forum/index.php?topic=47009.0</Support>
+  <Registry>https://registry.hub.docker.com/r/magmpzero/magrack/</Registry>
+  <GitHub>https://github.com/magmpzero/docker-templates</GitHub>
+  <Repository>magmpzero/magrack</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4567</HostPort>
+        <ContainerPort>4567</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>BRANCH</Name>
+      <Value>master</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/mags</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:4567]/mags</WebUI>
+  <Icon>https://raw.githubusercontent.com/magmpzero/docker-templates/master/icon.png</Icon>
+  <Date>1456635600</Date>
+  <TemplateURL>https://raw.githubusercontent.com/magmpzero/docker-templates/master/magmpzero/magrack.xml</TemplateURL>
+  <Category>MediaServer:Other</Category>
+  <Description>MagRack is a lightweight java based application to make reading PDF files (magazines) more convienent.  This application does not download magazines.  It is expected the user aleady has automation setup for magazine downloading.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/magmpzerosRepository/magmpzero/magrack.xml</templatePath>
+</Container>

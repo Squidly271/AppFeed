@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/nextcloud.xml</TemplateURL>
+  <Date>1488949200</Date>
+  <Name>nextcloud</Name>
+  <Support>https://forums.unraid.net/topic/48383-support-linuxserverio-nextcloud/</Support>
+  <Repository>linuxserver/nextcloud</Repository>
+  <Project>https://nextcloud.com</Project>
+  <Registry>https://hub.docker.com/r/linuxserver/nextcloud</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview>Nextcloud is an open source, self-hosted file sync and communication app platform. Access and sync your files, contacts, calendars and communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Overview>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nextcloud-icon.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+    </Variable>
+  </Environment>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/nginx</BaseImage>
+  <Category>Cloud: Productivity: Tools:Utilities MediaServer:Other Network:Web</Category>
+  <Description>Nextcloud is an open source, self-hosted file sync and communication app platform. Access and sync your files, contacts, calendars and communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/nextcloud.xml</templatePath>
+</Container>

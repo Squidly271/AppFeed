@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>NZBGet</Name>
+  <Overview>
+    NZBGet is a cross-platform binary newsgrabber for nzb files, written in C++. It supports client/server mode, automatic par-check/-repair, web-interface, command-line interface, etc. NZBGet requires low system resources and runs great on routers, NAS-devices and media players.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/needo/nzbget/</Registry>
+  <GitHub>https://github.com/needo37/nzbget</GitHub>
+  <Repository>needo/nzbget</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=33822.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6789</HostPort>
+        <ContainerPort>6789</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nzbget</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:6789]/</WebUI>
+  <Icon>https://i.imgur.com/3zSSB3o.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/needo/NZBGet.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Downloaders:</Category>
+  <Description>NZBGet is a cross-platform binary newsgrabber for nzb files, written in C++. It supports client/server mode, automatic par-check/-repair, web-interface, command-line interface, etc. NZBGet requires low system resources and runs great on routers, NAS-devices and media players.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/needo/NZBGet.xml</templatePath>
+</Container>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>NodeRed</Name>
+  <Repository>nodered/node-red</Repository>
+  <Registry>https://hub.docker.com/r/nodered/node-red/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Project>https://nodered.org</Project>
+  <Overview>&#13;
+Node-RED is a visual tool for wiring the Internet of Things[br][br]&#13;
+Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br][br]&#13;
+See NodeRed.org and flows.nodered.org for more info. [br][br]&#13;
+NodeRed will run on port 1880.[br][br]&#13;
+This is the official Docker release from the NodeRed team - I just created the template.[br][br]&#13;
+[b][span style='color: #E80000;']Directions:[/span][/b][br]&#13;
+[b]/data[/b] : in this path, Node Red will store it's configuration files.&#13;
+[b]15.SEP.2016:[/b]First template[br]&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:1880]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/officialNodeRed.xml</TemplateURL>
+  <Icon>https://i.imgur.com/zXpacAF.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>1880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nodered/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>NODE_RED_ENABLE_SAFE_MODE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Port" Target="1880" Default="1880" Mode="tcp" Description="Container Port: 1880" Type="Port" Display="always" Required="true" Mask="false">1880</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/nodered" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nodered/</Config>
+  <Config Name="Safe mode" Target="NODE_RED_ENABLE_SAFE_MODE" Default="false" Mode="" Description="Container Variable: NODE_RED_ENABLE_SAFE_MODE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Date>1605108546</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>Node-RED is a visual tool for wiring the Internet of Things&#13;
+Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.&#13;
+See NodeRed.org and flows.nodered.org for more info. &#13;
+NodeRed will run on port 1880.&#13;
+This is the official Docker release from the NodeRed team - I just created the template.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/officialNodeRed.xml</templatePath>
+</Container>

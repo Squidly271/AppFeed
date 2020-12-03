@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>telegraf</Name>
+  <Repository>telegraf:alpine</Repository>
+  <Registry>https://hub.docker.com/_/telegraf/</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Project>https://github.com/influxdata/telegraf</Project>
+  <Overview>&#13;
+    Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.[br]&#13;
+    Both Grafana and Influxdb are available through Community Apps[br]&#13;
+    [br]&#13;
+    [b][span style='color: #E80000;']This version of telegraf requires you to manually place a config file at /mnt/user/appdata/telegraf/telegraf.conf[/span][/b] The container will not start without it.[br]&#13;
+    [br]&#13;
+    The default telegraf.conf file can be downloaded at [u]https://github.com/influxdata/telegraf/blob/master/etc/telegraf.conf[/u]. If you would prefer not to use a config file you can search for untelegraf in community apps for a version that only uses environment variables.[br]&#13;
+    [br]&#13;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+    [b]Container Volumes:[/b][br]&#13;
+    [b]/var/run/docker.sock[/b] Read Only. Location of your docker socket.[br]&#13;
+    [b]/var/run/utmp[/b] Read Only. Location of your utmp file.[br]&#13;
+    [b]/run/udev[/b] Read Only. Allows you to identify devices based on their properties, like vendor ID and device ID[br]
+    [b]/rootfs[/b] Read Only. To be mapped to the root of the host file system. This is so the disk usage reported will be that of the host system.[br]&#13;
+    [b]/rootfs/etc[/b] Read Only. To be mapped to the etc of the host file system. This is so the disk usage reported will be that of the host system.[br]&#13;
+    [b]/rootfs/proc[/b] Read Only. To be mapped to the proc of the host file system. This is so the disk usage reported will be that of the host system.[br]&#13;
+    [b]/rootfs/sys[/b] Read Only. To be mapped to the sys of the host file system. This is so the disk usage reported will be that of the host system.[br]&#13;
+    [br]&#13;
+    [b]Environment Variables:[/b][br]&#13;
+    [b]HOST_MOUNT_PREFIX[/b] Name of container volume mapping of the root file system.[br]&#13;
+    [b]HOST_ETC[/b] Name of the etc volume mapping of the root file system.[br]&#13;
+    [b]HOST_PROC[/b] Name of the proc volume mapping of the root file system.[br]&#13;
+    [b]HOST_SYS[/b] Name of the sys volume mapping of the root file sytem.[br]&#13;
+  </Overview>
+  <TemplateURL>https://raw.githubusercontent.com/atribe/unRAID-docker/master/telegraf.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/atribe/unRAID-docker/master/icons/telegraf.png</Icon>
+  <Config Name="Host Path 1" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 2" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 3" Target="/rootfs" Default="/" Mode="ro" Description="Container Path: /rootfs" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 4" Target="/rootfs/sys" Default="/sys" Mode="ro" Description="Container Path: /rootfs/sys" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 5" Target="/rootfs/etc" Default="/etc" Mode="ro" Description="Container Path: /rootfs/etc" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 6" Target="/rootfs/proc" Default="/proc" Mode="ro" Description="Container Path: /rootfs/proc" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 7" Target="/etc/telegraf/telegraf.conf" Default="/mnt/user/appdata/telegraf/telegraf.conf" Mode="rw" Description="Container Path: /etc/telegraf/telegraf.conf" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 8" Target="/run/udev" Default="/run/udev" Mode="ro" Description="Container Path: /run/udev" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 1" Target="HOST_PROC" Default="/rootfs/proc" Mode="" Description="Container Variable: HOST_PROC" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 2" Target="HOST_SYS" Default="/rootfs/sys" Mode="" Description="Container Variable: HOST_SYS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 3" Target="HOST_ETC" Default="/rootfs/etc" Mode="" Description="Container Variable: HOST_ETC" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Key 4" Target="HOST_MOUNT_PREFIX" Default="/rootfs" Mode="" Description="Container Variable: HOST_MOUNT_PREFIX" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Category>Tools:Utilities</Category>
+  <Description>Telegraf gathers metrics from your system and sends them to an InfluxDB server for storage. From InfluxDB you would typically use something like Grafana to plot the data.&#13;
+    Both Grafana and Influxdb are available through Community Apps</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/atribesRepository/telegraf.xml</templatePath>
+</Container>

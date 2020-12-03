@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>esphomeyaml</Name>
+  <Date>1546837200</Date>
+  <Repository>siwatinc/esphomeyaml</Repository>
+  <Registry>https://registry.hub.docker.com/r/siwatinc/esphomeyaml</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <Overview>Esphomelib is a framework for creating custom firmwares for your WiFi-enabled ESP microcontrollers. Its primary focus is making the process to get your ESP running as simple as possible, with many helper tools to ensure you will have the best user experience.</Overview>
+  <WebUI>http://[IP]:[PORT:6052]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/esphomeyaml.png</Icon>
+  <PostArgs></PostArgs>
+  <Config Name="Dashboard Password" Target="password" Default="changeme" Mode="" Description="The Password for ESPHOME Dashboard" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Configuration Folder" Target="/config" Default="/mnt/user/appdata/esphomeyaml" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/esphomeyaml</Config>
+  <Config Name="Communication" Target="6123" Default="6123" Mode="tcp" Description="Communication Port" Type="Port" Display="advanced" Required="false" Mask="false">6123</Config>
+  <Config Name="WebUI" Target="6052" Default="6052" Mode="tcp" Description="WebUI Port" Type="Port" Display="advanced" Required="false" Mask="false">6052</Config>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6123</HostPort>
+        <ContainerPort>6123</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6052</HostPort>
+        <ContainerPort>6052</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/esphomeyaml</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Environment></Environment>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/esphomeyaml.xml</TemplateURL>
+  <Category>HomeAutomation: Tools:</Category>
+  <Description>Esphomelib is a framework for creating custom firmwares for your WiFi-enabled ESP microcontrollers. Its primary focus is making the process to get your ESP running as simple as possible, with many helper tools to ensure you will have the best user experience.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/esphomeyaml.xml</templatePath>
+</Container>

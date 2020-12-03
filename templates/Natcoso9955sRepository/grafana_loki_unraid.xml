@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>GrafanaLoki</Name>
+  <Repository>grafana/loki</Repository>
+  <Registry>https://hub.docker.com/r/grafana/loki/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/94021-support-natcoso9955-loki/</Support>
+  <Project>https://grafana.com/oss/loki/</Project>
+  <Overview>Loki: like Prometheus, but for logs.&#13;
+Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective and easy to operate. It does not index the contents of the logs, but rather a set of labels for each log stream.&#13;
+&#13;
+Download the local-config.yaml file from https://github.com/natcoso9955/unRAID-docker/blob/master/configs/loki/local-config.yaml before you start the container.&#13;
+Will need to be placed into your Host Path 1 directory.</Overview>
+  <WebUI>http://[IP]:[PORT:3100]/metrics</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/grafana_loki_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/icons/loki.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3100</HostPort>
+        <ContainerPort>3100</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/loki/conf/</HostDir>
+      <ContainerDir>/etc/loki</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/loki/</HostDir>
+      <ContainerDir>/loki</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Web Port" Target="3100" Default="" Mode="tcp" Description="Container Port: 3100" Type="Port" Display="always" Required="false" Mask="false">3100</Config>
+  <Config Name="Host Path 1" Target="/etc/loki" Default="" Mode="rw" Description="Container Path: /etc/loki" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/loki/conf/</Config>
+  <Config Name="Host Path 2" Target="/loki" Default="" Mode="rw" Description="Container Path: /loki" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/loki/</Config>
+  <Date>1593787674</Date>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Description>Loki: like Prometheus, but for logs.&#13;
+Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective and easy to operate. It does not index the contents of the logs, but rather a set of labels for each log stream.&#13;
+&#13;
+Download the local-config.yaml file from https://github.com/natcoso9955/unRAID-docker/blob/master/configs/loki/local-config.yaml before you start the container.&#13;
+Will need to be placed into your Host Path 1 directory.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Natcoso9955sRepository/grafana_loki_unraid.xml</templatePath>
+</Container>

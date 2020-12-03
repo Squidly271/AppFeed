@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Viseron</Name>
+  <Repository>roflcoopter/viseron</Repository>
+  <Registry>https://hub.docker.com/r/roflcoopter/viseron/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/96774-support-viseron-a-self-hosted-nvr-with-object-detection/</Support>
+  <Overview>Viseron is a self-hosted, local only NVR implemented in Python. The goal is ease of use while also leveraging hardware acceleration for minimal system load.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/roflcoopter/viseron-unraid-ca-template/master/Viseron.xml</TemplateURL>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/viseron-recordings/</HostDir>
+      <ContainerDir>/recordings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/viseron-config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Recordings Path" Target="/recordings" Default="" Mode="rw" Description="Container Path: /recordings" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/viseron-recordings/</Config>
+  <Config Name="Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/viseron-config</Config>
+  <Date>1599216786</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>Viseron is a self-hosted, local only NVR implemented in Python. The goal is ease of use while also leveraging hardware acceleration for minimal system load.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/roflcooptersRepository/Viseron.xml</templatePath>
+</Container>

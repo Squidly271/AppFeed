@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>xteve</Name>
+  <Repository>bl0m1/xtevedocker</Repository>
+  <Registry>https://hub.docker.com/r/bl0m1/xtevedocker/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discordapp.com/invite/eWYquha</Support>
+  <Project>https://xteve.de/</Project>
+  <Overview>Xteve is a IPTV Proxy for Plex. It takes a M3U list from an IPTV provider and allows filtering with regex along with channel mapping to EPG. It will then generate a local EPG that Plex can understand. For this to all work you need plexpass.</Overview>
+  <WebUI>http://[IP]:[PORT:34400]/web</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Mudislander/docker-templates/master/xteve.xml</TemplateURL>
+  <Icon></Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>34400</HostPort>
+        <ContainerPort>34400</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve</HostDir>
+      <ContainerDir>/root/xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/tmp/xteve</HostDir>
+      <ContainerDir>/tmp/xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 1" Target="/root/xteve" Default="" Mode="rw" Description="Container Path: /root/xteve" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve</Config>
+  <Config Name="Host Path 2" Target="/tmp/xteve" Default="" Mode="rw" Description="Container Path: /tmp/xteve" Type="Path" Display="always" Required="false" Mask="false">/tmp/xteve</Config>
+  <Config Name="Host Port 1" Target="34400" Default="" Mode="tcp" Description="Container Port: 34400" Type="Port" Display="always" Required="false" Mask="false">34400</Config>
+  <Date>1542125228</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>Xteve is a IPTV Proxy for Plex. It takes a M3U list from an IPTV provider and allows filtering with regex along with channel mapping to EPG. It will then generate a local EPG that Plex can understand. For this to all work you need plexpass.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MudislandersRepository/xteve.xml</templatePath>
+</Container>

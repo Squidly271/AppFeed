@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>octoprint</Name>
+  <Repository>nunofgs/octoprint</Repository>
+  <Registry>https://hub.docker.com/r/nunofgs/octoprint/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Project>https://hub.docker.com/r/nunofgs/octoprint/</Project>
+  <Overview>A docker template for Octoprint by Spants. &#13;
+This is for the excellent Docker image by nunofgs. Please direct all non unRaid questions to https://github.com/nunofgs/docker-octoprint.&#13;
+&#13;
+This template was constructed with knowledge from https://www.reddit.com/r/unRAID/comments/eq5u3r/running_octoprint_in_unraid/ - thanks to Jacob_xATLx and Tergi.&#13;
+Please see Tergi's post on doing camera passthrough: https://forums.unraid.net/topic/91533-unraid-683-pass-usb-webcam-into-docker/&#13;
+</Overview>
+  <Date>1588132800</Date>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/octoprint.xml</TemplateURL>
+  <Icon>https://octoprint.org/assets/img/logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/octoprint</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/dev/video0</Value>
+      <Name>CAMERA_DEV</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>MJPEG_STREAMER_AUTOSTART</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>-y -n -r 640x480</Value>
+      <Name>MJPEG_STREAMER_INPUT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Main" Target="5000" Default="80" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/octoprint</Config>
+  <Config Name="print" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/ttyACM0</Config>
+  <Config Name="camera" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/video0</Config>
+  <Config Name="video" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="CAMERA_DEV" Target="CAMERA_DEV" Default="/dev/video0" Mode="" Description="The camera device node" Type="Variable" Display="always" Required="false" Mask="false">/dev/video0</Config>
+  <Config Name="MJPEG_STREAMER_AUTOSTART" Target="MJPEG_STREAMER_AUTOSTART" Default="" Mode="" Description="Start the camera automatically" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="MJPEG_STREAMER_INPUT" Target="MJPEG_STREAMER_INPUT" Default="-y -n -r 640x480" Mode="" Description="Flags to pass to mjpg_streamer" Type="Variable" Display="always" Required="false" Mask="false">-y -n -r 640x480</Config>
+  <Category>Tools:Utilities</Category>
+  <Description>A docker template for Octoprint by Spants. &#13;
+This is for the excellent Docker image by nunofgs. Please direct all non unRaid questions to https://github.com/nunofgs/docker-octoprint.&#13;
+&#13;
+This template was constructed with knowledge from https://www.reddit.com/r/unRAID/comments/eq5u3r/running_octoprint_in_unraid/ - thanks to Jacob_xATLx and Tergi.&#13;
+Please see Tergi's post on doing camera passthrough: https://forums.unraid.net/topic/91533-unraid-683-pass-usb-webcam-into-docker/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/octoprint.xml</templatePath>
+</Container>

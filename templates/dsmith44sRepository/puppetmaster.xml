@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>puppetmaster</Name>
+  <Repository>deasmi/docker-puppetmaster</Repository>
+  <Registry>https://hub.docker.com/r/deasmi/docker-puppetmaster/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/58535-puppetmaster-docker-container/</Support>
+  <Project>http://www.puppet.com/</Project>
+  <Overview>Simple puppet master docker based on Centos7
+  # docker-puppetmaster
+  Docker image for puppet server v5 designed to run on unraid
+  If you want the 3.5 version please use docker-puppetmaster:v3 which is currently using puppet 3.5.7
+
+  This is super basic, you have to map /etc/puppet and /etc/puppet/ssl as the confdir and ssl dir
+
+  You must have the conf directory setup, it will not be populated - map to /etc/puppetlabs/puppet
+  You must have the code directory setup, it will not be created - map to /etc/puppetlabs/code
+  However an empty SSL directory is fine, puppet will set this up.
+
+  Also include puppet-lint in case you want to check in the docker container.
+  Also includes perl for a script I run on puppetmaster for staggering puppet run times.
+  </Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/deasmi/unraid-ca/master/puppetmaster.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/deasmi/docker-puppetmaster/master/logo.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8140</HostPort>
+        <ContainerPort>8140</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>confdir</HostDir>
+      <ContainerDir>/etc/puppetlabs/puppet</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>ssldir</HostDir>
+      <ContainerDir>/etc/puppetlabs/puppet/ssl</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>codedir</HostDir>
+      <ContainerDir>/etc/puppetlabs/code</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="8140" Default="" Mode="tcp" Description="Container Port: 8140" Type="Port" Display="always" Required="false" Mask="false">8140</Config>
+  <Config Name="Host Port 2" Target="8081" Default="" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="confdir" Target="/etc/puppetlabs/puppet" Default="" Mode="rw" Description="Container Path: /etc/puppetlabs/puppet" Type="Path" Display="always" Required="false" Mask="false">/yourpuppet/conf</Config>
+  <Config Name="ssldir" Target="/etc/puppetlabs/puppet/ssl" Default="" Mode="rw" Description="Container Path: /etc/puppetlabs/puppet/ssl" Type="Path" Display="always" Required="false" Mask="false">/yourpuppet/ssl/</Config>
+  <Config Name="coded" Target="/etc/puppetlabs/code" Default="" Mode="rw" Description="Container Path: /etc/puppetlabs/code" Type="Path" Display="always" Required="false" Mask="false">/yourpuppet/conf/code</Config>
+  <Date>1499079848</Date>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Description>Simple puppet master docker based on Centos7
+  # docker-puppetmaster
+  Docker image for puppet server v5 designed to run on unraid
+  If you want the 3.5 version please use docker-puppetmaster:v3 which is currently using puppet 3.5.7
+
+  This is super basic, you have to map /etc/puppet and /etc/puppet/ssl as the confdir and ssl dir
+
+  You must have the conf directory setup, it will not be populated - map to /etc/puppetlabs/puppet
+  You must have the code directory setup, it will not be created - map to /etc/puppetlabs/code
+  However an empty SSL directory is fine, puppet will set this up.
+
+  Also include puppet-lint in case you want to check in the docker container.
+  Also includes perl for a script I run on puppetmaster for staggering puppet run times.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dsmith44sRepository/puppetmaster.xml</templatePath>
+</Container>

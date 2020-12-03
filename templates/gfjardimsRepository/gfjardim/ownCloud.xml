@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>ownCloud</Name>
+  <Overview>
+    ownCloud gives you universal access to your files through a web interface or WebDAV. It also provides a platform to easily view and sync your contacts, calendars and bookmarks across all your devices and enables basic editing right on the web.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/gfjardim/owncloud/</Registry>
+  <GitHub>https://github.com/gfjardim/docker-owncloud</GitHub>
+  <Support>http://lime-technology.com/forum/index.php?topic=33891.0</Support>
+  <Repository>gfjardim/owncloud</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>SUBJECT</Name>
+      <Value>/C=US/ST=CA/L=City/O=Organization/OU=Organization Unit/CN=yourhome.com</Value>
+    </Variable>
+    <Variable>
+      <Name>EDGE</Name>
+      <Value>0</Value>
+    </Variable>
+    <Variable>
+      <Name>DEFAULT_PORT</Name>
+      <Value>8000</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/owncloud</HostDir>
+      <ContainerDir>/var/www/owncloud/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon>https://i.imgur.com/EX4qL2V.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/gfjardim/ownCloud.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Cloud:</Category>
+  <Description>ownCloud gives you universal access to your files through a web interface or WebDAV. It also provides a platform to easily view and sync your contacts, calendars and bookmarks across all your devices and enables basic editing right on the web.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/gfjardim/ownCloud.xml</templatePath>
+</Container>

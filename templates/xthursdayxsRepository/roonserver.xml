@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>RoonServer</Name>
+  <Repository>steefdebruijn/docker-roonserver</Repository>
+  <Registry>https://hub.docker.com/r/steefdebruijn/docker-roonserver/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/steefdebruijn/docker-roonserver</Support>
+  <Project>https://roonlabs.com/</Project>
+  <Overview>Docker image for running Roon Server. Roon Server is a software package that provides a “headless” version of Roon. It will be the brain of your music system, managing your music files, streaming services, and your audio devices. Roon Server is used in conjunction with Roon or Roon Remote, both of which provide control functionality.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/roonserver.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/images/roon-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/roonserver/</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/roonserver/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/Music/</HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Config" Target="/app" Default="" Mode="rw" Description="Container Path: /app" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/roonserver/</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/cache/appdata/roonserver/" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/roonserver/</Config>
+  <Config Name="Music" Target="/music" Default="/mnt/user/Media/Music/" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Media/Music/</Config>
+  <Config Name="Backup" Target="/backup" Default="/mnt/user/Backip/Roon_Backup" Mode="rw" Description="Container Path: /backup" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Date>1600625302</Date>
+  <Category>MediaServer:Music</Category>
+  <Description>Docker image for running Roon Server. Roon Server is a software package that provides a “headless” version of Roon. It will be the brain of your music system, managing your music files, streaming services, and your audio devices. Roon Server is used in conjunction with Roon or Roon Remote, both of which provide control functionality.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/xthursdayxsRepository/roonserver.xml</templatePath>
+</Container>

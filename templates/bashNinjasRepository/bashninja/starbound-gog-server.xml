@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Starbound-GOG-Server</Name>
+  <Date>1471752000</Date>
+  <Overview>
+   Docker container to run a GOG Starbound Server. 
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=48370.0</Support>
+  <Registry>https://hub.docker.com/r/bashninja/docker-gog-starbound-server/</Registry>
+  <GitHub>https://github.com/miketweaver/docker-starbound-gog-server</GitHub>
+  <Repository>bashninja/docker-gog-starbound-server</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>21025</HostPort>
+        <ContainerPort>21025</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21026</HostPort>
+        <ContainerPort>21026</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/starbound</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/miketweaver/docker-starbound-server/master/starbound.png</Icon>
+  <Beta>true</Beta>
+  <TemplateURL>https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/starbound-gog-server.xml</TemplateURL>
+  <Category>Other: Status:Beta</Category>
+  <Description>Docker container to run a GOG Starbound Server.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/bashNinjasRepository/bashninja/starbound-gog-server.xml</templatePath>
+</Container>

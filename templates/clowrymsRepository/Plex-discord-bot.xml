@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>plex-discord-bot</Name>
+  <Repository>ninjaneer/plex-discord-bot</Repository>
+  <Registry>https://hub.docker.com/r/ninjaneer/plex-discord-bot/</Registry>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Overview>A Discord bot that allows you to search, play, and queue music from your Plex Media Server.[br][br]&#13;
+Commands[br][br]&#13;
+[b]!plexTest[/b] : a test to see make sure your Plex server is connected properly[br][br]&#13;
+[b]!clearqueue[/b] : clears all songs in queue[br][br]&#13;
+[b]!nextpage[/b] : get next page of songs if desired song is not listed[br][br]&#13;
+[b]!pause[/b] : pauses current song if one is playing[br][br]&#13;
+[b]!play &amp;lt;song title or artist&amp;gt;[/b] : bot will join voice channel and play song if one song available. if more than one, bot will return a list to choose from[br][br]&#13;
+[b]!playsong &amp;lt;song number&amp;gt; [/b]: plays a song from the generated song list[br][br]&#13;
+[b]!removesong &amp;lt;song queue number&amp;gt;[/b] : removes song by index from the song queue[br][br]&#13;
+[b]!resume[/b] : resumes song if previously paused[br][br]&#13;
+[b]!skip[/b] : skips the current song if one is playing and plays the next song in queue if it exists[br][br]&#13;
+[b]!stop[/b] : stops song if one is playing[br][br]&#13;
+[b]!viewqueue[/b] : displays current song queue[br][br]</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/clowrym/docker-templates/master/Plex-discord-bot.xml</TemplateURL>
+  <Icon></Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>Local Port</HostPort>
+        <ContainerPort>PLEX_LOCAL_PORT</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>America/Denver</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Client ID</Value>
+      <Name>DISCORD_CLIENT_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Client Secret</Value>
+      <Name>DISCORD_CLIENT_SECRET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>username</Value>
+      <Name>DISCORD_BOT_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>token</Value>
+      <Name>DISCORD_BOT_TOKEN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Local IP</Value>
+      <Name>PLEX_LOCAL_IP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Username</Value>
+      <Name>PLEX_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Password</Value>
+      <Name>PLEX_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Token</Value>
+      <Name>PLEX_TOKEN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Machine ID</Value>
+      <Name>PLEX_MACHINEID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Managed user</Value>
+      <Name>PLEX_MANAGED_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Time_Zone" Target="TZ" Default="America/Denver" Mode="" Description="Local TimeZone" Type="Variable" Display="always" Required="true" Mask="false">America/Denver</Config>
+  <Config Name="DISCORD_CLIENT_ID" Target="DISCORD_CLIENT_ID" Default="Client ID" Mode="" Description="Container Variable: DISCORD_CLIENT_ID" Type="Variable" Display="always" Required="true" Mask="false">Client ID</Config>
+  <Config Name="DISCORD_CLIENT_SECRET" Target="DISCORD_CLIENT_SECRET" Default="" Mode="" Description="Container Variable: DISCORD_CLIENT_SECRET" Type="Variable" Display="always" Required="true" Mask="false">Client Secret</Config>
+  <Config Name="DISCORD_BOT_USERNAME" Target="DISCORD_BOT_USERNAME" Default="Username" Mode="" Description="Container Variable: DISCORD_BOT_USERNAME" Type="Variable" Display="always" Required="true" Mask="false">username</Config>
+  <Config Name="DISCORD_BOT_TOKEN" Target="DISCORD_BOT_TOKEN" Default="Token" Mode="" Description="Container Variable: DISCORD_BOT_TOKEN" Type="Variable" Display="always" Required="true" Mask="false">token</Config>
+  <Config Name="PLEX_LOCAL_IP" Target="PLEX_LOCAL_IP" Default="" Mode="" Description="Container Variable: PLEX_LOCAL_IP" Type="Variable" Display="always" Required="true" Mask="false">Local IP</Config>
+  <Config Name="PLEX_LOCAL_PORT" Target="PLEX_LOCAL_PORT" Default="32400" Mode="tcp" Description="Container Port: PLEX_LOCAL_PORT" Type="Port" Display="always" Required="true" Mask="false">Local Port</Config>
+  <Config Name="PLEX_USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME" Type="Variable" Display="always" Required="true" Mask="false">Username</Config>
+  <Config Name="PLEX_PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">Password</Config>
+  <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Container Variable: PLEX_TOKEN" Type="Variable" Display="always" Required="true" Mask="false">Token</Config>
+  <Config Name="PLEX_MACHINEID" Target="PLEX_MACHINEID" Default="" Mode="" Description="Container Variable: PLEX_MACHINEID" Type="Variable" Display="always" Required="true" Mask="false">Machine ID</Config>
+  <Config Name="PLEX_MANAGED_USERNAME" Target="PLEX_MANAGED_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_MANAGED_USERNAME" Type="Variable" Display="always" Required="true" Mask="false">Managed user</Config>
+  <Date>1530633774</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>A Discord bot that allows you to search, play, and queue music from your Plex Media Server.&#13;
+Commands&#13;
+!plexTest : a test to see make sure your Plex server is connected properly&#13;
+!clearqueue : clears all songs in queue&#13;
+!nextpage : get next page of songs if desired song is not listed&#13;
+!pause : pauses current song if one is playing&#13;
+!play  : bot will join voice channel and play song if one song available. if more than one, bot will return a list to choose from&#13;
+!playsong  : plays a song from the generated song list&#13;
+!removesong  : removes song by index from the song queue&#13;
+!resume : resumes song if previously paused&#13;
+!skip : skips the current song if one is playing and plays the next song in queue if it exists&#13;
+!stop : stops song if one is playing&#13;
+!viewqueue : displays current song queue</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/clowrymsRepository/Plex-discord-bot.xml</templatePath>
+</Container>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>SUIStartpage</Name>
+  <Repository>corneliousjd/sui-startpage</Repository>
+  <Registry>https://hub.docker.com/r/corneliousjd/sui-startpage/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/92176-support-sui-startpage-corneliousjd-repo/</Support>
+  <Project>https://github.com/CorneliousJD/SUI-Startpage</Project>
+  <Overview>SUI Startpage is a simple and clean server start page or homepage that you can quickly and easily setup to access your server resources and quick booksmarks and also lets you search on various provider sites via a search bar at the top as well.</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/suistartpage.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/sui-startpage.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8489</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/suistartpage/</HostDir>
+      <ContainerDir>/usr/share/nginx/html</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Web UI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8489</Config>
+  <Config Name="Appdata" Target="/usr/share/nginx/html" Default="/mnt/user/appdata/suistartpage/" Mode="rw" Description="Container Path: /usr/share/nginx/html" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/suistartpage/</Config>
+  <Date>1588967418</Date>
+  <Category>Tools:Utilities Network:Web</Category>
+  <Description>SUI Startpage is a simple and clean server start page or homepage that you can quickly and easily setup to access your server resources and quick booksmarks and also lets you search on various provider sites via a search bar at the top as well.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CorneliousJDsRepository/suistartpage.xml</templatePath>
+</Container>

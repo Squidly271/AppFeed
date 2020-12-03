@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Caddy</Name>
+  <Repository>cmer/caddy</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=56635.0</Support>
+  <Overview>Caddy is an HTTP/2 web server with automatic HTTPS</Overview>
+  <Date>1487048400</Date>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/cmer/docker-templates/master/cmer/images/caddy-icon.png</Icon>
+  <Registry>https://hub.docker.com/r/cmer/caddy</Registry>
+  <GitHub>https://github.com/cmer/docker-caddy</GitHub>
+  <Project>https://www.caddyserver.com/</Project>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2015</HostPort>
+        <ContainerPort>2015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Name="HTTP Port" Target="80" Default="80" Mode="tcp" Description="Container port 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="443" Default="443" Mode="tcp" Description="Container port 443" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="Alternate Port" Target="2015" Default="2015" Mode="tcp" Description="Container port 2015" Type="Port" Display="advanced" Required="false" Mask="false">2015</Config>
+  <Config Name="Configuration Path" Target="/caddy" Default="/mnt/cache/appdata/caddy/conf" Mode="rw" Description="Where your Caddyfile resides" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/caddy/conf</Config>
+  <Config Name="Site Root Path" Target="/var/www" Default="/mnt/cache/appdata/caddy/www" Mode="rw" Description="" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/caddy/www</Config>
+  <Config Name="Command line arguments override" Target="RUN_ARGS" Default="" Mode="" Description="Change this at your own risk!" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/cmer/docker-templates/master/cmer/caddy.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Network:Web</Category>
+  <Description>Caddy is an HTTP/2 web server with automatic HTTPS</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cmersRepository/cmer/caddy.xml</templatePath>
+</Container>

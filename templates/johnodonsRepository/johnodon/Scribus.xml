@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Scribus</Name>
+  <Registry>https://hub.docker.com/r/johnodon/scribus/</Registry>
+  <Repository>johnodon/scribus</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Scribus</HostDir>
+      <ContainerDir>/nobody/.scribus</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/2g3v7pf.png</Icon>
+  <Overview>Welcome to Scribus, a page layout program for Linux, FreeBSD, PC-BSD, NetBSD, OpenBSD, Solaris, OpenIndiana, Debian GNU/Hurd, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows.</Overview>
+  <Date>1455166800</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=46490.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/johnodon/docker-templates/master/johnodon/Scribus.xml</TemplateURL>
+  <Category>Productivity:</Category>
+  <Description>Welcome to Scribus, a page layout program for Linux, FreeBSD, PC-BSD, NetBSD, OpenBSD, Solaris, OpenIndiana, Debian GNU/Hurd, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/johnodonsRepository/johnodon/Scribus.xml</templatePath>
+</Container>

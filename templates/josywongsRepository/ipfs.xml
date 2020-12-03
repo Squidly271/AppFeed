@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>go-ipfs</Name>
+  <Repository>ipfs/go-ipfs</Repository>
+  <Registry>https://hub.docker.com/r/ipfs/go-ipfs</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ipfs/go-ipfs/issues</Support>
+  <Overview>
+    IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas from Git, BitTorrent, Kademlia, SFS, and the Web. It is like a single bittorrent swarm, exchanging git objects. IPFS provides an interface as simple as the HTTP web, but with permanence built in. You can also mount the world at /ipfs.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5001]/webui</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/ipfs.xml</TemplateURL>
+  <Project>https://dist.ipfs.io/</Project>
+  <Date>1563163200</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4001</HostPort>
+        <ContainerPort>4001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5001</HostPort>
+        <ContainerPort>5001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ipfs/</HostDir>
+      <ContainerDir>/data/ipfs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>server</Value>
+      <Name>IPFS_PROFILE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Storage" Target="/data/ipfs" Default="/mnt/user/appdata/ipfs/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /data/ipfs" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="IPFS PROFILE" Target="IPFS_PROFILE" Default="server" Mode="" Description="IPFS PROFILE" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Swarm TCP" Target="4001" Default="4001" Mode="tcp" Description="Swarm TCP should be exposed to the public" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Daemon API" Target="5001" Default="5001" Mode="tcp" Description="Daemon API must not be exposed publicly but to client services under you control" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Web Gateway" Target="8080" Default="8080" Mode="tcp" Description="Web Gateway can be exposed publicly with a proxy, e.g. as https://ipfs.example.org" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Swarm Websockets" Target="8081" Default="8081" Mode="tcp" Description="Swarm Websockets must be exposed publicly when the node is listening using the websocket transport (/ipX/.../tcp/8081/ws)." Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+  <Category>Other:</Category>
+  <Description>IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas from Git, BitTorrent, Kademlia, SFS, and the Web. It is like a single bittorrent swarm, exchanging git objects. IPFS provides an interface as simple as the HTTP web, but with permanence built in. You can also mount the world at /ipfs.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/josywongsRepository/ipfs.xml</templatePath>
+</Container>

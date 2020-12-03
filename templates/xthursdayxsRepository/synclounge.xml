@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>SyncLounge</Name>
+  <Repository>starbix/synclounge:latest</Repository>
+  <Registry>https://hub.docker.com/r/starbix/synclounge</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/88410-support-xthursdayx-unraid-docker-templates/</Support>
+  <Project>https://synclounge.tv/</Project>
+  <Overview>[B]What is SyncLounge?[/B][BR]&#13;
+ SyncLounge allows you and your friends/family to watch Plex in sync, wherever you are.[BR]&#13;
+[BR]&#13;
+[B]Modified by me to always join your self-hosted server. Just set DOMAIN and don't remove AUTOJOIN![/B][BR]&#13;
+For this to work you need to pass [B]http://IP:2088/ptweb[/B] and [B]http://IP:2089/ptserver[/B] through to your [B]HTTPS-enabled[/B] reverse proxy running at DOMAIN. This works best with the nginx-letsencrypt docker.[BR]&#13;
+[BR]&#13;
+[B]How does it work?[/B][BR]&#13;
+1. Log in to your Plex.tv account[BR]&#13;
+2. Select your player (Plex Media Player, Apple TV, Nvidia Shield etc.)[BR]&#13;
+3. Join a  SyncLounge Room, or create your own[BR]&#13;
+4. Give your friends/family your SL Room details[BR]&#13;
+5. Enjoy your media, fully synchronised[BR]&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:8088]/ptweb/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/synclounge.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/images/synclounge-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8088</HostPort>
+        <ContainerPort>8088</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8089</HostPort>
+        <ContainerPort>8089</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>https://syncelounge.server.domain</Value>
+      <Name>DOMAIN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>AUTOJOIN_ENABLED</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>https://synclounge.server.domain/slserver</Value>
+      <Name>AUTOJOIN_SERVERURL</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Ptweb" Target="8088" Default="" Mode="tcp" Description="Container Port: 8088" Type="Port" Display="always" Required="false" Mask="false">8088</Config>
+  <Config Name="Ptserver" Target="8089" Default="" Mode="tcp" Description="Container Port: 8089" Type="Port" Display="always" Required="false" Mask="false">8089</Config>
+  <Config Name="DOMAIN" Target="DOMAIN" Default="" Mode="" Description="Container Variable: DOMAIN" Type="Variable" Display="always" Required="true" Mask="false">https://syncelounge.server.domain</Config>
+  <Config Name="AUTOJOIN_ENABLED" Target="AUTOJOIN_ENABLED" Default="" Mode="" Description="Container Variable: AUTOJOIN_ENABLED" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="AUTOJOIN_SERVERURL" Target="AUTOJOIN_SERVERURL" Default="" Mode="" Description="Container Variable: AUTOJOIN_SERVERURL" Type="Variable" Display="always" Required="false" Mask="false">https://synclounge.server.domain/slserver</Config>
+  <Date>1588105369</Date>
+  <Category>MediaApp:Books MediaApp:Other MediaServer:Books MediaServer:Other Status:Stable</Category>
+  <Description>What is SyncLounge?&#13;
+ SyncLounge allows you and your friends/family to watch Plex in sync, wherever you are.&#13;
+&#13;
+Modified by me to always join your self-hosted server. Just set DOMAIN and don't remove AUTOJOIN!&#13;
+For this to work you need to pass http://IP:2088/ptweb and http://IP:2089/ptserver through to your HTTPS-enabled reverse proxy running at DOMAIN. This works best with the nginx-letsencrypt docker.&#13;
+&#13;
+How does it work?&#13;
+1. Log in to your Plex.tv account&#13;
+2. Select your player (Plex Media Player, Apple TV, Nvidia Shield etc.)&#13;
+3. Join a  SyncLounge Room, or create your own&#13;
+4. Give your friends/family your SL Room details&#13;
+5. Enjoy your media, fully synchronised</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/xthursdayxsRepository/synclounge.xml</templatePath>
+</Container>

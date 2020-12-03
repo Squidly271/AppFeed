@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>RSSTT---RSS-To-Telegram</Name>
+  <Repository>bokker/rss.to.telegram:latest</Repository>
+  <Registry>https://hub.docker.com/r/bokker/rss.to.telegram</Registry>
+  <Network>bridge</Network>
+  <Beta>true</Beta>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/95832-support-bokker-rsstt-rss-to-telegram/</Support>
+  <Project>https://github.com/BoKKeR/RSS-to-Telegram-Bot</Project>
+  <Overview>A self-hosted telegram python bot that dumps posts from RSS feeds to a telegram chat. This script was created because all the third party services were unreliable, slow.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/BoKKeR/RSSTT-Unraid/master/template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/BoKKeR/RSS-to-Telegram-Bot/master/rsstt.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Description>A self-hosted telegram python bot that dumps posts from RSS feeds to a telegram chat. This script was created because all the third party services were unreliable, slow.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/RSSTT</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>TOKEN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CHATID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>60</Value>
+      <Name>DELAY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="Telegram bot token https://botsfortelegram.com/project/the-bot-father/" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="CHATID" Target="CHATID" Default="" Mode="" Description="Telegram chatId, can be found by running bot with /help" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DELAY" Target="DELAY" Default="" Mode="" Description="Delay between RSS feed checks" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
+  <Date>1597503801</Date>
+  <Category>Network:Other Network:Messenger Productivity: Status:Beta</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BoKKeRsRepository/template.xml</templatePath>
+</Container>

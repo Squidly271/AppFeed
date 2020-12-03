@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>PlexConnect</Name>
+  <Registry>https://registry.hub.docker.com/r/pducharme/plexconnect/</Registry>
+  <Repository>pducharme/plexconnect</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/plexconnect/</HostDir>
+      <ContainerDir>/opt/plexconnect/assets/certificates</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/plexconnect/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://i.imgur.com/klXXMjw.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=37058</Support>
+  <TemplateURL>https://raw.githubusercontent.com/pducharme/docker-containers/templates/pducharme-repo/PlexConnect.xml</TemplateURL>
+  <Overview>
+  This is a Dockerfile setup for PlexConnect - https://github.com/iBaa/PlexConnect.[br]This is a fork from needo PlexConnect docker.[br][br]
+  This run the latest PlexConnect from master branch and add support for PIL background by installing Python-imaging.[br]
+  [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    Note: PlexConnect by default use ports 80 and 443, Unraid WebUI also use port 80. You need to either use the other ports for PlexConnect and use Reverse-Proxy -OR- change the Unraid WebUI port by editing go file on boot device.[br]
+    [b]/mnt/cache/appdata/plexconnect[/b] : this path is used to store the PlexConnect SSL Certificates.[br]
+    [b]/config[/b] : this path is used to store the Settings.cfg outside of the Docker Container for easy edit.[br]
+ </Overview>
+  <Category>Network:Web Network:DNS MediaServer:Video</Category>
+  <Description>This is a Dockerfile setup for PlexConnect - https://github.com/iBaa/PlexConnect.This is a fork from needo PlexConnect docker.
+  This run the latest PlexConnect from master branch and add support for PIL background by installing Python-imaging.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/pducharmesRepository/pducharme-repo/PlexConnect.xml</templatePath>
+</Container>

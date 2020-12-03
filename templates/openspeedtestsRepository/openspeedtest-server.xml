@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenSpeedTest-Server-For-LAN-WiFI-HTML5-Network-Speed-Test</Name>
+  <Repository>openspeedtest/latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/openspeedtest/latest</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://openspeedtest.com/Contact-us.php</Support>
+  <Project>http://openspeedtest.com/</Project>
+  <Overview>OpenSpeedTest-Server Plugin for UNRAID | HTML5 Network Performance Estimation Tool.&#13;
+&#13;
+You can Test your WiFi/LAN Speed.&#13;
+-Run a Speed Test from Your SMART TV &amp;amp; Make sure you have enough Bandwidth to watch 4K60FPS VIDEO FROM your NAS.&#13;
+-Run a Speed Test from Any Device with a Web Browser that is Internet Explore 10 or New!&#13;
+-Run a Quick speed test to your work place server via VPN and make sure you have enough bandwidth to finish your job. Install this in your Office Server.&#13;
+-Run a Quick speed test and Ensure your bandwidth Before Running a Full Backup, Transferring Huge Files, Download Large Files From the Internet, Torrent Downloads, Live Streaming, Playing Low Latency Video Games or Watching a Movie in your SMART TV from Your Media Server etc.&#13;
+&#13;
+-An application for launching a quick speed test server. Without using any commands!&#13;
+&#13;
+Light Weight HTML5 Network Speed Test written in Pure Vanilla Javascript - Less than 5Kb Gzip.&#13;
+&#13;
+No PHP or any other Server side Language required. Very little resource utilization. All you need is a Web Server Like Nginx.&#13;
+&#13;
+First test your local network speed before pointing fingers towards your ISP for slow and sluggish internet experience. Introducing Network Speed Test Server for Windows , Mac &amp;amp; Linux!. For professionals docker image and source code available.&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:3001]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/openspeedtest/unraid-docker-plugin/master/openspeedtest-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/openspeedtest/iocage-plugin-OpenSpeedTest-Server/master/openspeedtest.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Keep us Alive</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=TY2D56BYPKEXU</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3001</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment></Environment>
+  <Config Name="port" Target="8080" Default="" Mode="tcp" Description="Access Your SpeedTest WEB GUI via&#13;&#10; http://Your-NAS-IP:3001 " Type="Port" Display="always" Required="false" Mask="false">3001</Config>
+  <Date>1595617605</Date>
+  <Category>Tools:Utilities Network:Web</Category>
+  <Description>OpenSpeedTest-Server Plugin for UNRAID | HTML5 Network Performance Estimation Tool.&#13;
+&#13;
+You can Test your WiFi/LAN Speed.&#13;
+-Run a Speed Test from Your SMART TV &amp;amp; Make sure you have enough Bandwidth to watch 4K60FPS VIDEO FROM your NAS.&#13;
+-Run a Speed Test from Any Device with a Web Browser that is Internet Explore 10 or New!&#13;
+-Run a Quick speed test to your work place server via VPN and make sure you have enough bandwidth to finish your job. Install this in your Office Server.&#13;
+-Run a Quick speed test and Ensure your bandwidth Before Running a Full Backup, Transferring Huge Files, Download Large Files From the Internet, Torrent Downloads, Live Streaming, Playing Low Latency Video Games or Watching a Movie in your SMART TV from Your Media Server etc.&#13;
+&#13;
+-An application for launching a quick speed test server. Without using any commands!&#13;
+&#13;
+Light Weight HTML5 Network Speed Test written in Pure Vanilla Javascript - Less than 5Kb Gzip.&#13;
+&#13;
+No PHP or any other Server side Language required. Very little resource utilization. All you need is a Web Server Like Nginx.&#13;
+&#13;
+First test your local network speed before pointing fingers towards your ISP for slow and sluggish internet experience. Introducing Network Speed Test Server for Windows , Mac &amp;amp; Linux!. For professionals docker image and source code available.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/openspeedtestsRepository/openspeedtest-server.xml</templatePath>
+</Container>

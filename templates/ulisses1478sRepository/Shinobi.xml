@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Shinobi</Name>
+  <Repository>ulisses1478/shinobi</Repository>
+  <Registry>https://hub.docker.com/r/ulisses1478/shinobi</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Shinobi is Open Source, written in Node.js, and real easy to use. It is the future of CCTV and NVR for developers and end-users alike. It is catered to by professionals and most importantly by the one who created it. &#13;;
+&#13;;
+To change the super user username and password you need to login into /super WebUI&#13;;
+Web Address : http://xxx.xxx.xxx.xxx:8080/super&#13;;
+Username : admin@shinobi.video&#13;;
+Password : admin</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Ulisses1478/templates-unraid/master/Shinobi.xml</TemplateURL>
+  <Icon>https://shinobi.video//libs/assets/icon/apple-touch-icon-57x57.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Hey buy me some coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=PJNVJNW2CPE3G&amp;amp;source=url</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/ShinobiVideos</HostDir>
+      <ContainerDir>/shinobi/videos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Shinobi/config/</HostDir>
+      <ContainerDir>/shinobi/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Shinobi/mysql/</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Host Path 1" Target="/shinobi/videos" Default="" Mode="rw" Description="Container Path: /shinobi/videos" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/ShinobiVideos</Config>
+  <Config Name="Shinobi Config" Target="/shinobi/" Default="" Mode="rw" Description="Container Path: /shinobi" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/Shinobi/config/</Config>
+  <Config Name="Mysql Config" Target="/var/lib/mysql" Default="" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/Shinobi/mysql/</Config>
+  <Date>1554415889</Date>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Description>Shinobi is Open Source, written in Node.js, and real easy to use. It is the future of CCTV and NVR for developers and end-users alike. It is catered to by professionals and most importantly by the one who created it. &#13;;
+&#13;;
+To change the super user username and password you need to login into /super WebUI&#13;;
+Web Address : http://xxx.xxx.xxx.xxx:8080/super&#13;;
+Username : admin@shinobi.video&#13;;
+Password : admin</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ulisses1478sRepository/Shinobi.xml</templatePath>
+</Container>

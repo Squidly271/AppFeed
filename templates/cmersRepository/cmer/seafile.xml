@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Seafile</Name>
+  <Repository>cmer/seafile</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=56533.0</Support>
+  <Overview>Seafile is file synchronisation and sharing server.</Overview>
+  <Date>1486789200</Date>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/cmer/docker-templates/master/cmer/images/seafile-icon.png</Icon>
+  <Registry>https://hub.docker.com/r/cmer/seafile</Registry>
+  <GitHub>https://github.com/cmer/docker-seafile</GitHub>
+  <Project>https://www.seafile.com/</Project>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Name="Web Interface Port" Target="8000" Default="8000" Mode="tcp" Description="SeaHub Web UI. Default: 8000" Type="Port" Display="advanced" Required="true" Mask="false">8000</Config>
+  <Config Name="File Server Port" Target="8082" Default="8082" Mode="tcp" Description="Seafile File Server. Default: 8082" Type="Port" Display="advanced" Required="true" Mask="false">8082</Config>
+  <Config Name="Instance Name" Target="SEAFILE_NAME" Default="" Mode="" Description="ex: My Seafile" Type="Variable" Display="always" Required="true" Mask="false">Seafile</Config>
+  <Config Name="Instance URL" Target="SEAFILE_ADDRESS" Default="" Mode="" Description="ex: http://192.168.0.100" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Admin Email" Target="SEAFILE_ADMIN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Admin Password" Target="SEAFILE_ADMIN_PW" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Data Path" Target="/seafile" Default="/mnt/user/seafile" Mode="rw" Description="Container path: /seafile" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/seafile</Config>
+  <Config Name="Enable Pro Edition" Target="PRO" Default="false" Mode="" Description="Default: false" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Version" Target="VERSION" Default="latest" Mode="" Description="Default: latest" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="MySQL Server Host" Target="MYSQL_SERVER" Default="" Mode="" Description="Enables MySQL if this is populated" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="MySQL User" Target="MYSQL_USER" Default="seafile" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">seafile</Config>
+  <Config Name="MySQL User Password" Target="MYSQL_USER_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="MySQL Port" Target="MYSQL_PORT" Default="3306" Mode="" Description="Default: 3306" Type="Variable" Display="advanced" Required="false" Mask="false">3306</Config>
+  <Config Name="MySQL root Password" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/cmer/docker-templates/master/cmer/seafile.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Cloud: Network:Other Productivity:</Category>
+  <Description>Seafile is file synchronisation and sharing server.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cmersRepository/cmer/seafile.xml</templatePath>
+</Container>

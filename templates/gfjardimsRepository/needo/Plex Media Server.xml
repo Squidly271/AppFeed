@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>PlexMediaServer</Name>
+  <Overview>
+    The Plex Media Server enriches your life by organizing all your personal media, presenting it beautifully and streaming it to all of your devices. It's easy to use, it's awesome, and it's free!
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/needo/plex/</Registry>
+  <GitHub>https://github.com/needo37/plex</GitHub>
+  <Repository>needo/plex</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=33822.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/plexmediaserver</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <Icon>https://i.imgur.com/4KT9H3y.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/needo/Plex%20Media%20Server.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Description>The Plex Media Server enriches your life by organizing all your personal media, presenting it beautifully and streaming it to all of your devices. It's easy to use, it's awesome, and it's free!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/needo/Plex Media Server.xml</templatePath>
+</Container>

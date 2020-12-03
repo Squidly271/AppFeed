@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>intel-gpu-tools</Name>
+  <Repository>djaydev/intel-gpu-tools</Repository>
+  <Registry>https://hub.docker.com/r/djaydev/intel-gpu-tools</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/77603-virt-manager-intel-gpu-tools-and-more-dockers/</Support>
+  <Project>https://gitlab.freedesktop.org/drm/igt-gpu-tools</Project>
+  <Overview>Docker container that starts directly to intel-gpu-top for viewing the load/utilization of an Intel iGPU. Accessed through Web browser (port 7800) or VNC (port 7900).</Overview>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/djaydev/docker-virt-manager/master/UnRaid/template/intel-gpu-tools.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/djaydev/docker-intel-gpu-tools/master/icon2.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>0</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1280</Value>
+      <Name>DISPLAY_WIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>720</Value>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>KEEP_APP_RUNNING</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WebGUI" Target="5800" Default="" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="false" Mask="false">7800</Config>
+  <Config Name="VNC client" Target="5900" Default="" Mode="tcp" Description="Container Port: 5900" Type="Port" Display="always" Required="false" Mask="false">7900</Config>
+  <Config Name="Intel iGPU device" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri:/dev/dri</Config>
+  <Config Name="USER_ID" Target="USER_ID" Default="0" Mode="" Description="ID of the user the application runs as. See User/Group IDs to better understand when this should be set. (intel-gpu-tools require root)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="DISPLAY_WIDTH" Target="DISPLAY_WIDTH" Default="" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="always" Required="false" Mask="false">1280</Config>
+  <Config Name="DISPLAY_HEIGHT" Target="DISPLAY_HEIGHT" Default="" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="always" Required="false" Mask="false">720</Config>
+  <Config Name="KEEP_APP_RUNNING" Target="KEEP_APP_RUNNING" Default="" Mode="" Description="When set to 1, the application will be automatically restarted if it crashes or if user quits it." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <DonateLink>https://www.paypal.me/djaydev/0usd</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Date>1548022382</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>Docker container that starts directly to intel-gpu-top for viewing the load/utilization of an Intel iGPU. Accessed through Web browser (port 7800) or VNC (port 7900).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dee31797sRepository/UnRaid/template/intel-gpu-tools.xml</templatePath>
+</Container>

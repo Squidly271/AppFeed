@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>smartthings-mqtt-bridge</Name>
+  <Repository>stjohnjohnson/smartthings-mqtt-bridge</Repository>
+  <Registry>https://hub.docker.com/r/stjohnjohnson/smartthings-mqtt-bridge/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/</Support>
+  <Overview>A bridge between SmartThings and MQTT (there is NO webconsole!)&#13;
+&#13;
+This project was spawned by the desire to control SmartThings from within Home Assistant. Since Home Assistant already supports MQTT, we chose to go and build a bridge between SmartThings and MQTT.&#13;
+&#13;
+Setup info available at: https://github.com/stjohnjohnson/smartthings-mqtt-bridge</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/smartthings-mqtt-bridge.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/smartthings-mqtt-bridge_icon.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/smartthings-mqtt-bridge</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="BridgePort" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="BridgeDataPath" Target="/config" Default="/mnt/user/appdata/smartthings-mqtt-bridge" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/smartthings-mqtt-bridge</Config>
+  <Date>1530060995</Date>
+  <Category>HomeAutomation: Network:Management</Category>
+  <Description>A bridge between SmartThings and MQTT (there is NO webconsole!)&#13;
+&#13;
+This project was spawned by the desire to control SmartThings from within Home Assistant. Since Home Assistant already supports MQTT, we chose to go and build a bridge between SmartThings and MQTT.&#13;
+&#13;
+Setup info available at: https://github.com/stjohnjohnson/smartthings-mqtt-bridge</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/digiblursRepository/smartthings-mqtt-bridge.xml</templatePath>
+</Container>

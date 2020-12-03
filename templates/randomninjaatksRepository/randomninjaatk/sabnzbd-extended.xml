@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Beta>true</Beta>
+  <Name>sabnzbd-extended</Name>
+  <Repository>randomninjaatk/sabnzbd-extended</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/sabnzbd-extended</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-sabnzbd-extended</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/sabnzbd-extended.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/sabnzbd-icon.png</Icon>
+  <Overview>SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.[br]
+  [br][br][b][span style='color: #E80000;']Important Paths:[/span][/u][/b]
+  [b]/config[/b] :: Location of SABnzbd aplication files
+  [b]/config/scripts[/b] :: Location of SABnzbd post process script files (Add this to SABnzbd to enable script usage)
+  [b]/config/scripts/logs[/b] :: Location of log files
+  [b]/config/scripts/configs[/b] :: Location of SMA config files
+  [br][br][b][span style='color: #E80000;']Important SABNzbd Categories:[/span][/u][/b]
+  [b]lidarr[/b] :: Create Category and map script [b]audio-pp.bash[/b]
+  [b]radarr[/b] :: Create Category and map script [b]video-pp.bash[/b]
+  [b]sonarr[/b] :: Create Category and map script [b]video-pp.bash[/b]
+  [br][br][b][span style='color: #E80000;']Scripts/Files included:[/span][/u][/b]
+  [b]audio-pp.bash[/b] :: Automatically clean up downloaded audio files and convert to standardized format if desired
+  [b]video-pp.bash[/b] :: Verify incoming video files for required audio/subtitle languages and process with SMA if enabled
+  [br][br][b][span style='color: #E80000;']Sickbeard MP4 Automater (SMA):[/span][/u][/b]
+  [b]Config Files Location:[/b] /config/scripts/configs
+  [b]radarr-sma.ini[/b] :: config file for SMA radarr category
+  [b]sonarr-sma.ini[/b] :: config file for SMA sonarr category
+  [b]Log Files Location:[/b] /config/scripts/logs
+  [b]sma.log[/b] :: Log file for SMA
+  For more detailed configuration info, visit: https://github.com/mdhiggins/sickbeard_mp4_automator
+  [br][br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b] to [b]"extra parameters"[/b] (switch on advanced view)
+  </Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8080" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Port for 9090" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Audio Post Processor: Target Format" Target="AUDIO_FORMAT" Default="FLAC" Mode="" Description="FLAC or OPUS or MP3 or AAC or ALAC - converts lossless FLAC files to set format" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Audio Post Processor: Target Format Bitrate" Target="AUDIO_BITRATE" Default="320" Mode="" Description="Set to desired bitrate when converting to OPUS/MP3/FDK-AAC/AAC format types" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Audio Post Processor: Verify Downloaded Tracks" Target="AUDIO_VERIFY" Default="TRUE" Mode="" Description="TRUE = ENABLED, Verifies FLAC/MP3 files for errors (fixes MP3's, deletes bad FLAC files)" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Audio Post Processor: Detect Single File Albums" Target="AUDIO_DSFA" Default="TRUE" Mode="" Description="TRUE = ENABLED :: Detects single file albums and mark download as failed if detected" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Audio Post Processor: Replaygain FLAC tagging" Target="AUDIO_REPLAYGAIN" Default="FALSE" Mode="" Description="TRUE = ENABLED, adds replaygain tags for compatible players (FLAC ONLY)" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Video Post Processor: Required Audio/Subtitle Language" Target="VIDEO_LANG" Default="eng" Mode="" Description="Default: eng :: Set to required language (ISO 639-2 language code), if not found, will mark as failed" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Video Post Processor: Process with MKV Cleaner" Target="VIDEO_MKVCLEANER" Default="TRUE" Mode="" Description="TRUE = Enabled :: Uses MKVToolNix to remove unwanted audio/subtitle streams and sets UND audio language based on Required Audio/Subtitle Language setting" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Video Post Processor: Encode with Sickbeard MP4 Automator (SMA)" Target="VIDEO_SMA" Default="FALSE" Mode="" Description="TRUE = Enabled :: Uses SMA to process incoming video files" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Video Post Processor: Tag with Sickbeard MP4 Automator (SMA)" Target="VIDEO_SMA_TAGGING" Default="TRUE" Mode="" Description="TRUE = Enabled :: Uses SMA to Tag MP4 files (Enabled SMA process: manual.py -a; Disabled SMA Process: manual.py -nt)" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: Status:Beta</Category>
+  <Description>SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/sabnzbd-extended.xml</templatePath>
+</Container>

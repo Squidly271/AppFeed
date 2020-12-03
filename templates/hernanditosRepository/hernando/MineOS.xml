@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>MineOS</Name>
+  <Registry>https://registry.hub.docker.com/r/yujiod/minecraft-mineos/</Registry>
+  <GitHub>https://github.com/yujiod/docker-mineos</GitHub>
+  <Repository>yujiod/minecraft-mineos</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PASSWORD</Name>
+      <Value>minecraft</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/appdata/minecraftos/</HostDir>
+      <ContainerDir>/var/games/minecraft</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
+  <Icon>https://i.imgur.com/P6RRtHH.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/MineOS.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>
+   MineOS is an easy to manage Minecraft Server. It has its on web interface to manage all aspects of the server.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/var/games/minecraft[/b] : set this path to where you wish all the Minecraft Server items to be stored. Should be you app folder.[br][br]
+    [b][span style='color: #E80000;']IMPORTANT - Open Advanced View to Set your PASSWORD!!![/b][/span][br][br]
+  </Overview>
+  <Category>MediaServer:Other</Category>
+  <Description>MineOS is an easy to manage Minecraft Server. It has its on web interface to manage all aspects of the server.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hernanditosRepository/hernando/MineOS.xml</templatePath>
+</Container>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>netdata</Name>
+  <Repository>netdata/netdata</Repository>
+  <Registry>https://hub.docker.com/r/netdata/netdata</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/47828-support-data-monkey-netdata/</Support>
+  <Project>https://docs.netdata.cloud/</Project>
+  <Overview>[b]Real-time performance monitoring, done right! [/b][br]&amp;amp;#xD;&#13;
+- real-time, per second updates, snappy refreshes![br]&amp;amp;#xD;&#13;
+- 300+ charts out of the box, 2000+ metrics monitored![br]&amp;amp;#xD;&#13;
+- zero configuration, zero maintenance, zero dependencies![br]&amp;amp;#xD;&#13;
+Live demo: [a href]http://netdata.firehol.org[/a][br]</Overview>
+  <WebUI>http://[IP]:[PORT:19999]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/netdata.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/netdata.png</Icon>
+  <ExtraParams>--cap-add SYS_PTRACE --security-opt apparmor=unconfined --log-opt max-size=200m --log-opt max-file=1</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Thanks for the coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;amp;business=MDUDJ3BAXMJ4C&amp;amp;item_name=thanks+for+the+coffee%21&amp;amp;currency_code=AUD&amp;amp;source=url</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/proc</HostDir>
+      <ContainerDir>/host/proc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/sys</HostDir>
+      <ContainerDir>/host/sys</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>281</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>DO_NOT_TRACK</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="proc" Target="/host/proc" Default="/proc" Mode="ro" Description="Container Path: /host/proc" Type="Path" Display="always" Required="false" Mask="false">/proc</Config>
+  <Config Name="sys" Target="/host/sys" Default="/host/sys" Mode="ro" Description="Container Path: /host/sys" Type="Path" Display="always" Required="false" Mask="false">/sys</Config>
+  <Config Name="doker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="PGID" Target="PGID" Default="281" Mode="" Description="If you want to have your container names resolved by netdata it needs to have access to docker group. To achive that just add environment variable PGID=999 to netdata container, where 999 is a docker group id from your host. This number can be found by running:&#13;&#10;&#13;&#10;grep docker /etc/group | cut -d ':' -f 3" Type="Variable" Display="always" Required="false" Mask="false">281</Config>
+  <Config Name="Do Not Track" Target="DO_NOT_TRACK" Default="0" Mode="" Description="Set to 1 to stop anonymous tracking&#13;&#10;( https://docs.netdata.cloud/docs/anonymous-statistics/#opt-out )" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <changes>
+[center] [b]Data-Monkey:[/b] Netdata [/center]
+    
+[center][font size=4]Change Log[/font][/center]
+[font size=3]2020.05.02[/font]    
+- removed config dir. See support forum for example of configuring netdata
+    
+[center][font size=4]Change Log[/font][/center]
+[font size=3]2020.03.07[/font]    
+- change to official docker repo 
+- added variable to opt out of anonymous tracking
+- added group id to get access to doker stats 
+- fixed some links
+- updated logo again
+
+[font size=3]2019.05.05[/font]    
+- change volume mapping from /mnt/cache/netdata to /mnt/user/netdata
+- change to new logo
+- updated some links to the new urls    
+
+[font size=3]2018.05.07[/font]    
+- change volume mapping from /etc/netdata to /etc/netdata/override
+
+[font size=3]2018.03.18[/font]    
+- added /var/run/docker.sock to transalate docker IDs to names
+    
+[font size=3]2016.06.06[/font]
+- added config mapping
+- added "log rotation" for 6.2
+
+[font size=3]2016.06.03[/font]
+- Initial release of the netdata template
+    
+    
+  </changes>
+  <Date>1583539426</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>Real-time performance monitoring, done right! &amp;amp;#xD;&#13;
+- real-time, per second updates, snappy refreshes!&amp;amp;#xD;&#13;
+- 300+ charts out of the box, 2000+ metrics monitored!&amp;amp;#xD;&#13;
+- zero configuration, zero maintenance, zero dependencies!&amp;amp;#xD;&#13;
+Live demo: http://netdata.firehol.org</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/RolandsRepository/Data-Monkey/netdata.xml</templatePath>
+</Container>

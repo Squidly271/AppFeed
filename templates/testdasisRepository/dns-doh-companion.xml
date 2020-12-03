@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>DNS-DoH-companion</Name>
+  <Repository>testdasi/simple-dns-doh:latest-amd64</Repository>
+  <Registry>https://hub.docker.com/r/testdasi/simple-dns-doh/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96233-support-testdasi-repo</Support>
+  <Project>https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy/</Project>
+  <Overview>A very simple DNS server to connect to DNS-over-HTTPS service. This is similar to my other Pihole-with-DoH docker, without Pihole.&#13;
+You have already browsed the web securely with https, don't send your DNS queries in plain text.&#13;
+&#13;
+This is useful if you want to route DNS through a OpenVPN client docker (using --net=container: extra parameter) or just want encrypted DNS for your network / devices without any bells and whistles.&#13;
+&#13;
+Make sure to assign an IP (macvlan bridge) or map 53 to a different port (normal bridge). Docker will not start otherwise.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/dns-doh-companion.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/testdasi/simple-dns-doh/master/DNS-icon.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work, a donation to my burger fund is very much appreciated.</DonateText>
+  <DonateLink>https://paypal.me/mersenne</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment></Environment>
+  <Config Name="DNS TCP" Target="53" Default="53" Mode="tcp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Config Name="DNS UDP" Target="53" Default="53" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Date>1598613775</Date>
+  <Category>Network:DNS</Category>
+  <Description>A very simple DNS server to connect to DNS-over-HTTPS service. This is similar to my other Pihole-with-DoH docker, without Pihole.&#13;
+You have already browsed the web securely with https, don't send your DNS queries in plain text.&#13;
+&#13;
+This is useful if you want to route DNS through a OpenVPN client docker (using --net=container: extra parameter) or just want encrypted DNS for your network / devices without any bells and whistles.&#13;
+&#13;
+Make sure to assign an IP (macvlan bridge) or map 53 to a different port (normal bridge). Docker will not start otherwise.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/testdasisRepository/dns-doh-companion.xml</templatePath>
+</Container>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Minecraft-Server</Name>
+  <Repository>itzg/minecraft-server</Repository>
+  <Registry>https://hub.docker.com/r/itzg/minecraft-server</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/itzg/docker-minecraft-server/issues</Support>
+  <Project>https://github.com/itzg/docker-minecraft-server</Project>
+  <Overview>Docker image that provides a Minecraft Server that will automatically download selected version at startup. For a complete list of all features/extra parameters go to: https://github.com/itzg/docker-minecraft-server/blob/master/README.md</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/jahanson/unraid-docker-templates/master/itzg-minecraft-server.xml</TemplateURL>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25575</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/itzg-minecraft-server</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>EULA</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>PAPER</Value>
+      <Name>TYPE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>America/Chicago</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>2G</Value>
+      <Name>MEMORY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>TRUE</Value>
+      <Name>USE_AIKAR_FLAGS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="rcon" Target="" Default="25575" Mode="tcp" Description="rcon-cli port:" Type="Port" Display="always" Required="false" Mask="false">25575</Config>
+  <Config Name="minecraft" Target="" Default="" Mode="tcp" Description="Minecraft Port: " Type="Port" Display="always" Required="false" Mask="false">25565</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data -- Saves, mods, etc..." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Minecraft/minecraft1</Config>
+  <Config Name="Accept EULA" Target="EULA" Default="" Mode="" Description="Set to TRUE to accept EULA" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server Type" Target="TYPE" Default="" Mode="" Description="Ex. Paper, Forge, Spigot, Bukkit, etc..." Type="Variable" Display="always" Required="false" Mask="false">PAPER</Config>
+  <Config Name="ISO Timezone" Target="TZ" Default="" Mode="" Description="Ex. America/Chicago" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
+  <Config Name="Memory limit" Target="MEMORY" Default="" Mode="" Description="Ex. 500M, 2G, 6G" Type="Variable" Display="advanced" Required="false" Mask="false">2G</Config>
+  <Config Name="Use Aikar Flags" Target="USE_AIKAR_FLAGS" Default="" Mode="" Description="Ex. True/False" Type="Variable" Display="advanced" Required="false" Mask="false">TRUE</Config>
+  <Category>GameServers:</Category>
+  <Description>Docker image that provides a Minecraft Server that will automatically download selected version at startup. For a complete list of all features/extra parameters go to: https://github.com/itzg/docker-minecraft-server/blob/master/README.md</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/VeriwindsRepository/itzg-minecraft-server.xml</templatePath>
+</Container>

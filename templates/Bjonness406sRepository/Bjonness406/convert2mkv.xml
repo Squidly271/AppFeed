@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1476763200</Date>
+  <Name>Bjonness406-convert2mkv</Name>
+  <Repository>bjonness406/convert2mkv</Repository>
+  <Registry>https://hub.docker.com/r/bjonness406/convert2mkv/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=48798.0</Support>
+  <Overview>[b]A docker to convert your videos to mkv or mp4 [/b]&#13;
+&#13;
+[br][br]When you start the container, it will start the script, and stop when the script is finished. &#13;
+[br]So you will need to restart the container when you add a file you want to convert&#13;
+[br]You will need to place the videos you want to convert, in the appdata folder (/config).&#13;
+&#13;
+[br][br]Thanks to @ntrevena (at plex forum) for the script!</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/bjonness406/Docker-templates/master/Bjonness406/convert2mkv.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/bjonness406/Docker-templates/master/Icon/avi-to-mkv.jpg</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/convert2mkv</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/cache/appdata/convert2mkv" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/cache/appdata/convert2mkv</Config>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>A docker to convert your videos to mkv or mp4 &#13;
+&#13;
+When you start the container, it will start the script, and stop when the script is finished. &#13;
+So you will need to restart the container when you add a file you want to convert&#13;
+You will need to place the videos you want to convert, in the appdata folder (/config).&#13;
+&#13;
+Thanks to @ntrevena (at plex forum) for the script!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Bjonness406sRepository/Bjonness406/convert2mkv.xml</templatePath>
+</Container>

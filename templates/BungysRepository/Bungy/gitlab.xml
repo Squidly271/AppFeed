@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>gitlab</Name>
+  <Overview>
+    Gitlab is a git repository server that can be hosted on your own network so that you can maintain and keep your source code privately.
+    This docker has the ability to enable https, send emails using gmail, and perform nightly backups.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Registry>https://registry.hub.docker.com/r/sameersbn/gitlab/</Registry>
+  <GitHub>https://github.com/sameersbn/docker-gitlab</GitHub>
+  <Repository>sameersbn/gitlab</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10022</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>GITLAB_HOST</Name>
+      <Value>localhost</Value>
+    </Variable>
+    <Variable>
+      <Name>GITLAB_EMAIL</Name>
+      <Value>example@example.com</Value>
+    </Variable>
+    <Variable>
+      <Name>GITLAB_SSH_PORT</Name>
+      <Value>10020</Value>
+    </Variable>
+    <Variable>
+      <Name>GITLAB_PORT</Name>
+      <Value>10080</Value>
+    </Variable>
+    <Variable>
+      <Name>GITLAB_HTTPS</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_SELF_SIGNED</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>SMTP_USER</Name>
+      <Value>gitlabEmail@gmail.com</Value>
+    </Variable>
+    <Variable>
+      <Name>SMTP_PASS</Name>
+      <Value>gmailpassword</Value>
+    </Variable>
+    <Variable>
+      <Name>GITLAB_BACKUPS</Name>
+      <Value>daily</Value>
+    </Variable>
+    <Variable>
+      <Name>GITLAB_BACKUP_EXPIRY</Name>
+      <Value>2419200</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab</HostDir>
+      <ContainerDir>/home/git/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <ExtraParams>--link postgresql:postgresql --link redis:redisio</ExtraParams>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/gitlab.xml</TemplateURL>
+  <Category>Cloud: Network:Web Productivity: Tools:Utilities</Category>
+  <Description>Gitlab is a git repository server that can be hosted on your own network so that you can maintain and keep your source code privately.
+    This docker has the ability to enable https, send emails using gmail, and perform nightly backups.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BungysRepository/Bungy/gitlab.xml</templatePath>
+</Container>

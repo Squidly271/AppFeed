@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>post-recording</Name>
+  <Repository>chacawaca/post-recording</Repository>
+  <Registry>https://hub.docker.com/r/chacawaca/post-recording</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96179-support-chacawaca-post-recording</Support>
+  <Project>https://github.com/chacawaca/docker-post-recording</Project>
+  <Overview>Watches for .ts files made by Live TV recordings, convert them to a friendly format, extract .srt file, add chapters with comchap or remove them with comcut. Tested with Emby recordings.&#13;
+&#13;
+Nvidia GPU Use&#13;
+Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and&#13;
+add --runtime=nvidia to "extra parameters" (switch on advanced view) and&#13;
+copy your GPU UUID to NVIDIA_VISIBLE_DEVICES&#13;
+  &#13;
+  --------New Variable added --- verify your old custom.sh--------</Overview>
+  <Date>1598241600</Date>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/chacawaca/post-recording-xml/master/post-recording.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/chacawaca/docker-post-recording/master/Icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/watch</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1</Value>
+      <Name>DELETE_TS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>SUBTITLES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>mkv</Value>
+      <Name>CONVERSION_FORMAT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ts</Value>
+      <Name>SOURCE_EXT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>comchap</Value>
+      <Name>POST_PROCESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="CONFIG FOLDER" Target="/config" Default="/mnt/user/appdata/post-recording" Mode="rw" Description="Configuration folder /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="WATCH FOLDER" Target="/watch" Default="" Mode="rw" Description="This location contains .ts files that need converting /watch" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="BACKUP FOLDER" Target="/backup" Default="" Mode="rw" Description="Optional, only used if DELETE_TS is set to 2  /backup" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DELETE_TS" Target="DELETE_TS" Default="1" Mode="" Description="Remove the original .ts recording file. 0 = Yes, 1 = No, 2 = Move to backup directory" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="SUBTITLES" Target="SUBTITLES" Default="0" Mode="" Description="Extract subtitles to .srt. 0= Yes, 1 = No" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="CONVERSION_FORMAT" Target="CONVERSION_FORMAT" Default="mkv" Mode="" Description="mkv or mp4" Type="Variable" Display="always" Required="false" Mask="false">mkv</Config>
+  <Config Name="SOURCE_EXT" Target="SOURCE_EXT" Default="ts" Mode="" Description="Source file extension, default .ts" Type="Variable" Display="always" Required="false" Mask="false">ts</Config>
+  <Config Name="POST_PROCESS" Target="POST_PROCESS" Default="comchap" Mode="" Description="comchap or comcut&#13;&#10;default: comchap" Type="Variable" Display="always" Required="false" Mask="false">comchap</Config>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="GPU UUID retrieved from Nvidia plugin settings&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Category>MediaApp:Video</Category>
+  <Description>Watches for .ts files made by Live TV recordings, convert them to a friendly format, extract .srt file, add chapters with comchap or remove them with comcut. Tested with Emby recordings.&#13;
+&#13;
+Nvidia GPU Use&#13;
+Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and&#13;
+add --runtime=nvidia to "extra parameters" (switch on advanced view) and&#13;
+copy your GPU UUID to NVIDIA_VISIBLE_DEVICES&#13;
+  &#13;
+  --------New Variable added --- verify your old custom.sh--------</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ChacawacasRepository/post-recording.xml</templatePath>
+</Container>

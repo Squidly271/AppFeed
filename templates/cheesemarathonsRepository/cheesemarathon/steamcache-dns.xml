@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Privileged>false</Privileged>
+  <Name>SteamcacheDNS</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>
+	SteamcacheDNS provides DNS entries for *.cs.steampowered.com and other download URLs to be used in conjunction with a GenericCache server
+	Please see https://squishedmooo.com/?p=1 for install instructions! You will need them!
+	</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/steamcache/steamcache-dns/</Registry>
+  <GitHub>https://steamcache.github.io/</GitHub>
+  <Repository>steamcache/steamcache-dns:latest</Repository>
+  <Network>br0</Network>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.50</Value>
+      <Name>LANCACHE_IP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8.8.8.8</Value>
+      <Name>UPSTREAM_DNS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>USE_GENERIC_CACHE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_FRONTIER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_ORIGIN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_RIOT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_STEAM</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_UPLAY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_BLIZZARD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DISABLE_WINDOWS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Data></Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/steamcache-dns.png</Icon>
+  <Config Name="LANCACHE_IP" Target="LANCACHE_IP" Default="" Mode="" Description="IP Address of cache container" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DNS UDP Port" Target="53" Default="53" Mode="udp" Description="DNS port, don't change!" Type="Port" Display="advanced" Required="true" Mask="false">53</Config>
+  <Config Name="UPSTREAM_DNS" Target="UPSTREAM_DNS" Default="" Mode="" Description="Container Variable: UPSTREAM_DNS" Type="Variable" Display="advanced" Required="true" Mask="false">8.8.8.8</Config>
+  <Config Name="USE_GENERIC_CACHE" Target="USE_GENERIC_CACHE" Default="" Mode="" Description="Must be set to true to use generic cache" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="DISABLE_FRONTIER" Target="DISABLE_FRONTIER" Default="" Mode="" Description="Set to true to disable frontier caching" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_ORIGIN" Target="DISABLE_ORIGIN" Default="" Mode="" Description="Set to true to disable origin caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_RIOT" Target="DISABLE_RIOT" Default="" Mode="" Description="Set to true to disable riot caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_STEAM" Target="DISABLE_STEAM" Default="" Mode="" Description="Set to true to disable steam caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_UPLAY" Target="DISABLE_UPLAY" Default="" Mode="" Description="Set to true to disable uplay caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_BLIZZARD" Target="DISABLE_BLIZZARD" Default="" Mode="" Description="Set to true to disable blizzard caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_WINDOWS" Target="DISABLE_WINDOWS" Default="" Mode="" Description="Set to true to disable windows update caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/steamcache-dns.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Backup: Tools:Utilities</Category>
+  <Description>SteamcacheDNS provides DNS entries for *.cs.steampowered.com and other download URLs to be used in conjunction with a GenericCache server
+	Please see https://squishedmooo.com/?p=1 for install instructions! You will need them!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/steamcache-dns.xml</templatePath>
+</Container>

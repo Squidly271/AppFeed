@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>yourls</Name>
+  <Repository>yourls</Repository>
+  <Registry>https://hub.docker.com/_/yourls/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/_/yourls/</Support>
+  <Overview>YOURLS is a set of PHP scripts that will allow you to run Your Own URL Shortener.</Overview>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/RazorSiM/docker-templates/master/yourls.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/YOURLS/YOURLS/master/images/yourls-logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_DB_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_DB_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_SITE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_DB_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_HOURS_OFFSET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_PRIVATE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>YOURLS_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Container Port" Target="80" Default="8086" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MariaDB Host and Port" Target="YOURLS_DB_HOST" Default="yourdbhost:3306" Mode="" Description="Container Variable: YOURLS_DB_HOST" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MariaDB Password" Target="YOURLS_DB_PASS" Default="" Mode="" Description="Container Variable: YOURLS_DB_PASS" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="url" Target="YOURLS_SITE" Default="https://yourdomainname.something" Mode="" Description="Use a reverse proxy to point to the container host" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MariaDB Database Name" Target="YOURLS_DB_NAME" Default="yourls" Mode="" Description="yourls database name. default is 'yourls'" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="YOURLS_HOURS_OFFSET" Target="YOURLS_HOURS_OFFSET" Default="0" Mode="" Description="set your timezone ( GMT )" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="YOURLS_PRIVATE" Target="YOURLS_PRIVATE" Default="true" Mode="" Description="false will set yourls to public. Reccomended value is true ( to be private )" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="YOURLS_USER" Target="YOURLS_USER" Default="admin" Mode="" Description="Yourls admin interface username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="YOURLS_PASS" Target="YOURLS_PASS" Default="strongpass" Mode="" Description="Yourls admin interface password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Date>1550354991</Date>
+  <Category>Cloud: Tools:Utilities Network:Web Network:Other</Category>
+  <Description>YOURLS is a set of PHP scripts that will allow you to run Your Own URL Shortener.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/razsRepository/yourls.xml</templatePath>
+</Container>

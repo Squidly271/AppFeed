@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Google-MusicManager</Name>
+  <Overview>
+    Upload your personal music collection to Google Play Music
+  </Overview>
+  <Support>https://lime-technology.com/forum/index.php?topic=44585.0</Support>
+  <Registry>https://registry.hub.docker.com/r/ruippeixotog/google-musicmanager/</Registry>
+  <GitHub>https://github.com/ruippeixotog/docker-google-musicmanager</GitHub>
+  <Repository>ruippeixotog/google-musicmanager:dev</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>BRANCH</Name>
+      <Value>dev</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/google-musicmanager</HostDir>
+      <ContainerDir>/appdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://i.imgur.com/E9wSQ9N.png</Icon>
+  <Date>1449637200</Date>
+  <TemplateURL>https://raw.githubusercontent.com/bb12489/docker-templates/master/bb12489/google-musicmanager.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Backup: Cloud: MediaApp:Music MediaServer:Music</Category>
+  <Description>Upload your personal music collection to Google Play Music</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/bb12489sRepository/bb12489/google-musicmanager.xml</templatePath>
+</Container>

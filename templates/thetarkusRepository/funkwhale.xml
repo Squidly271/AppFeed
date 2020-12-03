@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Funkwhale</Name>
+  <Date>1547096400</Date>
+  <Repository>thetarkus/funkwhale</Repository>
+  <Registry>https://hub.docker.com/r/thetarkus/funkwhale/</Registry>
+  <Network>bridge</Network>
+  <Project>https://funkwhale.audio/</Project>
+  <Overview>&#13;
+    Funkwhale is designed to make it easy to listen to music you like, and to discover new artists.&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:3030]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/thetarkus/docker-templates/master/funkwhale.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/thetarkus/docker-templates/master/images/funkwhale-logo-500.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3030</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/funkwhale</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>yourdomain.funkwhale</Value>
+      <Name>FUNKWHALE_HOSTNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>NESTED_PROXY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Music Path" Target="/music" Default="" Mode="ro" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Funkwhale Hostname" Target="FUNKWHALE_HOSTNAME" Default="" Mode="" Description="Container Variable: FUNKWHALE_HOSTNAME" Type="Variable" Display="always" Required="true" Mask="false">yourdomain.funkwhale</Config>
+  <Config Name="Nested Proxy" Target="NESTED_PROXY" Default="0" Mode="" Description="Container Variable: NESTED_PROXY | Set to '1' when container is behind a reverse proxy." Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/funkwhale" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/funkwhale</Config>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">3030</Config>
+  <Category>MediaApp:Music MediaServer:Music</Category>
+  <Description>Funkwhale is designed to make it easy to listen to music you like, and to discover new artists.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/thetarkusRepository/funkwhale.xml</templatePath>
+</Container>

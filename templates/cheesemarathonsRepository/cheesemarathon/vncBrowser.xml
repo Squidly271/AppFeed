@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Privileged>false</Privileged>
+  <Name>VNC-Web-Browser</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>This container provides a VNC connection, via web or VNC client, to an xfce desktop with access to both FireFox and Chrome browsers</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/consol/centos-xfce-vnc/</Registry>
+  <GitHub>https://github.com/ConSol/docker-headless-vnc-container</GitHub>
+  <Repository>consol/centos-xfce-vnc</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5901</HostPort>
+        <ContainerPort>5901</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6901</HostPort>
+        <ContainerPort>6901</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>cheese123</Value>
+      <Name>VNC_PW</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1920x1080</Value>
+      <Name>VNC_RESOLUTION</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Data></Data>
+  <WebUI>http://[IP]:[PORT:6901]</WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/vncBrowser.png</Icon>
+  <Config Name="VNC" Target="5901" Default="5901" Mode="tcp" Description="VNC Port" Type="Port" Display="always" Required="true" Mask="false">5901</Config>
+  <Config Name="VNC Web" Target="6901" Default="6901" Mode="tcp" Description="VNC Web Port" Type="Port" Display="always" Required="true" Mask="false">6901</Config>
+  <Config Name="VNC Password" Target="VNC_PW" Default="" Mode="" Description="Container Variable: VNC_PW" Type="Variable" Display="always" Required="true" Mask="true">cheese123</Config>
+  <Config Name="VNC Resolution" Target="VNC_RESOLUTION" Default="" Mode="" Description="Container Variable: VNC_RESOLUTION" Type="Variable" Display="always" Required="true" Mask="false">1920x1080</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/vncBrowser.xml</TemplateURL>
+  <Category>Tools:Utilities Other:</Category>
+  <Description>This container provides a VNC connection, via web or VNC client, to an xfce desktop with access to both FireFox and Chrome browsers</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/vncBrowser.xml</templatePath>
+</Container>

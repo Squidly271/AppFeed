@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>RavencoinP2P</Name>
+  <Repository>angelics/unraid-docker-ravencoin-p2p</Repository>
+  <Registry>https://hub.docker.com/r/angelics/unraid-docker-ravencoin-p2p</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/</Support>
+  <Overview>
+    The Ravencoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project.
+	This is just p2p, without wallet or gui.
+    Based on jlesage/baseimage:alpine-3.9.
+  </Overview>
+  <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/ravencoinp2p.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/angelics/unraid-docker-ravencoin-p2p/master/icon.png</Icon>
+  <Project>https://github.com/RavenProject/Ravencoin</Project>
+  <Date>1562904000</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8767</HostPort>
+        <ContainerPort>8767</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/RavencoinP2P/</HostDir>
+      <ContainerDir>/storage/.raven/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_NICENESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>BOOTSTRAP</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Storage" Target="/storage/.raven/" Default="/mnt/user/appdata/RavencoinP2P/" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage/.raven" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Bootstrap" Target="BOOTSTRAP" Default="0" Mode="" Description="Improve synchronization speed for fresh install" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="P2P Port" Target="8767" Default="8767" Mode="tcp" Description="Port used by P2P" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+  <Category>Other:</Category>
+  <Description>The Ravencoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project.
+	This is just p2p, without wallet or gui.
+    Based on jlesage/baseimage:alpine-3.9.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/josywongsRepository/ravencoinp2p.xml</templatePath>
+</Container>

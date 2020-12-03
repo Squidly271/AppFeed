@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>mochad</Name>
+  <Overview>
+    Mochad is a TCP gateway to access the CM15a and CM19 X-10 interfaces
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Registry>https://registry.hub.docker.com/r/jshridha/mochad</Registry>
+  <GitHub>https://github.com/sameersbn/docker-mochad</GitHub>
+  <Repository>jshridha/mochad</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1099</HostPort>
+        <ContainerPort>1099</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/dev/bus/usb/004</HostDir>
+      <ContainerDir>/dev/bus/usb/004</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/Icons/x10_icon.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/mochad.xml</TemplateURL>
+  <Category>HomeAutomation: Network:Other</Category>
+  <Description>Mochad is a TCP gateway to access the CM15a and CM19 X-10 interfaces</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BungysRepository/Bungy/mochad.xml</templatePath>
+</Container>

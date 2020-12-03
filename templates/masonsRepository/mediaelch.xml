@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/mason-xx/unraid-templates/master/mediaelch.xml</TemplateURL>
+  <Name>MediaElch</Name>
+  <Overview>
+    Mediaelch is a Tool to manage your movie and show libary regarding the metadata and artwork.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/95577-support-mason-xx-mediaelch/</Support>
+  <Registry>https://hub.docker.com/repository/docker/masonxx/mediaelch</Registry>
+  <Repository>masonxx/mediaelch</Repository>
+  <Project>https://github.com/Komet/MediaElch</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/config</HostDir>
+      <ContainerDir>/config/xdg/config/kvibes</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/movies</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/shows</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
+  <Icon>https://www.kvibes.de/img/mediaelch/icon.png</Icon>
+  <Category>MediaApp:Video</Category>
+  <Description>Mediaelch is a Tool to manage your movie and show libary regarding the metadata and artwork.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/masonsRepository/mediaelch.xml</templatePath>
+</Container>

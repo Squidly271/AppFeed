@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>yacserver</Name>
+  <Repository>xthursdayx/yacreaderlibrary-server-docker</Repository>
+  <Registry>https://hub.docker.com/r/xthursdayx/yacreaderlibrary-server-docker/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/xthursdayx/yacreaderlibrary-server-docker/</Support>
+  <Project>https://www.yacreader.com</Project>
+  <Overview>Headless version of the YACReaderLibraryServer. YACReader is the best comic reader and comic manager with support for cbr cbz zip rar comic files.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/yacserver.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/images/yacreader-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/comics</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Host Path 1" Target="/comics" Default="" Mode="rw" Description="Container Path: /comics" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Date>1584733384</Date>
+  <Category>MediaServer:Other</Category>
+  <Description>Headless version of the YACReaderLibraryServer. YACReader is the best comic reader and comic manager with support for cbr cbz zip rar comic files.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/xthursdayxsRepository/yacserver.xml</templatePath>
+</Container>

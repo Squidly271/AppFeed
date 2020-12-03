@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Jackett</Name>
+  <Date>1447218000</Date>
+  <Overview>
+    Use just about any tracker with Sonarr
+  </Overview>
+  <Support>https://lime-technology.com/forum/index.php?topic=41543.0</Support>
+  <Registry>https://registry.hub.docker.com/r/sdesbure/arch-jackett</Registry>
+  <GitHub>https://github.com/sdesbure/arch-jackett</GitHub>
+  <Repository>sdesbure/arch-jackett</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9117</HostPort>
+        <ContainerPort>9117</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to supervisor log</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/usr/share/Jackett/.config/Jackett/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9117]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/sdesbure/docker-containers/master/images/jackett-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/sdesbure/docker-containers/master/jackett.xml</TemplateURL>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Description>Use just about any tracker with Sonarr</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/sdesburesRepository/jackett.xml</templatePath>
+</Container>

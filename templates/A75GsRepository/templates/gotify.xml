@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>gotify</Name>
+  <Repository>gotify/server:latest</Repository>
+  <Registry>https://hub.docker.com/r/gotify/server/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
+  <Project>https://gotify.net/</Project>
+  <Overview>A simple server for sending and receiving messages.[br][br][b][u][span style='color: #ff9900;']Default user/password[/span][/u][/b][br]User: [B][u]admin[/B][/u][br]Password: [B][u]admin[/B][/u][/b][br][br]Download config.yml[/br]mkdir -p /mnt/user/appdata/gotify/config/[/br]wget -O /mnt/user/appdata/gotify/config/config.yml https://raw.githubusercontent.com/gotify/server/master/config.example.yml</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/gotify.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/gotify.png</Icon>
+  <Config Name="Host Port 1" Target="80" Default="8070" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8070</Config>
+  <Config Name="Path 1" Target="/app/data" Default="/mnt/user/appdata/gotify/" Mode="rw" Description="/app/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gotify/</Config>
+  <Config Name="Path 2" Target="/etc/gotify" Default="" Mode="rw" Description="/etc/gotify" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gotify/config/</Config>
+  <Config Name="Default User Password" Target="GOTIFY_DEFAULTUSER_PASS" Default="admin" Mode="" Description="Default User Password" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Category>Productivity: Tools:Utilities Network:Messenger</Category>
+  <Description>A simple server for sending and receiving messages.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/A75GsRepository/templates/gotify.xml</templatePath>
+</Container>

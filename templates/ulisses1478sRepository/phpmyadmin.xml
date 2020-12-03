@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>phpmyadmin</Name>
+  <Repository>phpmyadmin/phpmyadmin</Repository>
+  <Registry>https://hub.docker.com/r/phpmyadmin/phpmyadmin/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>A web interface for MySQL and MariaDB.</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Ulisses1478/templates-unraid/master/phpmyadmin.xml</TemplateURL>
+  <Icon>https://secure.gravatar.com/avatar/4be7d922dc46f22e6b0cf1162f0e329b.jpg</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Hey buy me some coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=PJNVJNW2CPE3G&amp;amp;source=url</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>root</Value>
+      <Name>MYSQL_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>MYSQL_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.70.99</Value>
+      <Name>PMA_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>PMA_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="MYSQL_USER" Target="MYSQL_USER" Default="" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="MYSQL_PASSWORD" Target="MYSQL_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="MYSQL_HOST" Target="PMA_HOST" Default="" Mode="" Description="Container Variable: PMA_HOST" Type="Variable" Display="always" Required="false" Mask="false">192.168.70.99</Config>
+  <Config Name="MYSQL_PORT" Target="PMA_PORT" Default="3306" Mode="" Description="Container Variable: PMA_PORT" Type="Variable" Display="always" Required="false" Mask="false">3306</Config>
+  <Config Name="Web UI PORT" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Date>1555081951</Date>
+  <Category>Tools:Utilities Other:</Category>
+  <Description>A web interface for MySQL and MariaDB.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ulisses1478sRepository/phpmyadmin.xml</templatePath>
+</Container>

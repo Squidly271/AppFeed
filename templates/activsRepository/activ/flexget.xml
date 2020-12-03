@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>activ-flexget</Name>
+  <Overview>
+  FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. [br]
+ 	The default port used is 3539 for the web interface. [br]
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=49545.0</Support>
+  <Registry>https://registry.hub.docker.com/r/activ/arch-flexget/</Registry>
+  <GitHub>https://github.com/activ/arch-flexget</GitHub>
+  <Repository>activ/arch-flexget</Repository>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3539</HostPort>
+        <ContainerPort>3539</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>DEBUG</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>WEB_PASSWD</Name>
+      <Value>fl3xg3t!</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path to data</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3539]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/flexget-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/activ/docker-templates/master/activ/flexget.xml</TemplateURL>
+  <Category>Downloaders:</Category>
+  <Description>FlexGet is a multipurpose automation tool for content like torrents, nzbs, podcasts, comics, series, movies, etc. It can use different kinds of sources like RSS-feeds, html pages, csv files, search engines and there are even plugins for sites that do not provide any kind of useful feeds. 
+ 	The default port used is 3539 for the web interface.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/activsRepository/activ/flexget.xml</templatePath>
+</Container>

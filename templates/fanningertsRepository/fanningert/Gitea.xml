@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Gitea</Name>
+  <Beta>true</Beta>
+  <Repository>gitea/gitea</Repository>
+  <Registry>https://registry.hub.docker.com/r/gitea/gitea/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Date>1505620800</Date>
+  <Support>https://forums.lime-technology.com/topic/60168-support-gitea/</Support>
+  <Overview>Gitea: Git with a cup of tea - The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service. Using Go, this can be done with an independent binary distribution across all platforms which Go supports, including Linux, macOS, and Windows on x86, amd64, ARM and PowerPC architectures. Want to try it before doing anything else? Do it with the online demo! This project has been forked from Gogs.</Overview>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/Gitea.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/gitea.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>22</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitea</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Git over SSH" Target="22" Default="22" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="true" Mask="false">22</Config>
+  <Config Name="WebUI and Git over HTTP" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Data Storage Path" Target="/data" Default="/mnt/user/appdata/gitea" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/gitea</Config>
+  <Category>Backup: Cloud: Productivity: Tools:Utilities Status:Beta</Category>
+  <Description>Gitea: Git with a cup of tea - The goal of this project is to make the easiest, fastest, and most painless way of setting up a self-hosted Git service. Using Go, this can be done with an independent binary distribution across all platforms which Go supports, including Linux, macOS, and Windows on x86, amd64, ARM and PowerPC architectures. Want to try it before doing anything else? Do it with the online demo! This project has been forked from Gogs.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fanningertsRepository/fanningert/Gitea.xml</templatePath>
+</Container>

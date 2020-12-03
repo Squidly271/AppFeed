@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Project>https://www.noip.com/</Project>
+  <Name>NoIp</Name>
+  <Support>https://forums.lime-technology.com/topic/33229-container-for-no-ip-dynamic-dns-updates/</Support>
+  <Overview>
+    No-Ip is a dynamic DNS service, with a free tier supporting up to three domain names. Unfortunately, those domain
+    names have to be renewed periodically. This container implements the new noip2 protocol, which uses a noip client
+    provided by no-ip.com.
+  </Overview>
+  <Registry>https://hub.docker.com/r/coppit/no-ip/</Registry>
+  <Repository>coppit/no-ip</Repository>
+  <GitHub>https://github.com/coppit/docker-no-ip</GitHub>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/coppit/docker-no-ip/master/no-ip-hernandito.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/coppit/docker-templates/master/coppit/no-ip.xml</TemplateURL>
+  <Category>Network:DNS</Category>
+  <Description>No-Ip is a dynamic DNS service, with a free tier supporting up to three domain names. Unfortunately, those domain
+    names have to be renewed periodically. This container implements the new noip2 protocol, which uses a noip client
+    provided by no-ip.com.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/coppitsRepository/coppit/no-ip.xml</templatePath>
+</Container>

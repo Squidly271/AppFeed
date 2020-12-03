@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>glass-isc-dhcp</Name>
+  <Repository>djaydev/glass-isc-dhcp</Repository>
+  <Registry>https://hub.docker.com/r/djaydev/glass-isc-dhcp</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/77603-virt-manager-intel-gpu-tools-and-more-dockers/</Support>
+  <Project>https://github.com/Akkadius/glass-isc-dhcp</Project>
+  <Overview>
+    Includes ISC DHCP Server and Glass Web Management tool.
+    [br][br]
+    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on client side). Default port 3000.
+    [br][br][span][/span]
+    For more info on Glass, see
+    [a href="https://github.com/Akkadius/glass-isc-dhcp#features"]
+    https://github.com/Akkadius/glass-isc-dhcp#features[/a].
+    [br][br][span][/span]
+    [span style='color: red;'][b]NOTE:[/b][/span] Requires DHCP server config file in appdata/glass-isc-dhcp folder. For a sample config file, see
+    [a href="https://github.com/djaydev/docker-glass-isc-dhcp/blob/master/sample.dhcpd.conf"]
+    https://github.com/djaydev/docker-glass-isc-dhcp/blob/master/sample.dhcpd.conf[/a].
+    [br][br][span][/span]
+    Host or Custom brX networking is recommended.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/djaydev/docker-virt-manager/master/UnRaid/template/glass-isc-dhcp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Akkadius/glass-isc-dhcp/master/public/images/glass_logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/glass-isc-dhcp/</HostDir>
+      <ContainerDir>/etc/dhcp/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/glass-isc-dhcp/leases</HostDir>
+      <ContainerDir>/var/lib/dhcp/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>glassadmin</Value>
+      <Name>ADMINPASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3000</Value>
+      <Name>WEBADMINPORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>WEBSOCKETPORT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="DHCP Config" Target="/etc/dhcp/" Default="/data" Mode="rw" Description="Container Path: /etc/dhcp/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/glass-isc-dhcp/</Config>
+  <Config Name="Persistent DHCP Leases" Target="/var/lib/dhcp/" Default="" Mode="rw" Description="Container Path: /var/lib/dhcp/ for dhcpd.leases" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/glass-isc-dhcp/leases</Config>
+  <Config Name="Host Key 1" Target="ADMINPASSWORD" Default="" Mode="" Description="Glass Web Password" Type="Variable" Display="always" Required="false" Mask="false">glassadmin</Config>
+  <Config Name="Host Key 2" Target="WEBADMINPORT" Default="" Mode="" Description="Glass Web Port" Type="Variable" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Host Key 3" Target="WEBSOCKETPORT" Default="" Mode="" Description="Glass Websocket Port" Type="Variable" Display="always" Required="false" Mask="false">8080</Config>
+  <DonateLink>https://www.paypal.me/djaydev/0usd</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Category>Tools:Utilities</Category>
+  <Description>Includes ISC DHCP Server and Glass Web Management tool.
+    
+    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on client side). Default port 3000.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dee31797sRepository/UnRaid/template/glass-isc-dhcp.xml</templatePath>
+</Container>

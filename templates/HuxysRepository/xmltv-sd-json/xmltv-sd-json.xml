@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>XMLTV-Schedules-Direct</Name>
+  <Repository>huxy/xmltv-sd-json</Repository>
+  <Registry>https://hub.docker.com/r/huxy/xmltv-sd-json/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <license>MIT</license>
+  <Support>https://lime-technology.com/forum/index.php?topic=49457.0</Support>
+  <Project>https://sourceforge.net/projects/xmltv/</Project>
+  <BindTime>true</BindTime>
+  <Overview>
+    An XMLTV installation based on Debian (including cron) with a JSON added grabber for Schedules Direct. [br]This allows use of Schedules Direct for all supported countries.
+    For those not in the know; XMLTV is a set of programs to process TV (tvguide) listings and manage your TV viewing, storing listings in an XML format.[br][br]
+    The JSON grabber currently provided with this docker is tv_grab_sd_json. Recently, it has been officially accepted into the XMLTV project.[br]
+  </Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/HuxyUK/docker-containers/master/xmltv-sd-json/xmltv-sd-json.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/HuxyUK/docker-containers/master/xmltv-sd-json/xmltv-sd-json-icon.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/XMLTVSchedulesDirect</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/TVGuideXML</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>FILENAME</Name>
+      <Value>guide.xml</Value>
+    </Variable>
+    <Variable>
+      <Name>GRABBER</Name>
+      <Value>tv_grab_sd_json</Value>
+    </Variable>
+    <Variable>
+      <Name>DAYS</Name>
+      <Value>1</Value>
+    </Variable>
+    <Variable>
+      <Name>STARTUPDAYS</Name>
+      <Value>2</Value>
+    </Variable>
+    <Variable>
+      <Name>OFFSET</Name>
+      <Value>0</Value>
+    </Variable>
+  </Environment>
+  <Config Type="Path" Name="Config Directory" Target="/config" Default="/mnt/user/appdata/XMLTVSchedulesDirect" Mode="rw" Display="always" Description="XMLTV configuration, including caches and cronjobs." Required="true">/mnt/user/appdata/XMLTVSchedulesDirect</Config>
+  <Config Type="Path" Name="EPG Data Directory" Target="/data" Default="/mnt/user/appdata/TVGuideXML" Mode="rw" Display="always" Description="EPG export destination." Required="true">/mnt/user/appdata/TVGuideXML</Config>
+  <Config Type="Path" Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Display="hidden" Description="Container Path: /unraid" Required="false">/unraid</Config>
+  <Config Type="Variable" Name="Output File" Target="FILENAME" Default="guide.xml" Description="XML destination filename." Mask="false" Display="always" Required="true">guide.xml</Config>
+  <Config Type="Variable" Name="Grabber" Target="GRABBER" Default="tv_grab_sd_json" Description="XMLTV Grabber to run." Mask="false" Display="advanced" Required="false">tv_grab_sd_json</Config>
+  <Config Type="Variable" Name="Days To Grab" Target="DAYS" Default="" Description="Number of days to grab when script runs." Mask="false" Display="advanced" Required="false">1</Config>
+  <Config Type="Variable" Name="Grabber Offset" Target="OFFSET" Default="0" Description="Offset to apply when script runs." Mask="false" Display="advanced" Required="false">0</Config>
+  <Config Type="Variable" Name="Days To Grab at Startup" Target="STARTUPDAYS" Default="1" Description="Number of days to grab when docker starts." Mask="false" Display="advanced" Required="false">1</Config>
+  <Category>Downloaders:</Category>
+  <Description>An XMLTV installation based on Debian (including cron) with a JSON added grabber for Schedules Direct. This allows use of Schedules Direct for all supported countries.
+    For those not in the know; XMLTV is a set of programs to process TV (tvguide) listings and manage your TV viewing, storing listings in an XML format.
+    The JSON grabber currently provided with this docker is tv_grab_sd_json. Recently, it has been officially accepted into the XMLTV project.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/HuxysRepository/xmltv-sd-json/xmltv-sd-json.xml</templatePath>
+</Container>

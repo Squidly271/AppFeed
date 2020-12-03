@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenConnectServer</Name>
+  <Repository>markusmcnugen/openconnect</Repository>
+  <Registry>https://hub.docker.com/r/markusmcnugen/ocserv/</Registry>
+  <Network>br0</Network>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69152-support-markusmcnugens-docker-repository/</Support>
+  <Overview>OpenConnect server is an SSL VPN server. Its purpose is to be a secure, small, fast and configurable VPN server. It implements the OpenConnect SSL VPN protocol, and has also (currently experimental) compatibility with clients using the AnyConnect SSL VPN protocol. The OpenConnect protocol provides a dual TCP/UDP VPN channel, and uses the standard IETF security protocols to secure it. This container is an automated build linked to alpine. The dockerfile was written to always download and compile the latest release of OpenConnect VPN server when built.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/openconnect/openconnect-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/openconnect/ocserv-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4443</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4443</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/openconnect/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>4443</Value>
+      <Name>LISTEN_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177</Value>
+      <Name>DNS_SERVERS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>VPN CA</Value>
+      <Name>CA_CN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>OCSERV</Value>
+      <Name>CA_ORG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>9999</Value>
+      <Name>CA_DAYS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>vpn.example.com</Value>
+      <Name>SRV_CN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>My Company</Value>
+      <Name>SRV_ORG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>9999</Value>
+      <Name>SRV_DAYS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>TUNNEL_MODE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>TUNNEL_ROUTES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SPLIT_DNS_DOMAINS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>no</Value>
+      <Name>POWER_USER</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="4443/tcp" Target="" Default="4443" Mode="tcp" Description="Container Port: 4443/tcp" Type="Port" Display="always" Required="true" Mask="false">4443</Config>
+  <Config Name="4443/udp" Target="" Default="4443" Mode="udp" Description="Container Port: 4443/udp" Type="Port" Display="always" Required="true" Mask="false">4443</Config>
+  <Config Name="LISTEN_PORT" Target="LISTEN_PORT" Default="4443" Mode="" Description="Container Variable: LISTEN_PORT" Type="Variable" Display="always" Required="false" Mask="false">4443</Config>
+  <Config Name="DNS_SERVERS" Target="DNS_SERVERS" Default="8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177" Mode="" Description="Container Variable: DNS_SERVERS" Type="Variable" Display="always" Required="false" Mask="false">8.8.8.8,37.235.1.174,8.8.4.4,37.235.1.177</Config>
+  <Config Name="CA_CN" Target="CA_CN" Default="VPN CA" Mode="" Description="Name of CA for generated certs" Type="Variable" Display="always" Required="false" Mask="false">VPN CA</Config>
+  <Config Name="CA_ORG" Target="CA_ORG" Default="OCSERV" Mode="" Description="Organization of CA for generated certs" Type="Variable" Display="always" Required="false" Mask="false">OCSERV</Config>
+  <Config Name="CA_DAYS" Target="CA_DAYS" Default="9999" Mode="" Description="Days CA cert is valid for generated certs" Type="Variable" Display="always" Required="false" Mask="false">9999</Config>
+  <Config Name="SRV_CN" Target="SRV_CN" Default="vpn.example.com" Mode="" Description="Name of server for generated certs" Type="Variable" Display="always" Required="false" Mask="false">vpn.example.com</Config>
+  <Config Name="SRV_ORG" Target="SRV_ORG" Default="My Company" Mode="" Description="Organization of server for generated certs" Type="Variable" Display="always" Required="false" Mask="false">My Company</Config>
+  <Config Name="SRV_DAYS" Target="SRV_DAYS" Default="9999" Mode="" Description="Days server cert is valid for generated certs" Type="Variable" Display="always" Required="false" Mask="false">9999</Config>
+  <Config Name="config" Target="/config" Default="/mnt/cache/appdata/openconnect/" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/cache/appdata/openconnect/</Config>
+  <Config Name="TUNNEL_MODE" Target="TUNNEL_MODE" Default="all" Mode="" Description="Container Variable: TUNNEL_MODE" Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
+  <Config Name="TUNNEL_ROUTES" Target="TUNNEL_ROUTES" Default="" Mode="" Description="Container Variable: TUNNEL_ROUTES" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="SPLIT_DNS_DOMAINS" Target="SPLIT_DNS_DOMAINS" Default="" Mode="" Description="Container Variable: SPLIT_DNS_DOMAINS" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="POWER_USER" Target="POWER_USER" Default="no" Mode="" Description="Container Variable: POWER_USER" Type="Variable" Display="advanced" Required="false" Mask="false">no</Config>
+  <Date>1518285860</Date>
+  <Category>Network:Other</Category>
+  <Description>OpenConnect server is an SSL VPN server. Its purpose is to be a secure, small, fast and configurable VPN server. It implements the OpenConnect SSL VPN protocol, and has also (currently experimental) compatibility with clients using the AnyConnect SSL VPN protocol. The OpenConnect protocol provides a dual TCP/UDP VPN channel, and uses the standard IETF security protocols to secure it. This container is an automated build linked to alpine. The dockerfile was written to always download and compile the latest release of OpenConnect VPN server when built.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MarkusMcNugensRepository/openconnect/openconnect-template.xml</templatePath>
+</Container>

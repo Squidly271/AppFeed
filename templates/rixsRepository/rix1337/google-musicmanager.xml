@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Google-MusicManager</Name>
+  <Repository>rix1337/docker-google-musicmanager</Repository>
+  <Registry>https://hub.docker.com/r/rix1337/docker-google-musicmanager/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=43669.0</Support>
+  <Overview>Upload your personal music collection to Google Play Music</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/google-musicmanager.xml</TemplateURL>
+  <Icon>https://i.imgur.com/E9wSQ9N.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Sponsor me!</DonateText>
+  <DonateLink>https://github.com/sponsors/rix1337</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Music</HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/google-musicmanager</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>5920</Value>
+      <Name>PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>GoogleMusic</Value>
+      <Name>PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Path 1" Target="/music" Default="" Mode="ro" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Music</Config>
+  <Config Name="Host Path 2" Target="/config" Default="/mnt/cache/appdata/google-musicmanager" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/google-musicmanager</Config>
+  <Config Name="PORT" Target="PORT" Default="" Mode="" Description="Container Variable: PORT" Type="Variable" Display="always" Required="false" Mask="false">5920</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">GoogleMusic</Config>
+  <Category>Backup: Cloud: MediaApp:Music MediaServer:Music</Category>
+  <Description>Upload your personal music collection to Google Play Music</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/rixsRepository/rix1337/google-musicmanager.xml</templatePath>
+</Container>

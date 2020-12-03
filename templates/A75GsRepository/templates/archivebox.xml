@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>archivebox</Name>
+  <Repository>nikisweeting/archivebox:latest</Repository>
+  <Registry>https://hub.docker.com/r/nikisweeting/archivebox/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
+  <Project>https://archivebox.io/</Project>
+  <Overview>The self-hosted internet archiver. &#13;
+Guide - https://github.com/A75G/docker-templates/blob/master/README.md#first-installation (Important)</Overview>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/archivebox.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/archivebox.png</Icon>
+  <ExtraParams>-it</ExtraParams>
+  <PostArgs>bash -c 'echo "https://github.com/pirate/ArchiveBox" | /bin/archive; tail -f /dev/null'</PostArgs>
+  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Port" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/archivebox/" Mode="rw" Description="Data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/archivebox/</Config>
+  <Date>1596121988</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>The self-hosted internet archiver. &#13;
+Guide - https://github.com/A75G/docker-templates/blob/master/README.md#first-installation (Important)</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/A75GsRepository/templates/archivebox.xml</templatePath>
+</Container>

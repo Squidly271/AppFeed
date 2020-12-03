@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>xbackbone</Name>
+  <Repository>pe46dro/xbackbone-docker</Repository>
+  <Registry>https://hub.docker.com/r/pe46dro/xbackbone-docker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/Pe46dro/XBackBone-docker</Project>
+  <Overview>Container for XBackBone, a simple and lightweight ShareX PHP backend &#13;
+[br][br]&#13;
+&#13;
+-e URL&#13;
+[br]&#13;
+This will specify the app url, slashes need to be escaped like this -e URL=http://127.0.0.1&#13;
+&#13;
+[br][br]&#13;
+[b]Permissions[/b]&#13;
+[br]&#13;
+[br]&#13;
+The folder on host system need to have both UID and GID 1000&#13;
+[br][br]&#13;
+[b]Example[/b]&#13;
+[br][br]&#13;
+mkdir -p /mnt/user/appdata/xbb/storage&#13;
+[br]&#13;
+mkdir -p /mnt/user/appdata/xbb/database&#13;
+[br]&#13;
+mkdir -p /mnt/user/appdata/xbb/logs&#13;
+[br][br]&#13;
+chown -R 1000:1000 /mnt/user/appdata/xbb</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/xbackbone.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/xbackbone.png</Icon>
+  <Config Name="Port" Target="80" Default="9876" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="URL" Target="URL" Default="http:\/\/192.168.1.2:9876" Mode="" Description="This will specify the app url, slashes need to be escaped like this -e URL=http:\/\/127.0.0.1" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Storage" Target="/app/storage" Default="/mnt/user/appdata/xbackbone/images" Mode="rw" Description="Container Path: /app/storage" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database" Target="/app/resources/database" Default="/mnt/user/appdata/xbackbone/db" Mode="rw" Description="Container Path: /app/resources/database" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Logs" Target="/app/logs" Default="/mnt/user/appdata/xbackbone/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Max Upload Size" Target="PHP_UPLOAD_MAX_FILESIZE" Default="" Mode="" Description="Container Variable: PHP_UPLOAD_MAX_FILESIZE" Type="Variable" Display="always" Required="true" Mask="false">10M</Config>
+  <Category>Cloud:</Category>
+  <Description>Container for XBackBone, a simple and lightweight ShareX PHP backend &#13;
+&#13;
+&#13;
+-e URL&#13;
+&#13;
+This will specify the app url, slashes need to be escaped like this -e URL=http://127.0.0.1&#13;
+&#13;
+&#13;
+Permissions&#13;
+&#13;
+&#13;
+The folder on host system need to have both UID and GID 1000&#13;
+&#13;
+Example&#13;
+&#13;
+mkdir -p /mnt/user/appdata/xbb/storage&#13;
+&#13;
+mkdir -p /mnt/user/appdata/xbb/database&#13;
+&#13;
+mkdir -p /mnt/user/appdata/xbb/logs&#13;
+&#13;
+chown -R 1000:1000 /mnt/user/appdata/xbb</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SelfhostersUnraidDiscordRepository/templates/xbackbone.xml</templatePath>
+</Container>

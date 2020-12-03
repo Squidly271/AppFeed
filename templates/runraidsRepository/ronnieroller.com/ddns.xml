@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ddns</Name>
+  <Repository>ronnieroller/ddns</Repository>
+  <Registry>https://hub.docker.com/r/ronnieroller/ddns</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/skibish/ddns</Project>
+  <Overview>Personal DDNS client with Digital Ocean Networking DNS as backend.&#13;
+&#13;
+See https://github.com/skibish/ddns/blob/master/README.md on how to configure the .ddns.yml</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/ddns.xml</TemplateURL>
+  <Icon>https://i.imgur.com/NFr4J1k.png</Icon>
+  <PostArgs>-conf-file /config/.ddns.yml</PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ddns</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw" Description="Container Path: /config&#13;&#10;&#13;&#10;This should contain a file named .ddns.yml" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ddns</Config>
+  <Category>Tools:Utilities</Category>
+  <Description>Personal DDNS client with Digital Ocean Networking DNS as backend.&#13;
+&#13;
+See https://github.com/skibish/ddns/blob/master/README.md on how to configure the .ddns.yml</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/runraidsRepository/ronnieroller.com/ddns.xml</templatePath>
+</Container>

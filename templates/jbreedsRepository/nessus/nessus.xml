@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/jbreed/docker-templates/master/nessus/nessus.xml</TemplateURL>
+  <Name>jbreed-nessus</Name>
+  <Overview>
+    Nessus is a network vulnerability scanner. This is a paid product, but for small home deployments one can request a free license during the setup GUI steps for internal/small networks.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/81469-support-jbreed-nessus/</Support>
+  <Registry>https://registry.hub.docker.com/r/jbreed/nessus/</Registry>
+  <GitHub>https://github.com/jbreed/nessus</GitHub>
+  <Repository>jbreed/nessus</Repository>
+  <Project>https://tenable.com/</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8834</HostPort>
+        <ContainerPort>8834</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://[IP]:[PORT:8834]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/jbreed/docker-templates/master/nessus/nessus.png</Icon>
+  <Category>Tools:Utilities Security:</Category>
+  <Description>Nessus is a network vulnerability scanner. This is a paid product, but for small home deployments one can request a free license during the setup GUI steps for internal/small networks.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jbreedsRepository/nessus/nessus.xml</templatePath>
+</Container>

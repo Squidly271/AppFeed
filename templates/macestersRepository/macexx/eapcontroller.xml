@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1529467200</Date>
+  <Name>EAPcontroller</Name>
+  <Project>https://www.tp-link.com/common/Spotlight/EAP_controller.html</Project>
+  <Overview>
+    TP-LINK's free EAP Controller Software allows users to easily manage hundreds of TPLINK EAPs in multiple sites with the controller in a single location.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : The host path needs to have a direct path, example "/mnt/cache" or /mnt/disk1 or mongodb cant start(cant handle unraid "shfs")[br][br]
+    [b]Custom certificate[/b] Stop the container and put the cert in "/config/cert" it needs to be named "mydomain.p12" and have the password "tplink".
+  </Overview>
+  <Registry>https://hub.docker.com/r/mace/eap-controller/</Registry>
+  <GitHub>https://github.com/macexx/EAP-Controller</GitHub>
+  <Repository>mace/eap-controller</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=40630.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/EAPcontroller</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://[IP]:[PORT:8043]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/macexx/docker-templates/master/images/tplink-icon.png</Icon>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/cache/appdata/EAPcontroller" Mode="rw" Description="The host path needs to have a direct path, example /mnt/cache, /mnt/disk1 or mongodb cant start(cant handle unraids shfs)" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/eapcontroller.xml</TemplateURL>
+  <Category>Network:Other</Category>
+  <Description>TP-LINK's free EAP Controller Software allows users to easily manage hundreds of TPLINK EAPs in multiple sites with the controller in a single location.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/macestersRepository/macexx/eapcontroller.xml</templatePath>
+</Container>

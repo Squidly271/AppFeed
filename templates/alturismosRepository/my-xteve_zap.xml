@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>xteve_zap</Name>
+  <Repository>alturismo/xteve_zap</Repository>
+  <Registry>https://hub.docker.com/r/alturismo/xteve_zap</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/81786-support-alturismo-repos/</Support>
+  <Project>https://xteve.de/</Project>
+  <Overview>xteve proxy for iptv&#13;
+&#13;
+included functions are (all can be individual turned on / off)&#13;
+&#13;
+xteve - iptv and epg proxy server for plex, emby, etc ... thanks to @marmei &#13;
+website: http://xteve.de &#13;
+Discord: https://discordapp.com/channels/465222357754314767/465222357754314773&#13;
+&#13;
+zap2it support with multiply logins&#13;
+&#13;
+guide2go - xmltv epg grabber for schedules direct, thanks to @marmei &#13;
+github: https://github.com/mar-mei/guide2go &#13;
+Schedules Direct web: http://www.schedulesdirect.org/&#13;
+&#13;
+after docker start check your config folder and do your setups, setup is persistent, start from scratch by delete them&#13;
+&#13;
+to test the cronjob functions&#13;
+docker exec -it "dockername" ./config/cronjob.sh&#13;
+&#13;
+some small script lines cause i personally use tvheadend and get playlist for xteve and cp xml data to tvheadend</Overview>
+  <WebUI>http://[IP]:[PORT:34400]/web/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_zap.xml</TemplateURL>
+  <Icon>https://avatars0.githubusercontent.com/u/53275662?s=460&amp;amp;v=4</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve_zap/</HostDir>
+      <ContainerDir>/root/.xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve_zap/_config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve_zap/_guide2go/</HostDir>
+      <ContainerDir>/guide2go</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve_zap/_zap/</HostDir>
+      <ContainerDir>/zap</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tvheadend/data/</HostDir>
+      <ContainerDir>/TVH</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/tmp/xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Europe/Berlin</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Main" Target="/root/.xteve" Default="/mnt/user/appdata/xteve_zap/" Mode="rw" Description="Container Path: /root/.xteve" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve_zap/</Config>
+  <Config Name="config" Target="/config" Default="/mnt/user/appdata/xteve_zap/_config/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve_zap/_config/</Config>
+  <Config Name="guide2go" Target="/guide2go" Default="" Mode="rw" Description="Container Path: /guide2go" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve_zap/_guide2go/</Config>
+  <Config Name="zap" Target="/zap" Default="" Mode="rw" Description="Container Path: /zap" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve_zap/_zap/</Config>
+  <Config Name="TVH" Target="/TVH" Default="" Mode="rw" Description="Container Path: /TVH" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tvheadend/data/</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Europe/Berlin</Config>
+  <Config Name="tmp" Target="/tmp/xteve" Default="" Mode="rw" Description="Container Path: /tmp/xteve" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Date>1594154603</Date>
+  <Category>Downloaders: Network:Proxy</Category>
+  <Description>xteve proxy for iptv&#13;
+&#13;
+included functions are (all can be individual turned on / off)&#13;
+&#13;
+xteve - iptv and epg proxy server for plex, emby, etc ... thanks to @marmei &#13;
+website: http://xteve.de &#13;
+Discord: https://discordapp.com/channels/465222357754314767/465222357754314773&#13;
+&#13;
+zap2it support with multiply logins&#13;
+&#13;
+guide2go - xmltv epg grabber for schedules direct, thanks to @marmei &#13;
+github: https://github.com/mar-mei/guide2go &#13;
+Schedules Direct web: http://www.schedulesdirect.org/&#13;
+&#13;
+after docker start check your config folder and do your setups, setup is persistent, start from scratch by delete them&#13;
+&#13;
+to test the cronjob functions&#13;
+docker exec -it "dockername" ./config/cronjob.sh&#13;
+&#13;
+some small script lines cause i personally use tvheadend and get playlist for xteve and cp xml data to tvheadend</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/alturismosRepository/my-xteve_zap.xml</templatePath>
+</Container>

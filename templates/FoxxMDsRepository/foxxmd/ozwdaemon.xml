@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ozwdaemon</Name>
+  <Repository>openzwave/ozwdaemon:allinone-latest</Repository>
+  <Registry>https://hub.docker.com/r/openzwave/ozwdaemon/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96976-support-foxxmd-ozwdaemon/</Support>
+  <Project>https://github.com/OpenZWave/qt-openzwave</Project>
+  <Overview>Container for running the OpenZWave MQTT Adapter (for Home Assistant via the new Z-Wave Integration)&#13;
+        &#13;
+        You will need a running MQTT instance and a z-wave controller in order to use this container.&#13;
+        &#13;
+        For more information see:&#13;
+        https://github.com/OpenZWave/qt-openzwave&#13;
+        https://www.home-assistant.io/integrations/ozw/&#13;
+        &#13;
+        Or visit the unraid forum support thread for more configuration/info</Overview>
+  <WebUI>http://[IP]:[PORT:7800]/vnc.html</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/ozwdaemon.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/icons/zwave.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Date>1599710400</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7800</HostPort>
+        <ContainerPort>7800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>1983</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ozw</HostDir>
+      <ContainerDir>/opt/ozw/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>MQTT_SERVER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>USB_PATH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MQTT_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MQTT_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MQTT_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>OZW_NETWORK_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="MQTT Host" Target="MQTT_SERVER" Default="" Mode="" Description="IP Address of the MQTT Host" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="USB Path" Target="USB_PATH" Default="" Mode="" Description="Path to the USB stick/serial device for your z-wave controller in the container. This should be the same value as USB Z-Wave Device." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Web UI Port" Target="7800" Default="7800" Mode="tcp" Description="Port used to access the web-based ozw-admin instance in the container (when using allinone image)" Type="Port" Display="always" Required="false" Mask="false">7800</Config>
+  <Config Name="USB Z-Wave Device" Target="" Default="" Mode="" Description="USB stick/serial device passthrough (your z-wave controller)" Type="Device" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Config" Target="/opt/ozw/config" Default="" Mode="rw" Description="Container Path: /opt/ozw/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ozw</Config>
+  <Config Name="MQTT Port" Target="MQTT_PORT" Default="1883" Mode="" Description="The port to access the MQTT Host on. Defaults to 1883" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="MQTT User" Target="MQTT_USERNAME" Default="" Mode="" Description="Username to (optionally) authenticate with MQTT" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="MQTT Password" Target="MQTT_PASSWORD" Default="" Mode="" Description="Password to (optionally) authenticate with MQTT" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Zwave Network Key" Target="OZW_NETWORK_KEY" Default="" Mode="" Description="Network key for the Z-Wave network. Not required if no devices are securely included." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="ozw-admin Port" Target="1983" Default="" Mode="tcp" Description="Port used by ozw-admin GUI to access the instance" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Category>HomeAutomation: Network:Other</Category>
+  <Description>Container for running the OpenZWave MQTT Adapter (for Home Assistant via the new Z-Wave Integration)&#13;
+        &#13;
+        You will need a running MQTT instance and a z-wave controller in order to use this container.&#13;
+        &#13;
+        For more information see:&#13;
+        https://github.com/OpenZWave/qt-openzwave&#13;
+        https://www.home-assistant.io/integrations/ozw/&#13;
+        &#13;
+        Or visit the unraid forum support thread for more configuration/info</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/ozwdaemon.xml</templatePath>
+</Container>

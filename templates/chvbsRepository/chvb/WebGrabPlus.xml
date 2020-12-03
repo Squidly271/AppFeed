@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Webgrabplus</Name>
+  <Repository>chvb/docker-webgrabplus</Repository>
+  <Registry>https://hub.docker.com/r/chvb/docker-webgrabplus/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/chvb/docker-webgrabplus/</Support>
+  <Overview>WebGrab+Plus is a XML EPG Grabber that can be used together with Tvheadend.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/WebGrabPlus.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/webgrabplusplus.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/WebGrabPlus/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tvheadend/data/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/WebGrabPlus/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/WebGrabPlus/</Config>
+  <Config Name="data" Target="/data" Default="/mnt/user/appdata/tvheadend/data/" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tvheadend/data/</Config>
+  <Deprecated>true</Deprecated>
+  <Date>1498762357</Date>
+  <Category>Downloaders:</Category>
+  <Description>WebGrab+Plus is a XML EPG Grabber that can be used together with Tvheadend.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/chvbsRepository/chvb/WebGrabPlus.xml</templatePath>
+</Container>

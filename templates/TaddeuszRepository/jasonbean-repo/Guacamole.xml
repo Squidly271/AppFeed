@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ApacheGuacamole</Name>
+  <Repository>jasonbean/guacamole</Repository>
+  <Registry>https://registry.hub.docker.com/r/jasonbean/guacamole/</Registry>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/54855-support-jasonbean-apache-guacamole/</Support>
+  <Project>https://guacamole.apache.org/</Project>
+  <Overview>&#13;
+    [h3]Apache Guacamole[/h3]Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.[br][br]&#13;
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]&#13;
+    [b]Be sure to change the Host port from [span style='color: #E80000;']8080[/span] to [span style='color: #E80000;']something else[/span] as [span style='color: #E80000;']8080[/span] is quite a common port.[/b][br][br]&#13;
+    [b]/config[/b] : this path is where Apache Guacamole will store it's properties files, extensions, and the database which contains data for users and connections.[br]&#13;
+    Initial username and password are [b]guacadmin[/b]&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jason-bean/docker-templates/master/jasonbean-repo/Guacamole.xml</TemplateURL>
+  <Icon>https://i.imgur.com/eflpez4.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateText>Donate To Author</DonateText>
+  <DonateLink>https://paypal.me/jasonsbean/0usd</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8088</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ApacheGuacamole</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Y</Value>
+      <Name>OPT_MYSQL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_MYSQL_EXTENSION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_SQLSERVER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_LDAP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_DUO</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_CAS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_TOTP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_QUICKCONNECT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_HEADER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>N</Value>
+      <Name>OPT_SAML</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Web Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="OPT_MYSQL" Target="OPT_MYSQL" Default="Y" Mode="" Description="Container Variable: OPT_MYSQL" Type="Variable" Display="always" Required="false" Mask="false">Y</Config>
+  <Config Name="OPT_MYSQL_EXTENSION" Target="OPT_MYSQL_EXTENSION" Default="N" Mode="" Description="Container Variable: OPT_MYSQL_EXTENSION" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="OPT_SQLSERVER" Target="OPT_SQLSERVER" Default="N" Mode="" Description="Container Variable: OPT_SQLSERVER" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="OPT_LDAP" Target="OPT_LDAP" Default="N" Mode="" Description="Container Variable: OPT_LDAP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="OPT_DUO" Target="OPT_DUO" Default="N" Mode="" Description="Container Variable: OPT_DUO" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="OPT_CAS" Target="OPT_CAS" Default="N" Mode="" Description="Container Variable: OPT_CAS" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="OPT_TOTP" Target="OPT_TOTP" Default="N" Mode="" Description="Container Variable: OPT_TOTP" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="OPT_QUICKCONNECT" Target="OPT_QUICKCONNECT" Default="N" Mode="" Description="Container Variable: OPT_QUICKCONNECT" Type="Variable" Display="always" Required="false" Mask="false">N</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ApacheGuacamole" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ApacheGuacamole</Config>
+  <Date>1606626000</Date>
+  <Category>Network:Management Network:Other</Category>
+  <Description>Apache GuacamoleApache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/TaddeuszRepository/jasonbean-repo/Guacamole.xml</templatePath>
+</Container>

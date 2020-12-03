@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Seafile</Name>
+  <Repository>seafileltd/seafile</Repository>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dersimn/docker-unraid-templates</Support>
+  <Overview>Seafile is file synchronisation and sharing server.</Overview>
+  <Date>1545541200</Date>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/dersimn/docker-unraid-templates/master/dersimn/images/seafile-icon.png</Icon>
+  <Registry>https://hub.docker.com/r/seafileltd/seafile</Registry>
+  <GitHub>https://github.com/dersimn/docker-unraid-templates</GitHub>
+  <Project>https://www.seafile.com</Project>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4430</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Name="Web Interface Port" Target="80" Default="8000" Mode="tcp" Description="SeaHub Web UI. Default: 8000" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="unRAID Hostname" Target="SEAFILE_SERVER_HOSTNAME" Default="" Mode="" Description="ex: 10.0.0.4" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Data Path" Target="/shared" Default="/mnt/user/seafile-data" Mode="rw" Description="Container path: /shared" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/seafile</Config>
+  <Config Name="Admin Email" Target="SEAFILE_ADMIN_EMAIL" Default="me@example.com" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Admin Password" Target="SEAFILE_ADMIN_PASSWORD" Default="a_very_secret_password" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/dersimn/docker-unraid-templates/master/dersimn/Seafile%20Server.xml</TemplateURL>
+  <Category>Cloud: Network:Other Productivity:</Category>
+  <Description>Seafile is file synchronisation and sharing server.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/seimsRepository/dersimn/Seafile Server.xml</templatePath>
+</Container>

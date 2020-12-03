@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>UniFi</Name>
+  <Registry>https://registry.hub.docker.com/r/pducharme/unifi/</Registry>
+  <Repository>pducharme/unifi</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8843</HostPort>
+        <ContainerPort>8843</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8880</HostPort>
+        <ContainerPort>8880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/unifi/</HostDir>
+      <ContainerDir>/var/lib/unifi</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>https://[IP]:[PORT:8443]/manage</WebUI>
+  <Icon>https://i.imgur.com/dD9ub3n.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=37058</Support>
+  <TemplateURL>https://raw.githubusercontent.com/pducharme/docker-containers/templates/pducharme-repo/UniFi.xml</TemplateURL>
+  <Overview>UniFi Controller software - Dockerize version of the popular UniFi Controller to control Wi-Fi Access Point from the company Ubiquiti Networks.</Overview>
+  <Category>HomeAutomation: Network:Management</Category>
+  <Description>UniFi Controller software - Dockerize version of the popular UniFi Controller to control Wi-Fi Access Point from the company Ubiquiti Networks.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/pducharmesRepository/pducharme-repo/UniFi.xml</templatePath>
+</Container>

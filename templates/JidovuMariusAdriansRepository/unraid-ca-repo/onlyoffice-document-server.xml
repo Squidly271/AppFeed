@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>onlyoffice-document-server</Name>
+  <Repository>xternet/unraid-onlyoffice-document-server</Repository>
+  <Registry>https://hub.docker.com/repository/docker/xternet/unraid-onlyoffice-document-server</Registry>
+  <Network>onlyoffice</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/</Support>
+  <Project>https://www.onlyoffice.com/</Project>
+  <Overview>Before you start this container you need to create the onlyoffice network. &#13;
+	  Open Unraid terminal and paste this command in there: &#13;
+	  " sudo docker network create --driver bridge onlyoffice " -- withouth the " "&#13;
+          If you pair this container with onlyoffice-community-server then this container needs to start first. &#13;
+	HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it. Add fonts by placing .ttf in the font folder and force updating the container.&#13;
+For more information visit the support thread &#13;
+https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/onlyoffice-document-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/AMJidovu/unraid-repository/d5a562fa4a7b73065dd022e585d80d4b77d0abfa/img/onlyoffice-ce-ds.jpg</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate me a coffee or a beer if you like my work :)</DonateText>
+  <DonateLink>https://www.paypal.me/xternet</DonateLink>
+  <Networking>
+    <Mode>onlyoffice</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4432</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/logs</HostDir>
+      <ContainerDir>/var/log/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/data</HostDir>
+      <ContainerDir>/var/www/onlyoffice/Data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/lib</HostDir>
+      <ContainerDir>/var/lib/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/db</HostDir>
+      <ContainerDir>/var/lib/postgresql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/fonts</HostDir>
+      <ContainerDir>/usr/share/fonts/truetype/custom</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/forgotten</HostDir>
+      <ContainerDir>/var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="HTTP Port" Target="80" Default="8082" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
+  <Config Name="HTTPS Port" Target="443" Default="4432" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">4432</Config>
+  <Config Name="Mounted folder for logs" Target="/var/log/onlyoffice" Default="/mnt/user/appdata/onlyoffice/DocumentServer/logs" Mode="rw" Description="Container Path: /var/log/onlyoffice" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/logs</Config>
+  <Config Name="Mounted folder for data files ( SSL certificates can be added in the /cert subfolder )" Target="/var/www/onlyoffice/Data" Default="/mnt/user/appdata/onlyoffice/DocumentServer/data" Mode="rw" Description="Container Path: /var/www/onlyoffice/Data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/data</Config>
+  <Config Name="Mounted folder for file cache" Target="/var/lib/onlyoffice" Default="/mnt/user/appdata/onlyoffice/DocumentServer/lib" Mode="rw" Description="Container Path: /var/lib/onlyoffice" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/lib</Config>
+  <Config Name="Mounted folder for database" Target="/var/lib/postgresql" Default="/mnt/user/appdata/onlyoffice/DocumentServer/db" Mode="rw" Description="Container Path: /var/lib/postgresql" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/db</Config>
+  <Config Name="Mounted folder where you can add your custom fonts" Target="/usr/share/fonts/truetype/custom" Default="/mnt/user/appdata/onlyoffice/DocumentServer/fonts" Mode="rw" Description="Container Path: /usr/share/fonts/truetype/custom" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/fonts</Config>
+  <Config Name="Mounted folder for unsaved files" Target="/var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten" Default="/mnt/user/appdata/onlyoffice/DocumentServer/forgotten" Mode="rw" Description="Container Path: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/forgotten</Config>
+  <Date>1575675669</Date>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>Before you start this container you need to create the onlyoffice network. &#13;
+	  Open Unraid terminal and paste this command in there: &#13;
+	  " sudo docker network create --driver bridge onlyoffice " -- withouth the " "&#13;
+          If you pair this container with onlyoffice-community-server then this container needs to start first. &#13;
+	HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it. Add fonts by placing .ttf in the font folder and force updating the container.&#13;
+For more information visit the support thread &#13;
+https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JidovuMariusAdriansRepository/unraid-ca-repo/onlyoffice-document-server.xml</templatePath>
+</Container>

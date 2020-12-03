@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Beta>true</Beta>
+  <Name>radarr-sma</Name>
+  <Repository>randomninjaatk/radarr-sma</Repository>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Radarr + SMA + FFMPEG</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>preview</Tag>
+    <TagDescription>Radarr (v3) + SMA + FFMPEG</TagDescription>
+  </Branch>
+  <Registry>https://hub.docker.com/r/randomninjaatk/radarr-sma</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-radarr-sma</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/radarr-sma.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/radarr.png</Icon>
+  <Overview>Radarr - A fork of Sonarr to work with movies à la Couchpotato. This comes bundled with sickbeard_mp4_automator script, that can be found here: https://github.com/mdhiggins/sickbeard_mp4_automator[br][br][b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b][br]Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and[br] add [b]--runtime=nvidia[/b] to [b]"extra parameters"[/b] (switch on advanced view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b][br][br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b] to [b]"extra parameters"[/b] (switch on advanced view)</Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI>http://[IP]:[PORT:7878]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 7878" Target="7878" Default="7878" Mode="tcp" Description="Container Port: 7878" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /storage" Target="/storage" Default="/mnt/user" Mode="rw" Description="Container Path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="SMA Update" Target="UPDATE_SMA" Default="TRUE" Mode="" Description="TRUE = enabled :: Update SMA on container startup" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Video Status:Beta</Category>
+  <Description>Radarr - A fork of Sonarr to work with movies à la Couchpotato. This comes bundled with sickbeard_mp4_automator script, that can be found here: https://github.com/mdhiggins/sickbeard_mp4_automator</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/radarr-sma.xml</templatePath>
+</Container>

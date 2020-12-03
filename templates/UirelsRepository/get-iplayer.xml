@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>get-iplayer</Name>
+  <Repository>uirel/get-iplayer</Repository>
+  <Registry>https://registry.hub.docker.com/r/uirel/get-iplayer/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61923-support-uirel-get-iplayer/</Support>
+  <Overview>&#13;
+    get_iplayer has PVR-like capabilities; You can save lists of programme searches which are automatically recorded when they become available so that you can watch them when you choose and on devices that cannot run Adobe Flash Player – even if you don’t have adequate broadband speeds or if your broadband streams too slowly at peak hours when you want to watch a programme.[br][br]&#13;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+    [b]/config[/b] This is where get-iplayer will store it's configuration file, database and logs.[br]&#13;
+    [b]/data[/b] This path is used retrieve the downloaded files by your downloader application.[br][br]&#13;
+    [b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
+    Please specify the shows to download via the Environment Variable "SHOWS" value, if you want to specify more than one then please use a comma to seperate show names e.g. "show1,show2".&#13;
+    Please specify the frequency to check for new shows using the Environment Variable "SCHEDULE" value, where the value is s for seconds, m for minutes, h for hours or d for days, e.g. "12h".&#13;
+  </Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Poag/docker-xml/master/get-iplayer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Poag/get-iplayer/master/getiplayer.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/get-iplayer/downloads</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/get-iplayer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>[TV SHows seperated by commas]</Value>
+      <Name>SHOWS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1h</Value>
+      <Name>SCHEDULE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Path 2" Target="/data" Default="/mnt/user/appdata/get-iplayer/downloads" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/get-iplayer/downloads</Config>
+  <Config Name="Key 1" Target="SHOWS" Default="" Mode="" Description="Container Variable: SHOWS" Type="Variable" Display="always" Required="false" Mask="false">[TVShows seperated by commas]</Config>
+  <Config Name="Key 2" Target="SCHEDULE" Default="12h" Mode="" Description="Container Variable: SCHEDULE" Type="Variable" Display="always" Required="false" Mask="false">1h</Config>
+  <Config Name="Key 3" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 4" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/get-iplayer" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/get-iplayer</Config>
+  <Date>1510843940</Date>
+  <Category>MediaApp:Video MediaServer:Video</Category>
+  <Description>get_iplayer has PVR-like capabilities; You can save lists of programme searches which are automatically recorded when they become available so that you can watch them when you choose and on devices that cannot run Adobe Flash Player – even if you don’t have adequate broadband speeds or if your broadband streams too slowly at peak hours when you want to watch a programme.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/UirelsRepository/get-iplayer.xml</templatePath>
+</Container>

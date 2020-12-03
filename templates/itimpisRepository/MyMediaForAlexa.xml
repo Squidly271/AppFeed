@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MyMediaForAlexa</Name>
+  <Repository>bizmodeller/mymediaforalexa</Repository>
+  <Registry>https://hub.docker.com/r/bizmodeller/mymediaforalexa/~/dockerfile/</Registry>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/72781-mymediaforalexa-docker/</Support>
+  <Overview>A media server that allows you to stream audio files (e.g. music and audiobooks) that are stored on your unRAID server to Alexa enabled devices such as Amazon Echo or Amazon Dot using voice control.[p]&#13;
+More details and the full list of features can be found on the My Media For Alexa [a href=http://mymediaalexa.com]web site[/a].  [p]&#13;
+Additional detail on setting up My Media For Alexa on unRAID can be found [a href=https://github.com/itimpi/MyMediaForAlexa]here[/a][p]&#13;
+To administer the My Media For Alexa server use the WebUI.</Overview>
+  <WebUI>http://[IP]:[PORT:52051]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/itimpi/Unraid-CA-Templates/master/MyMediaForAlexa.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/itimpi/MyMediaForAlexa/master/MyMediaForAlexa.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>52050</HostPort>
+        <ContainerPort>52050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>52051</HostPort>
+        <ContainerPort>52051</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MyMediaForAlexa</HostDir>
+      <ContainerDir>/datadir</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/?</HostDir>
+      <ContainerDir>/medialibrary</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Data folder" Target="/datadir" Default="" Mode="rw" Description="The location for config settings and indexing information" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MyMediaForAlexa</Config>
+  <Config Name="Media Library" Target="/medialibrary" Default="" Mode="rw" Description="The location of the media to be handled by My Media For Alexa" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/?</Config>
+  <Config Name="Alexa port" Target="52050" Default="" Mode="tcp" Description="Port used to communicate with Alexa&#13;&#10;&amp;lt;p&amp;gt;MUST NOT BE CHANGED&amp;lt;/p&amp;gt;" Type="Port" Display="always" Required="false" Mask="false">52050</Config>
+  <Config Name="Admin port" Target="52051" Default="" Mode="tcp" Description="Admin port used to manage My Media For Alexa&#13;&#10;&amp;lt;p&amp;gt;MUST NOT BE CHANGED&amp;lt;/p&amp;gt;" Type="Port" Display="always" Required="false" Mask="false">52051</Config>
+  <Date>1530864755</Date>
+  <Category>HomeAutomation: MediaServer:Music</Category>
+  <Description>A media server that allows you to stream audio files (e.g. music and audiobooks) that are stored on your unRAID server to Alexa enabled devices such as Amazon Echo or Amazon Dot using voice control.&#13;
+More details and the full list of features can be found on the My Media For Alexa web site.  &#13;
+Additional detail on setting up My Media For Alexa on unRAID can be found here&#13;
+To administer the My Media For Alexa server use the WebUI.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/itimpisRepository/MyMediaForAlexa.xml</templatePath>
+</Container>

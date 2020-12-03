@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ama</Name>
+  <Repository>randomninjaatk/ama</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/ama</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-ama</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/ama.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/ama.png</Icon>
+  <Overview>Automated Music Archiver :: This script will automatically archive music using a popular online DL Client</Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI></WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /downloads-ama" Target="/downloads-ama" Default="/mnt/user" Mode="rw" Description="Container Path for downloads library..." Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Enable Automatic Script Start" Target="AUTOSTART" Default="true" Mode="" Description="true = Enabled :: Runs script automatically on startup" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Script Interval" Target="SCRIPTINTERVAL" Default="15m" Mode="" Description="#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d = days :: Amount of time between each script run, when AUTOSTART is enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DL Client ARL Token" Target="ARL_TOKEN" Default="" Mode="" Description="User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Download Mode" Target="MODE" Default="artist" Mode="" Description="artist or discography :: artist mode downloads all albums listed as that artist, discography downloads all albums listed as that artist and featured in albums" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Related Artist" Target="RELATED_ARTIST" Default="false" Mode="" Description="true = enabled :: Enabling this lets the script crawl your artist list for related artists and process them" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Related Artist -&gt; Related Artist (loop)" Target="RELATED_ARTIST_RELATED" Default="false" Mode="" Description="true = enabled :: Enabling this lets the script crawl your related artists for additional related artists and process them accordingly :: WARNING this will cause an endless loop (spider crawling) until no more are found..." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Artist Related Count" Target="RELATED_COUNT" Default="20" Mode="" Description="Maximum number of related artists to import per artist (20 is max)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Artist Fan Count" Target="FAN_COUNT" Default="1000000" Mode="" Description="Minimum number of fans required for processing" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Format" Target="FORMAT" Default="FLAC" Mode="" Description="SET TO: ALAC or FLAC or AAC or MP3 or OPUS" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Conversion Bitrate" Target="BITRATE" Default="320" Mode="" Description="FLAC -&gt; OPUS/AAC/MP3 will be converted using this bitrate" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Force Convert" Target="FORCECONVERT" Default="false" Mode="" Description="true = enabled :: This will convert lossy MP3 to desired target format (exluding FLAC/ALAC, ALAC setting will convert to AAC)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Post Process Threads" Target="POSTPROCESSTHREADS" Default="1" Mode="" Description="Controls number of threads used for Format conversion and replaygain tagging" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Music Embedded Cover Quality" Target="EMBEDDED_COVER_QUALITY" Default="80" Mode="" Description="Controls the quality of the cover image compression in percentage, 100 = no compression" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Album Type Filter" Target="ALBUM_TYPE_FILTER" Default="" Mode="" Description="Filter Types: COMPILE, SINGLE, ALBUM, EP (this is a ', ' separated list of Album Types to skip)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Download Concurrency" Target="CONCURRENT_DOWNLOADS" Default="1" Mode="" Description="Controls download concurrency" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Music Require Quality" Target="REQUIRE_QUALITY" Default="false" Mode="" Description="true = enabled :: Requires all downloaded files match target file extension (mp3 or flac) when enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Folder Permissions" Target="FOLDER_PERMISSIONS" Default="766" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="File Permissions" Target="FILE_PERMISSIONS" Default="666" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Replaygain Tagging" Target="REPLAYGAIN" Default="false" Mode="" Description="true = enabled :: Scans and analyzes files to add replaygain tags to song metadata" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Remove Artsit Without Image" Target="IGNORE_ARTIST_WITHOUT_IMAGE" Default="false" Mode="" Description="true = enabled :: Enabling this will prevent downloading albums from artists with default image (non-unique)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Complete My Artists" Target="COMPLETE_MY_ARTISTS" Default="false" Mode="" Description="true = enabled :: Eanabling this will add artist id's found in the library directory that are currently not in your list. This will then allow the script archive them accordingly :: !!!WARNING!!! Could cause an endless loop!" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Lidarr List Import" Target="LIDARR_LIST_IMPORT" Default="false" Mode="" Description="true = enabled :: imports artist list from lidarr" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Lidarr Url" Target="LIDARR_URL" Default="http://x.x.x.x:8686" Mode="" Description="ONLY used if Lidarr List Import is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Lidarr API Key" Target="LIDARR_API_KEY" Default="" Mode="" Description="ONLY used if Lidarr List Import is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Plex Scan Notifications" Target="NOTIFYPLEX" Default="false" Mode="" Description="true = enabled :: Plex must have a Music library added and also be configured with the /downloads-ama directory" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Library Name" Target="PLEXLIBRARYNAME" Default="Music" Mode="" Description="This must exactly match the name of the Plex Library that contains the Lidarr Media Folder data" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Url" Target="PLEXURL" Default="http://x.x.x.x:32400" Mode="" Description="ONLY used if NOTIFYPLEX is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Plex Token" Target="PLEXTOKEN" Default="" Mode="" Description="ONLY used if NOTIFYPLEX is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Music</Category>
+  <Description>Automated Music Archiver :: This script will automatically archive music using a popular online DL Client</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/ama.xml</templatePath>
+</Container>

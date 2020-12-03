@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>bluelinky</Name>
+  <Repository>wranglatang/bluelinky</Repository>
+  <Registry>https://hub.docker.com/repository/docker/wranglatang/bluelinky</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Hacksore/bluelinky</Support>
+  <Project>https://github.com/Hacksore/bluelinky</Project>
+  <Overview>Unofficial Hyundai Blue Link API (bluelinky)&#13;
+&#13;
+This is a docker version of an API Wrapper for bluelinky. For information or issues, please raise them on the bluelinky repo.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/wranglatang/docker-bluelinky/master/UNRAID-CA.xml</TemplateURL>
+  <Icon></Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/bluelinky/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Configuration Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bluelinky/</Config>
+  <Config Name="API Port" Target="8080" Default="8080" Mode="tcp" Description="API port number, that you will send post request to." Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Date>1584717572</Date>
+  <Category>Other:</Category>
+  <Description>Unofficial Hyundai Blue Link API (bluelinky)&#13;
+&#13;
+This is a docker version of an API Wrapper for bluelinky. For information or issues, please raise them on the bluelinky repo.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/p.wranglesRepository/UNRAID-CA.xml</templatePath>
+</Container>

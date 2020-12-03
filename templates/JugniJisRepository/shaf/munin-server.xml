@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1470110400</Date>
+  <Name>munin-server</Name>
+  <Project>http://munin-monitoring.org/</Project>
+  <Overview>Primarily provides server stats for your unRAID instance in addition to monitoring other servers</Overview>
+  <Registry>https://registry.hub.docker.com/r/shaf/munin-server/</Registry>
+  <Repository>shaf/munin-server</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=50678.0</Support>
+  <Environment>
+    <Variable>
+      <Name>ALLOWED_HOSTS</Name>
+      <Value>127.0.0.1/32</Value>
+    </Variable>
+    <Variable>
+      <Name>HOSTNAME</Name>
+      <Value>unRAID</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4949</HostPort>
+        <ContainerPort>4949</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/munin-server/conf</HostDir>
+      <ContainerDir>/etc/munin/munin-conf.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/munin-server/www</HostDir>
+      <ContainerDir>/var/cache/munin/www</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/munin-server/rrd</HostDir>
+      <ContainerDir>/var/lib/munin</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/rootfs</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/sys</HostDir>
+      <ContainerDir>/sys</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/images/munin-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/shaf/unraid-docker-templates/master/shaf/munin-server.xml</TemplateURL>
+  <Category>Network:Management Tools:Utilities</Category>
+  <Description>Primarily provides server stats for your unRAID instance in addition to monitoring other servers</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JugniJisRepository/shaf/munin-server.xml</templatePath>
+</Container>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>AMP</Name>
+  <Repository>mitchtalmadge/amp-dockerized</Repository>
+  <Registry>https://hub.docker.com/r/mitchtalmadge/amp-dockerized/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/98290-support-amp-application-management-panel-corneliousjd-repo/</Support>
+  <Project>https://github.com/MitchTalmadge/AMP-dockerized</Project>
+  <Overview>CubeCoders AMP. Manage servers like Minecraft (McMyAdmin3, replaces McMyAdmin2), TF2, and more. PLEASE READ SUPPORT THREAD ABOUT MAC ADDRESSES! More info on usage in support thread.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/amp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/amp.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/amp</HostDir>
+      <ContainerDir>/home/amp/.ampdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>LICENCE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ADS</Value>
+      <Name>MODULE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NIGHTLY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Port" Target="8080" Default="8080" Mode="tcp" Description="Web Interface Port" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Game Port" Target="25565" Default="25565" Mode="tcp" Description="Port for you game. Please make additional ports if needed. See support thread for help." Type="Port" Display="always" Required="false" Mask="false">25565</Config>
+  <Config Name="AMP License" Target="LICENCE" Default="" Mode="" Description="Your AMP or McMyAdmin license." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Module" Target="MODULE" Default="ADS" Mode="" Description="Which Module to use for the main instance created by this image. ADS allows you to create multiple modules." Type="Variable" Display="always" Required="true" Mask="false">ADS</Config>
+  <Config Name="Username" Target="USERNAME" Default="admin" Mode="" Description="The username of the admin user created on first boot." Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+  <Config Name="Password" Target="PASSWORD" Default="password" Mode="" Description="The password of the admin user. This value is only used when creating the new user. If you use the default value, please change it after first sign-in." Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+  <Config Name="Appdata" Target="/home/amp/.ampdata" Default="" Mode="rw" Description="Container Path: /home/amp/.ampdata" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/amp</Config>
+  <Config Name="Nightly Builds" Target="NIGHTLY" Default="" Mode="" Description="Set to ANY value here to enable nightly builds. Unset this variable to go back to stable releases." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Date>1603744310</Date>
+  <Category>GameServers:</Category>
+  <Description>CubeCoders AMP. Manage servers like Minecraft (McMyAdmin3, replaces McMyAdmin2), TF2, and more. PLEASE READ SUPPORT THREAD ABOUT MAC ADDRESSES! More info on usage in support thread.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CorneliousJDsRepository/amp.xml</templatePath>
+</Container>

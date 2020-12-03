@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MinecraftPE</Name>
+  <Repository>ixilon/nukkit</Repository>
+  <Registry>https://hub.docker.com/r/ixilon/nukkit/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/60143-support-clowryms-docker-repository/?tab=comments#comment-591570</Support>
+  <Overview>
+Nukkit is a Nuclear-Powered Server Software For Minecraft Pocket Edition[br][br]
+
+VERY IMPORTANT:[br]
+ First run use Screen on Uraid[br]
+ docker exec -ti MinecraftPE /bin/bash[br][br]
+ 
+ Run command :[br]
+ java -jar /nukkit-1.0-SNAPSHOT.jar[br]
+ select language[br][br]
+ 
+ after the first run everything should work fine[br][br]
+
+ To Interact with Server / adminstration,[br]
+ use "docker attach MinecraftPE" at command promt[br]
+ Press ctrl-p-ctrl-q to exit without shutting down the server
+</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/clowrym/docker-templates/master/MinecraftPE-Nukkit.xml</TemplateURL>
+  <Icon>https://i.imgur.com/zn0eOhH.png</Icon>
+  <ExtraParams>-ti</ExtraParams>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>19132</HostPort>
+        <ContainerPort>19132</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/minecraftpe</HostDir>
+      <ContainerDir>/srv/nukkit/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>en_US.UTF-8</Value>
+      <Name>LANGUAGE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>en_US.UTF-8</Value>
+      <Name>LC_ALL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>America/Denver</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Path 1" Target="/srv/nukkit/" Default="/mnt/user/appdata/minecraftpe" Mode="rw" Description="Container Path: /srv/nukkit/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minecraftpe</Config>
+  <Config Name="Host Port 1" Target="19132" Default="19132" Mode="udp" Description="Container Port: 19132" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
+  <Config Name="Language" Target="LANGUAGE" Default="en_US.UTF-8" Mode="" Description="Container Variable: LANGUAGE" Type="Variable" Display="always" Required="true" Mask="false">en_US.UTF-8</Config>
+  <Config Name="LC_ALL" Target="LC_ALL" Default="en_US.UTF-8" Mode="" Description="Container Variable: LC_ALL" Type="Variable" Display="always" Required="true" Mask="false">en_US.UTF-8</Config>
+  <Config Name="Time Zone" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">America/Denver</Config>
+  <Date>1489080522</Date>
+  <Category>MediaServer:Other</Category>
+  <Description>Nukkit is a Nuclear-Powered Server Software For Minecraft Pocket Edition
+
+VERY IMPORTANT:
+ First run use Screen on Uraid
+ docker exec -ti MinecraftPE /bin/bash
+ 
+ Run command :
+ java -jar /nukkit-1.0-SNAPSHOT.jar
+ select language
+ 
+ after the first run everything should work fine
+
+ To Interact with Server / adminstration,
+ use "docker attach MinecraftPE" at command promt
+ Press ctrl-p-ctrl-q to exit without shutting down the server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/clowrymsRepository/MinecraftPE-Nukkit.xml</templatePath>
+</Container>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>sabnzbd</Name>
+  <Repository>hotio/sabnzbd</Repository>
+  <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+  <Branch>
+    <Tag>release-dockerhub</Tag>
+    <TagDescription>Releases</TagDescription>
+    <Repository>hotio/sabnzbd:release</Repository>
+    <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+  </Branch>
+  <Branch>
+    <Tag>testing-dockerhub</Tag>
+    <TagDescription>Pre-releases</TagDescription>
+    <Repository>hotio/sabnzbd:testing</Repository>
+    <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+  </Branch>
+  <Branch>
+    <Tag>nightly-dockerhub</Tag>
+    <TagDescription>Every commit to develop branch</TagDescription>
+    <Repository>hotio/sabnzbd:nightly</Repository>
+    <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+  </Branch>
+  <Branch>
+    <Tag>release-ghcr</Tag>
+    <TagDescription>Releases</TagDescription>
+    <Repository>ghcr.io/hotio/sabnzbd:release</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/sabnzbd</Registry>
+  </Branch>
+  <Branch>
+    <Tag>testing-ghcr</Tag>
+    <TagDescription>Pre-releases</TagDescription>
+    <Repository>ghcr.io/hotio/sabnzbd:testing</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/sabnzbd</Registry>
+  </Branch>
+  <Branch>
+    <Tag>nightly-ghcr</Tag>
+    <TagDescription>Every commit to develop branch</TagDescription>
+    <Repository>ghcr.io/hotio/sabnzbd:nightly</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/sabnzbd</Registry>
+  </Branch>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hotio.dev/discord</Support>
+  <Project>https://hotio.dev/containers/sabnzbd</Project>
+  <Icon>https://raw.githubusercontent.com/docker-hotio/unraid-templates/master/hotio/img/sabnzbd.png</Icon>
+  <Overview>Free and easy binary newsreader.</Overview>
+  <Description>Free and easy binary newsreader.</Description>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8080" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="ARGS" Target="ARGS" Default="" Mode="" Description="Container Variable: ARGS" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="no|yes" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders:</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hotiosRepository/hotio/sabnzbd.xml</templatePath>
+</Container>

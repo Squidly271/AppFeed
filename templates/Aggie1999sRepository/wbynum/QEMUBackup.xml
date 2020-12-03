@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>QEMUBackup</Name>
+  <Repository>wbynum/qemubackup</Repository>
+  <Registry>https://hub.docker.com/r/wbynum/qemubackup</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/85802-support-wbynum-qemubackup/</Support>
+  <Project>https://github.com/wbynum/QEMUBackup</Project>
+  <Overview>QEMUBackup is a ASP.NET Core app that facilitates manual backups of QEMU virtual machines. Allows user to add a title and description to a virtual machine. Then user can create a backup which will contain the title and description in the VM's XML. Useful for describing the state of a VM when taking a backup.</Overview>
+  <WebUI>http://[IP]:[PORT:43080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/wbynum/docker-templates/master/wbynum/QEMUBackup.xml</TemplateURL>
+  <Icon></Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>43080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>QEMUBackupHost</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>QEMUBackupUsername</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>QEMUBackupBackupPath</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">43080</Config>
+  <Config Name="Host" Target="QEMUBackupHost" Default="" Mode="" Description="Container Variable: QEMUBackupHost" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Username" Target="QEMUBackupUsername" Default="" Mode="" Description="Container Variable: QEMUBackupUsername" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Backup Path" Target="QEMUBackupBackupPath" Default="" Mode="" Description="Container Variable: QEMUBackupBackupPath" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Date>1575590660</Date>
+  <Category>Backup: Tools:Utilities</Category>
+  <Description>QEMUBackup is a ASP.NET Core app that facilitates manual backups of QEMU virtual machines. Allows user to add a title and description to a virtual machine. Then user can create a backup which will contain the title and description in the VM's XML. Useful for describing the state of a VM when taking a backup.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Aggie1999sRepository/wbynum/QEMUBackup.xml</templatePath>
+</Container>

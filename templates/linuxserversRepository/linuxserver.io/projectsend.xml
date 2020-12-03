@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/projectsend.xml</TemplateURL>
+  <Date>1497326400</Date>
+  <Name>projectsend</Name>
+  <Support>https://forums.unraid.net/topic/58055-support-linuxserverio-projectsend/</Support>
+  <Project>http://www.projectsend.org/</Project>
+  <Overview>ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself! Secure, private and easy. No more depending on external services or e-mail to send those files!
+  </Overview>
+  <Registry>https://hub.docker.com/r/linuxserver/projectsend/</Registry>
+  <Repository>linuxserver/projectsend</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/projectsend-logo.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+    </Variable>
+  </Environment>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/alpine</BaseImage>
+  <Category>Cloud: Productivity: Tools:Utilities Network:Other</Category>
+  <Description>ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself! Secure, private and easy. No more depending on external services or e-mail to send those files!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/projectsend.xml</templatePath>
+</Container>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Apache-PHP</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=49578.0</Support>
+  <Registry>https://hub.docker.com/r/chvb/docker-apache-php/</Registry>
+  <Repository>chvb/docker-apache-php</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8005</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/disks/SSD/appdata/apache-php/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/SSD/www/</HostDir>
+      <ContainerDir>/web</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/SSD/appdata/apache-php/logs/</HostDir>
+      <ContainerDir>/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/apache-php.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/apache-php.xml</TemplateURL>
+  <Overview>
+    Apache based web server with basic PHP web server capabilities with the addition of php5-gd, php5-sqlite, php5-intl[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
+    [b]/web[/b] : this path is the web directory[br]
+    [b]/web/adminer[/b] : adminer path inside the web directory[br]
+    [b]/logs[/b] : this path is the logs directory[br][br]
+
+I have added custom [b]Crontab[/b] functionality.To enable Cron jobs, edit the file [b]crons.conf[/b] in folder [/b]/config[/b]. [br]
+Add as many tasks as you need, save the file, and [b]restart[/b] the container.[br][br]
+
+  </Overview>
+  <Category>Network:Web</Category>
+  <Description>Apache based web server with basic PHP web server capabilities with the addition of php5-gd, php5-sqlite, php5-intl</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/chvbsRepository/chvb/apache-php.xml</templatePath>
+</Container>

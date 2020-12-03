@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Z80Pack</Name>
+  <Date>1578200400</Date>
+  <Repository>dlandon/z80pack</Repository>
+  <Project>http://www.autometer.de/unix4fun/z80pack/index.html</Project>
+  <Registry>https://registry.hub.docker.com/r/dlandon/z80pack/</Registry>
+  <DonateText>For my retirement.</DonateText>
+  <DonateLink>https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EJGPC7B5CS66E</DonateLink>
+  <DonateImage>https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png</DonateImage>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/58756-support-z80pack-vintage-computing-in-a-docker-cpm-and-mpm/#comment-576460</Support>
+  <Overview>
+    Z80Pack is an emulator for emulating CP/M 1, CP/M 2, CP/M 3, and MP/M II on Linux.  This is a command line Docker only.  There is a built in Shell in a Box WebGUI that is a command line browser window.  You can also execute bash in the Docker.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br][br]
+    [b]/config[/b] : this path is used to store the disk configurations and CP/M and MP/M startup scripts.[br][br]
+    To log into the WebUI:[br]
+    User: vintage[br]
+    Password: computer[br][br]
+    You will have to use the command 'sudo ./cpm' to run the simulator with root privileges.[br][br]
+  </Overview>
+  <WebUI>https://[IP]:[PORT:4200]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dlandon/docker.templates/master/Z80Pack.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dlandon/docker.templates/master/z80pack.png</Icon>
+  <ExtraParams>--log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Z80Pack</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <BaseImage>phusion/baseimage:0.11</BaseImage>
+  <Config Name="WebUI Port" Target="4200" Default="4200" Mode="tcp" Description="Container Port: 4200" Type="Port" Display="always" Required="true" Mask="false">4200</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/Z80Pack" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Z80Pack</Config>
+  <Category>Other:</Category>
+  <Description>Z80Pack is an emulator for emulating CP/M 1, CP/M 2, CP/M 3, and MP/M II on Linux.  This is a command line Docker only.  There is a built in Shell in a Box WebGUI that is a command line browser window.  You can also execute bash in the Docker.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dlandonsRepository/Z80Pack.xml</templatePath>
+</Container>

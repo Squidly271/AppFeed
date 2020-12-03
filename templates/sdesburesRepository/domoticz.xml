@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Domoticz</Name>
+  <Date>1445313600</Date>
+  <Overview>
+    An Home automation Server
+  </Overview>
+  <Support>https://lime-technology.com/forum/index.php?topic=41543.0</Support>
+  <Registry>https://registry.hub.docker.com/r/sdesbure/domoticz</Registry>
+  <GitHub>https://github.com/sdesbure/docker_domoticz</GitHub>
+  <Repository>sdesbure/domoticz</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config and logs</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams>--device=/dev/ttyUSB0</ExtraParams>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/sdesbure/docker-containers/master/images/domoticz-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/sdesbure/docker-containers/master/domoticz.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>HomeAutomation:</Category>
+  <Description>An Home automation Server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/sdesburesRepository/domoticz.xml</templatePath>
+</Container>

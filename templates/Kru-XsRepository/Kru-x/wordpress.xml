@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>WordPress</Name>
+  <Repository>wordpress</Repository>
+  <Registry>https://hub.docker.com/_/wordpress/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/88258-support-kru-x-wordpress/</Support>
+  <Project>https://wordpress.org/</Project>
+  <Overview>WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL, which runs on a web hosting service.&#13;
+Use MariaDB (recommended) or Mysql as the external database.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Kru-x/unraid-docker-templates/master/Kru-x/wordpress.xml</TemplateURL>
+  <Icon>https://s.w.org/style/images/about/WordPress-logotype-wmark.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Better spent on them, then me :-)</DonateText>
+  <DonateLink>https://www.savethekoala.com/donate</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/wordpress</HostDir>
+      <ContainerDir>/var/www/html</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>WORDPRESS_DB_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>WORDPRESS_DB_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>WORDPRESS_DB_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Container port" Target="80" Default="" Mode="tcp" Description="Connects to internal port 80 (Ex. 8080:80)" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="www" Target="/var/www/html" Default="" Mode="rw" Description="Container Path: /var/www/html" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/wordpress</Config>
+  <Config Name="WORDPRESS_DB_HOST" Target="WORDPRESS_DB_HOST" Default="" Mode="" Description="External database container hostname and port &#13;&#10;&amp;lt;br&amp;gt;ex. 192.168.1.100:8080" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WORDPRESS_DB_USER" Target="WORDPRESS_DB_USER" Default="" Mode="" Description="External database user" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WORDPRESS_DB_PASSWORD" Target="WORDPRESS_DB_PASSWORD" Default="" Mode="" Description="External database password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Date>1581022287</Date>
+  <Category>Other: Network:Web</Category>
+  <Description>WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL, which runs on a web hosting service.&#13;
+Use MariaDB (recommended) or Mysql as the external database.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Kru-XsRepository/Kru-x/wordpress.xml</templatePath>
+</Container>

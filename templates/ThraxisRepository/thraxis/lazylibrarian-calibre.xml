@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Beta>true</Beta>
+  <Date>1484974800</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=55835.0</Support>
+  <Name>lazylibrarian-calibre</Name>
+  <Project>https://github.com/DobyTang/LazyLibrarian/</Project>
+  <Overview>LazyLibrarian is a program to follow authors and grab metadata for all your digital reading needs.[br]
+  Calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</Overview>
+  <Registry>https://hub.docker.com/r/thraxis/lazylibrarian-calibre/</Registry>
+  <Repository>thraxis/lazylibrarian-calibre</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5299</HostPort>
+        <ContainerPort>5299</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/magazines</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:5299]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/lazylibrarian-calibre-icon.png</Icon>
+  <BaseImage>linuxserver/lazylibrarian</BaseImage>
+  <TemplateURL>https://raw.githubusercontent.com/Thraxis/docker-templates/master/thraxis/lazylibrarian-calibre.xml</TemplateURL>
+  <Category>MediaApp:Books Status:Beta</Category>
+  <Description>LazyLibrarian is a program to follow authors and grab metadata for all your digital reading needs.
+  Calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ThraxisRepository/thraxis/lazylibrarian-calibre.xml</templatePath>
+</Container>

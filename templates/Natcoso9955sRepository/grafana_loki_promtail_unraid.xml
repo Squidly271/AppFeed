@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>GrafanaPromtail</Name>
+  <Repository>grafana/promtail</Repository>
+  <Registry>https://hub.docker.com/r/grafana/promtail/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/94021-support-natcoso9955-loki/</Support>
+  <Overview>Promtail is an agent which ships the contents of local logs to a private Loki instance or Grafana Cloud. It is usually deployed to every machine that has applications needed to be monitored.&#13;
+&#13;
+It primarily:&#13;
+&#13;
+Discovers targets&#13;
+Attaches labels to log streams&#13;
+Pushes them to the Loki instance.&#13;
+Currently, Promtail can tail logs from two sources: local log files and the systemd journal (on AMD64 machines only).&#13;
+Promtail supports receiving IETF Syslog (RFC5424) messages from a tcp stream: (https://github.com/grafana/loki/blob/v1.5.0/docs/clients/promtail/scraping.md#syslog-receiver)&#13;
+&#13;
+NOTE: Download the config.yml file from https://github.com/natcoso9955/unRAID-docker/blob/master/configs/promtail/config.yml before you start the container.&#13;
+Will need to be placed into your Host Path 1.&#13;
+More info: &#13;
+ https://github.com/grafana/loki/blob/master/docs/clients/promtail/configuration.md</Overview>
+  <WebUI>http://[IP]:[PORT:9080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/grafana_loki_promtail_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/natcoso9955/unRAID-docker/master/icons/loki.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9080</HostPort>
+        <ContainerPort>9080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/promtail</HostDir>
+      <ContainerDir>/etc/promtail</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/promtail/positions</HostDir>
+      <ContainerDir>/positions</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="9080" Default="" Mode="tcp" Description="Container Port: 9080" Type="Port" Display="always" Required="false" Mask="false">9080</Config>
+  <Config Name="Host Path 1" Target="/etc/promtail" Default="" Mode="rw" Description="Container Path: /etc/promtail" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/promtail</Config>
+  <Config Name="Positions" Target="/positions" Default="" Mode="rw" Description="Container Path: /positions" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/promtail/positions</Config>
+  <Date>1593788744</Date>
+  <Category>Tools:Utilities Network:Other</Category>
+  <Description>Promtail is an agent which ships the contents of local logs to a private Loki instance or Grafana Cloud. It is usually deployed to every machine that has applications needed to be monitored.&#13;
+&#13;
+It primarily:&#13;
+&#13;
+Discovers targets&#13;
+Attaches labels to log streams&#13;
+Pushes them to the Loki instance.&#13;
+Currently, Promtail can tail logs from two sources: local log files and the systemd journal (on AMD64 machines only).&#13;
+Promtail supports receiving IETF Syslog (RFC5424) messages from a tcp stream: (https://github.com/grafana/loki/blob/v1.5.0/docs/clients/promtail/scraping.md#syslog-receiver)&#13;
+&#13;
+NOTE: Download the config.yml file from https://github.com/natcoso9955/unRAID-docker/blob/master/configs/promtail/config.yml before you start the container.&#13;
+Will need to be placed into your Host Path 1.&#13;
+More info: &#13;
+ https://github.com/grafana/loki/blob/master/docs/clients/promtail/configuration.md</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Natcoso9955sRepository/grafana_loki_promtail_unraid.xml</templatePath>
+</Container>

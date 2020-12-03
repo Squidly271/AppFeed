@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>splunk</Name>
+  <Repository>atunnecliffe/splunk</Repository>
+  <Registry>https://hub.docker.com/r/atunnecliffe/splunk</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/80995-support-atunnecliffe-splunk/</Support>
+  <Project>https://www.splunk.com/</Project>
+  <Overview>This is a Dockerfile for Splunk designed for OpenShift and unRAID based on Alpine Linux - https://www.splunk.com&#13;
+&#13;
+If you run the Dockerfile with no arguments you will get a single instance of Splunk 8.1.0 with the user admin:changeme2019.&#13;
+&#13;
+The web interface is exposed on port HTTP/8000, data ingest on TCP/9997, and API on HTTPS/8089.&#13;
+&#13;
+Compatible with Splunk 7.1.0 and newer. </Overview>
+  <WebUI>http://[IP]:8000</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/andrew207/splunk/master/splunkunraid.xml</TemplateURL>
+  <Icon>https://secure.gravatar.com/avatar/c4cadc82a16e67018f57f1fc2547caa4.jpg</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate to Dockerfile author via PayPal</DonateText>
+  <DonateLink>https://paypal.me/atunnecliffe</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8089</HostPort>
+        <ContainerPort>8089</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9997</HostPort>
+        <ContainerPort>9997</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunkenterprise/splunkdata</HostDir>
+      <ContainerDir>/splunkdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunkenterprise/etc/apps</HostDir>
+      <ContainerDir>/opt/splunk/etc/apps</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunkenterprise/etc/auth</HostDir>
+      <ContainerDir>/opt/splunk/etc/auth</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>--accept-license --no-prompt</Value>
+      <Name>SPLUNK_CLI_ARGS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>changeme2019</Value>
+      <Name>ADMIN_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Web" Target="8000" Default="8000" Mode="tcp" Description="HTTP Web UI" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="DataPersist" Target="/splunkdata" Default="/mnt/user/appdata/splunkenterprise/splunkdata" Mode="rw" Description="For indexed data persistence" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ConfigPersist" Target="/opt/splunk/etc/apps" Default="/mnt/user/appdata/splunkenterprise/etc/apps" Mode="rw" Description="For config and app data persistence" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AppCredsPersist" Target="/opt/splunk/etc/auth" Default="/mnt/user/appdata/splunkenterprise/etc/auth" Mode="rw" Description="For password/encryption persistence" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Splunk start args" Target="SPLUNK_CLI_ARGS" Default="--accept-license --no-prompt" Mode="" Description="Arguments to start Splunk with. " Type="Variable" Display="advanced" Required="true" Mask="false">--accept-license --no-prompt</Config>
+  <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="changeme2019" Mode="" Description="Splunk Web UI admin password." Type="Variable" Display="advanced" Required="true" Mask="true">changeme2019</Config>
+  <Config Name="Management" Target="8089" Default="8089" Mode="tcp" Description="HTTPS API" Type="Port" Display="advanced" Required="false" Mask="false">8089</Config>
+  <Config Name="Data Ingest" Target="9997" Default="9997" Mode="tcp" Description="SplunkTCP input" Type="Port" Display="advanced" Required="false" Mask="false">9997</Config>
+  <Date>1568943898</Date>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Description>This is a Dockerfile for Splunk designed for OpenShift and unRAID based on Alpine Linux - https://www.splunk.com&#13;
+&#13;
+If you run the Dockerfile with no arguments you will get a single instance of Splunk 8.1.0 with the user admin:changeme2019.&#13;
+&#13;
+The web interface is exposed on port HTTP/8000, data ingest on TCP/9997, and API on HTTPS/8089.&#13;
+&#13;
+Compatible with Splunk 7.1.0 and newer.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Andrew207sRepository/splunkunraid.xml</templatePath>
+</Container>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MakeMKV</Name>
+  <Repository>jlesage/makemkv</Repository>
+  <Registry>https://hub.docker.com/r/jlesage/makemkv/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/58352-support-makemkv/</Support>
+  <Overview>
+    MakeMKV is your one-click solution to convert video that you own into free and
+patents-unencumbered format that can be played everywhere. MakeMKV is a format
+converter, otherwise called "transcoder". It converts the video clips from
+proprietary (and usually encrypted) disc into a set of MKV files, preserving
+most information but not changing it in any way. The MKV format can store
+multiple video/audio tracks with all meta-information and preserve chapters.
+    [br][br]
+    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+    A fully automated mode is also available: insert a DVD or Blu-ray disc into an optical drive and let MakeMKV rips it without any user interaction.
+    Also, being based on Alpine Linux, size of this container
+    is very small (less than 150MB in download size).
+    [br][br][span][/span]
+    For a complete documentation of this container, see
+    [a href="https://github.com/jlesage/docker-makemkv/blob/master/README.md"]
+    https://github.com/jlesage/docker-makemkv/blob/master/README.md[/a].
+    [br][br]
+    [span style='color: red;'][b]NOTE:[/b][/span] For the container to have
+access to your optical drive(s), you need to allow access to the proper
+Linux devices by adding (one for each of them) the parameter
+[b][i]--device DEV[/i][/b] in the [i]Extra Parameters[/i] field (shown when
+[i]Advanced View[/i] is enabled).[br]
+An optical drive is represented by two Linux device files: [b][i]/dev/srX[/i][/b]
+and [b][i]/dev/sgY[/i][/b].  For optimal performance, the container needs both
+of them.  So if your optical drive is represented by [b][i]/dev/sr0[/i][/b] and
+[b][i]/dev/sg2[/i][/b], you need to add
+[b][i]--device /dev/sr0 --device /dev/sg2[/i][/b] to the [i]Extra Parameters[/i]
+field.[br]
+To determine the right devices to use, start the container and looks at its
+log.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/makemkv.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/makemkv-icon.png</Icon>
+  <Project>http://www.makemkv.com/</Project>
+  <Date>1601784000</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7806</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7906</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/makemkv</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/storage</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_NICENESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1280</Value>
+      <Name>DISPLAY_WIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>768</Value>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>SECURE_CONNECTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>X11VNC_EXTRA_OPTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>BETA</Value>
+      <Name>MAKEMKV_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>AUTO_DISC_RIPPER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>AUTO_DISC_RIPPER_EJECT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>AUTO_DISC_RIPPER_PARALLEL_RIP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>AUTO_DISC_RIPPER_INTERVAL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>AUTO_DISC_RIPPER_MIN_TITLE_LENGTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>mkv</Value>
+      <Name>AUTO_DISC_RIPPER_BD_MODE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>AUTO_DISC_RIPPER_FORCE_UNIQUE_OUTPUT_DIR</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/makemkv" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Storage" Target="/storage" Default="/mnt/user" Mode="ro" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Output Directory" Target="/output" Default="" Mode="rw" Description="This is the default output folder for converted videos.  Also used by the automatic disc ripper.&amp;lt;br&amp;gt;Container path: /output" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; to encrypt the connection.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Note:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; When enabling the secure connection, security parameters needs to be generated.  This &amp;lt;b&amp;gt;one-time&amp;lt;/b&amp;gt; operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Warning:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Licence Key" Target="MAKEMKV_KEY" Default="BETA" Mode="" Description="MakeMKV registration key to use.  The key is written to the configuration file during container startup.  When set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;BETA&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt;, the latest beta key is automatically used.  When set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;UNSET&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt;, no key is automatically written to the configuration file." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Enabled" Target="AUTO_DISC_RIPPER" Default="0" Mode="" Description="Set to 1 to enable automatic rippping of DVD/Blu-ray discs." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Eject" Target="AUTO_DISC_RIPPER_EJECT" Default="0" Mode="" Description="Set to 1 to eject disc when ripping is terminated." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Parallel" Target="AUTO_DISC_RIPPER_PARALLEL_RIP" Default="0" Mode="" Description="When set to 1, discs from all available optical drives are ripped in parallel.  Else, each disc from optical drives is ripped one at time." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Interval" Target="AUTO_DISC_RIPPER_INTERVAL" Default="5" Mode="" Description="Interval, in seconds, the automatic disc ripper checks for the presence of a DVD/Blu-ray discs." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Minimum Title Length" Target="AUTO_DISC_RIPPER_MIN_TITLE_LENGTH" Default="" Mode="" Description="Titles with a length less than this value are ignored.  Length is in seconds.  By default, no value is set, meaning that value from MakeMKV's configuration file is taken." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Blu-ray Rip Mode" Target="AUTO_DISC_RIPPER_BD_MODE" Default="mkv" Mode="" Description="Rip mode of Blu-ray discs.  &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;mkv&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; is the default mode, where a set of MKV files are produced.  When set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;backup&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt;, a copy of the (decrypted) file system is created instead. &amp;lt;b&amp;gt;NOTE&amp;lt;/b&amp;gt;: This applies to Blu-ray discs only.  For DVD, MKV files are always produced." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Disc Ripper: Force Unique Output Directory" Target="AUTO_DISC_RIPPER_FORCE_UNIQUE_OUTPUT_DIR" Default="0" Mode="" Description="When set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;0&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt;, files are written to &amp;lt;i&amp;gt;/output/DISC_LABEL/&amp;lt;/i&amp;gt;, where &amp;lt;i&amp;gt;DISC_LABEL&amp;lt;/i&amp;gt; is the label/name of the disc.  If this directory exists, then files are written to &amp;lt;i&amp;gt;/output/DISC_LABEL-XXXXXX&amp;lt;/i&amp;gt;, where &amp;lt;i&amp;gt;XXXXXX&amp;lt;/i&amp;gt; are random readable characters.  When set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt;, the &amp;lt;i&amp;gt;/output/DISC_LABEL-XXXXXX&amp;lt;/i&amp;gt; pattern is always used." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WEB Port for GUI" Target="5800" Default="7806" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="VNC Port for GUI" Target="5900" Default="7906" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used." Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/donate.png</DonateImg>
+  <Category>MediaApp:Video</Category>
+  <Description>MakeMKV is your one-click solution to convert video that you own into free and
+patents-unencumbered format that can be played everywhere. MakeMKV is a format
+converter, otherwise called "transcoder". It converts the video clips from
+proprietary (and usually encrypted) disc into a set of MKV files, preserving
+most information but not changing it in any way. The MKV format can store
+multiple video/audio tracks with all meta-information and preserve chapters.
+    
+    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+    A fully automated mode is also available: insert a DVD or Blu-ray disc into an optical drive and let MakeMKV rips it without any user interaction.
+    Also, being based on Alpine Linux, size of this container
+    is very small (less than 150MB in download size).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/DjossRepository/jlesage/makemkv.xml</templatePath>
+</Container>

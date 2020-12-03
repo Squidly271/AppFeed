@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/Portainer.xml</TemplateURL>
+  <Date>1525579200</Date>
+  <Name>Portainer</Name>
+  <Project>https://portainer.io</Project>
+  <Overview>
+    Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/portainer/portainer/</Registry>
+  <GitHub>https://github.com/portainer/portainer</GitHub>
+  <Repository>portainer/portainer</Repository>
+  <Support>https://lime-technology.com/forums/topic/69491-support-jj9987-portainer/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/portainer</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/Portainer-logo.png</Icon>
+  <Config Type="Path" Name="Config Storage Path" Target="/data" Default="/mnt/user/appdata/portainer" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Portainer will store it's configuration.">/mnt/user/appdata/portainer</Config>
+  <Config Type="Path" Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Display="advanced-hide" Required="true" Description="This is needed for Portainer to connect to Docker.">/var/run/docker.sock</Config>
+  <Config Type="Port" Name="Web Interface Port" Target="9000" Default="9000" Mode="tcp" Display="always-hide" Required="true" Description="This is Portainer WebUI port.">9000</Config>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jj9987sRepository/Portainer.xml</templatePath>
+</Container>

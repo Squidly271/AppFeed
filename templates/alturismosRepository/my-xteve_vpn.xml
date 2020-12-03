@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>xteve_vpn</Name>
+  <Repository>alturismo/xteve_vpn</Repository>
+  <Registry>https://hub.docker.com/r/alturismo/xteve_vpn</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/81786-support-alturismo-repos/</Support>
+  <Project>https://github.com/alturismo/xteve_vpn</Project>
+  <Overview>xteve, in docker with ovpn&#13;
+&#13;
+### docker runs in bridge mode ###&#13;
+&#13;
+put your ovpn file in /config&#13;
+edit your ovpn credentials in /config&#13;
+set your LOCAL_NET to fir your netmask&#13;
+&#13;
+access xteve webui ip:34400/web/</Overview>
+  <WebUI>http://[IP]:[PORT:34400]/web/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve_vpn.xml</TemplateURL>
+  <Icon>https://avatars0.githubusercontent.com/u/53275662?s=460&amp;amp;v=4</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>34400</HostPort>
+        <ContainerPort>34400</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve_vpn/</HostDir>
+      <ContainerDir>/root/.xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve_vpn/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/tmp/xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.0/24</Value>
+      <Name>LOCAL_NET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Frankfurt.ovpn</Value>
+      <Name>OPENVPN_FILE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="/xteve" Target="/root/.xteve" Default="" Mode="rw" Description="Container Path: /root/.xteve" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/xteve_vpn/</Config>
+  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/xteve_vpn/config/</Config>
+  <Config Name="/tmp" Target="/tmp/xteve" Default="" Mode="rw" Description="/tmp/xteve&#13;&#10;in case u want to move /tmp to RAM on host&#13;&#10;buffer, ..." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="LOCAL_NET" Target="LOCAL_NET" Default="" Mode="" Description="Container Variable: LOCAL_NET" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.0/24</Config>
+  <Config Name="OPENVPN_FILE" Target="OPENVPN_FILE" Default="" Mode="" Description="Container Variable: OPENVPN_FILE" Type="Variable" Display="always" Required="true" Mask="false">Frankfurt.ovpn</Config>
+  <Config Name="Port" Target="34400" Default="" Mode="tcp" Description="Container Port: 34400" Type="Port" Display="always" Required="false" Mask="false">34400</Config>
+  <Beta>true</Beta>
+  <Date>1574147369</Date>
+  <Category>MediaApp:Other Network:Proxy Status:Beta</Category>
+  <Description>xteve, in docker with ovpn&#13;
+&#13;
+### docker runs in bridge mode ###&#13;
+&#13;
+put your ovpn file in /config&#13;
+edit your ovpn credentials in /config&#13;
+set your LOCAL_NET to fir your netmask&#13;
+&#13;
+access xteve webui ip:34400/web/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/alturismosRepository/my-xteve_vpn.xml</templatePath>
+</Container>

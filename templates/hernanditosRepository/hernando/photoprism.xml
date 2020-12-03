@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1434513600</Date>
+  <Name>PhotoPrism</Name>
+  <Registry>https://registry.hub.docker.com/r/photoprism/photoprism/</Registry>
+  <Repository>photoprism/photoprism</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2342</HostPort>
+        <ContainerPort>2342</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>PHOTOPRISM_ADMIN_PASSWORD</Name>
+      <Value>photoprism</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/media/photos</HostDir>
+      <ContainerDir>/originals</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:2342]/</WebUI>
+  <Icon>https://i.imgur.com/SI9FZCR.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/photoprism.xml</TemplateURL>
+  <Overview>
+PhotoPrism™ is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.
+
+Login Password: photoprism
+
+  </Overview>
+  <Category>MediaServer:Photos</Category>
+  <Description>PhotoPrism™ is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.
+
+Login Password: photoprism</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hernanditosRepository/hernando/photoprism.xml</templatePath>
+</Container>

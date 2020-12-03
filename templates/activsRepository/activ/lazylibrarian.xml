@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>activ-lazylibrarian</Name>
+  <Overview>
+    This project isn't finished yet. Goal is to create a SickBeard, CouchPotato, Headphones-like application for ebooks. Headphones is used as a base, so there are still a lot of references to it. [br]
+ 	The default port used is 5299 for the web interface. [br]
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=48902.0</Support>
+  <Registry>https://registry.hub.docker.com/r/activ/arch-lazylibrarian/</Registry>
+  <GitHub>https://github.com/activ/arch-lazylibrarian</GitHub>
+  <Repository>activ/arch-lazylibrarian</Repository>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5299</HostPort>
+        <ContainerPort>5299</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>DEBUG</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path to downloads</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path for books</HostDir>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5299]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/activ/docker-templates/master/activ/images/lazylibrarian-icon.ico</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/activ/docker-templates/master/activ/lazylibrarian.xml</TemplateURL>
+  <Category>Downloaders:</Category>
+  <Description>This project isn't finished yet. Goal is to create a SickBeard, CouchPotato, Headphones-like application for ebooks. Headphones is used as a base, so there are still a lot of references to it. 
+ 	The default port used is 5299 for the web interface.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/activsRepository/activ/lazylibrarian.xml</templatePath>
+</Container>

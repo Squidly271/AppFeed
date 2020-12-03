@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1483851600</Date>
+  <Name>crazifuzzy-opendct</Name>
+  <Overview>
+        An open source digital cable tuner network encoder for SageTV.
+    </Overview>
+  <Support>https://forums.sagetv.com/forums/showthread.php?t=62774</Support>
+  <Registry>https://hub.docker.com/r/crazifuzzy/opendct/</Registry>
+  <GitHub>https://github.com/crazifuzzy/opendct-docker/</GitHub>
+  <Repository>crazifuzzy/opendct</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/opendct/etc</HostDir>
+      <ContainerDir>/etc/opendct</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/opendct/log</HostDir>
+      <ContainerDir>/var/log/opendct</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/opendct/opt</HostDir>
+      <ContainerDir>/opt/opendct</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>VERSION</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/OpenSageTV/sagetv-miniclient/master/playstore/ic_launcher-web.png</Icon>
+  <Project>http://forums.sagetv.com</Project>
+  <Config Name="Configuration" Target="/etc/opendct" Default="/mnt/user/appdata/opendct/etc" Mode="rw" Description="Configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/opendct/etc</Config>
+  <Config Name="Log" Target="/var/log/opendct" Default="/mnt/user/appdata/opendct/log" Mode="rw" Description="Log" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/opendct/log</Config>
+  <Config Name="OpenDCT Home" Target="/opt/opendct" Default="/mnt/user/appdata/opendct/opt" Mode="rw" Description="OpenDCT Home" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/opendct/opt</Config>
+  <TemplateURL>https://raw.githubusercontent.com/stuckless/unRAID/master/opendct.xml</TemplateURL>
+  <Category>MediaServer:Video</Category>
+  <Description>An open source digital cable tuner network encoder for SageTV.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/stucklessRepository/opendct.xml</templatePath>
+</Container>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>RTMPServer</Name>
+  <Repository>alqutami/rtmp-hls</Repository>
+  <Registry>https://hub.docker.com/r/alqutami/rtmp-hls</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/TareqAlqutami/rtmp-hls-server</Project>
+  <Overview>This Docker image can be used to create a video streaming server that supports RTMP, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#13;
+&#13;
+Stream live RTMP content to:&#13;
+rtmp://&amp;lt;server ip&amp;gt;:1935/live/&amp;lt;stream_key&amp;gt;&#13;
+where &amp;lt;stream_key&amp;gt; is any stream key you specify.&#13;
+&#13;
+View:&#13;
+rtmp://&amp;lt;server ip&amp;gt;:1935/live/&amp;lt;stream-key&amp;gt;&#13;
+http://&amp;lt;server ip&amp;gt;:8080/hls/&amp;lt;stream-key&amp;gt;.m3u8 &#13;
+http://&amp;lt;server ip&amp;gt;:8080/dash/&amp;lt;stream-key&amp;gt;_src.mpd</Overview>
+  <WebUI>http://[IP]:8080/stats</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-RTMPServer.xml</TemplateURL>
+  <Icon>https://intinor.com/wp-content/uploads/2017/01/RTMP.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment></Environment>
+  <Date>1590726831</Date>
+  <Category>GameServers: Network:Other</Category>
+  <Description>This Docker image can be used to create a video streaming server that supports RTMP, HLS, DASH out of the box. It also allows adaptive streaming and custom transcoding of video streams. All modules are built from source on Debian and Alpine Linux base images.&#13;
+&#13;
+Stream live RTMP content to:&#13;
+rtmp://:1935/live/&#13;
+where  is any stream key you specify.&#13;
+&#13;
+View:&#13;
+rtmp://:1935/live/&#13;
+http://:8080/hls/.m3u8 &#13;
+http://:8080/dash/_src.mpd</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-RTMPServer.xml</templatePath>
+</Container>

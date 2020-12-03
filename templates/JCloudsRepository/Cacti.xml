@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Cacti</Name>
+  <Repository>quantumobject/docker-cacti</Repository>
+  <Registry>https://hub.docker.com/r/quantumobject/docker-cacti/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69470-support-cacti/</Support>
+  <Project>https://github.com/QuantumObject/docker-cacti</Project>
+  <Overview>Cacti is a complete network graphing solution designed to harness the power of RRDTool's data storage and graphing functionality.  For full details go to: www.cacti.net.  The stated minium unRAID version of 6.4.1 is simply because that is the version I run and can test.&#13;
+&#13;
+SETUP AND CONFIGURATION:&#13;
+---------------------------------------------&#13;
+     0.  SNMP poller default port is 161UDP. &#13;
+     1.  If you have an SNMP poller plug-in already installed on your unRAID host, you'll find it will conflict with this Docker. Either uninstall the SNMP plugin you are using, or make the changes to have both work (author assumes you know what you're doing).&#13;
+     2.  Has a webui, default set at 8180, adapt as needed to work on your host.&#13;
+     3.  During initial setup the path to SPINE is incorrect. Change it to:&#13;
+          /usr/local/spine/bin/spine&#13;
+     4. First login  --  userid: admin    &#13;
+                         password: admin&#13;
+&#13;
+FIRST RUN (Recommendation):&#13;
+---------------------------------------------&#13;
+   On left hand menu, Under "Automation" click on, "Networks"  THEN "Test Network" on right-side main frame.  In Subnet Range change this to fit your network. Click "Save" THEN "Return" at the bottom.&#13;
+   Next click on the checkbox for "Test Network" THEN in "Choose an action" box click ENABLE --&amp;gt; GO &#13;
+  Check the checkbox for "test Network" again THEN choose "Discover now"</Overview>
+  <WebUI>http://[IP]:[PORT:80]/cacti</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/Cacti.xml</TemplateURL>
+  <Icon>https://www.cacti.net/images/cacti.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateText>&amp;quot;Coin! Coin!&amp;quot; -- Scooby Doo</DonateText>
+  <DonateImg></DonateImg>
+  <MinVer>6.4.1</MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>161</HostPort>
+        <ContainerPort>161</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8180</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Cacti</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="SNMP Scan port" Target="161" Default="161" Mode="udp" Description="SNMP scan, port 161 UDP" Type="Port" Display="always" Required="true" Mask="false">161</Config>
+  <Config Name="webui" Target="80" Default="8180" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8180</Config>
+  <Config Name="configs" Target="/config" Default="/mnt/user/appdata/Cacti" Mode="rw" Description="Docker configuration files folder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Cacti</Config>
+  <Date>1518928050</Date>
+  <Category>Productivity: Tools:Utilities Other: Network:Management Network:Other</Category>
+  <Description>Cacti is a complete network graphing solution designed to harness the power of RRDTool's data storage and graphing functionality.  For full details go to: www.cacti.net.  The stated minium unRAID version of 6.4.1 is simply because that is the version I run and can test.&#13;
+&#13;
+SETUP AND CONFIGURATION:&#13;
+---------------------------------------------&#13;
+     0.  SNMP poller default port is 161UDP. &#13;
+     1.  If you have an SNMP poller plug-in already installed on your unRAID host, you'll find it will conflict with this Docker. Either uninstall the SNMP plugin you are using, or make the changes to have both work (author assumes you know what you're doing).&#13;
+     2.  Has a webui, default set at 8180, adapt as needed to work on your host.&#13;
+     3.  During initial setup the path to SPINE is incorrect. Change it to:&#13;
+          /usr/local/spine/bin/spine&#13;
+     4. First login  --  userid: admin    &#13;
+                         password: admin&#13;
+&#13;
+FIRST RUN (Recommendation):&#13;
+---------------------------------------------&#13;
+   On left hand menu, Under "Automation" click on, "Networks"  THEN "Test Network" on right-side main frame.  In Subnet Range change this to fit your network. Click "Save" THEN "Return" at the bottom.&#13;
+   Next click on the checkbox for "Test Network" THEN in "Choose an action" box click ENABLE --&gt; GO &#13;
+  Check the checkbox for "test Network" again THEN choose "Discover now"</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JCloudsRepository/Cacti.xml</templatePath>
+</Container>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>TvhProxy</Name>
+  <Repository>chvb/docker-tvhproxy</Repository>
+  <Registry>https://hub.docker.com/r/chvb/docker-tvhproxy</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.178.100</MyIP>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=49578.0</Support>
+  <Overview>TvhProxy is a small flask app to proxy requests between Plex Media Server and Tvheadend.You have to run this Docker Container as a seperate IP Address. This Function is supportet with UNRAID 6.4[br]&#13;
+  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+  [b]Port 80:[/b] Must be export as Port 80 [br]&#13;
+  [b]Port 5004:[/b] Must be export as Port 5004 [br]&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5004]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/TvhProxy.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/tvhproxy.png</Icon>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>http://username:password@tvheadendip:9981</Value>
+      <Name>TVH_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>4</Value>
+      <Name>TVH_TUNER_COUNT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="TvHeadend URL" Target="TVH_URL" Default="http://username:password@tvheadendip:9981" Mode="" Description="Container Variable: TVH_URL" Type="Variable" Display="always" Required="false" Mask="false">http://username:password@tvheadendip:9981</Config>
+  <Config Name="Tuner Count" Target="TVH_TUNER_COUNT" Default="4" Mode="" Description="Container Variable: TVH_TUNER_COUNT" Type="Variable" Display="always" Required="false" Mask="false">4</Config>
+  <Date>1498761403</Date>
+  <Category>MediaApp:Video</Category>
+  <Description>TvhProxy is a small flask app to proxy requests between Plex Media Server and Tvheadend.You have to run this Docker Container as a seperate IP Address. This Function is supportet with UNRAID 6.4</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/chvbsRepository/chvb/TvhProxy.xml</templatePath>
+</Container>

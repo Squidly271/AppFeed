@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>TeamCity</Name>
+  <Repository>jetbrains/teamcity-server</Repository>
+  <Registry>https://hub.docker.com/r/jetbrains/teamcity-server</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79858-support-josh5-docker-templates/</Support>
+  <Overview>TeamCity Server - Powerful Continuous Integration and Continuous Delivery out of the box&#13;
+&#13;
+This is an official JetBrains TeamCity server image. The image is suitable for production use and evaluation purposes.</Overview>
+  <WebUI>http://[IP]:[PORT:8111]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/teamcity-server.xml</TemplateURL>
+  <Icon>https://seeklogo.com/images/T/team-city-logo-8FEEB62EC1-seeklogo.com.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8111</HostPort>
+        <ContainerPort>8111</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teamcity/logs</HostDir>
+      <ContainerDir>/opt/teamcity/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teamcity/datadir</HostDir>
+      <ContainerDir>/data/teamcity_server/datadir</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Port" Target="8111" Default="" Mode="tcp" Description="Container Port: 8111" Type="Port" Display="always" Required="false" Mask="false">8111</Config>
+  <Config Name="Logs" Target="/opt/teamcity/logs" Default="" Mode="rw" Description="Container Path: /opt/teamcity/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teamcity/logs</Config>
+  <Config Name="Data" Target="/data/teamcity_server/datadir" Default="" Mode="rw" Description="Container Path: /data/teamcity_server/datadir" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/teamcity/datadir</Config>
+  <Date>1557045075</Date>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>TeamCity Server - Powerful Continuous Integration and Continuous Delivery out of the box&#13;
+&#13;
+This is an official JetBrains TeamCity server image. The image is suitable for production use and evaluation purposes.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Josh.5sRepository/josh5/teamcity-server.xml</templatePath>
+</Container>

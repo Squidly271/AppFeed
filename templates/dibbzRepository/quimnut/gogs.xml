@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Beta>true</Beta>
+  <Date>1535688000</Date>
+  <Name>gogs</Name>
+  <Overview>
+    gogs https://gogs.io/ is a painless self-hosted Git service [br][br]
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=45925.0</Support>
+  <Registry>https://hub.docker.com/r/gogs/gogs/</Registry>
+  <GitHub>https://github.com/quimnut/unraid-docker-templates/</GitHub>
+  <Repository>gogs/gogs</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8922</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8930</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>RUN_CROND</Name>
+      <Value>true</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to gogs data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/gogs.xml</TemplateURL>
+  <Category>Cloud: Productivity: Tools:Utilities Status:Beta</Category>
+  <Description>gogs https://gogs.io/ is a painless self-hosted Git service</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dibbzRepository/quimnut/gogs.xml</templatePath>
+</Container>

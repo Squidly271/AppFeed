@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>P3R-OpenRGB</Name>
+  <Repository>p3rco/openrgb:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/p3rco/openrgb</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://discord.gg/uRhFDDK</Support>
+  <Project>https://github.com/P3R-CO/openrgb-container</Project>
+  <Overview>A simple container that opens OpenRGB in a browser so that you can control all of your System lighting while still running UnraidOS.&#13;
+&#13;
+OpenRGB is an Open source RGB lighting control that doesn't depend on manufacturer software. ASUS, ASRock, Corsair, G.Skill, Gigabyte, HyperX, MSI, Razer, ThermalTake, and more are currently supported.&#13;
+&#13;
+WARNING!&#13;
+This project provides a tool to probe the SMBus.  This is a potentially dangerous operation if you don't know what you're doing.  Exercise caution when clicking the Detect Devices or Dump Device buttons.  There have been reports of Gigabyte motherboards having serious issues (bricking the RGB or bricking the entire board) when dumping certain devices.  On the same lines, exercise the same caution when using the i2cdump and i2cdetect commands on Linux, as they perform the same functionality.  OpenRGB is not liable for damage caused by improper SMBus access.&#13;
+As of now, only Gigabyte RGB Fusion 2.0 boards have been reported to have issues.</Overview>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/P3R-CO/unraid/master/OpenRGB-P3R-256px.png</Icon>
+  <ExtraParams>-e 'USER_ID'='0' -e 'GROUP_ID'='0'</ExtraParams>
+  <DonateText>Please support me on Patreon</DonateText>
+  <DonateLink>https://www.patreon.com/keepitPG</DonateLink>
+  <Config Name="Web Port" Target="5800" Default="5800" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC Port" Target="5900" Default="5900" Mode="tcp" Description="Container Port: 5900" Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+  <Config Name="AppData" Target="/config/" Default="/mnt/user/appdata/P3R-OpenRGB/" Mode="rw" Description="Container Path: /config/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/P3R-OpenRGB/</Config>
+  <Config Name="SYS I2C" Target="/sys/bus/i2c/devices/" Default="" Mode="ro" Description="Container Path: /sys/bus/i2c/devices/" Type="Path" Display="always" Required="false" Mask="false">/sys/bus/i2c/devices/</Config>
+  <Config Name="DEV I2C" Target="/dev/i2c-0" Default="" Mode="ro" Description="Container Path: /dev/i2c-0" Type="Path" Display="always" Required="false" Mask="false">/dev/i2c-0</Config>
+  <Config Name="VNC Password" Target="VNC_PASSWORD" Default="" Mode="" Description="Set New VNC Password" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/P3R-CO/unraid/master/openrgb.xml</TemplateURL>
+  <Beta>true</Beta>
+  <Category>Tools:Utilities Status:Beta</Category>
+  <Description>A simple container that opens OpenRGB in a browser so that you can control all of your System lighting while still running UnraidOS.&#13;
+&#13;
+OpenRGB is an Open source RGB lighting control that doesn't depend on manufacturer software. ASUS, ASRock, Corsair, G.Skill, Gigabyte, HyperX, MSI, Razer, ThermalTake, and more are currently supported.&#13;
+&#13;
+WARNING!&#13;
+This project provides a tool to probe the SMBus.  This is a potentially dangerous operation if you don't know what you're doing.  Exercise caution when clicking the Detect Devices or Dump Device buttons.  There have been reports of Gigabyte motherboards having serious issues (bricking the RGB or bricking the entire board) when dumping certain devices.  On the same lines, exercise the same caution when using the i2cdump and i2cdetect commands on Linux, as they perform the same functionality.  OpenRGB is not liable for damage caused by improper SMBus access.&#13;
+As of now, only Gigabyte RGB Fusion 2.0 boards have been reported to have issues.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/capt.asicsRepository/openrgb.xml</templatePath>
+</Container>

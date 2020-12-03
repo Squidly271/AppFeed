@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1542344400</Date>
+  <Name>HomeBridge-with-webGUI</Name>
+  <Project>https://github.com/nfarina/homebridge/</Project>
+  <Overview>
+    Homebridge with GUI (default user:pass=admin:admin) is a lightweight NodeJS server you can run on your home network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices.
+    Instruction:
+      1. in the "packages" variable, place the all packages name you wanted in the box seperated by space (Example is in the box, Plugin list is in https://www.npmjs.com/search?q=homebridge-plugin)
+      2. create the container
+      3. create the config.json in the homebridge directory (/mnt/user/appdata/homebridge/config.json)
+      4. add your devices to the config.json by refering to https://github.com/nfarina/homebridge
+  </Overview>
+  <Registry>https://hub.docker.com/r/siwatinc/homebridge_gui_unraid/</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>siwatinc/homebridge_gui_unraid</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Data>
+  </Data>
+  <Config Name="Config Folder" Target="/root/.homebridge" Default="/mnt/user/appdata/homebridge" Mode="rw" Description="This is the Config Directory for the Homebridge Application" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="APT Packages" Target="aptpackages" Default="ffmpeg" Mode="" Description="The name of the apt packages you wish to install (Seperated by Space)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plugins" Target="packages" Default="homebridge-pilight homebridge-info" Mode="" Description="The name of the plugins you wish to install (Seperated by Space, They can be NPM Packages)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <WebUI>http://[IP]:[PORT:8124]</WebUI>
+  <Icon>https://i1.wp.com/www.deviousweb.com/wp-content/uploads/2017/06/HomeKit.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/homebridge_ui.xml</TemplateURL>
+  <Category>HomeAutomation: Tools:</Category>
+  <Description>Homebridge with GUI (default user:pass=admin:admin) is a lightweight NodeJS server you can run on your home network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices.
+    Instruction:
+      1. in the "packages" variable, place the all packages name you wanted in the box seperated by space (Example is in the box, Plugin list is in https://www.npmjs.com/search?q=homebridge-plugin)
+      2. create the container
+      3. create the config.json in the homebridge directory (/mnt/user/appdata/homebridge/config.json)
+      4. add your devices to the config.json by refering to https://github.com/nfarina/homebridge</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/homebridge_ui.xml</templatePath>
+</Container>

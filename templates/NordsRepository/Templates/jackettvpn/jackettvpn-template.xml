@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1596081600</Date>
+  <Name>jackettvpn</Name>
+  <Repository>dyonr/jackettvpn</Repository>
+  <Registry>https://hub.docker.com/r/dyonr/jackettvpn</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/73693-support-dyonr-jackettvpn/</Support>
+  <Project>https://github.com/Jackett/Jackett</Project>
+  <Overview>Docker container which runs the latest headless Jackett Server while connecting to OpenVPN with iptables killswitch to prevent IP leakage when the tunnel goes down.</Overview>
+  <WebUI>http://[IP]:[PORT:9117]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/jackettvpn/jackettvpn-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/jackettvpn/jackettvpn-icon.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <Config Name="VPN_ENABLED" Target="VPN_ENABLED" Default="yes" Mode="" Description="Enable VPN? yes/no" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="VPN_USERNAME" Target="VPN_USERNAME" Default="" Mode="" Description="Username used to authenticate to the VPN" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="VPN_PASSWORD" Target="VPN_PASSWORD" Default="" Mode="" Description="Password used to authenticate to the VPN" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="WEBUI_PASSWORD" Target="WEBUI_PASSWORD" Default="" Mode="" Description="Password for Jackett's web interface" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="LAN_NETWORK" Target="LAN_NETWORK" Default="192.168.0.0/24" Mode="" Description="Your local network address in CIDR notation" Type="Variable" Display="always" Required="true" Mask="false">192.168.0.0/24</Config>
+  <Config Name="WEBUI_PORT" Target="9117" Default="9117" Mode="tcp" Description="Port used to access Jackett remotely" Type="Port" Display="always" Required="true" Mask="false">9117</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="The UID applied to the /config and /blackhole" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="The GID applied to the /config and /blackhole" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Blackhole Path" Target="/blackhole" Default="" Mode="rw" Description="Path for /blackhole" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="NAME_SERVERS" Target="NAME_SERVERS" Default="1.1.1.1,1.0.0.1" Mode="" Description="DNS used by the container" Type="Variable" Display="advanced" Required="false" Mask="false">1.1.1.1,1.0.0.1</Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="umask used by the container" Type="Variable" Display="advanced" Required="false" Mask="false">002</Config>
+  <Config Name="HEALTH_CHECK_HOST" Target="HEALTH_CHECK_HOST" Default="one.one.one.one" Mode="" Description="Host used to check if connection is up" Type="Variable" Display="advanced" Required="false" Mask="false">one.one.one.one</Config>
+  <Config Name="HEALTH_CHECK_INTERVAL" Target="HEALTH_CHECK_INTERVAL" Default="300" Mode="" Description="Interval in seconds between connection check" Type="Variable" Display="advanced" Required="false" Mask="false">300</Config>
+  <Config Name="HEALTH_CHECK_SILENT" Target="HEALTH_CHECK_SILENT" Default="1" Mode="" Description="1 supresses the 'Network is up' message" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="DISABLE_IPV6" Target="DISABLE_IPV6" Default="1" Mode="" Description="Disables IPv6 in sysctl" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="ADDITIONAL_PORTS" Target="ADDITIONAL_PORTS" Default="" Mode="" Description="Additional ports for routing other containers through this one" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="config" Target="/config" Default="/mnt/user/appdata/jackettvpn/" Mode="rw" Description="config path of jackettvpn" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/jackettvpn/</Config>
+  <Category>Downloaders: Tools:Utilities</Category>
+  <Description>Docker container which runs the latest headless Jackett Server while connecting to OpenVPN with iptables killswitch to prevent IP leakage when the tunnel goes down.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/NordsRepository/Templates/jackettvpn/jackettvpn-template.xml</templatePath>
+</Container>

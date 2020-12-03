@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>mysql</Name>
+  <Overview>
+    Official docker image for mysql database server.
+	Set the database name, root password, mysql user name, and mysql user password.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Registry>https://registry.hub.docker.com/_/mysql/</Registry>
+  <GitHub>https://github.com/docker-library/mysql/tree/master/5.7/</GitHub>
+  <Repository>mysql</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Value>root_password</Value>
+    </Variable>
+    <Variable>
+      <Name>MYSQL_DATABASE</Name>
+      <Value>owncloud</Value>
+    </Variable>
+    <Variable>
+      <Name>MYSQL_USER</Name>
+      <Value>mysql_user</Value>
+    </Variable>
+    <Variable>
+      <Name>MYSQL_PASSWORD</Name>
+      <Value>mysql_password</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mysql</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/mysql/logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/mysql.xml</TemplateURL>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>Official docker image for mysql database server.
+	Set the database name, root password, mysql user name, and mysql user password.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BungysRepository/Bungy/mysql.xml</templatePath>
+</Container>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>qbittorrentvpn</Name>
+  <Repository>markusmcnugen/qbittorrentvpn</Repository>
+  <Registry>https://hub.docker.com/r/markusmcnugen/qbittorrentvpn/</Registry>
+  <Network>br0</Network>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69152-support-markusmcnugens-docker-repository/</Support>
+  <Overview>Docker container which runs the latest headless qBittorrent client with WebUI wth optional OpenVPN connection including iptables killswitch to prevent IP leakage when tunnel does down. This is an automated build linked with Ubuntu. &#13;
+&#13;
+NOTE: Dont use WebUI from the unRAID menu, it throws a header redirect error in qBittorrent. Instead type the IP:PORT directly into a browser address bar.&#13;
+&#13;
+NOTE2: If you want to change the ports, change the environmental variables as well as the exposed ports for the container instead of forwarding a host port to 8080 inside the container. qBittorrent will throw a DNS rebinding error.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/qbittorrentvpn/qbittorrentvpn-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/qbittorrentvpn/qbittorrentvpn-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer>6.0</MinVer>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8999</HostPort>
+        <ContainerPort>8999</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8999</HostPort>
+        <ContainerPort>8999</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/qbittorrentvpn/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>yes</Value>
+      <Name>VPN_ENABLED</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>VPN_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>VPN_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.2.0/24</Value>
+      <Name>LAN_NETWORK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8.8.8.8,8.8.4.4</Value>
+      <Name>NAME_SERVERS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>002</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>WEBUI_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8999</Value>
+      <Name>INCOMING_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>WEBUI_PORT_ENV</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8999</Value>
+      <Name>INCOMING_PORT_ENV</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WEBUI_PORT" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="INCOMING_PORT_TCP" Target="8999" Default="8999" Mode="tcp" Description="Container Port: 8999" Type="Port" Display="always" Required="true" Mask="false">8999</Config>
+  <Config Name="INCOMING_PORT_UDP" Target="8999" Default="8999" Mode="udp" Description="Container Port: 8999" Type="Port" Display="always" Required="true" Mask="false">8999</Config>
+  <Config Name="WEBUI_PORT_ENV" Target="WEBUI_PORT" Default="8080" Mode="" Description="Container Variable: WEBUI_PORT - Sets Web UI port in qBittorrent config. You must change the exposed WebUI Port to the same value if you change this." Type="Variable" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="INCOMING_PORT_ENV" Target="INCOMING_PORT" Default="8999" Mode="" Description="Container Variable: INCOMING_PORT - Sets incoming connections port in qBittorrent config. You must change the exposed Incoming Ports to the same value if you change this." Type="Variable" Display="always" Required="false" Mask="false">8999</Config>
+  <Config Name="Downloads Path" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
+  <Config Name="VPN_ENABLED" Target="VPN_ENABLED" Default="yes" Mode="" Description="Container Variable: VPN_ENABLED" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="VPN_USERNAME" Target="VPN_USERNAME" Default="" Mode="" Description="Container Variable: VPN_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="VPN_PASSWORD" Target="VPN_PASSWORD" Default="" Mode="" Description="Container Variable: VPN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="LAN_NETWORK" Target="LAN_NETWORK" Default="192.168.1.0/24" Mode="" Description="Container Variable: LAN_NETWORK" Type="Variable" Display="always" Required="true" Mask="false">192.168.2.0/24</Config>
+  <Config Name="NAME_SERVERS" Target="NAME_SERVERS" Default="8.8.8.8,8.8.4.4" Mode="" Description="Container Variable: NAME_SERVERS" Type="Variable" Display="always" Required="true" Mask="false">8.8.8.8,8.8.4.4</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">002</Config>
+  <Config Name="config" Target="/config" Default="/mnt/cache/appdata/qbittorrentvpn" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/qbittorrentvpn/</Config>
+  <Category>Downloaders:</Category>
+  <Description>Docker container which runs the latest headless qBittorrent client with WebUI wth optional OpenVPN connection including iptables killswitch to prevent IP leakage when tunnel does down. This is an automated build linked with Ubuntu. &#13;
+&#13;
+NOTE: Dont use WebUI from the unRAID menu, it throws a header redirect error in qBittorrent. Instead type the IP:PORT directly into a browser address bar.&#13;
+&#13;
+NOTE2: If you want to change the ports, change the environmental variables as well as the exposed ports for the container instead of forwarding a host port to 8080 inside the container. qBittorrent will throw a DNS rebinding error.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MarkusMcNugensRepository/qbittorrentvpn/qbittorrentvpn-template.xml</templatePath>
+</Container>

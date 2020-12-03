@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/booksonic.xml</TemplateURL>
+  <Date>1481605200</Date>
+  <Name>booksonic</Name>
+  <Project>http://booksonic.org</Project>
+  <Repository>linuxserver/booksonic</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/booksonic/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/52926-support-linuxserverio-booksonic/</Support>
+  <Overview>Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic</Overview>
+  <WebUI>http://[IP]:[PORT:4040]/booksonic/</WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/booksonic.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4040</HostPort>
+        <ContainerPort>4040</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/podcast</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+    </Variable>
+    <Variable>
+      <Value>booksonic</Value>
+      <Name>CONTEXT_PATH</Name>
+    </Variable>
+  </Environment>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/alpine</BaseImage>
+  <Category>MediaApp:Books MediaApp:Other MediaServer:Books MediaServer:Other</Category>
+  <Description>Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/booksonic.xml</templatePath>
+</Container>

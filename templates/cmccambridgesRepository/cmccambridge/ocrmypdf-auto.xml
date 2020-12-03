@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ocrmypdf-auto</Name>
+  <Repository>cmccambridge/ocrmypdf-auto:latest</Repository>
+  <Registry>https://hub.docker.com/r/cmccambridge/ocrmypdf-auto</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/72649-support-cmccambridge-ocrmypdf-auto/</Support>
+  <Project>https://github.com/cmccambridge/ocrmypdf-auto</Project>
+  <Overview>[p]This container monitors an input file directory for PDF documents to process, and automatically invokes [a href='https://github.com/jbarlow83/OCRmyPDF'][code][strong]OCRmyPDF[/strong][/code][/a] on each file.[/p]
+[p]It uses [code]inotify[/code] to monitor the input directory efficiently, and is fairly configurable.[/p]
+[h4]Configuration Details[/h4]
+[p]See the descriptions of the unRAID volumes and environment variables for highlights of the configurability of [code]ocrmypdf-auto[/code], but for details including how to specify custom commandline parameters to [code]ocrmydf[/code] itself, or custom [code]tesseract[/code] configuration files, see the full README at [a href='https://github.com/cmccambridge/ocrmypdf-auto/blob/master/README.md']https://github.com/cmccambridge/ocrmypdf-auto/blob/master/README.md[/a][/p]</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cmccambridge/unraid-templates/master/cmccambridge/ocrmypdf-auto.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cmccambridge/ocrmypdf-auto/master/media/logo.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/input</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ocrmypdf-auto</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>MIRROR_TREE</Value>
+      <Name>OCR_OUTPUT_MODE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>NOTHING</Value>
+      <Name>OCR_ACTION_ON_SUCCESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>OCR_LANGUAGES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>OCR_NOTIFY_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>OCR_PROCESS_EXISTING_ON_START</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>OCR_VERBOSITY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>USERMAP_UID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>USERMAP_GID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Input Directory" Target="/input" Default="" Mode="rw" Description="Input directory from which to process files for OCR. &amp;lt;em&amp;gt;Container path: &amp;lt;code&amp;gt;/input&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Output Directory" Target="/output" Default="" Mode="rw" Description="Output directory to which post-OCR files will be written. &amp;lt;em&amp;gt;Container path: &amp;lt;code&amp;gt;/output&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/ocrmypdf-auto" Mode="rw" Description="Config/appdata directory. &amp;lt;em&amp;gt;Container path: &amp;lt;code&amp;gt;/config&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ocrmypdf-auto</Config>
+  <Config Name="Output Mode" Target="OCR_OUTPUT_MODE" Default="MIRROR_TREE" Mode="" Description="Controls the output directory layout: &amp;lt;br /&amp;gt; &amp;lt;code&amp;gt;MIRROR_TREE&amp;lt;/code&amp;gt; - (Default) Mirror the directory structure of the input directory, i.e. for an input file &amp;lt;code&amp;gt;/input/foo/bar.pdf&amp;lt;/code&amp;gt; create an output file &amp;lt;code&amp;gt;/output/foo/bar.pdf&amp;lt;/code&amp;gt;. &amp;lt;br /&amp;gt; &amp;lt;code&amp;gt;SINGLE_FOLDER&amp;lt;/code&amp;gt; - Collect all output files in a single flat folder, i.e. for an input file &amp;lt;code&amp;gt;/input/foo/bar.pdf&amp;lt;/code&amp;gt; create an output file &amp;lt;code&amp;gt;/output/bar.pdf&amp;lt;/code&amp;gt;." Type="Variable" Display="always" Required="true" Mask="false">MIRROR_TREE</Config>
+  <Config Name="Action On Success" Target="OCR_ACTION_ON_SUCCESS" Default="NOTHING" Mode="" Description="Controls the action (if any) to perform after successful OCR processing: &amp;lt;br /&amp;gt; &amp;lt;code&amp;gt;NOTHING&amp;lt;/code&amp;gt; - (Default) Do nothing. Input files remain in place where they were found. &amp;lt;br /&amp;gt; &amp;lt;code&amp;gt;ARCHIVE_INPUT_FILES&amp;lt;/code&amp;gt; - Archive input files by &amp;lt;strong&amp;gt;moving&amp;lt;/strong&amp;gt; them &amp;lt;em&amp;gt;(overwriting existing files!)&amp;lt;/em&amp;gt; to the &amp;lt;code&amp;gt;/archive&amp;lt;/code&amp;gt; Volume &amp;lt;br /&amp;gt; &amp;lt;code&amp;gt;DELETE_INPUT_FILES&amp;lt;/code&amp;gt; - Delete the input file after successful processing." Type="Variable" Display="always" Required="true" Mask="false">NOTHING</Config>
+  <Config Name="Additional Languages" Target="OCR_LANGUAGES" Default="" Mode="" Description="Additional languages (besides English) to install, given as a space-separated list of language abbreviations. All available languages can be found on the &amp;lt;a href=https://packages.ubuntu.com/search?keywords=tesseract-ocr-&amp;amp;searchon=names&amp;amp;suite=bionic&amp;amp;section=all&amp;gt;Ubuntu site&amp;lt;/a&amp;gt;. Example for German, Chinese - Simplified, and Italian: &amp;lt;code&amp;gt;deu chi-sim ita&amp;lt;/code&amp;gt;" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Notify URL" Target="OCR_NOTIFY_URL" Default="" Mode="" Description="On a successful completion, a POST will be made to the given URL, with a JSON payload of &amp;lt;code&amp;gt;{'pdf': '/output/doc.pdf', 'txt': '/output/doc.pdf.txt'} &amp;lt;/code&amp;gt;. The txt property will only be present if you add the &amp;lt;code&amp;gt;--sidecar &amp;lt;/code&amp;gt; option to the &amp;lt;code&amp;gt;ocr.config&amp;lt;/code&amp;gt; file. This could be used to kick off additional processing, like indexing of the content or notifications." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Process Existing on Startup" Target="OCR_PROCESS_EXISTING_ON_START" Default="0" Mode="" Description="Set to &amp;lt;code&amp;gt;1&amp;lt;/code&amp;gt; to enable processing of any files in the input directory when the container is launched. &amp;lt;br/&amp;gt; Set to &amp;lt;code&amp;gt;0&amp;lt;/code&amp;gt; (Default) or unset to ignore existing files until they are modified." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Verbosity" Target="OCR_VERBOSITY" Default="" Mode="" Description="Control the verbosity of debug logging. Accepts python &amp;lt;code&amp;gt;logging&amp;lt;/code&amp;gt; levels, e.g. &amp;lt;code&amp;gt;warn&amp;lt;/code&amp;gt; (Default), &amp;lt;code&amp;gt;info&amp;lt;/code&amp;gt;, &amp;lt;code&amp;gt;debug&amp;lt;/code&amp;gt;, etc." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="UID Override" Target="USERMAP_UID" Default="99" Mode="" Description="Set the UID that the OCR tools will run as. unRAID standard is 99." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="GID Override" Target="USERMAP_GID" Default="100" Mode="" Description="Set the primary GID that the OCR tools will run with. unRAID standard is 100." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Category>Productivity:</Category>
+  <Description>This container monitors an input file directory for PDF documents to process, and automatically invokes OCRmyPDF on each file.
+It uses inotify to monitor the input directory efficiently, and is fairly configurable.
+Configuration Details
+See the descriptions of the unRAID volumes and environment variables for highlights of the configurability of ocrmypdf-auto, but for details including how to specify custom commandline parameters to ocrmydf itself, or custom tesseract configuration files, see the full README at https://github.com/cmccambridge/ocrmypdf-auto/blob/master/README.md</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cmccambridgesRepository/cmccambridge/ocrmypdf-auto.xml</templatePath>
+</Container>

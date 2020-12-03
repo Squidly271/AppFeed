@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>gaps</Name>
+  <Repository>housewrecker/gaps</Repository>
+  <Registry>https://hub.docker.com/r/housewrecker/gaps/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/85461-support-gaps/</Support>
+  <Project>https://github.com/JasonHHouse/Gaps/</Project>
+  <Overview>Search your movies and find missing movies from MovieDB collections.</Overview>
+  <WebUI>http://[IP]:[PORT:8484]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Knoxie/UnraidTemplates/master/gaps-unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/JasonHHouse/Gaps/master/images/gaps.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>All support appreciated.</DonateText>
+  <DonateLink>https://www.paypal.com/paypalme2/thehousewrecker</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8484</HostPort>
+        <ContainerPort>8484</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gaps/</HostDir>
+      <ContainerDir>/usr/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="UI" Target="8484" Default="" Mode="tcp" Description="Container Port: 8484" Type="Port" Display="always" Required="true" Mask="false">8484</Config>
+  <Config Name="SSL Boolean" Target="ENABLE_SSL" Default="" Mode="" Description="true/false to enable SSL" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Login Boolean" Target="ENABLE_LOGIN" Default="" Mode="" Description="true/false to enable login" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="config" Target="/usr/data" Default="" Mode="rw" Description="File path for gaps config and data storage." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gaps/</Config>
+  <Date>1574708103</Date>
+  <Category>Tools:Utilities MediaApp:Other MediaServer:Other</Category>
+  <Description>Search your movies and find missing movies from MovieDB collections.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Knoxie89sRepository/gaps-unraid.xml</templatePath>
+</Container>

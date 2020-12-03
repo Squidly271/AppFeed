@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenRCT2</Name>
+  <Repository>ich777/openrct2server</Repository>
+  <Registry>https://hub.docker.com/r/ich777/openrct2server/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://openrct2.org/</Project>
+  <Overview>This Docker will download and install the preferred version of OpenRCT2 (don't forget to put in the server version to download).&#13;
+&#13;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#13;
+&#13;
+Manual Installation: You can also install a version manually but please be sure to put in the right version number of the file: ‘v0.2.3-develop-e4a2b1f9c’ if the source file is named like this: ‘OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar’, drop the file into the openrct2 directory and eventually restart the container to install it.&#13;
+&#13;
+Update Notice: If you want to update or downgrade the game simply change the version number.&#13;
+&#13;
+ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the first time you enter these, after that you must change it manually in ‘/SERVER_DIR/user-data/users.json’.
+&#13;
+NOTICE: If you got no IPv6 you will get an Error and a Warning in the log about that, you can ignore that the server runs just fine on IPv4.</Overview>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openrct2.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>11753</HostPort>
+        <ContainerPort>11753</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/openrct2</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>GAME_VERSION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>--password Docker</Value>
+      <Name>GAME_CONFIG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>docker.sv6</Value>
+      <Name>GAME_SAVE_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADMIN_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADMIN_HASH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>11753</Value>
+      <Name>GAME_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/openrct2</Config>
+  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Preferred game version to install or set to 'latest' to check on every start if there is a newer version available (If you want to install a custom version the version number must look like this: 'v0.2.3-develop-e4a2b1f9c' if the source file is named like this: 'OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar')" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Extra Startup Parameters" Target="GAME_CONFIG" Default="" Mode="" Description="Enter you Extra Startup Parameters if needed." Type="Variable" Display="always" Required="false" Mask="false">--password Docker</Config>
+  <Config Name="Savegame Name" Target="GAME_SAVE_NAME" Default="" Mode="" Description="Enter here the name of the savegame to load (located for example: /saves/docker.sav)" Type="Variable" Display="always" Required="true" Mask="false">docker.sv6</Config>
+  <Config Name="TCP - Game Port" Target="11753" Default="" Mode="tcp" Description="TCP Game Port (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to change it in the 'Show more settings ...' section below)" Type="Port" Display="always" Required="true" Mask="false">11753</Config>
+  <Config Name="Admin Name" Target="ADMIN_NAME" Default="" Mode="" Description="Name of the user who should become the admin (Note: this must be the username that connects to the server from the client machine)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Admin Hash" Target="ADMIN_HASH" Default="" Mode="" Description="The hash of the admin user (you find it on the client computer in the 'user-data/keys' folder from OpenRCT2 - if nothing is in there try to connect to any server and the game will create the hash, it’s the numbers and letters after the username without ‘-’ and without the ending ‘.pubkey’ or just turn on ‘log_server_actions’ in the ‘config.ini’ on the server and you’ll find it in the logs)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">11753</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Category>GameServers:</Category>
+  <Description>This Docker will download and install the preferred version of OpenRCT2 (don't forget to put in the server version to download).&#13;
+&#13;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#13;
+&#13;
+Manual Installation: You can also install a version manually but please be sure to put in the right version number of the file: ‘v0.2.3-develop-e4a2b1f9c’ if the source file is named like this: ‘OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar’, drop the file into the openrct2 directory and eventually restart the container to install it.&#13;
+&#13;
+Update Notice: If you want to update or downgrade the game simply change the version number.&#13;
+&#13;
+ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the first time you enter these, after that you must change it manually in ‘/SERVER_DIR/user-data/users.json’.
+&#13;
+NOTICE: If you got no IPv6 you will get an Error and a Warning in the log about that, you can ignore that the server runs just fine on IPv4.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ich777sRepository/ich777/OpenRCT2.xml</templatePath>
+</Container>

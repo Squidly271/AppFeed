@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Varken</Name>
+  <Repository>boerderij/varken</Repository>
+  <Registry>https://hub.docker.com/r/boerderij/varken/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Boerderij/Varken</Support>
+  <Project>https://github.com/Boerderij/Varken</Project>
+  <Overview>Varken requires influxdb and grafana.  Deploy those containers first.&#13;
+&#13;
+Dutch for PIG. PIG is an Acronym for Plex/InfluxDB/Grafana&#13;
+&#13;
+Varken is a standalone command-line utility to aggregate data from the Plex ecosystem into InfluxDB. Examples use Grafana for a frontend&#13;
+&#13;
+&#13;
+You must edit the varken.ini file in /mnt/user/appdata/varken. &#13;
+&#13;
+ </Overview>
+  <TemplateURL>https://raw.githubusercontent.com/benderstwin/docker-templates/master/Bender-Varken.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/varken.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/varken</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>America/Denver</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Timezone" Target="TZ" Default="America/Denver" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">America/Denver</Config>
+  <Config Name="config" Target="/config" Default="/mnt/user/appdata/varken" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/varken</Config>
+  <Date>1552512929</Date>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Description>Varken requires influxdb and grafana.  Deploy those containers first.&#13;
+&#13;
+Dutch for PIG. PIG is an Acronym for Plex/InfluxDB/Grafana&#13;
+&#13;
+Varken is a standalone command-line utility to aggregate data from the Plex ecosystem into InfluxDB. Examples use Grafana for a frontend&#13;
+&#13;
+&#13;
+You must edit the varken.ini file in /mnt/user/appdata/varken.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BendersRepository/Bender-Varken.xml</templatePath>
+</Container>

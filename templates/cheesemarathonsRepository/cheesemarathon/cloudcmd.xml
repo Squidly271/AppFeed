@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Privileged>false</Privileged>
+  <Name>CloudCommander</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>
+[b]CloudCommander[/b] is a simple web file browser with a built in text editor and archive compress/extract abilities.[br/]
+[br/]
+[b]Instructions:[/b][br/]
+Set Port to the port you want to be able to access from. Defaults to 8765[br/]
+Set Mount Point to the directory you want to be able to access in the browser. Defaults to /mnt/user, all shares[br/]
+	</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/coderaiser/cloudcmd/</Registry>
+  <GitHub>https://github.com/coderaiser/cloudcmd</GitHub>
+  <Repository>coderaiser/cloudcmd</Repository>
+  <ExtraParams>-u 99:100</ExtraParams>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8765</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/UNRAID</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cloudcmd</HostDir>
+      <ContainerDir>/root</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/root</Value>
+      <Name>HOME</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/cloudcmdLogo.png</Icon>
+  <Config Name="Mount Path" Target="/UNRAID" Default="" Mode="rw" Description="Container Path: /UNRAID" Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Config Name="Port" Target="8000" Default="8765" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false">8765</Config>
+  <Config Name="appdata" Target="/root" Default="" Mode="rw" Description="Container Path: /root" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/cloudcmd</Config>
+  <Config Name="HOME - Dont Change!" Target="HOME" Default="" Mode="" Description="Container Variable: HOME" Type="Variable" Display="advanced" Required="true" Mask="false">/root</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/cloudcmd.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>CloudCommander is a simple web file browser with a built in text editor and archive compress/extract abilities.
+
+Instructions:
+Set Port to the port you want to be able to access from. Defaults to 8765
+Set Mount Point to the directory you want to be able to access in the browser. Defaults to /mnt/user, all shares</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/cloudcmd.xml</templatePath>
+</Container>

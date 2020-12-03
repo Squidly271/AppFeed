@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/chronograf.xml</TemplateURL>
+  <Date>1521950400</Date>
+  <changes>
+    [center] [b]Data-Monkey:[/b] Netdata [/center]
+
+[center][font size=4]Change Log[/font][/center]
+
+[font size=3]2018.04.29[/font]
+- Initial release of the Chronograf template
+    
+    
+  </changes>
+  <Name>Chronograf</Name>
+  <Support>https://lime-technology.com/forums/topic/71264-support-data-monkey-chronograf/</Support>
+  <Project>https://www.influxdata.com/time-series-platform/chronograf/</Project>
+  <Overview>Chronograf is InfluxData’s open source web application. Use Chronograf with the other components of the TICK stack to visualize your monitoring data and easily create alerting and automation rules.</Overview>
+  <Registry>https://hub.docker.com/_/chronograf/</Registry>
+  <Repository>chronograf</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>8888</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/lib/chronograf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8888]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/chronograf.png</Icon>
+  <DonateImg></DonateImg>
+  <BaseImage></BaseImage>
+  <Category>Tools:System</Category>
+  <Description>Chronograf is InfluxData’s open source web application. Use Chronograf with the other components of the TICK stack to visualize your monitoring data and easily create alerting and automation rules.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/RolandsRepository/Data-Monkey/chronograf.xml</templatePath>
+</Container>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Pritunl</Name>
+  <Date>1507176000</Date>
+  <WebUI>https://[IP]:[PORT:443]</WebUI>
+  <Project>https://pritunl.com/</Project>
+  <Overview>
+    Run a Pritunl VPN Server [br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] This is where the default configs and logs are.[br][br]
+    Launch the Web Interface at port `9700` to manage Pritunl.[br]
+    Port `1194` udp/tcp is default for the VPN.[br][br]
+    When you add a "server" and [b]set the bind port to 0.0.0.0`[/b], until UnRAID supports ipv6.[br]
+    [br][br]
+    Submit any UnRaid issues here: [url]http://lime-technology.com/forum/index.php?topic=48370.0[/url]
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=48370.0</Support>
+  <Registry>https://hub.docker.com/r/bashninja/docker-pritunl/</Registry>
+  <GitHub>https://github.com/bashNinja-dockers/docker-pritunl</GitHub>
+  <Repository>bashninja/docker-pritunl</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9700</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9699</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1194</HostPort>
+        <ContainerPort>1194</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1194</HostPort>
+        <ContainerPort>1194</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Config Name="http" Target="80" Default="9699" Mode="tcp" Description="Container Port: 80. Only used for LetsEncrypt." Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="https" Target="443" Default="9700" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="VPN/tcp" Target="1194" Default="1194" Mode="tcp" Description="Container Port: 1194/tcp" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="VPN/udp" Target="1194" Default="1194" Mode="udp" Description="Container Port: 1194/udp" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UID for permissions.  Do not change unless you know what you're doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GID for permissions.  Do not change unless you know what you're doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/pritunl" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Icon>https://raw.githubusercontent.com/bashNinja-dockers/docker-pritunl/0cf3b425/logo.png</Icon>
+  <Beta>true</Beta>
+  <BaseImage>lsiobase/xenial</BaseImage>
+  <TemplateURL>https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/pritunl.xml</TemplateURL>
+  <Category>Network:Other Status:Beta</Category>
+  <Description>Run a Pritunl VPN Server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/bashNinjasRepository/bashninja/pritunl.xml</templatePath>
+</Container>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1577941200</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Name>MQTT</Name>
+  <Registry>https://registry.hub.docker.com/r/spants/mqtt/</Registry>
+  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
+  <Repository>spants/mqtt</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+    </Variable>
+    <Variable>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MQTT</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://mqtt.org/</WebUI>
+  <Icon>https://i.imgur.com/Cc9Jkcr.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/MQTT.xml</TemplateURL>
+  <Overview>
+    MQTT for Unraid6 Docker Manager running on Port 1883 and 9883[br][br]
+    MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. [br]
+    It was designed as an extremely lightweight publish/subscribe messaging transport. [br]
+    It is useful for connections with remote locations where a small code footprint is required [br]
+    and/or network bandwidth is at a premium. For example, it has been used in sensors [br]
+    communicating to a broker via satellite link, over occasional dial-up connections with [br]
+    healthcare providers, and in a range of home automation and small device scenarios. [br]
+    It is also ideal for mobile applications because of its small size, low power usage, [br]
+    minimised data packets, and efficient distribution of information to one or many receivers[br]
+    [br][br][br]
+    This version supports passwords - see passwords.README in the /config directory.[br]
+    Also supported are websockets and certificates.[br]
+    [br]
+    An example config file is stored in the data directory. If you have used an older Docker your config may need changing.[br]
+    [br]
+    Note that you may have to use NEWPERMS to edit the config files.[br]
+    The permissions for unraid have been removed to allow this to be a multihost docker.[br][br][br]
+    The docker is built on a Alpine Linux base.[br]
+  </Overview>
+  <Category>HomeAutomation:</Category>
+  <Description>MQTT for Unraid6 Docker Manager running on Port 1883 and 9883
+    MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. 
+    It was designed as an extremely lightweight publish/subscribe messaging transport. 
+    It is useful for connections with remote locations where a small code footprint is required 
+    and/or network bandwidth is at a premium. For example, it has been used in sensors 
+    communicating to a broker via satellite link, over occasional dial-up connections with 
+    healthcare providers, and in a range of home automation and small device scenarios. 
+    It is also ideal for mobile applications because of its small size, low power usage, 
+    minimised data packets, and efficient distribution of information to one or many receivers
+    
+    This version supports passwords - see passwords.README in the /config directory.
+    Also supported are websockets and certificates.
+    
+    An example config file is stored in the data directory. If you have used an older Docker your config may need changing.
+    
+    Note that you may have to use NEWPERMS to edit the config files.
+    The permissions for unraid have been removed to allow this to be a multihost docker.
+    The docker is built on a Alpine Linux base.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/MQTT.xml</templatePath>
+</Container>

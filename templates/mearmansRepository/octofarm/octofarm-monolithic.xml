@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OctoFarm-Monlithic</Name>
+  <Repository>octofarm/octofarm:monolithic-latest</Repository>
+  <Branch>
+    <Tag>monolithic-latest</Tag>
+    <TagDescription>Latest stable release of OctoFarm, including a built-in MongoDB instance.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>monolithic-dev</Tag>
+    <TagDescription>Latest semi-stable development release of OctoFarm, including a built-in MongoDB instance. Use with caution!</TagDescription>
+  </Branch>
+  <Registry>https://hub.docker.com/r/octofarm/octofarm/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/NotExpectedYet/OctoFarm/issues</Support>
+  <Project>https://octofarm.net/</Project>
+  <Overview>OctoFarm is a web server and client combination for unifying multiple instances of Octoprint.
+	This image also includes a built-in self-contained MongoDB instance.
+	You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm. This image also includes a built-in self-contained MongoDB instance.</Overview>
+  <WebUI>http://[IP]:[PORT:4000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/NotExpectedYet/OctoFarm-UnRaid-Template/master/octofarm/octofarm-monolithic.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/NotExpectedYet/OctoFarm/master/views/android-chrome-512x512.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Support the development on Patreon:</DonateText>
+  <DonateLink>https://www.patreon.com/NotExpectedYet</DonateLink>
+  <Description>OctoFarm is a web server and client combination for unifying multiple instances of Octoprint.
+	This image also includes a built-in self-contained MongoDB instance.
+	You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm. This image also includes a built-in self-contained MongoDB instance.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000</HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/db</HostDir>
+      <ContainerDir>/data/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/logs</HostDir>
+      <ContainerDir>/app/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/scripts</HostDir>
+      <ContainerDir>/scripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/images</HostDir>
+      <ContainerDir>/app/images</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="database" Target="/data/db" Default="" Mode="rw" Description="Container Path: /data/db" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/octofarm/db</Config>
+  <Config Name="logs" Target="/data/logs" Default="" Mode="rw" Description="Container Path: /data/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/octofarm/logs</Config>
+  <Config Name="scripts" Target="/scripts" Default="" Mode="rw" Description="Container Path: /scripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/octofarm/scripts</Config>
+  <Config Name="images" Target="/app/images" Default="" Mode="rw" Description="Thumbnail store for history" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/OctoFarm/images</Config>
+  <Config Name="Web UI" Target="4000" Default="4000" Mode="tcp" Description="Container Port: 4000" Type="Port" Display="always" Required="true" Mask="false">4000</Config>
+  <Category>Tools:Utilities</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/mearmansRepository/octofarm/octofarm-monolithic.xml</templatePath>
+</Container>

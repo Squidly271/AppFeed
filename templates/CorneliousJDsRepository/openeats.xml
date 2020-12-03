@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenEats</Name>
+  <Repository>bramblegb/openeats</Repository>
+  <Registry>https://hub.docker.com/r/bramblegb/openeats/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/92752-support-openeats-corneliousjd-repo/</Support>
+  <Project>https://github.com/open-eats/OpenEats</Project>
+  <Overview>OpenEats is a recipe management site that allows users to create, share, and store their personal collection of recipes.&#13;
+Requires MariaDB container (I recommend LinuxServer's container)&#13;
+&#13;
+FIRST RUN: Please wait while the container creats all the necessary tables in the SQL database.&#13;
+This can take 5-10 minutes or so and the container will have NO log output when it does this.&#13;
+Please be patient, if you interrupt this by stopping the container it will leave you with a broken database!&#13;
+&#13;
+Please use support link for more information about this container.</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/openeats.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/openeats.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8760</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openeats/</HostDir>
+      <ContainerDir>/code/site-media/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>master</Value>
+      <Name>OPENEATS_VERSION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>*</Value>
+      <Name>ALLOWED_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>openeats</Value>
+      <Name>SUPERUSER_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>SUPERUSER_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>MYSQL_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>openeats</Value>
+      <Name>MYSQL_DATABASE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DJANGO_SECRET_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>DJANGO_DEBUG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>en</Value>
+      <Name>NODE_LOCALE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="HTTP Port" Target="80" Default="8760" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8760</Config>
+  <Config Name="Appdata" Target="/code/site-media/" Default="/mnt/user/appdata/openeats/" Mode="rw" Description="Container Path: /code/site-media/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openeats/</Config>
+  <Config Name="OPENEATS_VERSION" Target="OPENEATS_VERSION" Default="master" Mode="" Description="Version of OpenEats to pull" Type="Variable" Display="always" Required="true" Mask="false">master</Config>
+  <Config Name="ALLOWED_HOST" Target="ALLOWED_HOST" Default="*" Mode="" Description="Either * (all) or local IP, openeatas.domain.com" Type="Variable" Display="always" Required="true" Mask="false">*</Config>
+  <Config Name="SUPERUSER_NAME" Target="SUPERUSER_NAME" Default="openeats" Mode="" Description="Initial superuser account name" Type="Variable" Display="always" Required="true" Mask="false">openeats</Config>
+  <Config Name="SUPERUSER_PASSWORD" Target="SUPERUSER_PASSWORD" Default="password" Mode="" Description="Initial superuser account password" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
+  <Config Name="MYSQL_HOST" Target="MYSQL_HOST" Default="" Mode="" Description="SQL server host address" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MYSQL_PORT" Target="MYSQL_PORT" Default="3306" Mode="" Description="SQL server port number" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="MYSQL_DATABASE" Target="MYSQL_DATABASE" Default="openeats" Mode="" Description="SQL server database to connect to" Type="Variable" Display="always" Required="true" Mask="false">openeats</Config>
+  <Config Name="MYSQL_USER" Target="MYSQL_USER" Default="" Mode="" Description="SQL server user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MYSQL_ROOT_PASSWORD" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="SQL server password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="DJANGO_SECRET_KEY" Target="DJANGO_SECRET_KEY" Default="" Mode="" Description="Enter a randomized set of 32 characters here" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="DJANGO_DEBUG" Target="DJANGO_DEBUG" Default="False" Mode="" Description="Set debug mode" Type="Variable" Display="advanced-hide" Required="true" Mask="false">False</Config>
+  <Config Name="NODE_LOCALE" Target="NODE_LOCALE" Default="en" Mode="" Description="English: en&#13;&#10;German: de&#13;&#10;Spanish: es&#13;&#10;French: fr" Type="Variable" Display="advanced-hide" Required="true" Mask="false">en</Config>
+  <Date>1590172584</Date>
+  <Category>Productivity: Tools:Utilities Other:</Category>
+  <Description>OpenEats is a recipe management site that allows users to create, share, and store their personal collection of recipes.&#13;
+Requires MariaDB container (I recommend LinuxServer's container)&#13;
+&#13;
+FIRST RUN: Please wait while the container creats all the necessary tables in the SQL database.&#13;
+This can take 5-10 minutes or so and the container will have NO log output when it does this.&#13;
+Please be patient, if you interrupt this by stopping the container it will leave you with a broken database!&#13;
+&#13;
+Please use support link for more information about this container.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CorneliousJDsRepository/openeats.xml</templatePath>
+</Container>

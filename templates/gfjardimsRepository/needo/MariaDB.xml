@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>MariaDB</Name>
+  <Overview>
+    MariaDB is a drop-in replacement for MySQL. MariaDB strives to be the logical choice for database professionals looking for a robust, scalable, and reliable SQL server. To accomplish this, the MariaDB Foundation work closely and cooperatively with the larger community of users and developers in the true spirit of Free and open source software, and release software in a manner that balances predictability with reliability.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/needo/mariadb</Registry>
+  <GitHub>https://github.com/needo37/mariadb/</GitHub>
+  <Repository>needo/mariadb</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=33822.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mariadb</HostDir>
+      <ContainerDir>/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://mariadb.org</WebUI>
+  <Icon>https://i.imgur.com/LSKW6sm.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/needo/MariaDB.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>MariaDB is a drop-in replacement for MySQL. MariaDB strives to be the logical choice for database professionals looking for a robust, scalable, and reliable SQL server. To accomplish this, the MariaDB Foundation work closely and cooperatively with the larger community of users and developers in the true spirit of Free and open source software, and release software in a manner that balances predictability with reliability.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/needo/MariaDB.xml</templatePath>
+</Container>

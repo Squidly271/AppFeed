@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1449550800</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Name>Dashing</Name>
+  <Registry>https://registry.hub.docker.com/r/spants/dashing/</Registry>
+  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
+  <Repository>spants/dashing</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3030</HostPort>
+        <ContainerPort>3030</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/docker/appdata/dashing</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3030]</WebUI>
+  <Icon>https://i.imgur.com/qtYkC6Wl.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/dashing.xml</TemplateURL>
+  <Overview>
+    The exceptionally handsome dashboard framework.[br][br]
+    Dashing is a Sinatra based framework that lets you build beautiful dashboards.[br][br]
+    Use premade widgets, or fully create your own with scss, html, and coffeescript.[br]
+    Widgets harness the power of data bindings to keep things DRY and simple. Powered by batman.js.[br]
+    Use the API to push data to your dashboards, or make use of a simple ruby DSL for fetching data.[br]
+    Drag and Drop interface for re-arranging your widgets.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : Dashing stores it's configuration files here.[br]
+    A sample dashboard is installed - edit [b]start.sh[/b] to point to your own.[br][br]
+    *** It takes a couple of minutes to start the first time as it downloads additional files ***[br][br]
+  </Overview>
+  <Category>HomeAutomation:</Category>
+  <Description>The exceptionally handsome dashboard framework.
+    Dashing is a Sinatra based framework that lets you build beautiful dashboards.
+    Use premade widgets, or fully create your own with scss, html, and coffeescript.
+    Widgets harness the power of data bindings to keep things DRY and simple. Powered by batman.js.
+    Use the API to push data to your dashboards, or make use of a simple ruby DSL for fetching data.
+    Drag and Drop interface for re-arranging your widgets.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/dashing.xml</templatePath>
+</Container>

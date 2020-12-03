@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>plexWatch</Name>
+  <Overview>
+    Notify and Log watched content on a Plex Media Server.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/needo/plexwatch/</Registry>
+  <GitHub>https://github.com/needo37/plexWatch</GitHub>
+  <Repository>needo/plexwatch</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=33822.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/plexWatch/logs</HostDir>
+      <ContainerDir>/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/plexWatch</HostDir>
+      <ContainerDir>/plexWatch</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/plexWatch</WebUI>
+  <Icon>https://i.imgur.com/QkAUWqZ.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/needo/plexWatch.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Video</Category>
+  <Description>Notify and Log watched content on a Plex Media Server.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/needo/plexWatch.xml</templatePath>
+</Container>

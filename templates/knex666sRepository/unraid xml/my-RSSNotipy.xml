@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>RSSNotipy</Name>
+  <Repository>knex666/rssnotipy</Repository>
+  <Registry>https://hub.docker.com/repository/docker/knex666/rssnotipy</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.100.55</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87901-support-knex666-rssnotipy</Support>
+  <Project>https://github.com/maschhoff/RSSNotipy</Project>
+  <Overview>RSS search an notification.
+  
+  Please Read
+  
+  
+
+  Please read all information on GitHub
+    
+    https://github.com/maschhoff/RSSNotipy
+
+Please use the sample configuration and files on the GitHub Repo (https://github.com/maschhoff/RSSNotipy/tree/master/data)  and copy it to /mnt/user/appdata/rssnotipy/
+
+ 
+
+You have to edit the configuration for your purpose. RSS release sources to search for and upcoming movies from your rss source. And optionally the Api Key of your prefered push service
+
+Please use it for good reasons. I´ve seen people using the RSS Feed from xREL and underground forum as release source. Please support the movie industrie.
+
+ 
+
+For any question - dont mind to ask! The Project is still under development.
+  
+  
+  </Overview>
+  <WebUI>http://[IP]:3247/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-RSSNotipy.xml</TemplateURL>
+  <Icon>https://image.flaticon.com/icons/png/512/25/25367.png</Icon>
+  <PostArgs>/start.sh</PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Please buy me a Pizza</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/maschhoff</DonateLink>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3247</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/rssnotipy</HostDir>
+      <ContainerDir>/RSSNotipy/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="data" Target="/RSSNotipy/data" Default="" Mode="rw" Description="Container Path: /RSSNotipy/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rssnotipy</Config>
+  <Config Name="3247" Target="" Default="3247" Mode="tcp" Description="Container Port: 3247" Type="Port" Display="always" Required="false" Mask="false">3247</Config>
+  <Date>1580053315</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>RSS search an notification.
+  
+  Please Read
+  
+  
+
+  Please read all information on GitHub
+    
+    https://github.com/maschhoff/RSSNotipy
+
+Please use the sample configuration and files on the GitHub Repo (https://github.com/maschhoff/RSSNotipy/tree/master/data)  and copy it to /mnt/user/appdata/rssnotipy/
+
+ 
+
+You have to edit the configuration for your purpose. RSS release sources to search for and upcoming movies from your rss source. And optionally the Api Key of your prefered push service
+
+Please use it for good reasons. I´ve seen people using the RSS Feed from xREL and underground forum as release source. Please support the movie industrie.
+
+ 
+
+For any question - dont mind to ask! The Project is still under development.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-RSSNotipy.xml</templatePath>
+</Container>

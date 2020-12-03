@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1453698000</Date>
+  <Name>brewpi-wifi</Name>
+  <Overview>
+    BrewPi is an open source temprature controller availible at http://www.brewpi.com/
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=45894.0</Support>
+  <Registry>https://hub.docker.com/r/quimnut/brewpi-wifi/</Registry>
+  <GitHub>https://github.com/quimnut/unraid-docker-templates/</GitHub>
+  <Repository>quimnut/brewpi-wifi</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8068</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>AVR</Name>
+      <Value>192.168.1.1:23</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to python data</HostDir>
+      <ContainerDir>/home/brewpi/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path to web data</HostDir>
+      <ContainerDir>/var/www/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/brewpi-wifi.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/brewpi-wifi.xml</TemplateURL>
+  <Category>Other:</Category>
+  <Description>BrewPi is an open source temprature controller availible at http://www.brewpi.com/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dibbzRepository/quimnut/brewpi-wifi.xml</templatePath>
+</Container>

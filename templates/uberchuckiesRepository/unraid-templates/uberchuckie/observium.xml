@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>observium</Name>
+  <GitHub>https://github.com/charlescng/docker-containers/tree/master/observium</GitHub>
+  <Repository>uberchuckie/observium</Repository>
+  <Registry>https://hub.docker.com/r/uberchuckie/observium/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/75153-support-uberchuckie-observium/</Support>
+  <Overview>Observium is an autodiscovering network monitoring platform supporting a wide range of hardware platforms and operating systems.[br][br]&#13;
+[b][span style='color: #E80000;']Directions:[/span][/b][br]&#13;
+[b]/config[/b] : this path is where Observium will store its PHP config file and the database which contains data for users, devices, and data.[br]&#13;
+[b]/opt/observium/logs[/b] : this path is where Observium will store its logs.[br]&#13;
+[b]/opt/observium/rrd[/b] : this path is where Observium will store its Round-Robin Database (RRD) data.[br]&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:8668]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/charlescng/docker-containers/master/unraid-templates/uberchuckie/observium.xml</TemplateURL>
+  <Icon>https://i.imgur.com/CGrAh79.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like using this image and would like to make a donation, please send your donation to my neighbourhood food centre.</DonateText>
+  <DonateLink>https://parkdalefood.reversefoodtruck.ca/</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8668</HostPort>
+        <ContainerPort>8668</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/observium/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/observium/logs</HostDir>
+      <ContainerDir>/opt/observium/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/observium/rrd</HostDir>
+      <ContainerDir>/opt/observium/rrd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="8668" Default="8668" Mode="tcp" Description="Container Port: 8668" Type="Port" Display="always" Required="true" Mask="false">8668</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/observium/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/observium/config</Config>
+  <Config Name="Logs Path" Target="/opt/observium/logs" Default="/mnt/user/appdata/observium/logs" Mode="rw" Description="Container Path: /opt/observium/logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/observium/logs</Config>
+  <Config Name="RRD Path" Target="/opt/observium/rrd" Default="/mnt/user/appdata/observium/rrd" Mode="rw" Description="Container Path: /opt/observium/rrd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/observium/rrd</Config>
+  <Category>Network:Management</Category>
+  <Description>Observium is an autodiscovering network monitoring platform supporting a wide range of hardware platforms and operating systems.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/uberchuckiesRepository/unraid-templates/uberchuckie/observium.xml</templatePath>
+</Container>

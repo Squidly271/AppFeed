@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Beta>true</Beta>
+  <Name>Taskcafe</Name>
+  <Overview>A free and open source alternative project management tool.
+Please note that this project is still in active development. Some options may not work yet!
+Setup: Please install Postgresql first and then fill in the conncetion details below</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/taskcafe/taskcafe</Registry>
+  <Project>https://github.com/JordanKnott/taskcafe</Project>
+  <Repository>taskcafe/taskcafe</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3298</HostPort>
+        <ContainerPort>3333</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <WebUI>http://[IP]:[PORT:3333]/</WebUI>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.41</Value>
+      <Name>TASKCAFE_DATABASE_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>TASKCAFE_MIGRATE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin43</Value>
+      <Name>TASKCAFE_DATABASE_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>taskcafe</Value>
+      <Name>TASKCAFE_DATABASE_USER</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/taskcafe.png</Icon>
+  <Config Name="TASKCAFE_DATABASE_HOST" Target="TASKCAFE_DATABASE_HOST" Default="" Mode="" Description="Container Variable: TASKCAFE_DATABASE_HOST" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="TASKCAFE_MIGRATE" Target="TASKCAFE_MIGRATE" Default="true" Mode="" Description="Container Variable: TASKCAFE_MIGRATE" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Web UI" Target="3333" Default="3298" Mode="tcp" Description="Container Port: 3333" Type="Port" Display="always" Required="true" Mask="false">3298</Config>
+  <Config Name="TASKCAFE_DATABASE_PASSWORD" Target="TASKCAFE_DATABASE_PASSWORD" Default="" Mode="" Description="Container Variable: TASKCAFE_DATABASE_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="TASKCAFE_DATABASE_USER" Target="TASKCAFE_DATABASE_USER" Default="" Mode="" Description="Container Variable: TASKCAFE_DATABASE_USER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/task-cafe.xml</TemplateURL>
+  <Category>Tools:Utilities Status:Beta</Category>
+  <Description>A free and open source alternative project management tool.
+Please note that this project is still in active development. Some options may not work yet!
+Setup: Please install Postgresql first and then fill in the conncetion details below</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/task-cafe.xml</templatePath>
+</Container>

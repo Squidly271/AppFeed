@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Calibre-server</Name>
+  <Overview>
+    Calibre is an e-book management software. This docker app allows you to serve your e-books to remote clients through the web browser. Note: this is the server version, not the full GUI.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-calibre/</Registry>
+  <GitHub>https://github.com/aptalca/docker-calibre</GitHub>
+  <Repository>aptalca/docker-calibre</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://calibre-ebook.com/favicon.ico</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/calibre-server.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaServer:Books</Category>
+  <Description>Calibre is an e-book management software. This docker app allows you to serve your e-books to remote clients through the web browser. Note: this is the server version, not the full GUI.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/calibre-server.xml</templatePath>
+</Container>

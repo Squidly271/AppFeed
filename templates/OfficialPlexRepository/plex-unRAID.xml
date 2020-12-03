@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1485752400</Date>
+  <Name>Plex-Media-Server</Name>
+  <Support>https://forums.plex.tv/</Support>
+  <Project>https://plex.tv/</Project>
+  <Registry>https://hub.docker.com/r/plexinc/pms-docker/</Registry>
+  <Repository>plexinc/pms-docker</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PLEX_CLAIM</Name>
+      <Value>Insert Token from https://plex.tv/claim</Value>
+    </Variable>
+    <Variable>
+      <Name>PLEX_UID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PLEX_GID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>VERSION</Name>
+      <Value>latest</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/transcode</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
+  <Icon>https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/plexinc/pms-docker/master/plex-unRAID.xml</TemplateURL>
+  <Overview>
+    [b]Plex Media Server[/b][br][br]
+ 
+    Enjoy your media on all your devices.[br]
+    All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love. 
+  </Overview>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Description>Plex Media Server
+ 
+    Enjoy your media on all your devices.
+    All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/OfficialPlexRepository/plex-unRAID.xml</templatePath>
+</Container>

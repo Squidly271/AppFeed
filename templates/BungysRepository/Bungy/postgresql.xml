@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>postgresql</Name>
+  <Overview>
+  Postgresql for use with gitlab.
+  Install this docker before installing the gitlab docker.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Registry>https://registry.hub.docker.com/r/sameersbn/postgresql/</Registry>
+  <GitHub>https://github.com/sameersbn/docker-postgresql</GitHub>
+  <Repository>sameersbn/postgresql</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>DB_NAME</Name>
+      <Value>gitlabhq_production</Value>
+    </Variable>
+    <Variable>
+      <Name>DB_USER</Name>
+      <Value>gitlab</Value>
+    </Variable>
+    <Variable>
+      <Name>DB_PASS</Name>
+      <Value>password</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/postgresql</HostDir>
+      <ContainerDir>/var/lib/postgresql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>fb527477</Version>
+  <WebUI></WebUI>
+  <Icon>https://www.iconattitude.com/icons/open_icon_library/apps/png/256/postgresql.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/postgresql.xml</TemplateURL>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>Postgresql for use with gitlab.
+  Install this docker before installing the gitlab docker.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BungysRepository/Bungy/postgresql.xml</templatePath>
+</Container>

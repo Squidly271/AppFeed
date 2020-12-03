@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>root</Name>
+  <Repository>bgameiro/arch-cern-root</Repository>
+  <Registry>https://hub.docker.com/repository/docker/bgameiro/arch-cern-root</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/94979-trilium-docker/</Support>
+  <Project>https://root.cern/</Project>
+  <Overview>Root</Overview>
+  <WebUI>http://[IP]:[PORT:8888]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/root/root.xml</TemplateURL>
+  <ExtraParams>--env GITLAB_OMNIBUS_CONFIG="external_url 'http://unraid:9080/'"</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateLink>https://bgameiro.me/page/donate</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9998</HostPort>
+        <ContainerPort>8888</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/app/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cern-root/config</HostDir>
+      <ContainerDir>/appdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>PACKAGES</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Notebooks" Target="/opt/app/data" Default="/mnt/user/appdata/cern-root/notebooks" Mode="rw" Description="Container Path: /opt/app/data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Packages" Target="PACKAGES" Default="" Mode="" Description="Install Arch Packages to add functionalities." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WebUI" Target="8888" Default="" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="true" Mask="false">9999</Config>
+  <Config Name="Appdata" Target="/appdata" Default="/mnt/user/appdata/cern-root/config" Mode="rw" Description="Container Path: /appdata" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/cern-root/config</Config>
+  <Date>1597689640</Date>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>Root</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BGameirosRepository/root/root.xml</templatePath>
+</Container>

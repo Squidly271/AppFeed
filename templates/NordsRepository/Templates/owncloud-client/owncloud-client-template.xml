@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1595822400</Date>
+  <Name>owncloud-client</Name>
+  <Repository>dyonr/owncloud-client</Repository>
+  <Registry>https://hub.docker.com/r/dyonr/owncloud-client</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/95194-support-dyonr-owncloud-client/</Support>
+  <Project>https://github.com/owncloud/client</Project>
+  <Overview>Dockerized ownCloud CLI Client (owncloudcmd) to sync from any supported ownCloud-like enviroment.</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/owncloud-client/owncloud-client-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/owncloud-client/owncloud-client-icon.jpg</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <Config Name="OC_USER" Target="OC_USER" Default="" Mode="" Description="Username to connect to ownCloud" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="OC_PASS" Target="OC_PASS" Default="" Mode="" Description="Password or App-Token for the ownCloud user" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="OC_SERVER" Target="OC_SERVER" Default="" Mode="" Description="ownCloud Server URL, with, if necessary, with port" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="OC_URLPATH" Target="OC_URLPATH" Default="/owncloud/" Mode="" Description="Server path to the ownCloud instance" Type="Variable" Display="always" Required="true" Mask="false">/owncloud/</Config>
+  <Config Name="OC_FILEPATH" Target="OC_FILEPATH" Default="/" Mode="" Description="Only sync one specific folder. Use '/' for everything" Type="Variable" Display="always" Required="true" Mask="false">/</Config>
+  <Config Name="RUN_UID" Target="RUN_UID" Default="99" Mode="" Description="UID for the occlient user and sync location" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="RUN_GID" Target="RUN_GID" Default="100" Mode="" Description="GID for the occlient user and sync location" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="OC_WEBDAV" Target="OC_WEBDAV" Default="remote.php/webdav" Mode="" Description="In case the webdav path is not default, you can change it here " Type="Variable" Display="advanced" Required="false" Mask="false">remote.php/webdav</Config>
+  <Config Name="OC_PROTO" Target="OC_PROTO" Default="https" Mode="" Description="Connect via http or https" Type="Variable" Display="advanced" Required="true" Mask="false">https</Config>
+  <Config Name="TRUST_SELFSIGN" Target="TRUST_SELFSIGN" Default="0" Mode="" Description="Set to 1 to trust self-signed certificates" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SYNC_HIDDEN" Target="SYNC_HIDDEN" Default="0" Mode="" Description="Set to 1 to sync all hidden files within the specified ownCloud directory" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SILENCE_OUTPUT" Target="SILENCE_OUTPUT" Default="1" Mode="" Description="Set to 0 to get more verbose output" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="RUN_INTERVAL" Target="RUN_INTERVAL" Default="30" Mode="" Description="Interval in seconds at which the client will run and check for changes" Type="Variable" Display="advanced" Required="true" Mask="false">30</Config>
+  <Config Name="Sync Location" Target="/ocdata" Default="" Mode="rw" Description="The path where the files will be synced to" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Category>Backup: Cloud: Network:Other</Category>
+  <Description>Dockerized ownCloud CLI Client (owncloudcmd) to sync from any supported ownCloud-like enviroment.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/NordsRepository/Templates/owncloud-client/owncloud-client-template.xml</templatePath>
+</Container>

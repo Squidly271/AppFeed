@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>omada-controller</Name>
+  <Repository>mbentley/omada-controller</Repository>
+  <Registry>https://hub.docker.com/r/mbentley/omada-controller/</Registry>
+  <Network>host</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/99155-support-omada-controller/</Support>
+  <Project>https://hub.docker.com/r/mbentley/omada-controller</Project>
+  <Overview>Docker image to run TP-Link Omada SDN Controller to control TP-Link Omada EAP Series Wireless Access Points -- tplink, omada, sdn, ubuntu 18.04</Overview>
+  <WebUI>https://[IP]:[PORT:18043]/login</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/benhedrington/hedrington-unraid-docker-templates/main/hedrington-unraid-docker-templates/omada-controller.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/benhedrington/hedrington-unraid-docker-templates/main/hedrington-unraid-docker-templates/omada-controller.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/disks/extrassd/docker-settings/omada-controller/data/</HostDir>
+      <ContainerDir>/opt/tplink/EAPController/data</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/extrassd/docker-settings/omada-controller/work/</HostDir>
+      <ContainerDir>/opt/tplink/EAPController/work</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/extrassd/docker-settings/omada-controller/logs/</HostDir>
+      <ContainerDir>/opt/tplink/EAPController/logs</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>18043</Value>
+      <Name>MANAGE_HTTPS_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>18088</Value>
+      <Name>MANAGE_HTTP_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>18843</Value>
+      <Name>PORTAL_HTTPS_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>18088</Value>
+      <Name>PORTAL_HTTP_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Path 1" Target="/opt/tplink/EAPController/data" Default="" Mode="rw,slave" Description="Container Path: /opt/tplink/EAPController/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/extrassd/docker-settings/omada-controller/data/</Config>
+  <Config Name="Host Path 2" Target="/opt/tplink/EAPController/work" Default="" Mode="rw,slave" Description="Container Path: /opt/tplink/EAPController/work" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/extrassd/docker-settings/omada-controller/work/</Config>
+  <Config Name="Host Path 3" Target="/opt/tplink/EAPController/logs" Default="" Mode="rw,slave" Description="Container Path: /opt/tplink/EAPController/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/extrassd/docker-settings/omada-controller/logs/</Config>
+  <Config Name="MANAGE_HTTPS_PORT" Target="MANAGE_HTTPS_PORT" Default="" Mode="" Description=" Default: 8043" Type="Variable" Display="always" Required="false" Mask="false">18043</Config>
+  <Config Name="MANAGE_HTTP_PORT" Target="MANAGE_HTTP_PORT" Default="" Mode="" Description="Default: 8088" Type="Variable" Display="always" Required="false" Mask="false">18088</Config>
+  <Config Name="PORTAL_HTTPS_PORT" Target="PORTAL_HTTPS_PORT" Default="" Mode="" Description="Default: 8843" Type="Variable" Display="always" Required="false" Mask="false">18843</Config>
+  <Config Name="PORTAL_HTTP_PORT" Target="PORTAL_HTTP_PORT" Default="" Mode="" Description="Default: 8088" Type="Variable" Display="always" Required="false" Mask="false">18088</Config>
+  <Date>1606510831</Date>
+  <Category>Network:Management</Category>
+  <Description>Docker image to run TP-Link Omada SDN Controller to control TP-Link Omada EAP Series Wireless Access Points -- tplink, omada, sdn, ubuntu 18.04</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hedrinbcsRepository/hedrington-unraid-docker-templates/omada-controller.xml</templatePath>
+</Container>

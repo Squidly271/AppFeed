@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>xteve</Name>
+  <Repository>dnsforge/xteve:latest</Repository>
+  <Registry>https://hub.docker.com/r/dnsforge/xteve</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>xTeVe is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.&#13;
+&#13;
+Image Maintainer: LeeD &#13;
+&#13;
+For support come visit us at our xTeVe Discord channel: https://discord.gg/eWYquha&#13;
+&#13;
+For config, visit dockerhub link&#13;
+&#13;
+i just provided the template for unraid, for support see upper note</Overview>
+  <WebUI>http://[IP]:[PORT:34400]/web/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-dnsforge_xteve.xml</TemplateURL>
+  <Icon>https://avatars0.githubusercontent.com/u/53275662?s=460&amp;amp;v=4</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve/</HostDir>
+      <ContainerDir>/home/xteve/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve/guide2go/</HostDir>
+      <ContainerDir>/home/xteve/guide2go/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>34400</Value>
+      <Name>XTEVE_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>master</Value>
+      <Name>XTEVE_BRANCH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>XTEVE_DEBUG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>XTEVE_API</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="XTEVE_CONF" Target="/home/xteve/conf" Default="" Mode="rw" Description="Container Path: /home/xteve/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve/</Config>
+  <Config Name="GUIDE2GO_CONF" Target="/home/xteve/guide2go/conf" Default="" Mode="rw" Description="Container Path: /home/xteve/guide2go/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xteve/guide2go/</Config>
+  <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="XTEVE_PORT" Target="XTEVE_PORT" Default="" Mode="" Description="Container Variable: XTEVE_PORT" Type="Variable" Display="always" Required="false" Mask="false">34400</Config>
+  <Config Name="XTEVE_BRANCH" Target="XTEVE_BRANCH" Default="" Mode="" Description="Container Variable: XTEVE_BRANCH" Type="Variable" Display="always" Required="false" Mask="false">master</Config>
+  <Config Name="XTEVE_DEBUG" Target="XTEVE_DEBUG" Default="0" Mode="" Description="Container Variable: XTEVE_DEBUG" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="XTEVE_API" Target="XTEVE_API" Default="" Mode="" Description="Container Variable: XTEVE_API" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Date>1597381214</Date>
+  <Category>Downloaders: MediaServer:Video Network:Proxy</Category>
+  <Description>xTeVe is a M3U proxy server for Plex, Emby and any client and provider which supports the .TS and .M3U8 (HLS) streaming formats.&#13;
+&#13;
+Image Maintainer: LeeD &#13;
+&#13;
+For support come visit us at our xTeVe Discord channel: https://discord.gg/eWYquha&#13;
+&#13;
+For config, visit dockerhub link&#13;
+&#13;
+i just provided the template for unraid, for support see upper note</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/alturismosRepository/my-dnsforge_xteve.xml</templatePath>
+</Container>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>pipework-1.1.6</Name>
+  <Repository>dreamcat4/pipework</Repository>
+  <Registry>https://hub.docker.com/r/dreamcat4/pipework/</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=43970.0</Support>
+  <Overview>For unRAID 6.2.&#13;
+Pipework allows you to have a dedicated IP for a docker container.&#13;
+This is the unraid implementation of the dreamcat4 pipework docker container&#13;
+</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tinglis1/docker-containers/master/tinglis1-templates/pipework-1.1.6.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tinglis1/docker-containers/master/pipework/pipework-icon.png</Icon>
+  <ExtraParams>--pid=host --restart=always</ExtraParams>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>batch,daemon</Value>
+      <Name>run_mode</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>host_routes</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1.22</Value>
+      <Name>DOCKER_API_VERSION</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="run_mode" Target="run_mode" Default="batch,daemon" Mode="" Description="Container Variable: run_mode" Type="Variable" Display="advanced-hide" Required="true" Mask="false">batch,daemon</Config>
+  <Config Name="host_routes" Target="host_routes" Default="true" Mode="" Description="Container Variable: host_routes" Type="Variable" Display="advanced-hide" Required="true" Mask="false">true</Config>
+  <Config Name="docker.sock" Target="/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /docker.sock" Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="DOCKER_API_VERSION" Target="DOCKER_API_VERSION" Default="" Mode="" Description="Container Variable: DOCKER_API_VERSION" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1.22</Config>
+  <Deprecated>true</Deprecated>
+  <Date>1472794415</Date>
+  <Category>Other: Network:Other</Category>
+  <Description>For unRAID 6.2.&#13;
+Pipework allows you to have a dedicated IP for a docker container.&#13;
+This is the unraid implementation of the dreamcat4 pipework docker container</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/tinglis1sRepository/tinglis1-templates/pipework-1.1.6.xml</templatePath>
+</Container>

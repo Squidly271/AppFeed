@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1434513600</Date>
+  <Name>ResourceSpace</Name>
+  <Registry>https://registry.hub.docker.com/r/hernandito/docker-resourcespace/</Registry>
+  <Repository>hernandito/docker-resourcespace</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>444</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/resourcespace/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/resourcespace/www/</HostDir>
+      <ContainerDir>/web</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/resourcespace/logs/</HostDir>
+      <ContainerDir>/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://i.imgur.com/4o1lc5Q.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/ResourceSpace.xml</TemplateURL>
+  <Overview>
+    ResopurceSpace DAM server software. This is a modification of CHBMB and smdion by Hernando[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
+    [b]/web[/b] : this path is the web directory[br]
+    [b]/logs[/b] : this path is the logs directory[br][br]
+
+
+Username and password are [b]admin:admin[/b]. [br][br]
+Once you launch for first time, it will take you to a Configuration page:[br][br]
+You must have an existing MySQL database available. I recommend the MariaDB docker. This must be already setup. Enter appropiate values on config page.[br]
+Do NOT put port number on MySQL server address box.
+[br][br]
+ [b]YOU MUST ALSO HAVE A DATABASE TABLE IN YOUR DATABSE CALLED "resourcespace" [/b]. Create this manually prior to saving your configuration.[br]
+[br][br]
+
+In config page, leave "MySQL binary path" empty. [br][br]
+
+For all the PATHS for ImageMagick, Ghoscript, etc, enter "/usr/bin" and nothing else... without the quotes.
+
+
+
+  </Overview>
+  <Category>Network:Web MediaServer:Photos</Category>
+  <Description>ResopurceSpace DAM server software. This is a modification of CHBMB and smdion by Hernando</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hernanditosRepository/hernando/ResourceSpace.xml</templatePath>
+</Container>

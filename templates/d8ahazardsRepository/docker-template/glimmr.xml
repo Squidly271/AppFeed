@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1588564800</Date>
+  <Name>Glimmr</Name>
+  <Project>https://github.com/d8ahazard/glimmr</Project>
+  <Overview>
+    Glimmr synchronizes your Hue Lights, nanoleaf panels, and lifx bulbs with a DreamScreen controller.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/digitalhigh/glimmr</Registry>
+  <GitHub>https://github.com/d8ahazard/unraid-repository</GitHub>
+  <Repository>digitalhigh/glimmr</Repository>
+  <Support>https://github.com/d8ahazard/glimmr</Support>
+  <BindTime>true</BindTime>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/glimmr/</HostDir>
+      <ContainerDir>/etc/glimmr</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>      
+    </Publish>
+  </Networking>
+  <DonateText>If you like it, consider buying me a beer.</DonateText>
+  <DonateLink>https://www.paypal.me/donate.to.digitalhigh</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <WebUI>http://[IP]:[PORT:5699]</WebUI>
+  <Icon>https://raw.githubusercontent.com/d8ahazard/glimmr/master/wwwroot/img/ic_launcher.png</Icon>
+  <Config Name="UserData Location" Target="/etc/glimmr" Default="" Mode="rw" Description="Where to store HueData config." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/glimmr/</Config>
+  <Config Type="Port" Name="Web UI" Target="5699" Default="5699" Mode="tcp" Description="Web UI port." Display="always" Required="true">5699</Config>
+  <Config Type="Port" Name="Hue SSDP Discovery" Target="1900" Default="1900" Mode="udp" Description="Hue Bridge discovery port." Display="always" Required="true">1900</Config>
+  <Config Type="Port" Name="Hue/Nanoleaf MDNS Discovery" Target="5353" Default="5353" Mode="udp" Description="MDNS Discovery Port" Display="always" Required="true">5353</Config>
+  <Config Type="Port" Name="Hue Streaming" Target="2100" Default="2100" Mode="udp" Description="Hue Bridge streaming port." Display="always" Required="true">2100</Config>
+  <Config Type="Port" Name="DreamScreen Communication" Target="8888" Default="8888" Mode="udp" Description="DreamScreen emulation port." Display="always" Required="true">8888</Config>
+  <Config Type="Port" Name="NanoLeaf Communication" Target="60222" Default="60222" Mode="udp" Description="DreamScreen emulation port." Display="always" Required="true">60222</Config>
+  <Config Type="Port" Name="Lifx Communication" Target="56700" Default="56700" Mode="udp" Description="Port used for Lifx communication." Display="always" Required="true">56700</Config>
+  <TemplateURL>https://raw.githubusercontent.com/d8ahazard/unraid-repository/master/docker-template/glimmr.xml</TemplateURL>
+  <Category>Tools:</Category>
+  <Description>Glimmr synchronizes your Hue Lights, nanoleaf panels, and lifx bulbs with a DreamScreen controller.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/d8ahazardsRepository/docker-template/glimmr.xml</templatePath>
+</Container>

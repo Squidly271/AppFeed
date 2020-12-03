@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>bitwardenrs</Name>
+  <Repository>bitwardenrs/server</Repository>
+  <Registry>https://hub.docker.com/r/bitwardenrs/server/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/88086-support-bitwardenrs-bitwarden_rs/</Support>
+  <Project>https://github.com/dani-garcia/bitwarden_rs/</Project>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>The "default image", runs on amd64. (x86, 64bit)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>alpine</Tag>
+    <TagDescription>Alpine-based amd64 image, same as above but a little bit smaller.</TagDescription>
+  </Branch>
+  <Overview>This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#13;
+    [br][br]&#13;
+    Basically full implementation of Bitwarden API is provided including: &#13;
+    [br][br]&#13;
+    -Basic single user functionality&#13;
+    [br]&#13;
+    -Organizations support&#13;
+    [br]&#13;
+    -Attachments&#13;
+    [br]&#13;
+    -Vault API support&#13;
+    [br]&#13;
+    -Serving the static files for Vault interface&#13;
+    [br]&#13;
+    -Website icons API&#13;
+    [br]&#13;
+    -Authenticator and U2F support&#13;
+    [br]&#13;
+    -YubiKey OTP&#13;
+    [br][br]&#13;
+    For more configuration see the wiki
+    [br]
+    https://github.com/dani-garcia/bitwarden_rs/wiki
+  </Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/bitwardenrs.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/bitwardenrs.png</Icon>
+  <Config Name="WebUI HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Storage" Target="/data" Default="/mnt/user/appdata/bitwarden" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="SERVER_ADMIN_EMAIL" Target="SERVER_ADMIN_EMAIL" Default="me@domain.com" Description="Container Variable: Server Admin E-Mail" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SIGNUPS_ALLOWED" Target="SIGNUPS_ALLOWED" Default="true|false" Description="Container Variable: Signups" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="INVITATIONS_ALLOWED" Target="INVITATIONS_ALLOWED" Default="true|false" Description="Container Variable: Invitations" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WEBSOCKET_ENABLED" Target="WEBSOCKET_ENABLED" Default="false" Description="Container Variable: Websockets Enabled" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ADMIN_TOKEN" Target="ADMIN_TOKEN" Default="" Description="Container Variable: ADMIN_TOKEN" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Category>Tools:Utilities</Category>
+  <Description>This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.&#13;
+    &#13;
+    Basically full implementation of Bitwarden API is provided including: &#13;
+    &#13;
+    -Basic single user functionality&#13;
+    &#13;
+    -Organizations support&#13;
+    &#13;
+    -Attachments&#13;
+    &#13;
+    -Vault API support&#13;
+    &#13;
+    -Serving the static files for Vault interface&#13;
+    &#13;
+    -Website icons API&#13;
+    &#13;
+    -Authenticator and U2F support&#13;
+    &#13;
+    -YubiKey OTP&#13;
+    &#13;
+    For more configuration see the wiki
+    
+    https://github.com/dani-garcia/bitwarden_rs/wiki</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SelfhostersUnraidDiscordRepository/templates/bitwardenrs.xml</templatePath>
+</Container>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>TeamCity-BuildAgent</Name>
+  <Repository>jetbrains/teamcity-agent</Repository>
+  <Registry>https://hub.docker.com/r/jetbrains/teamcity-agent/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/79858-support-josh5-docker-templates/</Support>
+  <Project>https://hub.docker.com/r/jetbrains/teamcity-agent/</Project>
+  <Overview>This is an official JetBrains TeamCity build agent image.&#13;
+&#13;
+The TeamCity build agent connects to the TeamCity server and spawns the actual build processes. You can use the jetbrains/teamcity-server image to run a TeamCity server.&#13;
+&#13;
+This image adds a TeamCity agent suitable for Java development. It is based on jetbrains/teamcity-minimal-agent but gives you more benefits, e.g.&#13;
+&#13;
+client-side checkout if you use 'git' or 'mercurial'&#13;
+more bundled build tools&#13;
+'docker-in-docker' on Linux</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/teamcity-agent.xml</TemplateURL>
+  <Icon>https://seeklogo.com/images/T/team-city-logo-8FEEB62EC1-seeklogo.com.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teamcity-buildagent</HostDir>
+      <ContainerDir>/data/teamcity_agent/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/buildagent/work</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/buildagent/temp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>buildagent_volumes</HostDir>
+      <ContainerDir>/var/lib/docker</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>SERVER_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Phil Coulson</Value>
+      <Name>AGENT_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>start</Value>
+      <Name>DOCKER_IN_DOCKER</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="SERVER_URL" Target="SERVER_URL" Default="" Mode="" Description="URL to TeamCity server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AGENT_NAME" Target="AGENT_NAME" Default="Nick Fury" Mode="" Description="Name of this TeamCity Build Agent" Type="Variable" Display="always" Required="true" Mask="false">Phil Coulson</Config>
+  <Config Name="Config" Target="/data/teamcity_agent/conf" Default="/mnt/user/appdata/teamcity-buildagent" Mode="rw" Description="Container Path: /data/teamcity_agent/conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teamcity-buildagent</Config>
+  <Config Name="Work" Target="/opt/buildagent/work" Default="" Mode="rw" Description="Container Path: /opt/buildagent/work" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Temp" Target="/opt/buildagent/temp" Default="" Mode="rw" Description="Container Path: /opt/buildagent/temp" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Docker Volumes" Target="/var/lib/docker" Default="buildagent_volumes" Mode="rw" Description="Container Path: /var/lib/docker" Type="Path" Display="advanced" Required="true" Mask="false">buildagent_volumes</Config>
+  <Config Name="DOCKER_IN_DOCKER" Target="DOCKER_IN_DOCKER" Default="start" Mode="" Description="Run Docker daemon within your container (note that in this case the container should be run with —privileged flag)" Type="Variable" Display="advanced" Required="true" Mask="false">start</Config>
+  <Date>1557045872</Date>
+  <Category>Productivity: Other:</Category>
+  <Description>This is an official JetBrains TeamCity build agent image.&#13;
+&#13;
+The TeamCity build agent connects to the TeamCity server and spawns the actual build processes. You can use the jetbrains/teamcity-server image to run a TeamCity server.&#13;
+&#13;
+This image adds a TeamCity agent suitable for Java development. It is based on jetbrains/teamcity-minimal-agent but gives you more benefits, e.g.&#13;
+&#13;
+client-side checkout if you use 'git' or 'mercurial'&#13;
+more bundled build tools&#13;
+'docker-in-docker' on Linux</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Josh.5sRepository/josh5/teamcity-agent.xml</templatePath>
+</Container>

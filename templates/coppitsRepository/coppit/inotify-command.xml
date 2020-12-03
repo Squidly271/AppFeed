@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>inotify-command</Name>
+  <Support>https://forums.lime-technology.com/topic/39276-quotrun-a-command-if-the-folder-changesquot-container/</Support>
+  <Overview>
+    Run a command when a directory changes.
+  </Overview>
+  <Registry>https://hub.docker.com/r/coppit/inotify-command/</Registry>
+  <GitHub>https://github.com/coppit/docker-inotify-command</GitHub>
+  <Repository>coppit/inotify-command</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>UMAP</Name>
+      <Value>nobody:99:100</Value>
+    </Variable>
+    <Variable>
+      <Name>GMAP</Name>
+      <Value>users:100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/dir1</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/coppit/docker-inotify-command/master/terminal-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/coppit/docker-templates/master/coppit/inotify-command.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>Run a command when a directory changes.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/coppitsRepository/coppit/inotify-command.xml</templatePath>
+</Container>

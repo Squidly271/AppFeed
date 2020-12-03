@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Android-8.0</Name>
+  <Repository>ulisses1478/docker-android</Repository>
+  <Registry>https://registry.hub.docker.com/r/ulisses1478/docker-android</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Overview>Android in docker solution with noVNC supported and video recording. Work way better with Intel CPUs because AMD doesn't an cpu graphics card. So with amd cpus can be unusable.</Overview>
+  <WebUI>http://[IP]:[PORT:6080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Ulisses1478/templates-unraid/master/android8.xml</TemplateURL>
+  <Icon>https://duckduckgo.com/i/333122ce.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Hey buy me some coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=PJNVJNW2CPE3G&amp;amp;source=url</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>6080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>-gpu swiftshader_indirect -accel on</Value>
+      <Name>EMULATOR_ARGS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="6080" Default="" Mode="tcp" Description="Container Port: 6080" Type="Port" Display="always" Required="false" Mask="false">6080</Config>
+  <Date>1559173912</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>Android in docker solution with noVNC supported and video recording. Work way better with Intel CPUs because AMD doesn't an cpu graphics card. So with amd cpus can be unusable.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ulisses1478sRepository/android8.xml</templatePath>
+</Container>

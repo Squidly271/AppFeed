@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>poste</Name>
+  <Repository>analogic/poste.io</Repository>
+  <Registry>https://hub.docker.com/r/analogic/poste.io/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69507-support-posteio-free-version/</Support>
+  <Project>https://poste.io/</Project>
+  <Overview>FREE version of Poste.io, full mail server solution. POP3, SMTP, IMAP, Spamassassin, WebMail, WebAdmin. &#13;
+INITIAL SETUP:&#13;
+------------------------&#13;
+      0.  Requires registered FQDN to send/receive external email.&#13;
+      1.  Following ports are used by container for mail: 25, 110, 143, 443, 465, 587, 993, 995&#13;
+      2.  Following ports are used by container for webui: 443, 8280    (These may conflict, check your ports)&#13;
+      3.  Make a user share for mail data, default is  /mnt/user/poste&#13;
+      4.  Some or all mail ports may need to be opened, forwarded, or dmz for  mail send/receive to work.&#13;
+Optional arguments&#13;
+-e "HTTPS=OFF" To disable all redirects to encrypted HTTP, its useful when you are using some kind of reverse proxy (place this argument before image name!)&#13;
+-------------------------&#13;
+NOTE: Marked as BETA, simply because author is not an expert in email exchange servers -- software itself looks pretty good.</Overview>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/posteFree.xml</TemplateURL>
+  <Icon>https://icons.iconarchive.com/icons/paomedia/small-n-flat/96/envelope-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateText>&amp;quot;Coin! Coin!&amp;quot; -- Scooby Doo</DonateText>
+  <DonateImg></DonateImg>
+  <MinVer>6.4.1</MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25</HostPort>
+        <ContainerPort>25</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8280</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>110</HostPort>
+        <ContainerPort>110</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>143</HostPort>
+        <ContainerPort>143</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>465</HostPort>
+        <ContainerPort>465</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>587</HostPort>
+        <ContainerPort>587</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>993</HostPort>
+        <ContainerPort>993</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>995</HostPort>
+        <ContainerPort>995</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4190</HostPort>
+        <ContainerPort>4190</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/poste</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Port25" Target="25" Default="25" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="true" Mask="false">25</Config>
+  <Config Name="Webui" Target="80" Default="8280" Mode="tcp" Description="web interface port" Type="Port" Display="always" Required="true" Mask="false">8280</Config>
+  <Config Name="POP3 Port" Target="110" Default="110" Mode="tcp" Description="POP3" Type="Port" Display="always" Required="true" Mask="false">110</Config>
+  <Config Name="IMAP" Target="143" Default="143" Mode="tcp" Description="IMAP" Type="Port" Display="always" Required="true" Mask="false">143</Config>
+  <Config Name="Container HTTPS" Target="443" Default="43443" Mode="tcp" Description="HTTPS" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="Container SMTPS" Target="465" Default="465" Mode="tcp" Description="SMTPS" Type="Port" Display="always" Required="true" Mask="false">465</Config>
+  <Config Name="Container MSA" Target="587" Default="587" Mode="tcp" Description="MSA" Type="Port" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="Container IMAPS" Target="993" Default="993" Mode="tcp" Description="IMAPS" Type="Port" Display="always" Required="true" Mask="false">993</Config>
+  <Config Name="Container POP3S" Target="995" Default="995" Mode="tcp" Description="POP3S" Type="Port" Display="always" Required="true" Mask="false">995</Config>
+  <Config Name="Data Folder" Target="/data" Default="/mnt/user/poste" Mode="rw" Description="poste data folder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/poste</Config>
+  <Config Name="external Sieve filter manager" Target="4190" Default="4190" Mode="tcp" Description="When you are going to use clients with ability to manage Sieve filters externally, you need also publish port 4190" Type="Port" Display="always" Required="false" Mask="false">4190</Config>
+  <Beta>true</Beta>
+  <Date>1519017501</Date>
+  <Category>Cloud: Productivity: Tools:Utilities Network:Web Network:Other Network:Messenger Status:Beta</Category>
+  <Description>FREE version of Poste.io, full mail server solution. POP3, SMTP, IMAP, Spamassassin, WebMail, WebAdmin. &#13;
+INITIAL SETUP:&#13;
+------------------------&#13;
+      0.  Requires registered FQDN to send/receive external email.&#13;
+      1.  Following ports are used by container for mail: 25, 110, 143, 443, 465, 587, 993, 995&#13;
+      2.  Following ports are used by container for webui: 443, 8280    (These may conflict, check your ports)&#13;
+      3.  Make a user share for mail data, default is  /mnt/user/poste&#13;
+      4.  Some or all mail ports may need to be opened, forwarded, or dmz for  mail send/receive to work.&#13;
+Optional arguments&#13;
+-e "HTTPS=OFF" To disable all redirects to encrypted HTTP, its useful when you are using some kind of reverse proxy (place this argument before image name!)&#13;
+-------------------------&#13;
+NOTE: Marked as BETA, simply because author is not an expert in email exchange servers -- software itself looks pretty good.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JCloudsRepository/posteFree.xml</templatePath>
+</Container>

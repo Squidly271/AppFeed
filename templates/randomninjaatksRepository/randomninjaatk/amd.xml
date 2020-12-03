@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>amd</Name>
+  <Repository>randomninjaatk/amd</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/amd</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-amd</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/amd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/amd.png</Icon>
+  <Overview>Automated Music Downloader :: AMD is a Lidarr Companion script to automatically download and tag music files for use in various media applications</Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI></WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /downloads-amd" Target="/downloads-amd" Default="/mnt/user/downloads" Mode="rw" Description="Container Path: /downloads-amd (DO NOT DELETE) :: !!!!IMPORTANT!!! Map this exact volume mount to your Lidarr Container for everything to work properly!!!" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Enable Automatic Script Start" Target="AUTOSTART" Default="true" Mode="" Description="true = Enabled :: Runs script automatically on startup" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Script Interval" Target="SCRIPTINTERVAL" Default="15m" Mode="" Description="#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d = days :: Amount of time between each script run, when AUTOSTART is enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Lidarr Url" Target="LidarrUrl" Default="http://127.0.0.1:8686" Mode="" Description="Set domain or IP to your Lidarr instance including port. If using reverse proxy, do not use a trailing slash. Ensure you specify http/s." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Lidarr API Key" Target="LidarrAPIkey" Default="" Mode="" Description="Lidarr API key" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Lidarr Remote Path Mapping" Target="LIDARRREMOTEPATH" Default="" Mode="" Description="OPTIONAL :: ADVANCED FEATURE :: Configure this to the local volume path for Lidarr to see the downloads folder, this will enable file moves, instead of copies... Less resource intensive" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Music Download Client ARL Token" Target="ARL_TOKEN" Default="" Mode="" Description="User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Download Mode" Target="DOWNLOADMODE" Default="wanted" Mode="" Description="wanted or artist :: wanted mode only download missing/cutoff :: artist mode downloads all albums by an artist (requires lidarr volume mapping root media folders for import)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Album Type Filter" Target="ALBUM_TYPE_FILTER" Default="" Mode="" Description="Filter Types: COMPILE, SINGLE, ALBUM, EP (this is a ', ' separated list of Album Types to skip) (artist mode only)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Music List Type" Target="LIST" Default="both" Mode="" Description="both or missing or cutoff :: both = missing + cutoff :: missng = lidarr missing list :: cutoff = lidarr cutoff li" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Search Type" Target="SearchType" Default="both" Mode="" Description="both or artist or fuzzy :: both = artist + fuzzy searching :: artist = only artist searching :: fuzzy = only fuzzy searching (Various Artist is always fuzzy searched, regardless of setting)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Concurrency" Target="Concurrency" Default="3" Mode="" Description="Number of concurrent downloads" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Post Process Threads" Target="POSTPROCESSTHREADS" Default="1" Mode="" Description="Controls number of threads used for Format conversion and replaygain tagging" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Music Embedded Cover Quality" Target="EMBEDDED_COVER_QUALITY" Default="80" Mode="" Description="Controls the quality of the cover image compression in percentage, 100 = no compression" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Download Format" Target="FORMAT" Default="FLAC" Mode="" Description="FLAC or MP3 or OPUS or AAC or ALAC" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Download Bitrate" Target="BITRATE" Default="320" Mode="" Description="FLAC -&gt; OPUS/AAC/MP3 will be converted using this bitrate (MP3 320/128 is native, not converted)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Force Convert" Target="FORCECONVERT" Default="false" Mode="" Description="true = enabled :: This will convert lossy MP3 to desired target format (exluding FLAC/ALAC, ALAC setting will convert to AAC)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Require Quality" Target="requirequality" Default="false" Mode="" Description="true = enabled :: Requires all downloaded files match target file extension (mp3 or flac) when enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Replaygain Tagging" Target="replaygain" Default="true" Mode="" Description="true = enabled :: true = enabled :: Scans and analyzes files to add replaygain tags to song metadata" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Match Distance" Target="MatchDistance" Default="10" Mode="" Description="Set as an integer, the higher the number, the more lienet it is. Example: A match score of 0 is a perfect match :: For more information, this score is produced using this function: https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Folder Permissions" Target="FolderPermissions" Default="766" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music File Permissions" Target="FilePermissions" Default="666" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Musicbrainz Mirror URL" Target="MBRAINZMIRROR" Default="https://musicbrainz.org" Mode="" Description="OPTIONAL: Only change if using a different mirror" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Musicbrainz Rate Limit" Target="MBRATELIMIT" Default="1" Mode="" Description="OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection per second, max setting is 10 :: Set to 101 to disable limit" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Plex Scan Notifications" Target="NOTIFYPLEX" Default="false" Mode="" Description="true = enabled :: Plex must have a Music library added and also be configured with the /downloads-ama directory" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Library Name" Target="PLEXLIBRARYNAME" Default="Music" Mode="" Description="This must exactly match the name of the Plex Library that contains the Lidarr Media Folder data" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Url" Target="PLEXURL" Default="http://x.x.x.x:32400" Mode="" Description="ONLY used if NOTIFYPLEX is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Plex Token" Target="PLEXTOKEN" Default="" Mode="" Description="ONLY used if NOTIFYPLEX is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Music</Category>
+  <Description>Automated Music Downloader :: AMD is a Lidarr Companion script to automatically download and tag music files for use in various media applications</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/amd.xml</templatePath>
+</Container>

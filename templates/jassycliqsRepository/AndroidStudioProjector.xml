@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>AndroidStudio</Name>
+  <Repository>jassycliq/android-studio-projector</Repository>
+  <Registry>https://hub.docker.com/repository/docker/jassycliq/android-studio-projector</Registry>
+  <Beta>true</Beta>
+  <Branch>
+    <Tag>canary</Tag>
+    <TagDescription>Most recent Android Studio Canary (currently only Canary works since Projector relies on JDK 11)</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/99122-support-jassycliq-android-studio-projector</Support>
+  <Overview>JetBrain's Projector running Android Studio without any windowing system</Overview>
+  <WebUI>http://[IP]:[PORT:8887]/?notSecureWarning=false</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jassycliq/Unraid-AndroidStudio-Projector/main/AndroidStudioProjector.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/JetBrains/projector-docker/master/static/projector-user/DemoProject/src/pj.png</Icon>
+  <PostArgs>bash -c "./run.sh"</PostArgs>
+  <CPUset></CPUset>
+  <Description>JetBrain's Projector running Android Studio without any windowing system</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8887</HostPort>
+        <ContainerPort>8887</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/android-studio</HostDir>
+      <ContainerDir>/home/projector-user</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="8887" Default="" Mode="tcp" Description="Container Port: 8887" Type="Port" Display="always" Required="false" Mask="false">8887</Config>
+  <Config Name="Host Path 1" Target="/home/projector-user" Default="" Mode="rw" Description="Container Path: /home/projector-user" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/android-studio</Config>
+  <Config Name="Host Key 1" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Host Key 2" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Host Key 3" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Date>1605425285</Date>
+  <Category>Productivity: Status:Beta</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jassycliqsRepository/AndroidStudioProjector.xml</templatePath>
+</Container>

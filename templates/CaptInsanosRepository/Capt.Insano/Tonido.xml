@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Tonido</Name>
+  <Overview>Tonido Server allows you to access all your files on your computer from a web browser, smartphone, tablet or even DLNA enabled devices. No setup necessary.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39065.0</Support>
+  <Registry>https://registry.hub.docker.com/r/captinsano/tonido/</Registry>
+  <Repository>captinsano/tonido</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10001</HostPort>
+        <ContainerPort>10001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/unRAID</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:10001]/</WebUI>
+  <Icon>https://i.imgur.com/i2obdi6.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/CaptInsano/docker-containers/templates/Capt.Insano/Tonido.xml</TemplateURL>
+  <Category>Cloud:</Category>
+  <Description>Tonido Server allows you to access all your files on your computer from a web browser, smartphone, tablet or even DLNA enabled devices. No setup necessary.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CaptInsanosRepository/Capt.Insano/Tonido.xml</templatePath>
+</Container>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1483506000</Date>
+  <Support>https://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Name>CouchDB-Offical-Docker-v1.x</Name>
+  <Registry>https://hub.docker.com/_/couchdb/</Registry>
+  <GitHub>https://github.com/docker-library/official-images/blob/master/library/couchdb</GitHub>
+  <Repository>couchdb</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5984</HostPort>
+        <ContainerPort>5984</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/couchdb</HostDir>
+      <ContainerDir>/usr/local/var/lib/couchdb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5984]/_utils</WebUI>
+  <Icon>https://couchdb.apache.org/image/couch@2x.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/CouchDB-v1.x.xml</TemplateURL>
+  <Overview>
+  CouchDB offical docker image[br][br]
+  Apache CouchDB has a document-oriented NoSQL database architecture and is Open Source.[br]
+</Overview>
+  <Category>Productivity:</Category>
+  <Description>CouchDB offical docker image
+  Apache CouchDB has a document-oriented NoSQL database architecture and is Open Source.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/CouchDB-v1.x.xml</templatePath>
+</Container>

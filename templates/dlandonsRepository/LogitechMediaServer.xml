@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>LogitechMediaServer</Name>
+  <Date>1578200400</Date>
+  <Repository>dlandon/logitechmediaserver</Repository>
+  <Registry>https://registry.hub.docker.com/r/dlandon/logitechmediaserver/</Registry>
+  <DonateText>For my retirement.</DonateText>
+  <DonateLink>https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EJGPC7B5CS66E</DonateLink>
+  <DonateImage>https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png</DonateImage>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/56650-support-dlandon-logitech-media-server/</Support>
+  <Overview>
+    Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices), developed in particular to support their Squeezebox range of digital audio receivers.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br][br]
+    [b]/config[/b] : this path is used to store the configuration and the database files of Logitech Media Server.[br][br]
+    [b]/music[/b] : set this path to where you store your music files.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dlandon/docker.templates/master/LogitechMediaServer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dlandon/docker.templates/master/logitechmediaserver.png</Icon>
+  <ExtraParams>--log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3483</HostPort>
+        <ContainerPort>3483</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3483</HostPort>
+        <ContainerPort>3483</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume type="appdata">
+      <value>
+        <HostDir>/mnt/user/appdata/LogitechMediaServer</HostDir>
+        <ContainerDir>/config</ContainerDir>
+        <Mode>rw</Mode>
+      </value>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <BaseImage>phusion/baseimage:0.11</BaseImage>
+  <Config Name="WebUI Port" Target="9000" Default="9000" Mode="tcp" Description="Container Port: 9000" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="Control Port - TCP" Target="3483" Default="3483" Mode="tcp" Description="Container Port: 3483/TCP" Type="Port" Display="always" Required="true" Mask="false">3483</Config>
+  <Config Name="Control Port - UDP" Target="3483" Default="3483" Mode="udp" Description="Container Port: 3483/UDP" Type="Port" Display="always" Required="true" Mask="false">3483</Config>
+  <Config Name="CLI Port" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
+  <Config Name="Music Path" Target="/music" Default="" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/LogitechMediaServer" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/LogitechMediaServer</Config>
+  <Category>MediaServer:Music</Category>
+  <Description>Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices), developed in particular to support their Squeezebox range of digital audio receivers.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dlandonsRepository/LogitechMediaServer.xml</templatePath>
+</Container>

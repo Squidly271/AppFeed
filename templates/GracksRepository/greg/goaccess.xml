@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>goaccess</Name>
+  <Support>https://hub.docker.com/r/gregyankovoy/goaccess</Support>
+  <Overview>GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser. It provides fast and valuable HTTP statistics for system administrators that require a visual server report on the fly.</Overview>
+  <Registry>https://hub.docker.com/r/gregyankovoy/goaccess/dockerfile</Registry>
+  <Repository>gregyankovoy/goaccess</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7889</HostPort>
+        <ContainerPort>7889</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/goaccess</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:7889]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/gregyankovoy/docker-templates/master/greg/img/goaccess-logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/GregYankovoy/docker-templates/master/greg/goaccess.xml</TemplateURL>
+  <Category>Other:Uncategorized</Category>
+  <Description>GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in *nix systems or through your browser. It provides fast and valuable HTTP statistics for system administrators that require a visual server report on the fly.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/GracksRepository/greg/goaccess.xml</templatePath>
+</Container>

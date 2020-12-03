@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Icecast</Name>
+  <Repository>infiniteproject/icecast</Repository>
+  <Registry>https://hub.docker.com/r/infiniteproject/icecast/</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/78480-support-knex666-icecast/</Support>
+  <Project>https://github.com/maschhoff/docker/tree/master/icecast</Project>
+  <Overview>Icecast for Mopidy http stream&#13;
+&#13;
+setup mopidy audio docker:&#13;
+mopidy.conf&#13;
+&#13;
+[audio]&#13;
+output = lamemp3enc ! shout2send async=false mount=mopidy ip=XX.XX.XX.XX port=8000 password=hackme&#13;
+&#13;
+NOTE: Please download the icecast.xml and void.mp3 from https://github.com/maschhoff/docker/tree/master/icecast&#13;
+change username and password etc. there</Overview>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-icecast.xml</TemplateURL>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/icecast/icecast.xml</HostDir>
+      <ContainerDir>/etc/icecast.xml</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/icecast/void.mp3</HostDir>
+      <ContainerDir>/usr/share/icecast/web/void.mp3</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 1" Target="/etc/icecast.xml" Default="" Mode="rw" Description="Container Path: /etc/icecast.xml" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icecast/icecast.xml</Config>
+  <Config Name="Host Path 2" Target="/usr/share/icecast/web/void.mp3" Default="" Mode="rw" Description="Container Path: /void.mp3" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icecast/void.mp3</Config>
+  <Date>1551337782</Date>
+  <Category>Other: MediaServer:Music</Category>
+  <Description>Icecast for Mopidy http stream&#13;
+&#13;
+setup mopidy audio docker:&#13;
+mopidy.conf&#13;
+&#13;
+&#13;
+output = lamemp3enc ! shout2send async=false mount=mopidy ip=XX.XX.XX.XX port=8000 password=hackme&#13;
+&#13;
+NOTE: Please download the icecast.xml and void.mp3 from https://github.com/maschhoff/docker/tree/master/icecast&#13;
+change username and password etc. there</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-icecast.xml</templatePath>
+</Container>

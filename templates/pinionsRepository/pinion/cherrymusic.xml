@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1577595600</Date>
+  <Name>CherryMusic</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=38602.0</Support>
+  <Overview>
+  [h3]CherryMusic[/h3] 
+    A music streaming server written in python: Stream your own music collection to all your devices![br]
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/pinion/cherrymusic/</Registry>
+  <GitHub>https://github.com/noinip/cherrymusic</GitHub>
+  <Repository>pinion/cherrymusic</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8070</HostPort>
+        <ContainerPort>8070</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/apps/appdata/cherrymusic</HostDir>
+      <ContainerDir>/root/.config/cherrymusic</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/Music</HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8070]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/noinip/cherrymusic-1/master/res/img/cherrymusic_logo_big.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/noinip/container-templates/master/pinion/cherrymusic.xml</TemplateURL>
+  <Category>Cloud: MediaServer:Music</Category>
+  <Description>CherryMusic 
+    A music streaming server written in python: Stream your own music collection to all your devices!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/pinionsRepository/pinion/cherrymusic.xml</templatePath>
+</Container>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1478232000</Date>
+  <changes>
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png'][/center]
+  [center][font size=4]plexReport Changelog[/font][/center]
+  [b]20APR2016:[/b] Re-release of bstascavage's plexReport in docker form.[br]
+  [b]09JUN2016:[/b] Fixed bundler error, updated email template to fix pictures, added backup config during initial script run[br]
+  [b]13JUN2016:[/b] Changed the way cron is handled. Using new .cron system from unRAID 6.[br]
+  [b]04NOV2016:[/b] initial_setup.sh changes: no longer need to rerun this after a docker reinstall,[br]
+  removed config backup: instead check on existing config, code refinement changes to streamline installation.[br]
+</changes>
+  <Name>plexReport</Name>
+  <Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
+  <Project>https://github.com/ninthwalker/plexreport</Project>
+  <Registry>https://registry.hub.docker.com/r/ninthwalker/plexreport/</Registry>
+  <Repository>ninthwalker/plexreport</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/plexreport/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>1.4</Version>
+  <WebUI></WebUI>
+  <Overview>plexReport generates an email to send to your users with all the latest Plex content</Overview>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/plexreport.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Video MediaServer:Video</Category>
+  <Description>plexReport generates an email to send to your users with all the latest Plex content</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ninthwalkersRepository/Ninthwalker/plexreport.xml</templatePath>
+</Container>

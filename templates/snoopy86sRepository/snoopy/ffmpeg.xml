@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>FFmpeg</Name>
+  <Overview>
+    A Docker container designed to watch a directory and encode media files.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/snoopy86/ffmpeg/</Registry>
+  <Repository>snoopy86/ffmpeg</Repository>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=43610.0</Support>
+  <DonateText>For my retirement</DonateText>
+  <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
+  <DonateLink>https://www.paypal.com/donate?hosted_button_id=4SCY7WSZPA6UQ</DonateLink>
+  <Icon>https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg</Icon>
+  <Network Default="host">bridge</Network>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/ffmpeg" Mode="rw" Description="Config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ffmpeg</Config>
+  <Config Name="Watch" Target="/watch" Default="" Mode="rw" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Script to be executed" Target="script" Default="encode.sh" Mode="" Description="encode.sh or mkvdts2ac3.sh" Type="Variable" Display="always" Required="true" Mask="false">encode.sh</Config>
+  <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="false" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
+  <Config Name="Output format" Target="output_format" Default="mkv" Mode="" Description="Format of output file." Type="Variable" Display="always" Required="false" Mask="false">mkv</Config>
+  <Config Name="mkvdts2ac3 parameters" Target="mkvdts2ac3_params" Default="--compress none;-d;-n;-w /output;--new" Mode="" Description="Parameters for mkvdts2ac3" Type="Variable" Display="always" Required="false" Mask="false">--compress none;-d;-n;-w /output;--new</Config>
+  <TemplateURL>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/ffmpeg.xml</TemplateURL>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>A Docker container designed to watch a directory and encode media files.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/snoopy86sRepository/snoopy/ffmpeg.xml</templatePath>
+</Container>

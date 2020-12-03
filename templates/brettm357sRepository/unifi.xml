@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Unifi</Name>
+  <BaseImage>Debian:Stretch</BaseImage>
+  <Date>1599192000</Date>
+  <Repository>brettm357/unifi</Repository>
+  <Registry>https://hub.docker.com/r/brettm357/unifi</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://forums.lime-technology.com/topic/56178-support-brettm357-unifi</Support>
+  <Project>https://www.ui.com</Project>
+  <Overview>Use the UniFi Controller software to quickly configure and administer an enterprise Wi‐Fi network. RF map and performance features, real-time status, automatic UAP device detection, and advanced security options are all seamlessly integrated.</Overview>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/brettm357/docker-templates/master/unifi.xml</TemplateURL>
+  <Icon>https://dl.ubnt.com/press/Company_Logos/U_Logo/WEB/U_Logo_RGB.png</Icon>
+  <DonateText>Please Donate to the Project</DonateText>
+  <DonateLink>https://paypal.me/brettm357?locale.x=en_AU</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3478</HostPort>
+        <ContainerPort>3478</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6789</HostPort>
+        <ContainerPort>6789</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8843</HostPort>
+        <ContainerPort>8843</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8880</HostPort>
+        <ContainerPort>8880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/unifi</HostDir>
+      <ContainerDir>/usr/lib/unifi/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/unifi/logs</HostDir>
+      <ContainerDir>/usr/lib/unifi/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="3478" Default="3478" Mode="udp" Description="Container Port: 3478" Type="Port" Display="always" Required="true" Mask="false">3478</Config>
+  <Config Name="Host Port 2" Target="6789" Default="6789" Mode="tcp" Description="Container Port: 6789" Type="Port" Display="always" Required="true" Mask="false">6789</Config>
+  <Config Name="Host Port 3" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Host Port 4" Target="8081" Default="8081" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="Host Port 5" Target="8443" Default="8443" Mode="tcp" Description="Container Port: 8443" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="Host Port 6" Target="8843" Default="8843" Mode="tcp" Description="Container Port: 8843" Type="Port" Display="always" Required="true" Mask="false">8843</Config>
+  <Config Name="Host Port 7" Target="8880" Default="8880" Mode="tcp" Description="Container Port: 8880" Type="Port" Display="always" Required="true" Mask="false">8880</Config>
+  <Config Name="Host Path 1" Target="/usr/lib/unifi/data" Default="/mnt/cache/appdata/unifi" Mode="rw" Description="Container Path: /usr/lib/unifi/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/unifi</Config>
+  <Config Name="Host Path 2" Target="/usr/lib/unifi/logs" Default="/mnt/cache/appdata/unifi/logs" Mode="rw" Description="Container Path: /usr/lib/unifi/logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/unifi/logs</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Category>Network:Management Tools:Utilities</Category>
+  <Description>Use the UniFi Controller software to quickly configure and administer an enterprise Wi‐Fi network. RF map and performance features, real-time status, automatic UAP device detection, and advanced security options are all seamlessly integrated.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/brettm357sRepository/unifi.xml</templatePath>
+</Container>

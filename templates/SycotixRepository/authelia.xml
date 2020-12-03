@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/ibracorp/authelia.xml/master/authelia.xml</TemplateURL>
+  <Date>1593316800</Date>
+  <Name>Authelia</Name>
+  <Overview>
+    Authelia is an open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion of reverse proxies like nginx, Traefik or HAProxy to let them know whether queries should pass through. Instructions: https://github.com/ibracorp/authelia.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/</Support>
+  <Registry>https://hub.docker.com/r/authelia/authelia/</Registry>
+  <GitHub>https://github.com/authelia/authelia</GitHub>
+  <Repository>authelia/authelia</Repository>
+  <Project>https://github.com/authelia/authelia</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9091]/</WebUI>
+  <Icon>https://i.imgur.com/DCn2yiv.png</Icon>
+  <DonateText>Help support my work by buying me a beer</DonateText>
+  <DonateLink>https://www.paypal.me/ramteksolutions</DonateLink>
+  <DonateImg>https://i.imgur.com/VHSkew7.png</DonateImg>
+  <Config Type="Port" Name="Authelia Web UI" Target="9091" Default="9091" Mode="tcp" Description="This is the Web UI Port, and is used to access the server gui." Display="always" Required="true">9091</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/authelia" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/authelia</Config>
+  <Category>Security: Tools:Utilities</Category>
+  <Description>Authelia is an open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion of reverse proxies like nginx, Traefik or HAProxy to let them know whether queries should pass through. Instructions: https://github.com/ibracorp/authelia.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SycotixRepository/authelia.xml</templatePath>
+</Container>

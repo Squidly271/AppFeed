@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>iPXE-buildweb</Name>
+  <Repository>angelics/unraid-docker-ipxe-buildweb</Repository>
+  <Registry>https://hub.docker.com/r/angelics/unraid-docker-ipxe-buildweb</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/</Support>
+  <Overview>
+	A web-based user interface that provide a way for the user to select any relevant iPXE build options, specify any embedded script, etc, and then construct and download the appropriate file.
+	fork from chvb/Docker-Apache-PHP, works from xbgmsharp/ipxe-buildweb. based on phusion 0.9.18(ubuntu 14.04)
+  </Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/ipxebuildweb.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/xbgmsharp/ipxe-buildweb/master/favicon.ico</Icon>
+  <Project>http://rom-o-matic.eu/</Project>
+  <Date>1562472000</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iPXE-buildweb/logs</HostDir>
+      <ContainerDir>/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Config Name="Logs" Target="/logs" Default="/mnt/user/appdata/iPXE-buildweb/logs" Mode="rw" Description="This location contains logs file from container. Container path: /logs" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="WEB Port" Target="80" Default="8081" Mode="tcp" Description="Port used to access the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+  <Category>Network:</Category>
+  <Description>A web-based user interface that provide a way for the user to select any relevant iPXE build options, specify any embedded script, etc, and then construct and download the appropriate file.
+	fork from chvb/Docker-Apache-PHP, works from xbgmsharp/ipxe-buildweb. based on phusion 0.9.18(ubuntu 14.04)</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/josywongsRepository/ipxebuildweb.xml</templatePath>
+</Container>

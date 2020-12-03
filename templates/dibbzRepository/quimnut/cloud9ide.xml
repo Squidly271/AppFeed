@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Beta>true</Beta>
+  <Date>1453698000</Date>
+  <Name>cloud9ide</Name>
+  <Overview>
+    Cloud9 is a web IDE from https://c9.io/
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=45925.0</Support>
+  <Registry>https://hub.docker.com/r/quimnut/cloud9ide/</Registry>
+  <GitHub>https://github.com/quimnut/unraid-docker-templates/</GitHub>
+  <Repository>quimnut/cloud9ide</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8064</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>C9USER</Name>
+      <Value>cloud9</Value>
+    </Variable>
+    <Variable>
+      <Name>C9PASS</Name>
+      <Value>cloud9</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to your cloud9 workspace</HostDir>
+      <ContainerDir>/workspace</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/c9icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/quimnut/unraid-docker-templates/master/quimnut/cloud9ide.xml</TemplateURL>
+  <Category>Cloud: Productivity: Tools:Utilities Status:Beta</Category>
+  <Description>Cloud9 is a web IDE from https://c9.io/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dibbzRepository/quimnut/cloud9ide.xml</templatePath>
+</Container>

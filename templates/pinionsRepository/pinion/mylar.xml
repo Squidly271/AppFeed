@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Mylar</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=38602.0</Support>
+  <Overview>
+      [h3]Mylar[/h3]Mylar is an automated Comic Book (cbr/cbz) downloader program heavily-based on the Headphones template and logic (which is also based on Sick-Beard).[
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/pinion/docker-mylar/</Registry>
+  <GitHub>https://github.com/noinip/docker-mylar</GitHub>
+  <Repository>pinion/docker-mylar</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8090</HostPort>
+        <ContainerPort>8090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/apps/appdata/mylar</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/Comics</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media/Comics</HostDir>
+      <ContainerDir>/comics</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8090]/</WebUI>
+  <Icon>https://i.imgur.com/F3mxSf5.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/noinip/container-templates/master/pinion/mylar.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Downloaders: MediaApp:Books</Category>
+  <Description>MylarMylar is an automated Comic Book (cbr/cbz) downloader program heavily-based on the Headphones template and logic (which is also based on Sick-Beard).[</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/pinionsRepository/pinion/mylar.xml</templatePath>
+</Container>

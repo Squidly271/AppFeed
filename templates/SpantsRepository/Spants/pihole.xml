@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1570852800</Date>
+  <Support>https://lime-technology.com/forum/index.php?topic=50453.0</Support>
+  <Name>pihole-template</Name>
+  <Registry>https://hub.docker.com/r/pihole/pihole/</Registry>
+  <GitHub>https://github.com/spants/unraidtemplates</GitHub>
+  <Repository>pihole/pihole:latest</Repository>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+        <Name>TCP Port</Name>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+        <Name>UDP Port</Name>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+        <Protocol>udp</Protocol>
+        <Name>DHCP</Name>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+        <Name>Http Port (should be 80!)</Name>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+        <Name>Https Port (should be 443!)</Name>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>8.8.8.8</Value>
+      <Name>DNS1</Name>
+    </Variable>
+    <Variable>
+      <Value>8.8.4.4</Value>
+      <Name>DNS2</Name>
+    </Variable>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>WEBPASSWORD</Name>
+    </Variable>
+    <Variable>
+      <Value>br0</Value>
+      <Name>INTERFACE</Name>
+    </Variable>
+    <Variable>
+      <Value>192.168.1.24</Value>
+      <Name>ServerIP</Name>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ServerIPv6</Name>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>IPv6</Name>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>DNSMASQ_LISTENING</Name>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/pihole/pihole/</HostDir>
+      <ContainerDir>/etc/pihole/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/pihole/dnsmasq.d/</HostDir>
+      <ContainerDir>/etc/dnsmasq.d/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams>--cap-add=NET_ADMIN --dns 127.0.0.1 --dns 1.1.1.1 --restart=unless-stopped</ExtraParams>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
+  <Icon>https://i.imgur.com/OWkNcEn.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/pihole.xml</TemplateURL>
+  <Overview>
+    Pi-Hole - let's block those pesky ads![br][br]
+    This is a template for the official PiHole Docker[br]
+    Make sure that you use bridge mode and give PiHole[br]
+    it's own IP address.[br]
+    Also, if you set you router to give out the PiHole address to clients,[br]
+    make sure that you fixe the unRaid servers dns to point to a real DNS Server.[br]
+  </Overview>
+  <Category>Network:Other Other:</Category>
+  <Description>Pi-Hole - let's block those pesky ads!
+    This is a template for the official PiHole Docker
+    Make sure that you use bridge mode and give PiHole
+    it's own IP address.
+    Also, if you set you router to give out the PiHole address to clients,
+    make sure that you fixe the unRaid servers dns to point to a real DNS Server.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/pihole.xml</templatePath>
+</Container>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>JDownloader2</Name>
+  <Overview>
+    JDownloader is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day! [br]
+    JDownloader 2 also has a webserver accessible through my.jdownloader.org
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-jdownloader2/</Registry>
+  <GitHub>https://github.com/aptalca/docker-jdownloader2</GitHub>
+  <Repository>aptalca/docker-jdownloader2</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>WIDTH</Name>
+      <Value>1280</Value>
+    </Variable>
+    <Variable>
+      <Name>HEIGHT</Name>
+      <Value>720</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/#/client/c/JDownloader2</WebUI>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/f/f7/Jdownloader.png</Icon>
+  <Date>1465358400</Date>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/jdownloader2.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Cloud: Downloaders:</Category>
+  <Description>JDownloader is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day! 
+    JDownloader 2 also has a webserver accessible through my.jdownloader.org</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/jdownloader2.xml</templatePath>
+</Container>

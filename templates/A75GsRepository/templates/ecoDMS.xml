@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ecoDMS</Name>
+  <Repository>ecodms/allinone-18.09</Repository>
+  <Registry>https://hub.docker.com/r/ecodms/allinone-18.09/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
+  <Project>https://www.ecodms.de/index.php/en/</Project>
+  <Overview>ecoDMS 18.09 (apu) Full Installation - Document Management System (DMS) - Audit-compliant archive for scanning, archiving, managing and retrieving all data and documents.&#13;
+&#13;
+To use ecoDMS you need to do the following steps after installing the container:  &#13;
+- Download and install the ecoDMS client for your platform (https://www.ecodms.de/index.php/en/download/ecodms-archive/ecodms-version-18-09-apu)&#13;
+- Add a new profile to the client with your UnRaid IP, 17001 as port and login with ecodms as user and password. !Change the password later!&#13;
+- If the profile is created successfully connect to the new ecoDMS connection&#13;
+- If you want to use the web interface of ecoDMS navigate to Settings -&amp;gt; Web/Mobile/API, enable remote access and start the service. Once the service started you should be able to access the web interface via your UnRaid-IP on Port 17004 (or whatever port you chose during setup of the Docker Container&#13;
+&#13;
+Reference:&#13;
+https://forums.unraid.net/topic/77838-anyone-ecodms-got-running/?tab=comments#comment-842793&amp;amp;searchlight=1&#13;
+@laest - Thank you</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://secure.gravatar.com/avatar/b52fd0ed66fae9aa9a4d71a1f5dae83c.jpg</Icon>
+  <Config Name="Scaninput path" Target="/srv/scaninput" Default="" Mode="rw" Description="Container Path: /srv/scaninput" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Restore path" Target="/srv/restore" Default="" Mode="rw" Description="Container Path: /srv/restore" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Backup path" Target="/srv/backup" Default="" Mode="rw" Description="Container Path: /srv/backup" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Data path" Target="/srv/data" Default="" Mode="rw" Description="Container Path: /srv/data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ecoDMS Connection Manager" Target="17001" Default="" Mode="tcp" Description="Container Port: 17001" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ecoDMS Database" Target="17002" Default="" Mode="tcp" Description="Container Port: 17002" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ecoDMS Weboberfläche" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ecoDMS API" Target="8180" Default="" Mode="tcp" Description="Container Port: 8180" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/ecoDMS.xml</TemplateURL>
+  <Category>Cloud: Productivity:</Category>
+  <Description>ecoDMS 18.09 (apu) Full Installation - Document Management System (DMS) - Audit-compliant archive for scanning, archiving, managing and retrieving all data and documents.&#13;
+&#13;
+To use ecoDMS you need to do the following steps after installing the container:  &#13;
+- Download and install the ecoDMS client for your platform (https://www.ecodms.de/index.php/en/download/ecodms-archive/ecodms-version-18-09-apu)&#13;
+- Add a new profile to the client with your UnRaid IP, 17001 as port and login with ecodms as user and password. !Change the password later!&#13;
+- If the profile is created successfully connect to the new ecoDMS connection&#13;
+- If you want to use the web interface of ecoDMS navigate to Settings -&gt; Web/Mobile/API, enable remote access and start the service. Once the service started you should be able to access the web interface via your UnRaid-IP on Port 17004 (or whatever port you chose during setup of the Docker Container&#13;
+&#13;
+Reference:&#13;
+https://forums.unraid.net/topic/77838-anyone-ecodms-got-running/?tab=comments#comment-842793&amp;amp;searchlight=1&#13;
+@laest - Thank you</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/A75GsRepository/templates/ecoDMS.xml</templatePath>
+</Container>

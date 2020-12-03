@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1595476800</Date>
+  <Name>magnetico-environment</Name>
+  <Repository>dyonr/magnetico-environment</Repository>
+  <Registry>https://hub.docker.com/r/dyonr/magnetico-environment</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/94901-support-dyonr-magnetico-environment/</Support>
+  <Project>https://github.com/boramalper/magnetico</Project>
+  <Overview>magnetico is an autonomous (self-hosted) BitTorrent DHT indexer / crawler / search engine suite.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/magnetico-environment/magnetico-environment-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/magnetico-environment/magnetico-environment-icon.png</Icon>
+  <Config Name="MAGNETICOW_USERNAME" Target="MAGNETICOW_USERNAME" Default="magnetico" Mode="" Description="Username used to access the magneticow web interface" Type="Variable" Display="always" Required="false" Mask="false">magnetico</Config>
+  <Config Name="MAGNETICOW_PASSWORD" Target="MAGNETICOW_PASSWORD" Default="magnetico" Mode="" Description="Password used to access the magneticow web interface" Type="Variable" Display="always" Required="false" Mask="true">magnetico</Config>
+  <Config Name="MAGNETICOW_PORT_MAPPING" Target="8080" Default="8556" Mode="tcp" Description="The port that you will access magneticow on" Type="Port" Display="always" Required="false" Mask="false">8556</Config>
+  <Config Name="MAGNETICOD_NEIGHBORS" Target="MAGNETICOD_NEIGHBORS" Default="1000" Mode="" Description="The maximum numbers of neighbors of an indexer" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="MAGNETICOD_LEECHES" Target="MAGNETICOD_LEECHES" Default="50" Mode="" Description="The maximum numbers of leeches" Type="Variable" Display="always" Required="false" Mask="false">50</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="PUID that will be set on the magneticod database folder" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="PGID that will be set on the magneticod database folder" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="MAGNETICOW_ADDRESS" Target="MAGNETICOW_ADDRESS" Default="0.0.0.0" Mode="" Description="Host address of magneticow" Type="Variable" Display="advanced" Required="false" Mask="false">0.0.0.0</Config>
+  <Config Name="MAGNETICOD_ADDRESS" Target="MAGNETICOD_ADDRESS" Default="0.0.0.0" Mode="" Description="IP-address used by magneticod for indexing on the DHT network" Type="Variable" Display="advanced" Required="false" Mask="false">0.0.0.0</Config>
+  <Config Name="MAGNETICOD_INTERVAL" Target="MAGNETICOD_INTERVAL" Default="`1" Mode="" Description="The indexing interval used by magneticod in seconds" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <Config Name="MAGNETICOD_PORT" Target="MAGNETICOD_PORT" Default="0" Mode="" Description="Port used by magneticod for indexing on the DHT network" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="MAGNETICOW_VERBOSE" Target="MAGNETICOW_VERBOSE" Default="" Mode="" Description="Container Variable: MAGNETICOW_VERBOSE" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="MAGNETICOD_VERBOSE" Target="MAGNETICOD_VERBOSE" Default="" Mode="" Description="Container Variable: MAGNETICOD_VERBOSE" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Database Location" Target="/root/.local/share/magneticod" Default="/mnt/user/appdata/magnetico" Mode="rw" Description="The path where magneticod will store its database" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/magnetico</Config>
+  <Category>Downloaders: Tools:Utilities</Category>
+  <Description>magnetico is an autonomous (self-hosted) BitTorrent DHT indexer / crawler / search engine suite.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/NordsRepository/Templates/magnetico-environment/magnetico-environment-template.xml</templatePath>
+</Container>

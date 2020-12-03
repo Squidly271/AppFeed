@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Calibre-Server2</Name>
+  <Overview>
+    Calibre is an e-book management software. 
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/hernandito/calibreserver-docker/</Registry>
+  <Repository>hernandito/calibreserver-docker</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>CALUSER</Name>
+      <Value>hernando</Value>
+    </Variable>
+    <Variable>
+      <Name>CALPASSWORD</Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Dropbox/Calibre/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/calibre/</HostDir>
+      <ContainerDir>/opt/calibre</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/aHH93FG.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/calibreServer2.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Network:Web MediaServer:Books</Category>
+  <Description>Calibre is an e-book management software.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hernanditosRepository/hernando/calibreServer2.xml</templatePath>
+</Container>

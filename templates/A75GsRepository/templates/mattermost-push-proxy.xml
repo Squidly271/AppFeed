@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>mattermost-push-proxy</Name>
+  <Repository>mattermost/mattermost-push-proxy:latest</Repository>
+  <Registry>https://hub.docker.com/r/mattermost/mattermost-push-proxy/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89502-support-a75g-repo/</Support>
+  <Project>https://github.com/mattermost/mattermost-push-proxy</Project>
+  <Overview>Mattermost Push Notification Service.&#13;
+&#13;
+after starting &#13;
+mkdir /mnt/user/appdata/mattermost-push-proxy/config&#13;
+cd /mnt/user/appdata/mattermost-push-proxy/config&#13;
+wget https://raw.githubusercontent.com/mattermost/mattermost-push-proxy/master/config/mattermost-push-proxy.json&#13;
+&#13;
+https://developers.mattermost.com/contribute/mobile/push-notifications/service/</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/mattermost-push-proxy.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/mattermost-push-proxy.png</Icon>
+  <Config Name="Port" Target="8066" Default="8066" Mode="tcp" Description="Port" Type="Port" Display="always" Required="true" Mask="false">8066</Config>
+  <Config Name="Mattermost Push Proxy Path" Target="/mattermost-push-proxy" Default="/mnt/user/appdata/mattermost-push-proxy/proxy/" Mode="rw" Description="Mattermost Push Proxy Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mattermost-push-proxy/</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/mattermost-push-proxy/config/" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mattermost-push-proxy/config/</Config>
+  <Config Name="Certs Path" Target="/certs" Default="" Mode="rw" Description="Certs Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mattermost-push-proxy/certs/</Config>
+  <Category>Other:</Category>
+  <Description>Mattermost Push Notification Service.&#13;
+&#13;
+after starting &#13;
+mkdir /mnt/user/appdata/mattermost-push-proxy/config&#13;
+cd /mnt/user/appdata/mattermost-push-proxy/config&#13;
+wget https://raw.githubusercontent.com/mattermost/mattermost-push-proxy/master/config/mattermost-push-proxy.json&#13;
+&#13;
+https://developers.mattermost.com/contribute/mobile/push-notifications/service/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/A75GsRepository/templates/mattermost-push-proxy.xml</templatePath>
+</Container>

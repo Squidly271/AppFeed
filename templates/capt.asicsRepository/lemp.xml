@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>P3R-LEMP-Stack</Name>
+  <Repository>p3rco/lemp:latest</Repository>
+  <Registry>https://hub.docker.com/r/p3rco/lemp</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/uRhFDDK</Support>
+  <Project>https://github.com/P3R-CO/lemp-container</Project>
+  <Overview>P3R LEMP Stack is an All-In-One container built on Debian with NGINX, MariaDB, and PHP7.3 all pre-loaded.</Overview>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/P3R-CO/unraid/master/LEMP-P3R-256px.png</Icon>
+  <DonateText>Please support me on Patreon</DonateText>
+  <DonateLink>https://www.patreon.com/keepitPG</DonateLink>
+  <Config Name="HTTP" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="HTTPS" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="AppData" Target="/config/" Default="/mnt/user/appdata/P3R-LEMP-Stack/" Mode="rw" Description="Container Path: /config/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/P3R-LEMP-Stack/</Config>
+  <TemplateURL>https://raw.githubusercontent.com/P3R-CO/unraid/master/lemp.xml</TemplateURL>
+  <Beta>true</Beta>
+  <Category>Network:Web Status:Beta</Category>
+  <Description>P3R LEMP Stack is an All-In-One container built on Debian with NGINX, MariaDB, and PHP7.3 all pre-loaded.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/capt.asicsRepository/lemp.xml</templatePath>
+</Container>

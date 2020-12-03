@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>NginxProxyManager</Name>
+  <Repository>jlesage/nginx-proxy-manager</Repository>
+  <Registry>https://hub.docker.com/r/jlesage/nginx-proxy-manager/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/76460-support-nginx-proxy-manager/</Support>
+  <Overview>
+    Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
+    [br][br]
+    Also, being based on Alpine Linux, size of this container
+    is very small (less than 100MB in download size).
+    [br][br][span][/span]
+    For a complete documentation of this container, see
+    [a href="https://github.com/jlesage/docker-nginx-proxy-manager/blob/master/README.md"]
+    https://github.com/jlesage/docker-nginx-proxy-manager/blob/master/README.md[/a].
+    [br][br]
+    [span style='color: red;'][b]Note:[/b][/span] For this container to be
+    accessible from the internet, make sure ports [b]80[/b] and [b]443[/b] on
+    the internet side of your router are properly forwarded to this container.
+    See the documentation for more details.[br][br]
+    [span style='color: red;'][b]Note:[/b][/span] After a fresh install, the
+    default username/password to connect to the management interface are:
+    [b]admin@example.com[/b]/[b]changeme[/b].
+  </Overview>
+  <WebUI>http://[IP]:[PORT:8181]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/nginx-proxy-manager.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/nginx-proxy-manager-icon.png</Icon>
+  <Project>https://nginxproxymanager.jc21.com</Project>
+  <Date>1606194000</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7818</HostPort>
+        <ContainerPort>8181</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18443</HostPort>
+        <ContainerPort>4443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-proxy-manager</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_NICENESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>DISABLE_IPV6</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/nginx-proxy-manager" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Disable IPv6" Target="DISABLE_IPV6" Default="0" Mode="" Description="When set to '1', IPv6 support is disabled." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Web UI Port" Target="8181" Default="7818" Mode="tcp" Description="Port used to access the web interface of the application." Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="HTTP Port" Target="8080" Default="1880" Mode="tcp" Description="Port used to serve HTTP requests.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Your router should be configured to forward port &amp;lt;i&amp;gt;80&amp;lt;/i&amp;gt; to this port.  If your router doesn't allow setting the destination/internal IP address, this &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;must&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; be set to &amp;lt;b&amp;gt;80&amp;lt;/b&amp;gt;." Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="HTTPs Port" Target="4443" Default="18443" Mode="tcp" Description="Port used to serve HTTPs requests.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Your router should be configured to forward port &amp;lt;i&amp;gt;443&amp;lt;/i&amp;gt; to this port.  If your router doesn't allow setting the destination/internal IP address, this &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;must&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; be set to &amp;lt;b&amp;gt;443&amp;lt;/b&amp;gt;." Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/donate.png</DonateImg>
+  <Category>Network:Web Network:Proxy Tools:Utilities</Category>
+  <Description>Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
+    
+    Also, being based on Alpine Linux, size of this container
+    is very small (less than 100MB in download size).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/DjossRepository/jlesage/nginx-proxy-manager.xml</templatePath>
+</Container>

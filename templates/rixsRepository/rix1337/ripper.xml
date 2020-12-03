@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Ripper</Name>
+  <Date>1484283600</Date>
+  <Repository>rix1337/docker-ripper</Repository>
+  <Registry>https://registry.hub.docker.com/r/rix1337/docker-ripper</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=43669.0</Support>
+  <Overview>This container will detect optical disks by their type and rip them automatically.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/ripper.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/ripper.png</Icon>
+  <ExtraParams>--device=/dev/sr0:/dev/sr0</ExtraParams>
+  <DonateText>Sponsor me!</DonateText>
+  <DonateLink>https://github.com/sponsors/rix1337</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/dev/sr0</HostDir>
+      <ContainerDir>/dev/sr0</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/</HostDir>
+      <ContainerDir>/out</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ripper</HostDir>
+      <ContainerDir>/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Optical Drive" Target="/dev/sr0" Default="" Mode="rw" Description="Required path of your optical drive" Type="Path" Display="always" Required="false" Mask="false">/dev/sr0</Config>
+  <Config Name="Output Dir" Target="/out" Default="" Mode="rw" Description="Output files are stored here" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
+  <Config Name="Config Dir" Target="/config/" Default="/mnt/user/appdata/ripper" Mode="rw" Description="Configuration files are stored here" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ripper</Config>
+  <Category>Backup: MediaApp:Video MediaApp:Music MediaApp:Other Productivity: Tools:Utilities</Category>
+  <Description>This container will detect optical disks by their type and rip them automatically.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/rixsRepository/rix1337/ripper.xml</templatePath>
+</Container>

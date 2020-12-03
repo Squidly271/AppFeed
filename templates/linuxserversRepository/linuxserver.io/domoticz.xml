@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/domoticz.xml</TemplateURL>
+  <Date>1486789200</Date>
+  <Name>domoticz</Name>
+  <Support>https://forums.unraid.net/topic/53519-support-linuxserverio-domoticz/</Support>
+  <Repository>linuxserver/domoticz</Repository>
+  <Project>https://www.domoticz.com</Project>
+  <Branch>
+    <Tag>stable-3.5877</Tag>
+    <TagDescription>This is the stable version 3.5877 of Domoticz</TagDescription>
+  </Branch>
+  <Registry>https://hub.docker.com/r/linuxserver/domoticz/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview>Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/domoticz/domoticz/master/www/images/logo.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1443</HostPort>
+        <ContainerPort>1443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6144</HostPort>
+        <ContainerPort>6144</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+    </Variable>
+  </Environment>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/alpine</BaseImage>
+  <Category>HomeAutomation: Network:Management</Category>
+  <Description>Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/domoticz.xml</templatePath>
+</Container>

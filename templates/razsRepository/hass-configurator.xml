@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>hassConfigurator</Name>
+  <Repository>causticlab/hass-configurator-docker:x86_64</Repository>
+  <Registry>https://hub.docker.com/r/causticlab/hass-configurator-docker//Dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/causticlab/hass-configurator-docker/</Support>
+  <Project>https://github.com/danielperna84/hass-configurator</Project>
+  <Overview>Home Assistant online configurator container from https://github.com/danielperna84/hass-configurator&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:3218]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/RazorSiM/docker-templates/master/hass-configurator.xml</TemplateURL>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/2000px-Home_Assistant_Logo.svg.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>3218</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/hass-config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="config" Target="/config" Default="/mnt/user/appdata/home-assistant-configurator/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="hass-config" Target="/hass-config" Default="/mnt/user/appdata/home-assistant/" Mode="rw" Description="Your home assistant configuration folder&#13;&#10;" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="3218" Target="3218" Default="3218" Mode="tcp" Description="Container Port: 3218" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Date>1549014811</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>Home Assistant online configurator container from https://github.com/danielperna84/hass-configurator</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/razsRepository/hass-configurator.xml</templatePath>
+</Container>

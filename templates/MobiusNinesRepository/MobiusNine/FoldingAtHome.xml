@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>FoldingAtHome</Name>
+  <Overview>
+    FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]
+    [b][span style='color: #E80000;']WARNING: Using this container will increase CPU usage, continue @ own risk[/span][/b][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]Edit the config.xml file with your preferences (Username/Team etc.)[br]
+    [b]You might have to edit the config.xml in the FaH appdata folder to allow your specific subnet to use the WebUI[br]
+    [b]/mnt/user/appdata/FoldingAtHome[/b] : this path is used to store the config.xml file for FAHClient.[br]
+    [b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]
+    [b]The FaHControl App is the preferred method of interfacing with the server as it provides more fine grained control vs the WebUI[br]
+    [b]The WebUI is accessible through  http://SERVER_IP:7396.[br]
+    [b]The extra Nvidia variables are for GPU passthrough. Information on that can be found here:[br]
+    [b]https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/
+   </Overview>
+  <Support>https://forums.unraid.net/topic/36054-release-foldinghome-docker/page/4/?tab=comments#comment-730278</Support>
+  <Repository>mobiusnine/foldingathome</Repository>
+  <Registry>https://registry.hub.docker.com/r/mobiusnine/foldingathome</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>36330</HostPort>
+        <ContainerPort>36330</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7396</HostPort>
+        <ContainerPort>7396</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/FoldingAtHome</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="36330" Default="36330" Mode="tcp" Description="Container Port: 36330" Type="Port" Display="always" Required="true" Mask="false">36330</Config>
+  <Config Name="Host Port 2" Target="7396" Default="7396" Mode="tcp" Description="Container Port: 7396" Type="Port" Display="always" Required="true" Mask="false">7396</Config>
+  <Config Name="Host Key 1" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Variable: NVIDIA_DRIVER_CAPABILITIES" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Key 2" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Container Variable: NVIDIA_VISIBLE_DEVICES" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FoldingAtHome" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoldingAtHome</Config>
+  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
+  <Icon>https://i.imgur.com/AKptFCw.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/MobiusNine/docker-templates/master/MobiusNine/FoldingAtHome.xml</TemplateURL>
+  <Category>Other:</Category>
+  <Description>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MobiusNinesRepository/MobiusNine/FoldingAtHome.xml</templatePath>
+</Container>

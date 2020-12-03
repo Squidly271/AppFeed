@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>BarracudaDrive</Name>
+  <Registry>https://hub.docker.com/r/johnodon/barracudadrive/</Registry>
+  <Repository>johnodon/barracudadrive</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/BarracudaDrive</HostDir>
+      <ContainerDir>/home/nobody</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://i.imgur.com/xqhiQe8.png</Icon>
+  <Overview>BarracudaDrive transforms your computer (or device) into a powerful and secure online storage system, letting you access and share files from any connected computer or device in the world.</Overview>
+  <Date>1455080400</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=46461.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/johnodon/docker-templates/master/johnodon/BarracudaDrive.xml</TemplateURL>
+  <Category>Network:Web</Category>
+  <Description>BarracudaDrive transforms your computer (or device) into a powerful and secure online storage system, letting you access and share files from any connected computer or device in the world.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/johnodonsRepository/johnodon/BarracudaDrive.xml</templatePath>
+</Container>

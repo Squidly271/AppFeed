@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>MakeMKV-RDP</Name>
+  <Project>http://www.makemkv.com/</Project>
+  <Support>http://lime-technology.com/forum/index.php?topic=41744.0</Support>
+  <Overview>MakeMKV is a tool for ripping Blu-ray and DVDs. This container is based on Hurricanes dockergui container with both rdp support and webgui.</Overview>
+  <Date>1444104000</Date>
+  <Registry>https://registry.hub.docker.com/r/tobbenb/makemkv-rdp</Registry>
+  <Repository>tobbenb/makemkv-rdp</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>WIDTH</Name>
+      <Value>1280</Value>
+    </Variable>
+    <Variable>
+      <Name>HEIGHT</Name>
+      <Value>720</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/unRaid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/l815H3m.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/tobbenb/docker-containers/templates/tobbenb/MakeMKV-RDP.xml</TemplateURL>
+  <Category>MediaApp:Video Tools:Utilities</Category>
+  <Description>MakeMKV is a tool for ripping Blu-ray and DVDs. This container is based on Hurricanes dockergui container with both rdp support and webgui.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/tobbenbsRepository/tobbenb/MakeMKV-RDP.xml</templatePath>
+</Container>

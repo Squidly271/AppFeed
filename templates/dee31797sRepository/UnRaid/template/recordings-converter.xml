@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>recordings-converter</Name>
+  <Repository>djaydev/recordings-converter</Repository>
+  <Registry>https://hub.docker.com/r/djaydev/recordings-converter</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/77603-virt-manager-intel-gpu-tools-and-more-dockers/</Support>
+  <Project>https://github.com/djaydev/docker-recordings-transcoder</Project>
+  <Overview>Watches for .ts files made by live TV recordings and converts them to h265 .mp4 files automatically. Supports Nvidia and Intel HW transcoding.[br][br] Instructions at [a href="https://github.com/djaydev/docker-recordings-transcoder"]https://github.com/djaydev/docker-recordings-transcoder[/a]</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/djaydev/docker-virt-manager/master/UnRaid/template/recordings-converter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/djaydev/docker-recordings-transcoder/master/icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/videos/</HostDir>
+      <ContainerDir>/watch</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/recordings-converter</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>software</Value>
+      <Name>ENCODER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>DELETE_TS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>SUBTITLES</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Path 1" Target="/watch" Default="" Mode="rw" Description="Folder where your recordings are saved" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/videos/</Config>
+  <Config Name="Host Path 2" Target="/config" Default="" Mode="rw" Description="config folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/recordings-converter</Config>
+  <Config Name="Host Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Host Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Host Key 3" Target="ENCODER" Default="software" Mode="" Description="&amp;lt;b&amp;gt;nvidia&amp;lt;/b&amp;gt; = Nvdia gpu HW transcoding |&#13;&#10;&amp;lt;b&amp;gt;intel&amp;lt;/b&amp;gt; = Intel gpu HW transcoding |&#13;&#10;&amp;lt;b&amp;gt;software&amp;lt;/b&amp;gt; = cpu SW transcoding |&#13;&#10;&amp;lt;b&amp;gt;custom&amp;lt;/b&amp;gt; = your own script in /config/custom.sh" Type="Variable" Display="always" Required="false" Mask="false">software</Config>
+  <Config Name="Host Key 4" Target="DELETE_TS" Default="0" Mode="" Description="Delete original recording after conversion, 0 = no, 1 = yes" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Host Key 5" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Host Key 6" Target="SUBTITLES" Default="0" Mode="" Description="Include subtitles from recording's Closed Captions. 0 = no, 1 = yes" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <DonateLink>https://www.paypal.me/djaydev/0usd</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Category>MediaApp:Video</Category>
+  <Description>Watches for .ts files made by live TV recordings and converts them to h265 .mp4 files automatically. Supports Nvidia and Intel HW transcoding. Instructions at https://github.com/djaydev/docker-recordings-transcoder</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dee31797sRepository/UnRaid/template/recordings-converter.xml</templatePath>
+</Container>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>maloja</Name>
+  <Repository>joniator/maloja:latest</Repository>
+  <Registry>https://hub.docker.com/r/joniator/maloja</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/92611-support-foxxmd-maloja/</Support>
+  <Project>https://maloja.krateng.ch/</Project>
+  <Overview>Self-hosted music scrobble database to create personal listening statistics and charts as a substitute for Last.fm / Libre.fm / GNU FM.&#13;
+        &#13;
+        Features include:&#13;
+        *  Easy import of existing scrobble data in CSV format (from last.fm, etc.)&#13;
+        * Custom rules for importing/scrobbling&#13;
+        * Custom and 3rd party integrations for album/artist artwork&#13;
+        * Insightful charting to display time-sliced "top charts" for tracks and artists&#13;
+        * Full listening history and track lookup using multiple sources (youtube, gmusic, spotify..)&#13;
+        *  A first-party chrome extension for scrobbling from the web as well as third-party scrobble-compliant endpoints for use with other extensions and applications&#13;
+        &#13;
+        See the project, https://github.com/krateng/maloja, for more information or the support thread for recommended setup.&#13;
+        &#13;
+    </Overview>
+  <Beta>true</Beta>
+  <Date>1589774400</Date>
+  <WebUI>http://[IP]:[PORT:42010]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/maloja.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/icons/maloja.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>42010</HostPort>
+        <ContainerPort>42010</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/maloja</HostDir>
+      <ContainerDir>/root/.local/share/maloja</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>0.0.0.0</Value>
+      <Name>MALOJA_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>MALOJA_SKIP_SETUP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>/config</Value>
+      <Name>MALOJA_DATA_DIRECTORY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Web Port" Target="42010" Default="42010" Mode="tcp" Description="Port for accessing web ui and api" Type="Port" Display="always" Required="true" Mask="false">42010</Config>
+  <Config Name="User Data" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/maloja</Config>
+  <Config Name="Container Host" Target="MALOJA_HOST" Default="0.0.0.0" Mode="" Description="Specifies to Maloja what address to listen on (should not change)" Type="Variable" Display="advanced" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="Skip Setup" Target="MALOJA_SKIP_SETUP" Default="" Mode="" Description="Skip server setup due to running in docker and providing data via env variables" Type="Variable" Display="advanced" Required="true" Mask="false">yes</Config>
+  <Config Name="Data Directory" Target="MALOJA_DATA_DIRECTORY" Default="" Mode="" Description="Specifies to Maloja which directory to use for data/configuration files" Type="Variable" Display="advanced" Required="false" Mask="false">/config</Config>
+  <Category>MediaServer:Music Status:Beta</Category>
+  <Description>Self-hosted music scrobble database to create personal listening statistics and charts as a substitute for Last.fm / Libre.fm / GNU FM.&#13;
+        &#13;
+        Features include:&#13;
+        *  Easy import of existing scrobble data in CSV format (from last.fm, etc.)&#13;
+        * Custom rules for importing/scrobbling&#13;
+        * Custom and 3rd party integrations for album/artist artwork&#13;
+        * Insightful charting to display time-sliced "top charts" for tracks and artists&#13;
+        * Full listening history and track lookup using multiple sources (youtube, gmusic, spotify..)&#13;
+        *  A first-party chrome extension for scrobbling from the web as well as third-party scrobble-compliant endpoints for use with other extensions and applications&#13;
+        &#13;
+        See the project, https://github.com/krateng/maloja, for more information or the support thread for recommended setup.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/maloja.xml</templatePath>
+</Container>

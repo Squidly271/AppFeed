@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>rstudio</Name>
+  <Repository>rocker/rstudio</Repository>
+  <Registry>https://hub.docker.com/r/rocker/rstudio/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/rocker-org/rocker-versioned</Project>
+  <Overview>***NOTE*** First run is slow.&#13;
+RStudio Server with an emphasis on reproducibility. Builds on debian stable (debian:jessie for versions &amp;lt; 3.4.0, debian:stretch after, etc) release. This stack installs a fixed version of R itself from source and it installs all R packages from a fixed snapshot of CRAN at a given date. Users should include the version tag, e.g. rocker/rstudio:3.3.1 when reproduciblity is paramount.</Overview>
+  <WebUI>http://[IP]:[PORT:8787]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/DavidSpek/unraid_docker_templates/master/rstudio-server.xml</TemplateURL>
+  <Icon>https://avatars0.githubusercontent.com/u/9100160?v=3&amp;amp;s=200</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8787</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>3838</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/home/rstudio/Documents</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>yourpasswordhere</Value>
+      <Name>PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>FALSE</Value>
+      <Name>ROOT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="8787" Default="8787" Mode="tcp" Description="Container Port: 8787" Type="Port" Display="always" Required="false" Mask="false">8787</Config>
+  <Config Name="Password" Target="PASSWORD" Default="yourpasswordhere" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">yourpasswordhere</Config>
+  <Config Name="Root" Target="ROOT" Default="FALSE" Mode="" Description="Give the user root permissions" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="Add Shiny Server" Target="ADD" Default="" Mode="" Description="Input 'shiny' without quotes to add shiny server" Type="Variable" Display="always" Required="false" Mask="false">shiny</Config>
+  <Config Name="Host Port 2" Target="3838" Default="3838" Mode="tcp" Description="Required for shiny server" Type="Port" Display="always" Required="false" Mask="false">3838</Config>
+  <Config Name="User Data Directory" Target="/home/rstudio/Documents" Default="/mnt/user" Mode="rw" Description="Shared folder for saving your files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Date>1575060407</Date>
+  <Category>Productivity:</Category>
+  <Description>***NOTE*** First run is slow.&#13;
+RStudio Server with an emphasis on reproducibility. Builds on debian stable (debian:jessie for versions &lt; 3.4.0, debian:stretch after, etc) release. This stack installs a fixed version of R itself from source and it installs all R packages from a fixed snapshot of CRAN at a given date. Users should include the version tag, e.g. rocker/rstudio:3.3.1 when reproduciblity is paramount.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/DavidSpeksRepository/rstudio-server.xml</templatePath>
+</Container>

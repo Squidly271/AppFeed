@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>lftp-mirror</Name>
+  <Support>https://hub.docker.com/r/gregyankovoy/lftp-mirror/</Support>
+  <Overview>Mirrors and removes files from a remote lftp folder to a local folder.</Overview>
+  <Registry>https://hub.docker.com/r/gregyankovoy/lftp-mirror//Dockerfile/</Registry>
+  <Repository>gregyankovoy/lftp-mirror</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>HOST</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>PORT</Name>
+      <Value>22</Value>
+    </Variable>
+    <Variable>
+      <Name>USERNAME</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>REMOTE_DIR</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>LFTP_PARTS</Name>
+      <Value>1</Value>
+    </Variable>
+    <Variable>
+      <Name>LFTP_FILES</Name>
+      <Value>1</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <TemplateURL>https://raw.githubusercontent.com/GregYankovoy/docker-templates/master/greg/lftp-mirror.xml</TemplateURL>
+  <Category>Other:Uncategorized</Category>
+  <Description>Mirrors and removes files from a remote lftp folder to a local folder.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/GracksRepository/greg/lftp-mirror.xml</templatePath>
+</Container>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Firefly-III</Name>
+  <Repository>jc5x/firefly-iii:latest</Repository>
+  <Registry>https://hub.docker.com/r/jc5x/firefly-iii</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96221-support-funnypocketbook-firefly-iii/</Support>
+  <Project>https://firefly-iii.org/</Project>
+  <Overview>"Firefly III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.&#13;
+&#13;
+Additional environment variables can be found under https://github.com/firefly-iii/firefly-iii/blob/main/.env.example</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FunnyPocketBook/docker-templates/master/firefly-iii.xml</TemplateURL>
+  <Icon>https://camo.githubusercontent.com/729d179402476b1dd9de4ec9f5fa5910e6bf56aa/68747470733a2f2f66697265666c792d6969692e6f72672f7374617469632f696d672f6c6f676f2d736d616c6c2d6e65772e706e67</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/firefly-iii/export/</HostDir>
+      <ContainerDir>/var/www/firefly-iii/storage/export </ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/firefly-iii/upload/</HostDir>
+      <ContainerDir>/var/www/firefly-iii/storage/upload</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>DB_CONNECTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>fireflydb</Value>
+      <Name>DB_DATABASE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>firefly</Value>
+      <Name>DB_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>secret_firefly_password</Value>
+      <Name>DB_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>SomeRandomStringOf32CharsExactly</Value>
+      <Name>APP_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>TRUSTED_PROXIES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_MAILER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_FROM</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAIL_ENCRYPTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SEND_ERROR_MESSAGE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="EXPORT_PATH" Target="/var/www/firefly-iii/storage/export " Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Exported files are stored here" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/firefly-iii/export/</Config>
+  <Config Name="UPLOAD_PATH" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Uploaded files that are used for bulk importing are stored here" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/firefly-iii/upload/</Config>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="DB_CONNECTION" Target="DB_CONNECTION" Default="" Mode="" Description="Container Variable: DB_CONNECTION - Database type ('pgsql', 'mysql', 'sqlite')" Type="Variable" Display="always" Required="true" Mask="false">mysql</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST - Database host, e.g. 192.168.0.3" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DB_PORT" Target="DB_PORT" Default="" Mode="" Description="Container Variable: DB_PORT - Database port, e.g. 3306" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DB_DATABASE" Target="DB_DATABASE" Default="" Mode="" Description="Container Variable: DB_DATABASE - Database name" Type="Variable" Display="always" Required="true" Mask="false">fireflydb</Config>
+  <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="Container Variable: DB_USERNAME - Database username. It is recommended to create a dedicated user for Firefly." Type="Variable" Display="always" Required="true" Mask="false">firefly</Config>
+  <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="Container Variable: DB_PASSWORD - Database password" Type="Variable" Display="always" Required="true" Mask="false">secret_firefly_password</Config>
+  <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY - The encryption key for your sessions. Keep this very secure. If you generate a new one all existing attachments must be considered LOST. Change it to a string of exactly 32 chars." Type="Variable" Display="always" Required="true" Mask="false">SomeRandomStringOf32CharsExactly</Config>
+  <Config Name="TRUSTED_PROXIES" Target="TRUSTED_PROXIES" Default="" Mode="" Description="Container Variable: TRUSTED_PROXIES - Set to ** when using reverse proxy." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_MAILER" Target="MAIL_MAILER" Default="" Mode="" Description="Container Variable: MAIL_MAILER -&#13;&#10;Refer to https://docs.firefly-iii.org/advanced-installation/email for more information" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_PORT" Target="MAIL_PORT" Default="" Mode="" Description="Container Variable: MAIL_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_FROM" Target="MAIL_FROM" Default="" Mode="" Description="Container Variable: MAIL_FROM" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_USERNAME" Target="MAIL_USERNAME" Default="" Mode="" Description="Container Variable: MAIL_USERNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_PASSWORD" Target="MAIL_PASSWORD" Default="" Mode="" Description="Container Variable: MAIL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAIL_ENCRYPTION" Target="MAIL_ENCRYPTION" Default="" Mode="" Description="Container Variable: MAIL_ENCRYPTION" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="Container Variable: APP_URL - Only used when sending emails." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SEND_ERROR_MESSAGE" Target="SEND_ERROR_MESSAGE" Default="" Mode="" Description="Container Variable: SEND_ERROR_MESSAGE - Sends email if error occurs" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Date>1598454246</Date>
+  <Category>Productivity:</Category>
+  <Description>"Firefly III" is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.&#13;
+&#13;
+Additional environment variables can be found under https://github.com/firefly-iii/firefly-iii/blob/main/.env.example</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FunnyPocketBooksRepository/firefly-iii.xml</templatePath>
+</Container>

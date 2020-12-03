@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>youtube-dl-server</Name>
+  <Repository>kmb32123/youtube-dl-server</Repository>
+  <Registry>https://hub.docker.com/r/kmb32123/youtube-dl-server/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/manbearwiz/youtube-dl-server</Project>
+  <Overview>Web / REST interface for downloading youtube videos onto a server.[br]&#13;
+&#13;
+Enter a video url to download the video to the server. Url can be to YouTube or any other supported site. The server will automatically download the highest quality version available.&#13;
+&#13;
+Just navigate to http://{{address}}:{{port}}/youtube-dl and enter the requested {{url}}.&#13;
+&#13;
+curl -X POST --data-urlencode "url={{url}}" http://{{address}}:{{port}}/youtube-dl/q[br][br]
+[b]/youtube-dl[/b] : Downloads go there [br]</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/youtube-dl</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/youtube-dl-server.xml</TemplateURL>
+  <Icon>https://i.imgur.com/taKLB37.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/youtube-dl</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Download" Target="/youtube-dl" Default="" Mode="rw" Description="Container Path: /youtube-dl" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Date>1533428737</Date>
+  <Category>Downloaders:</Category>
+  <Description>Web / REST interface for downloading youtube videos onto a server.&#13;
+&#13;
+Enter a video url to download the video to the server. Url can be to YouTube or any other supported site. The server will automatically download the highest quality version available.&#13;
+&#13;
+Just navigate to http://{{address}}:{{port}}/youtube-dl and enter the requested {{url}}.&#13;
+&#13;
+curl -X POST --data-urlencode "url={{url}}" http://{{address}}:{{port}}/youtube-dl/q
+/youtube-dl : Downloads go there</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/runraidsRepository/ronnieroller.com/youtube-dl-server.xml</templatePath>
+</Container>

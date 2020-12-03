@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Appdaemon</Name>
+  <Repository>acockburn/appdaemon</Repository>
+  <Registry>https://registry.hub.docker.com/r/acockburn/appdaemon</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Support>
+  <Project>http://appdaemon.readthedocs.io/</Project>
+  <Overview>HADashboard and Python apps for Home Assistant.&#13;
+&#13;
+Note that you MUST manually edit your auto-generated appdaemon.yaml file to add a few required settings.&#13;
+See support threat here for an example: https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Overview>
+  <WebUI>http://[IP]:[PORT:5050]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/appdaemon.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/appdaemon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate</DonateText>
+  <DonateLink>http://paypal.me/corneliousjd</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/appdaemon</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http://X.X.X.X:8123</Value>
+      <Name>HA_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>TOKEN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>http://$HOSTNAME:5050</Value>
+      <Name>DASH_URL</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Web UI Port" Target="5050" Default="5050" Mode="tcp" Description="Container Port: 5050" Type="Port" Display="always" Required="false" Mask="false">5050</Config>
+  <Config Name="Configuration Path" Target="/conf" Default="/mnt/user/appdata/appdaemon" Mode="rw" Description="Container Path: /conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/appdaemon</Config>
+  <Config Name="Home Assistant URL" Target="HA_URL" Default="" Mode="" Description="Your local Home Assistant URL. (NO trailing / at the end!)" Type="Variable" Display="always" Required="true" Mask="false">http://X.X.X.X:8123</Config>
+  <Config Name="Token" Target="TOKEN" Default="" Mode="" Description="Home Assistant Long Lived Access Tokens" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Dashboard URL" Target="DASH_URL" Default="" Mode="" Description="This should be left as-is." Type="Variable" Display="advanced" Required="false" Mask="false">http://$HOSTNAME:5050</Config>
+  <Date>1588904068</Date>
+  <Category>HomeAutomation: Other:</Category>
+  <Description>HADashboard and Python apps for Home Assistant.&#13;
+&#13;
+Note that you MUST manually edit your auto-generated appdaemon.yaml file to add a few required settings.&#13;
+See support threat here for an example: https://lime-technology.com/forums/topic/72041-support-appdaemon-hadashboard-corneliousjd-repo/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CorneliousJDsRepository/appdaemon.xml</templatePath>
+</Container>

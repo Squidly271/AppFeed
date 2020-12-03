@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Inkscape</Name>
+  <Registry>https://hub.docker.com/r/johnodon/inkscape/</Registry>
+  <Repository>johnodon/inkscape</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Inkscape</HostDir>
+      <ContainerDir>/nobody/.config/inkscape/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/MAE6xCp.png</Icon>
+  <Overview>Inkscape is professional quality vector graphics software which runs on Windows, Mac OS X and GNU/Linux.</Overview>
+  <Date>1455166800</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=46495.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/johnodon/docker-templates/master/johnodon/Inkscape.xml</TemplateURL>
+  <Category>Productivity:</Category>
+  <Description>Inkscape is professional quality vector graphics software which runs on Windows, Mac OS X and GNU/Linux.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/johnodonsRepository/johnodon/Inkscape.xml</templatePath>
+</Container>

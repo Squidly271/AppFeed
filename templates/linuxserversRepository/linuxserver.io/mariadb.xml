@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/mariadb.xml</TemplateURL>
+  <Date>1476158400</Date>
+  <Name>mariadb</Name>
+  <Support>https://forums.unraid.net/topic/40737-support-linuxserverio-mariadb/</Support>
+  <Overview>An Enhanced drop in replacement for Mysql</Overview>
+  <Project>https://mariadb.org/</Project>
+  <Registry>https://hub.docker.com/r/linuxserver/mariadb/</Registry>
+  <Repository>linuxserver/mariadb</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+    <Variable>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Value>0</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mariadb-icon.png</Icon>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/ubuntu</BaseImage>
+  <Category>Network:Other MediaApp:Other Other: Tools:Utilities</Category>
+  <Description>An Enhanced drop in replacement for Mysql</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/mariadb.xml</templatePath>
+</Container>

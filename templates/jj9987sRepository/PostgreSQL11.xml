@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/PostgreSQL11.xml</TemplateURL>
+  <Date>1525579200</Date>
+  <Name>Postgres11</Name>
+  <Project>https://www.postgresql.org/</Project>
+  <Overview>
+    PostgreSQL is a powerful, open source object-relational database system. Based on official Postgres Docker image.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/_/postgres/</Registry>
+  <GitHub>https://github.com/docker-library/postgres</GitHub>
+  <Repository>postgres:11</Repository>
+  <Support>https://lime-technology.com/forums/topic/69483-support-jj9987-postgresql/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5432</HostPort>
+        <ContainerPort>5432</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment>
+    <Variable>
+      <Name>POSTGRES_PASSWORD</Name>
+    </Variable>
+    <Variable>
+      <Name>POSTGRES_USER</Name>
+    </Variable>
+    <Variable>
+      <Name>POSTGRES_DB</Name>
+    </Variable>
+  </Environment>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Container Variable: POSTGRES_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Container Variable: POSTGRES_USER" Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Container Variable: POSTGRES_DB" Type="Variable" Display="always" Required="true" Mask="false">postgres</Config>
+  <Config Type="Path" Name="Database Storage Path" Target="/var/lib/postgresql/data" Default="/mnt/cache/appdata/postgres" Mode="rw" Display="always" Required="true" Description="This is where Postgres will store it's data.">/mnt/cache/appdata/postgres</Config>
+  <Config Type="Port" Name="Web Interface Port" Target="5432" Default="5432" Mode="tcp" Display="always-hide" Required="true" Description="This is Postgres TCP connection port.">5432</Config>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/postgres</HostDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/PostgreSQL-logo.png</Icon>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>PostgreSQL is a powerful, open source object-relational database system. Based on official Postgres Docker image.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jj9987sRepository/PostgreSQL11.xml</templatePath>
+</Container>

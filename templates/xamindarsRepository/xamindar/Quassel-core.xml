@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1478494800</Date>
+  <Name>Quassel-core</Name>
+  <Overview>
+	Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.    
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/xamindar/quassel-core/</Registry>
+  <GitHub>https://github.com/xamindar/docker-quassel-core/tree/master</GitHub>
+  <Repository>xamindar/quassel-core</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=39910</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>SSL_COUNTRY</Name>
+      <Value>WE</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_STATE</Name>
+      <Value>Kings Landing</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_LOCATION</Name>
+      <Value>Castle</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_ORG</Name>
+      <Value>Stark</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_GROUP</Name>
+      <Value>Bannermen</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_NAME</Name>
+      <Value>Bob</Value>
+    </Variable>
+    <Variable>
+      <Name>SSL_EMAIL</Name>
+      <Value>unraid@unraid.org</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4242</HostPort>
+        <ContainerPort>4242</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <Icon>https://i.imgur.com/UM4EqsF.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/xamindar/docker-templates/master/xamindar/Quassel-core.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Network:Messenger</Category>
+  <Description>Quassel IRC is a modern, cross-platform, distributed IRC client based on the Qt4 framework.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/xamindarsRepository/xamindar/Quassel-core.xml</templatePath>
+</Container>

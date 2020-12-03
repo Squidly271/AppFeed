@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>RDP-Boinc</Name>
+  <Overview>
+    BOINC lets you contribute computing power on your home PC to projects doing research in many scientific areas. You can contribute to a single project, or to any combination of them. RDP-Boinc is a docker for the BOINC manager and client that can be accessed through RDP.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/89740-help-take-the-fight-to-covid-19-with-boinc-and-foldinghome/</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-rdp-boinc/</Registry>
+  <GitHub>https://github.com/aptalca/docker-rdp-boinc</GitHub>
+  <Repository>aptalca/docker-rdp-boinc</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>WIDTH</Name>
+      <Value>1280</Value>
+    </Variable>
+    <Variable>
+      <Name>HEIGHT</Name>
+      <Value>720</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/#/client/c/Boinc</WebUI>
+  <Icon>https://boinc.berkeley.edu/logo/boinc_logo_128_trans.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/rdp-boinc.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Other:</Category>
+  <Description>BOINC lets you contribute computing power on your home PC to projects doing research in many scientific areas. You can contribute to a single project, or to any combination of them. RDP-Boinc is a docker for the BOINC manager and client that can be accessed through RDP.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/rdp-boinc.xml</templatePath>
+</Container>

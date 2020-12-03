@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>MKVToolNix-gui</Name>
+  <Project>https://www.bunkus.org/videotools/mkvtoolnix/</Project>
+  <Support>http://lime-technology.com/forum/index.php?topic=41775.0</Support>
+  <Overview>MKVToolNix is a set of tools to create, alter and inspect Matroska files under Linux, other Unices and Windows.</Overview>
+  <Date>1437883200</Date>
+  <Registry>https://registry.hub.docker.com/r/tobbenb/mkvtoolnix-gui</Registry>
+  <Repository>tobbenb/mkvtoolnix-gui</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/unRaid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/JNAwFKU.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/tobbenb/docker-containers/templates/tobbenb/MKVToolNix-gui.xml</TemplateURL>
+  <Category>MediaApp:Video Tools:Utilities</Category>
+  <Description>MKVToolNix is a set of tools to create, alter and inspect Matroska files under Linux, other Unices and Windows.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/tobbenbsRepository/tobbenb/MKVToolNix-gui.xml</templatePath>
+</Container>

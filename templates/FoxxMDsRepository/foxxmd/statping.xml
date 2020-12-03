@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>statping</Name>
+  <Repository>statping/statping:latest</Repository>
+  <Registry>https://hub.docker.com/r/statping/statping</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87497-support-foxxmd-statping/</Support>
+  <Project>https://github.com/hunterlong/statping</Project>
+  <Overview>An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/statping.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/icons/statping.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Date>1579323600</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8366</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/statping</HostDir>
+      <ContainerDir>/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Config" Target="/app" Default="/mnt/user/appdata/statping" Mode="rw" Description="Container Path: /app" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/statping</Config>
+  <Config Name="Web" Target="8080" Default="8366" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8366</Config>
+  <Category>Network:Web Network:Management</Category>
+  <Description>An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/statping.xml</templatePath>
+</Container>

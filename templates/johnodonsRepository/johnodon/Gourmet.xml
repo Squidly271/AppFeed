@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Gourmet</Name>
+  <Registry>https://hub.docker.com/r/johnodon/gourmet/</Registry>
+  <Repository>johnodon/gourmet</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Gourmet</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/n7LhKas.png</Icon>
+  <Overview>Gourmet Recipe Manager is a recipe-organizer available for Windows, Linux, and other Unix systems (including Mac OS X, i.e. via the Fink or MacPorts package managers) that allows you to collect, search, organize, and browse your recipes.</Overview>
+  <Date>1455080400</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=46473.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/johnodon/docker-templates/master/johnodon/Gourmet.xml</TemplateURL>
+  <Category>Tools:</Category>
+  <Description>Gourmet Recipe Manager is a recipe-organizer available for Windows, Linux, and other Unix systems (including Mac OS X, i.e. via the Fink or MacPorts package managers) that allows you to collect, search, organize, and browse your recipes.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/johnodonsRepository/johnodon/Gourmet.xml</templatePath>
+</Container>

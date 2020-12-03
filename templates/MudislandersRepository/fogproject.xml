@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>fogproject</Name>
+  <Repository>mudislander/fogproject</Repository>
+  <Registry>https://hub.docker.com/r/mudislander/fogproject//Dockerfile/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Project>https://fogproject.org/</Project>
+  <Overview>FOG Project can capture, deploy, and manage Windows, Mac OSX, and various Linux distributions.</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/Mudislander/docker-templates/master/fogproject.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Mudislander/docker-templates/master/img/fogproject_icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>69</HostPort>
+        <ContainerPort>69</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>69</HostPort>
+        <ContainerPort>69</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21</HostPort>
+        <ContainerPort>21</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/FOGServer/MySQL</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/FOGServer/images</HostDir>
+      <ContainerDir>/images</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.0.200</Value>
+      <Name>IP</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="MySQL" Target="/var/lib/mysql" Default="" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/FOGServer/MySQL</Config>
+  <Config Name="Images" Target="/images" Default="" Mode="rw" Description="Container Path: /images" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/FOGServer/images</Config>
+  <Config Name="IP Server" Target="IP" Default="" Mode="" Description="Container Variable: IP" Type="Variable" Display="always" Required="false" Mask="false">192.168.0.200</Config>
+  <Config Name="Port 80" Target="80" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Port 69 TCP" Target="69" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">69</Config>
+  <Config Name="Port 69 UDP" Target="69" Default="" Mode="udp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">69</Config>
+  <Config Name="Port 21" Target="21" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">21</Config>
+  <Config Name="Port 9000" Target="9000" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">9000</Config>
+  <Date>1553331122</Date>
+  <Category>Network:Other</Category>
+  <Description>FOG Project can capture, deploy, and manage Windows, Mac OSX, and various Linux distributions.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MudislandersRepository/fogproject.xml</templatePath>
+</Container>

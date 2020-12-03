@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>P3R-Firefox-Browser</Name>
+  <Repository>p3rco/firefox:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/p3rco/firefox</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://discord.gg/uRhFDDK</Support>
+  <Project>https://github.com/P3R-CO/firefox-container</Project>
+  <Overview>Firefox Browser in a forwarded X11 container.&#13;
+ Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.</Overview>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/P3R-CO/unraid/master/Firefox-P3R-256px.png</Icon>
+  <ExtraParams>--shm-size=2g</ExtraParams>
+  <DonateText>Please support me on Patreon</DonateText>
+  <DonateLink>https://www.patreon.com/keepitPG</DonateLink>
+  <Config Name="Web Port" Target="5800" Default="5800" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC Port" Target="5900" Default="5900" Mode="tcp" Description="Container Port: 5900" Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+  <Config Name="AppData" Target="/config/" Default="/mnt/user/appdata/P3R-Firefox-Browser/" Mode="rw" Description="Container Path: /config/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/P3R-Firefox-Browser/</Config>
+  <Config Name="Browser Downloads Folder" Target="/Downloads/" Default="" Mode="rw" Description="Container Path: /Downloads" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Browser Display Width" Target="DISPLAY_WIDTH" Default="1920" Mode="" Description="Display Width in Pixels" Type="Variable" Display="advanced-hide" Required="true" Mask="false">1920</Config>
+  <Config Name="Browser Display Height" Target="DISPLAY_HEIGHT" Default="1080" Mode="" Description="Display Height in Pixels" Type="Variable" Display="advanced-hide" Required="true" Mask="false">1080</Config>
+  <Config Name="VNC Password" Target="VNC_PASSWORD" Default="" Mode="" Description="Set New VNC Password" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/P3R-CO/unraid/master/firefox.xml</TemplateURL>
+  <Category>Productivity:</Category>
+  <Description>Firefox Browser in a forwarded X11 container.&#13;
+ Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/capt.asicsRepository/firefox.xml</templatePath>
+</Container>

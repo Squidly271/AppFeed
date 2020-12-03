@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Privileged>false</Privileged>
+  <Name>Ghost</Name>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi2.png</DonateImg>
+  <Overview>
+    Ghost is a fully open source, adaptable platform for building and running a modern online publication.
+    </Overview>
+  <Support>https://lime-technology.com/forums/topic/54183-support-cheesemarathons-repo/</Support>
+  <Registry>https://hub.docker.com/_/ghost/</Registry>
+  <GitHub>https://github.com/TryGhost/Ghost</GitHub>
+  <Project>https://docs.ghost.org/docs</Project>
+  <Repository>ghost</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2368</HostPort>
+        <ContainerPort>2368</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>database__connection__host</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ghost</Value>
+      <Name>database__connection__user</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>database__connection__password</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ghost</Value>
+      <Name>database__connection__database</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>url</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>production</Value>
+      <Name>NODE_ENV</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>SMTP</Value>
+      <Name>mail__transport</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Mailgun</Value>
+      <Name>mail__options__service</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>mail__options__auth__user</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>mail__options__auth__pass</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>database__client</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ghost</HostDir>
+      <ContainerDir>/var/lib/ghost/content</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/Ghost.png</Icon>
+  <Config Name="Database IP" Target="database__connection__host" Default="" Mode="" Description="The IP for the machine hosting the database" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database User" Target="database__connection__user" Default="ghost" Mode="" Description="The user for use with the database" Type="Variable" Display="always" Required="true" Mask="false">ghost</Config>
+  <Config Name="Database Password" Target="database__connection__password" Default="" Mode="" Description="The password for the user used with the database" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Database Name" Target="database__connection__database" Default="ghost" Mode="" Description="The name of the database to create" Type="Variable" Display="always" Required="true" Mask="false">ghost</Config>
+  <Config Name="URL" Target="url" Default="" Mode="" Description="Site URL" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mail Transport" Target="mail__transport" Default="" Mode="" Description="Mail transport method" Type="Variable" Display="always" Required="false" Mask="false">SMTP</Config>
+  <Config Name="Mail Service" Target="mail__options__service" Default="" Mode="" Description="Mail service" Type="Variable" Display="always" Required="false" Mask="false">Mailgun</Config>
+  <Config Name="Mailgun Username" Target="mail__options__auth__user" Default="" Mode="" Description="Username for Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mailgun Password" Target="mail__options__auth__pass" Default="" Mode="" Description="Password for Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Type" Target="database__client" Default="" Mode="" Description="Database Type: Leave as mysql" Type="Variable" Display="advanced" Required="true" Mask="false">mysql</Config>
+  <Config Name="Appdata Location" Target="/var/lib/ghost/content" Default="/mnt/user/appdata/ghost" Mode="rw" Description="Container Path: /var/lib/ghost" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/ghost</Config>
+  <Config Name="Web" Target="2368" Default="2368" Mode="tcp" Description="Web port for Ghost" Type="Port" Display="advanced" Required="true" Mask="false">2368</Config>
+  <Config Name="NODE_ENV" Target="NODE_ENV" Default="" Mode="" Description="Container Variable: NODE_ENV" Type="Variable" Display="advanced" Required="false" Mask="false">production</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/ghost.xml</TemplateURL>
+  <Category>Network:Web</Category>
+  <Description>Ghost is a fully open source, adaptable platform for building and running a modern online publication.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/ghost.xml</templatePath>
+</Container>

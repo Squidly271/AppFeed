@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1541998800</Date>
+  <Name>OnlyOfficeDocumentServer</Name>
+  <Project>https://www.onlyoffice.com/</Project>
+  <Overview>
+    ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+	HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it. Add fonts by placing [fontname].ttf in the font folder and force updating the container.  
+  </Overview>
+  <Registry>https://hub.docker.com/r/onlyoffice/documentserver/</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>onlyoffice/documentserver</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/logs</HostDir>
+      <ContainerDir>/var/log/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/Data</HostDir>
+      <ContainerDir>/var/www/onlyoffice/Data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/lib</HostDir>
+      <ContainerDir>/var/lib/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/database</HostDir>
+      <ContainerDir>/var/lib/postgresql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/fonts</HostDir>
+      <ContainerDir>/usr/share/fonts/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4430</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Environment></Environment>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://pbs.twimg.com/profile_images/801693107125362689/al5MQBQM_normal.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/onlyoffice_document_server.xml</TemplateURL>
+  <Category>Productivity: Tools:</Category>
+  <Description>ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+	HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it. Add fonts by placing .ttf in the font folder and force updating the container.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/onlyoffice_document_server.xml</templatePath>
+</Container>

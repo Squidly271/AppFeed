@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Ubuntu-xrdp</Name>
+  <Date>1584504000</Date>
+  <Support>http://lime-technology.com/forum/index.php?topic=43610.0</Support>
+  <Overview>LXDE desktop ubuntu (use remote desktop client to connect)</Overview>
+  <Registry>https://registry.hub.docker.com/r/snoopy86/desktop-dockers/</Registry>
+  <Repository>snoopy86/desktop-dockers</Repository>
+  <DonateText>Buy me a beer.</DonateText>
+  <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=FDMP56NCG5A26&amp;source=url</DonateLink>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>6080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/ubuntu/.config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/ubuntu/unraid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://findicons.com/files/icons/1008/quiet/256/ubuntu.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/ubuntu-xrdp.xml</TemplateURL>
+  <Category>Productivity:</Category>
+  <Description>LXDE desktop ubuntu (use remote desktop client to connect)</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/snoopy86sRepository/snoopy/ubuntu-xrdp.xml</templatePath>
+</Container>

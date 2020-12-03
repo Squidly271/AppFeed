@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1461988800</Date>
+  <Name>Bjonness406-Ombi</Name>
+  <Repository>rogueosb/ombi</Repository>
+  <Registry>https://hub.docker.com/r/rogueosb/ombi/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=48798.0</Support>
+  <Overview>&#13;
+    Ombi is a simple automated way for users to request new content on for example Plex.[br][br]&#13;
+    [b]/config[/b] is where the Ombi configuration and library files are stored. [br][br]&#13;
+    Thanks to rogueosb for creating the docker! &#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:3579]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/bjonness406/Docker-templates/master/Bjonness406/Ombi.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/bjonness406/Docker-templates/master/Icon/Ombi_new.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3579</HostPort>
+        <ContainerPort>3579</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>0</Value>
+      <Name>DEV</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WebUI port" Target="3579" Default="3579" Mode="tcp" Description="Port for Ombi WebUI" Type="Port" Display="always-hide" Required="true" Mask="false">3579</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="path to config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">path to config</Config>
+  <Config Name="Use Dev branch" Target="DEV" Default="0" Mode="" Description="1= use dev branch, 0= use stable branch&#13;&#10;- USE AT YOUR OWN RISK!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">0</Config>
+  <Category>HomeAutomation: Network:Web MediaApp:Other</Category>
+  <Description>Ombi is a simple automated way for users to request new content on for example Plex.&#13;
+    /config is where the Ombi configuration and library files are stored. &#13;
+    Thanks to rogueosb for creating the docker!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Bjonness406sRepository/Bjonness406/Ombi.xml</templatePath>
+</Container>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1488517200</Date>
+  <changes>
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png'][/center]
+  [center][font size=4]slack-invite Changelog[/font][/center]
+  [b]03MAR2017:[/b] Initial unRAID Template release[br]
+</changes>
+  <Name>slack-invite</Name>
+  <Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
+  <Project>httpss://github.com/ninthwalker/slack-invite</Project>
+  <Registry>https://hub.docker.com/r/ninthwalker/slack-invite/</Registry>
+  <Repository>ninthwalker/slack-invite</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>COMMUNITY_NAME</Name>
+      <Value>myslackteam</Value>
+    </Variable>
+    <Variable>
+      <Name>SLACK_URL</Name>
+      <Value>myslackteam.slack.com</Value>
+    </Variable>
+    <Variable>
+      <Name>SLACK_TOKEN</Name>
+      <Value>Enter YOur slack token here</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7879</HostPort>
+        <ContainerPort>7879</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Version>1.0</Version>
+  <WebUI>http://[IP]:[PORT:7879]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png</Icon>
+  <Overview>Creates a simple webpage for Slack invite signups</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/slack-invite.xml</TemplateURL>
+  <Category>Network:Messenger Productivity:</Category>
+  <Description>Creates a simple webpage for Slack invite signups</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ninthwalkersRepository/Ninthwalker/slack-invite.xml</templatePath>
+</Container>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>NowShowing-v2</Name>
+  <Repository>ninthwalker/nowshowing:v2</Repository>
+  <Registry>https://registry.hub.docker.com/r/ninthwalker/nowshowing/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
+  <Support>https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/</Support>
+  <Overview>Sends an email and creates a website of recently added media to your Plex Server.[br]
+    Access the admin web interface by going to http://ip:port/admin.[br]
+    To enable fail2ban, please add "--cap-add=NET_ADMIN" to the Docker settings 'Extra Parameters:' field.[br]
+    This field can be shown by enabling Advanced View by clicking the 'basic' toggle switch in unRAID.
+  </Overview>
+  <Date>1520913600</Date>
+  <Project>https://github.com/ninthwalker/NowShowing</Project>
+  <WebUI>http://[IP]:[PORT:6878]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/NowShowing%20v2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6878</HostPort>
+        <ContainerPort>6878</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/cache/appdata/NowShowingv2</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <BaseImage>alpine:3.5</BaseImage>
+  <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/cache/appdata/NowShowingv2" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/cache/appdata/NowShowing</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Optional PUID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Optional PGID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Video MediaServer:Video</Category>
+  <Description>Sends an email and creates a website of recently added media to your Plex Server.
+    Access the admin web interface by going to http://ip:port/admin.
+    To enable fail2ban, please add "--cap-add=NET_ADMIN" to the Docker settings 'Extra Parameters:' field.
+    This field can be shown by enabling Advanced View by clicking the 'basic' toggle switch in unRAID.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ninthwalkersRepository/Ninthwalker/NowShowing v2.xml</templatePath>
+</Container>

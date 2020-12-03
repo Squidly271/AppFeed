@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>neo4j</Name>
+  <Repository>neo4j</Repository>
+  <Registry>https://hub.docker.com/_/neo4j/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/70658-support-data-monkey-neo4j</Support>
+  <Project>https://neo4j.com/</Project>
+  <Overview>Neo4j is a highly scalable, robust native graph database.</Overview>
+  <WebUI>http://[IP]:[PORT:7474]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/neo4j.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/neo4j.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Thanks for the coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;amp;amp;amp;business=MDUDJ3BAXMJ4C&amp;amp;amp;amp;item_name=thanks+for+the+coffee%21&amp;amp;amp;amp;currency_code=AUD&amp;amp;amp;amp;source=url</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7474</HostPort>
+        <ContainerPort>7474</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7687</HostPort>
+        <ContainerPort>7687</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/neo4j/data/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>none</Value>
+      <Name>NEO4J_AUTH</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/neo4j/data/</Config>
+  <Config Name="WebUI" Target="7474" Default="7474" Mode="tcp" Description="WebUI HTTP Port" Type="Port" Display="always" Required="false" Mask="false">7474</Config>
+  <Config Name="Bolt" Target="7687" Default="7687" Mode="tcp" Description="Bolt access to the Neo4j API" Type="Port" Display="always" Required="false" Mask="false">7687</Config>
+  <Config Name="NEO4J_AUTH" Target="NEO4J_AUTH" Default="none" Mode="" Description="Container Variable: NEO4J_AUTH" Type="Variable" Display="always" Required="false" Mask="false">none</Config>
+  <changes>
+[center] [b]Data-Monkey:[/b] neo4j [/center]
+
+[center][font size=4]Change Log[/font][/center]
+
+[font size=3]2020.03.07[/font]
+- some cosmetic changes
+
+[font size=3]2018.03.25[/font]
+- Initial release of the neo4j template
+  </changes>
+  <Date>1583547610</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>Neo4j is a highly scalable, robust native graph database.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/RolandsRepository/Data-Monkey/neo4j.xml</templatePath>
+</Container>

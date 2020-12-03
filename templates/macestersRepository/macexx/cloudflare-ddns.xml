@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>CloudFlare</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=40630.0</Support>
+  <Registry>https://registry.hub.docker.com/r/mace/cloudflare-ddns/</Registry>
+  <GitHub>https://github.com/macexx/cloudflare-ddns</GitHub>
+  <Repository>mace/cloudflare-ddns</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>CF_EMAIL</Name>
+      <Value>your@cloudflare_email.com</Value>
+    </Variable>
+    <Variable>
+      <Name>CF_HOST</Name>
+      <Value>sub.domain.com</Value>
+    </Variable>
+    <Variable>
+      <Name>CF_API</Name>
+      <Value>a1b2c3d4e5</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir></ContainerDir>
+      <Mode></Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://i.imgur.com/PKa3Sm2.png</Icon>
+  <Date>1433995200</Date>
+  <TemplateURL>https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/cloudflare-ddns.xml</TemplateURL>
+  <Overview>
+    CloudFlare is a free DNS host that can act as a reverse proxy for websites. Its network protects, speeds up, and improves availability for a website or mobile application with a change in DNS.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    Click [b]"Advanced View"[/b] in the upper right corner.[br]
+	Scroll down and change the [b]Environment Variables[/b] to match your CloudFlare details.
+  </Overview>
+  <Category>Network:DNS</Category>
+  <Description>CloudFlare is a free DNS host that can act as a reverse proxy for websites. Its network protects, speeds up, and improves availability for a website or mobile application with a change in DNS.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/macestersRepository/macexx/cloudflare-ddns.xml</templatePath>
+</Container>

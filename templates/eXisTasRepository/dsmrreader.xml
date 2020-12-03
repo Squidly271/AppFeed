@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>DSMRReader</Name>
+  <Repository>xirixiz/dsmr-reader-docker</Repository>
+  <Registry>https://hub.docker.com/r/xirixiz/dsmr-reader-docker</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/to-be-created/</Support>
+  <Overview>DSMR protocol reader. Stores data read and visualizes it. </Overview>
+  <Date>1585713600</Date>
+  <WebUI>http://[IP]:[PORT:8888]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/basroovers/unraid-templates/master/dsmrreader.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dsmrreader/dsmr-reader/v3/dsmr_frontend/static/dsmr_frontend/img/favicons/favicon-32x32.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/dsmr-reader/backups</HostDir>
+      <ContainerDir>/home/dsmr/app/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DSMR_USER" Target="DSMR_USER" Default="" Mode="" Description="Container Variable: DSMR_USER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DSMR_EMAIL" Target="DSMR_EMAIL" Default="" Mode="" Description="Container Variable: DSMR_EMAIL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DSMR_PASSWORD" Target="DSMR_PASSWORD" Default="" Mode="" Description="Container Variable: DSMR_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="VIRTUAL_HOST" Target="VIRTUAL_HOST" Default="" Mode="" Description="Container Variable: VIRTUAL_HOST" Type="Variable" Display="always" Required="true" Mask="false">localhost</Config>
+  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="P1" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="AppData" Target="/home/dsmr/app/backups" Default="" Mode="rw" Description="Container Path: /home/dsmr/app/backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dsmr-reader/backups</Config>
+  <Category>HomeAutomation:</Category>
+  <Description>DSMR protocol reader. Stores data read and visualizes it.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/eXisTasRepository/dsmrreader.xml</templatePath>
+</Container>

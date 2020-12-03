@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>multi-scrobbler</Name>
+  <Repository>foxxmd/multi-scrobbler:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/foxxmd/multi-scrobbler</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/99133-support-foxxmd-multi-scrobbler/</Support>
+  <Overview>Scrobble plays from Spotify and Plex/Tautuilli to Maloja (and more...eventually!)&#13;
+        &#13;
+        This app is in active development! Refer to the support thread for configuration, help, and feature requests.</Overview>
+  <Beta>true</Beta>
+  <Date>1605762000</Date>
+  <WebUI>http://[IP]:[PORT:9078]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/multi-scrobbler.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/icons/multi-scrobbler.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9078</HostPort>
+        <ContainerPort>9078</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/spotify-scrobbler/config</HostDir>
+      <ContainerDir>/home/node/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/spotify-scrobbler/logs</HostDir>
+      <ContainerDir>/home/node/app/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Web Port" Target="9078" Default="" Mode="tcp" Description="Container Port: 9078" Type="Port" Display="always" Required="false" Mask="false">9078</Config>
+  <Config Name="Config" Target="/home/node/config" Default="" Mode="rw" Description="Container Path: /home/node/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/spotify-scrobbler/config</Config>
+  <Config Name="Logs" Target="/home/node/app/logs" Default="" Mode="rw" Description="Container Path: /home/node/app/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/spotify-scrobbler/logs</Config>
+  <Category>Network:Web MediaServer:Music Status:Beta</Category>
+  <Description>Scrobble plays from Spotify and Plex/Tautuilli to Maloja (and more...eventually!)&#13;
+        &#13;
+        This app is in active development! Refer to the support thread for configuration, help, and feature requests.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/multi-scrobbler.xml</templatePath>
+</Container>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>FlexConnect</Name>
+  <Repository>digitalhigh/flexconnect</Repository>
+  <Registry>https://hub.docker.com/r/digitalhigh/flexconnect</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/d8ahazard/FlexConnect</Support>
+  <Project>https://github.com/d8ahazard/FlexConnect</Project>
+  <Overview>&#13;
+    FlexConnect is a stand-alone version of the FlexTV Plugin. It is intended as a replacement once Plex sunsest the plugin feature. This is currently for development purposes only.&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5667]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/d8ahazard/unraid-repository/master/docker-template/flexconnect.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/d8ahazard/Phlex/master/img/android-icon-144x144.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like it, consider buying me a beer.</DonateText>
+  <DonateLink>https://www.paypal.me/donate.to.digitalhigh</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/plex</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/FlexConnect</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 2" Target="/plex" Default="" Mode="ro" Description="Container Path: /plex" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FlexConnect" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FlexConnect</Config>
+  <Date>1556307140</Date>
+  <Category>Tools:</Category>
+  <Description>FlexConnect is a stand-alone version of the FlexTV Plugin. It is intended as a replacement once Plex sunsest the plugin feature. This is currently for development purposes only.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/d8ahazardsRepository/docker-template/flexconnect.xml</templatePath>
+</Container>

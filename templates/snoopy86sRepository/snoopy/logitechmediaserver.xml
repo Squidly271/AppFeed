@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1585800000</Date>
+  <Name>LogitechMediaServer-8.0</Name>
+  <Overview>
+    Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices), developed in particular to support their Squeezebox range of digital audio receivers.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/snoopy86/logitechmediaserver/</Registry>
+  <Repository>snoopy86/logitechmediaserver</Repository>
+  <Support>https://lime-technology.com/forum/index.php?topic=43610.0</Support>
+  <DonateText>Buy me a beer.</DonateText>
+  <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=FDMP56NCG5A26&amp;source=url</DonateLink>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3483</HostPort>
+        <ContainerPort>3483</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3483</HostPort>
+        <ContainerPort>3483</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5353</HostPort>
+        <ContainerPort>5353</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/LogitechMediaServer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/dbus</HostDir>
+      <ContainerDir>/var/run/dbus</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Icon>https://i.imgur.com/PoUuA3k.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/logitechmediaserver.xml</TemplateURL>
+  <Category>MediaServer:Music</Category>
+  <Description>Logitech Media Server (formerly SlimServer, SqueezeCenter and Squeezebox Server) is a streaming audio server supported by Logitech (formerly Slim Devices), developed in particular to support their Squeezebox range of digital audio receivers.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/snoopy86sRepository/snoopy/logitechmediaserver.xml</templatePath>
+</Container>

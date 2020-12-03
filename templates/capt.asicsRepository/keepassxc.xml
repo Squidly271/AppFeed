@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>P3R-KeePassXC</Name>
+  <Repository>p3rco/keepassxc:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/p3rco/keepassxc</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/uRhFDDK</Support>
+  <Project>https://github.com/P3R-CO/keepassxc-container</Project>
+  <Overview>KeePassXC in a container.  Keep your passwords safe!&#13;
+I highly recommend also downloading the KeePassXC browser extension for easy input of passwords on webpages.&#13;&#13;
+Save your database in the /config folder for persistence after updates/reboots and backups with your AppData.</Overview>
+  <WebUI>http://[IP]:[PORT:5800]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/P3R-CO/unraid/master/KeePassXC-P3R-256px.png</Icon>
+  <DonateText>Please support me on Patreon</DonateText>
+  <DonateLink>https://www.patreon.com/keepitPG</DonateLink>
+  <Config Name="Web Port" Target="5800" Default="5800" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC Port" Target="5900" Default="5900" Mode="tcp" Description="Container Port: 5900" Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+  <Config Name="AppData" Target="/config/" Default="/mnt/user/appdata/P3R-KeePassXC/" Mode="rw" Description="Container Path: /config/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/P3R-KeePassXC/</Config>
+  <Config Name="VNC Password" Target="VNC_PASSWORD" Default="" Mode="" Description="Set New VNC Password" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/P3R-CO/unraid/master/keepassxc.xml</TemplateURL>
+  <Category>Security: Tools:Utilities</Category>
+  <Description>KeePassXC in a container.  Keep your passwords safe!&#13;
+I highly recommend also downloading the KeePassXC browser extension for easy input of passwords on webpages.&#13;&#13;
+Save your database in the /config folder for persistence after updates/reboots and backups with your AppData.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/capt.asicsRepository/keepassxc.xml</templatePath>
+</Container>

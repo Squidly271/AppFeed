@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>HDDTemp</Name>
+  <Repository>drewster727/hddtemp-docker</Repository>
+  <Registry>https://hub.docker.com/r/drewster727/hddtemp-docker/</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forums/topic/49775-support-for-atribes-repo-docker-images/</Support>
+  <Project>https://hub.docker.com/r/drewster727/hddtemp-docker/</Project>
+  <Overview>Ubuntu based image with hddtemp installed and configured to be accessible by other docker containers. In this case it is perfect for use with Telegraf and it's hdd temp plugin.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/atribe/unRAID-docker/master/hddtemp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/atribe/unRAID-docker/master/icons/hddtemp.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer></MinVer>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/dev</HostDir>
+      <ContainerDir>/dev</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>America/Denver</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>-q -d -F /dev/sd*</Value>
+      <Name>HDDTEMP_ARGS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="docker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="/dev" Target="/dev" Default="/dev" Mode="rw" Description="Container Path: /dev" Type="Path" Display="always" Required="true" Mask="false">/dev</Config>
+  <Config Name="timezone" Target="TZ" Default="America/Denver" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false">America/Denver</Config>
+  <Config Name="HDDTEMP_ARGS" Target="HDDTEMP_ARGS" Default="-q -d -F /dev/sd*" Mode="" Description="Container Variable: HDDTEMP_ARGS" Type="Variable" Display="always" Required="true" Mask="false">-q -d -F /dev/sd*</Config>
+  <Date>1528858402</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>Ubuntu based image with hddtemp installed and configured to be accessible by other docker containers. In this case it is perfect for use with Telegraf and it's hdd temp plugin.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/atribesRepository/hddtemp.xml</templatePath>
+</Container>

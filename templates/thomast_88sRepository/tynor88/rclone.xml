@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Rclone</Name>
+  <Repository>tynor88/rclone:dev</Repository>
+  <Registry>https://hub.docker.com/r/tynor88/rclone/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/50309-support-rclone-beta/</Support>
+  <Overview>Docker for Rclone - a command line program to sync files and directories to and from various cloud services.</Overview>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/rclone_small.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>SYNC_DESTINATION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SYNC_DESTINATION_SUBPATH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CRON_SCHEDULE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SYNC_COMMAND</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Config Path" Target="/config" Default="/mnt/cache/appdata/rclone/config/" Mode="rw" Description="The path to where the .rclone.conf file is" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Data Path" Target="/data" Default="" Mode="ro" Description="The path to the data which should be backed up by Rclone" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Sync Destination" Target="SYNC_DESTINATION" Default="" Mode="" Description="The destination that the data should be backed up to (must be the same name as specified in .rclone.conf)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Sync Destination Subpath" Target="SYNC_DESTINATION_SUBPATH" Default="" Mode="" Description="If the data should be backed up to a subpath on the destionation (will automaticly be created if it does not exist)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Cron Schedule" Target="CRON_SCHEDULE" Default="0 * * * *" Mode="" Description="A custom cron schedule which will override the default value of: 0 * * * * (hourly)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Sync Command" Target="SYNC_COMMAND" Default="" Mode="" Description="A custom rclone command which will override the default value of: rclone sync /data $SYNC_DESTINATION:/$SYNC_DESTINATION_SUBPATH" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Beta>true</Beta>
+  <Date>1474257600</Date>
+  <Project>http://rclone.org/</Project>
+  <BaseImage>quay.io/justcontainers/base-alpine</BaseImage>
+  <TemplateURL>https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/rclone.xml</TemplateURL>
+  <Category>Backup: Cloud: Status:Beta</Category>
+  <Description>Docker for Rclone - a command line program to sync files and directories to and from various cloud services.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/thomast_88sRepository/tynor88/rclone.xml</templatePath>
+</Container>

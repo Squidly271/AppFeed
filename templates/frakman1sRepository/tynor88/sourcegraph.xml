@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1575176400</Date>
+  <Name>Sourcegraph</Name>
+  <Overview>Sourcegraph docker image.</Overview>
+  <Support>http://lime-technology.com/forum/index.php</Support>
+  <Registry>https://hub.docker.com/r/sourcegraph/server/</Registry>
+  <GitHub>https://github.com/sourcegraph/sourcegraph</GitHub>
+  <Repository>sourcegraph/server:3.10.0</Repository>
+  <ExtraParams>-d --rm</ExtraParams>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7080</HostPort>
+        <ContainerPort>7080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2633</HostPort>
+        <ContainerPort>2633</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3370</HostPort>
+        <ContainerPort>3370</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/sourcegraph/config</HostDir>
+      <ContainerDir>/etc/sourcegraph</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/sourcegraph/data</HostDir>
+      <ContainerDir>/var/opt/sourcegraph</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <WebUI>http://[IP]:[PORT:7080]</WebUI>
+  <Icon>https://raw.githubusercontent.com/sourcegraph/themes/master/icon.png</Icon>
+  <Network Default="bridge">bridge</Network>
+  <Config Name="Web Interface Port (HTTP)" Target="7080" Default="7080" Mode="tcp" Description="This is SourceGraph's Web UI port you can access via a web browser." Type="Port" Display="always-hide" Required="true" Mask="{8}">7080</Config>
+  <Config Name="Admin Console Port" Target="2633" Default="2633" Mode="tcp" Description="This is SourceGraph's Admin Console WebUI port you can access via a web browser" Type="Port" Display="always-hide" Required="true" Mask="{8}">2633</Config>
+  <Config Name="Grafana Port" Target="3370" Default="3370" Mode="tcp" Description="This is SourceGraph's Grafana Port you can access via a web browser" Type="Port" Display="always-hide" Required="true" Mask="{8}">3370</Config>
+  <Config Type="Path" Name="Config Storage Path" Target="/etc/sourcegraph" Default="/mnt/cache/appdata/sourcegraph/config" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Sourcegraph will store its configuration files (use cache drive).">/mnt/cache/appdata/sourcegraph/config</Config>
+  <Config Type="Path" Name="Application Data Storage Path" Target="/var/opt/sourcegraph" Default="/mnt/cache/appdata/sourcegraph/data" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Sourcegraph will store its application data (use cache drive).">/mnt/cache/appdata/sourcegraph/data</Config>
+  <TemplateURL>https://raw.githubusercontent.com/frakman1/docker-templates/master/tynor88/sourcegraph.xml</TemplateURL>
+  <Category>Backup: Cloud: Network:Web Productivity: Tools:Utilities</Category>
+  <Description>Sourcegraph docker image.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/frakman1sRepository/tynor88/sourcegraph.xml</templatePath>
+</Container>

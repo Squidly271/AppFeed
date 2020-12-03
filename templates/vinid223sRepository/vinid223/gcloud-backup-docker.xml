@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>gcloud-backup-docker</Name>
+  <Overview>
+    A simple way to backup important files to Google Cloud Storage
+  </Overview>
+  <Support>https://forums.unraid.net/topic/99258-supportcontainer-vinid223s-google-cloud-storage-backup/</Support>
+  <Registry>https://hub.docker.com/r/vinid223/gcloud-storage-backup</Registry>
+  <GitHub>https://github.com/vinid223/GcloudStorage-docker</GitHub>
+  <Repository>vinid223/gcloud-storage-backup</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ACCESS_KEY</Name>
+      <Value>Container Variable: ACCESS_KEY</Value>
+    </Variable>
+    <Variable>
+      <Name>SECRET_KEY</Name>
+      <Value>Container Variable: SECRET_KEY</Value>
+    </Variable>
+    <Variable>
+      <Name>GCSPATH</Name>
+      <Value>gs://mybucket/</Value>
+    </Variable>
+    <Variable>
+      <Name>GCSOPTIONS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>CRON_SCHEDULE</Name>
+      <Value>0 * * * *</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <Name>Backup path</Name>
+      <HostDir>/mnt/user/backup</HostDir>
+      <ContainerDir>/data/backup</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://i.imgur.com/jdjTCs8.png</Icon>
+  <DonateText>If you like this image or just want to give me a coffee</DonateText>
+  <DonateLink>https://paypal.me/vinid223</DonateLink>
+  <Date>1605934800</Date>
+  <TemplateURL>https://raw.githubusercontent.com/vinid223/unraid-docker-templates/master/vinid223/gcloud-backup-docker.xml</TemplateURL>
+  <Category>Backup: Cloud:</Category>
+  <Description>A simple way to backup important files to Google Cloud Storage</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/vinid223sRepository/vinid223/gcloud-backup-docker.xml</templatePath>
+</Container>

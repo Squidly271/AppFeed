@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>CalibreWeb</Name>
+  <Repository>technosoft2000/calibre-web</Repository>
+  <Registry>https://registry.hub.docker.com/r/technosoft2000/calibre-web/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61046-support-calibre-web/</Support>
+  <Overview>Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an &amp;lt;b&amp;gt;existing Calibre database&amp;lt;/b&amp;gt;.</Overview>
+  <WebUI>http://[IP]:[PORT:8083]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/CalibreWeb.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/calibreweb.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SET_CONTAINER_TIMEZONE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>UTC</Value>
+      <Name>CONTAINER_TIMEZONE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WebFrontend" Target="8083" Default="8083" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="true" Mask="false">8083</Config>
+  <Config Name="Calibre library path" Target="/books" Default="" Mode="rw" Description="Container Path: /books" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="GroupID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UserID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="SET_CONTAINER_TIMEZONE" Target="SET_CONTAINER_TIMEZONE" Default="true|false" Mode="" Description="Container Variable: SET_CONTAINER_TIMEZONE" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="CONTAINER_TIMEZONE" Target="CONTAINER_TIMEZONE" Default="UTC" Mode="" Description="The possible container timezones can be found under the directory /usr/share/zoneinfo/.&#13;&#10;UTC, Europe/Berlin, Europe/Vienna&#13;&#10;, ..." Type="Variable" Display="always" Required="true" Mask="false">UTC</Config>
+  <Category>MediaApp:Books MediaServer:Books</Category>
+  <Description>Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fanningertsRepository/fanningert/CalibreWeb.xml</templatePath>
+</Container>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Unraid-API</Name>
+  <Beta>true</Beta>
+  <Support>https://forums.unraid.net/topic/86354-support-electric-brain-unraid-api/</Support>
+  <Overview>This is an MQTT Home Assistant Bridge with a rest endpoint as well that allows control of unraid from this docker, homeassistant and MQTT/REST generally.
+  
+  
+Icon made by https://www.flaticon.com/authors/freepik Freepik
+</Overview>
+  <Registry>https://cloud.docker.com/repository/docker/electricbrainuk/unraidapi</Registry>
+  <Repository>electricbrainuk/unraidapi</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3005</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>MQTTBroker</Name>
+      <Value>hassio</Value>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Name>MQTTPort</Name>
+      <Value>1883</Value>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Name>MQTTUser</Name>
+      <Value>mqtt</Value>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Name>MQTTPass</Name>
+      <Value>pass</Value>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Name>MQTTBaseTopic</Name>
+      <Value>homeassistant</Value>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Name>KeyStorage</Name>
+      <Value>config</Value>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Unraid-API</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/ElectricBrainUK/UnraidAPI/master/static/icon.png</Icon>
+  <DonateText>We develop all of our apps in our spare time so if you feel like supporting us please donate</DonateText>
+  <DonateLink>https://www.paypal.me/electricbrain</DonateLink>
+  <TemplateURL>https://raw.githubusercontent.com/ElectricBrainUK/docker-templates/master/unraid-api.xml</TemplateURL>
+  <Category>HomeAutomation: Tools:Utilities Status:Beta</Category>
+  <Description>This is an MQTT Home Assistant Bridge with a rest endpoint as well that allows control of unraid from this docker, homeassistant and MQTT/REST generally.
+  
+  
+Icon made by https://www.flaticon.com/authors/freepik Freepik</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ElectricBrainUKsRepository/unraid-api.xml</templatePath>
+</Container>

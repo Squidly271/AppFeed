@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Overview>Splunk is a remote syslog server that accepts any data feed.</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38548.0</Support>
+  <Date>1491451200</Date>
+  <Name>splunk</Name>
+  <Registry>https://registry.hub.docker.com/r/dmaxwell/splunk/</Registry>
+  <Repository>dmaxwell/splunk</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8089</HostPort>
+        <ContainerPort>8089</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9997</HostPort>
+        <ContainerPort>9997</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>514</HostPort>
+        <ContainerPort>514</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunk</HostDir>
+      <ContainerDir>/opt/splunk/var</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>6.5.3</Version>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon>https://i.imgur.com/KKoQMo6.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/dmaxwell351/docker-containers/templates/dmaxwell351/splunk.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Network:Management</Category>
+  <Description>Splunk is a remote syslog server that accepts any data feed.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dmaxwellsRepository/dmaxwell351/splunk.xml</templatePath>
+</Container>

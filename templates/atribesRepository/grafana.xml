@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1490068800</Date>
+  <Name>Grafana</Name>
+  <Overview>
+    Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
+  </Overview>
+  <Project>http://grafana.org/</Project>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Registry>https://hub.docker.com/r/grafana/grafana/</Registry>
+  <GitHub>https://github.com/grafana/grafana</GitHub>
+  <Repository>grafana/grafana</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>GF_SERVER_ROOT_URL</Name>
+      <Value>http://your.server.ip.or.hostname</Value>
+    </Variable>
+    <Variable>
+      <Name>GF_SECURITY_ADMIN_PASSWORD</Name>
+      <Value>admin</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/grafana</HostDir>
+      <ContainerDir>/var/lib/grafana</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/atribe/unRAID-docker/master/icons/grafana.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/atribe/unRAID-docker/master/grafana.xml</TemplateURL>
+  <Category>Network:Management Tools:Utilities</Category>
+  <Description>Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/atribesRepository/grafana.xml</templatePath>
+</Container>

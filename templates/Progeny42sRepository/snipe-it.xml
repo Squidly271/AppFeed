@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>snipe-it</Name>
+  <Repository>snipe/snipe-it</Repository>
+  <Registry>https://hub.docker.com/r/snipe/snipe-it/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96573-guide-setting-up-snipe-it-on-unraid/</Support>
+  <Project>https://github.com/snipe/snipe-it</Project>
+  <Overview>This is a FOSS project for asset management in IT Operations. Knowing who has which laptop, when it was purchased in order to depreciate it correctly, handling software licenses, etc.&#13;
+&#13;
+It is built on Laravel 5.5.&#13;
+&#13;
+Snipe-IT is actively developed and we release quite frequently. (Check out the live demo here.)&#13;
+&#13;
+This is web-based software. This means there is no executable file (aka no .exe files), and it must be run on a web server and accessed through a web browser. It runs on any Mac OSX, flavor of Linux, as well as Windows, and we have a Docker image available if that's what you're into.</Overview>
+  <Date>1599278400</Date>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Config Name="MySQL Database Name" Target="MYSQL_DATABASE" Default="" Mode="" Description="The name of your Snipe-IT database." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Username" Target="MYSQL_USER" Default="" Mode="" Description="The MySQL username you set up to access the database." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Password" Target="MYSQL_PASSWORD" Default="" Mode="" Description="Your database password for the userd" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="MySQL Database Host" Target="MYSQL_PORT_3306_TCP_ADDR" Default="" Mode="" Description="The host for your database" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Database Port" Target="MYSQL_PORT_3306_TCP_PORT" Default="3306" Mode="" Description="Port number of your MySQL Database." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP Address" Target="MAIL_PORT_587_TCP_ADDR" Default="" Mode="" Description="Specify the hostname for your outgoing mail server. Keep in mind that this server must be accessible from the server you're running Snipe-IT on." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP Port" Target="MAIL_PORT_587_TCP_PORT" Default="" Mode="" Description="Set the port number that your mail server expects to send from" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP From Address" Target="MAIL_ENV_FROM_ADDR" Default="" Mode="" Description="Specify an email address that is used globally for all e-mails that are sent by your application." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP From Name" Target="MAIL_ENV_FROM_NAME" Default="" Mode="" Description="Specify the name that should show up in the recipient's inbox when they receive email from your Snipe-IT instance." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP Encryption" Target="MAIL_ENV_ENCRYPTION" Default="" Mode="" Description="Here you may specify the encryption protocol that should be used when the application sends e-mail messages. &#13;&#10;&#13;&#10;'tls' for SMTP-over-SSL &#13;&#10;'tcp' for unencrypted" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP Username" Target="MAIL_ENV_USERNAME" Default="" Mode="" Description="Set the username of the authenticated user you'll be sending email as." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTP Email Password" Target="MAIL_ENV_PASSWORD" Default="" Mode="" Description="Set the password for the authenticated user you'll be sending as." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="App Key" Target="APP_KEY" Default="" Mode="" Description="This is a randomly generated key that your system will use to store encrypted data. &#13;&#10;&#13;&#10;Make sure you keep a backup of this value somewhere safe (password manager, etc)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="App URL" Target="APP_URL" Default="" Mode="" Description="This is the url to your application, beginning with http:// or https://" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="App Timezone" Target="APP_TIMEZONE" Default="" Mode="" Description="Set this to be the timezone you wish your Snipe-IT installation to use. This should use a PHP-supported timezone." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="App Locale" Target="APP_LOCALE" Default="en" Mode="" Description="Set this to reflect the two-letter or 5-letter abbreviation for the language you'd like to use for Snipe-IT. The default language is US English (en)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Port" Target="80" Default="8087" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="App Environment" Target="APP_ENV" Default="production" Mode="" Description="This should always be set to production unless you are a developer who is editing code within snipe-IT." Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="App Debug" Target="APP_DEBUG" Default="false" Mode="" Description="Setting this to true will turn on debugging in your Snipe-IT installation. This can be very useful for debugging, but should NEVER be left to true in a production environment." Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="Appdata Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="Data" Target="/var/lib/snipeit" Default="/mnt/user/appdata/snipeit/data" Mode="rw" Description="Container Path: /var/lib/snipeit" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/Progeny42/unRAID-CA-Templates/master/snipe-it.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>This is a FOSS project for asset management in IT Operations. Knowing who has which laptop, when it was purchased in order to depreciate it correctly, handling software licenses, etc.&#13;
+&#13;
+It is built on Laravel 5.5.&#13;
+&#13;
+Snipe-IT is actively developed and we release quite frequently. (Check out the live demo here.)&#13;
+&#13;
+This is web-based software. This means there is no executable file (aka no .exe files), and it must be run on a web server and accessed through a web browser. It runs on any Mac OSX, flavor of Linux, as well as Windows, and we have a Docker image available if that's what you're into.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Progeny42sRepository/snipe-it.xml</templatePath>
+</Container>

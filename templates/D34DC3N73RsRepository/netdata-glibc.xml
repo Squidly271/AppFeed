@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>netdata-glibc</Name>
+  <Repository>d34dc3n73r/netdata-glibc</Repository>
+  <Registry>https://hub.docker.com/r/d34dc3n73r/netdata-glibc</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/90880-support-d34dc3n73r-netdata-glibc-gpu-enabled/</Support>
+  <Project>https://github.com/D34DC3N73R/netdata-glibc</Project>
+  <Overview>[b]Netdata with Nvidia GPU monitoring in a container.[/b] An automated build of netdata with glibc for use with Nvidia GPUs.[br] [b][u][span style='color: #E80000;']NOTE:[/span][/u][/b] An Nvidia GPU and the Unraid Nvidia Plugin are required to use this image. If you wish to use it without a gpu, (eg need glibc for another reason) turn on Advanced View and remove '--runtime=nvidia' from Extra Parameters, and remove NVIDIA_VISIBLE_DEVICES or set it to 'void'.</Overview>
+  <WebUI>http://[IP]:[PORT:19999]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/D34DC3N73R/unraid-templates/master/netdata-glibc.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/netdata/netdata/master/web/gui/images/android-icon-192x192.png</Icon>
+  <ExtraParams>--runtime=nvidia --cap-add SYS_PTRACE --security-opt apparmor=unconfined</ExtraParams>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Automated build based on netdata/netdata:latest</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>v1.23.1</Tag>
+    <TagDescription>Built using netdata/netdata:v1.23.1</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>v1.22.1</Tag>
+    <TagDescription>Built using netdata/netdata:v1.22.1</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>v1.21.0</Tag>
+    <TagDescription>Built using netdata/netdata:v1.21.0</TagDescription>
+  </Branch>
+  <Config Name="Netdata Web UI Port" Target="19999" Default="19999" Mode="tcp" Description="Netdata Web UI Port" Type="Port" Display="always" Required="true" Mask="false">19999</Config>
+  <Config Name="Anonymous Statistics" Target="DO_NOT_TRACK" Default="" Mode="" Description="Set to 1 to disable anonymous statistics." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Netdata Override" Target="/etc/netdata" Default="/mnt/user/appdata/netdata/override" Mode="rw" Description="Container Path: /etc/netdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/netdata/override</Config>
+  <Config Name="Host /proc" Target="/host/proc" Default="/proc" Mode="ro" Description="Container Path: /host/proc" Type="Path" Display="advanced" Required="true" Mask="false">/proc</Config>
+  <Config Name="Host /sys" Target="/host/sys" Default="/sys" Mode="ro" Description="Container Path: /host/sys" Type="Path" Display="advanced" Required="true" Mask="false">/sys</Config>
+  <Config Name="doker.sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Docker PGID" Target="PGID" Default="281" Mode="" Description="Host docker user gid. Required for container name resolution." Type="Variable" Display="advanced" Required="true" Mask="false">281</Config>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="Valid options: 0,1,2, GPU-fef8089b, all, none, void" Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
+  <Category>Tools:Utilities</Category>
+  <Description>Netdata with Nvidia GPU monitoring in a container. An automated build of netdata with glibc for use with Nvidia GPUs.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/D34DC3N73RsRepository/netdata-glibc.xml</templatePath>
+</Container>

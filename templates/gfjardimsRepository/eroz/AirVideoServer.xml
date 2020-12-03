@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>AirVideoServer</Name>
+  <Overview>
+    Air Video can stream videos in almost any format to your iPhone, iPad and iPod touch. You don't need to copy your videos to the device just to watch them.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/eroz/airvideo/</Registry>
+  <GitHub>https://github.com/rsanch1/airvideo</GitHub>
+  <Repository>eroz/airvideo</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=34053.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>FOLDERS</Name>
+      <Value>Movies:/movies, TVShows:/tv</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/movies</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/tv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/AirVideoServer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://inmethod.com/airvideo/index.html</WebUI>
+  <Icon>https://i.imgur.com/LNKFUhC.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/eroz/AirVideoServer.xml</TemplateURL>
+  <Category>MediaServer:Video</Category>
+  <Description>Air Video can stream videos in almost any format to your iPhone, iPad and iPod touch. You don't need to copy your videos to the device just to watch them.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/eroz/AirVideoServer.xml</templatePath>
+</Container>

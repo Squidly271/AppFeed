@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Watcher</Name>
+  <Repository>uirel/watcher</Repository>
+  <Registry>https://hub.docker.com/r/uirel/watcher</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=55103.0</Support>
+  <Overview>Watcher is an automatic NZB downloader. You can keep a "movies I want"-list and it will search for NZBs of these movies every X hours. Once a movie is found, it will send it to NZBget/sabnzbd or download the to a specified directory.&#13;
+[br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+&#13;
+[b]/config[/b] : Storing all Watcher config/db/log files [br]&#13;
+&#13;
+[b]/downloads[/b] : Point to downloads folder[br]&#13;
+&#13;
+[b]/movies[/b] : Point to Movies share[br]&#13;
+&#13;
+[b]9090[/b] : The web-interface. [br]</Overview>
+  <WebUI>http://[IP]:[PORT:9090]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Poag/docker-xml/master/watcher.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/nosmokingbandit/watcher/master/static/images/logo_bg.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/watcher</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/movies/</HostDir>
+      <ContainerDir>/movies</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/Docker/conf/watcher</Config>
+  <Config Name="WebUI" Target="9090" Default="" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
+  <Config Name="Host Path 4" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/Docker/DL/complete/Movies/</Config>
+  <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Container Path: /movies" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Films/</Config>
+  <Date>1482987600</Date>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Description>Watcher is an automatic NZB downloader. You can keep a "movies I want"-list and it will search for NZBs of these movies every X hours. Once a movie is found, it will send it to NZBget/sabnzbd or download the to a specified directory.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/UirelsRepository/watcher.xml</templatePath>
+</Container>

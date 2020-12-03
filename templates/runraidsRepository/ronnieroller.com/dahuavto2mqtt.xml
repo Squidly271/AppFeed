@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>DahuaVTO2MQTT</Name>
+  <Repository>ronnieroller/dahuavto2mqtt:latest</Repository>
+  <Registry>https://hub.docker.com/r/ronnieroller/dahuavto2mqtt</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/elad-bar/DahuaVTO2MQTT</Support>
+  <Project>https://github.com/elad-bar/DahuaVTO2MQTT</Project>
+  <Overview>Listens to events from Dahua VTO unit and publishes them via MQTT Message&#13;
+&#13;
+&#13;
+For integration with Home Assistant see https://community.home-assistant.io/t/dahua-vto-to-mqtt-broker/169781&#13;
+&#13;
+Source: https://github.com/elad-bar/DahuaVTO2MQTT</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/dahuavto2mqtt.xml</TemplateURL>
+  <Icon>https://i.imgur.com/OAg2gT1.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.210</Value>
+      <Name>DAHUA_VTO_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>DAHUA_VTO_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DAHUA_VTO_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.1.2</Value>
+      <Name>MQTT_BROKER_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1883</Value>
+      <Name>MQTT_BROKER_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MQTT_BROKER_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MQTT_BROKER_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>DahuaVTO</Value>
+      <Name>MQTT_BROKER_TOPIC_PREFIX</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="DAHUA_VTO_HOST" Target="DAHUA_VTO_HOST" Default="192.168.1.210" Mode="" Description="The IP address of your VTO host" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.210</Config>
+  <Config Name="DAHUA_VTO_USERNAME" Target="DAHUA_VTO_USERNAME" Default="admin" Mode="" Description="VTO web username" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+  <Config Name="DAHUA_VTO_PASSWORD" Target="DAHUA_VTO_PASSWORD" Default="" Mode="" Description="VTO web password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="MQTT_BROKER_HOST" Target="MQTT_BROKER_HOST" Default="192.168.1.2" Mode="" Description="MQTT broker address" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.2</Config>
+  <Config Name="MQTT_BROKER_PORT" Target="MQTT_BROKER_PORT" Default="1883" Mode="" Description="MQTT broker port" Type="Variable" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="MQTT_BROKER_USERNAME" Target="MQTT_BROKER_USERNAME" Default="" Mode="" Description="MQTT optional username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MQTT_BROKER_PASSWORD" Target="MQTT_BROKER_PASSWORD" Default="" Mode="" Description="MQTT optional password" Type="Variable" Display="always" Required="false" Mask="true">MQTT optional password</Config>
+  <Config Name="MQTT_BROKER_TOPIC_PREFIX" Target="MQTT_BROKER_TOPIC_PREFIX" Default="DahuaVTO" Mode="" Description="The MQTT topic prefix" Type="Variable" Display="always" Required="false" Mask="false">DahuaVTO</Config>
+  <Date>1604859284</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>Listens to events from Dahua VTO unit and publishes them via MQTT Message&#13;
+&#13;
+&#13;
+For integration with Home Assistant see https://community.home-assistant.io/t/dahua-vto-to-mqtt-broker/169781&#13;
+&#13;
+Source: https://github.com/elad-bar/DahuaVTO2MQTT</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/runraidsRepository/ronnieroller.com/dahuavto2mqtt.xml</templatePath>
+</Container>

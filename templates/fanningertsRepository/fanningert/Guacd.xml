@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Guacamole---guacd</Name>
+  <Beta>true</Beta>
+  <Repository>guacamole/guacd</Repository>
+  <Registry>https://registry.hub.docker.com/r/guacamole/guacd/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Date>1505793600</Date>
+  <Overview>Provides the guacd daemon, built from the released guacamole-server source with support for VNC, RDP, SSH, and telnet.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/Guacd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/guacd.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4822</HostPort>
+        <ContainerPort>4822</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment></Environment>
+  <Config Name="GUACD port" Target="4822" Default="4822" Mode="tcp" Description="Container Port: 4822" Type="Port" Display="always" Required="true" Mask="false">4822</Config>
+  <Category>Network:Other Status:Beta</Category>
+  <Description>Provides the guacd daemon, built from the released guacamole-server source with support for VNC, RDP, SSH, and telnet.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fanningertsRepository/fanningert/Guacd.xml</templatePath>
+</Container>

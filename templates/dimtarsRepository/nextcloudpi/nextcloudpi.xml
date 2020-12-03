@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>nextcloudpi</Name>
+  <Repository>ownyourbits/nextcloudpi</Repository>
+  <Registry>https://hub.docker.com/r/ownyourbits/nextcloudpi</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/84549-support-nextcloudpi/</Support>
+  <Project>https://ownyourbits.com/</Project>
+  <Overview>This is a template for the Nextcloudpi docker container, this is an all in one solution for someone wanting to run Nextcloud on their unRaid server. More information can be found here:&#13;
+https://ownyourbits.com/&#13;
+https://hub.docker.com/r/ownyourbits/nextcloudpi&#13;
+&#13;
+Before hitting start, select advanced view in the top right corner, add your servers IP address e.g. 192.168.1.5 or the IP of the container if you specify a unique one.</Overview>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Dimtar/unraidtemplates/master/nextcloudpi/nextcloudpi.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Dimtar/unraidtemplates/master/nextcloudpi/logo.jpg</Icon>
+  <PostArgs>Enter server or container IP here e.g. 192.168.1.5</PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4443</HostPort>
+        <ContainerPort>4443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nextcloudpi</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Nextcloud data folder" Target="/data" Default="/mnt/user/appdata/nextcloudpi" Mode="rw" Description="The folder to store all data related to the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nextcloudpi</Config>
+  <Config Name="HTTP web port" Target="80" Default="80" Mode="tcp" Description="Non secure web port" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS web port" Target="443" Default="443" Mode="tcp" Description="Secure web port" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="Panel web port" Target="4443" Default="4443" Mode="tcp" Description="Port to serve the Nextcloudpi management panel on." Type="Port" Display="always" Required="false" Mask="false">4443</Config>
+  <Date>1571917880</Date>
+  <Category>Cloud: Tools:Utilities MediaServer:Music MediaServer:Photos</Category>
+  <Description>This is a template for the Nextcloudpi docker container, this is an all in one solution for someone wanting to run Nextcloud on their unRaid server. More information can be found here:&#13;
+https://ownyourbits.com/&#13;
+https://hub.docker.com/r/ownyourbits/nextcloudpi&#13;
+&#13;
+Before hitting start, select advanced view in the top right corner, add your servers IP address e.g. 192.168.1.5 or the IP of the container if you specify a unique one.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dimtarsRepository/nextcloudpi/nextcloudpi.xml</templatePath>
+</Container>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>DDclient</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=40630.0</Support>
+  <Registry>https://hub.docker.com/r/mace/ddclient/</Registry>
+  <GitHub>https://github.com/macexx/ddclient</GitHub>
+  <Repository>mace/ddclient</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>MAIL</Name>
+      <Value>yes|no</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode></Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://i.imgur.com/KQ9migV.png</Icon>
+  <Date>1449291600</Date>
+  <TemplateURL>https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/ddclient.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>
+    Ddclient is a Perl client used to update dynamic DNS entries for accounts on 'Dynamic DNS Network Services' free DNS service. It currently supports a lot of different routers and a few different services..[br][br]
+    This version also had built in support for sending updates with a gmail account as relay.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    Click [b]"Advanced View"[/b] in the upper right corner.[br]
+    Change the mail paramter to yes or no.[br]
+	For email notofications scroll down to [b]Extra Parameters[/b] and add a fqdn some thing like "-h ddclient.local" or "-h ddclient.mydomain.com" this can be anything you like.[br]
+After the first run turn off the docker and modify your client config and mail.txt(for mail support) in your config directory.
+  </Overview>
+  <Category>Network:DNS</Category>
+  <Description>Ddclient is a Perl client used to update dynamic DNS entries for accounts on 'Dynamic DNS Network Services' free DNS service. It currently supports a lot of different routers and a few different services..
+    This version also had built in support for sending updates with a gmail account as relay.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/macestersRepository/macexx/ddclient.xml</templatePath>
+</Container>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>rutorrentvpn-plus-plus</Name>
+  <Deprecated>true</Deprecated>
+  <Repository>testdasi/rutorrentvpn-plus-plus:latest</Repository>
+  <Registry>https://registry.hub.docker.com/r/testdasi/rutorrentvpn-plus-plus/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96233-support-testdasi-repo/</Support>
+  <Project>https://github.com/binhex/arch-rtorrentvpn</Project>
+  <Overview>Based on binhex/arch-rtorrentvpn.&#13;
+&#13;
+ruTorrent with OpenVPN client, http proxy, dns-over-tls and a random ovpn picker (useful to cycle to another server if current one stops working).&#13;
+&#13;
+High-level instructions:&#13;
+1. Run docker - first run will stop itself due to missing ovpn file&#13;
+&#13;
+2. Copy / extract your ovpn files in the host path that is mapped to /config/ovpn_files (at least 1 file is required, must have .ovpn extension)&#13;
+&#13;
+3. If there are separate cert files (crt + pem), place them in host location path that is mapped to /config/ovpn. Skip this step if using PIA ovpn files as certs are included in the files.&#13;
+&#13;
+4. Start docker again&#13;
+&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:9080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/rutorrentvpn-plus-plus.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/testdasi/rutorrentvpn-plus-plus/master/rtorrent.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work, a donation to my burger fund is very much appreciated.</DonateText>
+  <DonateLink>https://paypal.me/mersenne</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9080</HostPort>
+        <ContainerPort>9080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9443</HostPort>
+        <ContainerPort>9443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/rutorrentvpn-plus-plus/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads/rutorrentvpn-plus-plus/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>yes</Value>
+      <Name>VPN_ENABLED</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>VPN_USER</Value>
+      <Name>VPN_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>VPN_PASS</Value>
+      <Name>VPN_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>pia</Value>
+      <Name>VPN_PROV</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>VPN_OPTIONS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>STRICT_PORT_FORWARD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.0.1/24</Value>
+      <Name>LAN_NETWORK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>127.2.2.2</Value>
+      <Name>NAME_SERVERS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ADDITIONAL_PORTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>ENABLE_PRIVOXY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>no</Value>
+      <Name>ENABLE_AUTODL_IRSSI</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>ENABLE_RPC2</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>ENABLE_RPC2_AUTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>RPC2_USER</Value>
+      <Name>RPC2_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>RPC2_PASS</Value>
+      <Name>RPC2_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>ENABLE_WEBUI_AUTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>WEBUI_USER</Value>
+      <Name>WEBUI_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>WEBUI_PASS</Value>
+      <Name>WEBUI_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>no</Value>
+      <Name>DEBUG</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>UTC</Value>
+      <Name>PHP_TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Docker appdata" Target="/config" Default="/mnt/user/appdata/rutorrentvpn-plus-plus" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rutorrentvpn-plus-plus/</Config>
+  <Config Name="Download" Target="/data" Default="/mnt/user/downloads/rutorrentvpn-plus-plus/" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/downloads/rutorrentvpn-plus-plus/</Config>
+  <Config Name="rtorrent 5000" Target="5000" Default="5000" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="ruTorrent Web" Target="9080" Default="9080" Mode="tcp" Description="Container Port: 9080" Type="Port" Display="always" Required="false" Mask="false">9080</Config>
+  <Config Name="rtorrent 9443" Target="9443" Default="9443" Mode="tcp" Description="Container Port: 9443" Type="Port" Display="always" Required="false" Mask="false">9443</Config>
+  <Config Name="Privoxy port" Target="8118" Default="8118" Mode="tcp" Description="Container Port: 8118" Type="Port" Display="always" Required="false" Mask="false">8118</Config>
+  <Config Name="VPN_ENABLED" Target="VPN_ENABLED" Default="yes" Mode="" Description="Container Variable: VPN_ENABLED" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="VPN_USER" Target="VPN_USER" Default="VPN_USER" Mode="" Description="Container Variable: VPN_USER" Type="Variable" Display="always" Required="false" Mask="false">VPN_USER</Config>
+  <Config Name="VPN_PASS" Target="VPN_PASS" Default="VPN_PASS" Mode="" Description="Container Variable: VPN_PASS" Type="Variable" Display="always" Required="false" Mask="false">VPN_PASS</Config>
+  <Config Name="VPN_PROV" Target="VPN_PROV" Default="pia|airvpn|custom" Mode="" Description="Container Variable: VPN_PROV" Type="Variable" Display="always" Required="false" Mask="false">pia</Config>
+  <Config Name="VPN_OPTIONS" Target="VPN_OPTIONS" Default="" Mode="" Description="Container Variable: VPN_OPTIONS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="STRICT_PORT_FORWARD" Target="STRICT_PORT_FORWARD" Default="yes" Mode="" Description="Container Variable: STRICT_PORT_FORWARD" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="LAN_NETWORK" Target="LAN_NETWORK" Default="192.168.0.1/24" Mode="" Description="Container Variable: LAN_NETWORK" Type="Variable" Display="always" Required="false" Mask="false">192.168.0.1/24</Config>
+  <Config Name="NAME_SERVERS" Target="NAME_SERVERS" Default="127.2.2.2" Mode="" Description="Container Variable: NAME_SERVERS" Type="Variable" Display="always" Required="false" Mask="false">127.2.2.2</Config>
+  <Config Name="ADDITIONAL_PORTS" Target="ADDITIONAL_PORTS" Default="" Mode="" Description="Container Variable: ADDITIONAL_PORTS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ENABLE_PRIVOXY" Target="ENABLE_PRIVOXY" Default="yes" Mode="" Description="Container Variable: ENABLE_PRIVOXY" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="ENABLE_AUTODL_IRSSI" Target="ENABLE_AUTODL_IRSSI" Default="no" Mode="" Description="Container Variable: ENABLE_AUTODL_IRSSI" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
+  <Config Name="ENABLE_RPC2" Target="ENABLE_RPC2" Default="yes" Mode="" Description="Container Variable: ENABLE_RPC2" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="ENABLE_RPC2_AUTH" Target="ENABLE_RPC2_AUTH" Default="yes" Mode="" Description="Container Variable: ENABLE_RPC2_AUTH" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="RPC2_USER" Target="RPC2_USER" Default="RPC2_USER" Mode="" Description="Container Variable: RPC2_USER" Type="Variable" Display="always" Required="false" Mask="false">RPC2_USER</Config>
+  <Config Name="RPC2_PASS" Target="RPC2_PASS" Default="RPC2_PASS" Mode="" Description="Container Variable: RPC2_PASS" Type="Variable" Display="always" Required="false" Mask="false">RPC2_PASS</Config>
+  <Config Name="ENABLE_WEBUI_AUTH" Target="ENABLE_WEBUI_AUTH" Default="yes" Mode="" Description="Container Variable: ENABLE_WEBUI_AUTH" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="WEBUI_USER" Target="WEBUI_USER" Default="WEBUI_USER" Mode="" Description="Container Variable: WEBUI_USER" Type="Variable" Display="always" Required="false" Mask="false">WEBUI_USER</Config>
+  <Config Name="WEBUI_PASS" Target="WEBUI_PASS" Default="WEBUI_PASS" Mode="" Description="Container Variable: WEBUI_PASS" Type="Variable" Display="always" Required="false" Mask="false">WEBUI_PASS</Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="no" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
+  <Config Name="PHP_TZ" Target="PHP_TZ" Default="UTC" Mode="" Description="Container Variable: PHP_TZ" Type="Variable" Display="always" Required="false" Mask="false">UTC</Config>
+  <Config Name="UMASK" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Date>1599488851</Date>
+  <Category>Downloaders: Network:DNS Network:Proxy Network:VPN</Category>
+  <Description>Based on binhex/arch-rtorrentvpn.&#13;
+&#13;
+ruTorrent with OpenVPN client, http proxy, dns-over-tls and a random ovpn picker (useful to cycle to another server if current one stops working).&#13;
+&#13;
+High-level instructions:&#13;
+1. Run docker - first run will stop itself due to missing ovpn file&#13;
+&#13;
+2. Copy / extract your ovpn files in the host path that is mapped to /config/ovpn_files (at least 1 file is required, must have .ovpn extension)&#13;
+&#13;
+3. If there are separate cert files (crt + pem), place them in host location path that is mapped to /config/ovpn. Skip this step if using PIA ovpn files as certs are included in the files.&#13;
+&#13;
+4. Start docker again</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/testdasisRepository/rutorrentvpn-plus-plus.xml</templatePath>
+</Container>

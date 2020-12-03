@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ZeroTier</Name>
+  <Overview>
+  	Zerotier is an open source, cross-platform virtual LAN / VPN.
+    It allows remote access to devices as if they all reside in the same local network.
+    All traffic is encrypted end-to-end and takes the most direct path available for minimum latency and maximum performance, using VPN-like connections.
+    After installing up Zerotier on unRaid and any other devices - a VPN connection will be set up and all connected devices will be available to each other like they are in the same network.
+    SMB shares, TimeMachine will be autodetected and UIs will be accessible on regular hostnames and ports.
+  </Overview>
+  <Project>https://www.zerotier.com/</Project>
+  <Support>https://lime-technology.com/forums/topic/72030-support-spikhalskiy-zerotier/</Support>
+  <Registry>https://registry.hub.docker.com/r/spikhalskiy/zerotier/</Registry>
+  <GitHub>https://github.com/Spikhalskiy/zerotier-unraid-docker.git</GitHub>
+  <Repository>spikhalskiy/zerotier</Repository>
+  <BaseImage>alpine:3.10.2</BaseImage>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/Spikhalskiy/docker-templates/master/images/zerotier_ico.png</Icon>
+  <Date>1568433600</Date>
+  <Version>1.4.6</Version>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Config Name="Network ID" Target="NETWORK_ID" Default="" Mode="" Description="Network ID of ZeroTier network to join, could be find on page: https://my.zerotier.com/network" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Config Directory" Target="/var/lib/zerotier-one" Default="/mnt/user/appdata/zerotier/zerotier-one" Mode="rw" Description="Path to persist ZeroTier state across restarts of the container. If you don't bind this ZeroTier will generate a new identity every time." Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <ExtraParams>--device=/dev/net/tun --cap-add=NET_ADMIN --cap-add=SYS_ADMIN</ExtraParams>
+  <TemplateURL>https://raw.githubusercontent.com/Spikhalskiy/docker-templates/master/zerotier.xml</TemplateURL>
+  <Category>Network:DNS Network:Management Network:Other</Category>
+  <Description>Zerotier is an open source, cross-platform virtual LAN / VPN.
+    It allows remote access to devices as if they all reside in the same local network.
+    All traffic is encrypted end-to-end and takes the most direct path available for minimum latency and maximum performance, using VPN-like connections.
+    After installing up Zerotier on unRaid and any other devices - a VPN connection will be set up and all connected devices will be available to each other like they are in the same network.
+    SMB shares, TimeMachine will be autodetected and UIs will be accessible on regular hostnames and ports.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpikhalskiysRepository/zerotier.xml</templatePath>
+</Container>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Flickr-uploader</Name>
+  <Date>1584504000</Date>
+  <Overview>Upload pictures to flicker</Overview>
+  <Description>Upload pictures to flicker</Description>
+  <Registry>https://registry.hub.docker.com/r/snoopy86/flickr-uploader</Registry>
+  <Repository>snoopy86/flickr-uploader</Repository>
+  <DonateText>Buy me a beer.</DonateText>
+  <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=FDMP56NCG5A26&amp;source=url</DonateLink>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PYTHONUNBUFFERED</Name>
+      <Value>0</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/pictures</ContainerDir>
+      <Mode>r</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/folders2flickr</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/flickr-logo-png-8766.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=43610.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/flickr-uploader.xml</TemplateURL>
+  <Category>Productivity:</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/snoopy86sRepository/snoopy/flickr-uploader.xml</templatePath>
+</Container>

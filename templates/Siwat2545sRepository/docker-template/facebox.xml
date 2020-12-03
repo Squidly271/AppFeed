@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1541998800</Date>
+  <Beta>true</Beta>
+  <Name>Facebox</Name>
+  <Project>https://machinebox.io/docs/facebox</Project>
+  <Overview>
+    Facebox detects and identifies faces in photos. You can teach facebox with as little as one sample image.
+    Facebox required that you have an API Key which you can obtain for free by going to https://machinebox.io/login?return_url=%2Faccount
+  </Overview>
+  <Registry>https://hub.docker.com/r/machinebox/facebox/</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>machinebox/facebox</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Name="API_KEY" Target="MB_KEY" Default="" Mode="" Description="API Key From Machine Box" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://machinebox.io/assets/static/img/boxes/facebox.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/facebox.xml</TemplateURL>
+  <Category>HomeAutomation: Tools: Status:Beta</Category>
+  <Description>Facebox detects and identifies faces in photos. You can teach facebox with as little as one sample image.
+    Facebox required that you have an API Key which you can obtain for free by going to https://machinebox.io/login?return_url=%2Faccount</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/facebox.xml</templatePath>
+</Container>

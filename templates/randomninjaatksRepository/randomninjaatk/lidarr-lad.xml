@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Beta>true</Beta>
+  <Name>lidarr-lad</Name>
+  <Repository>randomninjaatk/lidarr-lad</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/lidarr-lad</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89290-support-randomninjaatk-lidarr-lad/</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-lidarr-lad</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/lidarr-lad.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/lidarr.png</Icon>
+  <Overview>Lidarr + Lidarr Automated Downloader (LAD), Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them.
+  [br][br][b][span style='color: #E80000;']Important Paths:[/span][/u][/b]
+  [b]/storage[/b] :: Root location for downloads, see additonal paths below
+  [b]/storage/downloads/lidarr/deezloaderremix[/b] :: Temporary DL location from dl client
+  [b]/storage/downloads/lidarr/lidarr-import[/b] :: Directory used for importing to Lidarr automatically
+  [b]/config[/b] :: Location of SABnzbd aplication files
+  [b]/config/scripts[/b] :: Location of LAD scripts files and logs
+  [br][br][b][span style='color: #E80000;']Important Files:[/span][/u][/b]
+  [b]/config/scripts/lidarr-automated-downloader.bash[/b] :: LAD script, this file is updated on every image update or if you have updates enabled
+  [b]/config/scripts/cron-job.log[/b] :: Log of last attempt to execute
+  [b]/config/scripts/script-run.log[/b] :: Current log of script run, can be seen in normal docker log
+  [b]/config/scripts/notfound.log[/b] :: Log file containing list of albums that could not be found using normal or fuzzy matching, automatically cleared every Saturday via cron
+  [b]/config/scripts/musicbrainzerror.log[/b] :: Log file containing list of artists without links, open log for more details
+  [b]/config/scripts/download.log[/b] :: Log file containing list of albums that were downloaded, automatically cleared every Saturday via cron
+  [b]/config/scripts/beets-config.yaml[/b] :: Beet config file for matching
+  [b]/config/scripts/beets-library.blb[/b] :: Beet library file, do not touch
+  [b]/config/scripts/cookies.txt[/b] :: OPTIONAL :: Add this file, if you need youtube-dl authentication to youtube, may be required if you experience throttling...
+  [br][br][b][span style='color: #E80000;']DL Client Information[/span][/u][/b]
+  [b]DL Client ARL Token[/b] :: This token will expire every 3 months, without a token this script will not function...
+  </Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI>http://[IP]:[PORT:8686]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8686" Target="8686" Default="8686" Mode="tcp" Description="Container Port: 8686" Type="Port" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Host Path for /storage" Target="/storage" Default="/mnt/user" Mode="rw" Description="Container Path: /storage (DO NOT DELETE)" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="LAD: Music Videos Path" Target="VIDEOPATH" Default="" Mode="" Description="Location of music videos" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Script Update" Target="UPDATE_LAD" Default="FALSE" Mode="" Description="TRUE = Enabled :: updates LAD script from repo on startup" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: DL Client Update" Target="UPDATE_DLCLIENT" Default="TRUE" Mode="" Description="TRUE = Enabled :: updates DL Client application from repo on startup" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Enable Automatic LAD Runs" Target="ENABLE_LAD" Default="TRUE" Mode="" Description="TRUE = Enabled :: Runs LAD script automatically every 15 minutes via cronjob" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Download Mode" Target="DLMODE" Default="Audio" Mode="" Description="Both or Audio or Video :: Both downloads audio and videos; Audio downloads only audio files; Video only downloads video files" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Audio Mode" Target="AMODE" Default="wanted" Mode="" Description="wanted or archive :: wanted mode processes Lidarr Wanted/Cutoff Album lists (TrackUpgrade must be enabled for Cutoff) :: archive mode downloads all albums for an aritst, no lidarr matching is used for importing, keeps everything... !!WARNING!!: When using archive mode, do not rename album folders or you will continuely re-download available albums..." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Audio Import Mode" Target="IMODE" Default="match" Mode="" Description="match or forced or manual :: match uses lidarr's matching engine to import; forced moves the download into the Lidarr artist directory; manual downloads are left in the temp import directory for you to manual import" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Track Upgrade" Target="TRACKUPGRADE" Default="false" Mode="" Description="true = Enabled :: Upgrades existing tracks to requested format. wanted mode is controlled by cutoff album list and archive mode is detected automatically. Recommend disabling for archive mode, unless your changing your format." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: DL Client ARL Token" Target="ARL_TOKEN" Default="" Mode="" Description="User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: DL CLient Concurrency" Target="CONCURRENCY" Default="6" Mode="" Description="Number of concurrent tracks to download via the client. Increasing can speed things up but is more resource intensive, lower is safer..." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Verify Track Count" Target="VerifyTrackCount" Default="true" Mode="" Description="true = enabled :: This will verify album track count vs dl track count, if tracks are found missing, it will skip import..." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Missing/Cutoff Amount" Target="amount" Default="1000000000" Mode="" Description="Maximum: 1000000000 :: Number of missing/cutoff albums to look for..." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Target Quality" Target="quality" Default="FLAC" Mode="" Description="SET TO: FLAC or MP3 or OPUS or AAC or ALAC" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Conversion Bitrate" Target="ConversionBitrate" Default="320" Mode="" Description="FLAC -&gt; OPUS/AAC will be converted using this bitrate" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: FLAC Replaygain Tagging" Target="ReplaygainTagging" Default="false" Mode="" Description="TRUE = ENABLED :: adds replaygain tags for compatible players (FLAC ONLY)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Folder Permissions" Target="FolderPermissions" Default="777" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: File Permissions" Target="FilePermissions" Default="666" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: DownLoad Artist Artwork" Target="DownLoadArtistArtwork" Default="true" Mode="" Description="true = enabled :: Uses Lidarr Artist artwork first with a fallback using LAD as the source" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Tag with Beets" Target="TagWithBeets" Default="true" Mode="" Description="true = enabled :: enable beet tagging to improve matching accuracy" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Tag with Require Beets Match" Target="RequireBeetsMatch" Default="true" Mode="" Description="true = enabled :: skips importing files that could not be matched using beets" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Require Quality Match" Target="RequireQuality" Default="false" Mode="" Description="true = enabled :: skips importing files that do not match quality setting" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Music Videos Country Code" Target="CountryCode" Default="us" Mode="" Description="Set the country code for preferred video matching, uses Musicbrainz Country Codes, lowercase only." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Music Videos Require Match" Target="RequireVideoMatch" Default="true" Mode="" Description="true = enabled :: Only keep videos that could be matched to a Musicbrainz music track." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Music Videos Format" Target="videoformat" Default="--format bestvideo[vcodec*=avc1]+bestaudio[ext=m4a]" Mode="" Description="For guidence, please see youtube-dl documentation" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Music Videos Subtitle Langauge" Target="subtitlelanguage" Default="en" Mode="" Description="Desired Language Code :: For guidence, please see youtube-dl documentation" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Music Videos Filter Match" Target="videofilter" Default="live" Mode="" Description="This will filter out videos Matching MusicBrainz secondary release type and album disambiguation (single word only)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LAD: Musicbrainz Mirror URL" Target="MBRAINZMIRROR" Default="https://musicbrainz.org" Mode="" Description="OPTIONAL: Only change if using a different mirror" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="LAD: Musicbrainz Rate Limit" Target="MBRATELIMIT" Default="1" Mode="" Description="OPTIONAL: musicbrainz rate limit, musicbrainz allows only 1 connection per second, max setting is 10" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="LAD: LidarrUrl" Target="LidarrUrl" Default="http://127.0.0.1:8686" Mode="" Description="ONLY modify needed if utilizing Lidarr URL Base setting..." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Category>Downloaders: MediaApp:Music Status:Beta</Category>
+  <Description>Lidarr + Lidarr Automated Downloader (LAD), Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/lidarr-lad.xml</templatePath>
+</Container>

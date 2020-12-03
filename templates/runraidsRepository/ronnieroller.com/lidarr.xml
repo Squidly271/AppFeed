@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Lidarr</Name>
+  <Repository>volikon/lidarr</Repository>
+  <Registry>https://hub.docker.com/r/volikon/lidarr/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61897-support-thread-for-lidarr-docker-template/</Support>
+  <Overview>Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.&#13;
+&#13;
+[b]/config[/b] : Storing all Lidarr config files [br]&#13;
+[b]/data[/b] : Storing all Lidarr data files [br]&#13;
+[b]/music[/b] : Point to your music location[br]</Overview>
+  <WebUI>http://[IP]:[PORT:8686]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/lidarr.xml</TemplateURL>
+  <Icon>https://i.imgur.com/tWOwRrb.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8686</HostPort>
+        <ContainerPort>8686</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host port 1" Target="8686" Default="" Mode="tcp" Description="Container Port: 8686" Type="Port" Display="always" Required="false" Mask="false">8686</Config>
+  <Config Name="config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="music" Target="/music" Default="" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Deprecated>true</Deprecated>
+  <Date>1512529038</Date>
+  <Category>Downloaders: MediaApp:Music</Category>
+  <Description>Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new tracks from your favorite artists and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.&#13;
+&#13;
+/config : Storing all Lidarr config files &#13;
+/data : Storing all Lidarr data files &#13;
+/music : Point to your music location</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/runraidsRepository/ronnieroller.com/lidarr.xml</templatePath>
+</Container>

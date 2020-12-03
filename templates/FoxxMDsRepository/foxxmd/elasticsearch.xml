@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>elasticsearch</Name>
+  <Repository>elasticsearch:6.6.2</Repository>
+  <Registry>https://hub.docker.com/_/elasticsearch</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79125-support-foxxmd-elasticsearch</Support>
+  <Project>https://www.elastic.co/</Project>
+  <Overview>
+        Elasticsearch with instructions for installation on unraid. [br][br]&#13;
+        [b]Default Elasticsearch version is 6.6.2[/b][br]&#13;
+        To change version simply edit the version tag in the repository field to an available version on dockerhub. [b]This template not tested on alpine images.[/b][br][br]&#13;
+        [span style='color: #E80000;'][b]Directions below MUST be used in order to get Elasticsearch 5 and above working correctly.[/b][/span] Check support thread for more information.[br]&#13;
+        [b][span style='color: #E80000;']Directions:[/span][/b][br]&#13;
+        1. Install [b]CA User Scripts[/b][br]&#13;
+        2. Create a new script named [b]vm.max_map_count[/b][br]&#13;
+        3. Contents of script as follows: [br][br]&#13;
+        [span style='font-family: monospace;']#!/bin/bash[br]&#13;
+        sysctl -w vm.max_map_count=262144[/span][br][br]&#13;
+        4. Set script schedule to [b]At Startup of Array[/b][br]&#13;
+    </Overview>
+  <Date>1554091200</Date>
+  <WebUI>http://[IP]:[PORT:9200]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/elasticsearch.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/elasticsearch.png</Icon>
+  <ExtraParams>-e "ES_JAVA_OPTS"="-Xms512m -Xmx512m" --ulimit nofile=262144:262144</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9200</HostPort>
+        <ContainerPort>9200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9300</HostPort>
+        <ContainerPort>9300</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/elasticsearch/data</HostDir>
+      <ContainerDir>/usr/share/elasticsearch/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>single-node</Value>
+      <Name>discovery.type</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Data" Target="/usr/share/elasticsearch/data" Default="/mnt/user/appdata/elasticsearch/data" Mode="rw" Description="Directory where ES data is persisted" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/elasticsearch/data</Config>
+  <Config Name="REST API Port" Target="9200" Default="9200" Mode="tcp" Description="Host port exposed for REST HTTP interface." Type="Port" Display="always" Required="true" Mask="false">9200</Config>
+  <Config Name="Nodes Communication Port" Target="9300" Default="9300" Mode="tcp" Description="Host port exposed for node communication." Type="Port" Display="always" Required="true" Mask="false">9300</Config>
+  <Config Name="Discovery Type" Target="discovery.type" Default="single-node" Mode="" Description="Container Variable: discovery.type" Type="Variable" Display="always" Required="true" Mask="false">single-node</Config>
+  <Category>Other: Tools:Utilities</Category>
+  <Description>Elasticsearch with instructions for installation on unraid. &#13;
+        Default Elasticsearch version is 6.6.2&#13;
+        To change version simply edit the version tag in the repository field to an available version on dockerhub. This template not tested on alpine images.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/elasticsearch.xml</templatePath>
+</Container>

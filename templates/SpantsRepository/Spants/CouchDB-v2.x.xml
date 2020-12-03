@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1513141200</Date>
+  <Support>https://lime-technology.com/forum/index.php?topic=38486.0</Support>
+  <Name>CouchDB-v2.x</Name>
+  <Registry>https://hub.docker.com/r/apache/couchdb/</Registry>
+  <GitHub>https://github.com/apache/docker-couchdb</GitHub>
+  <Repository>apache/couchdb</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5984</HostPort>
+        <ContainerPort>5984</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/couchdb/data</HostDir>
+      <ContainerDir>/opt/couchdb/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/couchdb/config</HostDir>
+      <ContainerDir>/usr/local/etc/couchdb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5984]/_utils</WebUI>
+  <Icon>https://couchdb.apache.org/image/couch@2x.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/CouchDB-v2.x.xml</TemplateURL>
+  <Overview>
+  CouchDB docker image for v2.x[br][br]
+  Apache CouchDB has a document-oriented NoSQL database architecture and is Open Source.[br]
+</Overview>
+  <Category>Productivity:</Category>
+  <Description>CouchDB docker image for v2.x
+  Apache CouchDB has a document-oriented NoSQL database architecture and is Open Source.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/CouchDB-v2.x.xml</templatePath>
+</Container>

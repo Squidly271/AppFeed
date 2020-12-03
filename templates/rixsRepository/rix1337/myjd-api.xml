@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MyJD-API</Name>
+  <Repository>rix1337/docker-myjd-api</Repository>
+  <Registry>https://hub.docker.com/r/rix1337/docker-myjd-api</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=43669.0</Support>
+  <Overview>This is a standalone version of RSScrawler's MyJDownloader API for use with projects like Organizr.&#13;
+&#13;
+--jd-device is optional if only one device is present&#13;
+&#13;
+JDownloader is expected to be running and connected to my.jdownloader.org - the script will otherwise fail to launch.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/myjd-api.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/myjd-api.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Sponsor me!</DonateText>
+  <DonateLink>https://github.com/sponsors/rix1337</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/myjd-api</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DEVICE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Webinterface" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="MyJDownloader Username" Target="USER" Default="" Mode="" Description="Container Variable: USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MyJDownloader Password" Target="PASS" Default="" Mode="" Description="Container Variable: PASS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MyJDownloader Device" Target="DEVICE" Default="" Mode="" Description="Container Variable: DEVICE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/myjd-api</Config>
+  <Date>1561664563</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>This is a standalone version of RSScrawler's MyJDownloader API for use with projects like Organizr.&#13;
+&#13;
+--jd-device is optional if only one device is present&#13;
+&#13;
+JDownloader is expected to be running and connected to my.jdownloader.org - the script will otherwise fail to launch.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/rixsRepository/rix1337/myjd-api.xml</templatePath>
+</Container>

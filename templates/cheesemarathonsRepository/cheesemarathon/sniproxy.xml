@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Privileged>false</Privileged>
+  <Name>SNIProxy</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>
+	When running a LAN Cache and overriding DNS entries, there are some services including the Origin launcher which will try and use HTTPS to talk to one of the hostnames that are being overridden.
+	This breaks updates to the Origin client. The solution is to run this container SNI Proxy. This accepts the HTTPS requests, looks at the host being requested and sends the request on to the correct server.
+	Please see https://squishedmooo.com/?p=1 for install instructions! You will need them!
+	</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/steamcache/sniproxy/</Registry>
+  <GitHub>https://steamcache.github.io/</GitHub>
+  <Repository>steamcache/sniproxy:latest</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/steamcache.png</Icon>
+  <Config Name="443" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/sniproxy.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Backup: Tools:Utilities</Category>
+  <Description>When running a LAN Cache and overriding DNS entries, there are some services including the Origin launcher which will try and use HTTPS to talk to one of the hostnames that are being overridden.
+	This breaks updates to the Origin client. The solution is to run this container SNI Proxy. This accepts the HTTPS requests, looks at the host being requested and sends the request on to the correct server.
+	Please see https://squishedmooo.com/?p=1 for install instructions! You will need them!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/sniproxy.xml</templatePath>
+</Container>

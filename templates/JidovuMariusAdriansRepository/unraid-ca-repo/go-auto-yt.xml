@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>go-auto-yt</Name>
+  <Repository>xiovv/go-auto-yt:stable</Repository>
+  <Registry>https://hub.docker.com/r/xiovv/go-auto-yt</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/85882-support-amjidovu-goautoyt/</Support>
+  <Project>https://github.com/XiovV/go-auto-yt</Project>
+  <Overview> GoAutoYT makes it easy for you to automatically download videos from as many YouTube channels as you'd like.&#13;
+&#13;
+ Clean, very simple design - The dashboard only contains an input form where you can add a channel and configure checking intervals and what to download, and a little list of all your channels where you can delete them or tell the server to check for new uploads immediately.&#13;
+&#13;
+ Everything is on a single page - You can view and control everything from just one page.&#13;
+&#13;
+Makes downloading videos/audio automatically very easy - Just paste a link of a channel you want to download, set a checking interval and that's it, the server will keep checking for new uploads and download if necessary.</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/go-auto-yt.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/img/go-auto-yt-dl.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate me a coffee or a beer if you like my work :)</DonateText>
+  <DonateLink>https://www.paypal.me/xternet</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/go-auto-yt/downloads</HostDir>
+      <ContainerDir>/app/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/go-auto-yt/config</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0022</Value>
+      <Name>UMASK_SET</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="HTTP Port" Target="8080" Default="9000" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">9000</Config>
+  <Config Name="Mounted Downloads Folder" Target="/app/downloads" Default="/mnt/user/appdata/go-auto-yt/downloads" Mode="rw" Description="Container Path: /app/downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/go-auto-yt/downloads</Config>
+  <Config Name="Mounted Configuration Folder" Target="/app/config" Default="/mnt/user/appdata/go-auto-yt/config" Mode="rw" Description="Container Path: /app/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/go-auto-yt/config</Config>
+  <Config Name="User Identifier ( PUID )" Target="PUID" Default="1000" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Group ID ( PGID )" Target="PGID" Default="1000" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="User File Creation MASK ( UMASK )" Target="UMASK_SET" Default="0022" Mode="" Description="Container Variable: UMASK_SET" Type="Variable" Display="always" Required="false" Mask="false">0022</Config>
+  <Beta>true</Beta>
+  <Date>1575733124</Date>
+  <Category>Downloaders: Tools:Utilities Status:Beta</Category>
+  <Description>GoAutoYT makes it easy for you to automatically download videos from as many YouTube channels as you'd like.&#13;
+&#13;
+ Clean, very simple design - The dashboard only contains an input form where you can add a channel and configure checking intervals and what to download, and a little list of all your channels where you can delete them or tell the server to check for new uploads immediately.&#13;
+&#13;
+ Everything is on a single page - You can view and control everything from just one page.&#13;
+&#13;
+Makes downloading videos/audio automatically very easy - Just paste a link of a channel you want to download, set a checking interval and that's it, the server will keep checking for new uploads and download if necessary.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JidovuMariusAdriansRepository/unraid-ca-repo/go-auto-yt.xml</templatePath>
+</Container>

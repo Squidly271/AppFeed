@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>qbittorrent</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=40630.0</Support>
+  <Registry>https://registry.hub.docker.com/r/mace/qbittorrent/</Registry>
+  <GitHub>https://github.com/macexx/qbittorrent</GitHub>
+  <Repository>mace/qbittorrent</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>AUSER</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>AGROUP</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path for downloads</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>path for watched</HostDir>
+      <ContainerDir>/watched</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8082]</WebUI>
+  <Icon>https://raw.githubusercontent.com/macexx/docker-templates/master/images/qbittorrent_icon.png</Icon>
+  <Date>1450760400</Date>
+  <TemplateURL>https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/qbittorrent.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>
+    The qBittorrent project aims to provide a Free Software alternative to µTorrent. ,[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] This is where qBittorrent will store it´s configuration[br]
+    [b]/downloads[/b] This is where qBittorrent download torrents to[br]
+    [b]/watched[/b] This is folder qBittorrent will look for torrents aka. "Blackhole", needs to be enabled in the webui[br]
+    [b]Default[/b] Username/Password is defualt (admin/adminadmin)[br]
+    [br]
+    [b][span style='color: #E80000;']Notes[/span][/b][br]
+    [u]Environment Variables[/u][br]
+    Define a variables needed,[br]
+        Click the Advanced view in the top right corner . [br]
+		Add/Change a variable under Environment Variables if needed: [br]
+		Variable Name: [b]AUSER[/b] Variable Value: [b]99[/b] (This is the "UID" that the torrents will download as)[br][br]
+		Variable Name: [b]AGROUP[/b] Variable Value: [b]100[/b] (This is the "GID" that the torrents will download as)[br][br]
+                Variable Name: [b]PIPEWORK[/b] Variable Value: [b]yes[/b] (if you want to enable pipework network "wait for interface up")
+    [u]Installation[/u][br]
+        Default Username: [b][span style='color: #E80000;']"admin"[/span][/b] Password: [b][span style='color: #E80000;']"adminadmin"[/span][/b].[br]
+    1. Go to http://your_ip/:8082/[br]
+    2. If you want to enable "https" ther is a certificate file in /config "https_certs.txt" paste the contents of that file in the webui[br]
+ 	Theese certs are generated on container install, delete the file if you want to generate new certs.
+
+  </Overview>
+  <Category>Downloaders:</Category>
+  <Description>The qBittorrent project aims to provide a Free Software alternative to µTorrent. ,</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/macestersRepository/macexx/qbittorrent.xml</templatePath>
+</Container>

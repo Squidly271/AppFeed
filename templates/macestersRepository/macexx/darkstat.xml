@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>DarkStat</Name>
+  <Support>https://lime-technology.com/forum/index.php?topic=40630.0</Support>
+  <Registry>https://registry.hub.docker.com/r/mace/darkstat/</Registry>
+  <GitHub>https://github.com/macexx/darkstat</GitHub>
+  <Repository>mace/darkstat</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ETH</Name>
+      <Value>eth0</Value>
+    </Variable>
+    <Variable>
+      <Name>PORT</Name>
+      <Value>666</Value>
+    </Variable>
+    <Variable>
+      <Name>IP_HOST</Name>
+      <Value>192.168.1.XXX</Value>
+    </Variable>
+    <Variable>
+      <Name>IP_RANGE</Name>
+      <Value>192.168.1.0/255.255.255.0</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:666]/</WebUI>
+  <Icon>https://i.imgur.com/pa3eozo.png</Icon>
+  <Date>1434340800</Date>
+  <TemplateURL>https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/darkstat.xml</TemplateURL>
+  <Overview>
+    Captures network traffic, calculates statistics about usage, and serves reports over HTTP.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] This is where Darkstat will store it´s database and logs[br]
+    [br]
+    [b][span style='color: #E80000;']Notes[/span][/b][br]
+    [u]Environment Variables[/u][br]
+    Define the variables,[br][br]
+	[b]ETH[/b] (Match your unRAID interface, don´t use "br0" use eth0, eth1 etc...)[br]
+	[b]PORT[/b] (Port for WebUI, if changed don't forget to change it in Additional Fields)[br]
+	[b]IP_HOST[/b] (IP of unRAID server)[br]
+	[b]IP_RANGE[/b] (IP-range of the local network)[br][br]
+  </Overview>
+  <Category>Network:Management</Category>
+  <Description>Captures network traffic, calculates statistics about usage, and serves reports over HTTP.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/macestersRepository/macexx/darkstat.xml</templatePath>
+</Container>

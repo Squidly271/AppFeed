@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Minecraft</Name>
+  <Repository>fithwum/minecraft</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Project>https://www.minecraft.net/en-us/</Project>
+  <Overview>This docker is for running Minecraft vanilla server version 1.16.1 but if you want to run a modded server you can just do not delete the files that are in the folder.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/minecraft_server_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Minecraft.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Buy me a coffee if you like.</DonateText>
+  <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
+  <Date>1594872000</Date>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Game_Saves/Minecraft/world/</HostDir>
+      <ContainerDir>/MCserver/world/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft-server</HostDir>
+      <ContainerDir>/MCserver</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ACCEPT_EULA</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="Host Port 2" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Game_Saves/Minecraft/world/</Config>
+  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
+  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Category>GameServers:</Category>
+  <Description>This docker is for running Minecraft vanilla server version 1.16.1 but if you want to run a modded server you can just do not delete the files that are in the folder.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fithwumsRepository/templates/minecraft_server_unraid.xml</templatePath>
+</Container>

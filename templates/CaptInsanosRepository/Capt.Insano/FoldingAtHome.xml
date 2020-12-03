@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>FoldingAtHome</Name>
+  <Overview>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=37729.0</Support>
+  <Registry>https://registry.hub.docker.com/r/captinsano/foldingathome</Registry>
+  <Repository>captinsano/foldingathome</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>36330</HostPort>
+        <ContainerPort>36330</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7396</HostPort>
+        <ContainerPort>7396</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
+  <Icon>https://i.imgur.com/AKptFCw.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/CaptInsano/docker-containers/templates/Capt.Insano/FoldingAtHome.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Other:</Category>
+  <Description>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CaptInsanosRepository/Capt.Insano/FoldingAtHome.xml</templatePath>
+</Container>

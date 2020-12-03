@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Confluence</Name>
+  <Repository>atlassian/confluence-server</Repository>
+  <Registry>https://hub.docker.com/r/atlassian/confluence-server</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://www.atlassian.com/software/confluence</Project>
+  <Overview>Official Confluence-Server Docker Image</Overview>
+  <WebUI>http://[IP]:8090</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-confluence.xml</TemplateURL>
+  <Icon>https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_1505148164/confluence.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/confluence</HostDir>
+      <ContainerDir>/var/atlassian/application-data/confluence</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 1" Target="/var/atlassian/application-data/confluence" Default="" Mode="rw" Description="Container Path: /var/atlassian/application-data/confluence" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/confluence</Config>
+  <Date>1590166206</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>Official Confluence-Server Docker Image</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-confluence.xml</templatePath>
+</Container>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>malfurious-roundcube-postfixadmin</Name>
+  <Overview>
+   Postfixadmin is an administrative interface for malfurious-mailserver.
+   Roundcube is a fast and efficient Webmail client.
+  </Overview>
+  <Support>https://forums.lime-technology.com/topic/60111-support-malfurious-roundcube-postfixadmin/</Support>
+  <Registry>https://registry.hub.docker.com/r/malfurious/roundcube-postfixadmin/</Registry>
+  <GitHub>https://github.com/Malfurious/roundcube-postfixadmin</GitHub>
+  <TemplateURL>https://raw.githubusercontent.com/Malfurious/docker-templates/master/Malfurious/malfurious-roundcube-postfixadmin.xml</TemplateURL>
+  <Repository>malfurious/roundcube-postfixadmin</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Config Name="Roundcube Port" Target="8888" Default="8888" Mode="tcp" Description="Roundcube Host Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Postfixadmin Port" Target="8080" Default="8080" Mode="tcp" Description="Postfixadmin Host Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Host" Target="MYSQL_HOST" Default="" Mode="" Description="Your MariaDB/MySQL Server IP Address/Hostname" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Roundcube Username" Target="ROUND_USER" Default="roundcube" Mode="" Description="Your MariaDB/MySQL Server Roundcube Username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Roundcube Password" Target="ROUND_PASS" Default="" Mode="" Description="Your MariaDB/MySQL Server Roundcube Password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Roundcube Database" Target="ROUND_DB" Default="roundcube" Mode="" Description="Your MariaDB/MySQL Server Roundcube Database Name" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Postfixadmin Username" Target="POST_USER" Default="postfix" Mode="" Description="Your MariaDB/MySQL Server Postfixadmin Username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Postfixadmin Password" Target="POST_PASS" Default="" Mode="" Description="Your MariaDB/MySQL Server Postfixadmin Password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Postfixadmin Database" Target="POST_DB" Default="postfix" Mode="" Description="Your MariaDB/MySQL Server Postfixadmin Database Name" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Mail Server Name" Target="MAIL_HOST" Default="mail.domain.com" Mode="" Description="Your Mail Server IP Address/Hostname" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="IMAPS" Target="ENABLE_IMAPS" Default="true" Mode="" Description="Enables or Disables IMAPS for Roundcube" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTPS" Target="ENABLE_SMTPS" Default="true" Mode="" Description="Enables or Disables SMTPS for Roundcube" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Roundcube Setup Installer" Target="DISABLE_INSTALLER" Default="false" Mode="" Description="Enables or Disables the Roundcube Installer" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Roundcube Listening Port" Target="ROUNDCUBE_PORT" Default="8888" Mode="tcp" Description="Roundcube Container Listening Port" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Postfixadmin Listening Port" Target="POSTFIX_PORT" Default="8080" Mode="tcp" Description="Roundcube Container Listening Port" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Encryption Method" Target="PASS_CRYPT" Default="" Mode="" Description="Postfixadmin Password Encryption Method" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Enigma GPG Key Storage Path" Target="/enigma" Default="/mnt/user/appdata/malfurious-roundcube-postfixadmin" Mode="rw" Description="Container Path: /enigma" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/Malfurious/docker-templates/master/images/roundcube.png</Icon>
+  <DonateImg></DonateImg>
+  <ExtraParams>--add-host mail.domain.com:xxx.xxx.xxx.xxx</ExtraParams>
+  <Category>Network:Web</Category>
+  <Description>Postfixadmin is an administrative interface for malfurious-mailserver.
+   Roundcube is a fast and efficient Webmail client.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/malfuriousRepository/Malfurious/malfurious-roundcube-postfixadmin.xml</templatePath>
+</Container>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1499486400</Date>
+  <Name>DVBLink</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=49578.0</Support>
+  <Overview>DVBLink need to enjoy your favorite channels and recordings within your home network and on the go!</Overview>
+  <Project>http://dvblogic.com</Project>
+  <Registry>https://hub.docker.com/r/chvb/docker-dvblink/</Registry>
+  <Repository>chvb/docker-dvblink</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>39876</HostPort>
+        <ContainerPort>39876</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8100</HostPort>
+        <ContainerPort>8100</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2222</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Recordings</HostDir>
+      <ContainerDir>/recordings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/DVBLink/config</HostDir>
+      <ContainerDir>/usr/local/bin/dvblink</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/DVBLink/data</HostDir>
+      <ContainerDir>/opt/DVBLink</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>1.0</Version>
+  <WebUI>http://[IP]:[PORT:39876]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/dvblink.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/DVBLink.xml</TemplateURL>
+  <Category>MediaServer:Video</Category>
+  <Description>DVBLink need to enjoy your favorite channels and recordings within your home network and on the go!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/chvbsRepository/chvb/DVBLink.xml</templatePath>
+</Container>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Apache-PHP-Adminer</Name>
+  <Registry>https://registry.hub.docker.com/r/hernandito/docker-apache-php-adminer/</Registry>
+  <Repository>hernandito/docker-apache-php-adminer</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>81</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>444</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apache/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apache/www/</HostDir>
+      <ContainerDir>/web</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apache/www/adminer/</HostDir>
+      <ContainerDir>/web/adminer</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apache/logs/</HostDir>
+      <ContainerDir>/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://i.imgur.com/A1AQVll.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/apache-php-adminer.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>
+    Modification of CHMB and smbion by Hernando, which is a Apache based web server set up to act as a proxy with Adminer (PHPMyAdmin type databse manager) and with basic PHP web server capabilities, modifications are simply the addition of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this path is used to store the configuration and the SSL certs files of the reverse proxy.[br]
+    [b]/web[/b] : this path is the web directory[br]
+    [b]/web/adminer[/b] : adminer path inside the web directory[br]
+    [b]/logs[/b] : this path is the logs directory[br][br]
+
+I have added custom [b]Crontab[/b] functionality.To enable Cron jobs, edit the file [b]crons.conf[/b] in folder [/b]/config[/b]. [br]
+Add as many tasks as you need, save the file, and [b]restart[/b] the container.[br][br]
+
+This Docker includes [b]Adminer[/b] for MyariaDB database management. Adminer is currently password protected.[br]
+Username and password are [b]admin:admin[/b]. To change this, please go to [b]http://www.htaccesstools.com/htpasswd-generator/[b][br]
+Type the desired username and password and click "Create .htpassword File". Copy the resulting code to your clipboard.[br]
+Go to the /web/adminer folder from above, and edit the .htaccess file in there. Eliminate the top line and paste your new code.[br]
+Save the file, and [b]restart[/b] the container.[br][br]
+
+To access the Adminer web interface, go to: [b]your-server-ip:port/adminer [br]
+
+  </Overview>
+  <Category>Network:Web</Category>
+  <Description>Modification of CHMB and smbion by Hernando, which is a Apache based web server set up to act as a proxy with Adminer (PHPMyAdmin type databse manager) and with basic PHP web server capabilities, modifications are simply the addition of php5-gd, php5-sqlite, php5-intl, addition of a books volume to enable Calibre OPDS PHP Server support, which will allow you to access your Ebook library from Calibre over the web, and automatically email books to your Kindle.  http://blog.slucas.fr/en/oss/calibre-opds-php-server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hernanditosRepository/hernando/apache-php-adminer.xml</templatePath>
+</Container>

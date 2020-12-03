@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>TeamSpeak3-Simple</Name>
+  <Repository>fithwum/teamspeak3</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/teamspeak3/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/76749-support-fithwum-teamspeak3/</Support>
+  <Project>https://www.teamspeak.com/</Project>
+  <Overview>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#13;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+[b]/teamspeak3[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]&#13;
+[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]
+Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
+To authenticate use the privilege key shown in the supervisord.log file in the /teamspeak3 folder.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/ts3server-basic_alpine_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Buy me a coffee if you like.</DonateText>
+  <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
+  <Date>1592971200</Date>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9987</HostPort>
+        <ContainerPort>9987</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10011</HostPort>
+        <ContainerPort>10011</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>30033</HostPort>
+        <ContainerPort>30033</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teamspeak3</HostDir>
+      <ContainerDir>/ts3server</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Sync/Teamspeak3-files/files/virtualserver_1/</HostDir>
+      <ContainerDir>/ts3server/files/virtualserver_1/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="9987" Default="9987" Mode="udp" Description="Container Port: 9987" Type="Port" Display="always" Required="true" Mask="false">9987</Config>
+  <Config Name="Host Port 2" Target="10011" Default="10011" Mode="tcp" Description="Container Port: 10011" Type="Port" Display="always" Required="true" Mask="false">10011</Config>
+  <Config Name="Host Port 3" Target="30033" Default="30033" Mode="tcp" Description="Container Port: 30033" Type="Port" Display="always" Required="true" Mask="false">30033</Config>
+  <Config Name="File Browser" Target="/ts3server/files/virtualserver_1/" Default="" Mode="rw" Description="Container Path: /ts3server/files/virtualserver_1/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Sync/Teamspeak3-files/files/virtualserver_1/</Config>
+  <Config Name="AppData Config Path" Target="/ts3server" Default="/mnt/user/appdata/teamspeak3" Mode="rw" Description="Container Path: /ts3server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/teamspeak3</Config>
+  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Category>Network:Voip</Category>
+  <Description>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fithwumsRepository/templates/ts3server-basic_alpine_unraid.xml</templatePath>
+</Container>

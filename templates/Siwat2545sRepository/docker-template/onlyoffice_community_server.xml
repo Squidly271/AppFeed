@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1541998800</Date>
+  <Name>OnlyOffice-Community-Server</Name>
+  <Project>https://www.onlyoffice.com/</Project>
+  <Overview>
+    ONLYOFFICE Community Server is a free open source collaborative system developed to manage documents, projects, customer relationship and email correspondence, all in one place.
+	  HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it
+  </Overview>
+  <Registry>https://hub.docker.com/r/onlyoffice/communityserver/</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>onlyoffice/communityserver</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficecs/logs</HostDir>
+      <ContainerDir>/var/log/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficecs/Data</HostDir>
+      <ContainerDir>/var/www/onlyoffice/Data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficecs/database</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4431</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5222</HostPort>
+        <ContainerPort>5222</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Environment></Environment>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://pbs.twimg.com/profile_images/801693107125362689/al5MQBQM_normal.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/onlyoffice_community_server.xml</TemplateURL>
+  <Category>Productivity: Tools:</Category>
+  <Description>ONLYOFFICE Community Server is a free open source collaborative system developed to manage documents, projects, customer relationship and email correspondence, all in one place.
+	  HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/onlyoffice_community_server.xml</templatePath>
+</Container>

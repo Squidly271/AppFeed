@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>CrashPlanPRO</Name>
+  <Repository>jlesage/crashplan-pro</Repository>
+  <Registry>https://hub.docker.com/r/jlesage/crashplan-pro/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/59647-support-crashplan-pro/</Support>
+  <Overview>
+    CrashPlan offers the most comprehensive online backup solution to tens of
+thousands of businesses around the world.  The highly secure, automatic and
+continuous service provides customers the peace of mind that their digital life
+is protected and easily accessible.
+    [br][br]
+    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+    Also, being based on Alpine Linux, size of this container
+    is very small (less than 250MB in download size).
+    [br][br][span][/span]
+    For a complete documentation of this container, see
+    [a href="https://github.com/jlesage/docker-crashplan-pro/blob/master/README.md"]
+    https://github.com/jlesage/docker-crashplan-pro/blob/master/README.md[/a].
+    [br][br]
+    [span style='color: red;'][b]Warning:[/b][/span] Make sure to read the
+    [i]Migrating From CrashPlan for Home[/i] section of the documentation if
+    you are installing this container to migrate from [i]CrashPlan for Home[/i]
+    version.
+    [br][br]
+    [span style='color: red;'][b]Warning:[/b][/span] Make sure to read the
+    [i]Taking Over Existing Backup[/i] section of the documentation if you are
+    installing this container to replace another CrashPlan installation (from
+    Windows, Linux, Mac or even another Docker container).
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/crashplan-pro.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/crashplan-pro-icon.png</Icon>
+  <Project>https://www.crashplan.com/en-us/business/</Project>
+  <Date>1603944000</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7810</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7910</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/crashplan-pro</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/storage</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_NICENESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1280</Value>
+      <Name>DISPLAY_WIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>768</Value>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>SECURE_CONNECTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>X11VNC_EXTRA_OPTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CRASHPLAN_SRV_MAX_MEM</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/crashplan-pro" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Storage" Target="/storage" Default="/mnt/user" Mode="ro" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; to encrypt the connection.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Note:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; When enabling the secure connection, security parameters needs to be generated.  This &amp;lt;b&amp;gt;one-time&amp;lt;/b&amp;gt; operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Warning:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Maximum Memory" Target="CRASHPLAN_SRV_MAX_MEM" Default="" Mode="" Description="Maximum amount of memory the CrashPlan Engine is allowed to use.  One of the following memory unit (case insensitive) should be added as a suffix to the size: &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;G&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;, &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;M&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; or &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;K&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;. By default, when this variable is not set, a maximum of 1024MB (&amp;lt;b&amp;gt;&amp;lt;i&amp;gt;1024M&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;) of memory is allowed." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="WEB Port for GUI" Target="5800" Default="7810" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="VNC Port for GUI" Target="5900" Default="7910" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used." Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/donate.png</DonateImg>
+  <Category>Backup:</Category>
+  <Description>CrashPlan offers the most comprehensive online backup solution to tens of
+thousands of businesses around the world.  The highly secure, automatic and
+continuous service provides customers the peace of mind that their digital life
+is protected and easily accessible.
+    
+    The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+    Also, being based on Alpine Linux, size of this container
+    is very small (less than 250MB in download size).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/DjossRepository/jlesage/crashplan-pro.xml</templatePath>
+</Container>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>shinobipro</Name>
+  <Repository>spaceinvaderone/shinobi_pro_unraid:latest</Repository>
+  <Registry>https://hub.docker.com/r/spaceinvaderone/shinobi_pro_unraid</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/86293-support-spaceinvaderone-shinobi-pro/</Support>
+  <Project>https://shinobi.video/</Project>
+  <Overview>Default tag is spaceinvaderone/shinobi_pro_unraid:latest  but this can be changed to :nvidia&#13;
+&#13;
+To use your Nvidia GPU for encoding&#13;
+1. Use the Nvidia Unraid build of Unraid&#13;
+2. Set the repository tag to :nvidia   ( spaceinvaderone/shinobi_pro_unraid:latest )&#13;
+3. Under Extra Parameters:  add   --runtime=nvidia&#13;
+4. Set  template field   Nvidia build only -- Driver capabilities:     to  all&#13;
+5. Set  template field   Nvidia build only -- GPU ID:                       to your GPU id from the nvida unraid plugin&#13;
+&#13;
+Shinobi is the Open Source CCTV Solution written in Node.JS. Designed with multiple account system, Streams by WebSocket, and Save to WebM. Shinobi can record IP Cameras and Local Cameras.&#13;
+Features&#13;
+Time-lapse Viewer (Watch a hours worth of footage in a few minutes)&#13;
+2-Factor Authentication&#13;
+Defeats stream limit imposed by browsers&#13;
+With Base64 (Stream Type) and JPEG Mode (Option)&#13;
+Records IP Cameras and Local Cameras&#13;
+Streams by WebSocket, HLS (includes audio), and MJPEG&#13;
+Save to WebM and MP4&#13;
+Can save Audio&#13;
+Push Events - When a video is finished it will appear in the dashboard without a refresh&#13;
+Region Motion Detection (Similar to ZoneMinder Zone Detection)&#13;
+Represented by a Motion Guage on each monitor&#13;
+"No Motion" Notifications&#13;
+1 Process for Each Camera to do both, Recording and Streaming&#13;
+Timeline for viewing Motion Events and Videos&#13;
+Sub-Accounts with permissions&#13;
+Monitor Viewing&#13;
+Monitor Editing&#13;
+Video Deleting&#13;
+Separate API keys for sub account&#13;
+Cron Filters can be set based on master account&#13;
+Stream Analyzer built-in (FFprobe GUI)&#13;
+Monitor Groups&#13;
+Can snapshot images from stream directly&#13;
+Lower Bandwith Mode (JPEG Mode)&#13;
+Snapshot (cgi-bin) must be enabled in Monitor Settings&#13;
+Control Cameras from Interface&#13;
+API&#13;
+Get videos&#13;
+Get monitors&#13;
+Change monitor modes : Disabled, Watch, Record&#13;
+Embedding streams&#13;
+Dashboard Framework made with Google Material Design Lite, jQuery, and Bootstrap</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SpaceinvaderOne/Docker-Templates-Unraid/master/spaceinvaderone/shinobi_pro.xml</TemplateURL>
+  <Icon>https://shinobi.video//libs/assets/icon/apple-touch-icon-57x57.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateLink>https://www.paypal.me/spaceinvader</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/cctv/</HostDir>
+      <ContainerDir>/opt/shinobi/videos</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/dev/shm/shinobi</HostDir>
+      <ContainerDir>/dev/shm/streams</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/shinobipro</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/shinobipro/database</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/shinobipro/customautoload</HostDir>
+      <ContainerDir>/opt/shinobi/libs/customAutoLoad</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/usr/share/zoneinfo/</HostDir>
+      <ContainerDir>/usr/share/zoneinfo/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>admin</Value>
+      <Name>ADMIN_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>ADMIN_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>MYSQL_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>majesticflame</Value>
+      <Name>MYSQL_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ccio</Value>
+      <Name>MYSQL_DATABASE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>localhost</Value>
+      <Name>MYSQL_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MYSQL_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>MYSQL_ROOT_USER</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Web port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="username for superuser" Target="ADMIN_USER" Default="" Mode="" Description="Container Variable: ADMIN_USER" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="password for superuser" Target="ADMIN_PASSWORD" Default="" Mode="" Description="Container Variable: ADMIN_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">password</Config>
+  <Config Name="video storage location" Target="/opt/shinobi/videos" Default="" Mode="rw,slave" Description="/opt/shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/cctv/</Config>
+  <Config Name="****Nvidia build only  -- Driver capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="If using tag :nvidia  -- set to   all" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="****Nvidia build only -- GPU ID" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="add gpu id (from nvidia unraid plugin)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MYSQL_ROOT_PASSWORD" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="MYSQL_ROOT_PASSWORD" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="MYSQL_PORT" Target="MYSQL_PORT" Default="" Mode="" Description="MYSQL_PORT  standard port 3306" Type="Variable" Display="advanced" Required="false" Mask="false">3306</Config>
+  <Config Name="MYSQL_USER" Target="MYSQL_USER" Default="" Mode="" Description="MYSQL_USER" Type="Variable" Display="advanced" Required="false" Mask="false">majesticflame</Config>
+  <Config Name="MYSQL_DATABASE" Target="MYSQL_DATABASE" Default="" Mode="" Description="MYSQL_DATABASE NAME" Type="Variable" Display="advanced" Required="false" Mask="false">ccio</Config>
+  <Config Name="MYSQL_HOST" Target="MYSQL_HOST" Default="" Mode="" Description="MYSQL_HOST leave as localhost for container built in mariadb" Type="Variable" Display="advanced" Required="false" Mask="false">localhost</Config>
+  <Config Name="Temporary Streams" Target="/dev/shm/streams" Default="" Mode="rw" Description="Temporary Streams" Type="Path" Display="advanced" Required="false" Mask="false">/dev/shm/shinobi</Config>
+  <Config Name="appdata location" Target="/config" Default="/mnt/user/appdata/shinobipro" Mode="rw" Description="/config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/shinobipro</Config>
+  <Config Name="maria db database location" Target="/var/lib/mysql" Default="" Mode="rw" Description="/var/lib/mysql" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/shinobipro/database</Config>
+  <Config Name="customautoload modules" Target="/opt/shinobi/libs/customAutoLoad" Default="" Mode="rw" Description="Container Path: /opt/shinobi/libs/customAutoLoad" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/shinobipro/customautoload</Config>
+  <Config Name="TIMEZONE" Target="/usr/share/zoneinfo/" Default="" Mode="ro" Description="Container Path: /usr/share/zoneinfo/" Type="Path" Display="advanced" Required="false" Mask="false">/usr/share/zoneinfo/</Config>
+  <Config Name="MYSQL_PASSWORD" Target="MYSQL_PASSWORD" Default="" Mode="" Description="MYSQL_PASSWORD default none for internal mariadb" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="LOCAL TIME" Target="/etc/localtime" Default="" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced" Required="false" Mask="false">/etc/localtime</Config>
+  <Config Name="MYSQL_ROOT_USER" Target="MYSQL_ROOT_USER" Default="" Mode="" Description="MYSQL_ROOT_USER" Type="Variable" Display="advanced" Required="false" Mask="false">root</Config>
+  <Date>1596040185</Date>
+  <Category>HomeAutomation: MediaApp:Video MediaServer:Video</Category>
+  <Description>Default tag is spaceinvaderone/shinobi_pro_unraid:latest  but this can be changed to :nvidia&#13;
+&#13;
+To use your Nvidia GPU for encoding&#13;
+1. Use the Nvidia Unraid build of Unraid&#13;
+2. Set the repository tag to :nvidia   ( spaceinvaderone/shinobi_pro_unraid:latest )&#13;
+3. Under Extra Parameters:  add   --runtime=nvidia&#13;
+4. Set  template field   Nvidia build only -- Driver capabilities:     to  all&#13;
+5. Set  template field   Nvidia build only -- GPU ID:                       to your GPU id from the nvida unraid plugin&#13;
+&#13;
+Shinobi is the Open Source CCTV Solution written in Node.JS. Designed with multiple account system, Streams by WebSocket, and Save to WebM. Shinobi can record IP Cameras and Local Cameras.&#13;
+Features&#13;
+Time-lapse Viewer (Watch a hours worth of footage in a few minutes)&#13;
+2-Factor Authentication&#13;
+Defeats stream limit imposed by browsers&#13;
+With Base64 (Stream Type) and JPEG Mode (Option)&#13;
+Records IP Cameras and Local Cameras&#13;
+Streams by WebSocket, HLS (includes audio), and MJPEG&#13;
+Save to WebM and MP4&#13;
+Can save Audio&#13;
+Push Events - When a video is finished it will appear in the dashboard without a refresh&#13;
+Region Motion Detection (Similar to ZoneMinder Zone Detection)&#13;
+Represented by a Motion Guage on each monitor&#13;
+"No Motion" Notifications&#13;
+1 Process for Each Camera to do both, Recording and Streaming&#13;
+Timeline for viewing Motion Events and Videos&#13;
+Sub-Accounts with permissions&#13;
+Monitor Viewing&#13;
+Monitor Editing&#13;
+Video Deleting&#13;
+Separate API keys for sub account&#13;
+Cron Filters can be set based on master account&#13;
+Stream Analyzer built-in (FFprobe GUI)&#13;
+Monitor Groups&#13;
+Can snapshot images from stream directly&#13;
+Lower Bandwith Mode (JPEG Mode)&#13;
+Snapshot (cgi-bin) must be enabled in Monitor Settings&#13;
+Control Cameras from Interface&#13;
+API&#13;
+Get videos&#13;
+Get monitors&#13;
+Change monitor modes : Disabled, Watch, Record&#13;
+Embedding streams&#13;
+Dashboard Framework made with Google Material Design Lite, jQuery, and Bootstrap</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpaceInvaderOnesRepository/spaceinvaderone/shinobi_pro.xml</templatePath>
+</Container>

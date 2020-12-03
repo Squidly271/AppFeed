@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>onlyoffice-mysql-server</Name>
+  <Repository>xternet/onlyoffice-mysql-5.7</Repository>
+  <Registry>https://hub.docker.com/repository/docker/xternet/onlyoffice-mysql-5.7</Registry>
+  <Network>onlyoffice</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/</Support>
+  <Project>https://www.mysql.com/</Project>
+  <Overview>External database for OnlyOffice. ( MySQL 5.7 )&#13;
+The database needs initialization.&#13;
+Read the support thread on how to initialize it: &#13;
+https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/ </Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/unraid-ca-repo/onlyoffice-mysql-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/AMJidovu/unraid-repository/master/img/mysql.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donate me a coffee or a beer if you like my work :)</DonateText>
+  <DonateLink>https://www.paypal.me/xternet</DonateLink>
+  <Networking>
+    <Mode>onlyoffice</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/mysql/conf.d</HostDir>
+      <ContainerDir>/etc/mysql/conf.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/mysql/data</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/mysql/initdb</HostDir>
+      <ContainerDir>/docker-entrypoint-initdb.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/mysql/logs</HostDir>
+      <ContainerDir>/var/log/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>my-secret-pw</Value>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>onlyoffice</Value>
+      <Name>MYSQL_DATABASE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="MySQL Port" Target="3306" Default="3306" Mode="tcp" Description="Container Port: 3306" Type="Port" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="Onlyoffice MySQL Config (onlyoffice.cnf created before mysql container is started )" Target="/etc/mysql/conf.d" Default="/mnt/user/appdata/onlyoffice/mysql/conf.d" Mode="rw" Description="Container Path: /etc/mysql/conf.d" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/mysql/conf.d</Config>
+  <Config Name="Mounted Folder for MySQL Database" Target="/var/lib/mysql" Default="/mnt/user/appdata/onlyoffice/mysql/data" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/mysql/data</Config>
+  <Config Name="Onlyoffice entrypoint for MySQL database setup ( setup.sql created before mysql container is started )" Target="/docker-entrypoint-initdb.d" Default="/mnt/user/appdata/onlyoffice/mysql/initdb" Mode="rw" Description="Container Path: /docker-entrypoint-initdb.d" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/mysql/initdb</Config>
+  <Config Name="Mounted MySQL Logs" Target="/var/log/mysql" Default="/mnt/user/appdata/onlyoffice/mysql/logs" Mode="rw" Description="Container Path: /var/log/mysql" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/mysql/logs</Config>
+  <Config Name="MySQL root password ( match the root password with the one in the setup.sql script )" Target="MYSQL_ROOT_PASSWORD" Default="my-secret-pw" Mode="" Description="Container Variable: MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">my-secret-pw</Config>
+  <Config Name="Default OnlyOffice Community Server MySQL Database" Target="MYSQL_DATABASE" Default="onlyoffice" Mode="" Description="Container Variable: MYSQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false">onlyoffice</Config>
+  <Date>1575677212</Date>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>External database for OnlyOffice. ( MySQL 5.7 )&#13;
+The database needs initialization.&#13;
+Read the support thread on how to initialize it: &#13;
+https://forums.unraid.net/topic/85643-support-amjidovu-onlyoffice-community-server/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JidovuMariusAdriansRepository/unraid-ca-repo/onlyoffice-mysql-server.xml</templatePath>
+</Container>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OVPN_Privoxy</Name>
+  <Repository>alturismo/ovpn_privoxy</Repository>
+  <Registry>https://hub.docker.com/r/alturismo/ovpn_privoxy</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/81786-support-alturismo-repos/</Support>
+  <Project>https://github.com/alturismo/ovpn_privoxy</Project>
+  <Overview>openvpn with privoxy in docker with cron&#13;
+&#13;
+after docker start check your config folder, add your *.ovpn file(s) and edit logindata.conf&#13;
+&#13;
+use privoxy on ip:8118&#13;
+use socks on ip:1080</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-ovpn_privoxy.xml</TemplateURL>
+  <Icon>https://www.heise.de/download/media/openvpn-22153/openvpn-logo_1-1-30.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --device /dev/net/tun --sysctl net.ipv6.conf.all.disable_ipv6=0 --dns=8.8.8.8</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1080</HostPort>
+        <ContainerPort>1080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OpenVPN/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.0/24</Value>
+      <Name>LOCAL_NET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Frankfurt.ovpn</Value>
+      <Name>OPENVPN_FILE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/OpenVPN/</Config>
+  <Config Name="LOCAL_NET" Target="LOCAL_NET" Default="" Mode="" Description="Container Variable: LOCAL_NET" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.0/24</Config>
+  <Config Name="OPENVPN_FILE" Target="OPENVPN_FILE" Default="" Mode="" Description="Container Variable: OPENVPN_FILE" Type="Variable" Display="always" Required="true" Mask="false">Frankfurt.ovpn</Config>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8118</Config>
+  <Config Name="Microsocks Port" Target="1080" Default="" Mode="tcp" Description="Container Port: 1080" Type="Port" Display="always" Required="false" Mask="false">1080</Config>
+  <Date>1578721140</Date>
+  <Category>Network:Proxy</Category>
+  <Description>openvpn with privoxy in docker with cron&#13;
+&#13;
+after docker start check your config folder, add your *.ovpn file(s) and edit logindata.conf&#13;
+&#13;
+use privoxy on ip:8118&#13;
+use socks on ip:1080</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/alturismosRepository/my-ovpn_privoxy.xml</templatePath>
+</Container>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OctoFarm</Name>
+  <Repository>octofarm/octofarm</Repository>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release of OctoFarm.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>dev</Tag>
+    <TagDescription>Latest semi-stable development release of OctoFarm. Use with caution!</TagDescription>
+  </Branch>
+  <Registry>https://hub.docker.com/r/octofarm/octofarm/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/NotExpectedYet/OctoFarm/issues</Support>
+  <Project>https://octofarm.net/</Project>
+  <Overview>OctoFarm is a web server and client combination for unifying multiple instances of Octoprint.
+	You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm.</Overview>
+  <WebUI>http://[IP]:[PORT:4000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/NotExpectedYet/OctoFarm-UnRaid-Template/master/octofarm/octofarm.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/NotExpectedYet/OctoFarm/master/views/android-chrome-512x512.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Support the development on Patreon:</DonateText>
+  <DonateLink>https://www.patreon.com/NotExpectedYet</DonateLink>
+  <Description>OctoFarm is a web server and client combination for unifying multiple instances of Octoprint.
+	You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000</HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/logs</HostDir>
+      <ContainerDir>/app/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/scripts</HostDir>
+      <ContainerDir>/scripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoFarm/images</HostDir>
+      <ContainerDir>/app/images</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>mongodb://mongo/octofarm</Value>
+      <Name>MONGO</Name>
+    </Variable>
+  </Environment>
+  <Config Name="logs" Target="/app/logs" Default="" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/octofarm/logs</Config>
+  <Config Name="scripts" Target="/scripts" Default="" Mode="rw" Description="Container Path: /scripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/octofarm/scripts</Config>
+  <Config Name="images" Target="/app/images" Default="" Mode="rw" Description="Thumbnail store for history" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/OctoFarm/images</Config>
+  <Config Name="MongoDB details" Target="MONGO" Default="mongodb://mongo/octofarm" Mode="" Description="mongodb://username:password@host:port/db" Type="Variable" Display="always" Required="true" Mask="false">mongodb://mongo/octofarm</Config>
+  <Config Name="Web UI" Target="4000" Default="4000" Mode="tcp" Description="Container Port: 4000" Type="Port" Display="always" Required="true" Mask="false">4000</Config>
+  <Category>Tools:Utilities</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/mearmansRepository/octofarm/octofarm.xml</templatePath>
+</Container>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Grive2</Name>
+  <Repository>agusalex/grive2</Repository>
+  <Registry>https://hub.docker.com/r/agusalex/grive2</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/97185-support-agusalex-grive2/</Support>
+  <Project>https://github.com/agusalex/grive2docker</Project>
+  <Overview>Backup your files to Google Drive using Grive2 client in a docker container&#13;
+-&#13;
+-&#13;
+Before you Start this Container:&#13;
+1 - Go to https://github.com/sabeechen/hassio-google-drive-backup/blob/master/LOCAL_AUTH.md and follow the steps&#13;
+2-  Go to this URL and append your CLIENT_ID&#13;
+https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&amp;amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;amp;response_type=code&amp;amp;client_id= FILL_HERE_YOUR_CLIENT_ID&#13;
+3- Give permission to the app and copy the CODE provided&#13;
+4- Fill in this template with CLIENT_ID, SECRET and CODE&#13;
+5- Run it the first time and let it start Sync&#13;
+6- Once it starts you can now remove the CODE variable from this template to be safe&#13;
+7- Enjoy Grive2 on Unraid!!&#13;
+8- Set GRIVE_PARAMS to for example -s my_drive_folder to sync that specific folder on Google Drive&#13;
+9- Leaving this field blank will sync your whole Google Drive.</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/agusalex/docker-templates/master/agusalex/Grive2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/agusalex/docker-templates/master/agusalex/images/Grive2.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>host_folder</HostDir>
+      <ContainerDir>/drive</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SECRET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CODE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PARAMS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SLEEP</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="UNRAID_FOLDER" Target="/drive" Default="" Mode="rw" Description="Path to the unraid folder in which to sync the files, it also will contain .grive config file" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="CLIENT_ID" Target="ID" Default="" Mode="" Description="Your Client ID obtained by doing the procedure in the description" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="SECRET" Target="SECRET" Default="" Mode="" Description="Your Client Secret obtained by doing the procedure in the description" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="CODE" Target="CODE" Default="" Mode="" Description="Your client secret obtained from the URL in the description&#13;&#10;Delete me after the setup is complete" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="GRIVE_PARAMS" Target="PARAMS" Default="" Mode="" Description="Passes parameters to grive2. For example -s my_drive_folder. See https://github.com/agusalex/grive2docker#grive-settings " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SLEEP" Target="SLEEP" Default="" Mode="" Description="Amount of time to sleep between runs. In order to minimize CPU usage set this to a lower value. &#13;&#10;Default is 1 second." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Date>1601595435</Date>
+  <Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
+  <Description>Backup your files to Google Drive using Grive2 client in a docker container&#13;
+-&#13;
+-&#13;
+Before you Start this Container:&#13;
+1 - Go to https://github.com/sabeechen/hassio-google-drive-backup/blob/master/LOCAL_AUTH.md and follow the steps&#13;
+2-  Go to this URL and append your CLIENT_ID&#13;
+https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&amp;amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;amp;response_type=code&amp;amp;client_id= FILL_HERE_YOUR_CLIENT_ID&#13;
+3- Give permission to the app and copy the CODE provided&#13;
+4- Fill in this template with CLIENT_ID, SECRET and CODE&#13;
+5- Run it the first time and let it start Sync&#13;
+6- Once it starts you can now remove the CODE variable from this template to be safe&#13;
+7- Enjoy Grive2 on Unraid!!&#13;
+8- Set GRIVE_PARAMS to for example -s my_drive_folder to sync that specific folder on Google Drive&#13;
+9- Leaving this field blank will sync your whole Google Drive.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/agusalexRepository/agusalex/Grive2.xml</templatePath>
+</Container>

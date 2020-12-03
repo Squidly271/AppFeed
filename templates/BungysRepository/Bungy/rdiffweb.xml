@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>rdiffweb</Name>
+  <Overview>
+    Rdiffweb is used to browse and restore backups created by rdiff-backup.&#13;
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38930.0</Support>
+  <Registry>https://hub.docker.com/r/jshridha/rdiffweb/~/dockerfile/</Registry>
+  <GitHub>https://github.com/jshridha/docker-rdiffweb/</GitHub>
+  <Repository>jshridha/rdiffweb</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8099</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/rdiffweb/config</HostDir>
+      <ContainerDir>/etc/rdiffweb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disk2/rdiff-backup/</HostDir>
+      <ContainerDir>/backups</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/rdiffweb/restores</HostDir>
+      <ContainerDir>/restores</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon></Icon>
+  <TemplateURL>https://raw.githubusercontent.com/jshridha/templates/master/Bungy/rdiffweb.xml</TemplateURL>
+  <Category>Cloud: Network:Web Productivity: Tools:Utilities</Category>
+  <Description>Rdiffweb is used to browse and restore backups created by rdiff-backup.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BungysRepository/Bungy/rdiffweb.xml</templatePath>
+</Container>

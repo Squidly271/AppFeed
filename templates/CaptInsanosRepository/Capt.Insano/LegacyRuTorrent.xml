@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>LegacyruTorrent</Name>
+  <Overview>ruTorrent Container is a powerful and flexible torrent solution(including RSS support) based on older rTorrent v0.9.2</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=38698.0</Support>
+  <Registry>https://registry.hub.docker.com/r/captinsano/legacyrutorrent/</Registry>
+  <Repository>captinsano/legacyrutorrent</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8089</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8099</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>45566</HostPort>
+        <ContainerPort>45566</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9527</HostPort>
+        <ContainerPort>9527</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/download</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Icon>https://i.imgur.com/LWfuAG2.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/CaptInsano/docker-containers/templates/Capt.Insano/LegacyRuTorrent.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Downloaders:</Category>
+  <Description>ruTorrent Container is a powerful and flexible torrent solution(including RSS support) based on older rTorrent v0.9.2</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CaptInsanosRepository/Capt.Insano/LegacyRuTorrent.xml</templatePath>
+</Container>

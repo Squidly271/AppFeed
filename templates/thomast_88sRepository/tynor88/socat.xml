@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1472702400</Date>
+  <Name>socat</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=50362.0</Support>
+  <Overview>Socat is a command line based utility that establishes two bidirectional byte streams and transfers data between them.</Overview>
+  <Project>http://www.dest-unreach.org/socat/</Project>
+  <Registry>https://hub.docker.com/r/tynor88/socat/</Registry>
+  <Repository>tynor88/socat</Repository>
+  <Branch>
+    <Tag>dev</Tag>
+    <TagDescription>dev branch</TagDescription>
+  </Branch>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>LISTEN_PORT</Name>
+      <Value>443</Value>
+    </Variable>
+    <Variable>
+      <Name>FORWARD_PORT</Name>
+      <Value>943</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/socat_small.png</Icon>
+  <ExtraParams>--expose 443</ExtraParams>
+  <BaseImage>justcontainers/base-alpine</BaseImage>
+  <Config Name="Listening port" Target="443" Default="443" Mode="tcp" Description="The port to listen for TCP4 connections" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Forwarding port" Target="PGID" Default="100" Mode="tcp" Description="The port to redirect / forward TCP4 connections to" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/socat.xml</TemplateURL>
+  <Category>Network:Proxy Network:Other</Category>
+  <Description>Socat is a command line based utility that establishes two bidirectional byte streams and transfers data between them.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/thomast_88sRepository/tynor88/socat.xml</templatePath>
+</Container>

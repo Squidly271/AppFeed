@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1561003200</Date>
+  <Name>PlexMediaServer</Name>
+  <Project>https://plex.tv/</Project>
+  <Overview>
+    The Plex Media Server enriches your life by organizing all your personal media, presenting it beautifully and streaming it to all of your devices. It's easy to use, it's awesome, and it's free!
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/limetech/plex/</Registry>
+  <GitHub>https://github.com/limetech/dockerapp-plex</GitHub>
+  <Repository>limetech/plex</Repository>
+  <Support>https://forums.unraid.net/topic/38974-support-limetechs-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/PlexMediaServer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <Icon>https://d2631fvi2jdnb6.cloudfront.net/docker/limetech/plex.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/limetech/docker-templates/master/limetech/PlexMediaServer.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Video MediaApp:Music MediaApp:Photos MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Description>The Plex Media Server enriches your life by organizing all your personal media, presenting it beautifully and streaming it to all of your devices. It's easy to use, it's awesome, and it's free!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/OfficialLimetechRepository/limetech/PlexMediaServer.xml</templatePath>
+</Container>

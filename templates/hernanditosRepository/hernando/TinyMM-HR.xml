@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>TinyMM</Name>
+  <Overview>
+   Tiny Media Manager. 
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/romancing/tinymediamanager</Registry>
+  <Repository>romancin/tinymediamanager:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>USER_ID</Name>
+      <Value>0</Value>
+    </Variable>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/NewYork</Value>
+    </Variable>
+    <Variable>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Value>1480</Value>
+    </Variable>
+    <Variable>
+      <Name>DISPLAY_WIDTH</Name>
+      <Value>1600</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Media/</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/tmm/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <Icon>https://i.imgur.com/CU1cNL6.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39623.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/hernandito/docker-templates/master/hernando/TinyMM-HR.xml</TemplateURL>
+  <Category>Other:Uncategorized</Category>
+  <Description>Tiny Media Manager.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hernanditosRepository/hernando/TinyMM-HR.xml</templatePath>
+</Container>

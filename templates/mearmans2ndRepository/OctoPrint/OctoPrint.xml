@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OctoPrint</Name>
+  <Repository>octoprint/octoprint:latest</Repository>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release of OctoPrint.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>1</Tag>
+    <TagDescription>Latest stable version of OctoPrint 1.X.X</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>1.4</Tag>
+    <TagDescription>Latest stable version of OctoPrint 1.4.X</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>latest-python3</Tag>
+    <TagDescription>Latest stable version of Python3 OctoPrint.</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>1-python3</Tag>
+    <TagDescription>Latest stable version of Python3 OctoPrint 1.X.X</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>1.4-python3</Tag>
+    <TagDescription>Latest stable version of Python3 OctoPrint 1.4.X</TagDescription>
+  </Branch>
+  <Registry>https://hub.docker.com/r/octoprint/octoprint</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://community.octoprint.org/</Support>
+  <Project>https://octoprint.org/</Project>
+  <Overview>
+	OctoPrint provides a snappy web interface for controlling consumer 3D printers. This image does not contain mjpg-streamer.
+	An invite to the Discord server can be found at discord.octoprint.org.
+	</Overview>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/OctoPrint/Unraid-Template/master/OctoPrint/OctoPrint.xml</TemplateURL>
+  <Icon>https://octoprint.org/assets/img/logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Patreon</DonateText>
+  <DonateLink>https://www.patreon.com/foosel</DonateLink>
+  <Description>OctoPrint provides a snappy web interface for controlling consumer 3D printers. This image does not contain mjpg-streamer.
+	An invite to the Discord server can be found at discord.octoprint.org.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/octoprint</HostDir>
+      <ContainerDir>/home/octoprint</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="config" Target="/home/octoprint" Default="/mnt/user/appdata/octoprint" Mode="rw" Description="Container Path: /home/octoprint" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/octoprint
+	</Config>
+  <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false">5000
+	</Config>
+  <Config Name="Printer USB Port" Target="" Default="/dev/ttyACM0" Mode="" Description="Container Device: " Type="Device" Display="always" Required="true" Mask="false">/dev/ttyACM0
+	</Config>
+  <Category>Tools:Utilities</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/mearmans2ndRepository/OctoPrint/OctoPrint.xml</templatePath>
+</Container>

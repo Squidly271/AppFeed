@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>KDEInDocker</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G&amp;lt;</DonateLink>
+  <Overview>KDE In Docker + VNC + noVNC Web UI
+Default Password: admin</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/msjpq/firefox-vnc/</Registry>
+  <Repository>msjpq/firefox-vnc</Repository>
+  <Project>https://github.com/ms-jpq/kde-in-docker</Project>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4686</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1600</Value>
+      <Name>SCR_WIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>900</Value>
+      <Name>SCR_HEIGHT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>/</Value>
+      <Name>noVNC PATH_PREFIX</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>scale</Value>
+      <Name>VNC_RESIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>20</Value>
+      <Name>RECON_DELAY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>KID</Value>
+      <Name>PAGE_TITLE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>ROOT_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/KID</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/KID.png</Icon>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="SCR_WIDTH" Target="SCR_WIDTH" Default="1600" Mode="" Description="Container Variable: SCR_WIDTH" Type="Variable" Display="always" Required="true" Mask="false">1600</Config>
+  <Config Name="SCR_HEIGHT" Target="SCR_HEIGHT" Default="900" Mode="" Description="Container Variable: SCR_HEIGHT" Type="Variable" Display="always" Required="false" Mask="false">900</Config>
+  <Config Name="PATH_PREFIX" Target="noVNC PATH_PREFIX" Default="/" Mode="" Description="Container Variable: noVNC PATH_PREFIX" Type="Variable" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="VNC_RESIZE" Target="VNC_RESIZE" Default="scale" Mode="" Description="Container Variable: VNC_RESIZE&#13;&#10;&#13;&#10;remote = rescale remote desktop&#13;&#10;scale = stretch remote desktop&#13;&#10;off = disable resize" Type="Variable" Display="always" Required="false" Mask="false">scale</Config>
+  <Config Name="RECON_DELAY" Target="RECON_DELAY" Default="20" Mode="" Description="Container Variable: RECON_DELAY" Type="Variable" Display="always" Required="false" Mask="false">20</Config>
+  <Config Name="PAGE_TITLE" Target="PAGE_TITLE" Default="KID" Mode="" Description="Container Variable: PAGE_TITLE" Type="Variable" Display="always" Required="false" Mask="false">KID</Config>
+  <Config Name="ROOT_PASSWORD" Target="ROOT_PASSWORD" Default="admin" Mode="" Description="Container Variable: ROOT_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">admin</Config>
+  <Config Name="noVNC Port" Target="8080" Default="4686" Mode="tcp" Description="noVNC Port: 8080" Type="Port" Display="always" Required="false" Mask="false">4686</Config>
+  <Config Name="VNC Port" Target="5900" Default="4900" Mode="tcp" Description="VNC Port: 5900" Type="Port" Display="always" Required="false" Mask="false">4900</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/KID</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/KID.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>KDE In Docker + VNC + noVNC Web UI
+Default Password: admin</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/KID.xml</templatePath>
+</Container>

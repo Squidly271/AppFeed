@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Home-Assistant-Core</Name>
+  <Overview>Home Assistant Core is the core of the Home Assistant home automation platform. It focuses on local control and privacy. Track and control all devices at home and automate control.</Overview>
+  <license>Apache-2</license>
+  <Project>https://home-assistant.io</Project>
+  <Support>https://home-assistant.io/help/</Support>
+  <Registry>https://registry.hub.docker.com/r/homeassistant/home-assistant/</Registry>
+  <GitHub>https://github.com/home-assistant/docker-home-assistant</GitHub>
+  <Repository>homeassistant/home-assistant</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/home-assistant/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
+  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/cache/app_config/home-assistant" Mode="rw" Description="This path is where Home Assistant will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant.xml</TemplateURL>
+  <Category>HomeAutomation:</Category>
+  <Description>Home Assistant Core is the core of the Home Assistant home automation platform. It focuses on local control and privacy. Track and control all devices at home and automate control.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BalloobsRepository/balloob/home-assistant.xml</templatePath>
+</Container>

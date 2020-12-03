@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/DockerRegistry.xml</TemplateURL>
+  <Date>1525579200</Date>
+  <Name>DockerRegistry</Name>
+  <Project>https://github.com/docker/distribution</Project>
+  <Overview>
+    Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/_/registry/</Registry>
+  <GitHub>https://github.com/docker/distribution-library-image</GitHub>
+  <Repository>registry</Repository>
+  <Support>https://lime-technology.com/forums/topic/69492-support-jj9987-docker-registry/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/registry</HostDir>
+      <ContainerDir>/var/lib/registry</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/DockerRegistry-logo.png</Icon>
+  <Config Type="Path" Name="Data Storage Path" Target="/var/lib/registry" Default="/mnt/user/appdata/registry" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Docker Registry will store it's data.">/mnt/user/appdata/registry</Config>
+  <Config Type="Port" Name="Web Port" Target="5000" Default="5000" Mode="tcp" Display="always-hide" Required="true" Description="This is Docker Registry TCP port.">5000</Config>
+  <Category>Cloud: Network:Management Productivity: Tools:Utilities</Category>
+  <Description>Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jj9987sRepository/DockerRegistry.xml</templatePath>
+</Container>

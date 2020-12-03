@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>CaddyV2</Name>
+  <Repository>caddy:alpine</Repository>
+  <Registry>https://hub.docker.com/_/caddy</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Project>https://caddyserver.com/</Project>
+  <Overview>&#13;
+    Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.[br][br]&#13;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+    [b]/config[/b] This is where CaddyV2 stores its active configuration file.[br]&#13;
+    [b]/data[/b] This is where CaddyV2 stores, certs and persistence data.[br][br]&#13;
+    [b][span style='color: #E80000;']Notes[/span][/b][br]&#13;
+    Configure your Caddyfile using https://caddyserver.com/ and https://caddyserver.com/docs/caddyfile &#13;																																											 
+  </Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Poag/docker-xml/master/caddyv2.xml</TemplateURL>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-caddy-logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/caddyv2/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/caddyv2/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/caddyv2/Caddyfile</HostDir>
+      <ContainerDir>/etc/caddy/Caddyfile</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">2080</Config>
+  <Config Name="HTTPS" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">2443</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Docker/conf/caddyv2/data</Config>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Docker/conf/caddyv2/config</Config>
+  <Config Name="Caddyfile" Target="/etc/caddy/Caddyfile" Default="" Mode="rw" Description="Full Path to Caddyfile, rather than caddyfiles folder." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Docker/conf/caddyv2/Caddyfile</Config>
+  <Date>1599038881</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>Caddy 2 is a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/UirelsRepository/caddyv2.xml</templatePath>
+</Container>

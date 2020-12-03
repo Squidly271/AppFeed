@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Nightscout</Name>
+  <Repository>nightscout/cgm-remote-monitor-travis:latest</Repository>
+  <Registry>https://registry.hub.docker.com/r/nightscout/cgm-remote-monitor-travis</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/94695-support-nightscout-template/</Support>
+  <Project>https://github.com/nightscout/cgm-remote-monitor</Project>
+  <Overview>Allows the installation of Nightscout, a remote CGM monitoring system. It allows the upload and display of blood glucous values and can be configuered to issue warnings etc. This is mainly useful to diabetics.&#13;
+&#13;
+For more information see: http://www.nightscout.info/&#13;
+&#13;
+Note that this container only contains the required data to run the website. For data logging, a MongoDB instance is necessary. 
+Configuration of Nightscout is done over variables that are passed through Docker. For ease of use, only required and important variables are exposed by default. For an extensive list of all variables, please refer to: https://github.com/nightscout/cgm-remote-monitor#environment</Overview>
+  <WebUI>http://[IP]:[PORT:1337]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/opal06/unraid_docker_templates/master/Nightscout_template.xml</TemplateURL>
+  <Icon>https://avatars2.githubusercontent.com/u/7661012?s=200&amp;amp;v=4</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1337</HostPort>
+        <ContainerPort>1337</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Config Name="WebUI port" Target="1337" Default="1337" Mode="tcp" Description="Container Port: 1337" Type="Port" Display="always" Required="true" Mask="false">1337</Config>
+  <Config Name="MongoDB Database" Target="MONGO_CONNECTION" Default="mongodb://db-user:db-password@mongodb-instance:port/db-name" Mode="" Description="Container Variable: MONGO_CONNECTION" Type="Variable" Display="always" Required="true" Mask="false">mongodb://db-user:db-password@mongodb-instance:port/db-name</Config>
+  <Config Name="Unit" Target="DISPLAY_UNITS" Default="" Mode="" Description="Set to mg/dl or mmol" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="URL" Target="BASE_URL" Default="" Mode="" Description="Container Variable: BASE_URL" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="API_SECRET" Target="API_SECRET" Default="" Mode="" Description="Container Variable: API_SECRET    Should be a complex key" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="ENABLE" Target="ENABLE" Default="" Mode="" Description="Container Variable: ENABLE" Type="Variable" Display="always" Required="false" Mask="false">delta direction upbat timeago devicestatus errorcodes ar2 simplealarms profile</Config>
+  <Config Name="BG_HIGH" Target="BG_HIGH" Default="" Mode="" Description="Container Variable: BG_HIGH" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="BG_LOW" Target="BG_LOW" Default="" Mode="" Description="Container Variable: BG_LOW" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="BG_TARGET_BOTTOM" Target="BG_TARGET_BOTTOM" Default="" Mode="" Description="Container Variable: BG_TARGET_BOTTOM" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="BG_TARGET_TOP" Target="BG_TARGET_TOP" Default="" Mode="" Description="Container Variable: BG_TARGET_TOP" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="THEME" Target="THEME" Default="" Mode="" Description="Container Variable: THEME" Type="Variable" Display="always" Required="false" Mask="false">colors</Config>
+  <Config Name="TIME_FORMAT" Target="TIME_FORMAT" Default="" Mode="" Description="Container Variable: TIME_FORMAT" Type="Variable" Display="always" Required="false" Mask="false">24</Config>
+  <Config Name="INSECURE_USE_HTTP" Target="INSECURE_USE_HTTP" Default="" Mode="" Description="Container Variable: INSECURE_USE_HTTP&#13;&#10;Set to true if used with reverse proxy" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Category>Cloud:</Category>
+  <Description>Allows the installation of Nightscout, a remote CGM monitoring system. It allows the upload and display of blood glucous values and can be configuered to issue warnings etc. This is mainly useful to diabetics.&#13;
+&#13;
+For more information see: http://www.nightscout.info/&#13;
+&#13;
+Note that this container only contains the required data to run the website. For data logging, a MongoDB instance is necessary. 
+Configuration of Nightscout is done over variables that are passed through Docker. For ease of use, only required and important variables are exposed by default. For an extensive list of all variables, please refer to: https://github.com/nightscout/cgm-remote-monitor#environment</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/opal06sRepository/Nightscout_template.xml</templatePath>
+</Container>

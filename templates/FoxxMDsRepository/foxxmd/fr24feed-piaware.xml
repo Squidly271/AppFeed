@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>fr24feed-piaware</Name>
+  <Repository>thomx/fr24feed-piaware</Repository>
+  <Registry>https://hub.docker.com/r/thomx/fr24feed-piaware/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79394-support-foxxmd-fr24feed-piaware/</Support>
+  <Project>https://github.com/Thom-x/docker-fr24feed-piaware-dump1090-mutability</Project>
+  <Overview>All-in-one image for feeding FlightRadar24/FlightAware ADS-B/MLAT data with an RTL-SDR device and local web server for displaying aircraft positions on a map.[br][br]&#13;
+        Docker contains: [br]&#13;
+         * Piaware (Flightaware ADS-B and MLAT ground station software/feed)[br]&#13;
+         * fr24feed (FlightRadar24 ADS-B software feed)[br]&#13;
+         * Dump1090 for receiving and parsing data to the above software[br]&#13;
+         * Simple HTTP Server to display received data (aircraft positions/track) on a real-time map[br][br]&#13;
+        [b]Installation[/b][br][br]&#13;
+        Follow the directions on the github README (Project Page link on unraid) with the provided Config entries in this template. See the support thread for more info.[br][br]&#13;
+        [b]Usage[/b][br][br]&#13;
+        If the container starts without error you can verify RTL-SDR is in use and feeds are working by checking the container log. Use the WebUI button to see the map;
+    </Overview>
+  <Date>1555300800</Date>
+  <WebUI>http://[IP]:[PORT:8080]/gmap.html</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/fr24feed-piaware.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/icons/flightaware.jpg</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8754</HostPort>
+        <ContainerPort>8754</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/fr24feed-piaware/piaware.conf</HostDir>
+      <ContainerDir>/etc/piaware.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/fr24feed-piaware/config.js</HostDir>
+      <ContainerDir>/usr/lib/fr24/public_html/config.js</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/fr24feed-piaware/fr24feed.ini</HostDir>
+      <ContainerDir>/etc/fr24feed.ini</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Piaware Config" Target="/etc/piaware.conf" Default="" Mode="rw" Description="Container Path: /etc/piaware.conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fr24feed-piaware/piaware.conf</Config>
+  <Config Name="Dump1090 Config" Target="/usr/lib/fr24/public_html/config.js" Default="" Mode="rw" Description="Container Path: /usr/lib/fr24/public_html/config.js" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fr24feed-piaware/config.js</Config>
+  <Config Name="fr24feed Config" Target="/etc/fr24feed.ini" Default="" Mode="rw" Description="Container Path: /etc/fr24feed.ini" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fr24feed-piaware/fr24feed.ini</Config>
+  <Config Name="RTL-SDR Device" Target="" Default="" Mode="" Description="Container Device: RTL-SDR" Type="Device" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="HTTP Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="fr24feed Admin HTTP Port" Target="8754" Default="8754" Mode="tcp" Description="Container Port: 8754" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Category>Network:Web Other:</Category>
+  <Description>All-in-one image for feeding FlightRadar24/FlightAware ADS-B/MLAT data with an RTL-SDR device and local web server for displaying aircraft positions on a map.&#13;
+        Docker contains: &#13;
+         * Piaware (Flightaware ADS-B and MLAT ground station software/feed)&#13;
+         * fr24feed (FlightRadar24 ADS-B software feed)&#13;
+         * Dump1090 for receiving and parsing data to the above software&#13;
+         * Simple HTTP Server to display received data (aircraft positions/track) on a real-time map&#13;
+        Installation&#13;
+        Follow the directions on the github README (Project Page link on unraid) with the provided Config entries in this template. See the support thread for more info.&#13;
+        Usage&#13;
+        If the container starts without error you can verify RTL-SDR is in use and feeds are working by checking the container log. Use the WebUI button to see the map;</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/fr24feed-piaware.xml</templatePath>
+</Container>

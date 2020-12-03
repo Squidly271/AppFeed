@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MusicBrainz-Picard</Name>
+  <Repository>mikenye/picard</Repository>
+  <Registry>https://hub.docker.com/r/mikenye/picard</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.github.com/mikenye/docker-picard</Support>
+  <Project>https://picard.musicbrainz.org/</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/picard.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/picard.png</Icon>
+  <Overview>Picard is a cross-platform music tagger written in Python.</Overview>
+  <DonateImg></DonateImg>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 5800" Target="5800" Default="5800" Mode="tcp" Description="Container Port: 5800" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /storage" Target="/storage" Default="" Mode="rw" Description="Container Path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="USER_ID" Target="USER_ID" Default="99" Mode="" Description="Container Variable: USER_ID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="GROUP_ID" Target="GROUP_ID" Default="100" Mode="" Description="Container Variable: GROUP_ID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>MediaApp:Music</Category>
+  <Description>Picard is a cross-platform music tagger written in Python.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/picard.xml</templatePath>
+</Container>

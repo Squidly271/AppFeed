@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>jellyfin-ghcr</Name>
+  <Repository>ghcr.io/hotio/jellyfin</Repository>
+  <Branch>
+    <Tag>release</Tag>
+    <TagDescription>Releases</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>nightly</Tag>
+    <TagDescription>Every commit to master branch</TagDescription>
+  </Branch>
+  <Registry>https://github.com/users/hotio/packages/container/package/jellyfin</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hotio.dev/discord</Support>
+  <Project>https://hotio.dev/containers/jellyfin</Project>
+  <Icon>https://raw.githubusercontent.com/docker-hotio/unraid-templates/master/hotio/img/jellyfin.png</Icon>
+  <Overview>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.</Overview>
+  <Description>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.</Description>
+  <WebUI>http://[IP]:[PORT:8096]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8096" Target="8096" Default="8096" Mode="tcp" Description="Container Port: 8096" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="ARGS" Target="ARGS" Default="" Mode="" Description="Container Variable: ARGS" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="no|yes" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hotiosRepository/hotio/jellyfin-ghcr.xml</templatePath>
+</Container>

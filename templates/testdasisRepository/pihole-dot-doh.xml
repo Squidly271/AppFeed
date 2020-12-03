@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Pihole-DoT-DoH</Name>
+  <Repository>testdasi/pihole-dot-doh:stable-amd64</Repository>
+  <Registry>https://hub.docker.com/r/testdasi/pihole-dot-doh/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.1.24</MyIP>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96233-support-testdasi-repo/</Support>
+  <Project>https://docs.pi-hole.net/guides/dns-over-https/</Project>
+  <Overview>
+    Pi-Hole - let's block those pesky ads! Now with DNS-over-HTTPS and DNS-over-TLS! pihole.doh!&#13;
+    Don't send your DNS queries in plain text.&#13;
+    &#13;
+    YOU MUST ASSIGN A STATIC IP TO THE DOCKER FOR PIHOLE TO WORK.
+    &#13;
+    You must set both DNS1 and DNS2 variables to 127.1.1.1#5153 (DoH) and/or 127.2.2.2#5253 (DoT). To use just DoH or just DoT, set both DNS1 and DNS2 to the same value.&#13;
+    &#13;
+    Otherwise, same instructions as official Pi-Hole.&#13;
+    &#13;
+        NOTE 1: Port 53 can only be used with custom br0/br1 network and a static IP address.&#13;
+    &#13;
+        NOTE 2: DNS lookup rarely ever works with ports other than 53 i.e. see note above about static IP.&#13;
+    &#13;
+        NOTE 3: UnRaid network settings DNS server cannot point to a docker IP.&#13;
+    &#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:80]/admin</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/pihole-dot-doh.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/testdasi/pihole-base-buster-plus/master/pi_hole_bw.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --restart=unless-stopped</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work, a donation to my burger fund is very much appreciated.</DonateText>
+  <DonateLink>https://paypal.me/mersenne</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pihole-dot-doh/pihole/</HostDir>
+      <ContainerDir>/etc/pihole/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pihole-dot-doh/dnsmasq.d/</HostDir>
+      <ContainerDir>/etc/dnsmasq.d/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pihole-dot-doh/config/</HostDir>
+      <ContainerDir>/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>127.1.1.1#5153</Value>
+      <Name>DNS1</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>127.2.2.2#5253</Value>
+      <Name>DNS2</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>WEBPASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>eth0</Value>
+      <Name>INTERFACE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.1.24</Value>
+      <Name>ServerIP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ServerIPv6</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>IPv6</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>DNSMASQ_LISTENING</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="DNS Port TCP" Target="53" Default="53" Mode="tcp" Description="Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="DNS Port UDP" Target="53" Default="53" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="true" Mask="false">53</Config>
+  <Config Name="DHCP Port" Target="67" Default="67" Mode="udp" Description="Container Port: 67" Type="Port" Display="always" Required="true" Mask="false">67</Config>
+  <Config Name="HTTP Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="pihole config" Target="/etc/pihole/" Default="/mnt/user/appdata/pihole-dot-doh/pihole/" Mode="rw" Description="Container Path: /etc/pihole/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole-dot-doh/pihole/</Config>
+  <Config Name="dnsmasq config" Target="/etc/dnsmasq.d/" Default="/mnt/user/appdata/pihole-dot-doh/dnsmasq.d/" Mode="rw" Description="Container Path: /etc/dnsmasq.d/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole-dot-doh/dnsmasq.d/</Config>
+  <Config Name="DoT DoH config" Target="/config/" Default="/mnt/user/appdata/pihole-dot-doh/config/" Mode="rw" Description="Container Path: /config/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pihole-dot-doh/config/</Config>
+  <Config Name="ENV 1" Target="DNS1" Default="127.1.1.1#5153" Mode="" Description="Container Variable: DNS1" Type="Variable" Display="always" Required="true" Mask="false">127.1.1.1#5153</Config>
+  <Config Name="ENV 2" Target="DNS2" Default="127.2.2.2#5253" Mode="" Description="Container Variable: DNS2" Type="Variable" Display="always" Required="true" Mask="false">127.2.2.2#5253</Config>
+  <Config Name="ENV 3" Target="TZ" Default="Europe/London" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="ENV 4" Target="WEBPASSWORD" Default="password" Mode="" Description="Container Variable: WEBPASSWORD" Type="Variable" Display="always" Required="false" Mask="false">password</Config>
+  <Config Name="ENV 5" Target="INTERFACE" Default="eth0" Mode="" Description="Container Variable: INTERFACE" Type="Variable" Display="always" Required="false" Mask="false">eth0</Config>
+  <Config Name="ENV 6" Target="ServerIP" Default="192.168.1.24" Mode="" Description="Container Variable: ServerIP" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.24</Config>
+  <Config Name="ENV 7" Target="ServerIPv6" Default="" Mode="" Description="Container Variable: ServerIPv6" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ENV 8" Target="IPv6" Default="False" Mode="" Description="Container Variable: IPv6" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="ENV 9" Target="DNSMASQ_LISTENING" Default="all" Mode="" Description="Container Variable: DNSMASQ_LISTENING" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Date>1599861527</Date>
+  <Category>Security: Other: Network:DNS</Category>
+  <Description>Pi-Hole - let's block those pesky ads! Now with DNS-over-HTTPS and DNS-over-TLS! pihole.doh!&#13;
+    Don't send your DNS queries in plain text.&#13;
+    &#13;
+    YOU MUST ASSIGN A STATIC IP TO THE DOCKER FOR PIHOLE TO WORK.
+    &#13;
+    You must set both DNS1 and DNS2 variables to 127.1.1.1#5153 (DoH) and/or 127.2.2.2#5253 (DoT). To use just DoH or just DoT, set both DNS1 and DNS2 to the same value.&#13;
+    &#13;
+    Otherwise, same instructions as official Pi-Hole.&#13;
+    &#13;
+        NOTE 1: Port 53 can only be used with custom br0/br1 network and a static IP address.&#13;
+    &#13;
+        NOTE 2: DNS lookup rarely ever works with ports other than 53 i.e. see note above about static IP.&#13;
+    &#13;
+        NOTE 3: UnRaid network settings DNS server cannot point to a docker IP.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/testdasisRepository/pihole-dot-doh.xml</templatePath>
+</Container>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>cadvisor</Name>
+  <Registry>https://registry.hub.docker.com/r/google/cadvisor/</Registry>
+  <Repository>google/cadvisor:latest</Repository>
+  <Environment>
+    <Variable>
+      <Name>detach</Name>
+      <Value>true</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/rootfs</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run</HostDir>
+      <ContainerDir>/var/run</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/sys</HostDir>
+      <ContainerDir>/sys</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/lib/docker/</HostDir>
+      <ContainerDir>/var/lib/docker/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Icon>https://i.imgur.com/stlnoKR.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=34009.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/smdion/docker-containers/templates/smdion-repo/cAdvisor.xml</TemplateURL>
+  <Overview>cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, and histograms of complete historical resource usage. This data is exported by container and machine-wide.</Overview>
+  <Category>Tools:Utilities</Category>
+  <Description>cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, and histograms of complete historical resource usage. This data is exported by container and machine-wide.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/smdionsRepository/smdion-repo/cAdvisor.xml</templatePath>
+</Container>

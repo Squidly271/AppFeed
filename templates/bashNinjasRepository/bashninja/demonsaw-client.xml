@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>DemonSaw-Client</Name>
+  <Date>1506312000</Date>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Overview>
+   Docker container to run a DemonSaw Client with web RDP access. 
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=48370.0</Support>
+  <Registry>https://hub.docker.com/r/bashninja/demonsaw-client/</Registry>
+  <GitHub>https://github.com/miketweaver/demonsaw-client</GitHub>
+  <Repository>bashninja/demonsaw-client</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/nobody/share</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/nobody/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://raw.githubusercontent.com/miketweaver/demonsaw-client/master/Demonsaw-Logo-with-text.png</Icon>
+  <Beta>true</Beta>
+  <TemplateURL>https://raw.githubusercontent.com/miketweaver/docker-templates/master/bashninja/demonsaw-client.xml</TemplateURL>
+  <Category>Other: Status:Beta</Category>
+  <Description>Docker container to run a DemonSaw Client with web RDP access.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/bashNinjasRepository/bashninja/demonsaw-client.xml</templatePath>
+</Container>

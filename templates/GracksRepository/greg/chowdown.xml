@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>chowdown</Name>
+  <Support>https://hub.docker.com/r/gregyankovoy/chowdown/</Support>
+  <Overview>Simple recipes in Markdown format.</Overview>
+  <Registry>https://hub.docker.com/r/gregyankovoy/chowdown/Dockerfile/</Registry>
+  <Repository>gregyankovoy/chowdown</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000</HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:4000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/gregyankovoy/docker-templates/master/greg/img/chowdown-logo.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/GregYankovoy/docker-templates/master/greg/chowdown.xml</TemplateURL>
+  <Category>Other:Uncategorized</Category>
+  <Description>Simple recipes in Markdown format.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/GracksRepository/greg/chowdown.xml</templatePath>
+</Container>

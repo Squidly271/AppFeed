@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>QDirStat</Name>
+  <Repository>mjdumont1/qdirstat</Repository>
+  <Registry>https://hub.docker.com/r/mjdumont1/qdirstat</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-and-storj/</Support>
+  <Overview>QDirStat is a graphical application displaying files as graphically proportional rectangles to their storage size on disk, allowing the user to see what is taking up space on their volumes. &#13;
+&#13;
+#   Docker Application access is through RDP, host port defaults at: 33389.&#13;
+      *Default MS RDP port is: 3389 (for reference) .&#13;
+&#13;
+#   "Array" template field: The host path you want to scan using QDirStat, the Docker location is /files. &#13;
+    ***  Please note this applications has features to erase files, IT WORKS!  ***</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/QDirStat.xml</TemplateURL>
+  <Icon>https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75fdaefa-5803-4389-a0e0-50741eea0b8f/d3ta2r4-a344e078-8a2c-4a30-bcaa-e2820a65d2c8.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi83NWZkYWVmYS01ODAzLTQzODktYTBlMC01MDc0MWVlYTBiOGYvZDN0YTJyNC1hMzQ0ZTA3OC04YTJjLTRhMzAtYmNhYS1lMjgyMGE2NWQyYzgucG5nIn1dXX0.JPI_PBWoinQhcsSWng7AlVT8G9_RD8ILQL8gX6Wr8Fw</Icon>
+  <PostArgs></PostArgs>
+  <DonateText>Scooby Doo, &amp;quot;Coin! Coin!&amp;quot;</DonateText>
+  <DonateImg></DonateImg>
+  <MinVer>6.1</MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>33389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/files</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="RDP" Target="3389" Default="" Mode="tcp" Description="RDP" Type="Port" Display="always" Required="true" Mask="false">33389</Config>
+  <Config Name="Array" Target="/files" Default="" Mode="rw" Description="Container Path: /files&#13;&#10;&#13;&#10;Host location should be at what you want to survey using QDirStat." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Date>1518758605</Date>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>QDirStat is a graphical application displaying files as graphically proportional rectangles to their storage size on disk, allowing the user to see what is taking up space on their volumes. &#13;
+&#13;
+#   Docker Application access is through RDP, host port defaults at: 33389.&#13;
+      *Default MS RDP port is: 3389 (for reference) .&#13;
+&#13;
+#   "Array" template field: The host path you want to scan using QDirStat, the Docker location is /files. &#13;
+    ***  Please note this applications has features to erase files, IT WORKS!  ***</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JCloudsRepository/QDirStat.xml</templatePath>
+</Container>

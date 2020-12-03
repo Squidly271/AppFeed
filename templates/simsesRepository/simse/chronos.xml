@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/simse/docker-templates/master/simse/chronos.xml</TemplateURL>
+  <Name>chronos</Name>
+  <Support>https://github.com/simse/chronos</Support>
+  <Registry>https://hub.docker.com/r/simsemand/chronos</Registry>
+  <GitHub>https://github.com/simse/chronos</GitHub>
+  <Repository>simsemand/chronos</Repository>
+  <Project>https://github.com/simse/chronos</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/chronos</HostDir>
+      <ContainerDir>/chronos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
+  <Icon>https://i.imgur.com/MoAbdWn.png</Icon>
+  <Overview>
+    Chronos is a small container to run and schedule Python 3.7 scripts. You can create virtual enviroments, edit your scripts, install Pip dependencies, view execution logs, and debug your scripts, all from the sleek web UI.
+
+    You can report bugs or wish for features by opening an issue in the GitHub page.
+  </Overview>
+  <Category>Tools:Utilities</Category>
+  <Description>Chronos is a small container to run and schedule Python 3.7 scripts. You can create virtual enviroments, edit your scripts, install Pip dependencies, view execution logs, and debug your scripts, all from the sleek web UI.
+
+    You can report bugs or wish for features by opening an issue in the GitHub page.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/simsesRepository/simse/chronos.xml</templatePath>
+</Container>

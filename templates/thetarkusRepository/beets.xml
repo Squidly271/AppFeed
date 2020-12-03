@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/thetarkus/docker-templates/master/beets.xml</TemplateURL>
+  <Date>1534219200</Date>
+  <Support>https://github.com/thetarkus/docker-beets</Support>
+  <Name>beets</Name>
+  <Project>http://beets.io/</Project>
+  <Overview>
+    Beets is the media library management system for obsessive-compulsive music
+    geeks. Its purpose is to get your music collection right once and for
+    all. It catalogs your collection, automatically improving its metadata as
+    it goes using the MusicBrainz database. Then it provides a bouquet of tools
+    for manipulating and accessing your music.
+  </Overview>
+  <Registry>https://hub.docker.com/r/thetarkus/beets/</Registry>
+  <Repository>thetarkus/beets</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8337</HostPort>
+        <ContainerPort>8337</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6600</HostPort>
+        <ContainerPort>6600</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/import</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8337]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/thetarkus/docker-templates/master/images/beets-logo.png</Icon>
+  <BaseImage>library/alpine:3.8</BaseImage>
+  <Category>MediaApp:Music</Category>
+  <Description>Beets is the media library management system for obsessive-compulsive music
+    geeks. Its purpose is to get your music collection right once and for
+    all. It catalogs your collection, automatically improving its metadata as
+    it goes using the MusicBrainz database. Then it provides a bouquet of tools
+    for manipulating and accessing your music.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/thetarkusRepository/beets.xml</templatePath>
+</Container>

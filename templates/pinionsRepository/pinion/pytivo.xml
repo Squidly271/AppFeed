@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>pyTivo</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=38602.0</Support>
+  <Overview>
+  [h3]PyTivo[/h3]pyTivo is both an HMO and GoBack server. Similar to TiVo Desktop, pyTivo loads many standard video compression codecs and outputs mpeg2 (or in some cases, h.264) video to the TiVo. However, pyTivo is able to load many more file types than TiVo Desktop.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/pinion/docker-pytivo/</Registry>
+  <GitHub>https://github.com/noinip/docker-pytivo</GitHub>
+  <Repository>pinion/docker-pytivo</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment></Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9032</HostPort>
+        <ContainerPort>9032</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2190</HostPort>
+        <ContainerPort>2190</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/apps/appdata/pytivo</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Media</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9032]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/noinip/container-templates/master/pinion/pytivo.xml</TemplateURL>
+  <Category>MediaServer:Video</Category>
+  <Description>PyTivopyTivo is both an HMO and GoBack server. Similar to TiVo Desktop, pyTivo loads many standard video compression codecs and outputs mpeg2 (or in some cases, h.264) video to the TiVo. However, pyTivo is able to load many more file types than TiVo Desktop.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/pinionsRepository/pinion/pytivo.xml</templatePath>
+</Container>

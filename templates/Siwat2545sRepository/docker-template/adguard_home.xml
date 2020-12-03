@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>AdGuard-Home</Name>
+  <Date>1562817600</Date>
+  <Repository>adguard/adguardhome</Repository>
+  <Registry>https://registry.hub.docker.com/r/adguard/adguardhome</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <Overview>AdGuard Home is a network-wide software for blocking ads &amp; tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.
+</Overview>
+  <WebUI>http://[IP]:[PORT:6052]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/adguard.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+  </Data>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Environment></Environment>
+  <Config Name="Working Directory" Target="/opt/adguardhome/work" Default="/mnt/user/appdata/adguard_home/workingdir" Mode="rw" Description="Working Directory" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/adguard_home/workingdir</Config>
+  <Config Name="Working Directory" Target="/opt/adguardhome/conf" Default="/mnt/user/appdata/adguard_home/config" Mode="rw" Description="Configuration Directory" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/adguard_home/config</Config>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Port for the Web UI" Type="Port" Display="advanced" Required="false" Mask="false">3000</Config>
+  <Config Name="DNS Server" Target="53" Default="53" Mode="tcp" Description="Port that is used for the DNS Server (Changing this is not recomended)" Type="Port" Display="advanced" Required="false" Mask="false">53</Config>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/adguard_home.xml</TemplateURL>
+  <Category>Network:</Category>
+  <Description>AdGuard Home is a network-wide software for blocking ads &amp; tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/adguard_home.xml</templatePath>
+</Container>

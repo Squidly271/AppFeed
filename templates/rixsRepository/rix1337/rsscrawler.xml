@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>RSScrawler</Name>
+  <Repository>rix1337/docker-rsscrawler</Repository>
+  <Registry>https://registry.hub.docker.com/r/rix1337/docker-rsscrawler</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=43669.0</Support>
+  <Project>https://github.com/rix1337/RSScrawler</Project>
+  <Overview>&#13;
+	This python-based script crawls pre-defined RSS feeds and outputs JD2-crawljobs[br]&#13;
+	Only useful for German users. Very advanced and user friendly features.&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:9090]/rsscrawler</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/rsscrawler.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/rsscrawler.png</Icon>
+  <ExtraParams>--log-opt max-size=50m</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Sponsor me!</DonateText>
+  <DonateLink>https://github.com/sponsors/rix1337</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/rsscrawler/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>INFO</Value>
+      <Name>LOGLEVEL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DEVICE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="LOGLEVEL" Target="LOGLEVEL" Default="INFO" Mode="" Description="INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET" Type="Variable" Display="always-hide" Required="false" Mask="false">INFO</Config>
+  <Config Name="Webserver" Target="9090" Default="" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always-hide" Required="false" Mask="false">9090</Config>
+  <Config Name="Config-Path" Target="/config" Default="/mnt/user/appdata/RSScrawler" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/cache/appdata/rsscrawler/</Config>
+  <Config Name="MyJDownloader Username" Target="USER" Default="" Mode="" Description="Container Variable: USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MyJDownloader Password" Target="PASS" Default="" Mode="" Description="Container Variable: PASS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MyJDownloader Device" Target="DEVICE" Default="" Mode="" Description="Container Variable: DEVICE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Category>Downloaders:</Category>
+  <Description>This python-based script crawls pre-defined RSS feeds and outputs JD2-crawljobs&#13;
+	Only useful for German users. Very advanced and user friendly features.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/rixsRepository/rix1337/rsscrawler.xml</templatePath>
+</Container>

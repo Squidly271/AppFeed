@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>tasui</Name>
+  <Repository>iotreboot/tasui:latest</Repository>
+  <Registry>https://hub.docker.com/r/iotreboot/tasui</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/iotreboot/tasui</Support>
+  <Overview>TasUI is a zero-install device management interface web application for all your Tasmota devices. It will discover your deployed devices and allow you to set up and configure every device from a single dashboard. This initial version includes multiple views (Control, Health, Firmware, Wi-Fi, &amp;amp; MQTT) to allow you to quickly assess the state of your devices. There is also a detailed view (e.g., SetOptions, Status, etc.) available.</Overview>
+  <WebUI>http://[IP]:[PORT:8383]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/tasui.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/tasui.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8383</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment></Environment>
+  <Config Name="GUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8383</Config>
+  <Date>1580174413</Date>
+  <Category>HomeAutomation: Network:Management</Category>
+  <Description>TasUI is a zero-install device management interface web application for all your Tasmota devices. It will discover your deployed devices and allow you to set up and configure every device from a single dashboard. This initial version includes multiple views (Control, Health, Firmware, Wi-Fi, &amp;amp; MQTT) to allow you to quickly assess the state of your devices. There is also a detailed view (e.g., SetOptions, Status, etc.) available.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/digiblursRepository/tasui.xml</templatePath>
+</Container>

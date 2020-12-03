@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>H5AI</Name>
+  <Registry>https://registry.hub.docker.com/r/smdion/docker-h5ai/</Registry>
+  <Repository>smdion/docker-h5ai</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://i.imgur.com/SxqiOrd.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=34009.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/smdion/docker-containers/templates/smdion-repo/H5AI.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>
+    H5AI is a modern web server index. This docker image makes it trivially easy to spin up a webserver and start sharing your files through the web.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : this path is used to store the configuration H5AI.[br]
+    [b]/var/www[/b] : this path is that will be shared via a web index by H5AI.[br]
+  </Overview>
+  <Category>Cloud: Network:Web</Category>
+  <Description>H5AI is a modern web server index. This docker image makes it trivially easy to spin up a webserver and start sharing your files through the web.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/smdionsRepository/smdion-repo/H5AI.xml</templatePath>
+</Container>

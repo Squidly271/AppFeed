@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>NodeLink</Name>
+  <Overview>NodeLink is a Node Server which creates nodes (virtual devices) within the ISY.</Overview>
+  <Project>http://automationshack.com/wp/nodelink/</Project>
+  <Support>http://lime-technology.com/forum/index.php?topic=50388.0</Support>
+  <Registry>https://registry.hub.docker.com/r/jcreynolds/nodelink/</Registry>
+  <GitHub>https://github.com/jcreynolds/docker-templates</GitHub>
+  <Repository>jcreynolds/nodelink</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8090]</WebUI>
+  <Icon>https://raw.githubusercontent.com/jcreynolds/docker-templates/master/Icons/NodeLink.png</Icon>
+  <ExtraParams>-i</ExtraParams>
+  <TemplateURL>https://raw.githubusercontent.com/jcreynolds/docker-templates/master/NodeLink.xml</TemplateURL>
+  <Category>HomeAutomation:</Category>
+  <Description>NodeLink is a Node Server which creates nodes (virtual devices) within the ISY.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jcreynoldsRepository/NodeLink.xml</templatePath>
+</Container>

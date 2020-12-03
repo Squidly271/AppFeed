@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Rclone-mount</Name>
+  <Repository>tynor88/rclone-mount:dev</Repository>
+  <Registry>https://hub.docker.com/r/tynor88/rclone-mount/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/56921-support-rclone-mount-with-exposable-fuse-support-for-plex-beta/</Support>
+  <Overview>Docker for Rclone FUSE mount feature (exposable to host and other docker containers, e.g. Plex, Nextcloud, glFTPd)
+    [br][br]&#13;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] The path to where the .rclone.conf file is[br]
+    [b]RCLONE_REMOTE_MOUNT[/b] The destination that the data should be backed up to (must be the same name as specified in .rclone.conf. E.g. [i]AmazonEncrypted:[/i])[br]
+    [b]RCLONE_MOUNT_OPTIONS[/b] (Advanced) Extra mount options that can be used, see: https://rclone.org/commands/rclone_mount/ . E.g. [i]--read-only --buffer-size=1G --max-read-ahead=200M --acd-templink-threshold=0 --dir-cache-time=60m --timeout=30s --contimeout=15s --retries=3 --low-level-retries=1 --stats=0 -v[/i][br]
+    [b]RCLONE_CONFIG_PASS[/b] (Advanced) The password for the .rclone.conf pass (if specified when creating the config file)[br]
+  </Overview>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/rclone_small.png</Icon>
+  <ExtraParams>--cap-add SYS_ADMIN --device /dev/fuse --security-opt apparmor:unconfine -v /mnt/disks/rclone_volume/:/data:shared</ExtraParams>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>RCLONE_REMOTE_MOUNT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>RCLONE_CONFIG_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>RCLONE_MOUNT_OPTIONS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Config Path" Target="/config" Default="/mnt/cache/appdata/rclone/config/" Mode="rw" Description="The path where the .rclone.conf file is" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="RCLONE_REMOTE_MOUNT" Target="RCLONE_REMOTE_MOUNT" Default="" Mode="" Description="The destination that the data should be backed up to (must be the same name as specified in .rclone.conf. E.g. &lt;em&gt;AmazonEncrypted:&lt;SubPath&gt;&lt;/em&gt;)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="RCLONE_MOUNT_OPTIONS" Target="RCLONE_MOUNT_OPTIONS" Default="--read-only" Mode="" Description="Extra mount options that can be used, see: https://rclone.org/commands/rclone_mount/ . E.g.: --read-only --buffer-size=1G --max-read-ahead=200M --acd-templink-threshold=0 --dir-cache-time=60m --timeout=30s --contimeout=15s --retries=3 --low-level-retries=1 --stats=0 -v" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="RCLONE_CONFIG_PASS" Target="RCLONE_CONFIG_PASS" Default="" Mode="" Description="The password for the .rclone.conf pass (if specified when creating the config file)" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Beta>true</Beta>
+  <Date>1474257600</Date>
+  <Project>http://rclone.org/</Project>
+  <BaseImage>https://hub.docker.com/_/alpine/</BaseImage>
+  <TemplateURL>https://raw.githubusercontent.com/tynor88/docker-templates/master/tynor88/rclone-mount.xml</TemplateURL>
+  <Category>Backup: Cloud: Status:Beta</Category>
+  <Description>Docker for Rclone FUSE mount feature (exposable to host and other docker containers, e.g. Plex, Nextcloud, glFTPd)</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/thomast_88sRepository/tynor88/rclone-mount.xml</templatePath>
+</Container>

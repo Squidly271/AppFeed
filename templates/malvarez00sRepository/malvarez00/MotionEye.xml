@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MotionEye</Name>
+  <Repository>malvarez00/docker-motioneye</Repository>
+  <Registry>https://hub.docker.com/r/malvarez00/docker-motioneye</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61014-support-malvarez00-motioneye/</Support>
+  <Overview>MotionEye Docker&amp;lt;br /&amp;gt;&#13;
+A surveillance solution base on: MotionEye, Motion and Docker.&amp;lt;br /&amp;gt;&#13;
+&amp;lt;br /&amp;gt;&#13;
+It's easy and ready to use. Just configure a camera and run this docker, then videos and images will be saved once a motion is detected while a notification e-mail including the recorded video and a preview image will be sent. On top of that, the webcam can be accessed anytime via HTTP live streaming.&amp;lt;br /&amp;gt;&#13;
+&amp;lt;br /&amp;gt;&#13;
+Default Username: admin&amp;lt;br /&amp;gt;&#13;
+Default Password: BLANK&amp;lt;br /&amp;gt;&#13;
+&amp;lt;br/&amp;gt;&#13;
+Root Directory "/var/lib/motioneye/&#13;
+&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:8765]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/MotionEye.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/icons/motioneye_96x96.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer></MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8765</HostPort>
+        <ContainerPort>8765</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/MotionEye/config</HostDir>
+      <ContainerDir>/etc/motioneye</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/data/MotionEye</HostDir>
+      <ContainerDir>/var/lib/motioneye</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WEB UI" Target="8765" Default="8765" Mode="tcp" Description="Container Port: 8765" Type="Port" Display="always-hide" Required="false" Mask="false">8765</Config>
+  <Config Name="Configuration Path" Target="/etc/motioneye" Default="/mnt/cache/appdata/MotionEye/config" Mode="rw" Description="Container Path: /etc/motioneye" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/cache/appdata/MotionEye/config</Config>
+  <Config Name="Media Files Path" Target="/var/lib/motioneye" Default="/mnt/user/appdata/MotionEye/media" Mode="rw" Description="Container Path: /var/lib/motioneye" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/data/MotionEye</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Date>1519440420</Date>
+  <Category>Network:</Category>
+  <Description>MotionEye Docker&#13;
+A surveillance solution base on: MotionEye, Motion and Docker.&#13;
+&#13;
+It's easy and ready to use. Just configure a camera and run this docker, then videos and images will be saved once a motion is detected while a notification e-mail including the recorded video and a preview image will be sent. On top of that, the webcam can be accessed anytime via HTTP live streaming.&#13;
+&#13;
+Default Username: admin&#13;
+Default Password: BLANK&#13;
+&#13;
+Root Directory "/var/lib/motioneye/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/malvarez00sRepository/malvarez00/MotionEye.xml</templatePath>
+</Container>

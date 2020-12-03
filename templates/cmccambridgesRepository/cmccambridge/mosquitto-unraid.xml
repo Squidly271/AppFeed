@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>mosquitto</Name>
+  <Repository>cmccambridge/mosquitto-unraid:latest</Repository>
+  <Registry>https://hub.docker.com/r/cmccambridge/mosquitto-unraid/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cmccambridge/mosquitto-unraid/issues</Support>
+  <Project>https://mosquitto.org</Project>
+  <Overview>[p]This container is a minimal port of the official [a href='https://mosquitto.org/']Eclipse Mosquitto[/a] Docker container with minor tweaks to work more conveniently in unRAID.[/p]&#13;
+[h4]Configuration[/h4]&#13;
+[p]To set up paths and ports, see the descriptions in the unRAID docker settings page.[/p]&#13;
+[p]To further control mosquitto configuration, place a [code]mosquitto.conf[/code] file in the config path, or start the container one time and it will write a template [code]mosquitto.conf.example[/code] file to the config path for you to copy and edit. For further details, refer to the full README at [a href='https://github.com/cmccambridge/mosquitto-unraid/blob/master/README.md']https://github.com/cmccambridge/mosquitto-unraid/blob/master/README.md[/a][/p]&#13;
+&#13;
+</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cmccambridge/unraid-templates/master/cmccambridge/mosquitto-unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/cmccambridge/mosquitto-unraid/master/media/eclipse-mosquitto.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mosquitto</HostDir>
+      <ContainerDir>/mosquitto/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/mosquitto/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/mosquitto/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Config Directory" Target="/mosquitto/config" Default="/mnt/user/appdata/mosquitto" Mode="rw" Description="Store &amp;lt;code&amp;gt;mosquitto.conf&amp;lt;/code&amp;gt; (or additional &amp;lt;code&amp;gt;*.conf&amp;lt;/code&amp;gt; files). &amp;lt;em&amp;gt;Container Path: &amp;lt;code&amp;gt;/mosquitto/config&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mosquitto</Config>
+  <Config Name="Persistent Data Directory" Target="/mosquitto/data" Default="" Mode="rw" Description="&amp;lt;em&amp;gt;(Optional)&amp;lt;/em&amp;gt; Store persistent MQTT data. &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; Persistent data must be enabled in the &amp;lt;code&amp;gt;mosquitto.conf&amp;lt;/code&amp;gt; config file. &amp;lt;em&amp;gt;Container Path: &amp;lt;code&amp;gt;/mosquitto/data&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Log Directory" Target="/mosquitto/log" Default="" Mode="rw" Description="&amp;lt;em&amp;gt;(Optional)&amp;lt;/em&amp;gt; Store mosquitto logs. &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; Logs must be enabled in the &amp;lt;code&amp;gt;mosquitto.conf&amp;lt;/code&amp;gt; config file. &amp;lt;em&amp;gt;Container Path: &amp;lt;code&amp;gt;/mosquitto/log&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Port: MQTT Server" Target="1883" Default="1883" Mode="tcp" Description="MQTT Server Port. &amp;lt;em&amp;gt;Container Port: &amp;lt;code&amp;gt;1883&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Port" Display="always" Required="true" Mask="false">1883</Config>
+  <Config Name="Host Port: MQTT TLS" Target="8883" Default="" Mode="tcp" Description="&amp;lt;em&amp;gt;(Optional)&amp;lt;/em&amp;gt; MQTT-TLS Server Port  &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; TLS must be configured in the &amp;lt;code&amp;gt;mosquitto.conf&amp;lt;/code&amp;gt; config file. &amp;lt;em&amp;gt;Container Port: &amp;lt;code&amp;gt;8883&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Port: MQTT Websockets" Target="9001" Default="" Mode="tcp" Description="&amp;lt;em&amp;gt;(Optional)&amp;lt;/em&amp;gt; MQTT Websockets Server Port.  &amp;lt;strong&amp;gt;Note:&amp;lt;/strong&amp;gt; Websockets must be enabled in the &amp;lt;code&amp;gt;mosquitto.conf&amp;lt;/code&amp;gt; config file. &amp;lt;em&amp;gt;Container Port: &amp;lt;code&amp;gt;9001&amp;lt;/code&amp;gt;&amp;lt;/em&amp;gt;" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Date>1541646811</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>This container is a minimal port of the official Eclipse Mosquitto Docker container with minor tweaks to work more conveniently in unRAID.&#13;
+Configuration&#13;
+To set up paths and ports, see the descriptions in the unRAID docker settings page.&#13;
+To further control mosquitto configuration, place a mosquitto.conf file in the config path, or start the container one time and it will write a template mosquitto.conf.example file to the config path for you to copy and edit. For further details, refer to the full README at https://github.com/cmccambridge/mosquitto-unraid/blob/master/README.md</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cmccambridgesRepository/cmccambridge/mosquitto-unraid.xml</templatePath>
+</Container>

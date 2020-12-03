@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>auto-comskip</Name>
+  <Repository>djaydev/auto-comskip</Repository>
+  <Registry>https://hub.docker.com/r/djaydev/auto-comskip</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/77603-virt-manager-intel-gpu-tools-and-more-dockers/</Support>
+  <Project>https://github.com/djaydev/docker-auto-comskip</Project>
+  <Overview>Watches for video files, detects and removes the commercials from the video files automatically. No post processing script needed.[br]
+Being based on Alpine Linux, size of this container is very small (less than 50MB in download size).[br]
+Instructions at [a href="https://github.com/djaydev/docker-auto-comskip"]www.github.com/djaydev/docker-auto-comskip[/a]</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/djaydev/docker-virt-manager/master/UnRaid/template/auto-comskip.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/djaydev/docker-auto-comskip/master/icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateLink>https://www.paypal.me/djaydev/0usd</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/commercial-vids/watch/</HostDir>
+      <ContainerDir>/watch</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/videos/comskipped</HostDir>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/auto-comskip</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/tmp/comskip</HostDir>
+      <ContainerDir>/temp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Path 1" Target="/watch" Default="" Mode="rw" Description="Watch folder, any video copied into this folder will be automatically comskip'ed." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/commercial-vids/watch/</Config>
+  <Config Name="Host Path 2" Target="/output" Default="" Mode="rw" Description="Folder where comskip'ed videos should be put." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/videos/comskipped</Config>
+  <Config Name="Host Path 3" Target="/config" Default="/mnt/user/appdata/auto-comskip" Mode="rw" Description="config folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/auto-comskip</Config>
+  <Config Name="Host Path 4" Target="/temp" Default="" Mode="rw" Description="Temporary transcoding location" Type="Path" Display="always" Required="false" Mask="false">/tmp/comskip</Config>
+  <Config Name="Host Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Host Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Category>MediaApp:Video</Category>
+  <Description>Watches for video files, detects and removes the commercials from the video files automatically. No post processing script needed.
+Being based on Alpine Linux, size of this container is very small (less than 50MB in download size).
+Instructions at www.github.com/djaydev/docker-auto-comskip</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dee31797sRepository/UnRaid/template/auto-comskip.xml</templatePath>
+</Container>

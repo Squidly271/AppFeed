@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Dockergui-dev</Name>
+  <Date>1440734400</Date>
+  <Overview>
+  This docker opens a terminal window in the web browser. You can use it as a dev environment for docker web apps. The user is nobody and the password is PASSWD
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-rdp-dev/</Registry>
+  <GitHub>https://github.com/aptalca/docker-rdp-dev</GitHub>
+  <Repository>aptalca/docker-rdp-dev</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/#/client/c/rdp-dev</WebUI>
+  <Icon>https://upload.wikimedia.org/wikipedia/en/b/b0/Remote_desktop_connection_icon.PNG</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/dockergui-dev.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>This docker opens a terminal window in the web browser. You can use it as a dev environment for docker web apps. The user is nobody and the password is PASSWD</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/dockergui-dev.xml</templatePath>
+</Container>

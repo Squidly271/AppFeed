@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ownCloud</Name>
+  <Date>1602993600</Date>
+  <Repository>dlandon/owncloud</Repository>
+  <Project>https://owncloud.org/</Project>
+  <Registry>https://registry.hub.docker.com/r/dlandon//owncloud/</Registry>
+  <DonateText>For my retirement.</DonateText>
+  <DonateLink>https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EJGPC7B5CS66E</DonateLink>
+  <DonateImage>https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png</DonateImage>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.lime-technology.com/topic/57801-support-dlandon-owncloud/#comment-566487</Support>
+  <Overview>
+  OwnCloud provides universal access to your files via the web, your computer or your mobile devices — wherever you are. Mariadb is built into the image. Built with php 7.4, mariadb 10.3 and nginx 1.15 
+  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+  [b]/config[/b] Where ownCloud should store its config files.[br]
+  [b]/data[/b] Where ownCloud should store its data files.[br][br]
+  [b]Note:[/b] Set Network to br0 and assign a static IP address.[br]
+  </Overview>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dlandon/docker.templates/master/ownCloud.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dlandon/docker.templates/master/owncloud.png</Icon>
+  <ExtraParams>--log-opt max-size=50m --log-opt max-file=1 --sysctl=net.core.somaxconn=511</ExtraParams>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ownCloud/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume type="appdata">
+      <value>
+        <HostDir>/mnt/user/appdata/ownCloud</HostDir>
+        <ContainerDir>/config</ContainerDir>
+        <Mode>rw</Mode>
+      </value>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>owncloud</Value>
+      <Name>DB_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <BaseImage>phusion/baseimage:0.11</BaseImage>
+  <Config Name="WebUI Port" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="Data Path" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ownCloud/data</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="MySQL Password" Target="DB_PASS" Default="owncloud" Mode="" Description="Container Variable: DB_PASS" Type="Variable" Display="always" Required="false" Mask="false">owncloud</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ownCloud</Config>
+  <Category>Cloud: Network:Other Productivity: Tools:Utilities</Category>
+  <Description>OwnCloud provides universal access to your files via the web, your computer or your mobile devices — wherever you are. Mariadb is built into the image. Built with php 7.4, mariadb 10.3 and nginx 1.15</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/dlandonsRepository/ownCloud.xml</templatePath>
+</Container>

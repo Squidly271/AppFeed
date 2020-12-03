@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>Deluge</Name>
+  <Overview>
+    Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/captinsano/deluge</Registry>
+  <Repository>captinsano/deluge</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/deluge</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8112]/</WebUI>
+  <Icon>https://i.imgur.com/i3otz2K.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=39249.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/CaptInsano/docker-containers/templates/Capt.Insano/Deluge.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Downloaders:</Category>
+  <Description>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CaptInsanosRepository/Capt.Insano/Deluge.xml</templatePath>
+</Container>

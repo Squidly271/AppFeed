@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>lancache-bundle</Name>
+  <Repository>josh5/lancache-bundle:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/josh5/lancache-bundle</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.1.202</MyIP>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79858-support-josh5-docker-templates/</Support>
+  <Project>https://github.com/Josh5/lancache-bundle</Project>
+  <Overview>An all in one lancache docker providing a combination of the following three projects:&#13;
+https://github.com/lancachenet/lancache-dns&#13;
+https://github.com/lancachenet/monolithic&#13;
+https://github.com/lancachenet/sniproxy&#13;
+&#13;
+Thanks to cheesemarathon for their work on the SteamCacheBundle that inspired this and provided the grounding for the template. Note, however, that this Docker image does not run at all the same way and is strictly based on the original upstream logcache project.&#13;
+&#13;
+On start, this image will download the latest domain list from https://github.com/uklans/cache-domains. This means no constant upgrading of the docker image is necessary in order to guarantee continued usability &#13;
+&#13;
+</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/lancache-bundle.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Josh5/lancache-bundle/master/lancache-bundle-logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/josh5coffee</DonateLink>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/lancache</HostDir>
+      <ContainerDir>/data/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lancache-bundle/log/named</HostDir>
+      <ContainerDir>/var/log/named</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lancache-bundle/log/nginx</HostDir>
+      <ContainerDir>/var/log/nginx</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.202</Value>
+      <Name>LANCACHE_IP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>500m</Value>
+      <Name>CACHE_MEM_SIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>2000g</Value>
+      <Name>CACHE_DISK_SIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>150d</Value>
+      <Name>CACHE_MAX_AGE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1.1.1.1</Value>
+      <Name>UPSTREAM_DNS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>USE_GENERIC_CACHE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="LANCACHE_IP" Target="LANCACHE_IP" Default="" Mode="" Description="IP Address of cache container. (Has to be the same as the HOST's IP. If you set the container's IP to 192.168.1.202 this has to be the same. If you use bridge it has to be the same as unRAID's IP.)" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.202</Config>
+  <Config Name="DNS_BIND_IP" Target="DNS_BIND_IP" Default="" Mode="" Description="IP Address of cache container. (Has to be the same as the HOST's IP. If you set the container's IP to 192.168.1.202 this has to be the same. If you use bridge it has to be the same as unRAID's IP.)" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.202</Config>
+  <Config Name="data" Target="/data/cache" Default="" Mode="rw" Description="Location to store the cached files" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/lancache</Config>
+  <Config Name="DNS Logs" Target="/var/log/named" Default="" Mode="rw" Description="Location to store the DNS logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lancache-bundle/log/named</Config>
+  <Config Name="Nginx Logs" Target="/var/log/nginx" Default="" Mode="rw" Description="Location to store the Nginx logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lancache-bundle/log/nginx</Config>
+  <Config Name="CACHE_MEM_SIZE" Target="CACHE_MEM_SIZE" Default="" Mode="" Description="Memory size for the cache" Type="Variable" Display="always" Required="false" Mask="false">500m</Config>
+  <Config Name="CACHE_DISK_SIZE" Target="CACHE_DISK_SIZE" Default="" Mode="" Description="Max size for the cache" Type="Variable" Display="always" Required="false" Mask="false">2000g</Config>
+  <Config Name="CACHE_MAX_AGE" Target="CACHE_MAX_AGE" Default="" Mode="" Description="Max age for files in the cache" Type="Variable" Display="always" Required="false" Mask="false">150d</Config>
+  <Config Name="DNS UDP Port" Target="53" Default="53" Mode="udp" Description="DNS port, don't change!" Type="Port" Display="advanced" Required="true" Mask="false">53</Config>
+  <Config Name="HTTP Port" Target="" Default="" Mode="tcp" Description="Container Port: 80&#13;&#10;Don't change!" Type="Port" Display="advanced" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="" Default="" Mode="tcp" Description="Container Port: 443&#13;&#10;SNIProxy port, don't change!" Type="Port" Display="advanced" Required="false" Mask="false">443</Config>
+  <Config Name="UPSTREAM_DNS" Target="UPSTREAM_DNS" Default="" Mode="" Description="Container Variable: UPSTREAM_DNS" Type="Variable" Display="advanced" Required="true" Mask="false">1.1.1.1</Config>
+  <Config Name="USE_GENERIC_CACHE" Target="USE_GENERIC_CACHE" Default="" Mode="" Description="Must be set to true to use generic cache" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="DISABLE_ARENANET" Target="DISABLE_ARENANET" Default="" Mode="" Description="Set to true to disable arenanet caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_BLIZZARD" Target="DISABLE_BLIZZARD" Default="" Mode="" Description="Set to true to disable blizzard caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_CITYOFHEROES" Target="DISABLE_CITYOFHEROES" Default="" Mode="" Description="Set to true to disable cityofheroes caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_DAYBREAK" Target="DISABLE_DAYBREAK" Default="" Mode="" Description="Set to true to disable daybreak caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_EPICGAMES" Target="DISABLE_EPICGAMES" Default="" Mode="" Description="Set to true to disable epicgames caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_FRONTIER" Target="DISABLE_FRONTIER" Default="" Mode="" Description="Set to true to disable frontier caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_HIREZ" Target="DISABLE_HIREZ" Default="" Mode="" Description="Set to true to disable hirez caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_NEVERWINTER" Target="DISABLE_NEVERWINTER" Default="" Mode="" Description="Set to true to disable neverwinter caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_NEXUSMODS" Target="DISABLE_NEXUSMODS" Default="" Mode="" Description="Set to true to disable nexusmods caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_NINTENDO" Target="DISABLE_NINTENDO" Default="" Mode="" Description="Set to true to disable nintendo caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_ORIGIN" Target="DISABLE_ORIGIN" Default="" Mode="" Description="Set to true to disable origin caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_RENEGADEX" Target="DISABLE_RENEGADEX" Default="" Mode="" Description="Set to true to disable renegadex caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_RIOT" Target="DISABLE_RIOT" Default="" Mode="" Description="Set to true to disable riot caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_ROCKSTAR" Target="DISABLE_ROCKSTAR" Default="" Mode="" Description="Set to true to disable rockstar caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_SONY" Target="DISABLE_SONY" Default="" Mode="" Description="Set to true to disable sony caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_STEAM" Target="DISABLE_STEAM" Default="" Mode="" Description="Set to true to disable steam caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_TESO" Target="DISABLE_TESO" Default="" Mode="" Description="Set to true to disable teso caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_TWITCH" Target="DISABLE_TWITCH" Default="" Mode="" Description="Set to true to disable twitch caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_UPLAY" Target="DISABLE_UPLAY" Default="" Mode="" Description="Set to true to disable uplay caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_WARFRAME" Target="DISABLE_WARFRAME" Default="" Mode="" Description="Set to true to disable warframe caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_WARGAMING" Target="DISABLE_WARGAMING" Default="" Mode="" Description="Set to true to disable wargaming caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_WSUS" Target="DISABLE_WSUS" Default="" Mode="" Description="Set to true to disable windowsupdates caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DISABLE_XBOXLIVE" Target="DISABLE_XBOXLIVE" Default="" Mode="" Description="Set to true to disable xboxlive caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Date>1581498411</Date>
+  <Category>Backup: GameServers: Tools:Utilities</Category>
+  <Description>An all in one lancache docker providing a combination of the following three projects:&#13;
+https://github.com/lancachenet/lancache-dns&#13;
+https://github.com/lancachenet/monolithic&#13;
+https://github.com/lancachenet/sniproxy&#13;
+&#13;
+Thanks to cheesemarathon for their work on the SteamCacheBundle that inspired this and provided the grounding for the template. Note, however, that this Docker image does not run at all the same way and is strictly based on the original upstream logcache project.&#13;
+&#13;
+On start, this image will download the latest domain list from https://github.com/uklans/cache-domains. This means no constant upgrading of the docker image is necessary in order to guarantee continued usability</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Josh.5sRepository/josh5/lancache-bundle.xml</templatePath>
+</Container>

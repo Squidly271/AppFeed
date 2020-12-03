@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Minio</Name>
+  <Overview>Minio is a high performance distributed object storage server, designed for
+large-scale private cloud infrastructure. Minio is widely deployed across the
+world with over 157M+ docker pulls</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/minio/minio/</Registry>
+  <GitHub>https://github.com/minio/minio</GitHub>
+  <Repository>minio/minio</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9768</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minio</HostDir>
+      <ContainerDir>/root/.minio</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>MINIO_ACCESS_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MINIO_SECRET_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <PostArgs>server /data</PostArgs>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/minio.png</Icon>
+  <Config Name="Web UI" Target="9000" Default="9768" Mode="tcp" Description="Container Port: 9000" Type="Port" Display="always" Required="true" Mask="false">9768</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Config" Target="/root/.minio" Default="" Mode="rw" Description="Container Path: /root/.minio" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minio</Config>
+  <Config Name="MINIO_ACCESS_KEY" Target="MINIO_ACCESS_KEY" Default="" Mode="" Description="Container Variable: MINIO_ACCESS_KEY" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MINIO_SECRET_KEY" Target="MINIO_SECRET_KEY" Default="" Mode="" Description="Container Variable: MINIO_SECRET_KEY" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/minio.xml</TemplateURL>
+  <Category>Backup: Cloud:</Category>
+  <Description>Minio is a high performance distributed object storage server, designed for
+large-scale private cloud infrastructure. Minio is widely deployed across the
+world with over 157M+ docker pulls</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/minio.xml</templatePath>
+</Container>

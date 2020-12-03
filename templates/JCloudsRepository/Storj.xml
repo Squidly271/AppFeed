@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Storj</Name>
+  <Repository>oreandawe/storjshare-cli</Repository>
+  <Registry>https://hub.docker.com/r/oreandawe/storjshare-cli/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-jcloud-cryptocoin-templates/</Support>
+  <Project>https://storj.io</Project>
+  <Overview>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#13;
+      https://www.storj.io&#13;
+      https://hub.docker.com/r/oreandawe/storjshare-cli/&#13;
+&#13;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#13;
+&#13;
+SETUP REQUIREMENTS:&#13;
+-------------------------------------&#13;
+    1.   TCP ports 4000 open on host and setup on container (should be set below)&#13;
+    2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#13;
+    3.   Your Ethereum-based wallet address.&#13;
+    4.   The max allowed space STORJ can take up on the host; remember to make it less &#13;
+&#13;
+STORJ DAEMON STATUS:  (In your command line)&#13;
+--------------------------------------------------&#13;
+docker exec Storj storjshare status&#13;
+--------------------------------------------------&#13;
+&#13;
+Optional Component:&#13;
+StorjStat is a free community made tool for monitoring your Storj farming node(s), the tool gives you both real-time and historical analysis. See storjstat.com and calxibe/StorjMonitor for more information. The StorjStat API is optionally supported by using the STORJ_MONITOR_API_KEY environment variable when starting the storjshare-cli Docker container.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/Storj.xml</TemplateURL>
+  <Icon>https://i.imgur.com/hfyAiA4.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs></PostArgs>
+  <DonateText>Etherum or STORJ tokens for template author</DonateText>
+  <DonateImg></DonateImg>
+  <MinVer>6.4.1</MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000-4003</HostPort>
+        <ContainerPort>4000-4003</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/storj</HostDir>
+      <ContainerDir>/storj</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>WALLET_ADDRESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1TB</Value>
+      <Name>SHARE_SIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0.0.0.0</Value>
+      <Name>RPCADDRESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>STORJ_MONITOR_API_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Path of Storj share on array" Target="/storj" Default="/mnt/user/storj" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
+  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="3TB" Mode="" Description="Example: 500GB, 1TB, 10TB." Type="Variable" Display="always" Required="true" Mask="false">1TB</Config>
+  <Config Name="RPC Host Address" Target="RPCADDRESS" Default="0.0.0.0" Mode="" Description="DDNS, DNS, or external IP address" Type="Variable" Display="always" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="Storjstat.com Monitor API-Key" Target="STORJ_MONITOR_API_KEY" Default="" Mode="" Description="Container Variable: STORJ_MONITOR_API_KEY" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Storj TCP ports" Target="4000-4003" Default="4000-4003" Mode="tcp" Description="Storj service uses TCP 4000. However, if it doesn't find an open connection it will try to tunnel using ports 4001-4003." Type="Port" Display="always" Required="false" Mask="false">4000-4003</Config>
+  <Date>1524798166</Date>
+  <Category>Cloud: Tools:Utilities Other: Network:Other</Category>
+  <Description>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#13;
+      https://www.storj.io&#13;
+      https://hub.docker.com/r/oreandawe/storjshare-cli/&#13;
+&#13;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#13;
+&#13;
+SETUP REQUIREMENTS:&#13;
+-------------------------------------&#13;
+    1.   TCP ports 4000 open on host and setup on container (should be set below)&#13;
+    2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#13;
+    3.   Your Ethereum-based wallet address.&#13;
+    4.   The max allowed space STORJ can take up on the host; remember to make it less &#13;
+&#13;
+STORJ DAEMON STATUS:  (In your command line)&#13;
+--------------------------------------------------&#13;
+docker exec Storj storjshare status&#13;
+--------------------------------------------------&#13;
+&#13;
+Optional Component:&#13;
+StorjStat is a free community made tool for monitoring your Storj farming node(s), the tool gives you both real-time and historical analysis. See storjstat.com and calxibe/StorjMonitor for more information. The StorjStat API is optionally supported by using the STORJ_MONITOR_API_KEY environment variable when starting the storjshare-cli Docker container.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JCloudsRepository/Storj.xml</templatePath>
+</Container>

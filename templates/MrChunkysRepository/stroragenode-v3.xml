@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>storagenode-v3</Name>
+  <Repository>storjlabs/storagenode:beta</Repository>
+  <Registry>https://hub.docker.com/r/storjlabs/storagenode</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://documentation.storj.io/</Project>
+  <Overview>This is Storj Lab's V3 node client. To participate you must first have to have an authorization token, to get the Authentication Token go to: [b]https://storj.io/sign-up-farmer[/b]&#13;
+&#13;
+This template is for running the Docker application only, please follow Storj Lab directions to generate your Node Identity files  -  this is in [b]https://documentation.storj.io/dependencies/identity[/b]&#13;
+&#13;
+[br][br][b][u][span style='color: #E80000;']!!! IMPORTANT !!![/span][/u][/b][br]&#13;
+Two path need to be passed to the docker. Currently Storj requires that the path are mounted using --mount rather than -v. Please add the path for the storage and identity folders to the extra parameters in the following format (extra parameters can be accessed through the advanced view toggle):&#13;
+&#13;
+[b]--mount type=bind,source="/mnt/user/appdata//storj/identity/storagenode/",destination=/app/identity  --mount type=bind,source="/mnt/user//",destination=/app/config[/b]&#13;
+&#13;
+copy paste the whole string with altered values  to match your setup.</Overview>
+  <WebUI>http://[IP]:[PORT:14002]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dalekseevs/Unraid-Docker-Templates/master/stroragenode-v3.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dalekseevs/Unraid-Docker-Templates/master/logos/storj-logo-png-transparent.png</Icon>
+  <ExtraParams>--mount type=bind,source="/mnt/user/[your identity directory]/identity/storagenode/",destination=/app/identity  --mount type=bind,source="/mnt/user/[your storage directory]/",destination=/app/config</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>28967</HostPort>
+        <ContainerPort>28967</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>14002</HostPort>
+        <ContainerPort>14002</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>WALLET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>EMAIL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>my.ddns.com:28967</Value>
+      <Name>ADDRESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>45TB</Value>
+      <Name>BANDWIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>2TB</Value>
+      <Name>STORAGE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="TCP Port" Target="28967" Default="28967" Mode="tcp" Description="Default Storj V3 node port." Type="Port" Display="always" Required="true" Mask="false">28967</Config>
+  <Config Name="Wallet Address" Target="WALLET" Default="" Mode="" Description="Your Payout address here." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Email address" Target="EMAIL" Default="" Mode="" Description="Email address used to sign Storj V3 node. (recommended)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Internet Address" Target="ADDRESS" Default="domain.ddns.net:28967" Mode="" Description="Your ISP IP address:28967 (static IP) or dynamic DNS address here." Type="Variable" Display="always" Required="true" Mask="false">my.ddns.com:28969</Config>
+  <Config Name="Allocated Storage" Target="STORAGE" Default="2TB" Mode="" Description="A minimum of 500GB with no maximum of available space per node.  Preferred minimum of 8TB and maximum of 24TB of available space per node." Type="Variable" Display="always" Required="true" Mask="false">2TB</Config>
+  <Config Name="Dashboard Port" Target="14002" Default="14002" Mode="tcp" Description="The port to access web dashboard" Type="Port" Display="always" Required="true" Mask="false">14002</Config>
+  <Config Name="Bandwidth" Target="BANDWIDTH" Default="" Mode="" Description="(OPTIONAL) Amount of  bandwidth used, per month, to Storj network.  According to Storj documentation, minimum is 2TB, recommended is 16+ TB, preferred is unlimited (e.g. 100000TB)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Beta>true</Beta>
+  <Date>1582117986</Date>
+  <Category>Cloud: Other: Status:Beta</Category>
+  <Description>This is Storj Lab's V3 node client. To participate you must first have to have an authorization token, to get the Authentication Token go to: https://storj.io/sign-up-farmer&#13;
+&#13;
+This template is for running the Docker application only, please follow Storj Lab directions to generate your Node Identity files  -  this is in https://documentation.storj.io/dependencies/identity</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MrChunkysRepository/stroragenode-v3.xml</templatePath>
+</Container>

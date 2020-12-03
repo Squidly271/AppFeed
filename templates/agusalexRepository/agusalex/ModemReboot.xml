@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ModemReboot</Name>
+  <Repository>agusalex/modem_reboot</Repository>
+  <Registry>https://hub.docker.com/repository/docker/agusalex/modem_reboot</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Puppeteer container for rebooting Modems on a schedule&#13;
+The specific navigation for your modem will vary,&#13;
+This is more of an example and isn't guaranteed to work for your particular modem.&#13;
+Check available scripts here: https://github.com/agusalex/modemReboot/&#13;
+Add your scripts to the RebootModem folder and then set that myscripts/script.js in your SCRIPT env var&#13;
+Feel free to make a PR or add an issue here https://github.com/agusalex/modemReboot/issues to add your own modem's script&#13;
+If no CRON Env var is passed it will reboot upon first run and then quit</Overview>
+  <WebUI>https://github.com/agusalex/modemReboot</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/agusalex/docker-templates/master/agusalex/ModemReboot.xml</TemplateURL>
+  <Icon>https://icon-library.com/images/reboot-icon-button/reboot-icon-button-15.jpg</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/RebootModem</HostDir>
+      <ContainerDir>/myscripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>https://github.com/agusalex/modemReboot</Value>
+      <Name>URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>CRON</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SCRIPT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="URL" Target="URL" Default="" Mode="" Description="Container Variable: URL" Type="Variable" Display="always" Required="true" Mask="false">https://github.com/agusalex/modemReboot</Config>
+  <Config Name="USER" Target="USER" Default="" Mode="" Description="Container Variable: USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PASS" Target="PASS" Default="" Mode="" Description="Container Variable: PASS" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="CRON" Target="CRON" Default="" Mode="" Description="Container Variable: CRON" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Script" Target="SCRIPT" Default="" Mode="" Description="Container Variable: SCRIPT" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="UserScripts" Target="/myscripts" Default="" Mode="rw" Description="Container Path: /myscripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/RebootModem</Config>
+  <Date>1602094266</Date>
+  <Category>Network:Other Productivity: Tools:Utilities</Category>
+  <Description>Puppeteer container for rebooting Modems on a schedule&#13;
+The specific navigation for your modem will vary,&#13;
+This is more of an example and isn't guaranteed to work for your particular modem.&#13;
+Check available scripts here: https://github.com/agusalex/modemReboot/&#13;
+Add your scripts to the RebootModem folder and then set that myscripts/script.js in your SCRIPT env var&#13;
+Feel free to make a PR or add an issue here https://github.com/agusalex/modemReboot/issues to add your own modem's script&#13;
+If no CRON Env var is passed it will reboot upon first run and then quit</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/agusalexRepository/agusalex/ModemReboot.xml</templatePath>
+</Container>

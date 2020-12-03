@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>SickRage</Name>
+  <Overview>
+    SickRage is a Video File Manager for TV Shows, It watches for new episodes of your favorite shows and when they are posted it does its magic. SickRage is currently in beta release stage. There may be severe bugs in it and at any given time it may not work at all.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/needo/sickrage/</Registry>
+  <GitHub>https://github.com/needo37/sickrage</GitHub>
+  <Repository>needo/sickrage</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=33822.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>EDGE</Name>
+      <Value>0</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sickrage</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/tv</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <Icon>https://i.imgur.com/3WTuAz6.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/gfjardim/docker-containers/templates/needo/SickRage.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Description>SickRage is a Video File Manager for TV Shows, It watches for new episodes of your favorite shows and when they are posted it does its magic. SickRage is currently in beta release stage. There may be severe bugs in it and at any given time it may not work at all.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/gfjardimsRepository/needo/SickRage.xml</templatePath>
+</Container>

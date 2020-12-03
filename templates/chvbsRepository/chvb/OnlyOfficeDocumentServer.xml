@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Date>1601438400</Date>
+  <Name>OnlyOfficeDocumentServer</Name>
+  <Project>https://www.onlyoffice.com/</Project>
+  <Overview>
+	  This Version is without the connection Limit of 20 Users and supports the mobile editing.
+    ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+	HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it. Add fonts by placing [fontname].ttf in the font folder and force updating the container.  
+  </Overview>
+  <Registry>https://hub.docker.com/repository/docker/chvb/onlyofficedocumentserver</Registry>
+  <GitHub>https://github.com/chvb/onlyofficedocumentserver</GitHub>
+  <Repository>chvb/onlyofficedocumentserver:latest</Repository>
+  <Support>http://lime-technology.com/forum/index.php?topic=49578.0</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/logs</HostDir>
+      <ContainerDir>/var/log/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/Data</HostDir>
+      <ContainerDir>/var/www/onlyoffice/Data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/lib</HostDir>
+      <ContainerDir>/var/lib/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/database</HostDir>
+      <ContainerDir>/var/lib/postgresql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyofficeds/fonts</HostDir>
+      <ContainerDir>/usr/share/fonts/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4430</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment></Environment>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/OnlyOfficeDocumentServer.jpg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/OnlyOfficeDocumentServer.xml</TemplateURL>
+  <Category>Productivity: Tools:</Category>
+  <Description>This Version is without the connection Limit of 20 Users and supports the mobile editing.
+    ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+	HTTPS Support can be enable creating a "certs" folder in the data directory and placing onlyoffice.crt and onlyoffice.key in it. Add fonts by placing .ttf in the font folder and force updating the container.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/chvbsRepository/chvb/OnlyOfficeDocumentServer.xml</templatePath>
+</Container>

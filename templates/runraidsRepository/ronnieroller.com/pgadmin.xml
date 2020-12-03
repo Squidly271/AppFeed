@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>pgAdmin4</Name>
+  <Repository>fenglc/pgadmin4</Repository>
+  <Registry>https://hub.docker.com/r/fenglc/pgadmin4/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61851-support-thread-for-pgadmin-docker-template/</Support>
+  <Overview>pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world</Overview>
+  <WebUI>http://[IP]:[PORT:5050]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rroller/unraid-templates/master/ronnieroller.com/pgadmin.xml</TemplateURL>
+  <Icon>https://i.imgur.com/N4wDUnJ.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pgadmin/config/</HostDir>
+      <ContainerDir>/var/lib/pgadmin</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="5050" Default="5050" Mode="tcp" Description="The UI port" Type="Port" Display="always" Required="true" Mask="null">5050</Config>
+  <Config Name="Host Path 1" Target="/var/lib/pgadmin" Default="" Mode="rw" Description="Container Path: /var/lib/pgadmin" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pgadmin/config/</Config>
+  <Date>1512359010</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/runraidsRepository/ronnieroller.com/pgadmin.xml</templatePath>
+</Container>

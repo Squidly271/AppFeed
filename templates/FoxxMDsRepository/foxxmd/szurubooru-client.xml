@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>szurubooru-client</Name>
+  <Repository>szurubooru/client:latest</Repository>
+  <Registry>https://hub.docker.com/r/szurubooru/client</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79126-support-foxxmd-szurubooru/</Support>
+  <Project>https://github.com/rr-/szurubooru</Project>
+  <Overview>
+        Frontend container for Szurubooru, an image board engine for small and medium communities[br][br]&#13;
+        Requires the backend container, [b]szurubooru-api[/b], in order to work.&#13;
+    </Overview>
+  <Date>1554091200</Date>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/foxxmd/szurubooru-client.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/FoxxMD/unraid-docker-templates/master/szurubooru.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/szurubooru/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>BUILD_INFO</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>BACKEND_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Build Info" Target="BUILD_INFO" Default="latest" Mode="" Description="Determines which git commit to use to build client code. Recommend keep as 'latest'" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Backend Host" Target="BACKEND_HOST" Default="" Mode="" Description="IP Address of the backend API instance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Http Port" Target="80" Default="8118" Mode="tcp" Description="Port to serve site to on host" Type="Port" Display="always" Required="true" Mask="false">8118</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/szurubooru/data" Mode="ro" Description="Directory on host where image data is stored. Should be same as 'Image Data' variable on szurubooru-api" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/szurubooru/data</Config>
+  <Category>MediaApp:Photos</Category>
+  <Description>Frontend container for Szurubooru, an image board engine for small and medium communities&#13;
+        Requires the backend container, szurubooru-api, in order to work.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/FoxxMDsRepository/foxxmd/szurubooru-client.xml</templatePath>
+</Container>

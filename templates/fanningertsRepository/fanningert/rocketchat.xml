@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Rocket.Chat</Name>
+  <Repository>library/rocket.chat</Repository>
+  <Registry>https://hub.docker.com/r/library/rocket.chat/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/61337-support-rocketchat/</Support>
+  <Overview>Rocket.Chat is a Web Chat Server, developed in JavaScript, using the Meteor fullstack framework.&#13;
+&#13;
+It is a great solution for communities and companies wanting to privately host their own chat service or for developers looking forward to build and evolve their own chat platforms.</Overview>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/rocketchat.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/rocketchat.png</Icon>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/rocketchat</HostDir>
+      <ContainerDir>/app/uploads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>mongodb://mongo:27017/rocketchat</Value>
+      <Name>MONGO_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>http://localhost:3000</Value>
+      <Name>ROOT_URL</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Upload Directory Path" Target="/app/uploads" Default="/mnt/user/appdata/rocketchat" Mode="rw" Description="Container Path: /app/uploads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rocketchat</Config>
+  <Config Name="Web Frontend" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Mono DB" Target="MONGO_URL" Default="mongodb://mongo:27017/rocketchat" Mode="" Description="Container Variable: MONGO_URL" Type="Variable" Display="always" Required="true" Mask="false">mongodb://mongo:27017/rocketchat</Config>
+  <Config Name="Rocket.Chat URL" Target="ROOT_URL" Default="http://localhost:3000" Mode="" Description="Container Variable: ROOT_URL" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:3000</Config>
+  <Category>Network:Messenger</Category>
+  <Description>Rocket.Chat is a Web Chat Server, developed in JavaScript, using the Meteor fullstack framework.&#13;
+&#13;
+It is a great solution for communities and companies wanting to privately host their own chat service or for developers looking forward to build and evolve their own chat platforms.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fanningertsRepository/fanningert/rocketchat.xml</templatePath>
+</Container>

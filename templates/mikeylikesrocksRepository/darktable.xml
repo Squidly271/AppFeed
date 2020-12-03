@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>darktable</Name>
+  <Repository>mdschaefer/darktable</Repository>
+  <Registry>https://hub.docker.com/repository/docker/mdschaefer/darktable</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.darktable.org/</Support>
+  <Project>https://github.com/mikeylikesrocks/darktable</Project>
+  <Overview>&#13;
+        Darktable is an open source photography workflow application and raw developer. A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoomable lighttable and enables you to develop raw images and enhance them.&#13;
+    </Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/mikeylikesrocks/unraid-docker-templates/master/darktable.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/mikeylikesrocks/unraid-docker-templates/master/darktable-icon.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Config Name="Darktable config and library folder" Target="/config" Default="/mnt/user/appdata/darktable" Mode="rw" Description="Container path: /config " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/darktable</Config>
+  <Config Name="unRAID Share Path" Target="/images" Default="/mnt/user/" Mode="rw" Description="Container path: /images" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="HTTP Port" Target="8080" Default="8080" Mode="tcp" Description="HTTP Port 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="RDP Port" Target="3389" Default="3389" Mode="tcp" Description="RDP Port" Type="Port" Display="always" Required="false" Mask="false">3389</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UID for permissions.  Do not change unless you know what you're doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GID for permissions.  Do not change unless you know what you're doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Category>Productivity:</Category>
+  <Description>Darktable is an open source photography workflow application and raw developer. A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoomable lighttable and enables you to develop raw images and enhance them.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/mikeylikesrocksRepository/darktable.xml</templatePath>
+</Container>

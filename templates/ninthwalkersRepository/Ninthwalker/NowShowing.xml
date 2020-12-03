@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>nowshowing</Name>
+  <Repository>ninthwalker/nowshowing</Repository>
+  <Registry>https://registry.hub.docker.com/r/ninthwalker/nowshowing/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
+  <Support>https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/</Support>
+  <Overview>Please use the new NowShowing v2 app (also found here in Community Apps).[br]
+   This version is no longer being updated or supported. Thanks!</Overview>
+  <Date>1491796800</Date>
+  <Project>https://github.com/ninthwalker/NowShowing</Project>
+  <WebUI>http://[IP]:[PORT:6878]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/NowShowing.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6878</HostPort>
+        <ContainerPort>6878</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/cache/appdata/NowShowing</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_SERVER_IP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SMTP_SERVER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SMTP_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>EMAIL_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>EMAIL_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_TOKEN</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <BaseImage>alpine:3.5</BaseImage>
+  <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"></Config>
+  <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="" Mode="" Description="SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="SMTP PORT" Target="SMTP_PORT" Default="" Mode="" Description="SMTP_PORT (Use 587 for Gmail)" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="" Mode="" Description="EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="true" Mask="true"></Config>
+  <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/cache/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/cache/appdata/NowShowing</Config>
+  <Config Name="PLEX TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="PLEX_TOKEN (Optional - use if you don't want to enter Plex username/password)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Optional PUID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Optional PGID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Video MediaServer:Video</Category>
+  <Description>Please use the new NowShowing v2 app (also found here in Community Apps).
+   This version is no longer being updated or supported. Thanks!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ninthwalkersRepository/Ninthwalker/NowShowing.xml</templatePath>
+</Container>

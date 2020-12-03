@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>borgmatic</Name>
+  <Repository>b3vis/borgmatic</Repository>
+  <Registry>https://hub.docker.com/r/b3vis/borgmatic/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/99218-support-borgmatic/</Support>
+  <Project>https://hub.docker.com/r/b3vis/borgmatic/</Project>
+  <Overview>borgmatic is simple, configuration-driven backup software for servers and workstations. Protect your files with client-side encryption. Backup your databases too. Monitor it all with integrated third-party services.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Sdub76/unraid_docker_templates/main/borgmatic.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/witten/borgmatic/master/docs/static/borgmatic.png</Icon>
+  <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/mnt/user</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/boot</HostDir>
+      <ContainerDir>/boot</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/borg_backup/repo</HostDir>
+      <ContainerDir>/mnt/borg-repository</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disks/borg_backup/cache/</HostDir>
+      <ContainerDir>/root/.cache/borg</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/borgmatic/config</HostDir>
+      <ContainerDir>/etc/borgmatic.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/borgmatic/borg_keys</HostDir>
+      <ContainerDir>/root/.config/borg</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/borgmatic/ssh_keys</HostDir>
+      <ContainerDir>/root/.ssh</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/borgmatic/</HostDir>
+      <ContainerDir>/mnt/fuse</ContainerDir>
+      <Mode>rw,shared</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="User Shares (Read-only Backup Source)" Target="/mnt/user" Default="/mnt/user" Mode="ro" Description="Container Path: /mnt/user" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Flash Drive (Read-only Backup Source)" Target="/boot" Default="/boot" Mode="ro" Description="Container Path: /boot" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Borg Repo (Backup Destination)" Target="/mnt/borg-repository" Default="/mnt/disks/borg_backup/repo" Mode="rw,slave" Description="Container Path: /mnt/borg-repository" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Borg Cache" Target="/root/.cache/borg" Default="/mnt/disks/borg_backup/cache" Mode="rw,slave" Description="Container Path: /root/.cache/borg" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Borgmatic Config" Target="/etc/borgmatic.d" Default="/mnt/user/appdata/borgmatic/config" Mode="rw" Description="Container Path: /etc/borgmatic.d" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Borg Keys" Target="/root/.config/borg" Default="/mnt/user/appdata/borgmatic/borg_keys" Mode="rw" Description="Container Path: /root/.config/borg" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SSH Keys" Target="/root/.ssh" Default="/mnt/user/appdata/borgmatic/ssh_keys" Mode="rw" Description="Container Path: /root/.ssh" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Fuse mount point" Target="/mnt/fuse" Default="/mnt/borg" Mode="rw,shared" Description="Container Path: /mnt/fuse" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="/dev/fuse" Target="" Default="/dev/fuse" Mode="" Description="Container Device: " Type="Device" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="UID for permissions.  Do not change unless you know what you're doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="GID for permissions.  Do not change unless you know what you're doing." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Date>1605971049</Date>
+  <Category>Backup:</Category>
+  <Description>borgmatic is simple, configuration-driven backup software for servers and workstations. Protect your files with client-side encryption. Backup your databases too. Monitor it all with integrated third-party services.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/sdubsRepository/borgmatic.xml</templatePath>
+</Container>

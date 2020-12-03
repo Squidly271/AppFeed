@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Collabora</Name>
+  <Repository>collabora/code</Repository>
+  <Registry>https://hub.docker.com/r/collabora/code/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/collabora/code/</Support>
+  <Overview>Collabora/Code Online Development Edition - an awesome, Online Office suite image suitable for home use. You can use Collabora/Code for your Nextcloud an edit your Office Documents Online!</Overview>
+  <WebUI>https://[IP]:[PORT:9980]/loleaflet/dist/admin/admin.html</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/Collabora.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/chvb/docker-templates/master/chvb/img/collabora.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9980</HostPort>
+        <ContainerPort>9980</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>cloud\\.yourdomain\\.com</Value>
+      <Name>domain</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>username</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>yourpassword</Value>
+      <Name>password</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="9980" Default="" Mode="tcp" Description="Container Port: 9980" Type="Port" Display="always" Required="false" Mask="false">9980</Config>
+  <Config Name="Domain" Target="domain" Default="" Mode="" Description="Container Variable: domain" Type="Variable" Display="always" Required="false" Mask="false">cloud\\.yourdomain\\.com</Config>
+  <Config Name="Username" Target="username" Default="" Mode="" Description="Container Variable: username" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="Password" Target="password" Default="" Mode="" Description="Container Variable: password" Type="Variable" Display="always" Required="false" Mask="false">yourpassword</Config>
+  <Date>1498760881</Date>
+  <Category>Cloud:</Category>
+  <Description>Collabora/Code Online Development Edition - an awesome, Online Office suite image suitable for home use. You can use Collabora/Code for your Nextcloud an edit your Office Documents Online!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/chvbsRepository/chvb/Collabora.xml</templatePath>
+</Container>

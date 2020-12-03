@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>DigiKam</Name>
+  <Overview>
+    DigiKam is an advanced digital photo management application. The people who inspired digiKam's design are the photographers like you who want to view, manage, edit, enhance, organize, tag, and share photographs under Linux systems.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-digikam/</Registry>
+  <GitHub>https://github.com/aptalca/docker-digikam</GitHub>
+  <Repository>aptalca/docker-digikam</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>WIDTH</Name>
+      <Value>1280</Value>
+    </Variable>
+    <Variable>
+      <Name>HEIGHT</Name>
+      <Value>720</Value>
+    </Variable>
+    <Variable>
+      <Name>EDGE</Name>
+      <Value>0</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/pictures</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/#/client/c/digiKam</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/digikam.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Photos MediaServer:Photos</Category>
+  <Description>DigiKam is an advanced digital photo management application. The people who inspired digiKam's design are the photographers like you who want to view, manage, edit, enhance, organize, tag, and share photographs under Linux systems.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/digikam.xml</templatePath>
+</Container>

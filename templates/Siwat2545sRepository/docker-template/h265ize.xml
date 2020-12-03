@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1542344400</Date>
+  <Name>H265ize</Name>
+  <Project>https://github.com/FallingSnow/h265ize</Project>
+  <Overview>
+   h265ize is a fire and forget weapon. A nodejs utility utilizing ffmpeg to encode large quantities of videos with the hevc codec. For more information visit ayrton.sparling.us.
+   [br][br]
+   if you want to create the hvec file alongside your input file, put in the parent directory of your input For example: if your input is in /mnt/user/cache/medialib/mymedia/ set your output to /mnt/user/cache/medialib/
+  </Overview>
+  <Registry>https://hub.docker.com/r/siwatinc/h265ize_unraid/builds/</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>siwatinc/h265ize_unraid</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+  </Environment>
+  <Data>
+  </Data>
+  <Config Name="temp Directory" Target="/mnt" Default="/mnt" Mode="rw" Description="This is the mnt directory of your unraid server&amp;lt;br&amp;gt;Container path: /mnt" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="mnt Directory" Target="/tmp" Default="/mnt/user/h265ize/temp" Mode="rw" Description="This is the temp storage directory to store your current conversion&amp;lt;br&amp;gt;Container path: /tmp" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Output Directory" Target="output" Default="/mnt/user/h265ize/output" Mode="" Description="The destination folder where you want your re-encoded video to be (recomended to be the parent directory of your input if you are planning to replace your source)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Input Directory" Target="input" Default="/mnt/user/h265ize/input" Mode="" Description="The source folder that contain video files you want to re-encode" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Quantization Parameter" Target="qp" Default="19" Mode="" Description="Quantization Parameter, read the h265 docs for more info" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Output Format" Target="format" Default="mp4" Mode="" Description="mp4,mkv or m4v" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Quality Preset" Target="preset" Default="fast" Mode="" Description="ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo | https://x265.readthedocs.io/en/default/presets.html for more info" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Icon>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/h265ize.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/h265ize.xml</TemplateURL>
+  <Category>Tools:</Category>
+  <Description>h265ize is a fire and forget weapon. A nodejs utility utilizing ffmpeg to encode large quantities of videos with the hevc codec. For more information visit ayrton.sparling.us.
+   
+   if you want to create the hvec file alongside your input file, put in the parent directory of your input For example: if your input is in /mnt/user/cache/medialib/mymedia/ set your output to /mnt/user/cache/medialib/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/h265ize.xml</templatePath>
+</Container>

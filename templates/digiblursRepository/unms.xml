@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>unms</Name>
+  <Repository>nico640/docker-unms</Repository>
+  <Registry>https://hub.docker.com/r/nico640/docker-unms</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/72033-support-digiblurs-docker-template-repository/</Support>
+  <Overview>This is an all-in-one Alpine Linux based Docker image for running the Ubiquiti Network Management System. This image contains all the components required to run UNMS in a single container and uses the s6-overlay for process management.&#13;
+&#13;
+The container can be accessed via HTTP with port 6080 or HTTPS 6443.  &#13;
+&#13;
+UNMS Setup:&#13;
+Access the container and walk through the initial setup wizard of adding the username/passwords and devices to be monitored.</Overview>
+  <WebUI>https://[IP]:[PORT:443]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/unms.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/digiblur/unraid-docker-templates/master/images/unms_icon.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer></MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/unms</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="80" Default="6080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="Host Port 2" Target="443" Default="6443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">6443</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/unms" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/unms</Config>
+  <Date>1527397055</Date>
+  <Category>Network:Management Tools:Utilities</Category>
+  <Description>This is an all-in-one Alpine Linux based Docker image for running the Ubiquiti Network Management System. This image contains all the components required to run UNMS in a single container and uses the s6-overlay for process management.&#13;
+&#13;
+The container can be accessed via HTTP with port 6080 or HTTPS 6443.  &#13;
+&#13;
+UNMS Setup:&#13;
+Access the container and walk through the initial setup wizard of adding the username/passwords and devices to be monitored.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/digiblursRepository/unms.xml</templatePath>
+</Container>

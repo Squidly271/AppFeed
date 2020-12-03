@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Privileged>false</Privileged>
+  <Name>GenericCache</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>
+	This docker container provides a caching proxy server for game download content. For any network with more than one PC gamer connected, this will drastically reduce internet bandwidth consumption.
+	This container is designed to support any game that uses HTTP and also supports HTTP range requests (used by Origin). This should make it suitable for:
+	Steam (Valve)
+	Origin (EA Games)
+	Riot Games (League of Legends)
+	Battle.net (Hearthstone, Starcraft 2, Overwatch)
+	Frontier Launchpad (Elite Dangerous, Planet Coaster)
+	Uplay (Ubisoft)
+	Windows Updates
+	Please see https://squishedmooo.com/?p=1 for install instructions! You will need them!
+	This container should be used in conjunction with SteamcacheDNS and SNIProxy.
+	</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/steamcache/generic/</Registry>
+  <GitHub>https://steamcache.github.io/</GitHub>
+  <Repository>steamcache/generic:latest</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>500m</Value>
+      <Name>CACHE_MEM_SIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>500g</Value>
+      <Name>CACHE_DISK_SIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3650d</Value>
+      <Name>CACHE_MAX_AGE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gen-cache/data</HostDir>
+      <ContainerDir>/data/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gen-cache/logs</HostDir>
+      <ContainerDir>/data/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/steamcache.png</Icon>
+  <Config Name="data" Target="/data/cache" Default="/mnt/user/appdata/gen-cache/data" Mode="rw" Description="Location to store the cached files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gen-cache/data</Config>
+  <Config Name="Logs" Target="/data/logs" Default="/mnt/user/appdata/gen-cache/logs" Mode="rw" Description="Location to store the cache logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gen-cache/logs</Config>
+  <Config Name="Default Port" Target="80" Default="80" Mode="tcp" Description="Container Port: Must be 80!" Type="Port" Display="advanced" Required="true" Mask="false">80</Config>
+  <Config Name="CACHE_MEM_SIZE" Target="CACHE_MEM_SIZE" Default="500m" Mode="" Description="Memory size for the cache" Type="Variable" Display="advanced" Required="true" Mask="false">500m</Config>
+  <Config Name="CACHE_DISK_SIZE" Target="CACHE_DISK_SIZE" Default="500g" Mode="" Description="Max size for the cache" Type="Variable" Display="advanced" Required="true" Mask="false">500g</Config>
+  <Config Name="CACHE_MAX_AGE" Target="CACHE_MAX_AGE" Default="3650d" Mode="" Description="Max age for files in the cache" Type="Variable" Display="advanced" Required="true" Mask="false">3650d</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/generic-cache.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>Backup: Tools:Utilities</Category>
+  <Description>This docker container provides a caching proxy server for game download content. For any network with more than one PC gamer connected, this will drastically reduce internet bandwidth consumption.
+	This container is designed to support any game that uses HTTP and also supports HTTP range requests (used by Origin). This should make it suitable for:
+	Steam (Valve)
+	Origin (EA Games)
+	Riot Games (League of Legends)
+	Battle.net (Hearthstone, Starcraft 2, Overwatch)
+	Frontier Launchpad (Elite Dangerous, Planet Coaster)
+	Uplay (Ubisoft)
+	Windows Updates
+	Please see https://squishedmooo.com/?p=1 for install instructions! You will need them!
+	This container should be used in conjunction with SteamcacheDNS and SNIProxy.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/generic-cache.xml</templatePath>
+</Container>

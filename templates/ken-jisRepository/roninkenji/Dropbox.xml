@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Dropbox</Name>
+  <Repository>roninkenji/dropbox-docker</Repository>
+  <Registry>https://hub.docker.com/r/roninkenji/dropbox-docker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=46401.0</Support>
+  <Overview>[b]What is Dropbox?[/b][br/]&#13;
+"One place for all your stuff, wherever you are."[br/]&#13;
+[br/]&#13;
+Dropbox is a home for all your photos, docs, videos, and files. Anything you add to Dropbox will automatically show up on all your computers, phones and even the Dropbox website... so you can access your stuff from anywhere.[br/]&#13;
+[br/]&#13;
+Dropbox also makes it super easy to share with others, whether you're a student or professional, parent or grandparent. Even if you accidentally spill a latte on your laptop, have no fear! Relax knowing that your stuff is safe in Dropbox and will never be lost.[br/]&#13;
+[br/]&#13;
+[b]Container Mountpoints:[/b][br/]&#13;
+* /dropbox : Dropbox home folder. The dropbox app needs to be able to change the folders out to upgrade itself.[br/]&#13;
+* /dropbox/Dropbox : Dropbox user files. This is your sync'd data folder. It can be share or just a plain folder under appdata. Do not use a cache + array folder as the Mover will break your files[br/]&#13;
+[br/]&#13;
+[b]Network Ports:[/b][br/]&#13;
+* 17500 : Dropbox LAN sync[br/]&#13;
+* 17500/udp : Dropbox LAN sync[br/]&#13;
+[br/]&#13;
+[b]Environment Variables:[/b][br/]&#13;
+* DROPBOX_USER: Dropbox user (default: nobody)[br/]&#13;
+* DROPBOX_USERID: Dropbox user id (default: 99)[br/]&#13;
+* DROPBOX_GROUP: Dropbox user group (default: users)[br/]&#13;
+* DROPBOX_GROUPID: Dropbox user group id (default: 100)[br/]&#13;
+[br/]&#13;
+	</Overview>
+  <Date>1481691600</Date>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/roninkenji/unraid-docker-templates/master/roninkenji/Dropbox.xml</TemplateURL>
+  <Icon>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph-vflJ8-C5d.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>17500</HostPort>
+        <ContainerPort>17500</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>17500</HostPort>
+        <ContainerPort>17500</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/dropbox</HostDir>
+      <ContainerDir>/dropbox</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/Dropbox</HostDir>
+      <ContainerDir>/dropbox/Dropbox</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>nobody</Value>
+      <Name>DROPBOX_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>DROPBOX_USERID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>users</Value>
+      <Name>DROPBOX_GROUP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>DROPBOX_GROUPID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Config folder" Target="/dropbox" Default="/mnt/user/appdata/dropbox" Mode="rw" Description="Configuration files and updated dropbox binaries are stored here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dropbox</Config>
+  <Config Name="Data files" Target="/dropbox/Dropbox" Default="/mnt/cache/Dropbox" Mode="rw" Description="This directory will contain the files sync'd into your Dropbox account. Use only a share where the cache setting is Only or No. " Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/Dropbox</Config>
+  <Config Name="User" Target="DROPBOX_USER" Default="nobody" Mode="" Description="User to run dropbox as." Type="Variable" Display="advanced" Required="false" Mask="false">nobody</Config>
+  <Config Name="User ID" Target="DROPBOX_USERID" Default="99" Mode="" Description="uid to run dropbox as." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="Group" Target="DROPBOX_GROUP" Default="users" Mode="" Description="Group to run dropbox as." Type="Variable" Display="advanced" Required="false" Mask="false">users</Config>
+  <Config Name="Group ID" Target="DROPBOX_GROUPID" Default="100" Mode="" Description="gid to run dropbox as." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Lan Sync Port (TCP)" Target="17500" Default="17500" Mode="tcp" Description="Port for Lan Sync" Type="Port" Display="advanced" Required="true" Mask="false">17500</Config>
+  <Config Name="Lan Sync Port (UDP)" Target="17500" Default="17500" Mode="udp" Description="Port for Lan Sync" Type="Port" Display="advanced" Required="true" Mask="false">17500</Config>
+  <Config Name="Timezone file" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Timezone file" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
+  <Category>Cloud:</Category>
+  <Description>What is Dropbox?&#13;
+"One place for all your stuff, wherever you are."&#13;
+&#13;
+Dropbox is a home for all your photos, docs, videos, and files. Anything you add to Dropbox will automatically show up on all your computers, phones and even the Dropbox website... so you can access your stuff from anywhere.&#13;
+&#13;
+Dropbox also makes it super easy to share with others, whether you're a student or professional, parent or grandparent. Even if you accidentally spill a latte on your laptop, have no fear! Relax knowing that your stuff is safe in Dropbox and will never be lost.&#13;
+&#13;
+Container Mountpoints:&#13;
+* /dropbox : Dropbox home folder. The dropbox app needs to be able to change the folders out to upgrade itself.&#13;
+* /dropbox/Dropbox : Dropbox user files. This is your sync'd data folder. It can be share or just a plain folder under appdata. Do not use a cache + array folder as the Mover will break your files&#13;
+&#13;
+Network Ports:&#13;
+* 17500 : Dropbox LAN sync&#13;
+* 17500/udp : Dropbox LAN sync&#13;
+&#13;
+Environment Variables:&#13;
+* DROPBOX_USER: Dropbox user (default: nobody)&#13;
+* DROPBOX_USERID: Dropbox user id (default: 99)&#13;
+* DROPBOX_GROUP: Dropbox user group (default: users)&#13;
+* DROPBOX_GROUPID: Dropbox user group id (default: 100)</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ken-jisRepository/roninkenji/Dropbox.xml</templatePath>
+</Container>

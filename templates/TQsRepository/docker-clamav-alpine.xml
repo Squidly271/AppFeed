@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ClamAV</Name>
+  <Repository>tquinnelly/clamav-alpine</Repository>
+  <Registry>https://hub.docker.com/r/tquinnelly/clamav-alpine</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/80868-support-clamav/</Support>
+  <Project>https://github.com/tquizzle/clamav-alpine</Project>
+  <Overview>This template is for scanning your unRAID server with clamav and clamscan. To scan your server, check the environment variable to set the scanned folder and just start the container. When it is finished, the container will stop and you can view the logs to see the results.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-clamav-alpine.xml</TemplateURL>
+  <Icon>https://its.ucsc.edu/software/images/clam.png</Icon>
+  <PostArgs>-i</PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=KK2S75LBHM6QC&amp;amp;source=url_id=JTSH886FD9UM6</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/scan</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/clamav</HostDir>
+      <ContainerDir>/var/lib/clamav</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Folder to Scan" Target="/scan" Default="/path/to/scan" Mode="ro" Description="Container Path: /scan" Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Config Name="ClamAV Signatures" Target="/var/lib/clamav" Default="/mnt/cache/appdata/clamav" Mode="rw" Description="Storage for freshclam updates" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/clamav</Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Date>1560610915</Date>
+  <Category>Tools:Utilities Security:</Category>
+  <Description>This template is for scanning your unRAID server with clamav and clamscan. To scan your server, check the environment variable to set the scanned folder and just start the container. When it is finished, the container will stop and you can view the logs to see the results.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/TQsRepository/docker-clamav-alpine.xml</templatePath>
+</Container>

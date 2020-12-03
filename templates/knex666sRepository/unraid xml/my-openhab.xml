@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>openHAB</Name>
+  <Repository>openhab/openhab:2.5.0-amd64-debian</Repository>
+  <Registry>https://hub.docker.com/r/openhab/openhab/</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/78482-support-knex666-openhab/</Support>
+  <Project>https://github.com/maschhoff/docker/tree/master/openhab</Project>
+  <Overview>openHAB - a vendor and technology agnostic open source automation software for your home.&#13;
+&#13;
+For sample rules etc. have a look at https://github.com/maschhoff/OpenHAB</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-openhab.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tinglis1/docker-containers/master/openhab/openhab-logo-square.png</Icon>
+  <ExtraParams>--tty --shm-size 2g</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Please buy me a Pizza</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/maschhoff</DonateLink>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openhab2/conf/</HostDir>
+      <ContainerDir>/openhab/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openhab2/userdata/</HostDir>
+      <ContainerDir>/openhab/userdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Path 1" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
+  <Config Name="Host Path 2" Target="/openhab/conf" Default="/mnt/user/appdata/openhab/conf/" Mode="rw" Description="Container Path: /openhab/conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openhab2/conf/</Config>
+  <Config Name="Host Path 3" Target="/openhab/userdata" Default="/mnt/user/appdata/openhab/userdata/" Mode="rw" Description="Container Path: /openhab/userdata" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openhab2/userdata/</Config>
+  <Date>1551347810</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>openHAB - a vendor and technology agnostic open source automation software for your home.&#13;
+&#13;
+For sample rules etc. have a look at https://github.com/maschhoff/OpenHAB</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-openhab.xml</templatePath>
+</Container>

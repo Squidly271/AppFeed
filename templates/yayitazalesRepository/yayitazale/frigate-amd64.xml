@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>frigate</Name>
+  <Repository>blakeblackshear/frigate:stable-amd64</Repository>
+  <Registry>https://hub.docker.com/r/blakeblackshear/frigate/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/98064-support-blakeblackshear-frigate/</Support>
+  <Project>https://github.com/blakeblackshear/frigate</Project>
+  <Overview>[b]NVR With Realtime Object Detection for IP Cameras[/b]&#13;
+&#13;
+Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT.&#13;
+&#13;
+Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
+&#13;
+    *Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&#13;
+    *Uses a very low overhead motion detection to determine where to run object detection&#13;
+    *Object detection with Tensorflow runs in a separate process&#13;
+    *Object info is published over MQTT for integration into HomeAssistant as a binary sensor&#13;
+    *An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously&#13;
+&#13;
+[span style='color: red;'][b]Note:[/b][/span] A config.yml file [b]must exist[/b] in the config directory. See example [a href="https://github.com/blakeblackshear/frigate/blob/master/config/config.example.yml"]here[/a] and device specific info can be found [a href="https://github.com/blakeblackshear/frigate/blob/master/docs/DEVICES.md"]here[/a]. See the documentation for more details.&#13;
+&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/yayitazale/unraid-templates/main/yayitazale/frigate-amd64.xml</TemplateURL>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png</Icon>
+  <ExtraParams>--shm-size=512m</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/frigate</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>'password'</Value>
+      <Name>FRIGATE_RTSP_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Edge Coral TPU USB" Target="" Default="" Mode="" Description="/dev/bus/usb" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
+  <Config Name="Path con config" Target="/config" Default="" Mode="rw" Description="/mnt/user/appdata/frigate" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/frigate</Config>
+  <Config Name="Localtime" Target="/etc/localtime" Default="" Mode="rw" Description="/etc/localtime" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
+  <Config Name="HTTP port" Target="5000" Default="" Mode="tcp" Description="5000" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="Frigate RTSP Password" Target="FRIGATE_RTSP_PASSWORD" Default="" Mode="" Description="Container Variable: FRIGATE_RTSP_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">'password'</Config>
+  <Date>1603265522</Date>
+  <Category>HomeAutomation: Security:</Category>
+  <Description>NVR With Realtime Object Detection for IP Cameras&#13;
+&#13;
+Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT.&#13;
+&#13;
+Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
+&#13;
+    *Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&#13;
+    *Uses a very low overhead motion detection to determine where to run object detection&#13;
+    *Object detection with Tensorflow runs in a separate process&#13;
+    *Object info is published over MQTT for integration into HomeAssistant as a binary sensor&#13;
+    *An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/yayitazalesRepository/yayitazale/frigate-amd64.xml</templatePath>
+</Container>

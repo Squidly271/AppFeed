@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/Cloudflare-DDNS.xml</TemplateURL>
+  <Date>1547355600</Date>
+  <Name>Cloudflare-DDNS</Name>
+  <Project>https://github.com/juusujanar/cloudflare-ddns</Project>
+  <Overview>
+    Bash script running as cronjob in Docker to update CloudFlare DNS records.
+  </Overview>
+  <Registry>https://cloud.docker.com/repository/docker/janarj/cloudflare-ddns</Registry>
+  <GitHub>https://github.com/juusujanar/cloudflare-ddns</GitHub>
+  <Repository>janarj/cloudflare-ddns:1.1</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking></Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment>
+    <Variable>
+      <Name>ZONE_IDENTIFIER</Name>
+    </Variable>
+    <Variable>
+      <Name>DNS_RECORD</Name>
+    </Variable>
+    <Variable>
+      <Name>AUTH_EMAIL</Name>
+    </Variable>
+    <Variable>
+      <Name>AUTH_TOKEN</Name>
+    </Variable>
+    <Variable>
+      <Name>DOMAIN</Name>
+    </Variable>
+    <Variable>
+      <Name>PROXIED</Name>
+    </Variable>
+    <Variable>
+      <Name>IPv6</Name>
+    </Variable>
+    <Variable>
+      <Name>IPv6_DNS_RECORD</Name>
+    </Variable>
+  </Environment>
+  <Config Name="ZONE_IDENTIFIER" Target="ZONE_IDENTIFIER" Default="" Mode="" Description="Container Variable: ZONE_IDENTIFIER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DNS_RECORD" Target="DNS_RECORD" Default="" Mode="" Description="Container Variable: DNS_RECORD" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AUTH_EMAIL" Target="AUTH_EMAIL" Default="" Mode="" Description="Container Variable: AUTH_EMAIL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AUTH_TOKEN" Target="AUTH_TOKEN" Default="" Mode="" Description="Container Variable: AUTH_TOKEN" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DOMAIN" Target="DOMAIN" Default="" Mode="" Description="Container Variable: DOMAIN" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PROXIED" Target="PROXIED" Default="" Mode="" Description="Container Variable: PROXIED" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="IPv6" Target="IPv6" Default="" Mode="" Description="Container Variable: IPv6" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="IPv6_DNS_RECORD" Target="IPv6_DNS_RECORD" Default="" Mode="" Description="Container Variable: IPv6_DNS_RECORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Data></Data>
+  <WebUI></WebUI>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>Bash script running as cronjob in Docker to update CloudFlare DNS records.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jj9987sRepository/Cloudflare-DDNS.xml</templatePath>
+</Container>

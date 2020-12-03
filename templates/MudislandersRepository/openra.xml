@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenRA</Name>
+  <Repository>rmoriz/openra</Repository>
+  <Registry>https://hub.docker.com/r/rmoriz/openra</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/71751-support-mudislander-openra-server/</Support>
+  <Project>http://openra.net/</Project>
+  <Overview>Mudislanders Template for mounting OpenRA's dedicated server by rmoriz [br][br]&#13;
+OpenRA is a project that recreates and modernizes the classic Command &amp;amp; Conquer real time strategy games. We have developed a flexible open source game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games (the OpenRA mods). </Overview>
+  <Date>1526702400</Date>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Mudislander/docker-templates/master/openra.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Mudislander/docker-templates/master/img/openra.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer></MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1234</HostPort>
+        <ContainerPort>1234</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>1234</Value>
+      <Name>ListenPort</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1234</Value>
+      <Name>ExternalPort</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ra</Value>
+      <Name>Mod</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>DEDICATED SERVER</Value>
+      <Name>Name</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Ban</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Have Fun!!</Value>
+      <Name>MOTD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Password</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>MAP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>True</Value>
+      <Name>AdvertiseOnline</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>EnableSingleplayer</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Server Port" Target="1234" Default="1234" Mode="tcp" Description="Port that server listens on" Type="Port" Display="always" Required="true" Mask="false">1234</Config>
+  <Config Name="ListenPort" Target="ListenPort" Default="1234" Mode="" Description="ListenPort for multiple servers " Type="Variable" Display="always" Required="true" Mask="false">1234</Config>
+  <Config Name="ExternalPort" Target="ExternalPort" Default="1234" Mode="" Description="ExternalPort for multiple servers" Type="Variable" Display="always" Required="true" Mask="false">1234</Config>
+  <Config Name="Server Mod" Target="Mod" Default="ra" Mode="" Description="Game the server runs eg:- 'cnc', 'ra' or 'd2k'" Type="Variable" Display="always" Required="true" Mask="false">ra</Config>
+  <Config Name="Server Name" Target="Name" Default="DEDICATED SERVER" Mode="" Description="Name of server to advertise" Type="Variable" Display="always" Required="true" Mask="false">DEDICATED SERVER</Config>
+  <Config Name="Ban IP Adresses" Target="Ban" Default="" Mode="" Description="Comma delimited list of banned IP addresses" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Message of the day" Target="MOTD" Default="Have Fun!!" Mode="" Description="Message shown to users on joining game" Type="Variable" Display="advanced" Required="false" Mask="false">Have Fun!!</Config>
+  <Config Name="Server Password" Target="Password" Default="" Mode="" Description="Password needed by users to join server" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="Selected Startup Map" Target="MAP" Default="" Mode="" Description="Hash ID of selected startup map" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Advertise Online" Target="AdvertiseOnline" Default="True" Mode="" Description="Advertise server on openRA public servers" Type="Variable" Display="advanced" Required="false" Mask="false">True</Config>
+  <Config Name="Enable Single Player" Target="EnableSingleplayer" Default="False" Mode="" Description="Enable single players on server" Type="Variable" Display="advanced" Required="false" Mask="false">False</Config>
+  <Category>Network:Other</Category>
+  <Description>Mudislanders Template for mounting OpenRA's dedicated server by rmoriz &#13;
+OpenRA is a project that recreates and modernizes the classic Command &amp;amp; Conquer real time strategy games. We have developed a flexible open source game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games (the OpenRA mods).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MudislandersRepository/openra.xml</templatePath>
+</Container>

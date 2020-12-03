@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Firefly-III</Name>
+  <Repository>jc5x/firefly-iii:latest</Repository>
+  <Registry>https://hub.docker.com/r/jc5x/firefly-iii</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://firefly-iii.org/</Project>
+  <Overview>"Firefly III" is a self-hosted financial manager. It can help you keep track of expenses, income, budgets and everything in between. It supports credit cards, shared household accounts and savings accounts. It’s pretty fancy. You should use it to save and organise money.</Overview>
+  <WebUI>http://[IP]:[PORT:5080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MstrDC/docker-templates/master/firefly-iii.xml</TemplateURL>
+  <Icon>https://camo.githubusercontent.com/729d179402476b1dd9de4ec9f5fa5910e6bf56aa/68747470733a2f2f66697265666c792d6969692e6f72672f7374617469632f696d672f6c6f676f2d736d616c6c2d6e65772e706e67</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like Firefly and if it helps you save lots of money, why not send me a dime for every dollar saved. This is a joke, although the Paypal form works just fine, try it!</DonateText>
+  <DonateLInk>https://firefly-iii.org/about-general.html</DonateLInk>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+        <Description>When updating this value, also update the WebUI value via advanced view.</Description>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/firefly-iii/export/</HostDir>
+      <ContainerDir>/var/www/firefly-iii/storage/export</ContainerDir>
+      <Mode>rw</Mode>
+      <Description>Where firefly stores the file from a report that is exported.</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/firefly-iii/upload/</HostDir>
+      <ContainerDir>/var/www/firefly-iii/storage/upload</ContainerDir>
+      <Mode>rw</Mode>
+      <Description>Where firefly stores the uploaded files that are used for bulk importing data.</Description>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/mnt/user/appdata/firefly-iii/</Value>
+      <Name>FIREFLY_PATH</Name>
+      <Key>FIREFLY_PATH</Key>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>S0m3R@nd0mString0f32Ch@rsEx@ct1y</Value>
+      <Name>APP_KEY</Name>
+      <Key>APP_KEY</Key>
+      <Description>CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>mysql</Value>
+      <Name>DB_CONNECTION</Name>
+      <Key>DB_CONNECTION</Key>
+      <Description>mysql or empty when using PostgreSQL</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DB_HOST</Name>
+      <Key>DB_HOST</Key>
+      <Description>Database_IP: 192.168.1.12</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3406</Value>
+      <Name>DB_PORT</Name>
+      <key>DB_PORT</key>
+      <Description>Database port: 3406</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>fireflydb</Value>
+      <Name>DB_DATABASE</Name>
+      <key>DB_DATABASE</key>
+      <Description>Name of the database where firefly can store its data</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>firefly</Value>
+      <Name>DB_USERNAME</Name>
+      <Key>DB_USERNAME</Key>
+      <Description>Username that is allowed to connect and edit the firefly database</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>firefly</Value>
+      <Name>DB_PASSWORD</Name>
+      <Key>DB_PASSWORD</Key>
+      <Description>Password for the DB_USER</Description>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>stdout</Value>
+      <Name>LOG_CHANNEL</Name>
+      <Key>LOG_CHANNEL</Key>
+      <Description>Required when using MariaDB</Description>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host path 1" Target="/var/www/firefly-iii/storage/export" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Where firefly stores the file from a report that is exported." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/firefly-iii/export/</Config>
+  <Config Name="Host Path 2" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Where firefly stores the uploaded files that are used for bulk importing data." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/upload/</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80 - When updating this value, also update the WebUI value via advanced view." Type="Port" Display="always" Required="false" Mask="false">5080</Config>
+  <Config Name="FIREFLY_PATH" Target="FIREFLY_PATH" Default="" Mode="" Description="Container Variable: FIREFLY_PATH" Type="Variable" Display="always" Required="false" Mask="false">/mnt/user/appdata/firefly-iii/</Config>
+  <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY - CHANGE! Random value of exactly 32 characters. Used to encrypt the database. Cannot be changed later on. Make sure you dont lose the key!" Type="Variable" Display="always" Required="false" Mask="false">S0m3R@nd0mString0f32Ch@rsEx@ct1y</Config>
+  <Config Name="DB_CONNECTION" Target="DB_CONNECTION" Default="" Mode="" Description="Container Variable: DB_CONNECTION - mysql or empty when using PostgreSQL" Type="Variable" Display="always" Required="false" Mask="false">mysql</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST - Database_IP:192.168.1.12" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_PORT" Target="DB_PORT" Default="" Mode="" Description="Container Variable: DB_PORT - Database_PORT: 3306" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DB_DATABASE" Target="DB_DATABASE" Default="" Mode="" Description="Container Variable: DB_DATABASE - Name of the database where firefly can store its data" Type="Variable" Display="always" Required="false" Mask="false">fireflydb</Config>
+  <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="Container Variable: DB_USERNAME - Username that is allowed to connect and edit the firefly database" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="Container Variable: DB_PASSWORD - Password for the DB_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">firefly</Config>
+  <Config Name="LOG_CHANNEL" Target="LOG_CHANNEL" Default="" Mode="" Description="Container Variable: LOG_CHANNEL - Required when using MariaDB" Type="Variable" Display="always" Required="false" Mask="false">stdout</Config>
+  <Date>1559311988</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>"Firefly III" is a self-hosted financial manager. It can help you keep track of expenses, income, budgets and everything in between. It supports credit cards, shared household accounts and savings accounts. It’s pretty fancy. You should use it to save and organise money.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/_DC_sRepository/firefly-iii.xml</templatePath>
+</Container>

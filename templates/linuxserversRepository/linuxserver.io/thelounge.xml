@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/thelounge.xml</TemplateURL>
+  <Date>1472616000</Date>
+  <Name>thelounge</Name>
+  <Support>https://forums.unraid.net/topic/49785-support-linuxserverio-the-lounge/</Support>
+  <Project>https://thelounge.github.io/</Project>
+  <Overview>A self-hosted web IRC client</Overview>
+  <Registry>https://hub.docker.com/r/linuxserver/thelounge/</Registry>
+  <Repository>linuxserver/thelounge</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:9000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/community-templates/master/lsiocommunity/img/shout-icon.png</Icon>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://www.linuxserver.io/donate</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
+  <BaseImage>lsiobase/alpine</BaseImage>
+  <Category>Network:Messenger</Category>
+  <Description>A self-hosted web IRC client</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/linuxserversRepository/linuxserver.io/thelounge.xml</templatePath>
+</Container>

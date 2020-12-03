@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>upstatsboard</Name>
+  <Registry>https://registry.hub.docker.com/r/smdion/docker-upstatsboard/</Registry>
+  <Repository>smdion/docker-upstatsboard</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8024</HostPort>
+        <ContainerPort>8024</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/UpsBoard-0.2.1/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://i.imgur.com/SYSG8tJ.png</Icon>
+  <Support>http://lime-technology.com/forum/index.php?topic=34009.0</Support>
+  <TemplateURL>https://raw.githubusercontent.com/smdion/docker-containers/templates/smdion-repo/UpStatsBoard.xml</TemplateURL>
+  <Overview>
+     UpsBoard allows you to monitor your Usenet services: SABnzbd, Sick Beard, CouchPotato, Plex, and your system: CPU Usage, Memory Usage, Bandwidth Usage, and Disk Space Usage[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/opt/UpsBoard-0.2.1/logs[/b] : chose location to output log files to[br]
+    [b]/config[/b] : this path is used to store the configuration file of UpStatBoard.[br]
+  </Overview>
+  <Category>Network:Management Network:Other</Category>
+  <Description>UpsBoard allows you to monitor your Usenet services: SABnzbd, Sick Beard, CouchPotato, Plex, and your system: CPU Usage, Memory Usage, Bandwidth Usage, and Disk Space Usage</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/smdionsRepository/smdion-repo/UpStatsBoard.xml</templatePath>
+</Container>

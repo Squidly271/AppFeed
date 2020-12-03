@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>S3Backup</Name>
+  <Overview>
+    A simple way to backup important files to Amazon S3 and Glacier.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=43481.0</Support>
+  <Registry>https://registry.hub.docker.com/r/joch/s3backup/</Registry>
+  <GitHub>https://github.com/joch/docker-s3backup</GitHub>
+  <Repository>joch/s3backup</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ACCESS_KEY</Name>
+      <Value>Your AWS Access key</Value>
+    </Variable>
+    <Variable>
+      <Name>SECRET_KEY</Name>
+      <Value>Your AWS Access secret</Value>
+    </Variable>
+    <Variable>
+      <Name>S3PATH</Name>
+      <Value>s3://mybucket/</Value>
+    </Variable>
+    <Variable>
+      <Name>S3CMDPARAMS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>CRON_SCHEDULE</Name>
+      <Value>0 * * * *</Value>
+    </Variable>
+  </Environment>
+  <Data>
+  </Data>
+  <Icon>https://i.imgur.com/NqyrUIy.png</Icon>
+  <Date>1445486400</Date>
+  <TemplateURL>https://raw.githubusercontent.com/joch/unraid-docker-templates/master/joch/s3backup.xml</TemplateURL>
+  <Category>Backup: Cloud:</Category>
+  <Description>A simple way to backup important files to Amazon S3 and Glacier.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jochsRepository/joch/s3backup.xml</templatePath>
+</Container>

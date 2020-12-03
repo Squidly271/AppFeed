@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenProject</Name>
+  <Repository>openproject/community:10</Repository>
+  <Registry>https://hub.docker.com/u/openproject</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/88699-support-knex666-openproject/</Support>
+  <Project>http://openproject.org</Project>
+  <Overview>OpenProject is a web-based project management system for location-independent team collaboration.</Overview>
+  <WebUI>http://[IP]:8080</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-OpenProject.xml</TemplateURL>
+  <Icon>https://avatars2.githubusercontent.com/u/1756674?s=400&amp;amp;v=4</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Please buy me a Pizza</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/maschhoff</DonateLink>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openproject/pgdata</HostDir>
+      <ContainerDir>/var/openproject/pgdata</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openproject/assets</HostDir>
+      <ContainerDir>/var/openproject/assets</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>secret</Value>
+      <Name>SECRET_KEY_BASE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Key 1" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Container Variable: SECRET_KEY_BASE" Type="Variable" Display="always" Required="false" Mask="false">secret</Config>
+  <Config Name="Host Path 1" Target="/var/openproject/pgdata" Default="" Mode="rw" Description="Container Path: /var/openproject/pgdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/openproject/pgdata</Config>
+  <Config Name="Host Path 2" Target="/var/openproject/assets" Default="" Mode="rw" Description="Container Path: /var/openproject/assets" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/openproject/assets</Config>
+  <Date>1581836166</Date>
+  <Category>Productivity:</Category>
+  <Description>OpenProject is a web-based project management system for location-independent team collaboration.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-OpenProject.xml</templatePath>
+</Container>

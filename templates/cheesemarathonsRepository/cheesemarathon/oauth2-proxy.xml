@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OAuth2-Proxy</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.&#13;
+&#13;
+Please visit support thread for install / setup instructions</Overview>
+  <Support>https://lime-technology.com/forums/topic/54183-support-cheesemarathons-repo/</Support>
+  <Registry>https://quay.io/repository/pusher/oauth2_proxy</Registry>
+  <GitHub>https://github.com/pusher/oauth2_proxy</GitHub>
+  <Repository>quay.io/oauth2-proxy/oauth2-proxy</Repository>
+  <PostArgs>--config=/etc/oauth2/oauth2_proxy.cfg</PostArgs>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4180</HostPort>
+        <ContainerPort>4180</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment></Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/oauth2/</HostDir>
+      <ContainerDir>/etc/oauth2/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Config Name="HTTP PORT" Target="4180" Default="" Mode="tcp" Description="Container Port: 4180" Type="Port" Display="always" Required="true" Mask="false">4180</Config>
+  <Config Name="Host Path 1" Target="/etc/oauth2/" Default="" Mode="rw" Description="Container Path: /etc/oauth2/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/oauth2/</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/oauth2-proxy.xml</TemplateURL>
+  <Category>Tools:Utilities Network:Proxy Network:Other</Category>
+  <Description>A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.&#13;
+&#13;
+Please visit support thread for install / setup instructions</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/oauth2-proxy.xml</templatePath>
+</Container>

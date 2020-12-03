@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>xteve</Name>
+  <Repository>alturismo/xteve</Repository>
+  <Registry>https://hub.docker.com/r/alturismo/xteve</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/81786-support-alturismo-repos/</Support>
+  <Project>https://github.com/alturismo/xteve</Project>
+  <Overview>xteve, in docker with cronjobs&#13;
+&#13;
+docker runs in host mode &#13;
+access xteve webui ip:34400/web/&#13;
+&#13;
+after docker start check your config folder and do your setups, setup is persistent, start from scratch by delete them&#13;
+&#13;
+cron and xteve start options are updated on docker restart.</Overview>
+  <WebUI>http://[IP]:[PORT:34400]/web/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/alturismo/unraid_templates/master/my-xteve.xml</TemplateURL>
+  <Icon>https://avatars0.githubusercontent.com/u/53275662?s=460&amp;amp;v=4</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve/</HostDir>
+      <ContainerDir>/root/.xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xteve/config/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/tmp/xteve</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/TVH</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="/xteve" Target="/root/.xteve" Default="" Mode="rw" Description="Container Path: /root/.xteve" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/xteve/</Config>
+  <Config Name="/config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/xteve/config/</Config>
+  <Config Name="/tmp" Target="/tmp/xteve" Default="" Mode="rw" Description="/tmp/xteve&#13;&#10;in case u want to move /tmp to RAM on host&#13;&#10;buffer, ..." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="/TVH" Target="/TVH" Default="" Mode="rw" Description="/mnt/user/appdata/tvheadend/data/&#13;&#10;in case TVHeadend functions are used to move" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Beta>true</Beta>
+  <Date>1563973407</Date>
+  <Category>MediaApp:Other Network:Proxy Status:Beta</Category>
+  <Description>xteve, in docker with cronjobs&#13;
+&#13;
+docker runs in host mode &#13;
+access xteve webui ip:34400/web/&#13;
+&#13;
+after docker start check your config folder and do your setups, setup is persistent, start from scratch by delete them&#13;
+&#13;
+cron and xteve start options are updated on docker restart.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/alturismosRepository/my-xteve.xml</templatePath>
+</Container>

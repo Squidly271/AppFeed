@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>splunk</Name>
+  <Repository>zyphermonkey/splunk</Repository>
+  <Registry>https://hub.docker.com/r/zyphermonkey/splunk/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview>    [h3]Splunk[/h3] Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations. Try it as your remote syslog server![br][br]&#13;
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]&#13;
+    [b]/opt/splunk/var[/b] : this path is where Splunk will store it's configuration files and databases.[br]&#13;
+    [b]/data[/b] : if mapped, this path can be added to Splunk to monitor the host (i.e. /var/log).[br]&#13;
+    [b]/dockervarlib[/b] : if mapped, this path can be added to Splunk to monitor all unRAID docker log files. ([i]Further configuration inside Splunk needed.[/i])[br]&#13;
+    [b]/license[/b] : if mapped, this path should hold the license file if wanting to use Splunk Enterprise. ([i]./splunk add licenses /license/&amp;amp;lt;name&amp;amp;gt;.lic[/i])[br]&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/zyphermonkey/docker-templates/master/splunk/splunk.xml</TemplateURL>
+  <Icon>https://i.imgur.com/KKoQMo6.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer></MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8089</HostPort>
+        <ContainerPort>8089</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9997</HostPort>
+        <ContainerPort>9997</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>514</HostPort>
+        <ContainerPort>514</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8088</HostPort>
+        <ContainerPort>8088</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunk/var</HostDir>
+      <ContainerDir>/opt/splunk/var</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunk/etc</HostDir>
+      <ContainerDir>/opt/splunk/etc</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/log</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/splunk/</HostDir>
+      <ContainerDir>/license</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Docker/appdata</HostDir>
+      <ContainerDir>/dockerlogs</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/lib/docker</HostDir>
+      <ContainerDir>/dockervarlib</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000&#13;&#10;Webui" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="Host Port 2" Target="8089" Default="8089" Mode="tcp" Description="Container Port: 8089&#13;&#10;Forwarder -&amp;gt; Deployment Server" Type="Port" Display="always" Required="true" Mask="false">8089</Config>
+  <Config Name="Host Port 3" Target="9997" Default="9997" Mode="tcp" Description="Container Port: 9997&#13;&#10;Forwarder -&amp;gt; Indexer" Type="Port" Display="always" Required="true" Mask="false">9997</Config>
+  <Config Name="Host Port 4" Target="514" Default="514" Mode="udp" Description="Container Port: 514&#13;&#10;syslog -&amp;gt; Indexer" Type="Port" Display="always" Required="true" Mask="false">514</Config>
+  <Config Name="Host Port 5" Target="8088" Default="8088" Mode="tcp" Description="Container Port: 8088 -&amp;gt;HTTP Event Collector" Type="Port" Display="always" Required="false" Mask="false">8088</Config>
+  <Config Name="Host Path 1" Target="/opt/splunk/var" Default="/mnt/user/appdata/splunk/var" Mode="rw" Description="Container Path: /opt/splunk/var" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/splunk/var</Config>
+  <Config Name="Host Path 2" Target="/opt/splunk/etc" Default="/mnt/user/appdata/splunk/etc" Mode="rw" Description="Container Path: /opt/splunk/etc" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/splunk/etc</Config>
+  <Config Name="Data" Target="/data" Default="/var/log" Mode="ro" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/var/log</Config>
+  <Config Name="License" Target="/license" Default="" Mode="ro" Description="Container Path: /license" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/splunk/</Config>
+  <Config Name="Docker Logs" Target="/dockervarlib" Default="/var/lib/docker" Mode="ro" Description="Container Path: /dockervarlib" Type="Path" Display="advanced" Required="false" Mask="false">/var/lib/docker</Config>
+  <Date>1534902255</Date>
+  <Category>Tools:Utilities Network:Management</Category>
+  <Description>Splunk Splunk captures, indexes, and correlates real-time data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations. Try it as your remote syslog server!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/zyphermonkeysRepository/splunk/splunk.xml</templatePath>
+</Container>

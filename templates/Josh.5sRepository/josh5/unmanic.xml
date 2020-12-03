@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>unmanic</Name>
+  <Repository>josh5/unmanic</Repository>
+  <Registry>https://hub.docker.com/r/josh5/unmanic/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/76878-support-josh5-unmanic-library-optimiser/</Support>
+  <Project>https://github.com/Josh5/unmanic</Project>
+  <Overview>
+        [br]Unmanic is a simple tool for optimising your video library to a single format.
+        [br]Remove the complexity of automatically converting your media library.
+        [br]Simply point Unmanic at your library and let it manage it for you.
+        [br]
+        [br][b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b]
+        [br] 1) Install the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed.
+        [br] 2) Toggle this Docker Container template editor to [b]"Advanced View"[/b].
+        [br] 3) In the [b]"Extra Parameters"[/b] field, add "[b]--runtime=nvidia[/b]".
+        [br] 4) Expand the template "Show more settings..." section.
+        [br] 5) In the [b]"NVIDIA_VISIBLE_DEVICES"[/b] variable, copy your [b]GPU UUID[/b] (can be found in the Unraid Nvidia Plugin)
+        [br]
+        [br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b]
+        [br] 1) Edit your [b]go[/b] file to include: "[b]modprobe i915[/b]".
+        [br] 2) Save and reboot Unraid.
+        [br] 3) Toggle this Docker Container template editor to [b]"Advanced View"[/b].
+        [br] 4) In the [b]"Extra Parameters"[/b] field, add "[b]--device=/dev/dri[/b]".
+        [br]
+    </Overview>
+  <WebUI>http://[IP]:[PORT:8888]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Josh5/unraid-docker-templates/master/josh5/unmanic.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Josh5/unmanic/master/icon.png</Icon>
+  <Config Name="WebUI" Target="8888" Default="8888" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/unmanic" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Library Movies" Target="/library/movies" Default="/mnt/user/Media/Movies" Mode="rw" Description="Container Path: /library/movies" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Library TV" Target="/library/tv" Default="/mnt/user/Media/TV" Mode="rw" Description="Container Path: /library/tv" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Encoding Cache Directory" Target="/tmp/unmanic" Default="" Mode="rw" Description="Container Path: /tmp/unmanic" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Nvidia GPU UUID" Target="NVIDIA_VISIBLE_DEVICES" Default="false" Mode="" Description="Container Variable: NVIDIA_VISIBLE_DEVICES  (Required only for Nvidia GPU hardware accelerated encoding)" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Beta>true</Beta>
+  <Category>Productivity: Status:Beta</Category>
+  <Description>Unmanic is a simple tool for optimising your video library to a single format.
+        Remove the complexity of automatically converting your media library.
+        Simply point Unmanic at your library and let it manage it for you.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Josh.5sRepository/josh5/unmanic.xml</templatePath>
+</Container>

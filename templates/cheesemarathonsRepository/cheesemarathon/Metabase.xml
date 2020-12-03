@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Metabase</Name>
+  <DonateText>Buy Me a Coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <DonateImg>https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0</DonateImg>
+  <Overview>Simple access to Metabase through a Docker container. Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=55931.0</Support>
+  <Registry>https://hub.docker.com/r/metabase/metabase/</Registry>
+  <GitHub>https://github.com/metabase/metabase</GitHub>
+  <Repository>metabase/metabase</Repository>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>/tmp/metabase.db</Value>
+      <Name>MB_DB_FILE</Name>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Metabase</HostDir>
+      <ContainerDir>/tmp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/MetabaseLogo.png</Icon>
+  <Config Name="Web UI Port" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Key 1" Target="MB_DB_FILE" Default="/tmp/metabase.db" Mode="" Description="allow external db host" Type="Variable" Display="advanced" Required="true" Mask="false">/tmp/metabase.db</Config>
+  <Config Name="Config Path" Target="/tmp" Default="/mnt/user/appdata/Metabase" Mode="rw" Description="Container Path: /tmp" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/Metabase</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/Metabase.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>Simple access to Metabase through a Docker container. Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/Metabase.xml</templatePath>
+</Container>

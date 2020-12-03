@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>RDP-Calibre</Name>
+  <Overview>
+    Calibre is an e-book management software. RDP-Calibre is a combo docker for calibre web server and gui (through webRDP). With this docker, you get the best of both worlds, and they both use the same database.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-rdp-calibre</Registry>
+  <GitHub>https://github.com/aptalca/docker-rdp-calibre</GitHub>
+  <Repository>aptalca/docker-rdp-calibre</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>EDGE</Name>
+      <Value>0</Value>
+    </Variable>
+    <Variable>
+      <Name>WIDTH</Name>
+      <Value>1280</Value>
+    </Variable>
+    <Variable>
+      <Name>HEIGHT</Name>
+      <Value>720</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/#/client/c/Calibre</WebUI>
+  <Icon>https://calibre-ebook.com/favicon.ico</Icon>
+  <Date>1498276800</Date>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/rdp-calibre.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Category>MediaApp:Books MediaServer:Books</Category>
+  <Description>Calibre is an e-book management software. RDP-Calibre is a combo docker for calibre web server and gui (through webRDP). With this docker, you get the best of both worlds, and they both use the same database.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/rdp-calibre.xml</templatePath>
+</Container>

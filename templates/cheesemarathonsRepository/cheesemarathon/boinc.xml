@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Boinc</Name>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://ko-fi.com/I2I0CW9G</DonateLink>
+  <Overview>BOINC lets you help cutting-edge science research using your computer (Windows, Mac, Linux) or Android device. BOINC downloads scientific computing jobs to your computer and runs them invisibly in the background. It's easy and safe.&#13;
+&#13;
+You can attach a BOINC Manager to the client by launching the BOINC Manager, going to View &amp;gt; Advanced View and then, File &amp;gt; Select computer..., and entering the IP address of your unRAID machine, as well as the password you set with BOINC_GUI_RPC_PASSWORD.&#13;
+&#13;
+The client can also be controlled from the command line via the boinccmd command.&#13;
+docker exec boinc boinccmd &amp;lt;args&amp;gt;
+    </Overview>
+  <Support>https://forums.unraid.net/topic/89740-help-take-the-fight-to-covid-19-with-boinc-and-foldinghome/</Support>
+  <Registry>https://hub.docker.com/r/boinc/client</Registry>
+  <Project>https://boinc.berkeley.edu/</Project>
+  <Repository>boinc/client</Repository>
+  <Network>host</Network>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/boinc</HostDir>
+      <ContainerDir>/var/lib/boinc</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>BOINC_GUI_RPC_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>--allow_remote_gui_rpc</Value>
+      <Name>BOINC_CMD_LINE_OPTIONS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/boinc.png</Icon>
+  <Config Name="App Data" Target="/var/lib/boinc" Default="/mnt/user/appdata/boinc" Mode="rw" Description="Container Path: /var/lib/boinc" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/boinc</Config>
+  <Config Name="BOINC_GUI_RPC_PASSWORD" Target="BOINC_GUI_RPC_PASSWORD" Default="" Mode="" Description="Container Variable: BOINC_GUI_RPC_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="BOINC_CMD_LINE_OPTIONS" Target="BOINC_CMD_LINE_OPTIONS" Default="" Mode="" Description="Container Variable: BOINC_CMD_LINE_OPTIONS" Type="Variable" Display="always" Required="true" Mask="false">--allow_remote_gui_rpc</Config>
+  <TemplateURL>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/cheesemarathon/boinc.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>BOINC lets you help cutting-edge science research using your computer (Windows, Mac, Linux) or Android device. BOINC downloads scientific computing jobs to your computer and runs them invisibly in the background. It's easy and safe.&#13;
+&#13;
+You can attach a BOINC Manager to the client by launching the BOINC Manager, going to View &gt; Advanced View and then, File &gt; Select computer..., and entering the IP address of your unRAID machine, as well as the password you set with BOINC_GUI_RPC_PASSWORD.&#13;
+&#13;
+The client can also be controlled from the command line via the boinccmd command.&#13;
+docker exec boinc boinccmd</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/boinc.xml</templatePath>
+</Container>

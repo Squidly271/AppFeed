@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>OpenVPN-AS</Name>
+  <Support>http://lime-technology.com/forum/index.php?topic=40630.0</Support>
+  <Registry>https://registry.hub.docker.com/r/mace/openvpn-as/</Registry>
+  <GitHub>https://github.com/macexx/openvpn-as</GitHub>
+  <Repository>mace/openvpn-as</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Value>eth0</Value>
+      <Name>INTERFACE</Name>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol></Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>path to config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>https://[IP]:[PORT:943]/admin</WebUI>
+  <Icon>https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4e25af68-477c-491e-ba31-1495532a11e2/d5r1nls-8710d252-572f-4ae6-aa95-f722a8716555.png/v1/fill/w_256,h_256,q_75,strp/openvpn_icon_by_archeinre-d5r1nls.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvaS80ZTI1YWY2OC00NzdjLTQ5MWUtYmEzMS0xNDk1NTMyYTExZTIvZDVyMW5scy04NzEwZDI1Mi01NzJmLTRhZTYtYWE5NS1mNzIyYTg3MTY1NTUucG5nIiwid2lkdGgiOiI8PTI1NiIsImhlaWdodCI6Ijw9MjU2In1dXX0.lUmaMay9oRtXxhur8QBuy7PisgD8UVmNWRiKCugf2BE</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/macexx/docker-templates/master/macexx/openvpn-as.xml</TemplateURL>
+  <Deprecated>true</Deprecated>
+  <Overview>
+    OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI,[br]
+        and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments. OpenVPN Access Server supports a wide range of configurations,[br]
+        including secure and granular remote access to internal network and/ or private cloud network resources and applications with fine-grained access control.[br]
+        This version includes two free user licenses.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/usr/local/openvpn_as[/b] This is where OpenVPN will store it´s configuration and data[br]
+    [br]
+    [b][span style='color: #E80000;']Notes[/span][/b][br]
+    [u]Environment Variables[/u][br]
+    Define a variable if there is any need to change listening interface(default is eth0),[br]
+        Click the Advanced view in the top right corner . [br]
+		Add a variable under Environment Variables: [br]
+		Variable Name: [b]INTERFACE[/b] Variable Value: [b]br0[/b] (example values: eth1, br0, bond0)[br][br]
+    [u]Installation[/u][br]
+        Default Username: [b][span style='color: #E80000;']"admin"[/span][/b] Password: [b][span style='color: #E80000;']"openvpn"[/span] Usernames/Passwords can be changed or added in webui [/b].[br]
+    1. Go to https://your_ip/hostname:943/admin[br]
+    2. Ports 1194/udp 9443/tcp(443/tcp) needs to be forwarded and opened in your Firewall/Router. (1194/udp 9443/tcp can be changed in the WebUI)[br][br]
+        [u]Configuring OpenVPN Server[/u][br]
+        Go to https://openvpn.net/index.php/access-server/overview.html for HOWTO on setting it up.
+  </Overview>
+  <Category>Network:Other</Category>
+  <Description>OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI,
+        and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments. OpenVPN Access Server supports a wide range of configurations,
+        including secure and granular remote access to internal network and/ or private cloud network resources and applications with fine-grained access control.
+        This version includes two free user licenses.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/macestersRepository/macexx/openvpn-as.xml</templatePath>
+</Container>

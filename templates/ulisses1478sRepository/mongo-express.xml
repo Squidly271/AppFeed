@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>mongo-express</Name>
+  <Repository>ulisses1478/mongo-express</Repository>
+  <Registry>https://registry.hub.docker.com/r/ulisses1478/mongo-express</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Web-based MongoDB admin interface, written with Node.js and express.</Overview>
+  <WebUI>http://[IP]:[PORT:8081]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Ulisses1478/templates-unraid/master/mongo-express.xml</TemplateURL>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/f80f66d3-d812-48e5-8d6f-e248b25e3dce-mongo-express.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Hey buy me some coffee</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=PJNVJNW2CPE3G&amp;amp;source=url</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>ME_CONFIG_MONGODB_SERVER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>username</Value>
+      <Name>ME_CONFIG_BASICAUTH_USERNAME </Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>ME_CONFIG_BASICAUTH_PASSWORD </Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Mongo Container Name" Target="ME_CONFIG_MONGODB_SERVER" Default="" Mode="" Description="Container Variable: ME_CONFIG_MONGODB_SERVER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Port 1" Target="8081" Default="" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="USERNAME" Target="ME_CONFIG_BASICAUTH_USERNAME " Default="" Mode="" Description="Container Variable: ME_CONFIG_BASICAUTH_USERNAME " Type="Variable" Display="always" Required="false" Mask="false">username</Config>
+  <Config Name="PASSWORD" Target="ME_CONFIG_BASICAUTH_PASSWORD " Default="" Mode="" Description="Container Variable: ME_CONFIG_BASICAUTH_PASSWORD " Type="Variable" Display="always" Required="false" Mask="false">password</Config>
+  <Date>1559160393</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>Web-based MongoDB admin interface, written with Node.js and express.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ulisses1478sRepository/mongo-express.xml</templatePath>
+</Container>

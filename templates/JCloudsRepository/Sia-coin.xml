@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Sia</Name>
+  <Repository>mtlynch/sia</Repository>
+  <Registry>https://hub.docker.com/r/mtlynch/sia/</Registry>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-jcloud-cryptocoin-templates/</Support>
+  <Project>https://sia.tech/</Project>
+  <Overview>Sia is a decentralized storage platform secured by blockchain technology. The Sia Storage Platform leverages underutilized hard drive capacity around the world to create a data storage marketplace that is more reliable and lower cost than traditional cloud storage providers. [Block-chain] [BTC-Token]&#13;
+&#13;
+</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Jcloud67/Docker-Templates/master/Sia-coin.xml</TemplateURL>
+  <Icon>https://i.imgur.com/XiSQgV4.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateText>ETHERIUM accepted:  0xe09a2b205d3a76196a88505f059c78df7d7c556f</DonateText>
+  <DonateImg>https://mattvonrocketstein.github.io/heredoc/img/ethereum-icon.png</DonateImg>
+  <MinVer>6.5.1</MinVer>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Sia</HostDir>
+      <ContainerDir>/sia-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>gctwh</Value>
+      <Name>SIA_MODULES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SIA_WALLET_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Container path on host" Target="/sia-data" Default="" Mode="rw" Description="Container Path: /sia-data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Sia</Config>
+  <Config Name="Sia modules" Target="SIA_MODULES" Default="gctw" Mode="" Description="Container Variable: SIA_MODULES" Type="Variable" Display="always" Required="false" Mask="false">gctwh</Config>
+  <Config Name="Sia wallet password" Target="SIA_WALLET_PASSWORD" Default="" Mode="" Description="Container Variable: SIA_WALLET_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Date>1525560903</Date>
+  <Category>Cloud: Other:</Category>
+  <Description>Sia is a decentralized storage platform secured by blockchain technology. The Sia Storage Platform leverages underutilized hard drive capacity around the world to create a data storage marketplace that is more reliable and lower cost than traditional cloud storage providers.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JCloudsRepository/Sia-coin.xml</templatePath>
+</Container>

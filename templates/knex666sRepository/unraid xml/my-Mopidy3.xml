@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Mopidy3</Name>
+  <Repository>knex666/mopidy:3-experimental</Repository>
+  <Registry>https://hub.docker.com/r/knex666/mopidy</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/maschhoff/docker/tree/master/mopidy</Project>
+  <Overview>
+    Mopidy is an extensible music server written in Python.&#13;
+Mopidy plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients.&#13;
+&#13;
+This is Mopidy3 for unraid with support for snapcast and icecast.
+&#13;
+- set up the docker&#13;
+- set up the network to br0 with an ip&#13;
+- set up volume mount to /mnt/user/appdata/mopidy/ &amp;gt;&amp;gt; /config/
+- set up volume mount for tmp/snapfifo if you use snapcast /mnt/user/appdata/mopidy/tmp/ &amp;gt;&amp;gt; /tmp  &#13;
+- set up volume mount for your local media &#13;
+&#13;
+generate the mopidy.conf file *Doc here https://docs.mopidy.com/en/latest/config/ *example here https://github.com/maschhoff/docker/blob/master/mopidy/mopidy.conf
+
+authentication for soundcloud and spotify https://www.mopidy.com/authenticate/ *authenticate spotify https://developer.spotify.com/documentation/web-api/quick-start/
+&#13;
+use my docker icecast or snapcast for music streaming:&#13;
+ &#13;
+for audio you need a special config&#13;
+for snapcast you have to generate the audio output in a pipe file /tmp/snapfifo this is mounted in both docker container&#13;
+&#13;
+[audio]&#13;
+output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo&#13;
+&#13;
+icecast&#13;
+&#13;
+[audio]&#13;
+output = lamemp3enc ! shout2send async=false mount=mopidy ip=X.X.X.X port=8000 password=XXXXX
+</Overview>
+  <WebUI>http://[IP]:[PORT:6680]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-Mopidy3.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/maschhoff/docker/master/mopidy/mopidy.png</Icon>
+  <ExtraParams>-p 6600:6600 -p 6680:6680 -p 5555:5555/udp</ExtraParams>
+  <PostArgs>mopidy --config /config/mopidy.conf</PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Please buy me a Pizza</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/maschhoff</DonateLink>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mopidy/</HostDir>
+      <ContainerDir>/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mopidy/tmp/</HostDir>
+      <ContainerDir>/tmp/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="config" Target="/config/" Default="" Mode="rw" Description="Container Path: /config/mopidy.conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mopidy/</Config>
+  <Config Name="Host Path 2" Target="/tmp/" Default="" Mode="rw" Description="Container Path: /tmp/snapfifo" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mopidy/tmp/</Config>
+  <Config Name="Host Path 3" Target="/media" Default="" Mode="rw" Description="Container Path: /media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/Musik/</Config>
+  <Date>1579464666</Date>
+  <Category>Other: MediaApp:Music MediaServer:Music</Category>
+  <Description>Mopidy is an extensible music server written in Python.&#13;
+Mopidy plays music from local disk, Spotify, SoundCloud, Google Play Music, and more. You edit the playlist from any phone, tablet, or computer using a range of MPD and web clients.&#13;
+&#13;
+This is Mopidy3 for unraid with support for snapcast and icecast.
+&#13;
+- set up the docker&#13;
+- set up the network to br0 with an ip&#13;
+- set up volume mount to /mnt/user/appdata/mopidy/ &gt;&gt; /config/
+- set up volume mount for tmp/snapfifo if you use snapcast /mnt/user/appdata/mopidy/tmp/ &gt;&gt; /tmp  &#13;
+- set up volume mount for your local media &#13;
+&#13;
+generate the mopidy.conf file *Doc here https://docs.mopidy.com/en/latest/config/ *example here https://github.com/maschhoff/docker/blob/master/mopidy/mopidy.conf
+
+authentication for soundcloud and spotify https://www.mopidy.com/authenticate/ *authenticate spotify https://developer.spotify.com/documentation/web-api/quick-start/
+&#13;
+use my docker icecast or snapcast for music streaming:&#13;
+ &#13;
+for audio you need a special config&#13;
+for snapcast you have to generate the audio output in a pipe file /tmp/snapfifo this is mounted in both docker container&#13;
+&#13;
+&#13;
+output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo&#13;
+&#13;
+icecast&#13;
+&#13;
+&#13;
+output = lamemp3enc ! shout2send async=false mount=mopidy ip=X.X.X.X port=8000 password=XXXXX</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-Mopidy3.xml</templatePath>
+</Container>

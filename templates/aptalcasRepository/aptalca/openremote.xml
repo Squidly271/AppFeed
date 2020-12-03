@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <Name>OpenRemote-Controller</Name>
+  <Date>1439611200</Date>
+  <Overview>
+    OpenRemote is software integration platform for residential and commercial building automation. OpenRemote allows you to create your own Android or iOS remote interfaces. [br]
+    This docker app will host your custom remote interfaces. Please visit [b]http://openremote.org/display/docs/Get+Started[/b] to get started and create your designer account.
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=39413.0</Support>
+  <Registry>https://registry.hub.docker.com/r/aptalca/docker-openremote/</Registry>
+  <GitHub>https://github.com/aptalca/docker-openremote</GitHub>
+  <Repository>aptalca/docker-openremote</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/controller</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/aptalca/docker-templates/master/aptalca/openremote.xml</TemplateURL>
+  <Category>HomeAutomation:</Category>
+  <Description>OpenRemote is software integration platform for residential and commercial building automation. OpenRemote allows you to create your own Android or iOS remote interfaces. 
+    This docker app will host your custom remote interfaces. Please visit http://openremote.org/display/docs/Get+Started to get started and create your designer account.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/aptalcasRepository/aptalca/openremote.xml</templatePath>
+</Container>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenVPN-HyDeSa</Name>
+  <Repository>testdasi/openvpn-hydesa:stable-amd64</Repository>
+  <Registry>https://registry.hub.docker.com/r/testdasi/openvpn-hydesa/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96233-support-testdasi-repo/</Support>
+  <Project>https://github.com/testdasi/openvpn-hydesa</Project>
+  <Overview>OpenVPN Client with integrated (NZB)Hydra2-Deluge-Sabnzbd (and HTTP + SOCKS5 proxies). Now with a Web GUI quick launch.&#13;
+&#13;
+High-level instructions: (1) Create an appdata folder in host and create a openvpn subfolder. (2) Copy your OpenVPN configuration to the above openvpn subfolder (must include openvpn.ovpn + credentials + certs). (3) Don't forget to map /data in the docker to the host (you can map the parent or individual subfolders depending on needs). (4) Start docker (other apps should configure themselves on first run).&#13;
+&#13;
+DON'T FORGET THE OVPN FILE!!!
+&#13;
+Default password for deluge is deluge
+&#13;
+Set DNS_SERVERS to 127.2.2.2 to use DNS-over-TLS (use google and cloudflare services by default). Your DNS query out of the VPN exit will also be encrypted for even more security. Set it to other services IP's will use normal unencrypted services. &#13;
+&#13;
+Set HOST_NETWORK to your Unraid server network in CIDR format e.g. 192.168.1.0/24.&#13;
+&#13;
+For more detailed instructions, refer to the support thread (https://forums.unraid.net/topic/96233-support-testdasi-repo/) or project page (https://github.com/testdasi/openvpn-hydesa).</Overview>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/openvpn-hydesa.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/testdasi/openvpn-hydesa-base/master/openvpn-hydesa.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work, a donation to my burger fund is very much appreciated.</DonateText>
+  <DonateLink>https://paypal.me/mersenne</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8153</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8153</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9118</HostPort>
+        <ContainerPort>9118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8090</HostPort>
+        <ContainerPort>8090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>8112</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5076</HostPort>
+        <ContainerPort>5076</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openvpn-hydesa</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>127.2.2.2</Value>
+      <Name>DNS_SERVERS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.1.0/24</Value>
+      <Name>HOST_NETWORK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.1.2</Value>
+      <Name>SERVER_IP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8000</Value>
+      <Name>LAUNCHER_GUI_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>53</Value>
+      <Name>DNS_SERVER_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>9118</Value>
+      <Name>SOCKS_PROXY_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8118</Value>
+      <Name>HTTP_PROXY_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>USENET_HTTP_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8090</Value>
+      <Name>USENET_HTTPS_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8112</Value>
+      <Name>TORRENT_GUI_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5076</Value>
+      <Name>SEARCHER_GUI_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>en_GB.UTF-8</Value>
+      <Name>LANG</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/openvpn-hydesa" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/openvpn-hydesa</Config>
+  <Config Name="Downloads" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DNS_SERVERS" Target="DNS_SERVERS" Default="127.2.2.2" Mode="" Description="Container Variable: DNS_SERVERS" Type="Variable" Display="always" Required="false" Mask="false">127.2.2.2</Config>
+  <Config Name="HOST_NETWORK" Target="HOST_NETWORK" Default="192.168.1.0/24" Mode="" Description="Container Variable: HOST_NETWORK" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.0/24</Config>
+  <Config Name="SERVER_IP" Target="SERVER_IP" Default="192.168.1.2" Mode="" Description="Container Variable: SERVER_IP" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.2</Config>
+  <Config Name="Web GUI launcher port" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="DNS server TCP port" Target="53" Default="8153" Mode="tcp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">8153</Config>
+  <Config Name="DNS server UDP port" Target="53" Default="8153" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">8153</Config>
+  <Config Name="Socks5 proxy port" Target="9118" Default="9118" Mode="tcp" Description="Container Port: 9118" Type="Port" Display="always" Required="false" Mask="false">9118</Config>
+  <Config Name="HTTP proxy port" Target="8118" Default="8118" Mode="tcp" Description="Container Port: 8118" Type="Port" Display="always" Required="false" Mask="false">8118</Config>
+  <Config Name="SABnzbdPlus HTTP GUI port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="SABnzbdPlus HTTPS GUI port" Target="8090" Default="8090" Mode="tcp" Description="Container Port: 8090" Type="Port" Display="always" Required="false" Mask="false">8090</Config>
+  <Config Name="Deluge GUI port" Target="8112" Default="8112" Mode="tcp" Description="Container Port: 8112" Type="Port" Display="always" Required="false" Mask="false">8112</Config>
+  <Config Name="NZBHydra2 GUI port" Target="5076" Default="5076" Mode="tcp" Description="Container Port: 5076" Type="Port" Display="always" Required="false" Mask="false">5076</Config>
+  <Config Name="LAUNCHER_GUI_PORT" Target="LAUNCHER_GUI_PORT" Default="8000" Mode="" Description="Container Variable: LAUNCHER_GUI_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8000</Config>
+  <Config Name="DNS_SERVER_PORT" Target="DNS_SERVER_PORT" Default="53" Mode="" Description="Container Variable: DNS_SERVER_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">53</Config>
+  <Config Name="SOCKS_PROXY_PORT" Target="SOCKS_PROXY_PORT" Default="9118" Mode="" Description="Container Variable: SOCKS_PROXY_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">9118</Config>
+  <Config Name="HTTP_PROXY_PORT" Target="HTTP_PROXY_PORT" Default="8118" Mode="" Description="Container Variable: HTTP_PROXY_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8118</Config>
+  <Config Name="USENET_HTTP_PORT" Target="USENET_HTTP_PORT" Default="8080" Mode="" Description="Container Variable: USENET_HTTP_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8080</Config>
+  <Config Name="USENET_HTTPS_PORT" Target="USENET_HTTPS_PORT" Default="8090" Mode="" Description="Container Variable: USENET_HTTPS_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8090</Config>
+  <Config Name="TORRENT_GUI_PORT" Target="TORRENT_GUI_PORT" Default="8112" Mode="" Description="Container Variable: TORRENT_GUI_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8112</Config>
+  <Config Name="SEARCHER_GUI_PORT" Target="SEARCHER_GUI_PORT" Default="5076" Mode="" Description="Container Variable: SEARCHER_GUI_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">5076</Config>
+  <Config Name="LANG" Target="LANG" Default="en_GB.UTF-8" Mode="" Description="Container Variable: LANG" Type="Variable" Display="advanced-hide" Required="false" Mask="false">en_GB.UTF-8</Config>
+  <Date>1600339513</Date>
+  <Category>Downloaders: Security: Network:DNS Network:Proxy Network:VPN</Category>
+  <Description>OpenVPN Client with integrated (NZB)Hydra2-Deluge-Sabnzbd (and HTTP + SOCKS5 proxies). Now with a Web GUI quick launch.&#13;
+&#13;
+High-level instructions: (1) Create an appdata folder in host and create a openvpn subfolder. (2) Copy your OpenVPN configuration to the above openvpn subfolder (must include openvpn.ovpn + credentials + certs). (3) Don't forget to map /data in the docker to the host (you can map the parent or individual subfolders depending on needs). (4) Start docker (other apps should configure themselves on first run).&#13;
+&#13;
+DON'T FORGET THE OVPN FILE!!!
+&#13;
+Default password for deluge is deluge
+&#13;
+Set DNS_SERVERS to 127.2.2.2 to use DNS-over-TLS (use google and cloudflare services by default). Your DNS query out of the VPN exit will also be encrypted for even more security. Set it to other services IP's will use normal unencrypted services. &#13;
+&#13;
+Set HOST_NETWORK to your Unraid server network in CIDR format e.g. 192.168.1.0/24.&#13;
+&#13;
+For more detailed instructions, refer to the support thread (https://forums.unraid.net/topic/96233-support-testdasi-repo/) or project page (https://github.com/testdasi/openvpn-hydesa).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/testdasisRepository/openvpn-hydesa.xml</templatePath>
+</Container>

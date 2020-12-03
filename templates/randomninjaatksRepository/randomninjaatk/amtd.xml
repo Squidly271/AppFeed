@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>amtd</Name>
+  <Repository>randomninjaatk/amtd</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/amtd</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-amtd</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/amtd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/amtd.png</Icon>
+  <Overview>Automated Movie Trailer Downloader :: AMTD is a Radarr Companion script to automatically download movie trailers for use in media applications
+  [br][br][b][span style='color: #E80000;']!!!Important!!![/span][/u] :: You must add a volume that matches your Radarr's volume mappings associated with Radarr's Library Root Folder settings[/b]
+  </Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI></WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Enable Automatic Script Start" Target="AUTOSTART" Default="true" Mode="" Description="true = Enabled :: Runs script automatically on startup" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Script Interval" Target="SCRIPTINTERVAL" Default="1h" Mode="" Description="#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d = days :: Amount of time between each script run, when AUTOSTART is enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Url" Target="RadarrUrl" Default="http://127.0.0.1:7878" Mode="" Description="Set domain or IP to your Radarr instance including port. If using reverse proxy, do not use a trailing slash. Ensure you specify http/s..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Radarr API Key" Target="RadarrAPIkey" Default="" Mode="" Description="Radarr API Key" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Radarr Extras Type" Target="extrastype" Default="all" Mode="" Description="all or trailers :: all downloads all available videos (trailers, clips, featurettes, etc...) :: trailers only downloads trailers" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Extras Audio Language" Target="LANGUAGES" Default="en" Mode="" Description="Set the primary desired language, if not found, fallback to next langauge in the list... (this is a ',' separated list of ISO 639-1 language codes)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Extras Format" Target="videoformat" Default="--format bestvideo[vcodec*=avc1]+bestaudio[ext=m4a]" Mode="" Description="For guidence, please see youtube-dl documentation" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Extras Subtitle Langauge" Target="subtitlelanguage" Default="en" Mode="" Description="Desired Language Code :: For guidence, please see youtube-dl documentation" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Single Trailer" Target="SINGLETRAILER" Default="true" Mode="" Description="true = enabled :: Only downloads the first available trailer, does not apply to other extras type" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Use Folders" Target="USEFOLDERS" Default="false" Mode="" Description="true = enabled :: Creates subfolders within the movie folder for extras" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Extras File Permissions" Target="FilePermissions" Default="644" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Radarr Extras Folder Permissions" Target="FolderPermissions" Default="755" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: USER_ID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: GROUP_ID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Description>Automated Movie Trailer Downloader :: AMTD is a Radarr Companion script to automatically download movie trailers for use in media applications</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/amtd.xml</templatePath>
+</Container>

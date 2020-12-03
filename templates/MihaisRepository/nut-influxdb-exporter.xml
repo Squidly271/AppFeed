@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>nut-influxdb-exporter</Name>
+  <Repository>maihai/nut-influxdb-exporter</Repository>
+  <Registry>https://hub.docker.com/r/maihai/nut-influxdb-exporter</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/49775-support-for-atribes-repo-docker-images/</Support>
+  <Project>https://github.com/kiwimato/nut-influxdb-exporter</Project>
+  <Overview>Docker wrapper for a Python script to query NUT - Network UPS Tools via a Python script and then send the results to InfluxDB for storage.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/nut-influxdb-exporter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/kiwimato/nut-influxdb-exporter/master/assets/nut.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>unraid-ups</Value>
+      <Name>HOSTNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1500</Value>
+      <Name>WATTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>127.0.0.1</Value>
+      <Name>INFLUXDB_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>ups</Value>
+      <Name>UPS_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>127.0.0.1</Value>
+      <Name>NUT_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NUT_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NUT_USERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NUT_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8086</Value>
+      <Name>INFLUXDB_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>nut</Value>
+      <Name>INFLUXDB_DATABASE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>INFLUXDB_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>INFLUXDB_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>VERBOSE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="HOSTNAME" Target="HOSTNAME" Default="unraid" Mode="" Description="host you want the measurements to show up as in InfluxDB" Type="Variable" Display="always" Required="true" Mask="false">unraid-ups</Config>
+  <Config Name="WATTS" Target="WATTS" Default="" Mode="" Description="If your UPS doesn't have the nominal power metric then specify the rated watts so that the load percentage can be used to calculate the current watts" Type="Variable" Display="always" Required="false" Mask="false">1500</Config>
+  <Config Name="INFLUXDB_HOST" Target="INFLUXDB_HOST" Default="localhost" Mode="" Description="IP address of influxdb" Type="Variable" Display="always" Required="true" Mask="false">127.0.0.1</Config>
+  <Config Name="INFLUXDB_PORT" Target="INFLUXDB_PORT" Default="8086" Mode="" Description="Container Variable: INFLUXDB_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">8086</Config>
+  <Config Name="INFLUXDB_DATABASE" Target="INFLUXDB_DATABASE" Default="nut" Mode="" Description="InfluxDB database name to store the values" Type="Variable" Display="advanced" Required="true" Mask="false">nut</Config>
+  <Config Name="INFLUXDB_USER" Target="INFLUXDB_USER" Default="" Mode="" Description="User name for Influxdb" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="INFLUXDB_PASSWORD" Target="INFLUXDB_PASSWORD" Default="" Mode="" Description="Password for Influxdb" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="NUT_HOST" Target="NUT_HOST" Default="127.0.0.1" Mode="" Description="NUT hostname" Type="Variable" Display="advanced" Required="true" Mask="false">127.0.0.1</Config>
+  <Config Name="NUT_PORT" Target="NUT_PORT" Default="" Mode="" Description="NUT Port" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UPS_NAME" Target="UPS_NAME" Default="ups" Mode="" Description="NUT UPS name" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="NUT_USERNAME" Target="NUT_USERNAME" Default="" Mode="" Description="Username for NUT" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="NUT_PASSWORD" Target="NUT_PASSWORD" Default="" Mode="" Description="Password for NUT" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Debugging Output" Target="VERBOSE" Default="false" Mode="" Description="Set this variable to true to see the output in the docker log." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Date>1548204064</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>Docker wrapper for a Python script to query NUT - Network UPS Tools via a Python script and then send the results to InfluxDB for storage.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MihaisRepository/nut-influxdb-exporter.xml</templatePath>
+</Container>

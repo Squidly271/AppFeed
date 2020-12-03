@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Photostructure</Name>
+  <Repository>photostructure/server</Repository>
+  <Registry>https://hub.docker.com/r/photostructure/server/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/98866-support-spants-photostructure-template</Support>
+  <Project>https://photostructure.com/</Project>
+  <Overview>Template by Spants.&#13;
+Beta access to PhotoStructure, your new home for all your photos and videos.   &#13;
+&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:1787]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/spants/unraidtemplates/master/Spants/photostructure.xml</TemplateURL>
+  <Icon>https://i.imgur.com/SlHizQK.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1787</HostPort>
+        <ContainerPort>1787</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Photos/photostructure</HostDir>
+      <ContainerDir>/ps/library</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/.tmp/photostructure</HostDir>
+      <ContainerDir>/ps/tmp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/photostructure/config/</HostDir>
+      <ContainerDir>/ps/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/photostructure/logs/</HostDir>
+      <ContainerDir>/ps/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Photos/Photosbackup</HostDir>
+      <ContainerDir>/photos-backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Photos</HostDir>
+      <ContainerDir>/pictures</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="TimeZone" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="true" Mask="false">Europe/London</Config>
+  <Config Name="Library" Target="/ps/library" Default="" Mode="rw" Description="Where the library will be stored and photos copied to (if selected)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Photos/PS</Config>
+  <Config Name="Temp files" Target="/ps/tmp" Default="" Mode="rw" Description="temporary files - use ssd if possible" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/.tmp/photostructure</Config>
+  <Config Name="Configuration" Target="/ps/config" Default="" Mode="rw" Description="Configuration " Type="Path" Display="always" Required="true" Mask="false">/mnt/disks/appDisk/appdata/photostructure/config/</Config>
+  <Config Name="Logs" Target="/ps/logs" Default="" Mode="rw" Description="Log files" Type="Path" Display="always" Required="true" Mask="false">/mnt/disks/appDisk/appdata/photostructure/logs/</Config>
+  <Config Name="Backup" Target="/photos-backup" Default="" Mode="rw" Description="Container Path: /photos-backup" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Photos/Photosbackup</Config>
+  <Config Name="Pictures" Target="/pictures" Default="" Mode="rw" Description="Source directory for photos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Photos</Config>
+  <Config Name="Web Access" Target="1787" Default="1787" Mode="tcp" Description="Container Port: 1787" Type="Port" Display="always" Required="true" Mask="false">1787</Config>
+  <Beta>true</Beta>
+  <Date>1605208783</Date>
+  <Category>MediaApp:Photos Status:Beta</Category>
+  <Description>Template by Spants.&#13;
+Beta access to PhotoStructure, your new home for all your photos and videos.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SpantsRepository/Spants/photostructure.xml</templatePath>
+</Container>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MineOS-node</Name>
+  <Repository>hexparrot/mineos</Repository>
+  <Registry>https://hub.docker.com/r/clowrym/mineos-docker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/60143-support-clowryms-docker-repository/?tab=comments#comment-591570</Support>
+  <Overview>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.[br]&#13;
+[br]&#13;
+This allows the front-end to provide system health, disk and memory usage, and logging in real-time.&#13;
+[br]&#13;
+Default Username: mc[br]&#13;
+Default password: mypass[br]&#13;
+Please change your password[br]&#13;
+[br]&#13;
+Default configuration:[br]&#13;
+Web Port:  8443[br]&#13;
+Dynmap Port: 8125[br]&#13;
+Minecraft Ports (10 by default): 25565-25575[br]&#13;
+Container Path: /var/games/minecraft[br]&#13;
+Storage Path (optional for faster server back-ups if using plugins like dynmap):  /mnt/data&#13;
+[br]&#13;
+Ubuntu, latest commit By Hexparrot&#13;
+</Overview>
+  <WebUI>https://[IP]:[PORT:8443]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/clowrym/docker-templates/master/Mineos-node(Ubuntu).xml</TemplateURL>
+  <Icon>https://vignette2.wikia.nocookie.net/lotr-minecraft-mod-exiles/images/f/f2/Minecraft_server_setup.png/revision/latest?cb=20160911172557</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25565-25575</HostPort>
+        <ContainerPort>25565-25575</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8120-8126</HostPort>
+        <ContainerPort>8120-8126</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/minecraft/</HostDir>
+      <ContainerDir>/var/games/minecraft</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/minecraft</HostDir>
+      <ContainerDir>/mnt/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>mypass</Value>
+      <Name>USER_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Server Ports" Target="25565-25575" Default="25565-25575" Mode="tcp" Description="Each minecraft server needs its own port." Type="Port" Display="always" Required="true" Mask="false">25565-25575</Config>
+  <Config Name="Minecraft Files" Target="/var/games/minecraft" Default="/mnt/user/appdata/minecraft/" Mode="rw" Description="Container Path: /var/games/minecraft" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/minecraft/</Config>
+  <Config Name="Admin Interface Port" Target="8443" Default="8443" Mode="tcp" Description="Web Port" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="Admin Interface Port" Target="USER_PASSWORD" Default="mypass" Mode="" Description="Container Variable: USER_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">mypass</Config>
+  <Config Name="Data Path" Target="/mnt/data" Default="/mnt/cache/minecraft" Mode="rw" Description="Path used for Dynmap &amp;amp; other game files to keep them seperate from Server files to allow for faster back-ups &amp;amp; restores" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/minecraft</Config>
+  <Config Name="Dynmap Port" Target="8120-8126" Default="8125" Mode="tcp" Description="Dynmap Port" Type="Port" Display="always" Required="false" Mask="false">8120-8126</Config>
+  <Config Name="25565 - UDP Bungee" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="false" Mask="false">25565</Config>
+  <Date>1490452142</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>MineOS is a server front-end to ease managing Minecraft administrative tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based), by leveraging the event-triggering, asyncronous model of Node.JS and websockets.&#13;
+&#13;
+This allows the front-end to provide system health, disk and memory usage, and logging in real-time.&#13;
+&#13;
+Default Username: mc&#13;
+Default password: mypass&#13;
+Please change your password&#13;
+&#13;
+Default configuration:&#13;
+Web Port:  8443&#13;
+Dynmap Port: 8125&#13;
+Minecraft Ports (10 by default): 25565-25575&#13;
+Container Path: /var/games/minecraft&#13;
+Storage Path (optional for faster server back-ups if using plugins like dynmap):  /mnt/data&#13;
+&#13;
+Ubuntu, latest commit By Hexparrot</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/clowrymsRepository/Mineos-node(Ubuntu).xml</templatePath>
+</Container>

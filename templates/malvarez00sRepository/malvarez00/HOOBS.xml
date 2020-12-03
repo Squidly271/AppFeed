@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>HOOBS</Name>
+  <Repository>hoobs/hoobs:3.2.9</Repository>
+  <Registry>https://hub.docker.com/r/hoobs/hoobs</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/89206-support-malvarez00-hoobs/</Support>
+  <Overview>HOOBS is a Homebridge stack with a interface that simplifies configuration and installing plugins. This adds a process wrapper for Homebridge.  &#13;
+It also adds an API that can be used as an endpoint for an application.&#13;
+&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&#13;
+HOOBS is not a Homebridge plugin. It is a separate application designed to be a parent to &#13;
+Homebridge. Since this is independent, it can control Homebridge. &#13;
+This also keeps all of the plugins in one place. No need to install plugins in the global &#13;
+scope, which helps keep your Homebridge server more secure.&#13;
+&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&#13;
+Default Paths:&#13;
+&amp;lt;br /&amp;gt;&#13;
+Application Path -&amp;gt; /hoobs&#13;
+&amp;lt;br /&amp;gt;&#13;
+Configuration Path -&amp;gt; /hoobs/etc&#13;
+&amp;lt;br /&amp;gt;&#13;
+Local Modules Path -&amp;gt; /hoobs/node_modules&#13;
+&amp;lt;br /&amp;gt;&#13;
+Global Modules Path -&amp;gt; /usr/lib/node_modules&#13;
+&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&#13;
+For More Information visit:&amp;lt;a href="https://hoobs.org/"&amp;gt;https://hoobs.org/&amp;lt;/a&amp;gt;</Overview>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/HOOBS.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/malvarez00/unRAID-Docker-Templates/master/malvarez00/icons/hoobs_96x96.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>51826</HostPort>
+        <ContainerPort>51826</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8282</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hoobs/</HostDir>
+      <ContainerDir>/hoobs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Application Path" Target="/hoobs" Default="/mnt/user/appdata/hoobs/" Mode="rw" Description="Container Path: /hoobs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hoobs/</Config>
+  <Config Name="Homebridge Port" Target="51826" Default="51826" Mode="tcp" Description="Container Port: 512826" Type="Port" Display="always" Required="true" Mask="false">51826</Config>
+  <Config Name="Server Port" Target="8080" Default="8282" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8282</Config>
+  <Date>1582906145</Date>
+  <Category>HomeAutomation: Tools:Utilities</Category>
+  <Description>HOOBS is a Homebridge stack with a interface that simplifies configuration and installing plugins. This adds a process wrapper for Homebridge.  &#13;
+It also adds an API that can be used as an endpoint for an application.&#13;
+&#13;
+HOOBS is not a Homebridge plugin. It is a separate application designed to be a parent to &#13;
+Homebridge. Since this is independent, it can control Homebridge. &#13;
+This also keeps all of the plugins in one place. No need to install plugins in the global &#13;
+scope, which helps keep your Homebridge server more secure.&#13;
+&#13;
+Default Paths:&#13;
+&#13;
+Application Path -&gt; /hoobs&#13;
+&#13;
+Configuration Path -&gt; /hoobs/etc&#13;
+&#13;
+Local Modules Path -&gt; /hoobs/node_modules&#13;
+&#13;
+Global Modules Path -&gt; /usr/lib/node_modules&#13;
+&#13;
+For More Information visit:https://hoobs.org/</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/malvarez00sRepository/malvarez00/HOOBS.xml</templatePath>
+</Container>

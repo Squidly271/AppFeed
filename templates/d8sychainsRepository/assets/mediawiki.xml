@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>mediawiki</Name>
+  <Repository>d8sychain/mediawiki</Repository>
+  <Registry>https://hub.docker.com/r/d8sychain/mediawiki/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/84304-support-d8sychain-mediawiki/</Support>
+  <Project>https://www.mediawiki.org</Project>
+  <Overview>MediaWiki with WYSIWYG VisualEditor extension and Parsoid service. Built with Alpine, S6-overlay, NGINX, PHP-FPM with PHP 7.3, NodeJS, along with other extensions.</Overview>
+  <WebUI>http://[IP]:[PORT:9090]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/d8sychain/docker-mediawiki/master/assets/mediawiki.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/d8sychain/docker-mediawiki/master/assets/mediawiki-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/assets</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>UPGRADE_MEDIAWIKI</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="File Uploads" Target="/assets" Default="" Mode="rw" Description="OPTIONAL: Set a host path to use an alternate location for file uploads. Default container path: /config/www/mediawiki/images&amp;lt;/br&amp;gt;&#13;&#10;Container Path: /data" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Allow Mediawiki Upgrades" Target="UPGRADE_MEDIAWIKI" Default="disable" Mode="" Description="Allow MediaWiki to automatically be upgraded with new docker images.&amp;lt;/br&amp;gt;&#13;&#10;Set 'enable' to allow upgrades." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/mediawiki" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Beta>true</Beta>
+  <Date>1571108981</Date>
+  <Category>Cloud: Productivity: Tools:Utilities Network:Web Status:Beta</Category>
+  <Description>MediaWiki with WYSIWYG VisualEditor extension and Parsoid service. Built with Alpine, S6-overlay, NGINX, PHP-FPM with PHP 7.3, NodeJS, along with other extensions.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/d8sychainsRepository/assets/mediawiki.xml</templatePath>
+</Container>

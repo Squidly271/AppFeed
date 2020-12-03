@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/Redis.xml</TemplateURL>
+  <Date>1525579200</Date>
+  <Name>Redis</Name>
+  <Project>https://redis.io/</Project>
+  <Overview>
+    Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/_/redis/</Registry>
+  <GitHub>https://github.com/docker-library/redis</GitHub>
+  <Repository>redis</Repository>
+  <Support>https://lime-technology.com/forums/topic/69490-support-jj9987-redis/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6379</HostPort>
+        <ContainerPort>6379</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment></Environment>
+  <Data></Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/Redis-logo.png</Icon>
+  <Config Type="Port" Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Display="always-hide" Required="true" Description="This is Redis default connection port.">6379</Config>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <Description>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/jj9987sRepository/Redis.xml</templatePath>
+</Container>

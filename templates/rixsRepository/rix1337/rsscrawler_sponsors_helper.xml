@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>RSScrawlerSponsorsHelper</Name>
+  <Repository>rix1337/docker-rsscrawler-sponsors-helper</Repository>
+  <Registry>https://hub.docker.com/r/rix1337/docker-rsscrawler-sponsors-helper</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://gitter.im/RSScrawler/Lobby</Support>
+  <Project>https://hub.docker.com/repository/docker/rix1337/docker-rsscrawler-sponsors-helper</Project>
+  <Overview>
+    Dies ist das offizielle Docker-Image des RSScrawler Sponsor Helpers. Es handelt sich dabei um einen speziell angepassten Firefox, der Captchas weitestgehend selbst löst und dem RSScrawler direkt (statt per Click'n'Load) übergibt.
+
+    Da hiermit ein höherer Pflegeaufwand verbunden ist, erhalten nur Sponsoren Zugriff auf das Image. Freischaltung per PN auf Gitter.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5800]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/rsscrawler_sponsors_helper.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/firefox-icon.png</Icon>
+  <ExtraParams>--shm-size 2g</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateLink>https://github.com/sponsors/rix1337</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5800</HostPort>
+        <ContainerPort>5800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/rsscrawler-helper</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.1:9090</Value>
+      <Name>RSSCRAWLER_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>10987654321cba</Value>
+      <Name>ANTI_CAPTCHA_KEY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>19</Value>
+      <Name>APP_NICENESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1280</Value>
+      <Name>DISPLAY_WIDTH</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>768</Value>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>SECURE_CONNECTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>X11VNC_EXTRA_OPTS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Your local RSScrawler URL (eg. 10.10.0.1:9090)" Target="RSSCRAWLER_URL" Default="" Mode="" Description="Container Variable: RSSCRAWLER_URL" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.1:9090</Config>
+  <Config Name="Your anti-captcha.com key" Target="ANTI_CAPTCHA_KEY" Default="" Mode="" Description="Container Variable: ANTI_CAPTCHA_KEY" Type="Variable" Display="always" Required="true" Mask="false">10987654321cba</Config>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/cache/appdata/rsscrawler-helper" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/rsscrawler-helper</Config>
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="000" Mode="" Description="Mask that controls how file permissions are set for newly created files. The value of the mask is in octal notation." Type="Variable" Display="advanced" Required="false" Mask="false">000</Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="advanced" Required="false" Mask="false">19</Config>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">1280</Config>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false">768</Config>
+  <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; to encrypt the connection.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Note:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; When enabling the secure connection, security parameters needs to be generated.  This &amp;lt;b&amp;gt;one-time&amp;lt;/b&amp;gt; operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Warning:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="WEB Port for GUI" Target="5800" Default="7814" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false">5800</Config>
+  <Config Name="VNC Port for GUI" Target="5900" Default="7914" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used." Type="Port" Display="advanced-hide" Required="false" Mask="false">5900</Config>
+  <Category>Tools:Utilities</Category>
+  <Description>Dies ist das offizielle Docker-Image des RSScrawler Sponsor Helpers. Es handelt sich dabei um einen speziell angepassten Firefox, der Captchas weitestgehend selbst löst und dem RSScrawler direkt (statt per Click'n'Load) übergibt.
+
+    Da hiermit ein höherer Pflegeaufwand verbunden ist, erhalten nur Sponsoren Zugriff auf das Image. Freischaltung per PN auf Gitter.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/rixsRepository/rix1337/rsscrawler_sponsors_helper.xml</templatePath>
+</Container>

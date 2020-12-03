@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>bitcoinunlimited</Name>
+  <Repository>amacneil/bitcoinunlimited</Repository>
+  <Registry>https://hub.docker.com/r/amacneil/bitcoinunlimited/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/amacneil/bitcoinunlimited/</Support>
+  <Overview>The Bitcoin Unlimited project seeks to provide a voice to all stakeholders in the Bitcoin ecosystem.&#13;
+&#13;
+[b]Converted By @JustinAiken using Community Applications[/b]</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/JustinAiken/unraid-docker-templates/master/bitcoinunlimited/bitcoinunlimited.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/JustinAiken/unraid-docker-templates/master/bitcoinunlimited/bitcoin.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8332</HostPort>
+        <ContainerPort>8332</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8333</HostPort>
+        <ContainerPort>8333</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18332</HostPort>
+        <ContainerPort>18332</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18333</HostPort>
+        <ContainerPort>18333</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/blockchain</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="RPC Port" Target="8332" Default="8332" Mode="tcp" Description="RPC Port - Map to use RPC" Type="Port" Display="always" Required="false" Mask="false">8332</Config>
+  <Config Name="Communication Port" Target="8333" Default="8333" Mode="tcp" Description="Main Port Used" Type="Port" Display="always" Required="true" Mask="false">8333</Config>
+  <Config Name="Testnet RPC Port - Map to use RPC" Target="18332" Default="18332" Mode="tcp" Description="Testnet RPC Port" Type="Port" Display="always" Required="false" Mask="false">18332</Config>
+  <Config Name="Testnet Communication Port" Target="18333" Default="18333" Mode="tcp" Description="Testnet Communication Port" Type="Port" Display="always" Required="false" Mask="false">18333</Config>
+  <Config Name="Blockchain" Target="/data" Default="/mnt/user/appdata/blockchain" Mode="rw" Description="Mount /data for the blockchain" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/blockchain</Config>
+  <Date>1497557061</Date>
+  <Category>Network:Other</Category>
+  <Description>The Bitcoin Unlimited project seeks to provide a voice to all stakeholders in the Bitcoin ecosystem.&#13;
+&#13;
+Converted By @JustinAiken using Community Applications</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JustinAikensRepository/bitcoinunlimited/bitcoinunlimited.xml</templatePath>
+</Container>

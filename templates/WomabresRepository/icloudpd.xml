@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>icloudpd</Name>
+  <Repository>boredazfcuk/icloudpd</Repository>
+  <Registry>https://hub.docker.com/r/boredazfcuk/icloudpd/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/boredazfcuk/icloudpd/</Support>
+  <Project>https://github.com/Womabre/-unraid-docker-templates</Project>
+  <Overview>An Alpine Linux Docker container for ndbroadbent's iCloud Photos Downloader writen by boredazfcuk. I use it for syncing the photo streams of all the iDevices in my house back to my server because it's the only way of backing up multiple devices to a single location. It uses the system keyring to securely store credentials, has HEIC to JPG conversion capability, and supports Telegram, Prowl, PushBullet and WebHook notifications.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Womabre/unraid-docker-templates/master/icloudpd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Womabre/-unraid-docker-templates/master/images/photos_icon_large.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>BTC: 1E8kUsm3qouXdVYvLMjLbw7rXNmN2jZesL</DonateText>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/icloudpd</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/user/iCloud</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>your@appleid.com</Value>
+      <Name>apple_id</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>86400</Value>
+      <Name>synchronisation_interval</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>notification_type</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>prowl_api_key</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>pushbullet_api_key</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>telegram_token</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>telegram_chat_id</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>usekeyring</Value>
+      <Name>apple_password</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>command_line_options</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>2FA</Value>
+      <Name>authentication_type</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>777</Value>
+      <Name>directory_permissions</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>666</Value>
+      <Name>file_permissions</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Apple ID" Target="apple_id" Default="your@appleid.com" Mode="" Description="This is the Apple ID for the account you want to download files for" Type="Variable" Display="always" Required="true" Mask="false">your@appleid.com</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/icloudpd" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/icloudpd</Config>
+  <Config Name="Synchronisation Interval (seconds)" Target="synchronisation_interval" Default="86400" Mode="" Description="Default is once every 24h." Type="Variable" Display="always" Required="true" Mask="false">86400</Config>
+  <Config Name="Data" Target="/home/user/iCloud" Default="/mnt/user/icloud" Mode="rw,slave" Description="Container Path: /home/user/iCloud" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Notification Type" Target="notification_type" Default="" Mode="" Description="This specifies the method that is used to send notifications. Currently, there are three options available 'Prowl', 'Pushbullet' and 'Telegram'. When the two factor authentication cookie is within 7 days (default) of expiry, a notification will be sent upon synchronization. No more than a single notification will be sent within a 24 hour period unless the container is restarted. This does not include the notification that is sent each time the container is started" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Prowl API Key" Target="prowl_api_key" Default="" Mode="" Description="If the notification_type is set to 'Prowl' this is mandatory. This is the API key for your account as generated by the Prowl website" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Pushbullet API Key" Target="pushbullet_api_key" Default="" Mode="" Description="If the notification_type is set to 'Pushbullet' this is mandatory. This is the API key for your account as generated by the Pushbullet website" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Telegram Token" Target="telegram_token" Default="" Mode="" Description="If the notification_type is set to 'Telegram' this is mandatory. This is the token that was assigned to your account by The Botfather" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Telegram Chat ID" Target="telegram_chat_id" Default="" Mode="" Description="If the notification_type is set to 'Telegram' then this is the chat_id for your Telegram bot" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Time Zone" Target="TZ" Default="Europe/London" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always-hide" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="Password" Target="apple_password" Default="usekeyring" Mode="" Description="Use system keyring to store password. For more info check the docker info page. " Type="Variable" Display="advanced" Required="true" Mask="false">usekeyring</Config>
+  <Config Name="Command Line Options" Target="command_line_options" Default="" Mode="" Description="This is for additional command line options you want to pass to the icloudpd application. https://github.com/ndbroadbent/icloud_photos_downloader#usage" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Authentication Type" Target="authentication_type" Default="2FA" Mode="" Description="2FA or Web Authentication" Type="Variable" Display="advanced" Required="true" Mask="false">2FA</Config>
+  <Config Name="Directory Permissions" Target="directory_permissions" Default="777" Mode="" Description="Container Variable: directory_permissions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">777</Config>
+  <Config Name="File Permissions" Target="file_permissions" Default="666" Mode="" Description="Container Variable: file_permissions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">666</Config>
+  <Config Name="UMASK" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="true" Mask="false">000</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Date>1602017437</Date>
+  <Category>Backup: Cloud: Downloaders:</Category>
+  <Description>An Alpine Linux Docker container for ndbroadbent's iCloud Photos Downloader writen by boredazfcuk. I use it for syncing the photo streams of all the iDevices in my house back to my server because it's the only way of backing up multiple devices to a single location. It uses the system keyring to securely store credentials, has HEIC to JPG conversion capability, and supports Telegram, Prowl, PushBullet and WebHook notifications.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/WomabresRepository/icloudpd.xml</templatePath>
+</Container>

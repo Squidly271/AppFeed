@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>aria2-with-ariang</Name>
+  <Repository>fanningert/aria2-with-ariang</Repository>
+  <Registry>https://registry.hub.docker.com/r/fanningert/aria2-with-ariang/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/60117-support-aria2-webui/</Support>
+  <Overview>&#13;
+The aim for this project is to create the worlds best and hottest interface to interact with aria2. Very simple to use, just download and open index.html in any web browser.&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/Aria2AriaNG.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fanningert/unraid-docker-templates/master/fanningert/icons/aria2ariang.png</Icon>
+  <PostArgs></PostArgs>
+  <DonateImg></DonateImg>
+  <MinVer></MinVer>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6800</HostPort>
+        <ContainerPort>6800</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6889</HostPort>
+        <ContainerPort>6889</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/download</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/aria2-with-ariang/</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>YOUR_SECRET_CODE</Value>
+      <Name>aria2Secret</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>warn</Value>
+      <Name>aria2LogLevel</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>aria2MaxConcurrentDownloads</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>6889</Value>
+      <Name>aria2ListenPort</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>aria2EnableDht</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>6881</Value>
+      <Name>aria2DhtListenPort</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>aria2SaveSessionInterval</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>aria2BtRequireCrypto</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>plain</Value>
+      <Name>aria2BtMinCryptoLevel</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>aria2BtSaveMetadata</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>aria2BtLoadSavedMetadata</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>aria2Continue</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>10M</Value>
+      <Name>aria2MinSplitSize</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>aria2Split</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>aria2MaxConnectionPerServer</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>aria2SeedRatio</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>aria2SeedTime</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>aria2DisableIpv6</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>aria2ForceSave</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>aria2MaxDownloadLimit</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>aria2MaxOverallDownloadLimit</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Aria2 - Secret" Target="aria2Secret" Default="YOUR_SECRET_CODE" Mode="" Description="Aria2 RPC Secret" Type="Variable" Display="always" Required="true" Mask="false">YOUR_SECRET_CODE</Config>
+  <Config Name="Download Storage Path" Target="/download" Default="" Mode="rw" Description="Container Path: /download" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Aria2 WebUI Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="Aria2 RPC" Target="6800" Default="6800" Mode="tcp" Description="Container Port: 6800" Type="Port" Display="always" Required="true" Mask="false">6800</Config>
+  <Config Name="Aria2 - Max Concurrent Downloads" Target="aria2MaxConcurrentDownloads" Default="5" Mode="" Description="Set the maximum number of parallel downloads for every queue item." Type="Variable" Display="always" Required="true" Mask="false">5</Config>
+  <Config Name="Aria2 - Listen Port" Target="6889" Default="6889" Mode="tcp" Description="Set TCP port number for BitTorrent downloads. Multiple ports can be specified by using ,, for example: 6881,6885. You can also use - to specify a range: 6881-6999. , and - can be used together: 6881-6889,6999. You also need to change the Variable " Type="Port" Display="always" Required="true" Mask="false">6889</Config>
+  <Config Name="Aria2 - DHT Listen Port" Target="6881" Default="6881" Mode="tcp" Description="Set UDP listening port used by DHT(IPv4, IPv6) and UDP tracker. Multiple ports can be specified by using ,, for example: 6881,6885. You can also use - to specify a range: 6881-6999. , and - can be used together. You also need to change the Variable " Type="Port" Display="always" Required="false" Mask="false">6881</Config>
+  <Config Name="Aria2 - LogLevel" Target="aria2LogLevel" Default="notice|debug|info|warn|error" Mode="" Description="Set log level to output." Type="Variable" Display="advanced-hide" Required="true" Mask="false">warn</Config>
+  <Config Name="User ID" Target="PUID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="Group ID" Target="PGID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Config Storage Path" Target="/conf" Default="/mnt/user/appdata/aria2-with-ariang" Mode="rw" Description="Container Path: /conf" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/aria2-with-ariang/</Config>
+  <Config Name="Aria2 - Listen Port (aria2.conf)" Target="aria2ListenPort" Default="6889" Mode="" Description="Set TCP port number for BitTorrent downloads. Multiple ports can be specified by using ,, for example: 6881,6885. You can also use - to specify a range: 6881-6999. , and - can be used together: 6881-6889,6999." Type="Variable" Display="advanced" Required="true" Mask="false">6889</Config>
+  <Config Name="Aria2 - Enable DHT" Target="aria2EnableDht" Default="true|false" Mode="" Description="Enable IPv4 DHT functionality. It also enables UDP tracker support. If a private flag is set in a torrent, aria2 doesn’t use DHT for that download even if true is given." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="Aria2 - DHT Listen Port (aria2.conf)" Target="aria2DhtListenPort" Default="6881" Mode="" Description="Set UDP listening port used by DHT(IPv4, IPv6) and UDP tracker. Multiple ports can be specified by using ,, for example: 6881,6885. You can also use - to specify a range: 6881-6999. , and - can be used together." Type="Variable" Display="advanced" Required="true" Mask="false">6881</Config>
+  <Config Name="Aria2 - Save Session Interval" Target="aria2SaveSessionInterval" Default="10" Mode="" Description="Save error/unfinished downloads to a file specified by --save-session option every SEC seconds. If 0 is given, file will be saved only when aria2 exits." Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
+  <Config Name="Aria2 - BT Require Crypto" Target="aria2BtRequireCrypto" Default="true|false" Mode="" Description="If true is given, aria2 doesn’t accept and establish connection with legacy BitTorrent handshake(\19BitTorrent protocol). Thus aria2 always uses Obfuscation handshake." Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Aria2 - BT Min Crypto Level" Target="aria2BtMinCryptoLevel" Default="plain|arc4" Mode="" Description="Set minimum level of encryption method. If several encryption methods are provided by a peer, aria2 chooses the lowest one which satisfies the given level." Type="Variable" Display="advanced" Required="true" Mask="false">plain</Config>
+  <Config Name="Aria2 BT Save Metadata" Target="aria2BtSaveMetadata" Default="true|false" Mode="" Description="Save meta data as “.torrent” file. This option has effect only when BitTorrent Magnet URI is used. The file name is hex encoded info hash with suffix “.torrent”. The directory to be saved is the same directory where download file is saved. If the same file already exists, meta data is not saved. See also --bt-metadata-only option." Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Aria2 - BT Load Saved Metadata" Target="aria2BtLoadSavedMetadata" Default="true|false" Mode="" Description="Before getting torrent metadata from DHT when downloading with magnet link, first try to read file saved by --bt-save-metadata option. If it is successful, then skip downloading metadata from DHT. " Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Aria2 - Continue" Target="aria2Continue" Default="true|false" Mode="" Description="If the previous transfer is made by a browser or wget like sequential download manager, then use --continue option to continue the transfer." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="Aria2 - Min Split Size" Target="aria2MinSplitSize" Default="10M" Mode="" Description="aria2 does not split less than 2*SIZE byte range. For example, let’s consider downloading 20MiB file. If SIZE is 10M, aria2 can split file into 2 range [0-10MiB) and [10MiB-20MiB) and download it using 2 sources(if --split &amp;gt;= 2, of course). If SIZE is 15M, since 2*15M &amp;gt; 20MiB, aria2 does not split file and download it using 1 source. You can append K or M (1K = 1024, 1M = 1024K). Possible Values: 1M -1024M" Type="Variable" Display="advanced" Required="true" Mask="false">10M</Config>
+  <Config Name="Aria2 - Split" Target="aria2Split" Default="5" Mode="" Description="Download a file using N connections. If more than N URIs are given, first N URIs are used and remaining URIs are used for backup. If less than N URIs are given, those URIs are used more than once so that N connections total are made simultaneously. The number of connections to the same host is restricted by the --max-connection-per-server option. See also the --min-split-size option." Type="Variable" Display="advanced" Required="true" Mask="false">5</Config>
+  <Config Name="Aria2 - Max Connection Per Server" Target="aria2MaxConnectionPerServer" Default="10" Mode="" Description="The maximum number of connections to one server for each download. " Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
+  <Config Name="Aria2 - Seed Ratio" Target="aria2SeedRatio" Default="1.0" Mode="" Description="pecify share ratio. Seed completed torrents until share ratio reaches RATIO. You are strongly encouraged to specify equals or more than 1.0 here. Specify 0.0 if you intend to do seeding regardless of share ratio. If --seed-time option is specified along with this option, seeding ends when at least one of the conditions is satisfied." Type="Variable" Display="advanced" Required="true" Mask="false">1</Config>
+  <Config Name="Aria2 - Seed Time" Target="aria2SeedTime" Default="0" Mode="" Description="Specify seeding time in (fractional) minutes. Also see the --seed-ratio option." Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="Aria2 - Disable IPv6" Target="aria2DisableIpv6" Default="true|false" Mode="" Description="This is useful if you have to use broken DNS and want to avoid terribly slow AAAA record lookup. " Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="Aria2 - Force Save" Target="aria2ForceSave" Default="true|false" Mode="" Description="Save download with --save-session option even if the download is completed or removed. This option also saves control file in that situations. This may be useful to save BitTorrent seeding which is recognized as completed state." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+  <Config Name="Aria2 - Max Download Limit" Target="aria2MaxDownloadLimit" Default="0" Mode="" Description="Set max download speed per each download in bytes/sec. 0 means unrestricted. You can append K or M (1K = 1024, 1M = 1024K). To limit the overall download speed, use --max-overall-download-limit." Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="Aria2 - Max Overall Download Limit" Target="aria2MaxOverallDownloadLimit" Default="0" Mode="" Description="Set max overall download speed in bytes/sec. 0 means unrestricted. You can append K or M (1K = 1024, 1M = 1024K). To limit the download speed per download, use --max-download-limit option." Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Category>Downloaders:</Category>
+  <Description>The aim for this project is to create the worlds best and hottest interface to interact with aria2. Very simple to use, just download and open index.html in any web browser.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/fanningertsRepository/fanningert/Aria2AriaNG.xml</templatePath>
+</Container>

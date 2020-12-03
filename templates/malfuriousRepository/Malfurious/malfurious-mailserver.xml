@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>malfurious-mailserver</Name>
+  <Overview>
+   Mailserver is an all-in-one SMTP/IMAP utility that also includes many features such as Anti-Spam/Virus filters.
+  </Overview>
+  <Support>https://forums.lime-technology.com/topic/60110-support-malfurious-mailserver/</Support>
+  <Registry>https://registry.hub.docker.com/r/malfurious/mailserver/</Registry>
+  <GitHub>https://github.com/malfurious/mailserver</GitHub>
+  <Repository>malfurious/mailserver</Repository>
+  <Project>https://github.com/Malfurious/mailserver</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Config Name="SMTP Port" Target="25" Default="25" Mode="tcp" Description="SMTP Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="IMAP Port" Target="143" Default="143" Mode="tcp" Description="IMAP Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SMTPS Port" Target="587" Default="587" Mode="tcp" Description="SMTPS Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="IMAPS Port" Target="993" Default="993" Mode="tcp" Description="IMAPS Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ManageSieve Port" Target="4190" Default="4190" Mode="tcp" Description="ManageSieve Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="RSPAMD WebGUI Port" Target="11334" Default="11334" Mode="tcp" Description="RSPAMD WebGUI Port" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Mail Server Hostname" Target="MAIL_HOST" Default="" Mode="" Description="Mail Server Hostname" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Postfix Username" Target="POST_USER" Default="postfix" Mode="" Description="MySQL Postfix Username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Postfix Password" Target="POST_PASS" Default="" Mode="" Description="MySQL Postfix Password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Postfix Database Name" Target="POST_DB" Default="postfix" Mode="" Description="MySQL Postfix Database Name" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Host" Target="MYSQL_HOST" Default="" Mode="" Description="Your MariaDB/MySQL Server IP Address/Hostname" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="RSPAMD Password" Target="RSPAMD_PASSWORD" Default="" Mode="" Description="RSPAMD Password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Encryption Method" Target="PASS_CRYPT" Default="" Mode="" Description="Postfixadmin Password Encryption Method" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Mail Data Path" Target="/var/mail" Default="" Mode="rw" Description="Container Path: /var/mail" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Redis Data Path" Target="/data" Default="/mnt/user/appdata/malfurious-mailserver/redis" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="LetsEncrypt Certificate Path" Target="/etc/letsencrypt" Default="" Mode="r" Description="Container Path: /etc/letsencrypt" Type="Path" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <WebUI>http://[IP]:[PORT:11334]</WebUI>
+  <Icon>https://raw.githubusercontent.com/Malfurious/docker-templates/master/images/MailserverIcon.png</Icon>
+  <DonateImg></DonateImg>
+  <TemplateURL>https://raw.githubusercontent.com/Malfurious/docker-templates/master/Malfurious/malfurious-mailserver.xml</TemplateURL>
+  <Category>Network:Web</Category>
+  <Description>Mailserver is an all-in-one SMTP/IMAP utility that also includes many features such as Anti-Spam/Virus filters.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/malfuriousRepository/Malfurious/malfurious-mailserver.xml</templatePath>
+</Container>

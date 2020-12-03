@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>autoscan</Name>
+  <Repository>hotio/autoscan</Repository>
+  <Registry>https://hub.docker.com/r/hotio/autoscan</Registry>
+  <Branch>
+    <Tag>release-dockerhub</Tag>
+    <TagDescription>Releases</TagDescription>
+    <Repository>hotio/autoscan:release</Repository>
+    <Registry>https://hub.docker.com/r/hotio/autoscan</Registry>
+  </Branch>
+  <Branch>
+    <Tag>nightly-dockerhub</Tag>
+    <TagDescription>Every commit to master branch</TagDescription>
+    <Repository>hotio/autoscan:nightly</Repository>
+    <Registry>https://hub.docker.com/r/hotio/autoscan</Registry>
+  </Branch>
+  <Branch>
+    <Tag>release-ghcr</Tag>
+    <TagDescription>Releases</TagDescription>
+    <Repository>ghcr.io/hotio/autoscan:release</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/autoscan</Registry>
+  </Branch>
+  <Branch>
+    <Tag>nightly-ghcr</Tag>
+    <TagDescription>Every commit to master branch</TagDescription>
+    <Repository>ghcr.io/hotio/autoscan:nightly</Repository>
+    <Registry>https://github.com/users/hotio/packages/container/package/autoscan</Registry>
+  </Branch>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hotio.dev/discord</Support>
+  <Project>https://hotio.dev/containers/autoscan</Project>
+  <Icon></Icon>
+  <Overview>Autoscan replaces the default Plex and Emby behaviour for picking up file changes on the file system. Autoscan integrates with Sonarr, Radarr and Lidarr to fetch changes in near real-time without relying on the file system.</Overview>
+  <Description>Autoscan replaces the default Plex and Emby behaviour for picking up file changes on the file system. Autoscan integrates with Sonarr, Radarr and Lidarr to fetch changes in near real-time without relying on the file system.</Description>
+  <WebUI></WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="AUTOSCAN_VERBOSITY" Target="AUTOSCAN_VERBOSITY" Default="0|1|2" Mode="" Description="Container Variable: AUTOSCAN_VERBOSITY&amp;lt;br&amp;gt;0 - Info&amp;lt;br&amp;gt;1 - Debug&amp;lt;br&amp;gt;2 - Trace" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="PLEX_LOGIN" Target="PLEX_LOGIN" Default="" Mode="" Description="Container Variable: PLEX_LOGIN" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="PLEX_PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="ARGS" Target="ARGS" Default="" Mode="" Description="Container Variable: ARGS" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="no|yes" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Other:</Category>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hotiosRepository/hotio/autoscan.xml</templatePath>
+</Container>

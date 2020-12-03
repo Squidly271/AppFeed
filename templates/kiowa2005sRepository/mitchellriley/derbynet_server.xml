@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>derbynet_server</Name>
+  <Repository>mitchellriley/derbynet_server</Repository>
+  <Registry>https://registry.hub.docker.com/r/mitchellriley/derbynet_server</Registry>
+  <Network>plexnet</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/91382-support-derbynet-server-docker/</Support>
+  <Project>http://jeffpiazza.github.io/derbynet/</Project>
+  <Overview>DerbyNet is the new standard in race management software for Pinewood Derby events. It's free, and it's open source. With DerbyNet, multiple browsers connect to a web server running on your laptop or in the cloud.&#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:8050]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/kiowadriver/unraid-docker/master/mitchellriley/derbynet_server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/mitchellriley/unraid-docker/master/mitchellriley/images/derbynet_server.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like the docker feel free to send a tip.</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=JUFXSDEHWW73L</DonateLink>
+  <Networking>
+    <Mode>plexnet</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8050</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8051</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/derbynet_server/data</HostDir>
+      <ContainerDir>/var/lib/derbynet</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>555</Value>
+      <Name>TIMER_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>murphy</Value>
+      <Name>RACE_CREW_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>doyourbest</Value>
+      <Name>RACE_COORD_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>flashbulb</Value>
+      <Name>PHOTO_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Webserver Port" Target="80" Default="8050" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8050</Config>
+  <Config Name="Secure Webserver Port (Self Signed Certs)" Target="443" Default="8051" Mode="tcp" Description="The docker has a secure webportal but the certificates are self signed.  " Type="Port" Display="always" Required="false" Mask="false">8051</Config>
+  <Config Name="Timer Password" Target="TIMER_PASSWORD" Default="" Mode="" Description="The Timer role is intended for use by the derby-timer.jar program running on the remote timer device connected to the track (raspberrypi). &#13;&#10;&#13;&#10;By default, the Timer user has an&#13;&#10;empty password, so it is not necessary to enter any password in derby-timer.jar. However, this&#13;&#10;password, like all passwords should be updated to secure the server.&#13;&#10;&#13;&#10;Note: The password must match the password set for TIMER_PASSWORD in the timer device (raspberrypi) /etc/derbynet.conf file.&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">555</Config>
+  <Config Name="Race Crew Password" Target="RACE_CREW_PASSWORD" Default="murphy" Mode="" Description="RaceCrew, password “murphy” (as in Don Murphy, not Murphy’s Law): this role can do things&#13;&#10;like check racers in, but not erase the database." Type="Variable" Display="always" Required="false" Mask="false">murphy</Config>
+  <Config Name="Race Coordinator Password" Target="RACE_COORD_PASSWORD" Default="doyourbest" Mode="" Description="RaceCoordinator, password default is “doyourbest” &#13;&#10;&#13;&#10;This role can do anything at all." Type="Variable" Display="always" Required="false" Mask="false">doyourbest</Config>
+  <Config Name="Database" Target="/var/lib/derbynet" Default="/mnt/user/appdata/derbynet_server/data/" Mode="rw" Description="Container Path: /var/lib/derbynet" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/derbynet_server/data</Config>
+  <Config Name="Photo Password" Target="PHOTO_PASSWORD" Default="flashbulb" Mode="" Description="You can upload photos to the web server via HTTP, using the Photo role. The default password for the Photo role is “flashbulb.”&#13;&#10;&#13;&#10;For an example of this, see extras/photostand/photostand.sh, a shell script for automated photo capture.&#13;&#10;(More description at http://www.derbytalk.com/viewtopic.php?f=25&amp;amp;t=8253.)" Type="Variable" Display="advanced" Required="true" Mask="false">flashbulb</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Date>1587510337</Date>
+  <Category>Cloud: Tools:Utilities Other:</Category>
+  <Description>DerbyNet is the new standard in race management software for Pinewood Derby events. It's free, and it's open source. With DerbyNet, multiple browsers connect to a web server running on your laptop or in the cloud.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/kiowa2005sRepository/mitchellriley/derbynet_server.xml</templatePath>
+</Container>

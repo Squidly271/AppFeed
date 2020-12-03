@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenVPN-AIO-Client</Name>
+  <Repository>testdasi/openvpn-client-aio:stable-amd64</Repository>
+  <Registry>https://registry.hub.docker.com/r/testdasi/openvpn-client-aio/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/96233-support-testdasi-repo/</Support>
+  <Project>https://github.com/testdasi/openvpn-client-aio</Project>
+  <Overview>An "all-in-one" docker for all your private browsing needs (including OpenVPN client with nftables kill switch ; Socks5 + HTTP proxy to both VPN and TOR (the onion router) ; DNS server to DoT (DNS-over-TLS) services). &#13;
+&#13;
+NOTE: you must place your own OpenVPN configuration to the host path that is mapped to /etc/openvpn (The ovpn file must be named openvpn.ovpn. Credentials + certs can be in the same file or split out into multiple files - the flexibility is yours.) &#13;
+&#13;
+Set DNS_SERVERS to 127.2.2.2 to use DNS-over-TLS (use google and cloudflare services by default). Your DNS query out of the VPN exit will also be encrypted for even more security. Set it to other services IP's will use normal unencrypted services. &#13;
+&#13;
+Set HOST_NETWORK to your Unraid server network in CIDR format e.g. 192.168.1.0/24.&#13;
+&#13;
+For more detailed instructions, refer to the support thread (https://forums.unraid.net/topic/96233-support-testdasi-repo/) or project page (https://github.com/testdasi/openvpn-client-aio).</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/openvpn-aio-client.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/testdasi/openvpn-client-aio-base/master/openvpn-simple.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work, a donation to my burger fund is very much appreciated.</DonateText>
+  <DonateLink>https://paypal.me/mersenne</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8153</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8153</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9118</HostPort>
+        <ContainerPort>9118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8118</HostPort>
+        <ContainerPort>8118</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9119</HostPort>
+        <ContainerPort>9119</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8119</HostPort>
+        <ContainerPort>8119</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openvpn-aio-client</HostDir>
+      <ContainerDir>/etc/openvpn</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>127.2.2.2</Value>
+      <Name>DNS_SERVERS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>192.168.1.0/24</Value>
+      <Name>HOST_NETWORK</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>53</Value>
+      <Name>DNS_SERVER_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>9118</Value>
+      <Name>SOCKS_PROXY_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8118</Value>
+      <Name>HTTP_PROXY_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>9119</Value>
+      <Name>TOR_SOCKS_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8119</Value>
+      <Name>TOR_HTTP_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="OpenVPN Config" Target="/etc/openvpn" Default="/mnt/user/appdata/openvpn-aio-client" Mode="rw" Description="Container Path: /etc/openvpn" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/openvpn-aio-client</Config>
+  <Config Name="DNS Server TCP" Target="53" Default="8153" Mode="tcp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">8153</Config>
+  <Config Name="DNS Server UDP" Target="53" Default="8153" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">8153</Config>
+  <Config Name="Socks5 proxy to VPN" Target="9118" Default="9118" Mode="tcp" Description="Container Port: 9118" Type="Port" Display="always" Required="false" Mask="false">9118</Config>
+  <Config Name="HTTP Proxy to VPN" Target="8118" Default="8118" Mode="tcp" Description="Container Port: 8118" Type="Port" Display="always" Required="false" Mask="false">8118</Config>
+  <Config Name="Socks5 proxy to TOR" Target="9119" Default="9119" Mode="tcp" Description="Container Port: 9119" Type="Port" Display="always" Required="false" Mask="false">9119</Config>
+  <Config Name="HTTP Proxy to TOR" Target="8119" Default="8119" Mode="tcp" Description="Container Port: 8119" Type="Port" Display="always" Required="false" Mask="false">8119</Config>
+  <Config Name="DNS_SERVERS" Target="DNS_SERVERS" Default="127.2.2.2" Mode="" Description="Container Variable: DNS_SERVERS" Type="Variable" Display="always" Required="false" Mask="false">127.2.2.2</Config>
+  <Config Name="HOST_NETWORK" Target="HOST_NETWORK" Default="192.168.1.0/24" Mode="" Description="Container Variable: HOST_NETWORK" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.0/24</Config>
+  <Config Name="DNS_SERVER_PORT" Target="DNS_SERVER_PORT" Default="53" Mode="" Description="Container Variable: DNS_SERVER_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">53</Config>
+  <Config Name="SOCKS_PROXY_PORT" Target="SOCKS_PROXY_PORT" Default="9118" Mode="" Description="Container Variable: SOCKS_PROXY_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">9118</Config>
+  <Config Name="HTTP_PROXY_PORT" Target="HTTP_PROXY_PORT" Default="8118" Mode="" Description="Container Variable: HTTP_PROXY_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8118</Config>
+  <Config Name="TOR_SOCKS_PORT" Target="TOR_SOCKS_PORT" Default="9119" Mode="" Description="Container Variable: TOR_SOCKS_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">9119</Config>
+  <Config Name="TOR_HTTP_PORT" Target="TOR_HTTP_PORT" Default="8119" Mode="" Description="Container Variable: TOR_HTTP_PORT" Type="Variable" Display="advanced-hide" Required="false" Mask="false">8119</Config>
+  <Date>1599766700</Date>
+  <Category>Security: Network:Web Network:DNS Network:Proxy Network:VPN Network:Other</Category>
+  <Description>An "all-in-one" docker for all your private browsing needs (including OpenVPN client with nftables kill switch ; Socks5 + HTTP proxy to both VPN and TOR (the onion router) ; DNS server to DoT (DNS-over-TLS) services). &#13;
+&#13;
+NOTE: you must place your own OpenVPN configuration to the host path that is mapped to /etc/openvpn (The ovpn file must be named openvpn.ovpn. Credentials + certs can be in the same file or split out into multiple files - the flexibility is yours.) &#13;
+&#13;
+Set DNS_SERVERS to 127.2.2.2 to use DNS-over-TLS (use google and cloudflare services by default). Your DNS query out of the VPN exit will also be encrypted for even more security. Set it to other services IP's will use normal unencrypted services. &#13;
+&#13;
+Set HOST_NETWORK to your Unraid server network in CIDR format e.g. 192.168.1.0/24.&#13;
+&#13;
+For more detailed instructions, refer to the support thread (https://forums.unraid.net/topic/96233-support-testdasi-repo/) or project page (https://github.com/testdasi/openvpn-client-aio).</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/testdasisRepository/openvpn-aio-client.xml</templatePath>
+</Container>

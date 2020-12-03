@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Rust-Server</Name>
+  <Repository>mdarkness1988/rust-server</Repository>
+  <Registry>https://hub.docker.com/r/mdarkness1988/rust-server</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://mdarkness1988.github.io/Rust-Server/</Support>
+  <Overview>Fully customizable Rust Server at your fingertips. [br] &#13;
+Set all of the settings below to suit your needs and save when you are ready. [br]  [br]&#13;
+Features: [br] &#13;
+Automatic updating system with wipe.  [br] &#13;
+Auto Port forwarding (UPnP).  [br] &#13;
+Simple Template for faster setup (Great for newbies).  &#13;
+Auto announcements, upto 5 messages to set.  &#13;
+Enable option to show wiped date in server title.  &#13;
+&#13;
+ &#13;
+</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/mdarkness1988/rust-server-template/master/Rust-Server.xml</TemplateURL>
+  <Icon>https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/46b63d3c-ae67-464c-9a37-670829b2a157/d72pie6-b94117ae-1ee5-4524-bee5-b1d1e6842781.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi80NmI2M2QzYy1hZTY3LTQ2NGMtOWEzNy02NzA4MjliMmExNTcvZDcycGllNi1iOTQxMTdhZS0xZWU1LTQ1MjQtYmVlNS1iMWQxZTY4NDI3ODEucG5nIn1dXX0.RZzbMbw2tLmR_Itu-BYKsA66ApJ7VMzLZ2Q-hf0BPUA</Icon>
+  <ExtraParams>-m 16g --restart unless-stopped</ExtraParams>
+  <PostArgs>-m 16</PostArgs>
+  <Date>1563249600</Date>
+  <DonateText>Any Donations will be appriciated</DonateText>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=GN7PRENKSZ8H2</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>28016</HostPort>
+        <ContainerPort>28016</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>28015</HostPort>
+        <ContainerPort>28015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>28015</HostPort>
+        <ContainerPort>28015</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Rust-Server/</HostDir>
+      <ContainerDir>/steamcmd/rust</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1</Value>
+      <Name>PUBLIC</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>PVE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>AUTO</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>WIPEDAYS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>WIPE_TITLE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>OXIDE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>PERFORMANCE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>public</Value>
+      <Name>RELEASE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>My Rust Server</Value>
+      <Name>NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DESCRIPTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>BANNER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>50</Value>
+      <Name>PLAYERS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>medium</Value>
+      <Name>MAPSIZE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>changeme</Value>
+      <Name>PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ARGUMENTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ANNOUNCE1</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ANNOUNCE2</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ANNOUNCE3</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ANNOUNCE4</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ANNOUNCE5</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>PORTFORWARD_WEB</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>28015</Value>
+      <Name>PORTFORWARD_RUST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>28016</Value>
+      <Name>PORTFORWARD_RCON</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>MAPSEED</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>My-server-name</Value>
+      <Name>IDENTITY</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>300</Value>
+      <Name>SAVE_INTERVAL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8</Value>
+      <Name>ANNOUNCE_DELAY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Public" Target="PUBLIC" Default="1" Mode="" Description="1 = Yes &amp;lt;/br&amp;gt; &#13;&#10;0 = No &amp;lt;/br&amp;gt;&#13;&#10;Be accessible online. &amp;lt;/br&amp;gt;&#13;&#10;Will automatically port forward your router. (UPnP) " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="PVE" Target="PVE" Default="0" Mode="" Description="1 = Enabled  (Player Vs Entities) &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled (Player Vs Player) " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Auto Maintenance" Target="AUTO" Default="1" Mode="" Description="1 = Yes &amp;lt;/br&amp;gt;&#13;&#10;0 = No &amp;lt;/br&amp;gt;&#13;&#10;Automatically updates server/oxide and manages wipes.  &amp;lt;/br&amp;gt;&#13;&#10;Will notify players before update happens. " Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Auto Wipe" Target="WIPEDAYS" Default="" Mode="" Description="Leave (BLANK) for no server wipes.  &amp;lt;/br&amp;gt;&#13;&#10;Enter the amount of days until server wipes. &amp;lt;/br&amp;gt;&#13;&#10;Example.. 7 will wipe the server 7 days after the map was created. &amp;lt;/br&amp;gt;&#13;&#10;Players will be notified before wipe. " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Wipe Date On Title" Target="WIPE_TITLE" Default="0" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disabled &amp;lt;/br&amp;gt;&#13;&#10;Will show the the server wiped date in the server name. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Oxide Plugin" Target="OXIDE" Default="0" Mode="" Description="1 = Enabled &amp;lt;/br&amp;gt;&#13;&#10;0 = Disable &amp;lt;/br&amp;gt; &#13;&#10;Be able to install plugins from Oxide. " Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="Performance" Target="PERFORMANCE" Default="1" Mode="" Description="1 = Resource Friendly (Optimized)  &amp;lt;/br&amp;gt;&#13;&#10;2 = Original (Rust Default Settings) &amp;lt;/br&amp;gt;&#13;&#10;3 = Competitive (Resource Gobbler)" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="Server Release" Target="RELEASE" Default="public" Mode="" Description="public = (Latest update)  &amp;lt;/br&amp;gt;&#13;&#10;prerelease = (Under development)" Type="Variable" Display="always" Required="true" Mask="false">public</Config>
+  <Config Name="Server Name" Target="NAME" Default="" Mode="" Description="Enter the server name. &amp;lt;/br&amp;gt;&#13;&#10;This is the name that will show up in Rust server list. " Type="Variable" Display="always" Required="true" Mask="false">My Rust Server</Config>
+  <Config Name="Server Description" Target="DESCRIPTION" Default="" Mode="" Description="The information about the server. &amp;lt;/br&amp;gt;&#13;&#10;This will be shown when this server is selected in rust server list. &amp;lt;/br&amp;gt;&#13;&#10;Use \n for new line. " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Banner URL" Target="BANNER" Default="" Mode="" Description="Banner must be 512x256 PNG" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Max Players" Target="PLAYERS" Default="100" Mode="" Description="Max amount of players that can join. " Type="Variable" Display="always" Required="true" Mask="false">50</Config>
+  <Config Name="Map Size" Target="MAPSIZE" Default="medium" Mode="" Description="tiny | small &amp;lt;/br&amp;gt;&#13;&#10;medium | large &amp;lt;/br&amp;gt;&#13;&#10;massive" Type="Variable" Display="always" Required="true" Mask="false">medium</Config>
+  <Config Name="Rcon Password" Target="PASSWORD" Default="changeme" Mode="" Description="Password to access Rcon (Remote Console) &amp;lt;/br&amp;gt;&#13;&#10;Leave blank for unsecure login (Not Recommended) " Type="Variable" Display="always" Required="false" Mask="false">server</Config>
+  <Config Name="(ADVANCED) Extra Startup Arguments" Target="ARGUMENTS" Default="" Mode="" Description="Extra rust arguments to be applied when starting up server. " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Announce 1" Target="ANNOUNCE1" Default="" Mode="" Description="Leave BLANK to disable announcements.  &amp;lt;/br&amp;gt;&#13;&#10;Enter announcement in order 1-5. &amp;lt;/br&amp;gt;&#13;&#10;Not all announcements must be filled " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Announce 2" Target="ANNOUNCE2" Default="" Mode="" Description="ANNOUNCEMENT 2" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Announce 3" Target="ANNOUNCE3" Default="" Mode="" Description="ANNOUNCEMENT 3" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Announce 4" Target="ANNOUNCE4" Default="" Mode="" Description="ANNOUNCEMENT 4" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Announce 5" Target="ANNOUNCE5" Default="" Mode="" Description="ANNOUNCEMENT 5" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Rust Server Directory" Target="/steamcmd/rust" Default="/mnt/user/appdata/Rust-Server/" Mode="rw" Description="Mapping Directory" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/Rust-Server/</Config>
+  <Config Name="Web Port" Target="8080" Default="8080" Mode="tcp" Description="Web host for Rcon" Type="Port" Display="advanced" Required="true" Mask="false">8080</Config>
+  <Config Name="Rcon Port" Target="28016" Default="28016" Mode="tcp" Description="Container Port: " Type="Port" Display="advanced" Required="true" Mask="false">28016</Config>
+  <Config Name="Rust Port TCP" Target="28015" Default="28015" Mode="tcp" Description="TCP" Type="Port" Display="advanced" Required="true" Mask="false">28015</Config>
+  <Config Name="Rust Port UDP" Target="28015" Default="28015" Mode="udp" Description="UDP" Type="Port" Display="advanced" Required="true" Mask="false">28015</Config>
+  <Config Name="Port Forward Web" Target="PORTFORWARD_WEB" Default="8080" Mode="" Description="Match this port with (Web Port)" Type="Variable" Display="advanced" Required="true" Mask="false">8080</Config>
+  <Config Name="Port Forward Rust" Target="PORTFORWARD_RUST" Default="28015" Mode="" Description="Match this port with (Rust Port)" Type="Variable" Display="advanced" Required="true" Mask="false">28015</Config>
+  <Config Name="Port Forward Rcon" Target="PORTFORWARD_RCON" Default="28016" Mode="" Description="Match this port with (Rcon Port)" Type="Variable" Display="advanced" Required="true" Mask="false">28016</Config>
+  <Config Name="Map Seed" Target="MAPSEED" Default="0" Mode="" Description="0 = Randomises the map terrain etc..  &amp;lt;/br&amp;gt;&#13;&#10;Or enter your own value if you want a consistent map on each wipe." Type="Variable" Display="advanced" Required="true" Mask="false">0</Config>
+  <Config Name="Server Folder Name" Target="IDENTITY" Default="Server-1" Mode="" Description="Server folder name,  e.g My-server-name" Type="Variable" Display="advanced" Required="true" Mask="false">My-server-name</Config>
+  <Config Name="Save Intervals" Target="SAVE_INTERVAL" Default="300" Mode="" Description="Value is in seconds. " Type="Variable" Display="advanced" Required="true" Mask="false">300</Config>
+  <Config Name="Announce Delay" Target="ANNOUNCE_DELAY" Default="8" Mode="" Description="Delay in minutes between each announcement." Type="Variable" Display="advanced" Required="true" Mask="false">8</Config>
+  <Category>GameServers:</Category>
+  <Description>Fully customizable Rust Server at your fingertips.  &#13;
+Set all of the settings below to suit your needs and save when you are ready.   &#13;
+Features:  &#13;
+Automatic updating system with wipe.   &#13;
+Auto Port forwarding (UPnP).   &#13;
+Simple Template for faster setup (Great for newbies).  &#13;
+Auto announcements, upto 5 messages to set.  &#13;
+Enable option to show wiped date in server title.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/mdarkness1988sRepository/Rust-Server.xml</templatePath>
+</Container>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>n8n</Name>
+  <Repository>n8nio/n8n</Repository>
+  <Registry>https://hub.docker.com/r/n8nio/n8n/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/97807-support-tmchow-n8n-workflow-automation/</Support>
+  <Project>https://n8n.io/</Project>
+  <Overview>n8n (pronounced n-eight-n) helps you to interconnect every app with an API in the world with each other to share and manipulate its data without a single line of code. It is an easy to use, user-friendly and highly customizable service, which uses an intuitive user interface for you to design your unique workflows very fast. Hosted on your server and not based in the cloud, it keeps your sensible data very secure in your own trusted database.
+    
+    [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    
+    [b]Config[/b] : Storing n8n config and SQL Lite db for your personal workflows.[br]
+    [b]Timezone[/b] : (Optional) Required for scheduling to know what time zone the workflows should be started. See https://momentjs.com/timezone/ to find your timezone string.[br]
+    [b]Webhook Tunnel URL[/b]: (Optional) Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')[br]
+    [b]Basic Auth[/b]: (true/false) If exposing this to the internet, strongly recommend you enable basic auth.[br]
+    [b]Basic Auth username[/b]: Username for basic auth[br]
+    [b]Basic Auth password[/b]:  Password for basic auth[br]
+  </Overview>
+  <WebUI>http://[IP]:[PORT:5678]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/master/n8n.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tmchow/unraid-docker-templates/master/img/n8n-icon.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5678</HostPort>
+        <ContainerPort>5678</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/n8n</HostDir>
+      <ContainerDir>/root/.n8n</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>America/Los_Angeles</Value>
+      <Name>GENERIC_TIMEZONE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>http://192.168.1.161:5678/</Value>
+      <Name>WEBHOOK_TUNNEL_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>N8N_BASIC_AUTH_ACTIVE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>N8N_BASIC_AUTH_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>N8N_BASIC_AUTH_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Timezone" Target="GENERIC_TIMEZONE" Default="America/Los_Angeles" Mode="" Description="Required for scheduling to know what time zone the workflows should be started. See  https://momentjs.com/timezone/ to find your timezone string." Type="Variable" Display="always" Required="false" Mask="false">America/Los_Angeles</Config>
+  <Config Name="Config" Target="/root/.n8n" Default="/mnt/cache/appdata/n8n" Mode="rw" Description="Where to save config and SQL Lite Database which holds your workflows." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/n8n</Config>
+  <Config Name="Webhook Tunnel URL" Target="WEBHOOK_TUNNEL_URL" Default="" Mode="" Description="Set the webhook URL manually to correctly display in Editor UI and for it to get registered correctly with external services. Must have trailing slash. (e.g.'http://192.168.1.161:5678/')" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.161:5678/</Config>
+  <Config Name="Port" Target="5678" Default="5678" Mode="tcp" Description="Container Port: 5678" Type="Port" Display="always" Required="true" Mask="false">5678</Config>
+  <Config Name="Basic Auth" Target="N8N_BASIC_AUTH_ACTIVE" Default="true" Mode="" Description="Enable basic authentication" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Basic Auth Username" Target="N8N_BASIC_AUTH_USER" Default="admin" Mode="" Description="If Basic Auth is enabled, must specify username" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="Basic Auth Password" Target="N8N_BASIC_AUTH_PASSWORD" Default="" Mode="" Description="If basic Auth is enabled, must specify password" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Date>1602863859</Date>
+  <Category>HomeAutomation: Tools:Utilities</Category>
+  <Description>n8n (pronounced n-eight-n) helps you to interconnect every app with an API in the world with each other to share and manipulate its data without a single line of code. It is an easy to use, user-friendly and highly customizable service, which uses an intuitive user interface for you to design your unique workflows very fast. Hosted on your server and not based in the cloud, it keeps your sensible data very secure in your own trusted database.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/tmchowsRepository/n8n.xml</templatePath>
+</Container>
