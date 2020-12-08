@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-  <Date>1605070800</Date>
+  <Date>1607403600</Date>
   <Name>Portainer-CE</Name>
   <Project>https://www.portainer.io/</Project>
   <Overview>
@@ -9,7 +9,7 @@
   <Registry>https://registry.hub.docker.com/r/portainer/portainer-ce</Registry>
   <GitHub>https://github.com/DanRegalia/Portainer-CE-Unraid</GitHub>
   <Repository>portainer/portainer-ce</Repository>
-  <Support>https://forums.unraid.net/topic/38974-support-limetechs-docker-repository/</Support>
+  <Support>https://forums.unraid.net/topic/99880-support-portainer-ce/</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment></Environment>
@@ -26,7 +26,12 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/portainer-ce</HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
