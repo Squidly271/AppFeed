@@ -46,6 +46,16 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
       <Mode>rw</Mode>
     </Volume>
     <Volume>
+      <HostDir>/tmpfs</HostDir>
+      <ContainerDir>/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/videos/camera</HostDir>
+      <ContainerDir>/clips</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
       <HostDir>/etc/localtime</HostDir>
       <ContainerDir>/etc/localtime</ContainerDir>
       <Mode>rw</Mode>
@@ -59,10 +69,13 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
     </Variable>
   </Environment>
   <Config Name="Edge Coral TPU USB" Target="" Default="" Mode="" Description="/dev/bus/usb" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
-  <Config Name="Path con config" Target="/config" Default="" Mode="rw" Description="/mnt/user/appdata/frigate" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/frigate</Config>
+  <Config Name="Path con config" Target="/config" Default="/mnt/user/appdata/frigate" Mode="rw" Description="/mnt/user/appdata/frigate" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/frigate</Config>
   <Config Name="Localtime" Target="/etc/localtime" Default="" Mode="rw" Description="/etc/localtime" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
   <Config Name="HTTP port" Target="5000" Default="" Mode="tcp" Description="5000" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
-  <Config Name="Frigate RTSP Password" Target="FRIGATE_RTSP_PASSWORD" Default="" Mode="" Description="Container Variable: FRIGATE_RTSP_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">'password'</Config>
+  <Config Name="Frigate RTSP Password" Target="FRIGATE_RTSP_PASSWORD" Default="" Mode="" Description="Container Variable: FRIGATE_RTSP_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">enterpassword</Config>
+  <Config Name="GPU Mapping" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri/</Config>
+  <Config Name="Cache TempFS is best" Target="/cache" Default="" Mode="rw" Description="Container Path: /cache" Type="Path" Display="always" Required="false" Mask="false">/tmpfs</Config>
+  <Config Name="Recordings if enabled in config" Target="/clips" Default="/clips" Mode="rw" Description="Container Path: /clips" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/videos/camera</Config>
   <Date>1603265522</Date>
   <Category>HomeAutomation: Security:</Category>
   <Description>NVR With Realtime Object Detection for IP Cameras&#13;
