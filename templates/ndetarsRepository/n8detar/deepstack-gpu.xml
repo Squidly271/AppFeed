@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>deepstack-gpu</Name>
+  <Repository>deepquestai/deepstack:gpu</Repository>
+  <Registry>https://hub.docker.com/r/deepquestai/deepstack</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://deepstack.cc</Project>
+  <Overview>DeepStack is an AI server that empowers every developer in the world to easily build state-of-the-art AI systems both on premise and in the cloud. The promises of Artificial Intelligence are huge but becoming a machine learning engineer is hard. Build and deploy AI powered applications with in-built and custom AI APIs, all offline and self-hosted. See https://deepstack.cc&#13;
+[br]&#13;
+This container is for use with NVIDIA GPUs. See https://deepstack.cc/using-deepstack-with-nvidia-gpus/index.html for offical documentation.&#13;
+[br]&#13;
+[br]&#13;
+To use with home assistant see: https://github.com/robmarkcole/HASS-Deepstack-object#hass-deepstack-object&#13;
+[br]&#13;
+[br]&#13;
+[b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b]&#13;
+[br]&#13;
+Install Unraid Nvidia Plugin to install Nvidia Drivers and[br] make sure [b]--runtime=nvidia[/b] is in the [b]"extra parameters"[/b] field (switch on advanced view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b]</Overview>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/n8detar/docker-templates/master/n8detar/deepstack-gpu.xml</TemplateURL>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/deepstack</HostDir>
+      <ContainerDir>/datastore</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>True</Value>
+      <Name>VISION-DETECTION</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>Medium</Value>
+      <Name>MODE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>False</Value>
+      <Name>VISION-FACE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Webui" Target="5000" Default="5000" Mode="tcp" Description="For access to the Web UI and API" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="datastore path" Target="/datastore" Default="" Mode="rw" Description="Container Path: /datastore" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/deepstack</Config>
+  <Config Name="VISION-DETECTION" Target="VISION-DETECTION" Default="True|False" Mode="" Description="Container Variable: VISION-DETECTION&#13;&#10;This enables the object detection API, all apis are disabled by default." Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices (Requires Nvidia GPU and Unraid Nvidia drivers)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Nvidia Driver Capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Nvidia Driver Capabilities (Requires Nvidia GPU and Unraid Nvidia drivers)" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Performance Mode" Target="MODE" Default="Hight|Medium|Low" Mode="" Description="DeepStack offers three modes allowing you to tradeoff speed for performance. You can specify performance mode to be High, Medium and Low." Type="Variable" Display="always" Required="false" Mask="false">Medium</Config>
+  <Config Name="VISION-FACE" Target="VISION-FACE" Default="True|False" Mode="" Description="This enables the face recognition APIs, all apis are disabled by default." Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Date>1608070706</Date>
+  <Category>HomeAutomation: Tools:Utilities</Category>
+  <Description>DeepStack is an AI server that empowers every developer in the world to easily build state-of-the-art AI systems both on premise and in the cloud. The promises of Artificial Intelligence are huge but becoming a machine learning engineer is hard. Build and deploy AI powered applications with in-built and custom AI APIs, all offline and self-hosted. See https://deepstack.cc&#13;
+&#13;
+This container is for use with NVIDIA GPUs. See https://deepstack.cc/using-deepstack-with-nvidia-gpus/index.html for offical documentation.&#13;
+&#13;
+&#13;
+To use with home assistant see: https://github.com/robmarkcole/HASS-Deepstack-object#hass-deepstack-object</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/ndetarsRepository/n8detar/deepstack-gpu.xml</templatePath>
+</Container>
