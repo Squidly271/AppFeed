@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>OpenBudgeteer</Name>
+  <Repository>axelander/openbudgeteer</Repository>
+  <Registry>https://hub.docker.com/r/axelander/openbudgeteer</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://gitlab.com/Axelander/openbudgeteer</Project>
+  <Overview>OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/TheAxelander/unraid_ca/master/OpenBudgeteer.xml</TemplateURL>
+  <Icon>https://gitlab.com/Axelander/openbudgeteer/-/raw/master/icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/database</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>Connection:Provider</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Connection:Server</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Connection:Port</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Connection:Database</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Connection:User</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>Connection:Password</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6000</Config>
+  <Config Name="Database Provider" Target="Connection:Provider" Default="mysql" Mode="" Description="mysql or sqlite" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database Server" Target="Connection:Server" Default="" Mode="" Description="IP address of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Port" Target="Connection:Port" Default="" Mode="" Description="Port of database server (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Name" Target="Connection:Database" Default="" Mode="" Description="Name of the database (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database User" Target="Connection:User" Default="" Mode="" Description="Database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Database Password" Target="Connection:Password" Default="" Mode="" Description="Password of database user (mysql only)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Sqlite Databse Path" Target="/app/database" Default="" Mode="rw" Description="Path of local sqlite database (sqlite only)" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Date>1607942823</Date>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/AxelandersRepository/OpenBudgeteer.xml</templatePath>
+</Container>
