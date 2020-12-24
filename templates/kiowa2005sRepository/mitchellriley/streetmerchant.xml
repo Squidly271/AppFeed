@@ -59,12 +59,12 @@ To test notifications two methods exist:&#13;
     </Variable>
     <Variable>
       <Value></Value>
-      <Name>EMAIL_PASSWORD</Name>
+      <Name>EMAIL_USERNAME</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
       <Value></Value>
-      <Name>SHOW_ONLY_MODELS</Name>
+      <Name>EMAIL_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
@@ -110,6 +110,41 @@ To test notifications two methods exist:&#13;
     <Variable>
       <Value>0</Value>
       <Name>IN_STOCK_WAIT_TIME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SCREENSHOT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PHONE_CARRIER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PHONE_NUMBER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SHOW_ONLY_BRANDS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SHOW_ONLY_SERIES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SHOW_ONLY_MODELS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>STORES</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
@@ -163,11 +198,6 @@ To test notifications two methods exist:&#13;
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>true</Value>
-      <Name>SCREENSHOT</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
       <Value>8081</Value>
       <Name>WEB_PORT</Name>
       <Mode></Mode>
@@ -175,16 +205,6 @@ To test notifications two methods exist:&#13;
     <Variable>
       <Value>usa</Value>
       <Name>COUNTRY</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>PHONE_CARRIER</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value></Value>
-      <Name>PHONE_NUMBER</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
@@ -208,8 +228,8 @@ To test notifications two methods exist:&#13;
   <Config Name="PROXY_ADDRESS" Target="PROXY_ADDRESS" Default="" Mode="" Description="The IP address or domain name of your proxy" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="PROXY_PORT" Target="PROXY_PORT" Default="80" Mode="" Description="TCP Port number on which the proxy is listening for connections" Type="Variable" Display="always-hide" Required="false" Mask="false">80</Config>
   <Config Name="EMAIL_TO" Target="EMAIL_TO" Default="" Mode="" Description="Destination Email. Defaults to username if not set. Can be comma separated" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="EMAIL_USERNAME" Target="EMAIL_USERNAME" Default="" Mode="" Description="Email address" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="EMAIL_PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="Email password. (See below for Gmail MFA users)&#13;&#10;&#13;&#10;If you use Gmail and have multi-factor authentication (MFA), you will need to create an app password and use this instead of your Gmail password.&#13;&#10;&#13;&#10;https://myaccount.google.com/apppasswords" Type="Variable" Display="always-hide" Required="false" Mask="true"></Config>
-  <Config Name="SHOW_ONLY_MODELS" Target="SHOW_ONLY_MODELS" Default="" Mode="" Description="Filter to show specified models&#9;Both supported formats are comma separated" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="TWITTER_ACCESS_TOKEN_KEY" Target="TWITTER_ACCESS_TOKEN_KEY" Default="" Mode="" Description="Container Variable: TWITTER_ACCESS_TOKEN_KEY" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="TWITTER_ACCESS_TOKEN_SECRET" Target="TWITTER_ACCESS_TOKEN_SECRET" Default="" Mode="" Description="Twitter Token Secret" Type="Variable" Display="always-hide" Required="false" Mask="true"></Config>
   <Config Name="TWITTER_CONSUMER_KEY" Target="TWITTER_CONSUMER_KEY" Default="" Mode="" Description="Twitter Consumer Key" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
@@ -219,6 +239,13 @@ To test notifications two methods exist:&#13;
   <Config Name="TELEGRAM_CHAT_ID" Target="TELEGRAM_CHAT_ID" Default="" Mode="" Description="Chat ID. Can be comma separated, e.g.: 123456789,987654321" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="PUSHBULLET" Target="PUSHBULLET" Default="" Mode="" Description="API key" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="IN_STOCK_WAIT_TIME" Target="IN_STOCK_WAIT_TIME" Default="0" Mode="" Description="Time to wait between requests to the same link if it has that card in stock. In seconds" Type="Variable" Display="always-hide" Required="true" Mask="false">0</Config>
+  <Config Name="SCREENSHOT" Target="SCREENSHOT" Default="true" Mode="" Description="Capture screenshot of page if the product is in stock." Type="Variable" Display="always-hide" Required="true" Mask="false">true</Config>
+  <Config Name="PHONE_CARRIER" Target="PHONE_CARRIER" Default="" Mode="" Description="Supported carriers for SMS. E.g.: att or att,verizon,google, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number.&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/notification/#supported-carriers" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="PHONE_NUMBER" Target="PHONE_NUMBER" Default="" Mode="" Description="10 digit phone number(s). E.g.: 1234567890 or 1234567890,0987654321,11112223333, email configuration required.  " Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="SHOW_ONLY_BRANDS" Target="SHOW_ONLY_BRANDS" Default="" Mode="" Description="Filter to show specified brands. Comma separated, e.g.: evga,zotac&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/filter/" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="SHOW_ONLY_SERIES" Target="SHOW_ONLY_SERIES" Default="" Mode="" Description="Filter to show specified series. Comma separated, e.g.: 3080,ryzen5900&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/filter/" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="SHOW_ONLY_MODELS" Target="SHOW_ONLY_MODELS" Default="" Mode="" Description="Filter to show specified models&#9;Both supported formats are comma separated" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Config Name="STORES" Target="STORES" Default="" Mode="" Description="Supported stores you want to be scraped. Default: amazon,bestbuy. Comma separated, can include PAGE_SLEEP_MIN and PAGE_SLEEP_MAX values. E.g.: amazon:10000:30000,bestbuy,newegg:50000:80000.&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/filter/#supported-stores" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="AUTO_ADD_TO_CART" Target="AUTO_ADD_TO_CART" Default="false" Mode="" Description="Future Feature. Not available yet.&#13;&#10;&#13;&#10;Enable auto add to cart on support stores, default: true" Type="Variable" Display="advanced-hide" Required="false" Mask="false">false</Config>
   <Config Name="BROWSER_TRUSTED" Target="BROWSER_TRUSTED" Default="true" Mode="" Description="Skip Chromium Sandbox. Set to true for containerized environments," Type="Variable" Display="advanced-hide" Required="true" Mask="false">true</Config>
   <Config Name="HEADLESS" Target="HEADLESS" Default="true" Mode="" Description="Puppeteer to run headless or not. Debugging related, default: true" Type="Variable" Display="advanced-hide" Required="true" Mask="false">true</Config>
@@ -229,16 +256,13 @@ To test notifications two methods exist:&#13;
   <Config Name="PAGE_SLEEP_MIN" Target="PAGE_SLEEP_MIN" Default="5000" Mode="" Description="Minimum sleep time between queries of the same product page. In milliseconds," Type="Variable" Display="advanced-hide" Required="true" Mask="false">5000</Config>
   <Config Name="PAGE_SLEEP_MAX" Target="PAGE_SLEEP_MAX" Default="10000" Mode="" Description="Maximum sleep time between queries of the same product page. In milliseconds," Type="Variable" Display="advanced-hide" Required="true" Mask="false">10000</Config>
   <Config Name="PAGE_TIMEOUT" Target="PAGE_TIMEOUT" Default="30000" Mode="" Description="Navigation Timeout in milliseconds. 0 for infinite, default: 30000" Type="Variable" Display="advanced-hide" Required="true" Mask="false">30000</Config>
-  <Config Name="SCREENSHOT" Target="SCREENSHOT" Default="true" Mode="" Description="Capture screenshot of page if the product is in stock." Type="Variable" Display="always-hide" Required="true" Mask="false">true</Config>
   <Config Name="WEB_PORT" Target="WEB_PORT" Default="8081" Mode="" Description="This must be synchronized with the Web Interface Port values.&#13;&#10;&#13;&#10;This is the internal port the container should serve the web interface on." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8081</Config>
   <Config Name="COUNTRY" Target="COUNTRY" Default="usa" Mode="" Description="Supported country you want to be scraped&#9;Only used with nvidia-api, default: usa&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/filter/#supported-countries" Type="Variable" Display="advanced-hide" Required="false" Mask="false">usa</Config>
-  <Config Name="PHONE_CARRIER" Target="PHONE_CARRIER" Default="" Mode="" Description="Supported carriers for SMS. E.g.: att or att,verizon,google, email configuration required. If multiple phone numbers are listed, enter a carrier for each phone number.&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/notification/#supported-carriers" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
-  <Config Name="PHONE_NUMBER" Target="PHONE_NUMBER" Default="" Mode="" Description="10 digit phone number(s). E.g.: 1234567890 or 1234567890,0987654321,11112223333, email configuration required.  " Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="Log Path" Target="/home/appuser/.npm/_logs" Default="/mnt/user/appdata/streetmerchant/logs" Mode="rw" Description="This is where log files will be written if an error occurs. " Type="Path" Display="advanced-hide" Required="true" Mask="null">/mnt/user/appdata/streetmerchant/logs</Config>
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="25" Mode="" Description="TCP Port number on which the smtp server is listening for connections." Type="Variable" Display="advanced-hide" Required="false" Mask="false">25</Config>
   <Config Name="SMTP_ADDRESS" Target="SMTP_ADDRESS" Default="" Mode="" Description="IP Address or FQDN of SMTP server" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="Console Verbosity" Target="LOG_LEVEL" Default="info" Mode="" Description="The console output verbosity.  &#13;&#10;&#13;&#10;Note: This is not logged to the system logger." Type="Variable" Display="advanced-hide" Required="true" Mask="false">info</Config>
-  <Date>1608500615</Date>
+  <Date>1608827088</Date>
   <Category>Cloud:</Category>
   <Description>This service is a automated stock checker primarily focused on CPUs, GPUs, and Console Gaming Systems that has an abundance of mechanisms to notify your user group when items are available to include a link to add to an online cart.&#13;
  &#13;

@@ -51,7 +51,7 @@ Go to https://github.com/agusalex/grive2Docker/wiki/Setup and follow the setup g
     </Variable>
     <Variable>
       <Value></Value>
-      <Name>SLEEP</Name>
+      <Name>CRON</Name>
       <Mode></Mode>
     </Variable>
   </Environment>
@@ -60,7 +60,7 @@ Go to https://github.com/agusalex/grive2Docker/wiki/Setup and follow the setup g
   <Config Name="SECRET" Target="SECRET" Default="" Mode="" Description="Your Client Secret obtained by doing the procedure in the description" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="CODE" Target="CODE" Default="" Mode="" Description="Your client secret obtained from the URL in the description&#13;&#10;Delete me after the setup is complete" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="GRIVE_PARAMS" Target="PARAMS" Default="" Mode="" Description="Passes parameters to grive2. For example -s my_drive_folder. See https://github.com/agusalex/grive2docker#grive-settings " Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SLEEP" Target="SLEEP" Default="" Mode="" Description="Amount of time to sleep between runs. In order to minimize CPU usage set this to a lower value. &#13;&#10;Default is 1 second." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CRON" Target="CRON" Default="" Mode="" Description="Crontab schedule to run this container, use this to generate it: https://crontab.guru/" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Date>1601595435</Date>
   <Category>Backup: Cloud: Network:Other Productivity: Tools:Utilities</Category>
   <Description>Backup your files to Google Drive using Grive2 client in a docker container&#13;
