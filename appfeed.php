@@ -62,7 +62,8 @@ $master_Categories = array(
 		)
 	),
 	array("Cat" => "Other:", "Des" => "Other"),
-	array("Cat" => "Plugins:", "Des" => "Plugins")
+	array("Cat" => "Plugins:", "Des" => "Plugins"),
+	array("Cat" => "Drivers:", "Des" => "Drivers")
 );
 
 function makeXML($template) {
