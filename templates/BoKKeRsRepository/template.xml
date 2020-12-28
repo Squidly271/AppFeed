@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-  <Name>RSSTT---RSS-To-Telegram</Name>
+  <Name>RSS-To-Telegram</Name>
   <Repository>bokker/rss.to.telegram:latest</Repository>
   <Registry>https://hub.docker.com/r/bokker/rss.to.telegram</Registry>
   <Network>bridge</Network>
@@ -20,13 +20,6 @@
     <Mode>bridge</Mode>
     <Publish></Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/RSSTT</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <Environment>
     <Variable>
       <Value></Value>
@@ -47,6 +40,7 @@
   <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="Telegram bot token https://botsfortelegram.com/project/the-bot-father/" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="CHATID" Target="CHATID" Default="" Mode="" Description="Telegram chatId, can be found by running bot with /help" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="DELAY" Target="DELAY" Default="" Mode="" Description="Delay between RSS feed checks" Type="Variable" Display="always" Required="true" Mask="false">60</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/rsstt" Mode="rw" Description="Config Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rsstt</Config>
   <Date>1597503801</Date>
   <Category>Network:Other Network:Messenger Productivity: Status:Beta</Category>
   <templatePath>/tmp/GitHub/AppFeed/templates/BoKKeRsRepository/template.xml</templatePath>
