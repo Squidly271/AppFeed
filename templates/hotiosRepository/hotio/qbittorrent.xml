@@ -1,51 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-  <Name>sabnzbd</Name>
-  <Repository>hotio/sabnzbd</Repository>
-  <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+  <Name>qbittorrent</Name>
+  <Repository>hotio/qbittorrent</Repository>
+  <Registry>https://hub.docker.com/r/hotio/qbittorrent</Registry>
   <Branch>
     <Tag>release-dockerhub</Tag>
-    <TagDescription>Releases</TagDescription>
-    <Repository>hotio/sabnzbd:release</Repository>
-    <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+    <TagDescription>Stable</TagDescription>
+    <Repository>hotio/qbittorrent:release</Repository>
+    <Registry>https://hub.docker.com/r/hotio/qbittorrent</Registry>
   </Branch>
   <Branch>
     <Tag>testing-dockerhub</Tag>
-    <TagDescription>Pre-releases</TagDescription>
-    <Repository>hotio/sabnzbd:testing</Repository>
-    <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
-  </Branch>
-  <Branch>
-    <Tag>nightly-dockerhub</Tag>
-    <TagDescription>Every commit to develop branch</TagDescription>
-    <Repository>hotio/sabnzbd:nightly</Repository>
-    <Registry>https://hub.docker.com/r/hotio/sabnzbd</Registry>
+    <TagDescription>Unstable</TagDescription>
+    <Repository>hotio/qbittorrent:testing</Repository>
+    <Registry>https://hub.docker.com/r/hotio/qbittorrent</Registry>
   </Branch>
   <Branch>
     <Tag>release-ghcr</Tag>
-    <TagDescription>Releases</TagDescription>
-    <Repository>ghcr.io/hotio/sabnzbd:release</Repository>
-    <Registry>https://github.com/orgs/hotio/packages/container/package/sabnzbd</Registry>
+    <TagDescription>Stable</TagDescription>
+    <Repository>ghcr.io/hotio/qbittorrent:release</Repository>
+    <Registry>https://github.com/orgs/hotio/packages/container/package/qbittorrent</Registry>
   </Branch>
   <Branch>
     <Tag>testing-ghcr</Tag>
-    <TagDescription>Pre-releases</TagDescription>
-    <Repository>ghcr.io/hotio/sabnzbd:testing</Repository>
-    <Registry>https://github.com/orgs/hotio/packages/container/package/sabnzbd</Registry>
-  </Branch>
-  <Branch>
-    <Tag>nightly-ghcr</Tag>
-    <TagDescription>Every commit to develop branch</TagDescription>
-    <Repository>ghcr.io/hotio/sabnzbd:nightly</Repository>
-    <Registry>https://github.com/orgs/hotio/packages/container/package/sabnzbd</Registry>
+    <TagDescription>Unstable</TagDescription>
+    <Repository>ghcr.io/hotio/qbittorrent:testing</Repository>
+    <Registry>https://github.com/orgs/hotio/packages/container/package/qbittorrent</Registry>
   </Branch>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://hotio.dev/discord</Support>
-  <Project>https://hotio.dev/containers/sabnzbd</Project>
-  <Icon>https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/img/sabnzbd.png</Icon>
-  <Overview>Free and easy binary newsreader.</Overview>
-  <Description>Free and easy binary newsreader.</Description>
+  <Project>https://hotio.dev/containers/qbittorrent</Project>
+  <Icon>https://raw.githubusercontent.com/hotio/unraid-templates/master/hotio/img/qbittorrent.png</Icon>
+  <Overview>The qBittorrent project aims to provide an open-source software alternative to µTorrent.</Overview>
+  <Description>The qBittorrent project aims to provide an open-source software alternative to µTorrent.</Description>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <PostArgs></PostArgs>
   <Network>bridge</Network>
@@ -57,5 +45,5 @@
   <Config Name="ARGS" Target="ARGS" Default="" Mode="" Description="Container Variable: ARGS" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="DEBUG" Target="DEBUG" Default="no|yes" Mode="" Description="Container Variable: DEBUG" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Category>Downloaders:</Category>
-  <templatePath>/tmp/GitHub/AppFeed/templates/hotiosRepository/hotio/sabnzbd.xml</templatePath>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hotiosRepository/hotio/qbittorrent.xml</templatePath>
 </Container>
