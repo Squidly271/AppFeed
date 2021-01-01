@@ -29,7 +29,7 @@ device (usually [b][i]/dev/sr0[/i][/b]) by adding the parameter
   <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/handbrake.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/handbrake-icon.png</Icon>
   <Project>https://handbrake.fr/</Project>
-  <Date>1596600000</Date>
+  <Date>1609477200</Date>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -124,6 +124,11 @@ device (usually [b][i]/dev/sr0[/i][/b]) by adding the parameter
       <Mode></Mode>
     </Variable>
     <Variable>
+      <Value></Value>
+      <Name>AUTOMATED_CONVERSION_VIDEO_FILE_EXTENSIONS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
       <Value>ignore</Value>
       <Name>AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION</Name>
       <Mode></Mode>
@@ -141,6 +146,11 @@ device (usually [b][i]/dev/sr0[/i][/b]) by adding the parameter
     <Variable>
       <Value></Value>
       <Name>AUTOMATED_CONVERSION_OUTPUT_SUBDIR</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>AUTOMATED_CONVERSION_OVERWRITE_OUTPUT</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
@@ -194,10 +204,12 @@ device (usually [b][i]/dev/sr0[/i][/b]) by adding the parameter
   <Config Name="Automatic Video Converter: Preset" Target="AUTOMATED_CONVERSION_PRESET" Default="General/Very Fast 1080p30" Mode="" Description="Preset used by the automatic video converter.  Identification of the preset must follow the format 'CATEGORY/PRESET NAME'.  Name of all available presets can be seen via the HandBrake GUI." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Format" Target="AUTOMATED_CONVERSION_FORMAT" Default="mp4" Mode="" Description="Video container format used by the automatic video converter for output files.  This is typically the video filename extension." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Keep Source Files" Target="AUTOMATED_CONVERSION_KEEP_SOURCE" Default="1" Mode="" Description="Set to 0 to remove successfully converted videos from the watch folder, 1 to keep them." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Video Converter: Video File Extensions" Target="AUTOMATED_CONVERSION_VIDEO_FILE_EXTENSIONS" Default="" Mode="" Description="Space-separated list of file extensions to be considered as video files.  By default, this list is empty, meaning that the automatic video converter will let HandBrake automatically detects if a file, no matter its extension, is a video or not (note that extensions defined by the &amp;lt;i&amp;gt;Non-Video File Extensions&amp;lt;/i&amp;gt; list are always considered as non-video files).  Normally, this variable doesn't need to be set.  Usage of this variable is useful when only specific video files need to converted." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Non-Video File Action" Target="AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION" Default="ignore" Mode="" Description="Set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;ignore&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; to ignore non-video files from the watch folder, or set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;copy&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; to copy them as-is to the output folder." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Non-Video File Extensions" Target="AUTOMATED_CONVERSION_NON_VIDEO_FILE_EXTENSIONS" Default="jpg jpeg bmp png gif txt nfo" Mode="" Description="Space-separated list of file extensions to be considered as not being videos.  Most non-video files are properly rejected by HandBrake.  However, some files, like images, are convertible by HandBrake even if they are not video files." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Output directory" Target="AUTOMATED_CONVERSION_OUTPUT_DIR" Default="/output" Mode="" Description="Root directory where converted videos should be written." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Output Subdirectory" Target="AUTOMATED_CONVERSION_OUTPUT_SUBDIR" Default="" Mode="" Description="Subdirectory of the output folder into which converted videos should be written.&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Leave value empty to save converted videos directly into &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;/output/&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Use the special value &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;SAME_AS_SRC&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; to use the same subfolder as the source.  For example, if the video source file is &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;/watch/Movies/mymovie.mkv&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;, the converted video will be written to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;/output/Movies/&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Use any subfolder name.  For example, setting the value &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;Home/Movies&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt; will make converted videos written to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;/output/Home/Movies&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;/&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Automatic Video Converter: Overwrite Destination" Target="AUTOMATED_CONVERSION_OVERWRITE_OUTPUT" Default="0" Mode="" Description="Setting this to 1 allows the final destination file to be overwritten if it already exists." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Source File Stable Time" Target="AUTOMATED_CONVERSION_SOURCE_STABLE_TIME" Default="5" Mode="" Description="Time (in seconds) during which properties (e.g. size, time, etc) of a video file in the watch folder need to remain the same.  This is to avoid processing a file that is being copied." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Minimum Title Duration" Target="AUTOMATED_CONVERSION_SOURCE_MIN_DURATION" Default="10" Mode="" Description="Minimum title duration (in seconds).  Shorter titles will be ignored.  This applies only to video disc sources (ISO file, &amp;lt;i&amp;gt;VIDEO_TS&amp;lt;/i&amp;gt; folder or &amp;lt;i&amp;gt;BDMV&amp;lt;/i&amp;gt; folder)." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Automatic Video Converter: Check Interval" Target="AUTOMATED_CONVERSION_CHECK_INTERVAL" Default="5" Mode="" Description="Interval (in seconds) at which the automatic video converter checks for new files." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
