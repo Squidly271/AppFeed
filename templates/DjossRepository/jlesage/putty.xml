@@ -21,7 +21,7 @@
   <TemplateURL>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/putty.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/putty-icon.png</Icon>
   <Project>https://www.putty.org</Project>
-  <Date>1595131200</Date>
+  <Date>1609736400</Date>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -85,6 +85,11 @@
       <Name>X11VNC_EXTRA_OPTS</Name>
       <Mode></Mode>
     </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>DISABLE_RESTART_SESSION_DIALOG_WINDOW</Name>
+      <Mode></Mode>
+    </Variable>
   </Environment>
   <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/putty" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
@@ -95,6 +100,7 @@
   <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Secure Connection" Target="SECURE_CONNECTION" Default="0" Mode="" Description="Whether or not an encrypted connection should be used to access the application's GUI.  Set to &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;1&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; to encrypt the connection.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Note:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; When enabling the secure connection, security parameters needs to be generated.  This &amp;lt;b&amp;gt;one-time&amp;lt;/b&amp;gt; operation is done during container startup.  Depending on your system, this could take a few minutes.  GUI of the application won't be available until the operation completes." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="Extra x11vnc Options" Target="X11VNC_EXTRA_OPTS" Default="" Mode="" Description="Extra options to pass to the x11vnc server running in the Docker container.&amp;lt;br&amp;gt;&amp;lt;span style='color: red;'&amp;gt;&amp;lt;b&amp;gt;Warning:&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt; For advanced users. Do not use unless you know what you are doing." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Disable Restart Session Dialog Window" Target="DISABLE_RESTART_SESSION_DIALOG_WINDOW" Default="0" Mode="" Description="When set to &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;1&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;, the dialog window used to restart PuTTY session is not displayed." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="WEB Port for GUI" Target="5800" Default="7816" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"></Config>
   <Config Name="VNC Port for GUI" Target="5900" Default="7916" Mode="tcp" Description="Port used to access the application's GUI via the VNC protocol.  Optional if no VNC client is used." Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
   <DonateLink>https://paypal.me/JocelynLeSage/0usd</DonateLink>
