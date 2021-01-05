@@ -4,7 +4,6 @@
   <Repository>photoprism/photoprism</Repository>
   <Registry>https://hub.docker.com/r/photoprism/photoprism</Registry>
   <Network>bridge</Network>
-  <Beta>true</Beta>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
@@ -166,7 +165,7 @@ Database lockups: If you got problems where the database lockes up you should sw
     </Variable>
   </Environment>
   <Config Name="Data Dir" Target="/photoprism/storage" Default="" Mode="rw" Description="Storage PATH for generated files like cache and index (Keep cache, settings and database)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/photoprism</Config>
-  <Config Name="Storage Path" Target="/photoprism/originals" Default="" Mode="rw" Description="Path to your images and storage folder for your settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Pictures</Config>
+  <Config Name="Storage Path" Target="/photoprism/originals" Default="" Mode="rw" Description="Path to your images and storage folder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Pictures</Config>
   <Config Name="Photo Import Folder" Target="/photoprism/import" Default="" Mode="rw" Description="Only if you want to use the Import function of PhotoPrism (ATTENTION: Don't put the import folder in a subdirectory of the storage folder for your images!)" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Offensive Uploads" Target="PHOTOPRISM_UPLOAD_NSFW" Default="" Mode="" Description="Allow uploads that MAY be offensive (Valid options: 'true' or 'false')" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Flag Offensive Photos" Target="PHOTOPRISM_DETECT_NSFW" Default="" Mode="" Description="Flag photos as private that MAY be offensive (Valid options: 'true' or 'false')" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
@@ -192,7 +191,7 @@ Database lockups: If you got problems where the database lockes up you should sw
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="Storage Path" Target="PHOTOPRISM_STORAGE_PATH" Default="" Mode="" Description="Change only if you know what you are doing! (delete this value if you want to store your database and generated thumnails in the main directory)" Type="Variable" Display="advanced" Required="false" Mask="false">/photoprism/storage</Config>
-  <Category>Productivity: MediaApp:Photos Status:Beta</Category>
+  <Category>Productivity: MediaApp:Photos</Category>
   <Description>PhotoPrism™ is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.&#13;
 &#13;
 Please also support the developer of this superior project through a PayPal donation or on Patreon.&#13;
