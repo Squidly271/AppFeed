@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>iobroker</Name>
+  <Repository>buanet/iobroker</Repository>
+  <Registry>https://hub.docker.com/r/buanet/iobroker/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/101016-support-buanet-iobroker/</Support>
+  <Project>https://www.iobroker.net/</Project>
+  <Overview>ioBroker is an Open Source IoT platform (Fog computing) which has the ability to manage your IoT system through an graphical interface.</Overview>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/iobroker.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/images/iobroker.png</Icon>
+  <ExtraParams>--no-healthcheck </ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>http://paypal.me/marcgutt</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8282</HostPort>
+        <ContainerPort>8282</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2001</HostPort>
+        <ContainerPort>2001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>1880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8284</HostPort>
+        <ContainerPort>8284</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iobroker/data</HostDir>
+      <ContainerDir>/opt/iobroker</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iobroker/scripts</HostDir>
+      <ContainerDir>/opt/userscripts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>USBDEVICES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>SETUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>SETGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Data" Target="/opt/iobroker" Default="" Mode="rw" Description="Container Path: /opt/iobroker" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/iobroker/data</Config>
+  <Config Name="Scripts" Target="/opt/userscripts" Default="" Mode="rw" Description="Container Path: /opt/userscripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/iobroker/scripts</Config>
+  <Config Name="USB Devices" Target="USBDEVICES" Default="" Mode="" Description="Sets relevant permissions on mounted devices like " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="flot Port" Target="8282" Default="" Mode="tcp" Description="flot adapter" Type="Port" Display="always" Required="false" Mask="false">8282</Config>
+  <Config Name="HomeMatic Port" Target="2001" Default="" Mode="tcp" Description="Container Port: 2001" Type="Port" Display="always" Required="false" Mask="false">2001</Config>
+  <Config Name="MQTT Port" Target="1883" Default="" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="Node-RED Port" Target="1880" Default="" Mode="tcp" Description="Container Port: 1880" Type="Port" Display="always" Required="false" Mask="false">1880</Config>
+  <Config Name="Socket.IO Port" Target="8284" Default="" Mode="tcp" Description="Container Port: 8284" Type="Port" Display="always" Required="false" Mask="false">8284</Config>
+  <Config Name="UID" Target="SETUID" Default="" Mode="" Description="Container Variable: SETUID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="SETGID" Default="" Mode="" Description="Container Variable: SETGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="WebUI Port" Target="8081" Default="" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="advanced-hide" Required="false" Mask="false">8081</Config>
+  <Date>1609957246</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>ioBroker is an Open Source IoT platform (Fog computing) which has the ability to manage your IoT system through an graphical interface.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/mguttsRepository/mgutt/iobroker.xml</templatePath>
+</Container>
