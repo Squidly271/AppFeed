@@ -9,7 +9,7 @@
   <Support>https://forums.unraid.net/topic/96221-support-funnypocketbook-firefly-iii</Support>
   <Project>https://github.com/firefly-iii/bunq-importer</Project>
   <Overview>This is a tool to import from bunq into Firefly III. It works by using your bunq API token and a Firefly III personal access token to access your Firefly III installation's API.</Overview>
-  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/FunnyPocketBook/docker-templates/master/firefly-iii-bunq-importer.xml</TemplateURL>
   <Icon>https://camo.githubusercontent.com/794353350b564a5d0c0244cd6d82586c9ffd22f4/68747470733a2f2f7777772e66697265666c792d6969692e6f72672f7374617469632f696d672f6c6f676f2d736d616c6c2d6e65772e706e67</Icon>
   <PostArgs></PostArgs>
@@ -51,7 +51,7 @@
   <Config Name="FIREFLY_III_URL" Target="FIREFLY_III_URL" Default="" Mode="" Description="Container Variable: FIREFLY_III_URL - URL of Firefly-III instance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="BUNQ_API_CODE" Target="BUNQ_API_CODE" Default="" Mode="" Description="Container Variable: BUNQ_API_CODE" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="BUNQ_API_URL" Target="BUNQ_API_URL" Default="" Mode="" Description="Container Variable: BUNQ_API_URL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
   <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY" Type="Variable" Display="always" Required="false" Mask="false">SomeRandomStringOf32CharsExactly</Config>
   <Date>1598666768</Date>
   <Category>Productivity:</Category>
