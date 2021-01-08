@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <Name>Zoneminder</Name>
-  <Date>1579237200</Date>
+  <Date>1610082000</Date>
   <Project>https://zoneminder.com/</Project>
-  <Repository>dlandon/zoneminder</Repository>
-  <Registry>https://hub.docker.com/r/dlandon/zoneminder/</Registry>
+  <Repository>dlandon/zoneminder.unraid</Repository>
+  <Registry>https://hub.docker.com/r/dlandon/zoneminder.unraid/</Registry>
   <DonateText>For my retirement.</DonateText>
   <DonateLink>https://www.paypal.com/us/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EJGPC7B5CS66E</DonateLink>
   <DonateImage>https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png</DonateImage>
   <Network>bridge</Network>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.lime-technology.com/topic/56632-support-dlandon-zoneminder-130/</Support>
+  <Support>https://forums.lime-technology.com/topic/56632-support-dlandon-zoneminder-134/</Support>
   <WebUI>https://[IP]:[PORT:443]/zm</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/dlandon/docker.templates/master/Zoneminder.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/dlandon/docker.templates/master/zoneminder.png</Icon>
@@ -24,13 +24,6 @@
     [b]WebUI Port[/b] - Port used to access Zoneminder using ssl security.  Change the desired port for access to the Zoneminder WebUI if necessary.  The default port of 8443 might not be appropriate for your system.[br][br]
 	[b]Shared Memory[/b] - Turn on the advanced view and adjust the '--shm-size' in the Extra Parameters to half of your installed memory.[br][br]
     [b]zmNinja Event Notification Server Port[/b] - Port used for zmNinja events to iOS and Android devices.  Change the desired port for the zmNinja Event Notification Server if necessary.  The default port of 9000 might not be appropriate for your system.[br][br]
-	[b]zmNinja Event Notification Hook Processing[/b][br]
-	Set INSTALL_HOOK="1" to load packages and run setup.py for hook processing.[br]
-	Set INSTALL_TINY_YOLOV3="1" to download the Tiny Yolo V3 hook processing model.[br]
-	Set INSTALL_YOLOV3="1" to download the Yolo V3 hook processing model.[br]
-	Set INSTALL_TINY_YOLOV4="1" to download the Tiny Yolo V4 hook processing model.[br]
-	Set INSTALL_YOLOV4="1" to download the Yolo V4 hook processing model.[br]
-	Set INSTALL_FACE="1" to load the face recognition modules.[br][br]
 	Click on "Show Docker Allocations" and confirm you do not have a port conflict with other Docker ports.[br][br]
   </Overview>
   <Networking>
@@ -73,37 +66,11 @@
       <Name>PGID</Name>
       <Mode></Mode>
     </Variable>
-    <Variable>
-      <Value>0</Value>
-      <Name>INSTALL_HOOK</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value>0</Value>
-      <Name>INSTALL_FACE</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value>0</Value>
-      <Name>INSTALL_TINY_YOLO</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value>0</Value>
-      <Name>INSTALL_YOLO</Name>
-      <Mode></Mode>
-    </Variable>
   </Environment>
   <Config Name="WebUI Port" Target="443" Default="8443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
   <Config Name="zmNinja Event Notification Server Port" Target="9000" Default="9000" Mode="tcp" Description="Continer Port: 9000" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="Install Hook Processing" Target="INSTALL_HOOK" Default="0" Mode="" Description="Container Variable: INSTALL_HOOK" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Install Tiny Yolo V3 model" Target="INSTALL_TINY_YOLOV3" Default="0" Mode="" Description="Container Variable: INSTALL_TINY_YOLOV3" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Install Yolo V3 Model" Target="INSTALL_YOLOV3" Default="0" Mode="" Description="Container Variable: INSTALL_YOLOV3" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Install Tiny Yolo V4 model" Target="INSTALL_TINY_YOLOV4" Default="0" Mode="" Description="Container Variable: INSTALL_TINY_YOLOV4" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Install Yolo V4 Model" Target="INSTALL_YOLOV4" Default="0" Mode="" Description="Container Variable: INSTALL_YOLOV4" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Install Face Recognition" Target="INSTALL_FACE" Default="0" Mode="" Description="Container Variable: INSTALL_FACE" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="Appdata Config Path" Target="/config" Default="/mnt/cache/appdata/Zoneminder" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/Zoneminder</Config>
   <Config Name="Data Path" Target="/var/cache/zoneminder" Default="/mnt/user/zoneminder_data" Mode="rw" Description="Container Path: /var/cache/zoneminder" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Zoneminder/data</Config>
   <Category>HomeAutomation: MediaApp:Video MediaServer:Video Tools:Utilities</Category>
