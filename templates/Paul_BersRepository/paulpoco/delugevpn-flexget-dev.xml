@@ -2,7 +2,7 @@
 <Container>
   <TemplateURL>https://raw.githubusercontent.com/paulpoco/docker-templates/master/paulpoco/delugevpn-flexget-dev.xml</TemplateURL>
   <Beta>true</Beta>
-  <Date>1589688000</Date>
+  <Date>1610254800</Date>
   <Project>http://flexget.com/</Project>
   <Name>delugevpn-flexget-dev</Name>
   <Overview>Deluge is a full-featured ​BitTorrent client for Linux, OS X, Unix and Windows. It uses ​libtorrent in its backend and features multiple user-interfaces including: GTK+, web and console. It has been designed using the client server model with a daemon process that handles all the bittorrent activity. The Deluge daemon is able to run on headless machines with the user-interfaces being able to connect remotely from any platform.[br]
@@ -62,16 +62,16 @@
       <Value>vpn password</Value>
     </Variable>
     <Variable>
+      <Name>FLEXGET_WEBUI_PASSWORD</Name>
+      <Value>password_you_want_to_set</Value>
+    </Variable>
+    <Variable>
       <Name>VPN_PROV</Name>
       <Value>pia|airvpn|custom</Value>
     </Variable>
     <Variable>
-      <Name>VPN_PROTOCOL</Name>
-      <Value>udp|tcp</Value>
-    </Variable>
-    <Variable>
-      <Name>VPN_DEVICE_TYPE</Name>
-      <Value>tun|tap</Value>
+      <Name>VPN_CLIENT</Name>
+      <Value>openvpn|wireguard</Value>
     </Variable>
     <Variable>
       <Name>VPN_OPTIONS</Name>
@@ -83,7 +83,7 @@
     </Variable>
     <Variable>
       <Name>ENABLE_PRIVOXY</Name>
-      <Value>yes|no</Value>
+      <Value>no|yes</Value>
     </Variable>
     <Variable>
       <Name>LAN_NETWORK</Name>
@@ -102,6 +102,10 @@
       <Value>info</Value>
     </Variable>
     <Variable>
+      <Name>ADDITIONAL_PORTS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
       <Name>DEBUG</Name>
       <Value>false|true</Value>
     </Variable>
@@ -116,10 +120,6 @@
     <Variable>
       <Name>PGID</Name>
       <Value>100</Value>
-    </Variable>
-    <Variable>
-      <Name>FLEXGET_WEBUI_PASSWORD</Name>
-      <Value>password_you_want_to_set</Value>
     </Variable>
   </Environment>
   <Data>
