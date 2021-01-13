@@ -222,6 +222,11 @@ To test notifications two methods exist:&#13;
       <Name>LOG_LEVEL</Name>
       <Mode></Mode>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>BESTBUY_API_KEY</Name>
+      <Mode></Mode>
+    </Variable>
   </Environment>
   <Config Name="Web Interface Port" Target="8081" Default="7279" Mode="tcp" Description="This is Web UI port you can access via a web browser." Type="Port" Display="always-hide" Required="true" Mask="null">7279</Config>
   <Config Name="PROXY_PROTOCOL" Target="PROXY_PROTOCOL" Default="" Mode="" Description="http or socks5" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
@@ -262,7 +267,8 @@ To test notifications two methods exist:&#13;
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="25" Mode="" Description="TCP Port number on which the smtp server is listening for connections." Type="Variable" Display="advanced-hide" Required="false" Mask="false">25</Config>
   <Config Name="SMTP_ADDRESS" Target="SMTP_ADDRESS" Default="" Mode="" Description="IP Address or FQDN of SMTP server" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="Console Verbosity" Target="LOG_LEVEL" Default="info" Mode="" Description="The console output verbosity.  &#13;&#10;&#13;&#10;Note: This is not logged to the system logger." Type="Variable" Display="advanced-hide" Required="true" Mask="false">info</Config>
-  <Date>1608827088</Date>
+  <Config Name="BESTBUY_API_KEY" Target="BESTBUY_API_KEY" Default="" Mode="" Description="Set an optional API key for faster Bestbuy checking via JSON" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Date>1610517043</Date>
   <Category>Cloud:</Category>
   <Description>This service is a automated stock checker primarily focused on CPUs, GPUs, and Console Gaming Systems that has an abundance of mechanisms to notify your user group when items are available to include a link to add to an online cart.&#13;
  &#13;
