@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>trango</Name>
+  <Repository>tak786/trango-self-hosted:latest</Repository>
+  <Registry>https://hub.docker.com/r/tak786/trango-self-hosted</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://myunraid.ru/</Support>
+  <Project>https://trango.io/</Project>
+  <Overview>Trango self-hosted is a calling and file sharing solution that works over LAN (local area networks). It does not need to involve the internet for calling or file sharing. Ideal for offices, hotels, houses, restaurants, and any space where people use the same Public IP address or the same Wi-Fi network. The package comes with a discovery server and a web app that can be deployed on the local machine and can be accessed from anywhere in the network.&#13;
+Trango Web can be visited at https://web.trango.io. Please note that Trango is in beta.&#13;
+Note Opensource self-hosted version is now compatible with Mobile and Desktop Apps.&#13;
+&#13;
+The following are the main features.&#13;
+&#13;
+- One to One and Group Audio/Video Calling.&#13;
+- File Transferring.&#13;
+- Ability to change auto-generated ID's.&#13;
+- No Internet Involved.&#13;
+- Encrypted and Secure.&#13;
+- HD Calling quality.</Overview>
+  <WebUI>https://[IP]:[PORT:5533]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/main/my-trango.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Muwahhidun/logo/main/trango%20logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7755</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5533</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/trango</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">7755</Config>
+  <Config Name="Host Port 2" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">5533</Config>
+  <Config Name="Appdata" Target="/config" Default="" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/trango</Config>
+  <Date>1610824330</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>Trango self-hosted is a calling and file sharing solution that works over LAN (local area networks). It does not need to involve the internet for calling or file sharing. Ideal for offices, hotels, houses, restaurants, and any space where people use the same Public IP address or the same Wi-Fi network. The package comes with a discovery server and a web app that can be deployed on the local machine and can be accessed from anywhere in the network.&#13;
+Trango Web can be visited at https://web.trango.io. Please note that Trango is in beta.&#13;
+Note Opensource self-hosted version is now compatible with Mobile and Desktop Apps.&#13;
+&#13;
+The following are the main features.&#13;
+&#13;
+- One to One and Group Audio/Video Calling.&#13;
+- File Transferring.&#13;
+- Ability to change auto-generated ID's.&#13;
+- No Internet Involved.&#13;
+- Encrypted and Secure.&#13;
+- HD Calling quality.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MuwahhidunsRepository/my-trango.xml</templatePath>
+</Container>
