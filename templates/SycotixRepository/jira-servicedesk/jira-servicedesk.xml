@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/ibracorp/unraid-templates/master/jira-servicedesk/jira-servicedesk.xml</TemplateURL>
+  <Date>1605502800</Date>
+  <Name>JiraServiceDesk</Name>
+  <Overview>
+    Jira Service Desk is a fully featured service desk tool used by modern IT teams.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/94096-support-ibracorp-all-images-and-files/</Support>
+  <Registry>https://hub.docker.com/r/atlassian/jira-servicedesk</Registry>
+  <GitHub>https://github.com/ibracorp/jira-servicedesk</GitHub>
+  <Repository>authelia/authelia</Repository>
+  <Project>https://www.atlassian.com/software/jira/service-desk</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/JiraServiceDesk</HostDir>
+      <ContainerDir>/var/atlassian/application-data/jira</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://i.imgur.com/DCn2yiv.png</Icon>
+  <DonateText>Help support my work by buying me a beer</DonateText>
+  <DonateLink>https://www.paypal.me/ramteksolutions</DonateLink>
+  <DonateImg>https://i.imgur.com/VHSkew7.png</DonateImg>
+  <Config Name="Host Port 1" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8585</Config>
+  <Config Name="ATL_PROXY_NAME" Target="ATL_PROXY_NAME" Default="" Mode="" Description="If behind a reverse proxy, what's the root address. i.e. jira.example.com" Type="Variable" Display="always" Required="false" Mask="false">support.ibracorp.io</Config>
+  <Config Name="ATL_PROXY_PORT" Target="ATL_PROXY_PORT" Default="" Mode="" Description="Container Variable: ATL_PROXY_PORT" Type="Variable" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="ATL_TOMCAT_SCHEME" Target="ATL_TOMCAT_SCHEME" Default="" Mode="" Description="Container Variable: ATL_TOMCAT_SCHEME" Type="Variable" Display="always" Required="false" Mask="false">https</Config>
+  <Config Name="Host Path 1" Target="/var/atlassian/application-data/jira" Default="" Mode="rw" Description="Container Path: /var/atlassian/application-data/jira" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/JiraServiceDesk</Config>
+  <Category>Cloud: Tools:Utilities</Category>
+  <Description>Jira Service Desk is a fully featured service desk tool used by modern IT teams.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/SycotixRepository/jira-servicedesk/jira-servicedesk.xml</templatePath>
+</Container>
