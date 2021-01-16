@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>openvpn-antizapret</Name>
+  <Repository>dperson/openvpn-client</Repository>
+  <Registry>https://hub.docker.com/r/dperson/openvpn-client</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://myunraid.ru/</Support>
+  <Project>https://antizapret.prostovpn.org</Project>
+  <Overview>Proxy and VPN for Russia.&#13;
+Only blocked sites from the unified register of the Russian Federation are proxied through Anti-Ban.&#13;
+All other sites will work directly, the speed of the Internet connection will not decrease.&#13;
+The service does not log user actions, does not change traffic and does not insert ads on pages.&#13;
+Project page: https://antizapret.prostovpn.org&#13;
+&#13;
+[b][span style='color: #E80000;']Installation instructions:[/span][/b][br]&#13;
+This is a template to customize with container "Jackett".&#13;
+1) - Download a ZIP archive with a configuration file and keys here: "https://antizapret.prostovpn.org/antizapret-tcp.zip".&#13;
+2) - Extract four files along the path: "/mnt/user/appdata/openvpn-antizapret/".&#13;
+3) - Start installing, click to "Apply".&#13;
+4) - After installation, we create a network, enter in the terminal: "docker network create container:openvpn-antizapret"&#13;
+5) - And in the Settings of the "Jackett" container, we install this network.&#13;
+</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/main/my-openvpn-antizapret.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Muwahhidun/logo/main/vpnclientinside.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9117</HostPort>
+        <ContainerPort>9117</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openvpn-antizapret/</HostDir>
+      <ContainerDir>/vpn</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.104.1</Value>
+      <Name>DNS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>Firewall</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>DEFAULT_GATEWAY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Location Config" Target="/vpn" Default="" Mode="rw" Description="Container Path: /vpn" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openvpn-antizapret/</Config>
+  <Config Name="DNS" Target="DNS" Default="" Mode="" Description="Contaner Variable: DNS" Type="Variable" Display="always" Required="true" Mask="false">192.168.104.1</Config>
+  <Config Name="Firewall" Target="Firewall" Default="" Mode="" Description="Container Variable: Firewall" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="DEFAULT_GATEWAY" Target="DEFAULT_GATEWAY" Default="" Mode="" Description="Contaner Variable: DEFAULT_GATEWAY" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Location tun" Target="" Default="" Mode="" Description="Container Device:" Type="Device" Display="always" Required="true" Mask="false">/dev/net/tun</Config>
+  <Config Name="Jackett port" Target="9117" Default="" Mode="tcp" Description="Container Port: 9117" Type="Port" Display="always" Required="false" Mask="false">9117</Config>
+  <Date>1610831657</Date>
+  <Category>Network:Proxy</Category>
+  <Description>Proxy and VPN for Russia.&#13;
+Only blocked sites from the unified register of the Russian Federation are proxied through Anti-Ban.&#13;
+All other sites will work directly, the speed of the Internet connection will not decrease.&#13;
+The service does not log user actions, does not change traffic and does not insert ads on pages.&#13;
+Project page: https://antizapret.prostovpn.org</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MuwahhidunsRepository/my-openvpn-antizapret.xml</templatePath>
+</Container>
