@@ -21,6 +21,11 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
+        <HostPort>5683</HostPort>
+        <ContainerPort>5683</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
         <HostPort>8282</HostPort>
         <ContainerPort>8282</ContainerPort>
         <Protocol>tcp</Protocol>
@@ -33,6 +38,11 @@
       <Port>
         <HostPort>1883</HostPort>
         <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8883</HostPort>
+        <ContainerPort>8883</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
@@ -84,9 +94,11 @@
   <Config Name="Data" Target="/opt/iobroker" Default="" Mode="rw" Description="Container Path: /opt/iobroker" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/iobroker/data</Config>
   <Config Name="Scripts" Target="/opt/userscripts" Default="" Mode="rw" Description="Container Path: /opt/userscripts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/iobroker/scripts</Config>
   <Config Name="USB Devices" Target="USBDEVICES" Default="" Mode="" Description="Sets relevant permissions on mounted devices like " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CoAP Port (Shelly)" Target="5683" Default="" Mode="udp" Description="Container Port: 5683" Type="Port" Display="always" Required="false" Mask="false">5683</Config>
   <Config Name="flot Port" Target="8282" Default="" Mode="tcp" Description="flot adapter" Type="Port" Display="always" Required="false" Mask="false">8282</Config>
   <Config Name="HomeMatic Port" Target="2001" Default="" Mode="tcp" Description="Container Port: 2001" Type="Port" Display="always" Required="false" Mask="false">2001</Config>
   <Config Name="MQTT Port" Target="1883" Default="" Mode="tcp" Description="Container Port: 1883" Type="Port" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="MQTT SSL Port" Target="8883" Default="" Mode="tcp" Description="Container Port: 8883" Type="Port" Display="always" Required="false" Mask="false">8883</Config>
   <Config Name="Node-RED Port" Target="1880" Default="" Mode="tcp" Description="Container Port: 1880" Type="Port" Display="always" Required="false" Mask="false">1880</Config>
   <Config Name="Socket.IO Port" Target="8284" Default="" Mode="tcp" Description="Container Port: 8284" Type="Port" Display="always" Required="false" Mask="false">8284</Config>
   <Config Name="UID" Target="SETUID" Default="" Mode="" Description="Container Variable: SETUID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
