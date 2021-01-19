@@ -12,7 +12,7 @@
 &#13;
 It uses Cron syntax to schedule the checks and comes along with a Web UI and a RESTfull JSON API.&#13;
 https://brotandgames.com/ciao/</Overview>
-  <WebUI>http://[IP]:[PORT:7590]</WebUI>
+  <WebUI>http://[IP]:[PORT:8090]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/main/my-ciao.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/Muwahhidun/logo/main/logo%20check.png</Icon>
   <PostArgs></PostArgs>
@@ -36,7 +36,7 @@ https://brotandgames.com/ciao/</Overview>
   </Data>
   <Environment>
     <Variable>
-      <Value>"sensitive_secret_key_base"</Value>
+      <Value>sensitive_secret_key_base</Value>
       <Name>SECRET_KEY_BASE</Name>
       <Mode></Mode>
     </Variable>
@@ -46,12 +46,12 @@ https://brotandgames.com/ciao/</Overview>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>"ciao@yourhost.com"</Value>
+      <Value>ciao@yourhost.com</Value>
       <Name>SMTP_EMAIL_FROM</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>"you@yourhost.com"</Value>
+      <Value>you@yourhost.com</Value>
       <Name>SMTP_EMAIL_TO</Name>
       <Mode></Mode>
     </Variable>
@@ -81,22 +81,22 @@ https://brotandgames.com/ciao/</Overview>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>"sensitive_password"</Value>
+      <Value>sensitive_password</Value>
       <Name>SMTP_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
   </Environment>
   <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">8090</Config>
-  <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Container Variable: SECRET_KEY_BASE" Type="Variable" Display="always" Required="false" Mask="false">"sensitive_secret_key_base"</Config>
+  <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Container Variable: SECRET_KEY_BASE" Type="Variable" Display="always" Required="false" Mask="false">sensitive_secret_key_base</Config>
   <Config Name="SMTP_ADDRESS" Target="SMTP_ADDRESS" Default="" Mode="" Description="Container Variable: SMTP_ADDRESS" Type="Variable" Display="always" Required="false" Mask="false">smtp.yourhost.com</Config>
-  <Config Name="SMTP_EMAIL_FROM" Target="SMTP_EMAIL_FROM" Default="" Mode="" Description="Container Variable: SMTP_EMAIL_FROM" Type="Variable" Display="always" Required="false" Mask="false">"ciao@yourhost.com"</Config>
-  <Config Name="SMTP_EMAIL_TO" Target="SMTP_EMAIL_TO" Default="" Mode="" Description="Container Variable: SMTP_EMAIL_TO" Type="Variable" Display="always" Required="false" Mask="false">"you@yourhost.com"</Config>
+  <Config Name="SMTP_EMAIL_FROM" Target="SMTP_EMAIL_FROM" Default="" Mode="" Description="Container Variable: SMTP_EMAIL_FROM" Type="Variable" Display="always" Required="false" Mask="false">ciao@yourhost.com</Config>
+  <Config Name="SMTP_EMAIL_TO" Target="SMTP_EMAIL_TO" Default="" Mode="" Description="Container Variable: SMTP_EMAIL_TO" Type="Variable" Display="always" Required="false" Mask="false">you@yourhost.com</Config>
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="Container Variable: SMTP_PORT" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
   <Config Name="SMTP_DOMAIN" Target="SMTP_DOMAIN" Default="" Mode="" Description="Container Variable: SMTP_DOMAIN" Type="Variable" Display="always" Required="false" Mask="false">smtp.yourhost.com</Config>
   <Config Name="SMTP_AUTHENTICATION" Target="SMTP_AUTHENTICATION" Default="" Mode="" Description="Container Variable: SMTP_AUTHENTICATION" Type="Variable" Display="always" Required="false" Mask="false">plain</Config>
   <Config Name="SMTP_ENABLE_STARTTLS_AUTO" Target="SMTP_ENABLE_STARTTLS_AUTO" Default="" Mode="" Description="Container Variable: SMTP_ENABLE_STARTTLS_AUTO" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="SMTP_USERNAME" Target="SMTP_USERNAME" Default="" Mode="" Description="Container Variable: SMTP_USERNAME" Type="Variable" Display="always" Required="false" Mask="false">ciao</Config>
-  <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="Container Variable: SMTP_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">"sensitive_password"</Config>
+  <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="Container Variable: SMTP_PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">sensitive_password</Config>
   <Config Name="Database location" Target="/app/db/sqlite" Default="" Mode="rw" Description="Container Path: /app/db/sqlite" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ciao</Config>
   <Date>1611082224</Date>
   <Category>Network:Other Productivity: Tools:System</Category>
