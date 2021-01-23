@@ -25,7 +25,12 @@ For more details check the github: https://github.com/ElectricBrainUK/IdleMiner
   <Environment>
 </Environment>
   <Data>
-</Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/IdleMinerDashboard</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <Icon>https://raw.githubusercontent.com/ElectricBrainUK/IdleMiner/master/electron/assets/appIcon.png</Icon>
   <DonateText>We develop all of our apps in our spare time so if you feel like supporting us please donate</DonateText>
