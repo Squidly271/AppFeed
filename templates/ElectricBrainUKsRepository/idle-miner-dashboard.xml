@@ -20,15 +20,15 @@ For more details check the github: https://github.com/ElectricBrainUK/IdleMiner
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-      <Port>
-        <HostPort>12345</HostPort>
-        <ContainerPort>12345</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
     </Publish>
   </Networking>
   <Environment>
-</Environment>
+    <Variable>
+      <Name>REACT_APP_APIKEY</Name>
+      <Value>REPLACEME!!!!1!</Value>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/IdleMinerDashboard</HostDir>
