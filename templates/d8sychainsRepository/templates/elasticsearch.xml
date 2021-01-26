@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>elasticsearch</Name>
+  <Repository>d8sychain/elasticsearch</Repository>
+  <Registry>https://hub.docker.com/r/d8sychain/elasticsearch</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/101833-support-d8sychain-elasticsearch/</Support>
+  <Project>https://www.elastic.co/</Project>
+  <Overview>&#13;
+This Elasticsearch docker version is built from the official Elasticsearch docker with minimal changes tailoring it for easier use on Unraid and for the purpose for use with Nextcloud. [br]&#13;
+[b]Elasticsearch with instructions for installation on unraid and then Nextcloud.[/b] Elasticsearch version is 7.10.2[br]&#13;
+        [span style='color: #E80000;'][b]Directions below MUST be used in order to get Elasticsearch 5 and above working correctly.[/b][/span][br]&#13;
+        [b][span style='color: #E80000;']Directions:[/span][/b][br]&#13;
+        1. [i]see[/i] [a href="https://github.com/d8sychain/docker-elasticsearch/blob/master/README.md"]README.md[/a]</Overview>
+  <WebUI>http://[IP]:[PORT:9200]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/templates/elasticsearch.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/d8sychain/unraid-ca-templates/master/images/elasticsearch.png</Icon>
+  <ExtraParams>--ulimit nofile=262144:262144 -u 1000</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://paypal.me/d8sychain</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9200</HostPort>
+        <ContainerPort>9200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9300</HostPort>
+        <ContainerPort>9300</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>single-node</Value>
+      <Name>discovery.type</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="REST API Port" Target="9200" Default="9200" Mode="tcp" Description="Host port exposed for REST HTTP interface." Type="Port" Display="always" Required="true" Mask="false">9200</Config>
+  <Config Name="Nodes Communication Port" Target="9300" Default="9300" Mode="tcp" Description="Host port exposed for node communication." Type="Port" Display="always" Required="true" Mask="false">9300</Config>
+  <Config Name="Discovery Type" Target="discovery.type" Default="single-node" Mode="" Description="Container Variable: discovery.type" Type="Variable" Display="always" Required="true" Mask="false">single-node</Config>
+  <Config Name="AppData" Target="/config" Default="/mnt/user/appdata/elasticsearch" Mode="rw" Description="Directory where ES configurations and data is persisted" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <Category>Other: Tools:Utilities</Category>
+  <Description>This Elasticsearch docker version is built from the official Elasticsearch docker with minimal changes tailoring it for easier use on Unraid and for the purpose for use with Nextcloud. &#13;
+Elasticsearch with instructions for installation on unraid and then Nextcloud. Elasticsearch version is 7.10.2</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/d8sychainsRepository/templates/elasticsearch.xml</templatePath>
+</Container>
