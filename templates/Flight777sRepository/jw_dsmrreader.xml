@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>DSMRReader</Name>
+  <Repository>xirixiz/dsmr-reader-docker</Repository>
+  <Registry>https://hub.docker.com/r/xirixiz/dsmr-reader-docker</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/101905-support-flight777-just-works-container-repository/</Support>
+  <Project>https://github.com/xirixiz/dsmr-reader-docker</Project>
+  <Overview>&amp;lt;b&amp;gt;DSMR protocol reader for smart energy meters. Stores data reads and visualizes energy use.&amp;lt;/b&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+UNRAID template that JUST WORKS, brought to you by Flight777!&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+[b][span style='color: #E80000;']IMPORTANT 1!![/span][/b] --&amp;gt; Next to this container, you will have to install a PostgreSQL container from the APPS, any version 11 or 12 will do.&#13;
+User:&#13;
+DB name: dsmrreader&#13;
+DB user: dsmrreader&#13;
+DB password: dsmrreader&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+[b][span style='color: #E80000;']IMPORTANT 2!![/span][/b]&#13;
+By default this container is set-up as RECEIVER (see DATALOGGER MODE), meaning that the DSMR P1 input is received on another machine with an instance of DSMR READER running and the internal datalogger on this instance is disabled. After running this container, you will need to set-up the SENDER with the right API, please see: https://dsmr-reader.readthedocs.io/en/v4/api.html#configuration&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+If you UNRAID machine has a direct P1 input, then change this value to STANDALONE and configure:&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+DATALOGGER INPUT METHOD=serial[br]&#13;
+DATALOGGER_SERIAL_PORT=/dev/ttyUSB0[br]&#13;
+DATALOGGER_SERIAL_BAUDRATE=115200[br]&#13;
+[br]&#13;
+[span style='color: #E80000;']and set your device to the right USB path[/span]&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;b&amp;gt;[span style='color: #E80000;']IMPORTANT 3!![/span]&amp;lt;/b&amp;gt;&#13;
+The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you some DB writes. 6 readings per minute should still give you data enough ;)</Overview>
+  <WebUI>http://[IP]:[PORT:7777]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/jw_dsmrreader.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/images/dsmrreader/dsmrreader.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateLink>https://www.paypal.me/robvermeij</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7777</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/dsmr-reader/backups</HostDir>
+      <ContainerDir>/home/dsmr/app/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.31.10</Value>
+      <Name>DJANGO_DATABASE_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>DSMRREADER_ADMIN_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>IUseLopol567#!</Value>
+      <Name>DSMRREADER_ADMIN_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>receiver</Value>
+      <Name>DATALOGGER_MODE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATALOGGER_INPUT_METHOD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATALOGGER_SERIAL_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DATALOGGER_SERIAL_BAUDRATE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>localhost</Value>
+      <Name>VIRTUAL_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5432</Value>
+      <Name>DJANGO_DATABASE_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>dsmrdb</Value>
+      <Name>DJANGO_DATABASE_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>10</Value>
+      <Name>DATALOGGER_SLEEP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>nobody</Value>
+      <Name>SD_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>users</Value>
+      <Name>SD_GROUP</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="DATABASE HOST (Adjust to your UNRAID host IP)" Target="DJANGO_DATABASE_HOST" Default="[IP]" Mode="" Description="Container Variable: DJANGO_DATABASE_HOST&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">192.168.31.10</Config>
+  <Config Name="WEBUI ADMIN USERNAME" Target="DSMRREADER_ADMIN_USER" Default="" Mode="" Description="Container Variable: DSMRREADER_ADMIN_USER" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+  <Config Name="WEBUI ADMIN PASSWORD" Target="DSMRREADER_ADMIN_PASSWORD" Default="" Mode="" Description="Container Variable: DSMRREADER_ADMIN_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">IUseLopol567#!</Config>
+  <Config Name="WEB UI Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="Backup directory" Target="/home/dsmr/app/backups" Default="" Mode="rw" Description="Container Path: /home/dsmr/app/backups" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dsmr-reader/backups</Config>
+  <Config Name="DATALOGGER MODE (change if P1 port is on this machine to STANDALONE)" Target="DATALOGGER_MODE" Default="receiver|standalone" Mode="" Description="Container Variable: DATALOGGER_MODE" Type="Variable" Display="always" Required="true" Mask="false">receiver</Config>
+  <Config Name="DATALOGGER INPUT METHOD" Target="DATALOGGER_INPUT_METHOD" Default="|serial" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DATALOGGER SERIAL PORT" Target="DATALOGGER_SERIAL_PORT" Default="|/dev/ttyUSB0" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DATALOGGER SERIAL BAUDRATE" Target="DATALOGGER_SERIAL_BAUDRATE" Default="|115200" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="P1 USB (optional)" Target="" Default="" Mode="" Description="Container Device: /dev/ttyUSB0" Type="Device" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="VIRTUAL_HOST" Target="VIRTUAL_HOST" Default="" Mode="" Description="Container Variable: VIRTUAL_HOST" Type="Variable" Display="advanced" Required="true" Mask="false">localhost</Config>
+  <Config Name="DATABASE PORT" Target="DJANGO_DATABASE_PORT" Default="5432" Mode="" Description="Container Variable: DJANGO_DATABASE_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">5432</Config>
+  <Config Name="DATABASE NAME" Target="DJANGO_DATABASE_NAME" Default="dsmrreader" Mode="" Description="Container Variable: DJANGO_DATABASE_NAME" Type="Variable" Display="advanced" Required="true" Mask="false">dsmrdb</Config>
+  <Config Name="DATALOGGER SLEEP TIME (seconds)" Target="DATALOGGER_SLEEP" Default="5" Mode="" Description="Container Variable: DATALOGGER_SLEEP" Type="Variable" Display="advanced" Required="true" Mask="false">10</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="Supervisor User" Target="SD_USER" Default="nobody" Mode="" Description="User of which the supervisor should be part, important for file permissions!" Type="Variable" Display="advanced" Required="true" Mask="false">nobody</Config>
+  <Config Name="Supervisor Group" Target="SD_GROUP" Default="users" Mode="" Description="Group of which the supervisor should be part, important for file permissions!" Type="Variable" Display="advanced" Required="true" Mask="false">users</Config>
+  <Date>1611702190</Date>
+  <Category>HomeAutomation:</Category>
+  <Description>DSMR protocol reader for smart energy meters. Stores data reads and visualizes energy use.&#13;
+&#13;
+&#13;
+UNRAID template that JUST WORKS, brought to you by Flight777!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Flight777sRepository/jw_dsmrreader.xml</templatePath>
+</Container>
