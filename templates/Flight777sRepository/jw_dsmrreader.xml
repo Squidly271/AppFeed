@@ -62,7 +62,7 @@ The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you 
   </Data>
   <Environment>
     <Variable>
-      <Value>192.168.31.10</Value>
+      <Value></Value>
       <Name>DJANGO_DATABASE_HOST</Name>
       <Mode></Mode>
     </Variable>
@@ -72,7 +72,7 @@ The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you 
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>IUseLopol567#!</Value>
+      <Value></Value>
       <Name>DSMRREADER_ADMIN_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
@@ -137,16 +137,15 @@ The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you 
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="DATABASE HOST (Adjust to your UNRAID host IP)" Target="DJANGO_DATABASE_HOST" Default="[IP]" Mode="" Description="Container Variable: DJANGO_DATABASE_HOST&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false">192.168.31.10</Config>
+  <Config Name="DATABASE HOST (Adjust to your UNRAID host IP)" Target="DJANGO_DATABASE_HOST" Default="[IP]" Mode="" Description="Container Variable: DJANGO_DATABASE_HOST&#13;&#10;" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="WEBUI ADMIN USERNAME" Target="DSMRREADER_ADMIN_USER" Default="" Mode="" Description="Container Variable: DSMRREADER_ADMIN_USER" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
-  <Config Name="WEBUI ADMIN PASSWORD" Target="DSMRREADER_ADMIN_PASSWORD" Default="" Mode="" Description="Container Variable: DSMRREADER_ADMIN_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">IUseLopol567#!</Config>
+  <Config Name="WEBUI ADMIN PASSWORD" Target="DSMRREADER_ADMIN_PASSWORD" Default="dsmrreader" Mode="" Description="Container Variable: DSMRREADER_ADMIN_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="WEB UI Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="Backup directory" Target="/home/dsmr/app/backups" Default="" Mode="rw" Description="Container Path: /home/dsmr/app/backups" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dsmr-reader/backups</Config>
   <Config Name="DATALOGGER MODE (change if P1 port is on this machine to STANDALONE)" Target="DATALOGGER_MODE" Default="receiver|standalone" Mode="" Description="Container Variable: DATALOGGER_MODE" Type="Variable" Display="always" Required="true" Mask="false">receiver</Config>
   <Config Name="DATALOGGER INPUT METHOD" Target="DATALOGGER_INPUT_METHOD" Default="|serial" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="DATALOGGER SERIAL PORT" Target="DATALOGGER_SERIAL_PORT" Default="|/dev/ttyUSB0" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="DATALOGGER SERIAL BAUDRATE" Target="DATALOGGER_SERIAL_BAUDRATE" Default="|115200" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="P1 USB (optional)" Target="" Default="" Mode="" Description="Container Device: /dev/ttyUSB0" Type="Device" Display="always" Required="false" Mask="false"></Config>
   <Config Name="VIRTUAL_HOST" Target="VIRTUAL_HOST" Default="" Mode="" Description="Container Variable: VIRTUAL_HOST" Type="Variable" Display="advanced" Required="true" Mask="false">localhost</Config>
   <Config Name="DATABASE PORT" Target="DJANGO_DATABASE_PORT" Default="5432" Mode="" Description="Container Variable: DJANGO_DATABASE_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">5432</Config>
   <Config Name="DATABASE NAME" Target="DJANGO_DATABASE_NAME" Default="dsmrreader" Mode="" Description="Container Variable: DJANGO_DATABASE_NAME" Type="Variable" Display="advanced" Required="true" Mask="false">dsmrdb</Config>
@@ -155,7 +154,7 @@ The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you 
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="Supervisor User" Target="SD_USER" Default="nobody" Mode="" Description="User of which the supervisor should be part, important for file permissions!" Type="Variable" Display="advanced" Required="true" Mask="false">nobody</Config>
   <Config Name="Supervisor Group" Target="SD_GROUP" Default="users" Mode="" Description="Group of which the supervisor should be part, important for file permissions!" Type="Variable" Display="advanced" Required="true" Mask="false">users</Config>
-  <Date>1611702190</Date>
+  <Date>1611740837</Date>
   <Category>HomeAutomation:</Category>
   <Description>DSMR protocol reader for smart energy meters. Stores data reads and visualizes energy use.&#13;
 &#13;
