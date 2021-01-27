@@ -13,18 +13,26 @@
         [br]Remove the complexity of automatically converting your media library.
         [br]Simply point Unmanic at your library and let it manage it for you.
         [br]
-        [br][b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b]
+        [br][b][u][span style='color: #E80000;']Advanced settings[/span][/u][/b]
+        [br]
+        [br][b][span style='color: #0000E8;']Nvidia GPU Use:[/span][/b]
         [br] 1) Install the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed.
         [br] 2) Toggle this Docker Container template editor to [b]"Advanced View"[/b].
         [br] 3) In the [b]"Extra Parameters"[/b] field, add "[b]--runtime=nvidia[/b]".
         [br] 4) Expand the template "Show more settings..." section.
         [br] 5) In the [b]"NVIDIA_VISIBLE_DEVICES"[/b] variable, copy your [b]GPU UUID[/b] (can be found in the Unraid Nvidia Plugin)
         [br]
-        [br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b]
+        [br][b][span style='color: #0000E8;']Intel GPU Use:[/span][/b]
         [br] 1) Edit your [b]go[/b] file to include: "[b]modprobe i915[/b]".
         [br] 2) Save and reboot Unraid.
         [br] 3) Toggle this Docker Container template editor to [b]"Advanced View"[/b].
         [br] 4) In the [b]"Extra Parameters"[/b] field, add "[b]--device=/dev/dri[/b]".
+        [br]
+        [br][b][span style='color: #0000E8;']Limit CPU Use:[/span][/b]
+        [br] 1) Toggle this Docker Container template editor to [b]"Advanced View"[/b].
+        [br] 2) In the [b]"Extra Parameters"[/b] field, add "[b]--cpus='.5'[/b]".
+        [pre]This example limits the container to 50% on all available cores.
+        [br]To limit the CPU cores available to the continer, use [b]"CPU Pinning"[/b][/pre]
         [br]
     </Overview>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
