@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>trex-miner</Name>
+  <Repository>ptrfrll/nv-docker-trex</Repository>
+  <Registry>https://registry.hub.docker.com/r/ptrfrll/nv-docker-trex</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/trexminer/T-Rex</Project>
+  <Overview>T-Rex is a versatile cryptocurrency mining software. It supports a variety of algorithms and we, as developers, are trying to do our best to make it as fast and as convenient to use as possible.&#13;
+&#13;
+Requires nvidia-docker (either LinuxServer.io or new 6.9 version)</Overview>
+  <WebUI>http://[IP]:[PORT:4067]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/trex-miner/trex.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/trex-miner/trex.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Buy me a beer</DonateText>
+  <DonateLink>https://www.paypal.me/ptrfrll</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4067</HostPort>
+        <ContainerPort>4067</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>WALLET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>SERVER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>WORKER</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="WebUI" Target="4067" Default="" Mode="tcp" Description="Container Port: 4067" Type="Port" Display="always" Required="false" Mask="false">4067</Config>
+  <Config Name="Wallet Address" Target="WALLET" Default="" Mode="" Description="Container Variable: WALLET" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server" Target="SERVER" Default="" Mode="" Description="Container Variable: SERVER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Worker Name" Target="WORKER" Default="" Mode="" Description="Container Variable: WORKER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Date>1611781639</Date>
+  <Category>Tools:Utilities</Category>
+  <Description>T-Rex is a versatile cryptocurrency mining software. It supports a variety of algorithms and we, as developers, are trying to do our best to make it as fast and as convenient to use as possible.&#13;
+&#13;
+Requires nvidia-docker (either LinuxServer.io or new 6.9 version)</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/PTRFRLLsRepository/trex-miner/trex.xml</templatePath>
+</Container>
