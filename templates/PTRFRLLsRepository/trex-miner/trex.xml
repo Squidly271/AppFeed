@@ -29,7 +29,13 @@ Requires Unraid-nvidia (now deprecated) or nvidia-driver plugin (6.9+)</Overview
       </Port>
     </Publish>
   </Networking>
-  <Data></Data>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/trex</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <Environment>
     <Variable>
       <Value></Value>
@@ -53,11 +59,12 @@ Requires Unraid-nvidia (now deprecated) or nvidia-driver plugin (6.9+)</Overview
     </Variable>
   </Environment>
   <Config Name="WebUI" Target="4067" Default="" Mode="tcp" Description="Container Port: 4067" Type="Port" Display="always" Required="false" Mask="false">4067</Config>
-  <Config Name="Wallet Address" Target="WALLET" Default="" Mode="" Description="Username/Wallet address" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Wallet address" Target="WALLET" Default="" Mode="" Description="Username/Wallet address" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Server" Target="SERVER" Default="" Mode="" Description="URL of the mining pool" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Worker Name" Target="WORKER" Default="" Mode="" Description="Worker name" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="algorithm" Target="ALGO" Default="ethash" Mode="" Description="Specify the hash algorithm" Type="Variable" Display="always" Required="true" Mask="false">ethash</Config>
-  <Date>1611781639</Date>
+  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/trex</Config>
+  <Date>1611861685</Date>
   <Category>Tools:Utilities</Category>
   <Description>T-Rex is a versatile cryptocurrency mining software. It supports a variety of algorithms and we, as developers, are trying to do our best to make it as fast and as convenient to use as possible.&#13;
 &#13;
