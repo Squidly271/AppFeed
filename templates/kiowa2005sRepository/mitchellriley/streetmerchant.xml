@@ -13,7 +13,7 @@
 To test notifications two methods exist:&#13;
 1) Add "test:notification:production" (no quotes) to the extra parameters.  The system will exit after one notification has been sent.&#13;
 2) Set the following SHOW_ONLY_SERIES variable to "test:series".</Overview>
-  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <WebUI>http://[IP]:[PORT:WEB_PORT]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/kiowadriver/unraid-docker/master/mitchellriley/streetmerchant.xml</TemplateURL>
   <Icon>https://jef.codes/streetmerchant/assets/images/streetmerchant-logo.png</Icon>
   <PostArgs></PostArgs>
@@ -23,7 +23,7 @@ To test notifications two methods exist:&#13;
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>7279</HostPort>
+        <HostPort>7239</HostPort>
         <ContainerPort>8081</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -261,7 +261,7 @@ To test notifications two methods exist:&#13;
   <Config Name="PAGE_SLEEP_MIN" Target="PAGE_SLEEP_MIN" Default="5000" Mode="" Description="Minimum sleep time between queries of the same product page. In milliseconds," Type="Variable" Display="advanced-hide" Required="true" Mask="false">5000</Config>
   <Config Name="PAGE_SLEEP_MAX" Target="PAGE_SLEEP_MAX" Default="10000" Mode="" Description="Maximum sleep time between queries of the same product page. In milliseconds," Type="Variable" Display="advanced-hide" Required="true" Mask="false">10000</Config>
   <Config Name="PAGE_TIMEOUT" Target="PAGE_TIMEOUT" Default="30000" Mode="" Description="Navigation Timeout in milliseconds. 0 for infinite, default: 30000" Type="Variable" Display="advanced-hide" Required="true" Mask="false">30000</Config>
-  <Config Name="WEB_PORT" Target="WEB_PORT" Default="8081" Mode="" Description="This must be synchronized with the Web Interface Port values.&#13;&#10;&#13;&#10;This is the internal port the container should serve the web interface on." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8081</Config>
+  <Config Name="WEB_PORT" Target="WEB_PORT" Default="7239" Mode="" Description="This must be synchronized with the Web Interface Port values.&#13;&#10;&#13;&#10;This is the internal port the container should serve the web interface on." Type="Variable" Display="advanced-hide" Required="true" Mask="false">8081</Config>
   <Config Name="COUNTRY" Target="COUNTRY" Default="usa" Mode="" Description="Supported country you want to be scraped&#9;Only used with nvidia-api, default: usa&#13;&#10;&#13;&#10;https://jef.codes/streetmerchant/reference/filter/#supported-countries" Type="Variable" Display="advanced-hide" Required="false" Mask="false">usa</Config>
   <Config Name="Log Path" Target="/home/appuser/.npm/_logs" Default="/mnt/user/appdata/streetmerchant/logs" Mode="rw" Description="This is where log files will be written if an error occurs. " Type="Path" Display="advanced-hide" Required="true" Mask="null">/mnt/user/appdata/streetmerchant/logs</Config>
   <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="25" Mode="" Description="TCP Port number on which the smtp server is listening for connections." Type="Variable" Display="advanced-hide" Required="false" Mask="false">25</Config>
