@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MovieMatch</Name>
+  <Repository>lukechannings/moviematch</Repository>
+  <Registry>https://registry.hub.docker.com/r/lukechannings/moviematch</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/101947-support-ptrfrll-docker-images/</Support>
+  <Project>https://github.com/LukeChannings/moviematch</Project>
+  <Overview>This is an app that helps you and your friends pick a movie to watch from a Plex server.&#13;
+&#13;
+MovieMatch connects to your Plex server and gets a list of movies (from any libraries marked as a movie library).&#13;
+&#13;
+As many people as you want connect to your MovieMatch server and get a list of shuffled movies.&#13;
+&#13;
+If two (or more) people swipe right on the same movie, it'll show up in everyone's matches. The movies that the most people swiped right on will show up first.</Overview>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/PTRFRLL/unraid-templates/master/moviematch/moviematch.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/LukeChannings/moviematch/main/public/assets/icons/apple-icon-144x144.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Buy me a beer</DonateText>
+  <DonateLink>https://www.paypal.me/ptrfrll</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PLEX_TOKEN</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="PLEX_URL" Target="PLEX_URL" Default="" Mode="" Description="Url of Plex Server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PLEX_TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Plex API Token" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Date>1611939473</Date>
+  <Category>Tools:Utilities MediaApp:Other</Category>
+  <Description>This is an app that helps you and your friends pick a movie to watch from a Plex server.&#13;
+&#13;
+MovieMatch connects to your Plex server and gets a list of movies (from any libraries marked as a movie library).&#13;
+&#13;
+As many people as you want connect to your MovieMatch server and get a list of shuffled movies.&#13;
+&#13;
+If two (or more) people swipe right on the same movie, it'll show up in everyone's matches. The movies that the most people swiped right on will show up first.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/PTRFRLLsRepository/moviematch/moviematch.xml</templatePath>
+</Container>
