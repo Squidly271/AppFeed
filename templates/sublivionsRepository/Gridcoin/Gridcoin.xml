@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>GridcoinWalletGUI</Name>
+  <Repository>sublivion/gridcoinwalletgui:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/sublivion/gridcoinwalletgui</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/102050-support-gridcoinwalletgui/</Support>
+  <Project>https://gridcoin.us/</Project>
+  <Overview>Running Boinc? Get some Gridcoins from your Boinc work!&#13;
+This docker contains Gridcoin Wallet with GUI running on Ubuntu. You can access the wallet via VNC and NoVNC.&#13;
+Remember to backup your wallet.dat and gridcoinresearch.conf regularly to a safe place.&#13;
+Check the project page for more info about Gridcoin.</Overview>
+  <WebUI>http://[IP]:[PORT:6901]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Sabreu/unraid_templates/main/Gridcoin/Gridcoin.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/gridcoin-community/Gridcoin-Site/master/assets/img/Favicons/favicon-196x196.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6901</HostPort>
+        <ContainerPort>6901</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5901</HostPort>
+        <ContainerPort>5901</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gridcoinresearch/</HostDir>
+      <ContainerDir>/headless/.GridcoinResearch/</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>vncpassword</Value>
+      <Name>VNC_PW</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1920x1080</Value>
+      <Name>VNC_RESOLUTION</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="AppData Config Path" Target="/headless/.GridcoinResearch/" Default="" Mode="rw,slave" Description="/mnt/user/appdata/gridcoinresearch/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridcoinresearch/</Config>
+  <Config Name="NOVNC PORT" Target="6901" Default="" Mode="tcp" Description="default: 6901" Type="Port" Display="always" Required="false" Mask="false">6901</Config>
+  <Config Name="VNC PASSWORD" Target="VNC_PW" Default="" Mode="" Description="default: vncpassword" Type="Variable" Display="always" Required="false" Mask="false">vncpassword</Config>
+  <Config Name="VNC RESOLUTION" Target="VNC_RESOLUTION" Default="1920x1080" Mode="" Description="default: 1920x1080" Type="Variable" Display="always" Required="false" Mask="false">1920x1080</Config>
+  <Config Name="VNC PORT" Target="5901" Default="" Mode="tcp" Description="default: 5901" Type="Port" Display="always" Required="false" Mask="false">5901</Config>
+  <Date>1612009906</Date>
+  <Category>Other:</Category>
+  <Description>Running Boinc? Get some Gridcoins from your Boinc work!&#13;
+This docker contains Gridcoin Wallet with GUI running on Ubuntu. You can access the wallet via VNC and NoVNC.&#13;
+Remember to backup your wallet.dat and gridcoinresearch.conf regularly to a safe place.&#13;
+Check the project page for more info about Gridcoin.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/sublivionsRepository/Gridcoin/Gridcoin.xml</templatePath>
+</Container>
