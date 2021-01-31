@@ -11,7 +11,14 @@
   <Overview>Running Boinc? Get some Gridcoins from your Boinc work!&#13;
 This docker contains Gridcoin Wallet with GUI running on Ubuntu. You can access the wallet via VNC and NoVNC.&#13;
 Remember to backup your wallet.dat and gridcoinresearch.conf regularly to a safe place.&#13;
-Check the project page for more info about Gridcoin.</Overview>
+Check the project page for more info about Gridcoin and how to setup crunching.&#13;
+&#13;
+You can install separate BOINC container to use with this.&#13;
+Specify BOINC DATA DIR if you are going to solo crunch, with pool crunching it is not needed.&#13;
+Keep in mind that solo crunching needs upfront investment as a chunk of Gridcoins needs to be owned in order to stake. &#13;
+Pool crunching doesn't need any upfront investment, hence go with the pool if you don't want to buy any Gridcoins.&#13;
+&#13;
+Switching between solo and pool is possible if you ever want to change.</Overview>
   <WebUI>http://[IP]:[PORT:6901]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Sabreu/unraid_templates/main/Gridcoin/Gridcoin.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/gridcoin-community/Gridcoin-Site/master/assets/img/Favicons/favicon-196x196.png</Icon>
@@ -38,6 +45,11 @@ Check the project page for more info about Gridcoin.</Overview>
       <ContainerDir>/headless/.GridcoinResearch/</ContainerDir>
       <Mode>rw,slave</Mode>
     </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/lib/boinc-client/</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
   </Data>
   <Environment>
     <Variable>
@@ -56,11 +68,19 @@ Check the project page for more info about Gridcoin.</Overview>
   <Config Name="VNC PASSWORD" Target="VNC_PW" Default="" Mode="" Description="default: vncpassword" Type="Variable" Display="always" Required="false" Mask="false">vncpassword</Config>
   <Config Name="VNC RESOLUTION" Target="VNC_RESOLUTION" Default="1920x1080" Mode="" Description="default: 1920x1080" Type="Variable" Display="always" Required="false" Mask="false">1920x1080</Config>
   <Config Name="VNC PORT" Target="5901" Default="" Mode="tcp" Description="default: 5901" Type="Port" Display="always" Required="false" Mask="false">5901</Config>
-  <Date>1612009906</Date>
+  <Config Name="BOINC DATA DIR" Target="/var/lib/boinc-client/" Default="" Mode="rw,slave" Description="BOINC data location if solo crunching (not needed if pool crunching): /mnt/user/appdata/boinc/" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Date>1612099496</Date>
   <Category>Other:</Category>
   <Description>Running Boinc? Get some Gridcoins from your Boinc work!&#13;
 This docker contains Gridcoin Wallet with GUI running on Ubuntu. You can access the wallet via VNC and NoVNC.&#13;
 Remember to backup your wallet.dat and gridcoinresearch.conf regularly to a safe place.&#13;
-Check the project page for more info about Gridcoin.</Description>
+Check the project page for more info about Gridcoin and how to setup crunching.&#13;
+&#13;
+You can install separate BOINC container to use with this.&#13;
+Specify BOINC DATA DIR if you are going to solo crunch, with pool crunching it is not needed.&#13;
+Keep in mind that solo crunching needs upfront investment as a chunk of Gridcoins needs to be owned in order to stake. &#13;
+Pool crunching doesn't need any upfront investment, hence go with the pool if you don't want to buy any Gridcoins.&#13;
+&#13;
+Switching between solo and pool is possible if you ever want to change.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/sublivionsRepository/Gridcoin/Gridcoin.xml</templatePath>
 </Container>
