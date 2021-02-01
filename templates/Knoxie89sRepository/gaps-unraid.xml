@@ -35,8 +35,9 @@
   </Data>
   <Environment></Environment>
   <Config Name="UI" Target="8484" Default="" Mode="tcp" Description="Container Port: 8484" Type="Port" Display="always" Required="true" Mask="false">8484</Config>
-  <Config Name="SSL Boolean" Target="ENABLE_SSL" Default="" Mode="" Description="true/false to enable SSL" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="Login Boolean" Target="ENABLE_LOGIN" Default="" Mode="" Description="true/false to enable login" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Enable https for WebUI" Target="ENABLE_SSL" Default="" Mode="" Description="true/false to enable WebUI https" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Require login for WebUI" Target="ENABLE_LOGIN" Default="" Mode="" Description="true/false to require login" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Set Gaps Base URL for WebUI" Target="BASE_URL" Default="" Mode="" Description="The base URL for Gaps WebUI" Type="Variable" Display="always" Required="false" Mask="false">/gaps</Config>
   <Config Name="config" Target="/usr/data" Default="" Mode="rw" Description="File path for gaps config and data storage." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gaps/</Config>
   <Date>1574708103</Date>
   <Category>Tools:Utilities MediaApp:Other MediaServer:Other</Category>

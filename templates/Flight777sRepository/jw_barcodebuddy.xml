@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>BarcodeBuddy</Name>
+  <Repository>f0rc3/barcodebuddy-docker:latest</Repository>
+  <Registry>https://hub.docker.com/r/f0rc3/barcodebuddy-docker</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/101905-support-flight777-just-works-container-repository/</Support>
+  <Project>https://github.com/Forceu/barcodebuddy</Project>
+  <Overview>&amp;lt;b&amp;gt;Barcode Buddy is a Grocy companion app/plugin, which allows you to install the Barcode Buddy app and scan products directly to your Grocy library.&amp;lt;/b&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+UNRAID template that JUST WORKS, brought to you by Flight777!&#13;
+&amp;lt;/br&amp;gt;&#13;
+&amp;lt;/br&amp;gt;&#13;
+[b][span style='color: #E80000;']ADDED PERFORMANCE[/span][/b] For added performance you can install a Redis container and link it to the app in the Barcode Buddy webui.</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/jw_barcodebuddy.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Flight777/unraid_justworks_templates/main/images/barcodebuddy/barcodebuddy_unraid.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateLink>https://www.paypal.me/robvermeij</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8450</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/barcodebuddy</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Configuration Files:" Target="/config" Default="/mnt/user/appdata/barcodebuddy" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/barcodebuddy</Config>
+  <Config Name="Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8450</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Date>1612183607</Date>
+  <Category>Productivity: Tools:Utilities</Category>
+  <Description>Barcode Buddy is a Grocy companion app/plugin, which allows you to install the Barcode Buddy app and scan products directly to your Grocy library.&#13;
+&#13;
+&#13;
+UNRAID template that JUST WORKS, brought to you by Flight777!</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Flight777sRepository/jw_barcodebuddy.xml</templatePath>
+</Container>
