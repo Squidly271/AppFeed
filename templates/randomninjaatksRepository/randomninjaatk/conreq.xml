@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Beta>true</Beta>
+  <Name>conreq</Name>
+  <Repository>roxedus/conreq</Repository>
+  <Registry>https://hub.docker.com/r/roxedus/conreq</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/gQhGZzEjmX</Support>
+  <Project>https://github.com/Archmonger/Conreq</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/conreq.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/conreq.png</Icon>
+  <Overview>Conreq is a self-hosted web application that allows users to request content for Radarr/Sonarr.</Overview>
+  <DonateImg></DonateImg>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Port for 8000" Target="8000" Default="8000" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Time Zone" Target="TZ" Default="America/New_York" Mode="" Description="Set to local timezone using the TZ Database code" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SSL" Target="SSL" Default="false" Mode="" Description="Enabled = true :: enables using local SSL cert for secure connection, not required if using reverse proxy" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SSL_CERT" Target="SSL_CERT" Default="/config/crt.pem" Mode="" Description="Required when using SSL=true" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SSL_KEY" Target="SSL_CERT" Default="/config/key.pem " Mode="" Description="Required when using SSL=true" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Category>Downloaders: Network:Other MediaApp:Video Tools:Utilities Status:Beta</Category>
+  <Description>Conreq is a self-hosted web application that allows users to request content for Radarr/Sonarr.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/conreq.xml</templatePath>
+</Container>
