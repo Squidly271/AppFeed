@@ -15,7 +15,7 @@ To use with home assistant see: https://github.com/robmarkcole/HASS-Deepstack-ob
 [br]&#13;
 [b][u][span style='color: #E80000;']Old CPUs without AVX[/span][/u][/b]&#13;
 [br]&#13;
- If you are using an older cpu that dosn't support AVX add [b]:noavx[/b] to the end of the [b]"Repository:"[/b] field (switch on advanced view). &#13;
+ If you are using an older cpu that dosn't support AVX add [b]:noavx[/b] to the end of the [b]"Repository:"[/b] field. &#13;
 [br]&#13;
 Should look like this: [b]deepquestai/deepstack:noavx[/b]&#13;
 [br]&#13;
@@ -24,7 +24,7 @@ Should look like this: [b]deepquestai/deepstack:noavx[/b]&#13;
 [br]&#13;
 Install Unraid Nvidia Plugin to install Nvidia Drivers: [b]https://forums.unraid.net/topic/98978-plugin-nvidia-driver/[/b]&#13;
 [br] &#13;
-Add [b]:gpu[/b] to the end of the [b]"Repository:"[/b] field (switch on advanced view). Should look like this: [b]deepquestai/deepstack:gpu[/b]&#13;
+Add [b]:gpu[/b] to the end of the [b]"Repository:"[/b] field. Should look like this: [b]deepquestai/deepstack:gpu[/b]&#13;
 [br]&#13;
 Add [b]--runtime=nvidia[/b] to the [b]"Extra Parameters:"[/b] field (switch on advanced view) .&#13;
 [br]&#13;
@@ -99,8 +99,8 @@ Copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b]</Overview>
     </Variable>
   </Environment>
   <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="For access to the Web UI and API. Default is 5000." Type="Port" Display="always" Required="true" Mask="false">5000</Config>
-  <Config Name="AppData" Target="/datastore" Default="/mnt/user/appdata/deepstack" Mode="rw" Description="Container Path: /datastore" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/deepstack</Config>
-  <Config Name="Custom Model Store" Target="/modelstore/detection" Default="/mnt/user/appdata/deepstack/custom_models" Mode="rw" Description="This specifies the local directory where you stored your custom models. (/modelstore/detection)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/deepstack/custom_models</Config>
+  <Config Name="AppData" Target="/datastore" Default="/mnt/user/appdata/deepstack" Mode="rw" Description="(Container Path: /datastore)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/deepstack</Config>
+  <Config Name="Custom Model Store" Target="/modelstore/detection" Default="/mnt/user/appdata/deepstack/custom_models" Mode="rw" Description="This specifies the local directory where you stored your custom models. (Container Path: /modelstore/detection)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/deepstack/custom_models</Config>
   <Config Name="Object Detection" Target="VISION-DETECTION" Default="True|False" Mode="" Description="This enables the object detection API. Default is False. (VISION-DETECTION)" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="Face Detection" Target="VISION-FACE" Default="True|False" Mode="" Description="This enables the face recognition APIs. Default is False. (VISION-FACE)" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="Scene Detection" Target="VISION-SCENE" Default="True|False" Mode="" Description="This enables the scene recognition API. Default is False. (VISION-SCENE)" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
