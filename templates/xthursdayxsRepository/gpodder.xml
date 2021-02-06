@@ -22,6 +22,8 @@ echo -n &amp;lt;your_password&amp;gt; | md5sum</Overview>
   <Icon>https://raw.githubusercontent.com/xthursdayx/docker-templates/master/images/gpodder-icon.png</Icon>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
+  <DonateText>​ If you appreciate my work please consider buying me a coffee, cheers! 😁</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/xthursdayx</DonateLink>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -39,9 +41,9 @@ echo -n &amp;lt;your_password&amp;gt; | md5sum</Overview>
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/downloads</HostDir>
       <ContainerDir>/downloads</ContainerDir>
-      <Mode>rw,slave</Mode>
+      <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/cache/appdata/gPodder</HostDir>
@@ -76,7 +78,7 @@ echo -n &amp;lt;your_password&amp;gt; | md5sum</Overview>
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="Downloads" Target="/downloads" Default="/mnt/cache/Downloads/gPodder" Mode="rw,slave" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Downloads" Target="/downloads" Default="/mnt/cache/Downloads/gPodder" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="false" Mask="false">/downloads</Config>
   <Config Name="RDP" Target="3389" Default="3389" Mode="tcp" Description="Container Port: 3389" Type="Port" Display="always" Required="false" Mask="false">3389</Config>
   <Config Name="Web_Interface" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="GUAC_USER" Target="GUAC_USER" Default="" Mode="" Description="Username for the gPodder desktop gui." Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
@@ -85,7 +87,7 @@ echo -n &amp;lt;your_password&amp;gt; | md5sum</Overview>
   <Config Name="Width" Target="WIDTH" Default="1280" Mode="" Description="Container Variable: WIDTH" Type="Variable" Display="always" Required="false" Mask="false">1280</Config>
   <Config Name="Height" Target="HEIGHT" Default="720" Mode="" Description="Container Variable: HEIGHT" Type="Variable" Display="always" Required="false" Mask="false">720</Config>
   <Config Name="Config" Target="/config" Default="/mnt/cache/appdata/gpodder" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/cache/appdata/gPodder</Config>
-  <Date>1569980751</Date>
+  <Date>1612583759</Date>
   <Category>Downloaders: MediaApp:Other</Category>
   <Description>gPodder is a simple, open source podcast client written in Python using GTK+. In development since 2005 with a proven, mature codebase.&amp;amp;#xD;&#13;
 &amp;amp;#xD;</Description>
