@@ -17,7 +17,7 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort></HostPort>
+        <HostPort>6080</HostPort>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -30,53 +30,53 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/nvim-server</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/nvim-server-workspace</HostDir>
       <ContainerDir>/workspace</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value></Value>
+      <Value>kev</Value>
       <Name>USER</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>439911</Value>
       <Name>SECRET</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>Asia/Shanghai</Value>
       <Name>TZ</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>$UID</Value>
       <Name></Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>$GID</Value>
       <Name></Name>
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="USER" Target="USER" Default="guest" Mode="" Description="User for login, default is set to guest" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="SECRET" Target="SECRET" Default="password" Mode="" Description="Password for login, default is set to password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="TZ" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Default TZ is set to Asia/Shanghai" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="WEB UI" Target="3000" Default="6080" Mode="tcp" Description="Port for accessing the Web UI" Type="Port" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="CONFIG" Target="/config" Default="/mnt/user/appdata/nvim-server" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="WORKSPACE" Target="/workspace" Default="/mnt/user/appdata/nvim-server-workspace" Mode="rw" Description="Container Path: /workspace" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="UID" Target="" Default="$UID" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="USER" Target="USER" Default="guest" Mode="" Description="User for login, default is set to guest" Type="Variable" Display="always" Required="true" Mask="false">kev</Config>
+  <Config Name="SECRET" Target="SECRET" Default="password" Mode="" Description="Password for login, default is set to password" Type="Variable" Display="always" Required="true" Mask="false">439911</Config>
+  <Config Name="TZ" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Default TZ is set to Asia/Shanghai" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="WEB UI" Target="3000" Default="6080" Mode="tcp" Description="Port for accessing the Web UI" Type="Port" Display="always" Required="false" Mask="false">6080</Config>
+  <Config Name="CONFIG" Target="/config" Default="/mnt/user/appdata/nvim-server" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nvim-server</Config>
+  <Config Name="WORKSPACE" Target="/workspace" Default="/mnt/user/appdata/nvim-server-workspace" Mode="rw" Description="Container Path: /workspace" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nvim-server-workspace</Config>
+  <Config Name="UID" Target="" Default="$UID" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="false" Mask="false">$UID</Config>
   <Config Name="Markdown Preview" Target="8090" Default="8090" Mode="tcp" Description="Port for the Instant Markdown Preview Server" Type="Port" Display="advanced" Required="false" Mask="false">8090</Config>
-  <Config Name="GID" Target="" Default="$GID" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
-  <Date>1612741307</Date>
+  <Config Name="GID" Target="" Default="$GID" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="false" Mask="false">$GID</Config>
+  <Date>1612825084</Date>
   <Category>Productivity:</Category>
   <Description>A containerized IDE-like text editor that runs on a web server. This tool is for running NeoVim remotely and continuing the development process at 🚀 speed.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/kevinyusRepository/nvim-server/nvim-server.xml</templatePath>
