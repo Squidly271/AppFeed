@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <Name>nvim-server</Name>
-  <Repository>hikariai/nvim-server</Repository>
+  <Repository>hikariai/nvim-server:latest</Repository>
   <Registry>https://hub.docker.com/r/hikariai/nvim-server</Registry>
   <Network>bridge</Network>
   <Shell>bash</Shell>
@@ -42,12 +42,12 @@
   </Data>
   <Environment>
     <Variable>
-      <Value>kev</Value>
+      <Value>guest</Value>
       <Name>USER</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>439911</Value>
+      <Value>password</Value>
       <Name>SECRET</Name>
       <Mode></Mode>
     </Variable>
@@ -67,8 +67,8 @@
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="USER" Target="USER" Default="guest" Mode="" Description="User for login, default is set to guest" Type="Variable" Display="always" Required="true" Mask="false">kev</Config>
-  <Config Name="SECRET" Target="SECRET" Default="password" Mode="" Description="Password for login, default is set to password" Type="Variable" Display="always" Required="true" Mask="false">439911</Config>
+  <Config Name="USER" Target="USER" Default="guest" Mode="" Description="User for login, default is set to guest" Type="Variable" Display="always" Required="true" Mask="false">guest</Config>
+  <Config Name="SECRET" Target="SECRET" Default="password" Mode="" Description="Password for login, default is set to password" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
   <Config Name="TZ" Target="TZ" Default="Asia/Shanghai" Mode="" Description="Default TZ is set to Asia/Shanghai" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
   <Config Name="WEB UI" Target="3000" Default="6080" Mode="tcp" Description="Port for accessing the Web UI" Type="Port" Display="always" Required="false" Mask="false">6080</Config>
   <Config Name="CONFIG" Target="/config" Default="/mnt/user/appdata/nvim-server" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nvim-server</Config>
@@ -76,7 +76,7 @@
   <Config Name="UID" Target="" Default="$UID" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="false" Mask="false">$UID</Config>
   <Config Name="Markdown Preview" Target="8090" Default="8090" Mode="tcp" Description="Port for the Instant Markdown Preview Server" Type="Port" Display="advanced" Required="false" Mask="false">8090</Config>
   <Config Name="GID" Target="" Default="$GID" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="false" Mask="false">$GID</Config>
-  <Date>1612825084</Date>
+  <Date>1612912779</Date>
   <Category>Productivity:</Category>
   <Description>A containerized IDE-like text editor that runs on a web server. This tool is for running NeoVim remotely and continuing the development process at 🚀 speed.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/kevinyusRepository/nvim-server/nvim-server.xml</templatePath>
