@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Beta>true</Beta>
+  <Name>ambd</Name>
+  <Repository>randomninjaatk/ambd:amd64</Repository>
+  <Registry>https://hub.docker.com/r/randomninjaatk/ambd</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/JumQXDc</Support>
+  <Project>https://github.com/RandomNinjaAtk/docker-ambd</Project>
+  <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/ambd.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/ama.png</Icon>
+  <Overview>Automated MusicBrainz Downloader :: This script will automatically archive music using a popular online DL Client</Overview>
+  <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
+  <DonateImg></DonateImg>
+  <WebUI></WebUI>
+  <PostArgs></PostArgs>
+  <Network>bridge</Network>
+  <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /downloads-ambd" Target="/downloads-ambd" Default="/mnt/user" Mode="rw" Description="Container Path for downloads..." Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Host Path for /library" Target="/library" Default="/mnt/user" Mode="rw" Description="Container Path for completed library..." Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
+  <Config Name="Enable Automatic Script Start" Target="AUTOSTART" Default="true" Mode="" Description="true = Enabled :: Runs script automatically on startup" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Script Interval" Target="SCRIPTINTERVAL" Default="15m" Mode="" Description="#s or #m or #h or #d :: s = seconds, m = minutes, h = hours, d = days :: Amount of time between each script run, when AUTOSTART is enabled" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DL Client ARL Token" Target="ARL_TOKEN" Default="" Mode="" Description="User token for dl client, for instructions to obtain token: https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Format" Target="QUALITY" Default="320" Mode="" Description="SET TO: FLAC or 320 or 128" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Music Embedded Cover Quality" Target="EMBEDDED_COVER_QUALITY" Default="95" Mode="" Description="Controls the quality of the cover image compression in percentage, 100 = no compression" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Download Concurrency" Target="CONCURRENT_DOWNLOADS" Default="1" Mode="" Description="Controls download concurrency" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Folder Permissions" Target="FOLDER_PERMISSIONS" Default="766" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="File Permissions" Target="FILE_PERMISSIONS" Default="666" Mode="" Description="Based on chmod linux permissions" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Scan Notifications" Target="NOTIFYPLEX" Default="false" Mode="" Description="true = enabled :: Plex must have a Music library added and also be configured with the /downloads-ama directory" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Library Name" Target="PLEXLIBRARYNAME" Default="Music" Mode="" Description="This must exactly match the name of the Plex Library that contains the Lidarr Media Folder data" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Url" Target="PLEXURL" Default="http://x.x.x.x:32400" Mode="" Description="ONLY used if NOTIFYPLEX is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Plex Token" Target="PLEXTOKEN" Default="" Mode="" Description="ONLY used if NOTIFYPLEX is enabled..." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Category>Downloaders: MediaApp:Music Status:Beta</Category>
+  <Description>Automated MusicBrainz Downloader :: This script will automatically archive music using a popular online DL Client</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/ambd.xml</templatePath>
+</Container>
