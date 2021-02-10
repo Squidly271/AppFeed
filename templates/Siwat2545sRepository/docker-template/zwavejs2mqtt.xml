@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Date>1613019600</Date>
+  <Name>ZWaveJS2MQTT</Name>
+  <WebUI>http://[IP]:[PORT:8091]</WebUI>
+  <Project>https://github.com/zwave-js/zwavejs2mqtt</Project>
+  <Overview>
+   Fully configurable Zwave to MQTT Gateway and Control Panel.
+  </Overview>
+  <Registry>https://hub.docker.com/r/zwavejs/zwavejs2mqtt</Registry>
+  <GitHub>https://github.com/SiwatINC/unraid-ca-repository</GitHub>
+  <Repository>zwavejs/zwavejs2mqtt</Repository>
+  <Support>https://forums.unraid.net/topic/75588-support-siwats-docker-repository/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Config Name="Config Directory" Target="/usr/src/app/store" Default="/mnt/user/appdata/zwavejs2mqtt" Mode="rw" Description="This is where the Application store your config files&amp;lt;br&amp;gt;Container path: /usr/src/app/store" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Mask="false" Required="true" Display="always" Type="Device" Description="ls /dev/serial/by-id/" Mode="" Default="" Target="" Name="Dongle"></Config>
+  <Config Name="WebUI Port" Target="8091" Default="8091" Mode="tcp" Description="Port for the HTTP WebUI" Type="Port" Display="advanced" Required="true" Mask="false">8091</Config>
+  <Config Name="WebSocket Port" Target="3000" Default="3000" Mode="tcp" Description="Port for the WebSocket API" Type="Port" Display="advanced" Required="true" Mask="false">3000</Config>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <DonateText>If you like it, then consider buying me a soda as I don&amp;#39;t like beer :P</DonateText>
+  <DonateLink>https://www.paypal.me/siwatsirichai</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <Icon>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/icons/zwavejs2mqtt.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/SiwatINC/unraid-ca-repository/master/docker-template/zwavejs2mqtt.xml</TemplateURL>
+  <Category>HomeAutomation: Tools:</Category>
+  <Description>Fully configurable Zwave to MQTT Gateway and Control Panel.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Siwat2545sRepository/docker-template/zwavejs2mqtt.xml</templatePath>
+</Container>
