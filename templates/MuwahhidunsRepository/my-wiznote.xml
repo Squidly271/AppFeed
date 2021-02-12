@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>wiznote</Name>
+  <Repository>wiznote/wizserver</Repository>
+  <Registry>https://hub.docker.com/r/wiznote/wizserver</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://myunraid.ru/</Support>
+  <Project>https://www.wiz.cn/</Project>
+  <Overview>WizNote is a cloud service that you could use to save your notes or share documents with your colleagues.&#13;
+&#13;
+Default administrator account: &#13;
+login:  [b][span style='color: #E80000;']admin@wiz.cn[/span][/b][br]&#13;
+password:  [b][span style='color: #E80000;']123456[/span][/b][br]&#13;
+&#13;
+Please change the password after you finished the deployment. It can add five accounts in the free edition.</Overview>
+  <WebUI>http://[IP]:[PORT:888]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/main/my-wiznote.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Muwahhidun/logo/main/wiznote-icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>888</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9269</HostPort>
+        <ContainerPort>9269</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/wiznote</HostDir>
+      <ContainerDir>/wiz/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="/wiz/storage" Target="/wiz/storage" Default="" Mode="rw" Description="Container Path: /wiz/storage" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/wiznote</Config>
+  <Config Name="/etc/localtime" Target="/etc/localtime" Default="" Mode="rw" Description="Container Path: /etc/localtime" Type="Path" Display="always" Required="false" Mask="false">/etc/localtime</Config>
+  <Config Name="80" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">888</Config>
+  <Config Name="9269" Target="9269" Default="" Mode="udp" Description="Container Port: 9269" Type="Port" Display="always" Required="false" Mask="false">9269</Config>
+  <Date>1613156899</Date>
+  <Category>Other:Uncategorized</Category>
+  <Description>WizNote is a cloud service that you could use to save your notes or share documents with your colleagues.&#13;
+&#13;
+Default administrator account: &#13;
+login:</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MuwahhidunsRepository/my-wiznote.xml</templatePath>
+</Container>
