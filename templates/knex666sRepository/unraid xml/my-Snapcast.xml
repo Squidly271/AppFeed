@@ -13,7 +13,7 @@
 output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo</Overview>
   <WebUI></WebUI>
   <TemplateURL>https://raw.githubusercontent.com/maschhoff/docker/master/unraid%20xml/my-Snapcast.xml</TemplateURL>
-  <Icon>https://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Player-Audio-icon.png</Icon>
+  <Icon>http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Player-Audio-icon.png</Icon>
   <PostArgs>snapserver -s pipe:///data/snapfifo?name=Example&amp;amp;sampleformat=44100:16:2</PostArgs>
   <CPUset></CPUset>
   <Networking>
@@ -35,5 +35,6 @@ output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioc
 &#13;
 &#13;
 output = audioresample ! audio/x-raw,rate=48000,channels=2,format=S16LE ! audioconvert ! wavenc ! filesink location=/tmp/snapfifo</Description>
+  <IconHTTPS>https://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Player-Audio-icon.png</IconHTTPS>
   <templatePath>/tmp/GitHub/AppFeed/templates/knex666sRepository/unraid xml/my-Snapcast.xml</templatePath>
 </Container>

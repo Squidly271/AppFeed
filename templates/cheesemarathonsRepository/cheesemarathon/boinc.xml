@@ -39,7 +39,7 @@ docker exec boinc boinccmd &amp;lt;args&amp;gt;
     </Variable>
   </Environment>
   <WebUI></WebUI>
-  <Icon>https://raw.githubusercontent.com/cheesemarathon/docker-templates/master/images/boinc.png</Icon>
+  <Icon>https://github.com/cheesemarathon/docker-templates/raw/master/images/boinc.png</Icon>
   <Config Name="App Data" Target="/var/lib/boinc" Default="/mnt/user/appdata/boinc" Mode="rw" Description="Container Path: /var/lib/boinc" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/boinc</Config>
   <Config Name="BOINC_GUI_RPC_PASSWORD" Target="BOINC_GUI_RPC_PASSWORD" Default="" Mode="" Description="Container Variable: BOINC_GUI_RPC_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="BOINC_CMD_LINE_OPTIONS" Target="BOINC_CMD_LINE_OPTIONS" Default="" Mode="" Description="Container Variable: BOINC_CMD_LINE_OPTIONS" Type="Variable" Display="always" Required="true" Mask="false">--allow_remote_gui_rpc</Config>
@@ -51,5 +51,6 @@ You can attach a BOINC Manager to the client by launching the BOINC Manager, goi
 &#13;
 The client can also be controlled from the command line via the boinccmd command.&#13;
 docker exec boinc boinccmd</Description>
+  <IconHTTPS>https://github.com/cheesemarathon/docker-templates/raw/master/images/boinc.png</IconHTTPS>
   <templatePath>/tmp/GitHub/AppFeed/templates/cheesemarathonsRepository/cheesemarathon/boinc.xml</templatePath>
 </Container>
