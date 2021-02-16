@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>emby-sync</Name>
+  <Repository>lastelement21/emby-sync</Repository>
+  <Registry>https://hub.docker.com/r/lastelement21/emby-sync/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/cameronurnes/emby-sync/issues</Support>
+  <Project>https://github.com/cameronurnes/emby-sync</Project>
+  <Overview>A small flask based service to sync up Emby clients </Overview>
+  <Icon>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/emby-sync.png</Icon>
+  <Config Name="API Key" Target="SECRET_KEY" Default="" Mode="" Description="Your API Key for Emby" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Emby server" Target="EMBY_SERVER" Default="https://" Mode="" Description="URL to your Emby server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Port" Target="5000" Default="5000" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Default room" Target="DEFAULT_ROOM" Default="" Mode="" Description="Make sure this room always exists! Leave empty for default. Default is 'Bacon Bar'" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/emby-sync.xml</TemplateURL>
+  <Category>Tools:Utilities</Category>
+  <Description>A small flask based service to sync up Emby clients</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/c4artzRepository/templates/emby-sync.xml</templatePath>
+</Container>

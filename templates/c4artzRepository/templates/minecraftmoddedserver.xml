@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>MinecraftModdedServer</Name>
+  <Repository>c4artz/minecraftmoddedserver</Repository>
+  <Registry>https://hub.docker.com/r/c4artz/minecraftmoddedserver/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/C4ArtZ/ModdedMinecraftServer/issues</Support>
+  <Project>https://github.com/C4ArtZ/ModdedMinecraftServer</Project>
+  <Overview>A simple container that allows you to have a modded Minecraft server on Unraid. </Overview>
+  <Icon>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/moddedminecraftserver.png</Icon>
+  <Config Name="Appdata" Target="/serverdata/serverfiles" Default="/mnt/user/appdata/minecraftmoddedserver" Mode="rw" Description="Serverfiles location. SSD recommended!" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Extra game parameters" Target="GAME_PARAMETERS" Default="" Mode="" Description="leave blank if not needed!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Extra JVM parameters" Target="EXTRA_JVM_PARAMETERS" Default="" Mode="" Description="Leave blank if not needed!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="XMS" Target="XMS" Default="1" Mode="" Description="Initial memory heap size in GB. Recommended to be equal to XMX." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="XMX" Target="XMX" Default="2" Mode="" Description="Maximum memory heap size in GB. Lower values might reduce performance due to garbage collection." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Game Port" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="RCON Port" Target="25575" Default="25575" Mode="tcp" Description="Container Port: 25575" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Modloader" Target="MODLOADER" Default="forge" Mode="" Description="Choose between 'forge' and 'fabric'." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Set to 'true' if you accept the EULA https://account.mojang.com/documents/minecraft_eula" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="UID" Target="UID" Default="99" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="UMASK" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="GID" Target="GID" Default="100" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/minecraftmoddedserver.xml</TemplateURL>
+  <Category>GameServers:</Category>
+  <Description>A simple container that allows you to have a modded Minecraft server on Unraid.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/c4artzRepository/templates/minecraftmoddedserver.xml</templatePath>
+</Container>
