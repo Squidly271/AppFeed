@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>office-document-server-ee</Name>
+  <Repository>onlyoffice/documentserver-ee</Repository>
+  <Registry>https://hub.docker.com/r/onlyoffice/documentserver-ee</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://wiki.muwahhid.ru/</Support>
+  <Project>https://www.onlyoffice.com/</Project>
+  <Overview>Enterprise Edition Onlyoffice Document Server.&#13;
+&#13;
+Script does, endless trial version, no functionality limit:&#13;
+https://wiki.muwahhid.ru/ru/Unraid/Docker/Onlyoffice-Document-Server</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/main/my-office-document-server-ee.xml</TemplateURL>
+  <Icon>https://github.com/Muwahhidun/logo/blob/main/oo-logo.png?raw=true</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4432</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/logs</HostDir>
+      <ContainerDir>/var/log/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/data</HostDir>
+      <ContainerDir>/var/www/onlyoffice/Data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/lib</HostDir>
+      <ContainerDir>/var/lib/onlyoffice</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/db</HostDir>
+      <ContainerDir>/var/lib/postgresql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/fonts</HostDir>
+      <ContainerDir>/usr/share/fonts/truetype/custom</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/forgotten</HostDir>
+      <ContainerDir>/var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/rabbitmq</HostDir>
+      <ContainerDir>/var/lib/rabbitmq</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/onlyoffice/DocumentServer/redis</HostDir>
+      <ContainerDir>/var/lib/redis</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>JWT_ENABLED</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>mySecret</Value>
+      <Name>JWT_SECRET</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="HTTP Port" Target="80" Default="8082" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
+  <Config Name="HTTPS Port" Target="443" Default="4432" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">4432</Config>
+  <Config Name="Mounted folder for logs" Target="/var/log/onlyoffice" Default="/mnt/user/appdata/onlyoffice/DocumentServer/logs" Mode="rw" Description="Container Path: /var/log/onlyoffice" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/logs</Config>
+  <Config Name="Mounted folder for data files ( SSL certificates can be added in the /cert subfolder )" Target="/var/www/onlyoffice/Data" Default="/mnt/user/appdata/onlyoffice/DocumentServer/data" Mode="rw" Description="Container Path: /var/www/onlyoffice/Data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/data</Config>
+  <Config Name="Mounted folder for file cache" Target="/var/lib/onlyoffice" Default="/mnt/user/appdata/onlyoffice/DocumentServer/lib" Mode="rw" Description="Container Path: /var/lib/onlyoffice" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/lib</Config>
+  <Config Name="Mounted folder for database" Target="/var/lib/postgresql" Default="/mnt/user/appdata/onlyoffice/DocumentServer/db" Mode="rw" Description="Container Path: /var/lib/postgresql" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/db</Config>
+  <Config Name="Mounted folder where you can add your custom fonts" Target="/usr/share/fonts/truetype/custom" Default="/mnt/user/appdata/onlyoffice/DocumentServer/fonts" Mode="rw" Description="Container Path: /usr/share/fonts/truetype/custom" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/fonts</Config>
+  <Config Name="Mounted folder for unsaved files" Target="/var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten" Default="/mnt/user/appdata/onlyoffice/DocumentServer/forgotten" Mode="rw" Description="Container Path: /var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/forgotten</Config>
+  <Config Name="Secret true/false" Target="JWT_ENABLED" Default="" Mode="" Description="Secret on/off: ON" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Secret name" Target="JWT_SECRET" Default="" Mode="" Description="Secret name: *****" Type="Variable" Display="always" Required="false" Mask="false">mySecret</Config>
+  <Config Name="/var/lib/rabbitmq" Target="/var/lib/rabbitmq" Default="" Mode="rw" Description="Container Path: /var/lib/rabbitmq" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/rabbitmq</Config>
+  <Config Name="/var/lib/redis" Target="/var/lib/redis" Default="" Mode="rw" Description="Container Path: /var/lib/redis" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/onlyoffice/DocumentServer/redis</Config>
+  <Date>1613600359</Date>
+  <Category>Productivity: Tools:</Category>
+  <Description>Enterprise Edition Onlyoffice Document Server.&#13;
+&#13;
+Script does, endless trial version, no functionality limit:&#13;
+https://wiki.muwahhid.ru/ru/Unraid/Docker/Onlyoffice-Document-Server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MuwahhidunsRepository/my-office-document-server-ee.xml</templatePath>
+</Container>
