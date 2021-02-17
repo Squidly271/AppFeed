@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>kutt</Name>
+  <Repository>kutt/kutt</Repository>
+  <Registry>https://hub.docker.com/r/kutt/kutt/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/thedevs-network/kutt/issues</Support>
+  <Project>https://kutt.it/</Project>
+  <Overview>Kutt is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.&#13;&#13;[b]This container requires Redis a Postgres database and a functioning FQDN![b]&#13;&#13;Setup:&#13;1. Install the Postgres container from your Apps tab.&#13;2. Create a database an user.&#13;3. Give the user permissions on the created database.&#13;4. Install the Redis container from your Apps tab.&#13;5. Setup an email account which Kutt can use. (technically optional but highly recommended!)&#13;6. Setup an your preferred method of exposing Kutt to the outside world.&#13;7. Fill out this template.&#13;&#13;Optional:&#13;1. Setup Google Safe Browsing&#13;2. Setup Google Analytics&#13;</Overview>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/kutt.png</Icon>
+  <Config Name="WebUI Port" Target="3000" Default="8080" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database host" Target="DB_HOST" Default="" Mode="" Description="IP of your Postgres instance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database port" Target="DB_PORT" Default="5432" Mode="" Description="Port of your postgres instance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database name" Target="DB_NAME" Default="kutt" Mode="" Description="Name of your database. Make sure the database is already created and your user has the needed permissions!" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database user" Target="DB_USER" Default="kutt" Mode="" Description="Name of your database user" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Database password" Target="DB_PASSWORD" Default="" Mode="" Description="Password of your database user" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Database SSL" Target="DB_SSL" Default="false" Mode="" Description="Use SSL for database connection" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Redis host" Target="REDIS_HOST" Default="" Mode="" Description="IP of your Redis instance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Redis" Target="REDIS_PORT" Default="6379" Mode="" Description="Port of your Redis instance" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Redis password" Target="REDIS_PASSWORD" Default="" Mode="" Description="Password for your Redis instance. Leave blank if you didn't set one!" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Mail host" Target="MAIL_HOST" Default="" Mode="" Description="Hostname (FQDN or IP) of your mail provider. Used to send verification emails" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mail port" Target="MAIL_PORT" Default="" Mode="" Description="Port of your mail provider. 25 (unencrypted), 587 (TLS), 465 (SMTPS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mail secure" Target="MAIL_SECURE" Default="false" Mode="" Description="Set to true if using port 465" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mail user" Target="MAIL_USER" Default="" Mode="" Description="Your email username. Most likely your email address" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Mail password" Target="MAIL_PASSWORD" Default="" Mode="" Description="Password of your email user" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Mail from" Target="MAIL_FROM" Default="" Mode="" Description="Sender address" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Admin emails" Target="ADMIN_EMAILS" Default="" Mode="" Description="Comma seperated list of admin email adresses" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Report email" Target="REPORT_EMAIL" Default="" Mode="" Description="The email address that will receive submitted reports" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Contact email" Target="CONTACT_EMAIL" Default="" Mode="" Description="Support email to show on the app" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Domain" Target="DEFAULT_DOMAIN" Default="" Mode="" Description="The domain that this website is on" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Site name" Target="SITE_NAME" Default="Kutt" Mode="" Description="The name of the site where Kutt is hosted" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Link length" Target="LINK_LENGTH" Default="6" Mode="" Description="Generated link length" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Disable registration" Target="DISALLOW_REGISTRATION" Default="false" Mode="" Description="Disable registration" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Disable anonymous link creation" Target="DISALLOW_ANONYMOUS_LINKS" Default="false" Mode="" Description="Disable anonymous link creation" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Daily link limit" Target="USER_LIMIT_PER_DAY" Default="50" Mode="" Description="Default limit for how many links a user can create per day" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Anonymous links cooldown" Target="NON_USER_COOLDOWN" Default="0" Mode="" Description="Number of links anonymous users can create per minute. Ignored if anonymous link creation is disabled" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Max number of stats per link" Target="DEFAULT_MAX_STATS_PER_LINK" Default="5000" Mode="" Description="Max number of visits for each link to have detailed stats" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="JSON Web Token key" Target="JWT_SECRET" Default="securekey" Mode="" Description="A passphrase to encrypt JWT. Use a long and secure key." Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="reCaptcha site key" Target="RECAPTCHA_SITE_KEY" Default="" Mode="" Description="Invisible reCaptcha key. Create one here https://www.google.com/recaptcha/intro/" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="reCaptcha secret key" Target="RECAPTCHA_SECRET_KEY" Default="" Mode="" Description="Container Variable: RECAPTCHA_SECRET_KEY" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="Google safe browsing key" Target="GOOGLE_SAFE_BROWSING_KEY" Default="" Mode="" Description="Google Cloud API to prevent from users from submitting malware URLs. Get one from https://developers.google.com/safe-browsing/v4/get-started" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="Google Analytics key" Target="GOOGLE_ANALYTICS" Default="" Mode="" Description="your GA key" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="Google Analytics universal key" Target="GOOGLE_ANALYTICS_UNIVERSAL" Default="" Mode="" Description="Your universal GA key" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
+  <Config Name="Internal port" Target="PORT" Default="3000" Mode="" Description="Internal application port. Do not change this!" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <TemplateURL>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/kutt.xml</TemplateURL>
+  <Category>Cloud: Tools:Utilities Network:Web</Category>
+  <Description>Kutt is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.&#13;&#13;This container requires Redis a Postgres database and a functioning FQDN!&#13;&#13;Setup:&#13;1. Install the Postgres container from your Apps tab.&#13;2. Create a database an user.&#13;3. Give the user permissions on the created database.&#13;4. Install the Redis container from your Apps tab.&#13;5. Setup an email account which Kutt can use. (technically optional but highly recommended!)&#13;6. Setup an your preferred method of exposing Kutt to the outside world.&#13;7. Fill out this template.&#13;&#13;Optional:&#13;1. Setup Google Safe Browsing&#13;2. Setup Google Analytics</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/c4artzRepository/templates/kutt.xml</templatePath>
+</Container>
