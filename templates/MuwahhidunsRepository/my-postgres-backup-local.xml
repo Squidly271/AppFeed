@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>postgres-backup-local</Name>
+  <Repository>prodrigestivill/postgres-backup-local</Repository>
+  <Registry>https://hub.docker.com/r/prodrigestivill/postgres-backup-local</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://wiki.muwahhid.ru/</Support>
+  <Project>https://github.com/prodrigestivill/docker-postgres-backup-local</Project>
+  <Overview>Backup PostgresSQL to the local filesystem with periodic rotating backups, based on schickling/postgres-backup-s3. Backup multiple databases from the same host by setting the database names in POSTGRES_DB separated by commas or spaces.
+  Restore examples:
+  DB: nextcloud
+  USER: muwahhid
+  zcat /mnt/user/Backups/Postgres/Backups/daily/nextcloud-20210218-235636.sql.gz | docker exec -i testsql psql --username=muwahhid --dbname=nextcloud -W
+  </Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Muwahhidun/unraid-docker-templates/main/my-postgres-backup-local.xml</TemplateURL>
+  <Icon>https://github.com/Muwahhidun/logo/blob/main/logo%20backup.png?raw=true</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pgbackups</HostDir>
+      <ContainerDir>/var/opt/pgbackups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pgbackups/data</HostDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Backups/Postgres/Backups</HostDir>
+      <ContainerDir>/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.7</Value>
+      <Name>POSTGRES_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5432</Value>
+      <Name>POSTGRES_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>postgres, nextcloud, traccar, joplin, wikijs, authelia</Value>
+      <Name>POSTGRES_DB</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>postgress_root_user</Value>
+      <Name>POSTGRES_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>postgress_root_password</Value>
+      <Name>POSTGRES_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>-Z9 --schema=public --blobs</Value>
+      <Name>POSTGRES_EXTRA_OPTS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>@hourly</Value>
+      <Name>SCHEDULE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>7</Value>
+      <Name>BACKUP_KEEP_DAYS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>4</Value>
+      <Name>BACKUP_KEEP_WEEKS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>6</Value>
+      <Name>BACKUP_KEEP_MONTHS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>9080</Value>
+      <Name>HEALTHCHECK_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="/var/opt/pgbackups" Target="/var/opt/pgbackups" Default="" Mode="rw" Description="Container Path: /var/opt/pgbackups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pgbackups</Config>
+  <Config Name="/var/lib/postgresql/data" Target="/var/lib/postgresql/data" Default="" Mode="rw" Description="Container Path: /var/lib/postgresql/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pgbackups/data</Config>
+  <Config Name="/backups" Target="/backups" Default="" Mode="rw" Description="Container Path: /backups" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Backups</Config>
+  <Config Name="POSTGRES_HOST" Target="POSTGRES_HOST" Default="" Mode="" Description="Container Variable: POSTGRES_HOST" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.7</Config>
+  <Config Name="POSTGRES_PORT" Target="POSTGRES_PORT" Default="" Mode="" Description="Container Variable: POSTGRES_PORT" Type="Variable" Display="always" Required="false" Mask="false">5432</Config>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="" Mode="" Description="Container Variable: POSTGRES_DB" Type="Variable" Display="always" Required="false" Mask="false">postgres, nextcloud, traccar, joplin, wikijs, authelia</Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="Container Variable: POSTGRES_USER" Type="Variable" Display="always" Required="false" Mask="false">postgres_root_user</Config>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="Container Variable: POSTGRES_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true">postgres_root_password</Config>
+  <Config Name="POSTGRES_EXTRA_OPTS" Target="POSTGRES_EXTRA_OPTS" Default="" Mode="" Description="Container Variable: POSTGRES_EXTRA_OPTS" Type="Variable" Display="always" Required="false" Mask="false">-Z9 --schema=public --blobs</Config>
+  <Config Name="SCHEDULE" Target="SCHEDULE" Default="" Mode="" Description="Container Variable: SCHEDULE" Type="Variable" Display="always" Required="false" Mask="false">@hourly</Config>
+  <Config Name="BACKUP_KEEP_DAYS" Target="BACKUP_KEEP_DAYS" Default="" Mode="" Description="Container Variable: BACKUP_KEEP_DAYS" Type="Variable" Display="always" Required="false" Mask="false">7</Config>
+  <Config Name="BACKUP_KEEP_WEEKS" Target="BACKUP_KEEP_WEEKS" Default="" Mode="" Description="Container Variable: BACKUP_KEEP_WEEKS" Type="Variable" Display="always" Required="false" Mask="false">4</Config>
+  <Config Name="BACKUP_KEEP_MONTHS" Target="BACKUP_KEEP_MONTHS" Default="" Mode="" Description="Container Variable: BACKUP_KEEP_MONTHS" Type="Variable" Display="always" Required="false" Mask="false">6</Config>
+  <Config Name="HEALTHCHECK_PORT" Target="HEALTHCHECK_PORT" Default="" Mode="" Description="Container Variable: HEALTHCHECK_PORT" Type="Variable" Display="always" Required="false" Mask="false">9080</Config>
+  <Date>1613684012</Date>
+  <Category>Backup: Tools:Utilities</Category>
+  <Description>Backup PostgresSQL to the local filesystem with periodic rotating backups, based on schickling/postgres-backup-s3. Backup multiple databases from the same host by setting the database names in POSTGRES_DB separated by commas or spaces.
+  Restore examples:
+  DB: nextcloud
+  USER: muwahhid
+  zcat /mnt/user/Backups/Postgres/Backups/daily/nextcloud-20210218-235636.sql.gz | docker exec -i testsql psql --username=muwahhid --dbname=nextcloud -W</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MuwahhidunsRepository/my-postgres-backup-local.xml</templatePath>
+</Container>
