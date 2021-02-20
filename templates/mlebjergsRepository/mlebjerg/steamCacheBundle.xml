@@ -121,11 +121,11 @@ If you want to use UNRAID's IP download his, containers.</Overview>
   <Config Name="LANCACHE_IP" Target="LANCACHE_IP" Default="" Mode="" Description="IP Address of cache container. (Has to be the same as the HOST's IP. If you set the container's IP to 192.168.1.108 this has to be the same. If you use bridge it has to be the same as unRAID's IP.)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="data" Target="/data/cache" Default="" Mode="rw" Description="Location to store the cached files" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/steamcache</Config>
   <Config Name="Logs" Target="/data/logs" Default="" Mode="rw" Description="Location to store the cache logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gen-cache/logs</Config>
-  <Config Name="Default Port" Target="" Default="" Mode="tcp" Description="Container Port: Must be 80!" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Default Port" Target="80" Default="" Mode="tcp" Description="Container Port: Must be 80!" Type="Port" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="CACHE_MEM_SIZE" Target="CACHE_MEM_SIZE" Default="" Mode="" Description="Memory size for the cache" Type="Variable" Display="always" Required="false" Mask="false">500m</Config>
   <Config Name="CACHE_DISK_SIZE" Target="CACHE_DISK_SIZE" Default="" Mode="" Description="Max size for the cache" Type="Variable" Display="always" Required="false" Mask="false">2000g</Config>
   <Config Name="CACHE_MAX_AGE" Target="CACHE_MAX_AGE" Default="" Mode="" Description="Max age for files in the cache" Type="Variable" Display="always" Required="false" Mask="false">150d</Config>
-  <Config Name="443" Target="" Default="" Mode="tcp" Description="Container Port: 443&#13;&#10;SNIProxy port, don't change!" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="443" Target="443" Default="" Mode="tcp" Description="Container Port: 443&#13;&#10;SNIProxy port, don't change!" Type="Port" Display="always" Required="false" Mask="false">443</Config>
   <Config Name="DNS UDP Port" Target="53" Default="53" Mode="udp" Description="DNS port, don't change!" Type="Port" Display="advanced" Required="true" Mask="false">53</Config>
   <Config Name="UPSTREAM_DNS" Target="UPSTREAM_DNS" Default="" Mode="" Description="Container Variable: UPSTREAM_DNS" Type="Variable" Display="advanced" Required="true" Mask="false">1.1.1.1</Config>
   <Config Name="USE_GENERIC_CACHE" Target="USE_GENERIC_CACHE" Default="" Mode="" Description="Must be set to true to use generic cache" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>

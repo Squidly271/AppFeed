@@ -104,8 +104,8 @@ On start, this image will download the latest domain list from https://github.co
   <Config Name="CACHE_DISK_SIZE" Target="CACHE_DISK_SIZE" Default="" Mode="" Description="Max size for the cache" Type="Variable" Display="always" Required="false" Mask="false">2000g</Config>
   <Config Name="CACHE_MAX_AGE" Target="CACHE_MAX_AGE" Default="" Mode="" Description="Max age for files in the cache" Type="Variable" Display="always" Required="false" Mask="false">150d</Config>
   <Config Name="DNS UDP Port" Target="53" Default="53" Mode="udp" Description="DNS port, don't change!" Type="Port" Display="advanced" Required="true" Mask="false">53</Config>
-  <Config Name="HTTP Port" Target="" Default="" Mode="tcp" Description="Container Port: 80&#13;&#10;Don't change!" Type="Port" Display="advanced" Required="false" Mask="false">80</Config>
-  <Config Name="HTTPS Port" Target="" Default="" Mode="tcp" Description="Container Port: 443&#13;&#10;SNIProxy port, don't change!" Type="Port" Display="advanced" Required="false" Mask="false">443</Config>
+  <Config Name="HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80&#13;&#10;Don't change!" Type="Port" Display="advanced" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="443" Default="" Mode="tcp" Description="Container Port: 443&#13;&#10;SNIProxy port, don't change!" Type="Port" Display="advanced" Required="false" Mask="false">443</Config>
   <Config Name="UPSTREAM_DNS" Target="UPSTREAM_DNS" Default="" Mode="" Description="Container Variable: UPSTREAM_DNS" Type="Variable" Display="advanced" Required="true" Mask="false">1.1.1.1</Config>
   <Config Name="USE_GENERIC_CACHE" Target="USE_GENERIC_CACHE" Default="" Mode="" Description="Must be set to true to use generic cache" Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
   <Config Name="DISABLE_ARENANET" Target="DISABLE_ARENANET" Default="" Mode="" Description="Set to true to disable arenanet caching" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
