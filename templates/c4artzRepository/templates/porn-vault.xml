@@ -12,8 +12,9 @@
   <Icon>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/porn-vault.png</Icon>
   <Config Name="WebUI port" Target="3000" Default="3000" Mode="tcp" Description="The port for the porn-vault webinterface" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Config directory" Target="/config" Default="/mnt/user/appdata/porn-vault" Mode="rw" Description="Directory for persistent files (config file, database, backups...)" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Images directory" Target="/images" Default="" Mode="rw" Description="Where your images are stored" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Videos directory" Target="/videos" Default="" Mode="rw" Description="Where your videos are stored" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Images import directory" Target="/images" Default="" Mode="rw" Description="Images stored here will be shown in the WebUI under 'Images'" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Videos import directory" Target="/videos" Default="" Mode="rw" Description="Videos stored here will be shown in the WebUI under 'Scenes'" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Uploaded images directory" Target="/config/library/images" Default="" Mode="rw" Description="Images added through the WebUI are stored here. By default this is inside the config directory" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <TemplateURL>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/porn-vault.xml</TemplateURL>
   <Category>Cloud: MediaApp:Video MediaApp:Photos</Category>
   <Description>💋 Manage your ever-growing porn collection. Using Vue &amp;amp; GraphQL</Description>
