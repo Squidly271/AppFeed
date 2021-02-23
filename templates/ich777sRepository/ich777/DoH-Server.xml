@@ -59,7 +59,6 @@ This Docker is based on the DoH Server component from: https://github.com/m13253
   <Config Name="Container Path" Target="/DoH" Default="" Mode="rw" Description="Container Path: /DoH" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/doh-server</Config>
   <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to download the latest version" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Golang Download URL" Target="GO_DL_URL" Default="" Mode="" Description="Container Variable: GO_DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz</Config>
-  <Category>Network:Other</Category>
   <Description>This is a simple DoH Server for Unraid.&#13;
 &#13;
 You easily can hide your DNS querys from your ISP with this docker on Firefox or Chrome and even on Android with the Intra App (by default it is set to use the Cloudflare and Google DNS servers).&#13;

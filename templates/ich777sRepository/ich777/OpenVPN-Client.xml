@@ -39,7 +39,6 @@ ADVANCED CONFIG: If you leave the appdata directory for this container empty it 
   <Environment></Environment>
   <Config Name="Data Path" Target="/vpn" Default="" Mode="rw" Description="Data Path for your 'vpn.ovpn' and your certificates or your 'vpn.auth'." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/openvpn-client</Config>
   <Config Name="TUN device" Target="" Default="" Mode="" Description="TUN device that is needed to run the container." Type="Device" Display="advanced" Required="true" Mask="false">/dev/net/tun</Config>
-  <Category>Network:VPN</Category>
   <Description>This OpenVPN container was designed to be started first to provide a connection to other containers (using '--net=container:OpenVPN-Client'), see the documentation for further help here: https://hub.docker.com/r/dperson/openvpn-client&#13;
 &#13;
 The basic steps for a OpenVPN connection that requires a Username and Password are: 1) Rename your *.ovpn to 'vpn.ovpn' and place it in your OpenVPN-Client directory, 2) Create in the same directory a file named 'vpn.auth' and place your Username in the first line and the Password for the connection in the second line and save it 3) Restart the container open the logs and see if the connection to your VPN establishes successfully.&#13;

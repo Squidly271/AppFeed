@@ -126,7 +126,6 @@ NOTE2: If you want to change the ports, change the environmental variables as we
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="false" Mask="false">002</Config>
   <Config Name="config" Target="/config" Default="/mnt/cache/appdata/qbittorrentvpn" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/qbittorrentvpn/</Config>
-  <Category>Downloaders:</Category>
   <Description>Docker container which runs the latest headless qBittorrent client with WebUI wth optional OpenVPN connection including iptables killswitch to prevent IP leakage when tunnel does down. This is an automated build linked with Ubuntu. &#13;
 &#13;
 NOTE: Dont use WebUI from the unRAID menu, it throws a header redirect error in qBittorrent. Instead type the IP:PORT directly into a browser address bar.&#13;

@@ -32,7 +32,6 @@ ANY CONTAINER THAT GETS ROUTED THROUGH THIS CONTAINER WILL (BRIEFLY) USE YOUR RE
   <Config Name="HEALTH_CHECK_INTERVAL" Target="HEALTH_CHECK_INTERVAL" Default="300" Mode="" Description="Interval in seconds between connection check" Type="Variable" Display="advanced" Required="false" Mask="false">300</Config>
   <Config Name="HEALTH_CHECK_SILENT" Target="HEALTH_CHECK_SILENT" Default="1" Mode="" Description="1 supresses the 'Network is up' message" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
   <Config Name="config" Target="/config" Default="/mnt/user/appdata/passthroughvpn/" Mode="rw" Description="config path of passthroughvpn" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/passthroughvpn/</Config>
-  <Category>Tools:Utilities Network:VPN</Category>
   <Description>This container solves the problem of containers with no 'VPN' variant. After setting up this container, route your non-VPN Dockers through this one to protect your IP.&#13;
 Or host, for example a game or webserver by using your VPN Provider's IP, if your VPN Provider supports forwarding.&#13;
 Both WireGuard and OpenVPN are supported.&#13;

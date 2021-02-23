@@ -33,7 +33,6 @@
   <Config Name="PAPERLESS_SECRET_KEY" Target="PAPERLESS_SECRET_KEY" Default="e11fl1oa-*ytql8p)(06fbj4ukrlo+n7k&amp;q5+$1md7i+mge=ee" Mode="" Description="Container Variable: PAPERLESS_SECRET_KEY . Paperless uses this to make session tokens. If you exose paperless on the internet, you need to change this, since the default secret is well known" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="PUID" Target="USERMAP_UID" Default="99" Mode="" Description="Container Variable: USERMAP_UID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="PGID" Target="USERMAP_GID" Default="100" Mode="" Description="Container Variable: USERMAP_GID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
-  <Category>Productivity:</Category>
   <Description>Index and archive all of your scanned paper documents. Paperless-ng is a fork of paperless, adding a new interface and many other changes under the hood.
   Requirements: Paperless-ng requires Redis as external service. You can install it from the CA store. Make sure to adjust the configuration in the template accordingly.
   Setup: Create a user account after this container is created i.e. from Unraids Docker UI, click the paperless-ng icon and choose Console. Then enter "python3.7 manage.py createsuperuser" in the prompt and follow the instructions.

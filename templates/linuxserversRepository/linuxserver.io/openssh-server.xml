@@ -29,7 +29,6 @@
   <Config Name="User Password" Target="USER_PASSWORD" Default="" Mode="" Description="Optionally set a sudo password for USER_NAME, the ssh user. If this or USER_PASSWORD_FILE are not set but SUDO_ACCESS is set to true, the user will have passwordless sudo access." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="User Password File" Target="USER_PASSWORD_FILE" Default="" Mode="" Description="Optionally specify a file that contains the password. This setting supersedes the USER_PASSWORD option (works with docker secrets)." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"></Config>
-  <Category>Network:Management</Category>
   <Description>Openssh-server is a sandboxed environment that allows ssh access without giving keys to the entire server. 
   Giving ssh access via private key often means giving full access to the server. 
   This container creates a limited and sandboxed environment that others can ssh into. 

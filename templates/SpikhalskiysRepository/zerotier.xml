@@ -27,7 +27,6 @@
   <Config Name="Config Directory" Target="/var/lib/zerotier-one" Default="/mnt/user/appdata/zerotier/zerotier-one" Mode="rw" Description="Path to persist ZeroTier state across restarts of the container. If you don't bind this ZeroTier will generate a new identity every time." Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
   <ExtraParams>--device=/dev/net/tun --cap-add=NET_ADMIN --cap-add=SYS_ADMIN</ExtraParams>
   <TemplateURL>https://raw.githubusercontent.com/Spikhalskiy/docker-templates/master/zerotier.xml</TemplateURL>
-  <Category>Network:DNS Network:Management Network:VPN</Category>
   <Description>Zerotier is an open source, cross-platform virtual LAN / VPN.
     It allows remote access to devices as if they all reside in the same local network.
     All traffic is encrypted end-to-end and takes the most direct path available for minimum latency and maximum performance, using VPN-like connections.

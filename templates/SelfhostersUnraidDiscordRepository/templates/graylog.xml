@@ -29,7 +29,6 @@ The default root user is named 'admin'&#13;
   <Config Name="MongoDB connection string" Target="GRAYLOG_MONGODB_URI" Default="mongodb://unraidIP:27017/graylog" Mode="" Description="Container Variable: GRAYLOG_MONGODB_URI" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="List of Elasticsearch hosts Graylog should connect to" Target="GRAYLOG_ELASTICSEARCH_HOSTS" Default="http://unraidIP:9200" Mode="" Description="Need to be specified as a comma-separated list of valid URIs for the http ports of your elasticsearch nodes" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Appdata" Target="/usr/share/graylog/data/journal" Default="/mnt/user/appdata/greylog" Mode="rw" Description="Container Path: /usr/share/graylog/data/journal" Type="Path" Display="advanced" Required="false" Mask="false"></Config>
-  <Category>Tools:Utilities</Category>
   <Description>Official Graylog Docker image.&#13;
 &#13;
 For more variables see the Graylog configuration file: https://github.com/Graylog2/graylog2-server/blob/3.1/misc/graylog.conf and http://docs.graylog.org/en/stable/pages/configuration/server.conf.html&#13;

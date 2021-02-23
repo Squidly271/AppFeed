@@ -37,7 +37,6 @@
   <Config Name="InfluxDB Disabled" Target="UP_INFLUXDB_DISABLE" Default="false|true" Mode="" Description="Container Variable: UP_INFLUXDB_DISABLE - Disable InfluxDB polling. Set this true if you only use Prometheus." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="Prometheus Listener" Target="UP_PROMETHEUS_HTTP_LISTEN" Default="0.0.0.0:9031" Mode="" Description="Container Value: UP_PROMETHEUS_HTTP_LISTEN - IP and port poller listens on for HTTP Prometheus scrapes. Must be in 0.0.0.0:port format." Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.0.0.0:9031</Config>
   <Config Name="Prometheus Disabled" Target="UP_PROMETHEUS_DISABLE" Default="false|true" Mode="" Description="Container Variable: UP_PROMETHEUS_DISABLE - Disable Prometheus listener. Set true if you only use InfluxDB." Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
-  <Category>Tools:Utilities Network:Management</Category>
   <Description>Collect ALL UniFi Controller, Device and Client Data - Export to InfluxDB or Prometheus.
     Visualize with Grafana using included dashboards!
     IMPORTAT! ACTION REQUIRED! As of UniFi Poller version 2 all of the
