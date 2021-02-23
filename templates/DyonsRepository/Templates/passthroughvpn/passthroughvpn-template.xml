@@ -12,7 +12,8 @@
   <Overview>This container solves the problem of containers with no 'VPN' variant. After setting up this container, route your non-VPN Dockers through this one to protect your IP.&#13;
 Or host, for example a game or webserver by using your VPN Provider's IP, if your VPN Provider supports forwarding.&#13;
 Both WireGuard and OpenVPN are supported.&#13;
-Check out https://github.com/DyonR/docker-passthroughvpn for setup instructions.</Overview>
+Check out https://github.com/DyonR/docker-passthroughvpn for more information and setup instructions.&#13;
+ANY CONTAINER THAT GETS ROUTED THROUGH THIS CONTAINER WILL (BRIEFLY) USE YOUR REAL IP. THIS IS BECAUSE THE PASSTHROUGHVPN CONTAINER NEEDS TO ESTABLISH A CONNECTION WITH THE VPN FIRST. TILL THE VPN CONNECTION IS ESTABLISHED, IT WILL USE YOUR REAL IP.</Overview>
   <TemplateURL>https://raw.githubusercontent.com/DyonR/docker-templates/master/Templates/passthroughvpn/passthroughvpn-template.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/DyonR/docker-templates/master/Icons/passthroughvpn/passthroughvpn-icon-256.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
@@ -35,6 +36,7 @@ Check out https://github.com/DyonR/docker-passthroughvpn for setup instructions.
   <Description>This container solves the problem of containers with no 'VPN' variant. After setting up this container, route your non-VPN Dockers through this one to protect your IP.&#13;
 Or host, for example a game or webserver by using your VPN Provider's IP, if your VPN Provider supports forwarding.&#13;
 Both WireGuard and OpenVPN are supported.&#13;
-Check out https://github.com/DyonR/docker-passthroughvpn for setup instructions.</Description>
+Check out https://github.com/DyonR/docker-passthroughvpn for more information and setup instructions.&#13;
+ANY CONTAINER THAT GETS ROUTED THROUGH THIS CONTAINER WILL (BRIEFLY) USE YOUR REAL IP. THIS IS BECAUSE THE PASSTHROUGHVPN CONTAINER NEEDS TO ESTABLISH A CONNECTION WITH THE VPN FIRST. TILL THE VPN CONNECTION IS ESTABLISHED, IT WILL USE YOUR REAL IP.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/DyonsRepository/Templates/passthroughvpn/passthroughvpn-template.xml</templatePath>
 </Container>
