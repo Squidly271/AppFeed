@@ -7,7 +7,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/102829-support-c4artz-templates/</Support>
   <Project>https://kutt.it/</Project>
-  <Overview>Kutt is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.</Overview>
+  <Overview>Kutt is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.&#13;&#13;[b]This container requires Redis a Postgres database and a functioning FQDN![b]&#13;&#13;Setup:&#13;1. Install the Postgres container from your Apps tab.&#13;2. Create a database an user.&#13;3. Give the user permissions on the created database.&#13;4. Install the Redis container from your Apps tab.&#13;5. Setup an email account which Kutt can use. (technically optional but highly recommended!)&#13;6. Setup an your preferred method of exposing Kutt to the outside world.&#13;7. Fill out this template.&#13;&#13;Optional:&#13;1. Setup Google Safe Browsing&#13;2. Setup Google Analytics&#13;</Overview>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <Icon>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/kutt.png</Icon>
   <Config Name="WebUI Port" Target="3000" Default="8080" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false"></Config>
@@ -45,6 +45,6 @@
   <Config Name="Google Analytics universal key" Target="GOOGLE_ANALYTICS_UNIVERSAL" Default="" Mode="" Description="Your universal GA key" Type="Variable" Display="advanced-hide" Required="false" Mask="true"></Config>
   <Config Name="Internal port" Target="PORT" Default="3000" Mode="" Description="Internal application port. Do not change this!" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
   <TemplateURL>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/kutt.xml</TemplateURL>
-  <Description>Kutt is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.</Description>
+  <Description>Kutt is a modern URL shortener with support for custom domains. Shorten URLs, manage your links and view the click rate statistics.&#13;&#13;This container requires Redis a Postgres database and a functioning FQDN!&#13;&#13;Setup:&#13;1. Install the Postgres container from your Apps tab.&#13;2. Create a database an user.&#13;3. Give the user permissions on the created database.&#13;4. Install the Redis container from your Apps tab.&#13;5. Setup an email account which Kutt can use. (technically optional but highly recommended!)&#13;6. Setup an your preferred method of exposing Kutt to the outside world.&#13;7. Fill out this template.&#13;&#13;Optional:&#13;1. Setup Google Safe Browsing&#13;2. Setup Google Analytics</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/c4artzRepository/templates/kutt.xml</templatePath>
 </Container>
