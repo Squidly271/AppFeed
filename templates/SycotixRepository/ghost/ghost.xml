@@ -80,52 +80,52 @@
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>smtp.gmail.com</Value>
       <Name>SMTP_HOST</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>587</Value>
       <Name>SMTP_PORT</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>your_email@gmail.com</Value>
       <Name>SMTP_USER</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>password</Value>
       <Name>SMTP_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>you@domain.com</Value>
       <Name>SMTP_FROM_ADDRESS</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>GMail</Value>
       <Name>SMTP_SERVICE</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>true</Value>
       <Name>SMTP_SECURE_CONNECTION</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>http</Value>
       <Name>GHOST_PROTOCOL</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>user</Value>
       <Name>GHOST_USERNAME</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>bitnami123</Value>
       <Name>GHOST_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
@@ -138,20 +138,20 @@
   <Config Name="GHOST_DATABASE_NAME" Target="GHOST_DATABASE_NAME" Default="ghost" Mode="" Description="Database name that Ghost will use to connect with the database. Default: bitnami_ghost" Type="Variable" Display="always" Required="true" Mask="false">ghost</Config>
   <Config Name="GHOST_DATABASE_USER" Target="GHOST_DATABASE_USER" Default="ghost" Mode="" Description="Database user that Ghost will use to connect with the database. Default: bn_ghost" Type="Variable" Display="always" Required="true" Mask="false">ghost</Config>
   <Config Name="GHOST_DATABASE_PASSWORD" Target="GHOST_DATABASE_PASSWORD" Default="" Mode="" Description="Database password that Ghost will use to connect with the database. No defaults." Type="Variable" Display="always" Required="true" Mask="false">password</Config>
-  <Config Name="ALLOW_EMPTY_PASSWORD" Target="ALLOW_EMPTY_PASSWORD" Default="no" Mode="" Description="It can be used to allow blank passwords. Default: no" Type="Variable" Display="always" Required="false" Mask="false">no</Config>
-  <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="" Mode="" Description="SMTP host. E.g. smtp.gmail.com" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="" Mode="" Description="SMTP port. E.g. 587" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SMTP_USER" Target="SMTP_USER" Default="" Mode="" Description="SMTP account user. E.g. your_email@gmail.com" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="" Mode="" Description="SMTP account password." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SMTP_FROM_ADDRESS" Target="SMTP_FROM_ADDRESS" Default="" Mode="" Description="SMTP from address." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SMTP_SERVICE" Target="SMTP_SERVICE" Default="" Mode="" Description="SMTP service to use. E.g. GMail or Mailgun" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="SMTP_SECURE_CONNECTION" Target="SMTP_SECURE_CONNECTION" Default="" Mode="" Description="Use a secure connection for SMTP. true or false" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="GHOST_PROTOCOL" Target="GHOST_PROTOCOL" Default="" Mode="" Description="Protocol to use in the application URLs. Valid values are https or https. Default: http" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="GHOST_USERNAME" Target="GHOST_USERNAME" Default="" Mode="" Description="Ghost application username. Default: user" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="GHOST_PASSWORD" Target="GHOST_PASSWORD" Default="" Mode="" Description="Ghost application password. The minimum length is 10 characters. Default: bitnami123" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ALLOW_EMPTY_PASSWORD" Target="ALLOW_EMPTY_PASSWORD" Default="no" Mode="" Description="It can be used to allow blank passwords. Default: no" Type="Variable" Display="always" Required="true" Mask="false">no</Config>
+  <Config Name="SMTP_HOST" Target="SMTP_HOST" Default="smtp.gmail.com" Mode="" Description="SMTP host. E.g. smtp.gmail.com" Type="Variable" Display="always" Required="true" Mask="false">smtp.gmail.com</Config>
+  <Config Name="SMTP_PORT" Target="SMTP_PORT" Default="587" Mode="" Description="SMTP port. E.g. 587" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="SMTP_USER" Target="SMTP_USER" Default="your_email@gmail.com" Mode="" Description="SMTP account user. E.g. your_email@gmail.com" Type="Variable" Display="always" Required="true" Mask="false">your_email@gmail.com</Config>
+  <Config Name="SMTP_PASSWORD" Target="SMTP_PASSWORD" Default="password" Mode="" Description="SMTP account password." Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+  <Config Name="SMTP_FROM_ADDRESS" Target="SMTP_FROM_ADDRESS" Default="you@domain.com" Mode="" Description="SMTP from address." Type="Variable" Display="always" Required="true" Mask="false">you@domain.com</Config>
+  <Config Name="SMTP_SERVICE" Target="SMTP_SERVICE" Default="GMail" Mode="" Description="SMTP service to use. E.g. GMail or Mailgun" Type="Variable" Display="always" Required="true" Mask="false">GMail</Config>
+  <Config Name="SMTP_SECURE_CONNECTION" Target="SMTP_SECURE_CONNECTION" Default="true" Mode="" Description="Use a secure connection for SMTP. true or false" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="GHOST_PROTOCOL" Target="GHOST_PROTOCOL" Default="http" Mode="" Description="Protocol to use in the application URLs. Valid values are https or https. Default: http" Type="Variable" Display="always" Required="true" Mask="false">http</Config>
+  <Config Name="GHOST_USERNAME" Target="GHOST_USERNAME" Default="user" Mode="" Description="Ghost application username. Default: user" Type="Variable" Display="always" Required="true" Mask="false">user</Config>
+  <Config Name="GHOST_PASSWORD" Target="GHOST_PASSWORD" Default=" bitnami123" Mode="" Description="Ghost application password. The minimum length is 10 characters. Default: bitnami123" Type="Variable" Display="always" Required="true" Mask="false">bitnami123</Config>
   <Config Name="WebUI" Target="2368" Default="2368" Mode="tcp" Description="WebUI Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">2368</Config>
   <Config Name="Appdata" Target="/bitnami" Default="/mnt/user/appdata/ghost" Mode="rw" Description="Appdata" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ghost</Config>
-  <Date>1614161374</Date>
+  <Date>1614238708</Date>
   <Description>Ghost is a free and open-source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications. This version includes mapping for MariaDB and SMTP. Big credits to Bitnami for the amazing image. Another fine product, brought to you by IBRACORP.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/SycotixRepository/ghost/ghost.xml</templatePath>
 </Container>
