@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>FirefoxSyncserver</Name>
+  <Repository>mozilla/syncserver:latest</Repository>
+  <Registry>https://hub.docker.com/r/mozilla/syncserver</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html</Project>
+  <Overview>Template for running Mozilla's official Syncserver image.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/jflo/ffsync-unraid/main/ffsync-template.xml</TemplateURL>
+  <Icon>https://github.com/jflo/ffsync-unraid/raw/main/Firefox_Sync_logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Description>Template for running Mozilla's official Syncserver image.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>URL</Value>
+      <Name>SYNCSERVER_PUBLIC_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>KEY</Value>
+      <Name>SYNCSERVER_SECRET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>sqlite:////data/syncserver.db</Value>
+      <Name>SYNCSERVER_SQLURI</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>SYNCSERVER_ALLOW_NEW_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5000</Value>
+      <Name>PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SYNCSERVER_BATCH_UPLOAD_ENABLED</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>SYNCSERVER_FORCE_WSGI_ENVIRON</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="sync db location" Target="/data" Default="/mnt/user/appdata/ff-syncserver/db/" Mode="rw" Description="Location where durable sqllite db is stored for sync data." Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Syncserver Public URL" Target="SYNCSERVER_PUBLIC_URL" Default="http://&amp;lt;URL&amp;gt;:5000" Mode="" Description="Replace &amp;lt;URL&amp;gt; in SYNCSERVER_PUBLIC_URL with your URL (For which the SSL certificate was also issued) " Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Syncserver secret" Target="SYNCSERVER_SECRET" Default="&amp;lt;KEY&amp;gt;" Mode="" Description="Replace &amp;lt;KEY&amp;gt; with some random hex like the output of &#13;&#10;&#13;&#10;head -c 20 /dev/urandom | sha1sum | awk '{print $1}'." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="SQLlite URI" Target="SYNCSERVER_SQLURI" Default="sqlite:////data/syncserver.db" Mode="" Description="Container path to where sqllite db lives" Type="Variable" Display="always-hide" Required="false" Mask="false">sqlite:////data/syncserver.db</Config>
+  <Config Name="Allow new users" Target="SYNCSERVER_ALLOW_NEW_USER" Default="true" Mode="" Description="Container Variable: SYNCSERVER_ALLOW_NEW_USER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Port" Target="PORT" Default="5000" Mode="" Description="Container Variable: PORT" Type="Variable" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="Listening on" Target="5000" Default="5000" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="Enable batch uploads" Target="SYNCSERVER_BATCH_UPLOAD_ENABLED" Default="true" Mode="" Description="Container Variable: SYNCSERVER_BATCH_UPLOAD_ENABLED" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Force WSGI" Target="SYNCSERVER_FORCE_WSGI_ENVIRON" Default="true" Mode="" Description="Container Variable: SYNCSERVER_FORCE_WSGI_ENVIRON" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Date>1614556421</Date>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JflosRepository/ffsync-template.xml</templatePath>
+</Container>
