@@ -20,56 +20,14 @@ Pool crunching doesn't need any upfront investment, hence go with the pool if yo
 &#13;
 Switching between solo and pool is possible if you ever want to change.</Overview>
   <WebUI>http://[IP]:[PORT:6901]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/Sabreu/unraid_templates/main/Gridcoin/Gridcoin.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/gridcoin-community/Gridcoin-Site/master/assets/img/Favicons/favicon-196x196.png</Icon>
-  <PostArgs></PostArgs>
-  <CPUset></CPUset>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>6901</HostPort>
-        <ContainerPort>6901</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>5901</HostPort>
-        <ContainerPort>5901</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/gridcoinresearch/</HostDir>
-      <ContainerDir>/headless/.GridcoinResearch/</ContainerDir>
-      <Mode>rw,slave</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/var/lib/boinc-client/</ContainerDir>
-      <Mode>rw,slave</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>vncpassword</Value>
-      <Name>VNC_PW</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value>1920x1080</Value>
-      <Name>VNC_RESOLUTION</Name>
-      <Mode></Mode>
-    </Variable>
-  </Environment>
   <Config Name="AppData Config Path" Target="/headless/.GridcoinResearch/" Default="" Mode="rw,slave" Description="/mnt/user/appdata/gridcoinresearch/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/gridcoinresearch/</Config>
   <Config Name="NOVNC PORT" Target="6901" Default="" Mode="tcp" Description="default: 6901" Type="Port" Display="always" Required="false" Mask="false">6901</Config>
   <Config Name="VNC PASSWORD" Target="VNC_PW" Default="" Mode="" Description="default: vncpassword" Type="Variable" Display="always" Required="false" Mask="false">vncpassword</Config>
   <Config Name="VNC RESOLUTION" Target="VNC_RESOLUTION" Default="1920x1080" Mode="" Description="default: 1920x1080" Type="Variable" Display="always" Required="false" Mask="false">1920x1080</Config>
   <Config Name="VNC PORT" Target="5901" Default="" Mode="tcp" Description="default: 5901" Type="Port" Display="always" Required="false" Mask="false">5901</Config>
   <Config Name="BOINC DATA DIR" Target="/var/lib/boinc-client/" Default="" Mode="rw,slave" Description="BOINC data location if solo crunching (not needed if pool crunching): /mnt/user/appdata/boinc/" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Date>1612099496</Date>
+  <TemplateURL>https://raw.githubusercontent.com/Sabreu/unraid_templates/main/Gridcoin/Gridcoin.xml</TemplateURL>
   <Description>Running Boinc? Get some Gridcoins from your Boinc work!&#13;
 This docker contains Gridcoin Wallet with GUI running on Ubuntu. You can access the wallet via VNC and NoVNC.&#13;
 Remember to backup your wallet.dat and gridcoinresearch.conf regularly to a safe place.&#13;
