@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <Name>PornVault</Name>
-  <Repository>leadwolf/porn-vault</Repository>
+  <Repository>leadwolf/porn-vault:0.25.0-alpine</Repository>
   <Registry>https://hub.docker.com/r/leadwolf/porn-vault/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/102829-support-c4artz-templates/</Support>
   <Project>https://github.com/porn-vault/porn-vault</Project>
-  <Overview>💋 Manage your ever-growing porn collection. Using Vue &amp;amp; GraphQL</Overview>
+  <Overview>💋 Manage your ever-growing porn collection. Using Vue &amp;amp; GraphQL&#13;
+&#13;
+[b]This container needs Elasticsearch![b]&#13;
+&#13;
+1. Fill out this template.&#13;
+2. Wait for the container to start.&#13;
+3. Edit the config.json file within the config directory. Add the following to the top:&#13;
+&#13;
+  "search": {&#13;
+    "host": "http://IpToYourElasticsearchInstance:9200",&#13;
+    "log": false,&#13;
+    "version": "7.x",&#13;
+    "auth": null&#13;
+  },&#13;
+&#13;
+4. Restart the container.&#13;
+5. You should now be able to access the WebUI.</Overview>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <Icon>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/icons/porn-vault.png</Icon>
   <Config Name="WebUI port" Target="3000" Default="3000" Mode="tcp" Description="The port for the porn-vault webinterface" Type="Port" Display="always" Required="true" Mask="false"></Config>
@@ -16,6 +32,22 @@
   <Config Name="Videos import directory" Target="/videos" Default="" Mode="rw" Description="Videos stored here will be shown in the WebUI under 'Scenes'" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Uploaded images directory" Target="/config/library/images" Default="" Mode="rw" Description="Images added through the WebUI are stored here. By default this is inside the config directory" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <TemplateURL>https://raw.githubusercontent.com/C4ArtZ/Unraid-Templates/master/templates/porn-vault.xml</TemplateURL>
-  <Description>💋 Manage your ever-growing porn collection. Using Vue &amp;amp; GraphQL</Description>
+  <Description>💋 Manage your ever-growing porn collection. Using Vue &amp;amp; GraphQL&#13;
+&#13;
+This container needs Elasticsearch!&#13;
+&#13;
+1. Fill out this template.&#13;
+2. Wait for the container to start.&#13;
+3. Edit the config.json file within the config directory. Add the following to the top:&#13;
+&#13;
+  "search": {&#13;
+    "host": "http://IpToYourElasticsearchInstance:9200",&#13;
+    "log": false,&#13;
+    "version": "7.x",&#13;
+    "auth": null&#13;
+  },&#13;
+&#13;
+4. Restart the container.&#13;
+5. You should now be able to access the WebUI.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/c4artzRepository/templates/porn-vault.xml</templatePath>
 </Container>
