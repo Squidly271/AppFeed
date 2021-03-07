@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>TailscaleClient</Name>
+  <Repository>hussainalhaddad/tailscale</Repository>
+  <Registry>https://hub.docker.com/repository/docker/hussainalhaddad/tailscale</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Project>https://tailscale.com/</Project>
+  <Overview>Tailscale is a zero config VPN for building secure networks.</Overview>
+  <WebUI>https://login.tailscale.com/admin</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/tailscale/tailscale.xml</TemplateURL>
+  <Icon>https://github.com/hussainalhaddad/docker-templates/raw/master/tailscale/logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>ROUTES</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>AUTHKEY</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Exposed Routes" Target="ROUTES" Default="192.168.1.0/24" Mode="" Description="Container Variable: ROUTES" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Authentication Key" Target="AUTHKEY" Default="tskey-xxxxxxxxxxxxxxxxxxxxxxxxx" Mode="" Description="Container Variable: AUTHKEY" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Date>1615109096</Date>
+  <Description>Tailscale is a zero config VPN for building secure networks.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hussainalhaddadsRepository/tailscale/tailscale.xml</templatePath>
+</Container>
