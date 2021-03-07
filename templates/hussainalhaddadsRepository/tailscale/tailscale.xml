@@ -20,12 +20,12 @@
   <Data></Data>
   <Environment>
     <Variable>
-      <Value></Value>
+      <Value>192.168.1.0/24</Value>
       <Name>ROUTES</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value></Value>
+      <Value>tskey-xxxxxxxxxxxxxxxxxxxxxxxxx</Value>
       <Name>AUTHKEY</Name>
       <Mode></Mode>
     </Variable>
@@ -35,9 +35,10 @@
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="Exposed Routes" Target="ROUTES" Default="192.168.1.0/24" Mode="" Description="Container Variable: ROUTES" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Authentication Key" Target="AUTHKEY" Default="tskey-xxxxxxxxxxxxxxxxxxxxxxxxx" Mode="" Description="Container Variable: AUTHKEY" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Date>1615109096</Date>
+  <Config Name="Exposed Routes" Target="ROUTES" Default="192.168.1.0/24" Mode="" Description="Container Variable: ROUTES" Type="Variable" Display="always" Required="false" Mask="false">192.168.1.0/24</Config>
+  <Config Name="Authentication Key" Target="AUTHKEY" Default="tskey-xxxxxxxxxxxxxxxxxxxxxxxxx" Mode="" Description="Container Variable: AUTHKEY" Type="Variable" Display="always" Required="true" Mask="false">tskey-xxxxxxxxxxxxxxxxxxxxxxxxx</Config>
+  <Config Name="Hostname / Machine Name" Target="HOSTNAME" Default="tailscaleunraid" Mode="" Description="Container Variable: HOSTNAME" Type="Variable" Display="always" Required="false" Mask="false">tailscaleunraid</Config>
+  <Date>1615139665</Date>
   <Description>Tailscale is a zero config VPN for building secure networks.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/hussainalhaddadsRepository/tailscale/tailscale.xml</templatePath>
 </Container>
