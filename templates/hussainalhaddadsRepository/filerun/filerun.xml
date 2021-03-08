@@ -12,6 +12,8 @@
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/filerun/filerun.xml</TemplateURL>
   <Icon>https://github.com/hussainalhaddad/docker-templates/raw/master/filerun/filerun.png</Icon>
+  <DonateText>If you like my work please consider donating.</DonateText>
+  <DonateLink>https://www.paypal.me/husainalhadad</DonateLink>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
   <Networking>
@@ -88,7 +90,7 @@
   <Config Name="APACHE_RUN_USER_ID" Target="APACHE_RUN_USER_ID" Default="33" Mode="" Description="Container Variable: APACHE_RUN_USER_ID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">33</Config>
   <Config Name="APACHE_RUN_GROUP" Target="APACHE_RUN_GROUP" Default="www-data" Mode="" Description="Container Variable: APACHE_RUN_GROUP" Type="Variable" Display="advanced-hide" Required="true" Mask="false">www-data</Config>
   <Config Name="APACHE_RUN_GROUP_ID" Target="APACHE_RUN_GROUP_ID" Default="33" Mode="" Description="Container Variable: APACHE_RUN_GROUP_ID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">33</Config>
-  <Config Name="Root Folder To Manage" Target="/user-files" Default="" Mode="rw" Description="Container Path: /user-files" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Local User's Folder" Target="/user-files" Default="/mnt/user" Mode="rw" Description="Container Path: /user-files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
   <Date>1615112555</Date>
   <Description>FileRun is a self-hosted Google Drive alternative. It is a full featured web based file manager with an easy to use user interface.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/hussainalhaddadsRepository/filerun/filerun.xml</templatePath>
