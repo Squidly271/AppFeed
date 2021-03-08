@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>PCManFM</Name>
+  <Repository>hussainalhaddad/pcmanfm:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/hussainalhaddad/pcmanfm</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/hussainalhaddad/docker-templates/issues</Support>
+  <Project>https://wiki.lxde.org/en/PCManFM</Project>
+  <Overview>Manage your Unraid server with PCManFM using XPRA remote display server</Overview>
+  <WebUI>http://[IP]:[PORT:10000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/hussainalhaddad/docker-templates/master/pcmanfm/pcmanfm.xml</TemplateURL>
+  <Icon>https://github.com/hussainalhaddad/docker-templates/raw/master/pcmanfm/logo.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work please consider donating.</DonateText>
+  <DonateLink>https://www.paypal.me/husainalhadad</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10000</HostPort>
+        <ContainerPort>10000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/user</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="WebUI Port" Target="10000" Default="10000" Mode="tcp" Description="Container Port: 10000" Type="Port" Display="always" Required="true" Mask="false">10000</Config>
+  <Config Name="Config Folder" Target="/home/user" Default="" Mode="rw" Description="Container Path: /home/user" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Folder to Mount" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Date>1615223572</Date>
+  <Description>Manage your Unraid server with PCManFM using XPRA remote display server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/hussainalhaddadsRepository/pcmanfm/pcmanfm.xml</templatePath>
+</Container>
