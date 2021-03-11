@@ -10,7 +10,7 @@
   <Project>https://mega.nz/</Project>
   <Overview>Keep your Unraid configuration files synced with Mega.nz&#13;
 &#13;
-/boot/config/ volume is by default set to read-only to avoid data loss.&#13;
+/boot/config/ volume is by default mounted as read-only to avoid data loss.&#13;
 &#13;
 PLEASE USE WITH CAUTION!!</Overview>
   <WebUI></WebUI>
@@ -48,20 +48,20 @@ PLEASE USE WITH CAUTION!!</Overview>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>unraid/boot/config</Value>
+      <Value>Unraid/flash/config</Value>
       <Name>REMOTE</Name>
       <Mode></Mode>
     </Variable>
   </Environment>
   <Config Name="Email" Target="LOGIN" Default="" Mode="" Description="Container Variable: LOGIN" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Password" Target="PASS" Default="" Mode="" Description="Container Variable: PASS" Type="Variable" Display="always" Required="true" Mask="true"></Config>
-  <Config Name="Remote Folder" Target="REMOTE" Default="unraid/boot/config" Mode="" Description="Container Variable: REMOTE" Type="Variable" Display="always" Required="true" Mask="false">unraid/boot/config</Config>
+  <Config Name="Remote Folder" Target="REMOTE" Default="Unraid/flash/config" Mode="" Description="Container Variable: REMOTE" Type="Variable" Display="always" Required="true" Mask="false">Unraid/flash/config</Config>
   <Config Name="Unraid Config Folder" Target="/home/unraidconfig" Default="/boot/config/" Mode="ro" Description="Container Path: /home/unraidconfig" Type="Path" Display="advanced" Required="true" Mask="false">/boot/config/</Config>
   <Config Name="Mega config folder" Target="/root/.megaCmd" Default="/mnt/user/appdata/Config2Mega/config" Mode="rw" Description="Container Path: /root/.megaCmd" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/Config2Mega/config</Config>
   <Date>1615449119</Date>
   <Description>Keep your Unraid configuration files synced with Mega.nz&#13;
 &#13;
-/boot/config/ volume is by default set to read-only to avoid data loss.&#13;
+/boot/config/ volume is by default mounted as read-only to avoid data loss.&#13;
 &#13;
 PLEASE USE WITH CAUTION!!</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/hussainalhaddadsRepository/config2mega/config2mega.xml</templatePath>
