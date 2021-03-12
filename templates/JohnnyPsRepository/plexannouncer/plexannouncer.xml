@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>PlexAnnouncer</Name>
+  <Repository>tenasi/plexannouncer</Repository>
+  <Registry>https://hub.docker.com/r/tenasi/plexannouncer</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/103956-support-tenasi-plexannouncer/</Support>
+  <Project>https://github.com/tenasi/plexannouncer</Project>
+  <Overview>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/plexannouncer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tenasi/unraid-templates/main/plexannouncer/icon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like our work, please consider supporting it</DonateText>
+  <DonateLink>https://paypal.me/tenasi</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>32500</HostPort>
+        <ContainerPort>32500</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Webhook Port" Target="32500" Default="32500" Mode="tcp" Description="The port for incoming webhooks from plex" Type="Port" Display="always" Required="true" Mask="false">32500</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/plex_announcer/" Mode="rw" Description="The path to your configuration folder" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Date>1615506614</Date>
+  <Description>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/JohnnyPsRepository/plexannouncer/plexannouncer.xml</templatePath>
+</Container>
