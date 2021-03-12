@@ -61,6 +61,7 @@ Go to https://github.com/agusalex/grive2Docker/wiki/Setup and follow the setup g
   <Config Name="CODE" Target="CODE" Default="" Mode="" Description="Your client secret obtained from the URL in the description&#13;&#10;Delete me after the setup is complete" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="GRIVE_PARAMS" Target="PARAMS" Default="" Mode="" Description="Passes parameters to grive2. For example -s my_drive_folder. See https://github.com/agusalex/grive2docker#grive-settings " Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CRON" Target="CRON" Default="" Mode="" Description="Crontab schedule to run this container, use this to generate it: https://crontab.guru/" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PERMISSIONS" Target="PERM" Default="" Mode="" Description="The UNIX permissions to apply to all files in the folder after sync. This will override any permissions you already have." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Date>1601595435</Date>
   <Description>Backup your files to Google Drive using Grive2 client in a docker container&#13;
 -&#13;
