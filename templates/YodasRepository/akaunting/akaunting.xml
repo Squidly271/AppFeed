@@ -72,8 +72,13 @@
       <Name>ADMIN_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
+    <Variable>
+      <Value>US_EN</Value>
+      <Name>LOCALE</Name>
+      <Mode></Mode>
+    </Variable>
   </Environment>
-  <Config Name="Web portal" Target="80" Default="8080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Web portal" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Setup Account" Target="AKAUNTING_SETUP" Default="true" Mode="" Description="Do you wish to start the Setup wizard. Need to keep this enabled for the first time" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="MySql Database IP:Port" Target="DB_HOST" Default="" Mode="" Description="MySql Database format [IP]:[Port]" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Database Name" Target="DB_DATABASE" Default="" Mode="" Description="Database Name" Type="Variable" Display="always" Required="true" Mask="false"></Config>
@@ -83,6 +88,7 @@
   <Config Name="Company email address" Target="COMPANY_EMAIL" Default="" Mode="" Description="Company Email address" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Login Email address" Target="ADMIN_EMAIL" Default="" Mode="" Description="Web UI Login Email address" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Login Password" Target="ADMIN_PASSWORD" Default="" Mode="" Description="Web Ui Login Password" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="LOCALE" Target="LOCALE" Default="US_EN" Mode="" Description="Container Variable: LOCALE" Type="Variable" Display="advanced-hide" Required="false" Mask="false">US_EN</Config>
   <Date>1616023011</Date>
   <Description>Accounting Application created based on https://akaunting.com/</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/YodasRepository/akaunting/akaunting.xml</templatePath>
