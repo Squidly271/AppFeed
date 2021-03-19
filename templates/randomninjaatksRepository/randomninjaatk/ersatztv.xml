@@ -30,8 +30,8 @@
   <Project>https://github.com/jasongdove/ErsatzTV</Project>
   <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/ersatztv.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/ersatztv.png</Icon>
-  <Overview>Stream custom live channels using your own media
-        [br][br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b] to [b]"extra parameters"[/b] (switch on advanced view)
+  <Overview>Stream custom live channels using your own media.
+    [br][br][b][u][span style='color: #E80000;']Nvidia GPU Use[/span][/u][/b][br]Using the Unraid Nvidia Plugin to install a version of Unraid with the Nvidia Drivers installed and[br] add [b]--runtime=nvidia[/b] to [b]"extra parameters"[/b] (switch on advanced view) and[br]copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b][br][br][b][u][span style='color: #E80000;']Intel GPU Use[/span][/u][/b][br]Edit your [b]go[/b] file to include:[br][b]modprobe i915[br][/b], save and reboot, then [br]add [b]--device=/dev/dri[/b] to [b]"extra parameters"[/b] (switch on advanced view)
   </Overview>
   <DonateLink>https://github.com/sponsors/jasongdove</DonateLink>
   <DonateImg></DonateImg>
@@ -41,6 +41,7 @@
   <Config Name="Host Port for 8409" Target="8409" Default="8409" Mode="tcp" Description="Container Port: 8409" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Host Path for /root/.local/share/ersatztv" Target="/root/.local/share/ersatztv" Default="/mnt/user/appdata/ErsatzTV" Mode="rw" Description="Container Path: /root/.local/share/ersatztv" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
-  <Description>Stream custom live channels using your own media</Description>
+  <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid Nvidia build)" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
+  <Description>Stream custom live channels using your own media.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/ersatztv.xml</templatePath>
 </Container>
