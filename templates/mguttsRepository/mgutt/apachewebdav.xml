@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-  <Name>Apache-WebDAV</Name>
+  <Name>ApacheWebDAV</Name>
   <Repository>bytemark/webdav</Repository>
   <Registry>https://hub.docker.com/r/bytemark/webdav/</Registry>
   <Network>bridge</Network>
@@ -104,6 +104,7 @@ Execute the command multiple times with different usernames to add more users.</
   <Config Name="Password" Target="PASSWORD" Default="" Mode="" Description="Authenticate with this password (and the username above). Will be ignored if /user.passwd is present." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Public methods" Target="ANONYMOUS_METHODS" Default="" Mode="" Description="Comma-separated list of HTTP request methods (eg, GET,POST,OPTIONS,PROPFIND). Clients can use any method you specify here without authentication. Set to ALL to disable authentication. The default is to disallow any anonymous access." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Enable SSL" Target="SSL_CERT" Default="" Mode="" Description="Set to selfsigned to generate a self-signed certificate and enable Apache's SSL module. If you specify SERVER_NAMES, the first domain is set as the Common Name." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Multi-User" Target="/user.passwd" Default="" Mode="rw" Description="Container Path: /" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apachewebdav/user.passwd</Config>
   <Date>1614942013</Date>
   <Description>Specifying USERNAME and PASSWORD only supports a single user. If you want to have lots of different logins for various users, bind mount user.passwd as follows:&#13;
 &#13;
