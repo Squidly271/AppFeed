@@ -41,11 +41,17 @@
       <Name>DISCORD_WEBHOOK_URL</Name>
       <Mode></Mode>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>UPDATED_LIBRARIES</Name>
+      <Mode></Mode>
+    </Variable>
   </Environment>
-  <Config Name="Webhook Port" Target="32500" Default="32500" Mode="tcp" Description="The port for incoming webhooks from plex" Type="Port" Display="always" Required="true" Mask="false">32500</Config>
-  <Config Name="Plex Server URL" Target="PLEX_SERVER_URL" Default="" Mode="" Description="The url pointing to your Plex server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Plex Webhook Token" Target="PLEX_WEBHOOK_TOKEN" Default="" Mode="" Description="Some randomly generated token" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Discord Webhook URL" Target="DISCORD_WEBHOOK_URL" Default="" Mode="" Description="The url of your Discord webhook" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Webhook Port" Target="32500" Default="32500" Mode="tcp" Description="The port for incoming webhooks from Plex, it must match the port specified in the webhook url in your plex settings." Type="Port" Display="always" Required="true" Mask="false">32500</Config>
+  <Config Name="Plex Server URL" Target="PLEX_SERVER_URL" Default="" Mode="" Description="The url pointing to your Plex server, you can obtain it from the external url of one of your Plex server libraries." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Plex Webhook Token" Target="PLEX_WEBHOOK_TOKEN" Default="" Mode="" Description="Some randomly generated token, you can put anything alphanumeric in here." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Discord Webhook URL" Target="DISCORD_WEBHOOK_URL" Default="" Mode="" Description="The url of your Discord webhook, retrieve it from your server webhook settings." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Updated Libraries" Target="UPDATED_LIBRARIES" Default="" Mode="" Description="List of libraries that will be checked, if this is empty all libraries will be checked." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Date>1615720195</Date>
   <Description>A Discord bot that sends updates about your plex media to a Discord channel using webhooks. Please see the support thread for more details on how to set it up and configure Discord and Plex.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/JohnnyPsRepository/plexannouncer/plexannouncer.xml</templatePath>
