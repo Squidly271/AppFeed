@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>PHPServerMonitor</Name>
+  <Repository>benoitpodwinski/phpservermon</Repository>
+  <Registry>https://hub.docker.com/r/benoitpodwinski/phpservermon/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/104557-support-php-server-monitor-corneliousjd-repo/</Support>
+  <Project>https://github.com/phpservermon/phpservermon</Project>
+  <Overview>PHP Server Monitor checks whether your websites and servers are up and running.Web based user interface where you can manage your checks, users, etc. Email, SMS, Discord, Pushover, Telegram and Jabber notifications. Requires MySQL or MariaDB.</Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/phpservermon.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/CorneliousJD/Docker-Templates/master/icons/phpservermon.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7139</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>PSM_BASE_URL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PSM_DB_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>PSM_DB_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>phpservermon</Value>
+      <Name>PSM_DB_NAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>phpservermon</Value>
+      <Name>PSM_DB_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PSM_DB_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>UTC</Value>
+      <Name>PHP_TIMEZONE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>120</Value>
+      <Name>UPDATE_INTERVAL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>psm_</Value>
+      <Name>PSM_DB_PREFIX</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>512M</Value>
+      <Name>PHP_MEMORY_LIMIT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>128M</Value>
+      <Name>MAX_UPLOAD</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Web Interface" Target="80" Default="7139" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">7139</Config>
+  <Config Name="PSM_BASE_URL" Target="PSM_BASE_URL" Default="" Mode="" Description="Leave blank if you're just accessing locally, otherwise enter your full reverse proxy URL (including https://)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PSM_DB_HOST" Target="PSM_DB_HOST" Default="" Mode="" Description="Hostname or IP of MySQL or MariaDB." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PSM_DB_PORT" Target="PSM_DB_PORT" Default="3306" Mode="" Description="Container Variable: PSM_DB_PORT" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="PSM_DB_NAME" Target="PSM_DB_NAME" Default="phpservermon" Mode="" Description="Container Variable: PSM_DB_NAME" Type="Variable" Display="always" Required="true" Mask="false">phpservermon</Config>
+  <Config Name="PSM_DB_USER" Target="PSM_DB_USER" Default="phpservermon" Mode="" Description="Container Variable: PSM_DB_USER" Type="Variable" Display="always" Required="true" Mask="false">phpservermon</Config>
+  <Config Name="PSM_DB_PASS" Target="PSM_DB_PASS" Default="" Mode="" Description="Container Variable: PSM_DB_PASS" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="PHP_TIMEZONE" Target="PHP_TIMEZONE" Default="UTC" Mode="" Description="Container Variable: PHP_TIMEZONE" Type="Variable" Display="always" Required="false" Mask="false">UTC</Config>
+  <Config Name="UPDATE_INTERVAL" Target="UPDATE_INTERVAL" Default="120" Mode="" Description="Container Variable: UPDATE_INTERVAL" Type="Variable" Display="always" Required="false" Mask="false">120</Config>
+  <Config Name="PSM_DB_PREFIX" Target="PSM_DB_PREFIX" Default="psm_" Mode="" Description="Container Variable: PSM_DB_PREFIX" Type="Variable" Display="advanced" Required="true" Mask="false">psm_</Config>
+  <Config Name="PHP_MEMORY_LIMIT" Target="PHP_MEMORY_LIMIT" Default="512M" Mode="" Description="Container Variable: PHP_MEMORY_LIMIT" Type="Variable" Display="advanced" Required="false" Mask="false">512M</Config>
+  <Config Name="MAX_UPLOAD" Target="MAX_UPLOAD" Default="128M" Mode="" Description="Container Variable: MAX_UPLOAD" Type="Variable" Display="advanced" Required="false" Mask="false">128M</Config>
+  <Date>1616446389</Date>
+  <Description>PHP Server Monitor checks whether your websites and servers are up and running.Web based user interface where you can manage your checks, users, etc. Email, SMS, Discord, Pushover, Telegram and Jabber notifications. Requires MySQL or MariaDB.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/CorneliousJDsRepository/phpservermon.xml</templatePath>
+</Container>

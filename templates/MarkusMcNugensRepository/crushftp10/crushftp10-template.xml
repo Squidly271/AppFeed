@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>CrushFTP10</Name>
+  <Repository>markusmcnugen/crushftp:latest</Repository>
+  <Registry>https://hub.docker.com/r/markusmcnugen/crushftp/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/69152-support-markusmcnugens-docker-repository/</Support>
+  <Project>https://hub.docker.com/r/markusmcnugen/crushftp</Project>
+  <Overview>CrushFTP 10</Overview>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/crushftp10/crushftp10-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/crushftp10/crushftp.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>21</HostPort>
+        <ContainerPort>21</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2000-2100</HostPort>
+        <ContainerPort>2000-2100</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2222</HostPort>
+        <ContainerPort>2222</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2000-2100</HostPort>
+        <ContainerPort></ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/mnt/FTP/Shared</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/crushftp</HostDir>
+      <ContainerDir>/var/opt/CrushFTP10</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>crushadmin</Value>
+      <Name>CRUSH_ADMIN_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>crushadmin</Value>
+      <Name>CRUSH_ADMIN_PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>http</Value>
+      <Name>CRUSH_ADMIN_PROTOCOL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>8080</Value>
+      <Name>CRUSH_ADMIN_PORT</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="FTP Port" Target="21" Default="2121" Mode="tcp" Description="Container Port: 2121" Type="Port" Display="always" Required="true" Mask="false">21</Config>
+  <Config Name="HTTPS Port" Target="443" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false">443</Config>
+  <Config Name="FTP Passive Ports" Target="2000-2100" Default="2000-2100" Mode="tcp" Description="Container Port: 2000-2100" Type="Port" Display="always" Required="true" Mask="false">2000-2100</Config>
+  <Config Name="SFTP Port" Target="2222" Default="2222" Mode="tcp" Description="Container Port: 2222" Type="Port" Display="always" Required="true" Mask="false">2222</Config>
+  <Config Name="HTTP Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="HTTP Port" Target="9090" Default="9090" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
+  <Config Name="CrushFTP Admin User" Target="CRUSH_ADMIN_USER" Default="crushadmin" Mode="" Description="Default admin user for CrushFTP administration" Type="Variable" Display="always" Required="true" Mask="false">crushadmin</Config>
+  <Config Name="CrushFTP Admin Password" Target="CRUSH_ADMIN_PASSWORD" Default="crushadmin" Mode="" Description="Default admin password for CrushFTP administration" Type="Variable" Display="always" Required="true" Mask="false">crushadmin</Config>
+  <Config Name="Healthcheck Protocol" Target="CRUSH_ADMIN_PROTOCOL" Default="http" Mode="" Description="Protocol for health cecks" Type="Variable" Display="always" Required="true" Mask="false">http</Config>
+  <Config Name="Healthceck Port" Target="CRUSH_ADMIN_PORT" Default="8080" Mode="" Description="Port for health cecks" Type="Variable" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="FTP Folder 1" Target="/mnt/FTP/Shared" Default="" Mode="rw" Description="Container Path: /mnt/FTP/Shared" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Config Volume" Target="/var/opt/CrushFTP10" Default="/mnt/cache/appdata/crushftp" Mode="rw" Description="Container Path: /var/opt/CrushFTP10" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/cache/appdata/crushftp</Config>
+  <Description>CrushFTP 10</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/MarkusMcNugensRepository/crushftp10/crushftp10-template.xml</templatePath>
+</Container>
