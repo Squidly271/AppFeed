@@ -6,11 +6,11 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
-  <Support>https://github.com/lnxd/docker-phoenixminer</Support>
-  <Overview>Phoenixminer containerised with AMD GPUs and Unraid in mind. Contains AMD drivers.</Overview>
+  <Support>https://forums.unraid.net/topic/104589-support-lnxd-phoenixminer-amd/</Support>
+  <Overview>Containerised version of PhoenixMiner for AMD GPUs. Helps turn your Unraid server into an Ethereum / cryptocurrency mining rig. Contains AMD drivers. Not affected by the AMD reset bug as it doesn't rely on vfio. Check the support link for detailed installation instructions.</Overview>
   <WebUI>http://[IP]:[PORT:5450]</WebUI>
   <Icon>https://raw.githubusercontent.com/lnxd/docker-phoenixminer/main/phoenixminer-logo.png</Icon>
-  <DonateLink>https://www.paypal.me/lxndau</DonateLink>
+  <DonateLink>https://paypal.me/lnxdau</DonateLink>
   <DonateText>If you like my work please consider Donating.</DonateText>
   <Networking>
     <Mode>bridge</Mode>
@@ -69,6 +69,6 @@
   <Config Name="Additional PhoenixMiner Arguments" Target="ADDITIONAL" Default="-amd" Mode="" Description="Additional PhoenixMiner arguments" Type="Variable" Display="always" Required="false" Mask="false">-amd </Config>
   <Config Name="GPU Device" Target="" Default="" Mode="" Description="GPU passthrough from host to container. This Isn't necessary if privileged mode is enabled, but won't hurt." Type="Device" Display="always" Required="false" Mask="false">/dev/dri:/dev/dri</Config>
   <TemplateURL>https://raw.githubusercontent.com/lnxd/unraid-templates/main/PhoenixMiner-AMD.xml</TemplateURL>
-  <Description>Phoenixminer containerised with AMD GPUs and Unraid in mind. Contains AMD drivers.</Description>
+  <Description>Containerised version of PhoenixMiner for AMD GPUs. Helps turn your Unraid server into an Ethereum / cryptocurrency mining rig. Contains AMD drivers. Not affected by the AMD reset bug as it doesn't rely on vfio. Check the support link for detailed installation instructions.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/lnxdsRepository/PhoenixMiner-AMD.xml</templatePath>
 </Container>

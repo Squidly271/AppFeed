@@ -2,18 +2,20 @@
 <Container version="2">
   <Name>sftp</Name>
   <Repository>markusmcnugen/sftp:latest</Repository>
-  <Registry>https://registry.hub.docker.com/r/markusmcnugen/sftp</Registry>
+  <Registry>https://hub.docker.com/r/markusmcnugen/sftp/</Registry>
   <Network>bridge</Network>
+  <Shell>bash</Shell>
   <Privileged>true</Privileged>
   <Support>https://lime-technology.com/forums/topic/69152-support-markusmcnugens-docker-repository/</Support>
-  <Project>https://hub.docker.com/r/markusmcnugen/sftp/</Project>
-  <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. This is an automated build linked with phusion/baseimage.</Overview>
+  <Project>https://github.com/MarkusMcNugen/docker-sftp</Project>
+  <Overview>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on phusion/baseimage.&#13;
+&#13;
+* Shared Path is an example. You must replace host path with path to a folder to share AND change user in the container path to the name of a user account configured in users.conf. See dockerhub or github page for more info.</Overview>
   <WebUI></WebUI>
   <TemplateURL>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/sftp/sftp-template.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/MarkusMcNugen/docker-templates/master/sftp/SFTP.png</Icon>
   <PostArgs></PostArgs>
-  <DonateImg></DonateImg>
-  <MinVer></MinVer>
+  <CPUset></CPUset>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -26,15 +28,16 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/sftp/</HostDir>
+      <HostDir>/mnt/cache/appdata/sftp/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment></Environment>
-  <Config Name="ssh_port" Target="22" Default="22" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="false" Mask="false">22</Config>
-  <Config Name="appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/sftp/</Config>
-  <Category>Tools:Utilities Network:Other</Category>
-  <Description>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. This is an automated build linked with phusion/baseimage.</Description>
+  <Config Name="SSH Port" Target="22" Default="22" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="false" Mask="false">22</Config>
+  <Config Name="appdata" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/cache/appdata/sftp/</Config>
+  <Description>Easy to use SFTP (SSH File Transfer Protocol) server with OpenSSH and Fail2ban installed for extra hardening against brute force attacks. Forked from atmoz/sftp. Based on phusion/baseimage.&#13;
+&#13;
+* Shared Path is an example. You must replace host path with path to a folder to share AND change user in the container path to the name of a user account configured in users.conf. See dockerhub or github page for more info.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/MarkusMcNugensRepository/sftp/sftp-template.xml</templatePath>
 </Container>
