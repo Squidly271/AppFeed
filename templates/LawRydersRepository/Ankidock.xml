@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>ankidock2</Name>
+  <Repository>lawryder/ankidock</Repository>
+  <Registry>https://hub.docker.com/repository/docker/lawryder/ankidock</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Meine Bearbeitung des Anki-Sync-Servers von ankicommunity/anki-sync-server.&#13;
+Getestet mit AnkiDroid, Anki 2.1.28 (PC) sowie Anki 2.1.42 (PC und Mac).&#13;
+Funtkion hinter VPN, Dyn-DNS und Reverse-Proxy getestet und bestätigt.&#13;
+&#13;
+Anleitung unter: https://github.com/lawryder/ankidock</Overview>
+  <WebUI>http://[IP]:[PORT]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/lawryder/unraid_docker_reps/main/Ankidock.xml</TemplateURL>
+  <Icon></Icon>
+  <ExtraParams>--mount type=volume,dst=/anki-sync-server,volume-driver=local,volume-opt=type=none,volume-opt=o=bind,volume-opt=device=/mnt/user/appdata/ankidock/anki-server --mount type=volume,dst=/etc/nginx,volume-driver=local,volume-opt=type=none,volume-opt=o=bind,volume-opt=device=/mnt/user/appdata/ankidock/nginx -dit</ExtraParams>
+  <PostArgs>bash</PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Eine Spende für einen funktionierenden Anki-Server</DonateText>
+  <DonateLink>http://www.paypal.me/lawryder</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>27701</HostPort>
+        <ContainerPort>27701</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment></Environment>
+  <Config Name="Daten" Target="27701" Default="" Mode="tcp" Description="Container Port: 27701" Type="Port" Display="always" Required="true" Mask="false">27701</Config>
+  <Date>1616510457</Date>
+  <Description>Meine Bearbeitung des Anki-Sync-Servers von ankicommunity/anki-sync-server.&#13;
+Getestet mit AnkiDroid, Anki 2.1.28 (PC) sowie Anki 2.1.42 (PC und Mac).&#13;
+Funtkion hinter VPN, Dyn-DNS und Reverse-Proxy getestet und bestätigt.&#13;
+&#13;
+Anleitung unter: https://github.com/lawryder/ankidock</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/LawRydersRepository/Ankidock.xml</templatePath>
+</Container>
