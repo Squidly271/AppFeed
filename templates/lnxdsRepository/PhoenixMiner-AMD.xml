@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>PhoenixMiner-AMD</Name>
+  <Repository>lnxd/phoenixminer</Repository>
+  <Registry>https://hub.docker.com/r/lnxd/phoenixminer</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://github.com/lnxd/docker-phoenixminer</Support>
+  <Overview>Phoenixminer containerised with AMD GPUs and Unraid in mind. Contains AMD drivers.</Overview>
+  <WebUI>http://[IP]:[PORT:5450]</WebUI>
+  <Icon>https://raw.githubusercontent.com/lnxd/docker-phoenixminer/main/phoenixminer-logo.png</Icon>
+  <DonateLink>https://www.paypal.me/lxndau</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5450</HostPort>
+        <ContainerPort>5450</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Value>0xe037C6245910EbBbA720514835d31B385D76927f</Value>
+      <Name>WALLET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>asia1.ethermine.org:4444</Value>
+      <Name>POOL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>x</Value>
+      <Name>PASSWORD</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>75</Value>
+      <Name>TT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>90</Value>
+      <Name>TSTOP</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>85</Value>
+      <Name>TSTART</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>-amd</Value>
+      <Name>ADDITIONAL</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Wallet Address" Target="WALLET" Default="0xe037C6245910EbBbA720514835d31B385D76927f" Mode="" Description="Wallet address for receiving mined coin" Type="Variable" Display="always" Required="true" Mask="false">0xe037C6245910EbBbA720514835d31B385D76927f</Config>
+  <Config Name="Pool Address" Target="POOL" Default="asia1.ethermine.org:4444" Mode="" Description="Address for your mining pool" Type="Variable" Display="always" Required="true" Mask="false">asia1.ethermine.org:4444</Config>
+  <Config Name="Pool Password" Target="PASSWORD" Default="x" Mode="" Description="Most pools just use 'x' as password, some pools treat this variable as a worker ID" Type="Variable" Display="always" Required="true" Mask="false">x</Config>
+  <Config Name="WebUI" Target="5450" Default="" Mode="tcp" Description="Used for basic monitoring over http/https built into PhoenixMiner" Type="Port" Display="always" Required="false" Mask="false">5450</Config>
+  <Config Name="Safety: Target Temperature" Target="TT" Default="75" Mode="" Description="Target temperature for fans (only works if privileged mode is enabled)" Type="Variable" Display="always" Required="false" Mask="false">75</Config>
+  <Config Name="Safety: Stop Temperature" Target="TSTOP" Default="85" Mode="" Description="PhoenixMiner will pause mining on a GPU if it hits this temperature (only works if privileged mode is enabled)" Type="Variable" Display="always" Required="false" Mask="false">85</Config>
+  <Config Name="Safety: Resume Temperature" Target="TSTART" Default="80" Mode="" Description="PhoenixMiner will resume mining on a GPU if it hits this temperature after being paused (only works if privileged mode is enabled)" Type="Variable" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Additional PhoenixMiner Arguments" Target="ADDITIONAL" Default="-amd" Mode="" Description="Additional PhoenixMiner arguments" Type="Variable" Display="always" Required="false" Mask="false">-amd </Config>
+  <Config Name="GPU Device" Target="" Default="" Mode="" Description="GPU passthrough from host to container. This Isn't necessary if privileged mode is enabled, but won't hurt." Type="Device" Display="always" Required="false" Mask="false">/dev/dri:/dev/dri</Config>
+  <TemplateURL>https://raw.githubusercontent.com/lnxd/unraid-templates/main/PhoenixMiner-AMD.xml</TemplateURL>
+  <Description>Phoenixminer containerised with AMD GPUs and Unraid in mind. Contains AMD drivers.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/lnxdsRepository/PhoenixMiner-AMD.xml</templatePath>
+</Container>
