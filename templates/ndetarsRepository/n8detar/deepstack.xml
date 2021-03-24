@@ -98,9 +98,9 @@ Copy your [b]GPU UUID[/b] to [b]NVIDIA_VISIBLE_DEVICES.[/b]</Overview>
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="For access to the Web UI and API. Default is 5000." Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="For access to the Web UI and API. Default is 5000. (Container Port: 5000)" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
   <Config Name="AppData" Target="/datastore" Default="/mnt/user/appdata/deepstack" Mode="rw" Description="(Container Path: /datastore)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/deepstack</Config>
-  <Config Name="Custom Model Store" Target="/modelstore/detection" Default="/mnt/user/appdata/deepstack/custom_models" Mode="rw" Description="This specifies the local directory where you stored your custom models. (Container Path: /modelstore/detection)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/deepstack/custom_models</Config>
+  <Config Name="Custom Model Store" Target="/modelstore/detection" Default="/mnt/user/appdata/deepstack/custom_models" Mode="rw" Description="This specifies the local directory where you stored your custom models. Default is /mnt/user/appdata/deepstack/custom_models. (Container Path: /modelstore/detection)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/deepstack/custom_models</Config>
   <Config Name="Object Detection" Target="VISION-DETECTION" Default="True|False" Mode="" Description="This enables the object detection API. Default is False. (VISION-DETECTION)" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="Face Detection" Target="VISION-FACE" Default="True|False" Mode="" Description="This enables the face recognition APIs. Default is False. (VISION-FACE)" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="Scene Detection" Target="VISION-SCENE" Default="True|False" Mode="" Description="This enables the scene recognition API. Default is False. (VISION-SCENE)" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
