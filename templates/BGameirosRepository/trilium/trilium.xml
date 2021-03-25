@@ -16,8 +16,8 @@
   [b]Docker:[/b] https://hub.docker.com/r/zadam/trilium[br]&#13;
   [br][br]&#13;
   [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
-  [b]/root/trilium-data[/b] Where Trilium should store logs, databases and configuration[br]&#13;
-  [b]/root/trilium-data/backup[/b] Where Trilium should store the backups[br]</Overview>
+  [b]/home/node/trilium-data[/b] Where Trilium should store logs, databases and configuration[br]&#13;
+  [b]/home/node/trilium-data/backup[/b] Where Trilium should store the backups[br]</Overview>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/trilium/trilium.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/trilium/icon.png</Icon>
@@ -37,19 +37,19 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/root/trilium-data</ContainerDir>
+      <ContainerDir>/home/node/trilium-data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/root/trilium-data/backup</ContainerDir>
+      <ContainerDir>/home/node/trilium-data/backup</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment></Environment>
   <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="WebUI - Default 8888" Type="Port" Display="always-hide" Required="true" Mask="false">8888</Config>
-  <Config Name="Appdata" Target="/root/trilium-data" Default="/mnt/user/appdata/trilium" Mode="rw" Description="Container Path: /root/trilium-data" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
-  <Config Name="Backups" Target="/root/trilium-data/backup" Default="/mnt/user/appdata/trilium/backup" Mode="rw" Description="Container Path: /root/trilium-data/backup" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Appdata" Target="/home/node/trilium-data" Default="/mnt/user/appdata/trilium" Mode="rw" Description="Container Path: /home/node/trilium-data" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="Backups" Target="/home/node/trilium-data/backup" Default="/mnt/user/appdata/trilium/backup" Mode="rw" Description="Container Path: /home/node/trilium-data/backup" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
   <Date>1595356017</Date>
   <Description>Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/BGameirosRepository/trilium/trilium.xml</templatePath>
