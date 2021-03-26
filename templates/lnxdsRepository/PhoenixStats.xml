@@ -25,12 +25,12 @@
   <Data></Data>
   <Environment>
     <Variable>
-      <Value>DoonServer</Value>
+      <Value>Unraid</Value>
       <Name>S_NAME</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>192.168.2.10</Value>
+      <Value>unraid.local</Value>
       <Name>S_HOST</Name>
       <Mode></Mode>
     </Variable>
@@ -41,8 +41,8 @@
     </Variable>
   </Environment>
   <Config Name="Apache" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">5449</Config>
-  <Config Name="Server Name" Target="S_NAME" Default="Unraid" Mode="" Description="Server name for miner (Can be set to anything)" Type="Variable" Display="always" Required="false" Mask="false">DoonServer</Config>
-  <Config Name="Miner Host" Target="S_HOST" Default="unraid.local" Mode="" Description="Host for miner (usually an IP)" Type="Variable" Display="always" Required="false" Mask="false">192.168.2.10</Config>
+  <Config Name="Server Name" Target="S_NAME" Default="Unraid" Mode="" Description="Server name for miner (Can be set to anything)" Type="Variable" Display="always" Required="false" Mask="false">Unraid</Config>
+  <Config Name="Miner Host" Target="S_HOST" Default="unraid.local" Mode="" Description="Host for miner (usually an IP)" Type="Variable" Display="always" Required="false" Mask="false">unraid.local</Config>
   <Config Name="Miner Port" Target="S_PORT" Default="5450" Mode="" Description="Port shared by miner over http (usually 5450)" Type="Variable" Display="always" Required="false" Mask="false">5450</Config>
   <TemplateURL>https://raw.githubusercontent.com/lnxd/unraid-templates/main/PhoenixStats.xml</TemplateURL>
   <Description>Simple container for displaying stats from any PhoenixMiner instance. Made to go with PhoenixMiner-AMD.</Description>
