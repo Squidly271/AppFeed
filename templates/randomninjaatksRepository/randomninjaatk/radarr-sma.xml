@@ -5,11 +5,15 @@
   <Repository>randomninjaatk/radarr-sma</Repository>
   <Branch>
     <Tag>latest</Tag>
-    <TagDescription>Radarr + SMA + FFMPEG</TagDescription>
+    <TagDescription>Radarr (latest) + SMA + FFMPEG</TagDescription>
   </Branch>
   <Branch>
-    <Tag>preview</Tag>
-    <TagDescription>Radarr (v3) + SMA + FFMPEG</TagDescription>
+    <Tag>develop</Tag>
+    <TagDescription>Radarr (develop) + SMA + FFMPEG</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>nightly</Tag>
+    <TagDescription>Radarr (nightly) + SMA + FFMPEG</TagDescription>
   </Branch>
   <Registry>https://hub.docker.com/r/randomninjaatk/radarr-sma</Registry>
   <Shell>bash</Shell>
@@ -27,7 +31,6 @@
   <Config Name="Host Port for 7878" Target="7878" Default="7878" Mode="tcp" Description="Container Port: 7878" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Host Path for /config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Host Path for /storage" Target="/storage" Default="/mnt/user" Mode="rw" Description="Container Path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="SMA Update" Target="UPDATE_SMA" Default="TRUE" Mode="" Description="TRUE = enabled :: Update SMA on container startup" Type="Variable" Display="always-hide" Required="false" Mask="false"></Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
   <Description>Radarr - A fork of Sonarr to work with movies à la Couchpotato. This comes bundled with sickbeard_mp4_automator script, that can be found here: https://github.com/mdhiggins/sickbeard_mp4_automator</Description>

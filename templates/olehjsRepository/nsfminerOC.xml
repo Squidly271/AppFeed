@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>NsfminerOC</Name>
+  <Date>1617076800</Date>
+  <Icon>https://raw.githubusercontent.com/olehj/unraid/main/nsfmineroc.png</Icon>
+  <Support>https://forums.unraid.net/topic/104298-docker-nsfmineroc/</Support>
+  <DonateText>I love craft beer and will buy beer for money!</DonateText>
+  <DonateLink>https://paypal.me/olehj</DonateLink>
+  <Registry>https://registry.hub.docker.com/r/olehj/docker-nsfmineroc/</Registry>
+  <Repository>olehj/nsfmineroc:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <ExtraParams>--runtime=nvidia --gpus=all</ExtraParams>
+  <Shell>sh</Shell>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value>0</Value>
+      <Name>NSFMINER_GPU</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>150</Value>
+      <Name>NSFMINER_GPUPOWERLIMIT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>NSFMINER_POWERMIZER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>NSFMINER_GPUGFXCLOCKOFFSET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>NSFMINER_GPUMEMCLOCKOFFSET</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>NSFMINER_HWMON</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>stratum1+ssl</Value>
+      <Name>NSFMINER_TRANSPORT</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0x516eaf4546BBeA271d05A3E883Bd2a11730Ef97b</Value>
+      <Name>NSFMINER_ETHADDRESS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>unraid-worker</Value>
+      <Name>NSFMINER_WORKERNAME</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>eu1.ethermine.org</Value>
+      <Name>NSFMINER_ADDRESS1</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>us1.ethermine.org</Value>
+      <Name>NSFMINER_ADDRESS2</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5555</Value>
+      <Name>NSFMINER_PORT1</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>5555</Value>
+      <Name>NSFMINER_PORT2</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>NSFMINER_GPUFANCONTROLL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>NSFMINER_GPUFAN1</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>NSFMINER_GPUFANSPEED1</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>NSFMINER_GPUFAN2</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>NSFMINER_GPUFANSPEED2</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Container Variable: NVIDIA_VISIBLE_DEVICES" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="Container Variable: NVIDIA_DRIVER_CAPABILITIES" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NSFMINER_GPU" Target="NSFMINER_GPU" Default="" Mode="" Description="Set GPU ID to use" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="NSFMINER_GPUPOWERLIMIT" Target="NSFMINER_GPUPOWERLIMIT" Default="" Mode="" Description="Set power limit for GPU in Watt" Type="Variable" Display="always" Required="false" Mask="false">150</Config>
+  <Config Name="NSFMINER_POWERMIZER" Target="NSFMINER_POWERMIZER" Default="" Mode="" Description="Set PowerMizer performance level" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="NSFMINER_GPUGFXCLOCKOFFSET" Target="NSFMINER_GPUGFXCLOCKOFFSET" Default="" Mode="" Description="Set GPU graphics clock offset" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="NSFMINER_GPUMEMCLOCKOFFSET" Target="NSFMINER_GPUMEMCLOCKOFFSET" Default="" Mode="" Description="Set GPU memory clock offset" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="NSFMINER_HWMON" Target="NSFMINER_HWMON" Default="2" Mode="" Description="Set Feedback level from nsfminer" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="NSFMINER_TRANSPORT" Target="NSFMINER_TRANSPORT" Default="stratum1+ssl" Mode="" Description="Set transport for worker" Type="Variable" Display="always" Required="false" Mask="false">stratum1+ssl</Config>
+  <Config Name="NSFMINER_ETHADDRESS" Target="NSFMINER_ETHADDRESS" Default="" Mode="" Description="Set your worker ethereum address" Type="Variable" Display="always" Required="false" Mask="false">0xC04d2fF8Ef057CbDc08360c65D9b1268BaFC5a6f</Config>
+  <Config Name="NSFMINER_WORKERNAME" Target="NSFMINER_WORKERNAME" Default="unraid-worker" Mode="" Description="Set a worker name" Type="Variable" Display="always" Required="false" Mask="false">unraid-worker</Config>
+  <Config Name="NSFMINER_ADDRESS1" Target="NSFMINER_ADDRESS1" Default="eu1.ethermine.org" Mode="" Description="Set address 1 for worker, both must be set" Type="Variable" Display="always" Required="false" Mask="false">eu1.ethermine.org</Config>
+  <Config Name="NSFMINER_ADDRESS2" Target="NSFMINER_ADDRESS2" Default="us1.ethermine.org" Mode="" Description="Set address 2 for worker, both must be set" Type="Variable" Display="always" Required="false" Mask="false">us1.ethermine.org</Config>
+  <Config Name="NSFMINER_PORT1" Target="NSFMINER_PORT1" Default="5555" Mode="" Description="Set port for address 1" Type="Variable" Display="always" Required="false" Mask="false">5555</Config>
+  <Config Name="NSFMINER_PORT2" Target="NSFMINER_PORT2" Default="5555" Mode="" Description="Set port for address 2" Type="Variable" Display="always" Required="false" Mask="false">5555</Config>
+  <Config Name="NSFMINER_GPUFANCONTROLL" Target="NSFMINER_GPUFANCONTROLL" Default="0" Mode="" Description="Set GPU fan controll, 0 will run auto and other fan settings are ignored. GPU MUST have exactly 2 fan controllers available, else this container will fail if this is used." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="NSFMINER_GPUFAN1" Target="NSFMINER_GPUFAN1" Default="" Mode="" Description="Set the FAN ID 1 of GPU" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="NSFMINER_GPUFANSPEED1" Target="NSFMINER_GPUFANSPEED1" Default="" Mode="" Description="Set the speed in percent of FAN ID 1" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="NSFMINER_GPUFAN2" Target="NSFMINER_GPUFAN2" Default="" Mode="" Description="Set the FAN ID 2 of GPU" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="NSFMINER_GPUFANSPEED2" Target="NSFMINER_GPUFANSPEED2" Default="" Mode="" Description="Set the speed in percent of FAN ID 2" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <TemplateURL>https://raw.githubusercontent.com/olehj/unraid/main/nsfminerOC.xml</TemplateURL>
+  <Overview>
+    Nsfminer with Nvidia drivers and OC capability.
+  </Overview>
+  <Description>Nsfminer with Nvidia drivers and OC capability.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/olehjsRepository/nsfminerOC.xml</templatePath>
+</Container>
