@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>PhoenixStats</Name>
+  <Repository>lnxd/phoenixstats</Repository>
+  <Registry>https://hub.docker.com/r/lnxd/phoenixstats</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/104589-support-lnxd-phoenixminer-amd/</Support>
+  <Overview>Simple container for displaying stats from any PhoenixMiner instance. Made to go with PhoenixMiner-AMD.</Overview>
+  <WebUI>http://[IP]:[PORT:5449]</WebUI>
+  <Icon>https://raw.githubusercontent.com/lnxd/docker-phoenixstats/master/phoenixstats-logo.png</Icon>
+  <DonateLink>https://github.com/lnxd</DonateLink>
+  <DonateText>If you like my work please consider donating.</DonateText>
+  <Config Name="Apache" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">5449</Config>
+  <Config Name="Server Name" Target="S_NAME" Default="Unraid" Mode="" Description="Server name for miner (Can be set to anything)" Type="Variable" Display="always" Required="false" Mask="false">Unraid</Config>
+  <Config Name="Miner Host" Target="S_HOST" Default="unraid.local" Mode="" Description="Host for miner (usually an IP)" Type="Variable" Display="always" Required="false" Mask="false">unraid.local</Config>
+  <Config Name="Miner Port" Target="S_PORT" Default="5450" Mode="" Description="Port shared by miner over http (usually 5450)" Type="Variable" Display="always" Required="false" Mask="false">5450</Config>
+  <Description>Simple container for displaying stats from any PhoenixMiner instance. Made to go with PhoenixMiner-AMD.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/lnxdsRepository/lnxd/PhoenixStats.xml</templatePath>
+</Container>
