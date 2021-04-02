@@ -7,7 +7,7 @@
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
   <Support>https://forums.unraid.net/topic/104589-support-lnxd-phoenixminer-amd/</Support>
-  <Overview>Containerised version of PhoenixMiner for AMD GPUs. Helps turn your Unraid server into an Ethereum / cryptocurrency mining rig. Contains AMD drivers. Not affected by the AMD reset bug as it doesn't rely on vfio. Check the support link for detailed installation instructions.</Overview>
+  <Overview>Containerised version of PhoenixMiner. Helps turn your Unraid server into an Ethereum / cryptocurrency mining rig. Contains AMD drivers. Not affected by the AMD reset bug as it doesn't rely on vfio. Works with most Nvidia GPUs as well via Open Source drivers. Check the support link for detailed installation instructions.</Overview>
   <WebUI>http://[IP]:[PORT:5450]</WebUI>
   <Icon>https://raw.githubusercontent.com/lnxd/docker-phoenixminer/main/phoenixminer-logo.png</Icon>
   <DonateLink>https://github.com/lnxd</DonateLink>
@@ -21,6 +21,6 @@
   <Config Name="Safety: Resume Temperature" Target="TSTART" Default="80" Mode="" Description="PhoenixMiner will resume mining on a GPU if it hits this temperature after being paused (only works if privileged mode is enabled)" Type="Variable" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="Additional PhoenixMiner Arguments" Target="ADDITIONAL" Default="-amd" Mode="" Description="Additional PhoenixMiner arguments" Type="Variable" Display="always" Required="false" Mask="false">-amd </Config>
   <Config Name="GPU Device" Target="" Default="" Mode="" Description="GPU passthrough from host to container. This Isn't necessary if privileged mode is enabled, but won't hurt." Type="Device" Display="always" Required="false" Mask="false">/dev/dri:/dev/dri</Config>
-  <Description>Containerised version of PhoenixMiner for AMD GPUs. Helps turn your Unraid server into an Ethereum / cryptocurrency mining rig. Contains AMD drivers. Not affected by the AMD reset bug as it doesn't rely on vfio. Check the support link for detailed installation instructions.</Description>
+  <Description>Containerised version of PhoenixMiner. Helps turn your Unraid server into an Ethereum / cryptocurrency mining rig. Contains AMD drivers. Not affected by the AMD reset bug as it doesn't rely on vfio. Works with most Nvidia GPUs as well via Open Source drivers. Check the support link for detailed installation instructions.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/lnxdsRepository/lnxd/PhoenixMiner-AMD.xml</templatePath>
 </Container>
