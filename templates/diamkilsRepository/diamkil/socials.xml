@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/socials.xml</TemplateURL>
+  <Name>Socials</Name>
+  <Overview>
+  Socials is an a website similar to tappy.tech but open source. Your url is http://exemple.com/(user) where user.json is the file containing the info.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/105177-support-diamkil-socials/</Support>
+  <Registry>https://registry.hub.docker.com/r/diamkil/socials/</Registry>
+  <Repository>diamkil/socials</Repository>
+  <Project>https://github.com/diamkil/socials</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7574</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>LOG_LEVEL</Name>
+      <Value>info</Value>
+    </Variable>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/socials</HostDir>
+      <ContainerDir>/app/people</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/images/diamkil.png</Icon>
+  <Description>Socials is an a website similar to tappy.tech but open source. Your url is http://exemple.com/(user) where user.json is the file containing the info.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/diamkilsRepository/diamkil/socials.xml</templatePath>
+</Container>
