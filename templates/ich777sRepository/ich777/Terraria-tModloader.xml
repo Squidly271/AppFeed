@@ -13,8 +13,8 @@
 ATTENTION: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#13;
 &#13;
 Update Notice: Change the game version to whatever version do you want and restart the container.&#13;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Terraria' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
-  <WebUI></WebUI>
+WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or click on WebUI on the Docker page within Unraid.</Overview>
+  <WebUI>http://[IP]:[PORT:9013]/</WebUI>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria-tmodloader.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs></PostArgs>
@@ -27,6 +27,11 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
       <Port>
         <HostPort>7777</HostPort>
         <ContainerPort>7777</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9013</HostPort>
+        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -58,6 +63,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/terraria-tmodloader</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-config serverconfig.txt</Config>
   <Config Name="TCP" Target="7777" Default="" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Terraria console by opening your browser and go to HOSTIP:9013 - eg: 192.168.1.1:9013 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9013</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Description>This Docker will download and install Terraria and the tModloader and run it. SERVER PASSWORD: Docker&#13;
@@ -65,6 +71,6 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
 ATTENTION: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#13;
 &#13;
 Update Notice: Change the game version to whatever version do you want and restart the container.&#13;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Terraria' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
+WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or click on WebUI on the Docker page within Unraid.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/ich777sRepository/ich777/Terraria-tModloader.xml</templatePath>
 </Container>
