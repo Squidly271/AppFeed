@@ -75,7 +75,7 @@ Additional environment variables can be found under https://github.com/firefly-i
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>v2</Value>
+      <Value>v1</Value>
       <Name>FIREFLY_III_LAYOUT</Name>
       <Mode></Mode>
     </Variable>
@@ -140,7 +140,7 @@ Additional environment variables can be found under https://github.com/firefly-i
   <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="" Mode="" Description="Container Variable: DB_USERNAME - Database username. It is recommended to create a dedicated user for Firefly." Type="Variable" Display="always" Required="true" Mask="false">firefly</Config>
   <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="Container Variable: DB_PASSWORD - Database password" Type="Variable" Display="always" Required="true" Mask="false">secret_firefly_password</Config>
   <Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="Container Variable: APP_KEY - The encryption key for your sessions. Keep this very secure. If you generate a new one all existing attachments must be considered LOST. Change it to a string of exactly 32 chars." Type="Variable" Display="always" Required="true" Mask="false">SomeRandomStringOf32CharsExactly</Config>
-  <Config Name="FIREFLY_III_LAYOUT" Target="FIREFLY_III_LAYOUT" Default="" Mode="" Description="Container Variable: FIREFLY_III_LAYOUT" Type="Variable" Display="always" Required="false" Mask="false">v2</Config>
+  <Config Name="FIREFLY_III_LAYOUT" Target="FIREFLY_III_LAYOUT" Default="" Mode="" Description="Container Variable: FIREFLY_III_LAYOUT" Type="Variable" Display="always" Required="false" Mask="false">v1</Config>
   <Config Name="TRUSTED_PROXIES" Target="TRUSTED_PROXIES" Default="" Mode="" Description="Container Variable: TRUSTED_PROXIES - Set to ** when using reverse proxy." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_MAILER" Target="MAIL_MAILER" Default="" Mode="" Description="Container Variable: MAIL_MAILER -&#13;&#10;Refer to https://docs.firefly-iii.org/advanced-installation/email for more information" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MAIL_HOST" Target="MAIL_HOST" Default="" Mode="" Description="Container Variable: MAIL_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
