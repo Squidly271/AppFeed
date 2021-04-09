@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>FeedCrawler</Name>
+  <Repository>rix1337/docker-feedcrawler</Repository>
+  <Registry>https://registry.hub.docker.com/r/rix1337/docker-feedcrawler</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=43669.0</Support>
+  <Project>https://github.com/rix1337/FeedCrawler</Project>
+  <Overview>&#13;
+	This python-based script automates downloads for JDownloader crawling web feeds.[br]&#13;
+	After the first launch you need to provide correct hostnames in FeedCrawler.ini at /config.[br]&#13;
+	Only useful for German users. Very advanced and user friendly features.&#13;
+  </Overview>
+  <WebUI>http://[IP]:[PORT:9090]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rix1337/docker-templates/master/rix1337/feedcrawler.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web/img/favicon.ico</Icon>
+  <ExtraParams>--log-opt max-size=50m</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>Sponsor me!</DonateText>
+  <DonateLink>https://github.com/sponsors/rix1337</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/feedcrawler/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>INFO</Value>
+      <Name>LOGLEVEL</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PASS</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>DEVICE</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>VERSION</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="LOGLEVEL" Target="LOGLEVEL" Default="INFO" Mode="" Description="INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET" Type="Variable" Display="always-hide" Required="false" Mask="false">INFO</Config>
+  <Config Name="Webserver" Target="9090" Default="" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always-hide" Required="true" Mask="false">9090</Config>
+  <Config Name="Config-Path" Target="/config" Default="/mnt/user/appdata/feedcrawler" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/cache/appdata/feedcrawler/</Config>
+  <Config Name="MyJDownloader Username" Target="USER" Default="" Mode="" Description="Container Variable: USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MyJDownloader Password" Target="PASS" Default="" Mode="" Description="Container Variable: PASS" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MyJDownloader Device" Target="DEVICE" Default="" Mode="" Description="Container Variable: DEVICE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="FeedCrawler Version" Target="DEVICE" Default="" Mode="" Description="Optional Version override" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Description>This python-based script automates downloads for JDownloader crawling web feeds.&#13;
+	After the first launch you need to provide correct hostnames in FeedCrawler.ini at /config.&#13;
+	Only useful for German users. Very advanced and user friendly features.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/rixsRepository/rix1337/feedcrawler.xml</templatePath>
+</Container>
