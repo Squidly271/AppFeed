@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Container>
+<Container version="2">
   <Name>ntopng</Name>
   <Repository>ntop/ntopng:stable</Repository>
   <Registry>https://hub.docker.com/r/ntop/ntopng/</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/105443-support-cschanot-docker-templates/</Support>
   <Project>https://www.ntop.org/</Project>
+  <Overview>High-Speed Web-based Traffic Analysis and Flow Collection &#13;
+&#13;
+Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
+&#13;
+If you have a license you would need to add another path mapping to include it and remove the --community option</Overview>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/cschanot/docker-templates/main/ntopng.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png</Icon>
-  <Description>High-Speed Web-based Traffic Analysis and Flow Collection   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container&#13;
+  <PostArgs>--community -i eth0</PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ntopng</HostDir>
+      <ContainerDir>/var/lib/redis</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="AppData Config Path" Target="/var/lib/redis" Default="" Mode="rw" Description="Container path to /var/lib/redis to persist data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ntopng</Config>
+  <Date>1618006420</Date>
+  <Description>High-Speed Web-based Traffic Analysis and Flow Collection &#13;
 &#13;
 Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
 &#13;
 If you have a license you would need to add another path mapping to include it and remove the --community option</Description>
-  <CABlacklist>true</CABlacklist>
   <templatePath>/tmp/GitHub/AppFeed/templates/cschanotsRepository/ntopng.xml</templatePath>
 </Container>
