@@ -47,13 +47,19 @@
       <Name>PGID</Name>
       <Mode></Mode>
     </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PLUGIN_INSTALLER</Name>
+      <Mode></Mode>
+    </Variable>
   </Environment>
   <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8001</Config>
   <Config Name="Data" Target="/var/www/app/data" Default="" Mode="rw" Description="Container Path: /var/www/app/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kanboard/data</Config>
   <Config Name="plugins" Target="/var/www/app/plugins" Default="" Mode="rw" Description="Container Path: /var/www/app/plugins" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kanboard/plugins</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Date>1610831608</Date>
+  <Config Name="Plugins" Target="PLUGIN_INSTALLER" Default="false" Mode="" Description="Set to 'true' to enable plugins right away." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Date>1618082962</Date>
   <Description>Kanboard is project management software that focuses on the Kanban methodology.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/ArieDedsRepository/kanboard.xml</templatePath>
 </Container>
