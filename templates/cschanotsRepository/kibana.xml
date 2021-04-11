@@ -14,7 +14,7 @@ Please install and run Elasticsearch docker first. Set the tag to it to match th
 on Kibana (currently 7.12.0)&#13;
 &#13;
 Change ELASTIC_SEARCH_HOSTS to match the address of your Elasticsearch</Overview>
-  <WebUI></WebUI>
+  <WebUI>http://[IP]:[PORT:5601]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cschanot/docker-templates/main/kibana.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cschanot/docker-templates/main/images/kibana.png</Icon>
   <PostArgs></PostArgs>
@@ -39,7 +39,7 @@ Change ELASTIC_SEARCH_HOSTS to match the address of your Elasticsearch</Overview
   </Environment>
   <Config Name="ELASTICSEARCH_HOSTS" Target="ELASTICSEARCH_HOSTS" Default="" Mode="" Description="Container Variable: ELASTICSEARCH_HOSTS" Type="Variable" Display="always" Required="false" Mask="false">http://192.168.1.20:9200</Config>
   <Config Name="Web UI" Target="5601" Default="" Mode="tcp" Description="Container Port: 5601" Type="Port" Display="always" Required="false" Mask="false">5601</Config>
-  <Date>1618020777</Date>
+  <Date>1618099078</Date>
   <Description>Kibana gives shape to any kind of data — structured and unstructured — indexed in Elasticsearch.  &#13;
 &#13;
 Please install and run Elasticsearch docker first. Set the tag to it to match the one you are using &#13;

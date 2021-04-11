@@ -10,13 +10,18 @@
   <Project>https://www.ntop.org/</Project>
   <Overview>High-Speed Web-based Traffic Analysis and Flow Collection &#13;
 &#13;
-Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
 &#13;
-If you have a license you would need to add another path mapping to include it and remove the --community option</Overview>
+&#13;
+Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
+Since this is running host mode you can change the default port of 3000 to whatever you need by by&#13;
+changing the --http-port in post arguments to the port you would like to use. Don't forget to change&#13;
+WebUI to match.&#13;
+&#13;
+</Overview>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cschanot/docker-templates/main/ntopng.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png</Icon>
-  <PostArgs>--community -i eth0</PostArgs>
+  <PostArgs>-i eth0 --http-port 0.0.0.0:3000</PostArgs>
   <CPUset></CPUset>
   <Networking>
     <Mode>host</Mode>
@@ -31,11 +36,14 @@ If you have a license you would need to add another path mapping to include it a
   </Data>
   <Environment></Environment>
   <Config Name="AppData Config Path" Target="/var/lib/redis" Default="" Mode="rw" Description="Container path to /var/lib/redis to persist data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ntopng</Config>
-  <Date>1618006420</Date>
+  <Date>1618098064</Date>
   <Description>High-Speed Web-based Traffic Analysis and Flow Collection &#13;
 &#13;
-Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
 &#13;
-If you have a license you would need to add another path mapping to include it and remove the --community option</Description>
+&#13;
+Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
+Since this is running host mode you can change the default port of 3000 to whatever you need by by&#13;
+changing the --http-port in post arguments to the port you would like to use. Don't forget to change&#13;
+WebUI to match.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/cschanotsRepository/ntopng.xml</templatePath>
 </Container>
