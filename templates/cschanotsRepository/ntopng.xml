@@ -17,11 +17,14 @@ Since this is running host mode you can change the default port of 3000 to whate
 changing the --http-port in post arguments to the port you would like to use. Don't forget to change&#13;
 WebUI to match.&#13;
 &#13;
-</Overview>
+This image runs a redis server so if you are already hosting one you will need to add &#13;
+-r YOUR_REDIST_SERVER:YOUR_REDIS_PORT at the very least to post arguments. The&#13;
+format that -r takes is the following: [h[:port[:pwd]]][@db-id] &#13;
+You will also want this container to start after your redis container so it doesn't conflict.</Overview>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cschanot/docker-templates/main/ntopng.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png</Icon>
-  <PostArgs>-i eth0 --http-port 0.0.0.0:3000</PostArgs>
+  <PostArgs>-i eth0 --http-port 0.0.0.0:3000 -r 192.168.1.20:6379@2</PostArgs>
   <CPUset></CPUset>
   <Networking>
     <Mode>host</Mode>
@@ -36,7 +39,7 @@ WebUI to match.&#13;
   </Data>
   <Environment></Environment>
   <Config Name="AppData Config Path" Target="/var/lib/redis" Default="" Mode="rw" Description="Container path to /var/lib/redis to persist data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ntopng</Config>
-  <Date>1618098064</Date>
+  <Date>1618145510</Date>
   <Description>High-Speed Web-based Traffic Analysis and Flow Collection &#13;
 &#13;
 &#13;
@@ -44,6 +47,11 @@ WebUI to match.&#13;
 Click advanced view and in post arguments change eth0 to the network interface you want to monitor.&#13;
 Since this is running host mode you can change the default port of 3000 to whatever you need by by&#13;
 changing the --http-port in post arguments to the port you would like to use. Don't forget to change&#13;
-WebUI to match.</Description>
+WebUI to match.&#13;
+&#13;
+This image runs a redis server so if you are already hosting one you will need to add &#13;
+-r YOUR_REDIST_SERVER:YOUR_REDIS_PORT at the very least to post arguments. The&#13;
+format that -r takes is the following: &gt;] &#13;
+You will also want this container to start after your redis container so it doesn't conflict.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/cschanotsRepository/ntopng.xml</templatePath>
 </Container>
