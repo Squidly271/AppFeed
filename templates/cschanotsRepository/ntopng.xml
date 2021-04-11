@@ -24,7 +24,7 @@ You will also want this container to start after your redis container so it does
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/cschanot/docker-templates/main/ntopng.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cschanot/docker-templates/main/images/ntopng-icon-150x150.png</Icon>
-  <PostArgs>-i eth0 --http-port 0.0.0.0:3000 -r 192.168.1.20:6379@2</PostArgs>
+  <PostArgs>-i eth0 --http-port 0.0.0.0:3000</PostArgs>
   <CPUset></CPUset>
   <Networking>
     <Mode>host</Mode>
