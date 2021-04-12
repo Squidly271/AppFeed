@@ -9,16 +9,21 @@
   <Project>https://github.com/RandomNinjaAtk/docker-locast2tuner</Project>
   <TemplateURL>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/locast2tuner.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/RandomNinjaAtk/unraid-templates/master/randomninjaatk/img/locast2tuner.png</Icon>
-  <Overview>This application provides an interface between locast.org and Plex Media Server (PMS) or Emby by acting like a HDHomerun or an m3u Tuner and an XMLTV provider.</Overview>
+  <Overview>This application provides an interface between locast.org and Plex Media Server (PMS) or Emby by acting like a HDHomerun or an m3u Tuner and an XMLTV provider.
+  [br][br][b][span style='color: #E80000;']Donator Account Required![/span][/u][/b][br][br]
+  URLS:[br]
+  --Tuner: http://HOST_IP:PORT/tuner.m3u[br]
+  --Guide: http://HOST_IP:PORT/epg.xml
+  </Overview>
   <DonateLink>https://github.com/sponsors/RandomNinjaAtk</DonateLink>
   <DonateImg></DonateImg>
-  <WebUI>http://[IP]:[PORT:6077]/tuner.m3u</WebUI>
+  <WebUI></WebUI>
   <PostArgs></PostArgs>
   <Network>bridge</Network>
   <Config Name="Host Port for 6077" Target="6077" Default="6077" Mode="tcp" Description="Container Port: 6077" Type="Port" Display="always-hide" Required="true" Mask="false"></Config>
-  <Config Name="Locast Username" Target="L2DUSER" Default="" Mode="" Description="username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Locast Password" Target="L2DPASS" Default="" Mode="" Description="password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Locast Zipcodes" Target="L2DZIP" Default="" Mode="" Description="zipcode in format: #####,#####,#####" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Locast Username" Target="L2DUSER" Default="" Mode="" Description="locast username" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Locast Password" Target="L2DPASS" Default="" Mode="" Description="locast password" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Locast Zip Codes" Target="L2DZIP" Default="" Mode="" Description="override zip codes, format: #####,#####,#####" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Description>This application provides an interface between locast.org and Plex Media Server (PMS) or Emby by acting like a HDHomerun or an m3u Tuner and an XMLTV provider.</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/randomninjaatksRepository/randomninjaatk/locast2tuner.xml</templatePath>
 </Container>
