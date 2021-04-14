@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Gluster-Server</Name>
+  <Repository>testdasi/gluster-server:latest</Repository>
+  <Registry>https://registry.hub.docker.com/r/testdasi/gluster-server/</Registry>
+  <Network>host</Network>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/96233-support-testdasi-repo/</Support>
+  <Project>https://github.com/testdasi/gluster-server</Project>
+  <Overview>A docker running gluster server. This allows me to use a folder in the Unraid cache pool as persistent storage for Kubernetes / Docker Swarm through glusterfs. It works way better than NFS, especially for high-availability applications.&#13;
+&#13;
+For more detail readme, please refer to https://github.com/testdasi/gluster-server</Overview>
+  <WebUI></WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/testdasi/testdasi-unraid-repo/master/gluster-server.xml</TemplateURL>
+  <Icon>https://github.com/testdasi/gluster-server/raw/main/gluster.png</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DonateText>If you like my work, a donation to my burger fund is very much appreciated.</DonateText>
+  <DonateLink>https://paypal.me/mersenne</DonateLink>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gluster-server/metadata</HostDir>
+      <ContainerDir>/var/lib/glusterd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gluster-server/config</HostDir>
+      <ContainerDir>/etc/glusterfs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gluster-server/log</HostDir>
+      <ContainerDir>/var/log/glusterfs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gluster-server/data</HostDir>
+      <ContainerDir>/gluster</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gluster-server/hosts</HostDir>
+      <ContainerDir>/etc/hosts</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>49152-49162</Value>
+      <Name>BRICK_PORT_RANGE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Metadata" Target="/var/lib/glusterd" Default="/mnt/user/appdata/gluster-server/metadata" Mode="rw" Description="Container Path: /var/lib/glusterd" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gluster-server/metadata</Config>
+  <Config Name="Config" Target="/etc/glusterfs" Default="/mnt/user/appdata/gluster-server/config" Mode="rw" Description="Container Path: /etc/glusterfs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gluster-server/config</Config>
+  <Config Name="Log" Target="/var/log/glusterfs" Default="/mnt/user/appdata/gluster-server/log" Mode="rw" Description="Container Path: /var/log/glusterfs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gluster-server/log</Config>
+  <Config Name="Data" Target="/gluster" Default="/mnt/user/appdata/gluster-server/data" Mode="rw" Description="Container Path: /gluster" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gluster-server/data</Config>
+  <Config Name="Host file (remove if not required)" Target="/etc/hosts" Default="/mnt/user/appdata/gluster-server/hosts" Mode="rw" Description="Container Path: /etc/hosts" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gluster-server/hosts</Config>
+  <Config Name="BRICK_PORT_RANGE" Target="BRICK_PORT_RANGE" Default="49152-49162" Mode="" Description="Container Variable: BRICK_PORT_RANGE" Type="Variable" Display="always" Required="false" Mask="false">49152-49162</Config>
+  <Date>1618406640</Date>
+  <Description>A docker running gluster server. This allows me to use a folder in the Unraid cache pool as persistent storage for Kubernetes / Docker Swarm through glusterfs. It works way better than NFS, especially for high-availability applications.&#13;
+&#13;
+For more detail readme, please refer to https://github.com/testdasi/gluster-server</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/testdasisRepository/gluster-server.xml</templatePath>
+</Container>
