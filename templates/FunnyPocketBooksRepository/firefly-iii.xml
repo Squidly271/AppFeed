@@ -28,13 +28,8 @@ Additional environment variables can be found under https://github.com/firefly-i
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/firefly-iii/export/</HostDir>
-      <ContainerDir>/var/www/firefly-iii/storage/export </ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/mnt/user/appdata/firefly-iii/upload/</HostDir>
-      <ContainerDir>/var/www/firefly-iii/storage/upload</ContainerDir>
+      <ContainerDir>/var/www/html/storage/upload</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -130,8 +125,7 @@ Additional environment variables can be found under https://github.com/firefly-i
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="EXPORT_PATH" Target="/var/www/firefly-iii/storage/export " Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/export - Exported files are stored here" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/firefly-iii/export/</Config>
-  <Config Name="UPLOAD_PATH" Target="/var/www/firefly-iii/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/firefly-iii/storage/upload - Uploaded files that are used for bulk importing are stored here" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/firefly-iii/upload/</Config>
+  <Config Name="UPLOAD_PATH" Target="/var/www/html/storage/upload" Default="" Mode="rw" Description="Container Path: /var/www/html/storage/upload - Uploaded files that are used for bulk importing are stored here" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/firefly-iii/upload/</Config>
   <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="DB_CONNECTION" Target="DB_CONNECTION" Default="" Mode="" Description="Container Variable: DB_CONNECTION - Database type ('pgsql', 'mysql', 'sqlite')" Type="Variable" Display="always" Required="true" Mask="false">mysql</Config>
   <Config Name="DB_HOST" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST - Database host, e.g. 192.168.0.3" Type="Variable" Display="always" Required="true" Mask="false"></Config>
