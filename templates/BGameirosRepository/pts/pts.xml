@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Phoronix-Test-Suite</Name>
+  <Repository>phoronix/pts</Repository>
+  <Registry>https://hub.docker.com/r/phoronix/pts/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/94979-trilium-docker/&amp;lt;</Support>
+  <Project>https://github.com/phoronix-test-suite/phoronix-test-suite</Project>
+  <Overview>The Phoronix Test Suite is the most comprehensive testing and benchmarking platform available that provides an extensible framework for which new tests can be easily added.&#13;
+  The software is designed to effectively carry out both qualitative and quantitative benchmarks in a clean, reproducible, and easy-to-use manner.&#13;
+  The Phoronix Test Suite can be used for simply comparing your computer's performance with your friends and colleagues or can be used within your organization for internal quality assurance purposes, hardware validation, and continuous integration / performance management.&#13;
+  [br][br]&#13;
+  [b][u][span style='color: #E80000;']Links[/span][/u][/b][br]&#13;
+  [b]Repository:[/b] https://github.com/phoronix-test-suite/phoronix-test-suite[br]&#13;
+  [b]Website:[/b] https://www.phoronix-test-suite.com/[br]&#13;
+  [b]Docker:[/b] https://hub.docker.com/r/phoronix/pts/[br]&#13;
+  [br][br]&#13;
+  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+  [b]/var/lib/phoronix-test-suite[/b] Where PTS should store all appdata (tests, suites, ...)[br]&#13;
+  [b]/var/lib/phoronix-test-suite/test-results[/b] Where PTS should store the test results[br]</Overview>
+  <TemplateURL>https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/pts/pts.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/BGameiro2000/unraid-ca/master/pts/logo.png</Icon>
+  <ExtraParams>-it</ExtraParams>
+  <PostArgs>/bin/bash</PostArgs>
+  <DonateLink>https://bgameiro.me/page/donate</DonateLink>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish></Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/phoronix-test-suite/test-results</HostDir>
+      <ContainerDir>/var/lib/phoronix-test-suite/test-results</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/phoronix-test-suite</HostDir>
+      <ContainerDir>/var/lib/phoronix-test-suite</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="Results" Target="/var/lib/phoronix-test-suite/test-results" Default="/mnt/user/appdata/phoronix-test-suite/test-results" Mode="rw" Description="Container Path: /var/lib/phoronix-test-suite/test-results" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/phoronix-test-suite/test-results</Config>
+  <Config Name="Appdata:" Target="/var/lib/phoronix-test-suite" Default="/mnt/user/appdata/phoronix-test-suite" Mode="rw" Description="Container Path: /var/lib/phoronix-test-suite" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/phoronix-test-suite</Config>
+  <Date>1618846543</Date>
+  <Description>The Phoronix Test Suite is the most comprehensive testing and benchmarking platform available that provides an extensible framework for which new tests can be easily added.&#13;
+  The software is designed to effectively carry out both qualitative and quantitative benchmarks in a clean, reproducible, and easy-to-use manner.&#13;
+  The Phoronix Test Suite can be used for simply comparing your computer's performance with your friends and colleagues or can be used within your organization for internal quality assurance purposes, hardware validation, and continuous integration / performance management.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/BGameirosRepository/pts/pts.xml</templatePath>
+</Container>
