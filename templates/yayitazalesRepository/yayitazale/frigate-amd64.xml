@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/blakeblackshear/frigate/</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/98064-support-blakeblackshear-frigate/</Support>
   <Project>https://github.com/blakeblackshear/frigate</Project>
   <Overview>[b]NVR With Realtime Object Detection for IP Cameras[/b]&#13;
@@ -24,31 +24,11 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
 &#13;
 [span style='color: red;'][b]Note:[/b][/span] You can map an Intel integrated GPU or an Nvidia GPU to use hardware accel. on ffmpeg image encode/decode. In the first place you only need to keep the /dev/dri/ device. If you want to use a nvidia GPU on ffmpeg you need to follow [https://forums.unraid.net/topic/98978-plugin-nvidia-driver/?tab=comments#comment-913250&amp;amp;searchlight=1"]this steps[/a]&#13;
 &#13;
-[span style='color: red;'][b]Note:[/b][/span] If you are using a PCI Coral instead of a USB one, upgrade your Unraid system to stable 6.9.0 and then install first the needed drivers going to the CA APP and searching for [b]Coral-Driver[/b] (thanks to ich777)&#13;
-&#13;
-&#13;
-&#13;
-&#13;
-[b]NVR With Realtime Object Detection for IP Cameras[/b]&#13;
-&#13;
-Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT.&#13;
-&#13;
-Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
-&#13;
-    *Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&#13;
-    *Uses a very low overhead motion detection to determine where to run object detection&#13;
-    *Object detection with Tensorflow runs in a separate process&#13;
-    *Object info is published over MQTT for integration into HomeAssistant as a binary sensor&#13;
-    *An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously&#13;
-&#13;
-[span style='color: red;'][b]Note:[/b][/span] A config.yml file [b]must exist[/b] in the config directory. See example [a href="https://github.com/blakeblackshear/frigate/blob/master/config/config.example.yml"]here[/a] and device specific info can be found [a href="https://github.com/blakeblackshear/frigate/blob/master/docs/DEVICES.md"]here[/a]. See the documentation for more details.&#13;
-&#13;
-[span style='color: red;'][b]Note:[/b][/span] If you are using a PCI Coral instead of a USB one, upgrade your Unraid system to stable 6.9.0 and then install first the needed drivers going to the CA APP and searching for [b]Coral-Driver[/b] (thanks to ich777)&#13;
-</Overview>
+[span style='color: red;'][b]Note:[/b][/span] If you are using a PCI Coral instead of a USB one, upgrade your Unraid system to stable 6.9.0 and then install first the needed drivers going to the CA APP and searching for [b]Coral-Driver[/b] (thanks to ich777)</Overview>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/yayitazale/unraid-templates/main/yayitazale/frigate-amd64.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/yayitazale/unraid-templates/main/frigate_unraid.PNG</Icon>
-  <ExtraParams>--shm-size=1G</ExtraParams>
+  <ExtraParams>--shm-size=5G</ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
   <Networking>
@@ -83,8 +63,8 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/cache</HostDir>
-      <ContainerDir>/tmpfs</ContainerDir>
+      <HostDir>/tmp/frigate</HostDir>
+      <ContainerDir>/tmp/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -104,13 +84,14 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
   <Config Name="Clips path" Target="/media/frigate/clips" Default="/mnt/user/Media/frigate/clips" Mode="rw" Description="Container Path: /media/frigate/clips" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Media/frigate/clips</Config>
   <Config Name="Recordings path" Target="/media/frigate/recordings" Default="/mnt/user/Media/frigate/recordings" Mode="rw" Description="Container Path: /media/frigate/recordings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Media/frigate/recordings</Config>
   <Config Name="HTTP port" Target="5000" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
-  <Config Name="RSTP port" Target="1935" Default="" Mode="tcp" Description="Container Port: 1935" Type="Port" Display="always" Required="true" Mask="false">1935</Config>
+  <Config Name="RTMP port" Target="1935" Default="" Mode="tcp" Description="Container Port: 1935" Type="Port" Display="always" Required="true" Mask="false">1935</Config>
   <Config Name="Frigate RTSP Password" Target="FRIGATE_RTSP_PASSWORD" Default="" Mode="" Description="Container Variable: FRIGATE_RTSP_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">enterpassword</Config>
   <Config Name="TPU Mapping" Target="/dev/bus/usb" Default="" Mode="" Description="Container Path: /dev/bus/usb" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
+  <Config Name="Intel GPU mapping" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Device: /dev/dri/renderD128" Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
   <Config Name="Intel GPU Mapping" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
-  <Config Name="Cache TempFS is best" Target="/tmpfs" Default="" Mode="rw" Description="Container Path: /tmpfs" Type="Path" Display="advanced-hide" Required="true" Mask="false">/cache</Config>
+  <Config Name="Cache to RAM" Target="/tmp/cache" Default="" Mode="rw" Description="Container Path: /tmp/cache" Type="Path" Display="advanced-hide" Required="true" Mask="false">/tmp/frigate</Config>
   <Config Name="Localtime" Target="/etc/localtime" Default="" Mode="rw" Description="/etc/localtime" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
-  <Date>1614883235</Date>
+  <Date>1619032310</Date>
   <Description>NVR With Realtime Object Detection for IP Cameras&#13;
 &#13;
 Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT.&#13;
