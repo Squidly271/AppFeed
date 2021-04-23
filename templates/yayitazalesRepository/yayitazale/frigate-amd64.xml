@@ -87,8 +87,7 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
   <Config Name="RTMP port" Target="1935" Default="" Mode="tcp" Description="Container Port: 1935" Type="Port" Display="always" Required="true" Mask="false">1935</Config>
   <Config Name="Frigate RTSP Password" Target="FRIGATE_RTSP_PASSWORD" Default="" Mode="" Description="Container Variable: FRIGATE_RTSP_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">enterpassword</Config>
   <Config Name="TPU Mapping" Target="/dev/bus/usb" Default="" Mode="" Description="Container Path: /dev/bus/usb" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb</Config>
-  <Config Name="Intel GPU mapping" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Device: /dev/dri/renderD128" Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
-  <Config Name="Intel GPU Mapping" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
+  <Config Name="Intel/AMD GPU mapping" Target="" Default="" Mode="" Description="Container Device: /dev/dri/renderD128" Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
   <Config Name="Cache to RAM" Target="/tmp/cache" Default="" Mode="rw" Description="Container Path: /tmp/cache" Type="Path" Display="advanced-hide" Required="true" Mask="false">/tmp/frigate</Config>
   <Config Name="Localtime" Target="/etc/localtime" Default="" Mode="rw" Description="/etc/localtime" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
   <Date>1619032310</Date>
