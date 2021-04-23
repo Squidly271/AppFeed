@@ -14,7 +14,7 @@ Guide - https://github.com/A75G/docker-templates/blob/master/README.md#first-ins
   <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/archivebox.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/archivebox.png</Icon>
   <ExtraParams>-it</ExtraParams>
-  <PostArgs>bash -c 'echo "https://github.com/pirate/ArchiveBox" | /bin/archive; tail -f /dev/null'</PostArgs>
+  <PostArgs>server --quick-init 0.0.0.0:8000</PostArgs>
   <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="Port" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
   <Config Name="Data" Target="/data" Default="/mnt/user/appdata/archivebox/" Mode="rw" Description="Data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/archivebox/</Config>
   <Date>1596121988</Date>
