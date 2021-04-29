@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>IPMI-Tools</Name>
+  <Repository>edchamberlain/ipmi-tools</Repository>
+  <Registry>https://hub.docker.com/r/edchamberlain/ipmi-tools</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/EdwardChamberlain/IPMI-Fan-Controller/issues</Support>
+  <Project>https://github.com/EdwardChamberlain/IPMI-Fan-Controller</Project>
+  <Overview>This is a container with a webGUI to manage a Dell servers fan speeds using IPMI. You must enable IPMI from iDRAC. You can pass credentials through environment variables or enter them in the webGUI at runtime. </Overview>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/EdwardChamberlain/unraid-templates/main/ipmi-tools.xml</TemplateURL>
+  <Icon>https://github.com/EdwardChamberlain/unraid-templates/blob/main/assets/server_icon.png?raw=true</Icon>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4017</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data></Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>APP_IPMI_HOST</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_IPMI_USER</Name>
+      <Mode></Mode>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>APP_IPMI_PASS</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="IPMI Host" Target="APP_IPMI_HOST" Default="" Mode="" Description="The IP or host of your iDRAC interface." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="IPMI User" Target="APP_IPMI_USER" Default="" Mode="" Description="Your IPMI username (same as your iDRAC user)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="IPMI Password" Target="APP_IPMI_PASS" Default="" Mode="" Description="Your IPMI password (same as your iDRAC password)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="WebUI port" Type="Port" Display="advanced" Required="true" Mask="false">4017</Config>
+  <Date>1619694807</Date>
+  <Description>This is a container with a webGUI to manage a Dell servers fan speeds using IPMI. You must enable IPMI from iDRAC. You can pass credentials through environment variables or enter them in the webGUI at runtime.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/Forum-LaymansRepository/ipmi-tools.xml</templatePath>
+</Container>
