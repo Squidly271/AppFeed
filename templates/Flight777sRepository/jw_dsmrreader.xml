@@ -15,7 +15,6 @@ UNRAID template that JUST WORKS, brought to you by Flight777!&#13;
 &amp;lt;/br&amp;gt;&#13;
 &amp;lt;/br&amp;gt;&#13;
 [b][span style='color: #E80000;']IMPORTANT 1!![/span][/b] --&amp;gt; Next to this container, you will have to install a PostgreSQL container from the APPS, any version 11 or 12 will do.&#13;
-User:&#13;
 DB name: dsmrreader&#13;
 DB user: dsmrreader&#13;
 DB password: dsmrreader&#13;
@@ -83,11 +82,6 @@ The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you 
     </Variable>
     <Variable>
       <Value></Value>
-      <Name>DATALOGGER_INPUT_METHOD</Name>
-      <Mode></Mode>
-    </Variable>
-    <Variable>
-      <Value></Value>
       <Name>DATALOGGER_SERIAL_PORT</Name>
       <Mode></Mode>
     </Variable>
@@ -143,7 +137,6 @@ The DATALOGGER SLEEP TIME has been set to 10 seconds, instead of 1, to save you 
   <Config Name="WEB UI Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="Backup directory" Target="/home/dsmr/app/backups" Default="" Mode="rw" Description="Container Path: /home/dsmr/app/backups" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dsmr-reader/backups</Config>
   <Config Name="DATALOGGER MODE (change if P1 port is on this machine to STANDALONE)" Target="DATALOGGER_MODE" Default="receiver|standalone" Mode="" Description="Container Variable: DATALOGGER_MODE" Type="Variable" Display="always" Required="true" Mask="false">receiver</Config>
-  <Config Name="DATALOGGER INPUT METHOD" Target="DATALOGGER_INPUT_METHOD" Default="|serial" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="DATALOGGER SERIAL PORT" Target="DATALOGGER_SERIAL_PORT" Default="|/dev/ttyUSB0" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="DATALOGGER SERIAL BAUDRATE" Target="DATALOGGER_SERIAL_BAUDRATE" Default="|115200" Mode="" Description="Optional - required if setting DATALOGGER MODE to standalone!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="VIRTUAL_HOST" Target="VIRTUAL_HOST" Default="" Mode="" Description="Container Variable: VIRTUAL_HOST" Type="Variable" Display="advanced" Required="true" Mask="false">localhost</Config>
