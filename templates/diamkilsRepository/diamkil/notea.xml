@@ -16,7 +16,7 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>3000</HostPort>
+        <HostPort></HostPort>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -62,6 +62,10 @@
     <Variable>
       <Name>PASSWORD</Name>
       <Value>notea</Value>
+    </Variable>
+    <Variable>
+      <Name>COOKIE_SECURE</Name>
+      <Value>false</Value>
     </Variable>
   </Environment>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
