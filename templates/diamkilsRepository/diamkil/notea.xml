@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Container>
+<Container version="2">
   <TemplateURL>https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/notea.xml</TemplateURL>
   <Beta>true</Beta>
   <Name>Notea</Name>
@@ -14,28 +14,7 @@
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort></HostPort>
-        <ContainerPort>3000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>PASSWORD</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_USER</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_PASSWORD</Name>
-      <Value></Value>
-    </Variable>
-  </Environment>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/Notea</HostDir>
@@ -45,6 +24,11 @@
   </Data>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <Icon>https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/images/notea.png</Icon>
+  <Config Name="Notea Port" Target="3000" Default="" Mode="tcp" Description="Port for Notea WebUI" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MinIO Port" Target="9000" Default="" Mode="tcp" Description="Port for MinIO WebUI (optional)" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WebUI Password" Target="PASSWORD" Default="" Mode="" Description="Set the password to use on Notea's Website" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MinIO User" Target="STORE_USER" Default="" Mode="" Description="User for MinIO Backend" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MinIO Password" Target="STORE_PASSWORD" Default="" Mode="" Description="Password for MinIO Backend" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Description>Self hosted note taking, alternative to Notions. Look at Github for config</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/diamkilsRepository/diamkil/notea.xml</templatePath>
 </Container>
