@@ -4,12 +4,12 @@
   <Beta>true</Beta>
   <Name>Notea</Name>
   <Overview>
-    Self hosted note taking app stored on S3.
+    Self hosted note taking, alternative to Notions. Look at Github for config
   </Overview>
   <Support>https://forums.unraid.net/topic/107577-support-diamkil-notea/</Support>
-  <Registry>https://registry.hub.docker.com/r/cinwell/notea/</Registry>
-  <Repository>cinwell/notea</Repository>
-  <Project>https://github.com/QingWei-Li/notea</Project>
+  <Registry>https://registry.hub.docker.com/r/diamkil/notea/</Registry>
+  <Repository>diamkil/notea</Repository>
+  <Project>https://github.com/diamkil/docker-notea</Project>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
@@ -24,52 +24,28 @@
   </Networking>
   <Environment>
     <Variable>
-      <Name>LOG_LEVEL</Name>
-      <Value>info</Value>
-    </Variable>
-    <Variable>
-      <Name>UMASK</Name>
-      <Value>000</Value>
-    </Variable>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>100</Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_ACCESS_KEY</Name>
-      <Value>Q3AM3UQ867SPQQA43P2F</Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_SECRET_KEY</Name>
-      <Value>zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG</Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_BUCKET</Name>
-      <Value>notea</Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_END_POINT</Name>
-      <Value>http://play.minio.io</Value>
-    </Variable>
-    <Variable>
-      <Name>STORE_FORCE_PATH_STYLE</Name>
-      <Value>true</Value>
-    </Variable>
-    <Variable>
       <Name>PASSWORD</Name>
-      <Value>notea</Value>
+      <Value></Value>
     </Variable>
     <Variable>
-      <Name>COOKIE_SECURE</Name>
-      <Value>false</Value>
+      <Name>STORE_USER</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>STORE_PASSWORD</Name>
+      <Value></Value>
     </Variable>
   </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Notea</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <Icon>https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/images/notea.png</Icon>
-  <Description>Self hosted note taking app stored on S3.</Description>
+  <ExtraParams>-t</ExtraParams>
+  <Description>Self hosted note taking, alternative to Notions. Look at Github for config</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/diamkilsRepository/diamkil/notea.xml</templatePath>
 </Container>
