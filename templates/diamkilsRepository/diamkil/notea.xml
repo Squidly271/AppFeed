@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <TemplateURL>https://raw.githubusercontent.com/diamkil/docker-templates/master/diamkil/notea.xml</TemplateURL>
-  <Beta>true</Beta>
   <Name>Notea</Name>
   <Overview>
     Self hosted note taking, alternative to Notions. Look at Github for config
@@ -29,6 +28,7 @@
   <Config Name="WebUI Password" Target="PASSWORD" Default="" Mode="" Description="Set the password to use on Notea's Website" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="MinIO User" Target="STORE_USER" Default="" Mode="" Description="User for MinIO Backend" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="MinIO Password" Target="STORE_PASSWORD" Default="" Mode="" Description="Password for MinIO Backend" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="MinIO URL" Target="STORE_URL" Default="(external-ip):9000" Mode="" Description="Url mapped to this container on port 9000. If you don't need Pictures working, set this to localhost:9000" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Description>Self hosted note taking, alternative to Notions. Look at Github for config</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/diamkilsRepository/diamkil/notea.xml</templatePath>
 </Container>
