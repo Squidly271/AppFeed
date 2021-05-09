@@ -9,21 +9,23 @@
   <Support>https://forums.unraid.net/topic/98064-support-blakeblackshear-frigate/</Support>
   <Project>https://github.com/blakeblackshear/frigate</Project>
   <Overview>[b]NVR With Realtime Object Detection for IP Cameras[/b]&#13;
-&#13;
-Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT.&#13;
-&#13;
-Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
-&#13;
-    *Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&amp;amp;#xD;&#13;
-    *Uses a very low overhead motion detection to determine where to run object detection&amp;amp;#xD;&#13;
-    *Object detection with Tensorflow runs in a separate process&amp;amp;#xD;&#13;
-    *Object info is published over MQTT for integration into HomeAssistant as a binary sensor&amp;amp;#xD;&#13;
-    *An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously&amp;amp;#xD;&#13;
-&#13;
+[br][br]&#13;
+Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT. Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
+[br][br]&#13;
+- Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&#13;
+[br]&#13;
+- Uses a very low overhead motion detection to determine where to run object detection&#13;
+[br]&#13;
+- Object detection with Tensorflow runs in a separate process&#13;
+[br]&#13;
+- Object info is published over MQTT for integration into HomeAssistant as a binary sensor&#13;
+[br]&#13;
+- An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously&#13;
+[br][br]&#13;
 [span style='color: red;'][b]Note:[/b][/span] A config.yml file [b]must exist[/b] in the config directory. See example [a href="https://github.com/blakeblackshear/frigate/blob/master/config/config.example.yml"]here[/a] and device specific info can be found [a href="https://github.com/blakeblackshear/frigate/blob/master/docs/DEVICES.md"]here[/a]. See the documentation for more details.&#13;
-&#13;
-[span style='color: red;'][b]Note:[/b][/span] You can map an Intel integrated GPU or an Nvidia GPU to use hardware accel. on ffmpeg image encode/decode. In the first place you only need to keep the /dev/dri/ device. If you want to use a nvidia GPU on ffmpeg you need to follow [https://forums.unraid.net/topic/98978-plugin-nvidia-driver/?tab=comments#comment-913250&amp;amp;searchlight=1"]this steps[/a]&#13;
-&#13;
+[br]&#13;
+[span style='color: red;'][b]Note:[/b][/span] If you want add a Nvidia GPU to use hardware accel. on ffmpeg image encode/decode use the correspondig app.&#13;
+[br]&#13;
 [span style='color: red;'][b]Note:[/b][/span] If you are using a PCI Coral instead of a USB one, upgrade your Unraid system to stable 6.9.0 and then install first the needed drivers going to the CA APP and searching for [b]Coral-Driver[/b] (thanks to ich777)</Overview>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/yayitazale/unraid-templates/main/yayitazale/frigate-amd64.xml</TemplateURL>
@@ -90,17 +92,19 @@ Use of a Google Coral Accelerator is optional, but highly recommended. On my Int
   <Config Name="Intel/AMD GPU mapping" Target="" Default="" Mode="" Description="Container Device: /dev/dri/renderD128" Type="Device" Display="always" Required="false" Mask="false">/dev/dri/renderD128</Config>
   <Config Name="Cache to RAM" Target="/tmp/cache" Default="" Mode="rw" Description="Container Path: /tmp/cache" Type="Path" Display="advanced-hide" Required="true" Mask="false">/tmp/frigate</Config>
   <Config Name="Localtime" Target="/etc/localtime" Default="" Mode="rw" Description="/etc/localtime" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
-  <Date>1619032310</Date>
+  <Date>1620578823</Date>
   <Description>NVR With Realtime Object Detection for IP Cameras&#13;
 &#13;
-Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT.&#13;
+Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT. Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
 &#13;
-Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load.&#13;
+- Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&#13;
 &#13;
-    *Leverages multiprocessing heavily with an emphasis on realtime over processing every frame&amp;amp;#xD;&#13;
-    *Uses a very low overhead motion detection to determine where to run object detection&amp;amp;#xD;&#13;
-    *Object detection with Tensorflow runs in a separate process&amp;amp;#xD;&#13;
-    *Object info is published over MQTT for integration into HomeAssistant as a binary sensor&amp;amp;#xD;&#13;
-    *An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously&amp;amp;#xD;</Description>
+- Uses a very low overhead motion detection to determine where to run object detection&#13;
+&#13;
+- Object detection with Tensorflow runs in a separate process&#13;
+&#13;
+- Object info is published over MQTT for integration into HomeAssistant as a binary sensor&#13;
+&#13;
+- An endpoint is available to view an MJPEG stream for debugging, but should not be used continuously</Description>
   <templatePath>/tmp/GitHub/AppFeed/templates/yayitazalesRepository/yayitazale/frigate-amd64.xml</templatePath>
 </Container>
