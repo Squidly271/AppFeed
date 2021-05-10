@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Javinizer</Name>
+  <Repository>jvlflame/javinizer</Repository>
+  <Registry>https://hub.docker.com/r/jvlflame/javinizer</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/jvlflame/Javinizer/issues</Support>
+  <Overview>
+    A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:8600]/webui</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/angelics/unraid-docker-template/master/Javinizer.xml</TemplateURL>
+  <Project>https://github.com/jvlflame/Javinizer</Project>
+  <Date>1563163200</Date>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8600</HostPort>
+        <ContainerPort>8600</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Javinizer/config/jvSettings.json</HostDir>
+      <ContainerDir>/home/jvSettings.json</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Config Name="Swarm TCP" Target="8600" Default="8600" Mode="tcp" Description="Port used to access the application's GUI" Type="Port" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <DonateLink>https://www.paypal.me/angelics345</DonateLink>
+  <Description>A commandline and GUI based PowerShell module used to scrape metadata and sort your local Japanese Adult Video (JAV) files into a media library compatible format.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/josywongsRepository/Javinizer.xml</templatePath>
+</Container>
