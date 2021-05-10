@@ -50,7 +50,7 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/Sync/Teamspeak3-files/files/virtualserver_1/</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/ts3server/files/virtualserver_1/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -70,7 +70,7 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
   <Config Name="Host Port 1" Target="9987" Default="9987" Mode="udp" Description="Container Port: 9987" Type="Port" Display="always" Required="true" Mask="false">9987</Config>
   <Config Name="Host Port 2" Target="10011" Default="10011" Mode="tcp" Description="Container Port: 10011" Type="Port" Display="always" Required="true" Mask="false">10011</Config>
   <Config Name="Host Port 3" Target="30033" Default="30033" Mode="tcp" Description="Container Port: 30033" Type="Port" Display="always" Required="true" Mask="false">30033</Config>
-  <Config Name="File Browser" Target="/ts3server/files/virtualserver_1/" Default="" Mode="rw" Description="Container Path: /ts3server/files/virtualserver_1/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Sync/Teamspeak3-files/files/virtualserver_1/</Config>
+  <Config Name="File Browser" Target="/ts3server/files/virtualserver_1/" Default="" Mode="rw" Description="Container Path: /ts3server/files/virtualserver_1/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/ts3server" Default="/mnt/user/appdata/ts3-alpine" Mode="rw" Description="Container Path: /ts3server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ts3-alpine</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
