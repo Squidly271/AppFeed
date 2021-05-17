@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
-  <Date>1611637200</Date>
+  <Date>1621224000</Date>
   <Name>nzbgetvpn</Name>
   <Repository>dyonr/nzbgetvpn</Repository>
   <Registry>https://hub.docker.com/r/dyonr/nzbgetvpn</Registry>
@@ -20,7 +20,7 @@
   <Config Name="VPN_PASSWORD" Target="VPN_PASSWORD" Default="" Mode="" Description="Password used to authenticate to the VPN (OpenVPN only)" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="LAN_NETWORK" Target="LAN_NETWORK" Default="192.168.0.0/24" Mode="" Description="Your local network address in CIDR notation" Type="Variable" Display="always" Required="true" Mask="false">192.168.0.0/24</Config>
   <Config Name="ENABLE_SSL" Target="ENABLE_SSL" Default="yes" Mode="" Description="Let the container handle SSL (yes/no)?" Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
-  <Config Name="WEBUI_USERNAME" Target="WEBUI_USERNAME" Default="nzbget" Mode="" Description="Username used to connect to the WebUI" Type="Variable" Display="always" Required="true" Mask="false">WEBUI_USERNAME</Config>
+  <Config Name="WEBUI_USERNAME" Target="WEBUI_USERNAME" Default="nzbget" Mode="" Description="Username used to connect to the WebUI" Type="Variable" Display="always" Required="true" Mask="false">nzbget</Config>
   <Config Name="WEBUI_PASSWORD" Target="WEBUI_PASSWORD" Default="tegbzn6789" Mode="" Description="Password used to connect to the WebUI" Type="Variable" Display="always" Required="true" Mask="true">tegbzn6789</Config>
   <Config Name="Downloads Path" Target="/downloads" Default="" Mode="rw" Description="Path for /downloads" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="WEBUI_PORT_HTTP" Target="6789" Default="6789" Mode="tcp" Description="Port used to access NZBGet (HTTP) remotely" Type="Port" Display="always" Required="true" Mask="false">6789</Config>
