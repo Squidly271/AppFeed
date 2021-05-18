@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>machinaris</Name>
+  <Repository>ghcr.io/guydavis/machinaris</Repository>
+  <Registry>https://hub.docker.com/repository/docker/guydavis/machinaris</Registry>
+  <Network>host</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/guydavis/machinaris</Project>
+  <Overview>Building upon the official Chia docker image, Machinaris combines the Plotman CLI with a simple WebUI for Unraid.</Overview>
+  <WebUI>http://[IP]:[PORT:8926]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/guydavis/machinaris-unraid/master/machinaris.png</Icon>
+  <ExtraParams>-t</ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8555</HostPort>
+        <ContainerPort>8555</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8444</HostPort>
+        <ContainerPort>8444</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8926</HostPort>
+        <ContainerPort>8926</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/machinaris</HostDir>
+      <ContainerDir>/root/.chia</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/plots</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/plotting</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/root/.chia/mnemonic.txt</Value>
+      <Name>keys</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="appdata" Target="/root/.chia" Default="/mnt/user/appdata/machinaris" Mode="rw" Description="Holds app data for the container. Not for temp plotting or final plot storage." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/machinaris</Config>
+  <Config Name="plots" Target="/plots" Default="" Mode="rw" Description="Holds completed Chia plots for farming." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/data/crypto/chia/plots</Config>
+  <Config Name="plotting" Target="/plotting" Default="" Mode="rw" Description="Your fast temp space for plotting, ideally an unassigned SSD." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="chia_rpc" Target="8555" Default="8555" Mode="tcp" Description="Chia protocol port for local harvesters etc." Type="Port" Display="always" Required="false" Mask="false">8555</Config>
+  <Config Name="chia_protocol" Target="8444" Default="8444" Mode="tcp" Description="Sync port to the network.  Port-forward on your router!" Type="Port" Display="always" Required="false" Mask="false">8444</Config>
+  <Config Name="Web" Target="8926" Default="8926" Mode="tcp" Description="Machinaris local web app port." Type="Port" Display="always" Required="false" Mask="false">8926</Config>
+  <Config Name="mnemonic" Target="keys" Default="/root/.chia/mnemonic.txt" Mode="" Description="Path to the mnemonic key used by Chia to run." Type="Variable" Display="always" Required="false" Mask="false">/root/.chia/mnemonic.txt</Config>
+  <Beta>true</Beta>
+  <Date>1620961274</Date>
+  <Description>Building upon the official Chia docker image, Machinaris combines the Plotman CLI with a simple WebUI for Unraid.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/guy.davisRepository/machinaris.xml</templatePath>
+</Container>
