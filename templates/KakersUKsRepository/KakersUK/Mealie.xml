@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Mealie</Name>
+  <Repository>hkotel/mealie</Repository>
+  <Registry>https://hub.docker.com/r/hkotel/mealie/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/hay-kot/mealie/issues</Support>
+  <Project>https://hay-kot.github.io/mealie/</Project>
+  <Overview>A self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. </Overview>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Icon>https://cdn.statically.io/gh/KakersUK/docker-templates/master/KakersUK/images/Mealie.png</Icon>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9925</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mealie</HostDir>
+      <ContainerDir>/app/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>sqlite</Value>
+      <Name>DB_TYPE</Name>
+      <Mode></Mode>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="80" Default="9925" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">9925</Config>
+  <Config Name="Host Path 1" Target="/app/data" Default="/mnt/user/appdata/mealie" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mealie</Config>
+  <Config Name="Database Type" Target="DB_TYPE" Default="sqlite" Mode="" Description="The database type to be used." Type="Variable" Display="always" Required="false" Mask="false">sqlite</Config>
+  <TemplateURL>https://raw.githubusercontent.com/KakersUK/docker-templates/master/KakersUK/Mealie.xml</TemplateURL>
+  <Description>A self-hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/KakersUKsRepository/KakersUK/Mealie.xml</templatePath>
+</Container>
