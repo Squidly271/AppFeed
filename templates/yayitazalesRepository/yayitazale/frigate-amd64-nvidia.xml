@@ -30,7 +30,7 @@ Uses OpenCV and Tensorflow to perform realtime object detection locally for IP c
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/yayitazale/unraid-templates/main/yayitazale/frigate-amd64-nvidia.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/yayitazale/unraid-templates/main/frigate_unraid.PNG</Icon>
-  <ExtraParams>--shm-size=5G  --rm --runtime=nvidia</ExtraParams>
+  <ExtraParams>--shm-size=5G --runtime=nvidia</ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
   <Networking>
@@ -50,7 +50,7 @@ Uses OpenCV and Tensorflow to perform realtime object detection locally for IP c
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/frigate</HostDir>
+      <HostDir>/mnt/user/appdata/frigate-nvidia</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -92,7 +92,7 @@ Uses OpenCV and Tensorflow to perform realtime object detection locally for IP c
       <Mode></Mode>
     </Variable>
   </Environment>
-  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/frigate" Mode="rw" Description="/mnt/user/appdata/frigate" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/frigate</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/frigate-nvidia" Mode="rw" Description="/mnt/user/appdata/frigate" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/frigate-nvidia</Config>
   <Config Name="Clips path" Target="/media/frigate/clips" Default="/mnt/user/Media/frigate/clips" Mode="rw" Description="Container Path: /media/frigate/clips" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Media/frigate/clips</Config>
   <Config Name="Recordings path" Target="/media/frigate/recordings" Default="/mnt/user/Media/frigate/recordings" Mode="rw" Description="Container Path: /media/frigate/recordings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Media/frigate/recordings</Config>
   <Config Name="HTTP port" Target="5000" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
@@ -103,7 +103,7 @@ Uses OpenCV and Tensorflow to perform realtime object detection locally for IP c
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Variable: NVIDIA_DRIVER_CAPABILITIES" Type="Variable" Display="always" Required="true" Mask="false">compute,utility,video</Config>
   <Config Name="Cache to RAM" Target="/tmp/cache" Default="" Mode="rw" Description="Container Path: /tmp/cache" Type="Path" Display="advanced-hide" Required="true" Mask="false">/tmp/frigate</Config>
   <Config Name="Localtime" Target="/etc/localtime" Default="" Mode="rw" Description="/etc/localtime" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
-  <Date>1620578633</Date>
+  <Date>1622041851</Date>
   <Description>NVR With Realtime Object Detection for IP Cameras&#13;
 &#13;
 Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras. Designed for integration with HomeAssistant or others via MQTT. Use of a Google Coral Accelerator is optional, but highly recommended. On my Intel i7 processor, I can process 2-3 FPS with the CPU. The Coral can process 100+ FPS with very low CPU load. This is the an Nvidia GPU to use hardware accel. on ffmpeg image encode/decode.&#13;
