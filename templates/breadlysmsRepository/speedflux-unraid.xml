@@ -37,12 +37,12 @@ An example of the dashboard I made in Grafana can be found at https://grafana.co
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>&lt;USER&gt;</Value>
+      <Value></Value>
       <Name>INFLUX_DB_USER</Name>
       <Mode></Mode>
     </Variable>
     <Variable>
-      <Value>&lt;pass&gt;</Value>
+      <Value></Value>
       <Name>INFLUX_DB_PASSWORD</Name>
       <Mode></Mode>
     </Variable>
@@ -84,8 +84,8 @@ An example of the dashboard I made in Grafana can be found at https://grafana.co
   </Environment>
   <Config Name="InfluxDB Address" Target="INFLUX_DB_ADDRESS" Default="" Mode="" Description="Container Variable: INFLUX_DB_ADDRESS&#13;&#10;IP or Hostname of Influx DB" Type="Variable" Display="always" Required="true" Mask="false">influxdb</Config>
   <Config Name="InfluxDB Port" Target="INFLUX_DB_PORT" Default="8086" Mode="" Description="Container Variable: INFLUX_DB_PORT" Type="Variable" Display="always" Required="true" Mask="false">8086</Config>
-  <Config Name="InfluxDB User" Target="INFLUX_DB_USER" Default="" Mode="" Description="Container Variable: INFLUX_DB_USER" Type="Variable" Display="always" Required="true" Mask="false">&lt;USER&gt;</Config>
-  <Config Name="InfluxDB Pass" Target="INFLUX_DB_PASSWORD" Default="" Mode="" Description="Container Variable: INFLUX_DB_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">&lt;pass&gt;</Config>
+  <Config Name="InfluxDB User" Target="INFLUX_DB_USER" Default="" Mode="" Description="Container Variable: INFLUX_DB_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="InfluxDB Pass" Target="INFLUX_DB_PASSWORD" Default="" Mode="" Description="Container Variable: INFLUX_DB_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"></Config>
   <Config Name="InfluxDB Database Name" Target="INFLUX_DB_DATABASE" Default="" Mode="" Description="Container Variable: INFLUX_DB_DATABASE&#13;&#10;If the database doesn't exist, it will be created. " Type="Variable" Display="always" Required="true" Mask="false">speedtest</Config>
   <Config Name="Test Interval" Target="SPEEDTEST_INTERVAL" Default="150" Mode="" Description="How often should speed be tested, in minutes. Default is set at 2:30 as I like to see changes over time at different times of day. " Type="Variable" Display="always" Required="false" Mask="false">150</Config>
   <Config Name="InfluxDB Tags" Target="INFLUX_DB_TAGS" Default="isp, external_ip, server_id, server_name, server_location, speedtest_url" Mode="" Description="Tags to be added to the datasets. See https://github.com/breadlysm/speedtest-to-influxdb#tag-options. Tags must be comma seperated" Type="Variable" Display="always" Required="false" Mask="false">isp, external_ip, server_id, server_name, server_location, speedtest_url</Config>
