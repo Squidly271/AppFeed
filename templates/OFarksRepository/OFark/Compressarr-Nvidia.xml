@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>Compressarr-Nvidia</Name>
+  <Repository>ofark/compressarr:nvidia</Repository>
+  <Registry>https://registry.hub.docker.com/r/ofark/compressarr/</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/109411-support-compressarr/</Support>
+  <Project>https://github.com/OFark/Compressarr</Project>
+  <Overview>
+    Compressarr is an application to take a filtered set of media from Radarr or (eventually) Sonarr and process it with customisable FFmpeg presets. It will even attempt to find the best settings for each video.
+	This is the Nvidia Hardware accelerated version and uses Ubuntu core, which is around 1.4Gb. There's an alpine version, with only Intel hardware support which is around 300mb.
+  </Overview>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/OFark/docker-templates/master/OFark/Compressarr-Nvidia.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/OFark/Compressarr/master/Compressarr/wwwroot/Logo/Compressarr.svg</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs></PostArgs>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8800</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Name="Host Port 1" Target="80" Default="8800" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8800</Config>
+  <Config Name="Output directory" Target="/downloads" Default="/mnt/user/Media/Compressarr" Mode="rw" Description="This is an output directory, Radarr/Sonarr needs to match this for importing to work" Type="Path" Display="null" Required="false" Mask="null"></Config>
+  <Config Name="Media directory" Target="/movies" Default="/mnt/user/Media" Mode="rw" Description="This needs to be the same as the root for Radarr/Sonarr. Create more as required" Type="Path" Display="null" Required="false" Mask="null"></Config>
+  <Config Name="Config directory" Target="/config" Default="" Mode="rw" Description="This is where Compressarr will store it's configuration." Type="Path" Display="advanced-hide" Required="true" Mask="{8}"></Config>
+  <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid Nvidia build)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Description>Compressarr is an application to take a filtered set of media from Radarr or (eventually) Sonarr and process it with customisable FFmpeg presets. It will even attempt to find the best settings for each video.
+	This is the Nvidia Hardware accelerated version and uses Ubuntu core, which is around 1.4Gb. There's an alpine version, with only Intel hardware support which is around 300mb.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/OFarksRepository/OFark/Compressarr-Nvidia.xml</templatePath>
+</Container>

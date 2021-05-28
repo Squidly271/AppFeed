@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/OFark/docker-templates/master/OFark/Compressarr.xml</TemplateURL>
+  <Name>Compressarr</Name>
+  <Overview>
+    Compressarr is an application to take a filtered set of media from Radarr or (eventually) Sonarr and process it with customisable FFmpeg presets. It will even attempt to find the best settings for each video.
+	This is the Apline version supporting limited Intel hardware support. For Nvidia Cuda encoding use the Nvidia version which is 1.4GB using the Ubuntu Core.
+  </Overview>
+  <Support>https://forums.unraid.net/topic/109411-support-compressarr/</Support>
+  <Project>https://github.com/OFark/Compressarr</Project>
+  <Registry>https://registry.hub.docker.com/r/ofark/compressarr/</Registry>
+  <Icon>https://raw.githubusercontent.com/OFark/Compressarr/master/Compressarr/wwwroot/Logo/Compressarr.svg</Icon>
+  <Repository>ofark/compressarr</Repository>
+  <Branch>
+    <TagDescription>This is the Standard build, limited QSV hardware support, built to be small and light</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>nvidia</Tag>
+    <TagDescription>This is the NVidia Ubuntu build, full Cuda support, built with the nightly FFmpeg and weighs in at 1.4GB</TagDescription>
+    <ExtraParams>--runtime=nvidia</ExtraParams>
+    <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid Nvidia build)" Type="Variable" Display="always" Required="false" Mask="false">
+      <value>
+	</value>
+    </Config>
+  </Branch>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8800</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Config Type="Path" Name="Config directory" Target="/config" Default="" Mode="rw" Description="This is where Compressarr will store it's configuration." Required="true"></Config>
+  <Config Type="Path" Name="Media directory" Target="/media" Default="/mnt/user/Media" Mode="rw" Description="This needs to be the same as the root for Radarr/Sonarr. Create more as required" Required="false">/mnt/user/Media</Config>
+  <Config Type="Path" Name="Output directory" Target="/output" Default="/mnt/user/Media/Compressarr" Mode="rw" Description="This is an output directory, Radarr/Sonarr needs to see this for importing to work" Required="false">/mnt/user/Media/Compressarr</Config>
+  <Description>Compressarr is an application to take a filtered set of media from Radarr or (eventually) Sonarr and process it with customisable FFmpeg presets. It will even attempt to find the best settings for each video.
+	This is the Apline version supporting limited Intel hardware support. For Nvidia Cuda encoding use the Nvidia version which is 1.4GB using the Ubuntu Core.</Description>
+  <templatePath>/tmp/GitHub/AppFeed/templates/OFarksRepository/OFark/Compressarr.xml</templatePath>
+</Container>
