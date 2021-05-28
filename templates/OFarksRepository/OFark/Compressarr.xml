@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <TemplateURL>https://raw.githubusercontent.com/OFark/docker-templates/master/OFark/Compressarr.xml</TemplateURL>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Name>Compressarr</Name>
   <Overview>
     Compressarr is an application to take a filtered set of media from Radarr or (eventually) Sonarr and process it with customisable FFmpeg presets. It will even attempt to find the best settings for each video.
@@ -21,6 +22,15 @@
     <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices (Optional - Requires Nvidia GPU and Unraid Nvidia build)" Type="Variable" Display="always" Required="false" Mask="false">
       <value>
 	</value>
+    </Config>
+    <Config Type="Path" Name="Config directory" Target="/config" Default="" Mode="rw" Description="This is where Compressarr will store it's configuration." Required="true">
+      <value></value>
+    </Config>
+    <Config Type="Path" Name="Media directory" Target="/media" Default="/mnt/user/Media" Mode="rw" Description="This needs to be the same as the root for Radarr/Sonarr. Create more as required" Required="false">
+      <value>/mnt/user/Media</value>
+    </Config>
+    <Config Type="Path" Name="Output directory" Target="/output" Default="/mnt/user/Media/Compressarr" Mode="rw" Description="This is an output directory, Radarr/Sonarr needs to see this for importing to work" Required="false">
+      <value>/mnt/user/Media/Compressarr</value>
     </Config>
   </Branch>
   <Shell>bash</Shell>
