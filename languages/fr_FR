@@ -17,6 +17,8 @@ Sort By Name Descending=Trier Par Nom Descendant
 Sort By Downloads=Trier Par Téléchargements
 Sort By Trend=Trier Par Tendance
 Sort By Date Added=Trier Par Date Ajouté
+Sort By Number Of Apps=Trier par nombre d'applications
+Sort By Average Trend=Trier par tendance moyenne		   				  
 ; Initial disclaimer translations
 Disclaimer=Désistement
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=Toutes les applications répertoriées ici sont des ajouts de tierce-partie à unRaid. Ni les auteurs des applications communautaires ni Limetech ne donnent de garantie quant à la validité de toute application répertoriée ici.
@@ -36,11 +38,43 @@ Select all on page=Sélectionner tout sur la page
 
 ; Searches
 Search=Recherche
-Please enter search term=Veuillez entrer le terme de recherche
+
 Click Here To Get More Results From DockerHub=Cliquer Ici Pour Obtenir Plus De Résultats De Recherche De Dockerhub
 No Matching Applications Found On Docker Hub=Aucune Application Correspondante Trouvée sur DockerHub
 No Matching Applications Found=Aucune Application Correspondante Trouvée
 
+; Repository Related
+Removed favourite repository=Dépôt favori supprimé
+%s set as favourite repository=définir comme référentiel favori
+Click to remove favourite repository=Cliquer pour supprimer le référentiel favori
+Click to set %s as favourite repository=Cliquer pour définir %s comme référentiel favori
+Search for apps in repository=Rechercher des applications dans le référentiel
+No description present=Aucune description présente
+Go to the forum page=Allez sur la page du forum
+Go to the webpage=Aller à la page Web
+Go to reddit=Aller sur reddit
+Go to facebook=Aller sur facebook
+Go to discord=Aller sur discord
+Go to forum profile=Aller au profil du forum
+Show Profile=Afficher profil
+Read more=En savoir plus
+Favourite Repository=Référentiel favori
+Set as favourite repository=Définir comme référentiel favori
+Total Applications=Total Applications
+Total Known Downloads=Total des téléchargements connus
+Total Docker Applications=Total Docker Applications
+Total Plugin Applications=Total Plugin Applications
+Total Languages=Langues totales
+Average Downloads Per App=Téléchargements moyens par application
+Web Page=Page Web
+Forum=Forum
+Forum Profile=Profil du forum
+Facebook=Facebook
+Reddit=Reddit
+Twitter=Twitter
+Discord=Discord
+Search Apps=Rechercher des applications
+Profile=Profil 
 ; Install Plugin title of openbox
 Install Plugin=Installer Plugin
 
@@ -87,7 +121,8 @@ Unknown error happened Please post a screenshot in the support thread of the Sta
 Something really wrong happened Reloading the Apps tab will probably fix the problem=Quelque chose s'est vraiment mal passé. Recharger l'onglet d'Applications va probablement régler le problème
 This plugin has a duplicated name from another plugin %s This will impact your ability to install both plugins simultaneously=Ce plugin a un nom dupliqué d'un autre plugin %s Cela aura un impact sur votre capacité à installer les deux plugins simultanément
 You have been logged out=Vous avez été déconnecté
-
+Fatal Flash Drive Error=Erreur fatale du lecteur flash
+This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=Cela signifie généralement que votre clé USB est corrompue ou est tombée hors ligne Le reste de l'interface graphique Unraid sera également affecté Publiez un nouveau fil de discussion dans les forums Unraid si cette erreur persiste						
 ; CA Sections Keep the length reasonable
 MENU=MENU
 Installed Apps=Applications Installées
@@ -106,6 +141,7 @@ Credits=Crédits
 Support=Support
 VERSION=VERSION
 Change Log=Journal Des Modifications
+Debugging=Débogage 
 
 ; Credits
 Development=Développement
@@ -165,8 +201,10 @@ Community Applications Changelog=Changelog des Applications Communautaires
 ; Categories try not to be excessively long This is displayed on the left of CA screen
 
 Backup=Sauvegarde
-Cloud=Nuage
+Cloud=Cloud
+Crypto Currency=Crypto Monnaie			
 Downloaders=Téléchargeurs
+Drivers=Pilotes		
 Game Servers=Serveurs de Jeux
 Home Automation=Domotique
 Media Applications=Applications Media
@@ -223,9 +261,11 @@ ToolsThemes=Outils:Thêmes
 ToolsUtilities=Outils:Utilitaires
 Other=Autres
 OtherUncategorized=Autres:Non-catégorisé
-and %s more=Et %s de plus
+and %s more=et %s de plus
 
 ; App Popup Related
+This application has additional requirements=Cette application a des exigences supplémentaires
+Additional Requirements=Exigences supplémentaires
 Donate To Author=Faire un Don a l'Auteur
 Donate To Maintainer=Faire un Don au Mainteneur
 Author=Auteur
@@ -239,7 +279,7 @@ Date Updated=Date de mise-à-jour
 Current Version=Version Actuelle
 Minimum OS=SE Minimal
 Max OS=SE Maximum
-Total Downloads=Nombre Total de Téléchargements
+Total Downloads=Total de Téléchargements
 Licence=Licence
 30 Day Trend=Tendance sur 30 jours
 Ranked #%s=Coté #%s
@@ -273,7 +313,7 @@ More than %s=Plus de %s
 ; Graphs
 Trend Per Month=Tendance Par Mois
 Downloads Per Month=Téléchargements Par Mois
-Total Downloads=Nombre Total de Téléchargements
+Total Downloads=Total de Téléchargements
 
 ; Multi install script
 Installing docker applications %s=Installation des dockers %s
@@ -284,6 +324,7 @@ Docker Application Installation finished=Installation de l'Application Docker te
 
 ; Application Cards
 Private dockerHub Conversion=Private (dockerHub Conversion)
+Private Application=Application privée
 Go to the project page=Aller à la page du projet
 Go to the support thread=Aller au fil de soutien
 Uninstall Application=Désinstaller l'Application
@@ -321,6 +362,7 @@ Update Language Pack=Mettre a jour le Module Linguistique
 Installed Version=Version Installée
 A note about translations=A propos des traductions
 Click here to view the language changelog=Cliquer ici pour voir le changelog de la langue
+View Missing Translations=Afficher les traductions manquantes						  
 
 ; Help Text
 This chooses how to sort the results=Cela choisit comment trier les résultats
@@ -338,7 +380,7 @@ On the previous apps section you can select multiple applications to install sim
 This is the recommended version to install by the application author themselves=Il s'agit de la version recommandée à installer par l'auteur de l'application lui-même
 For support for this plugin visit=Pour le soutien de ce plugin, visitez
 To view the policies Community Applications has=Pour afficher les politiques, les applications communautaires ont
-Access Mode=Mode d'accès
+This sets a favourite repository which will appear first in any search result=Cela définit un référentiel favori qui apparaîtra en premier dans n'importe quel résultat de rechercheAccess Mode=Mode d'accès
 Add another Path, Port, Variable, Label or Device=Ajouter un Chemin, un Port, une Variable, une Étiquette, ou un Périphérique supplémentaire
 Add Configuration=Ajouter Configuration
 Add=Ajouter
