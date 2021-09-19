@@ -17,6 +17,8 @@ Sort By Name Descending=Sorteer op naam aflopend
 Sort By Downloads=Sorteer op downloads
 Sort By Trend=Sorteer op trend
 Sort By Date Added=Sorteer op toegevoegde datum
+Sort By Number Of Apps=Sorteer op aantal Apps
+Sort By Average Trend=Sorteer op gemiddelde trend
 ; Initial disclaimer translations
 Disclaimer=Disclaimer
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=Alle hier vermelde applicaties zijn toevoegingen op Unraid van derde partijen. Noch de auteurs van Community Applications, noch Limetech geven enige garantie met betrekking tot de geschiktheid van de hier vermelde applicaties
@@ -35,11 +37,44 @@ Install Plugin Applications=Plug-in applicaties installeren
 Select all on page=Selecteer alles op pagina
 
 ; Searches
+Clear Search=Zoeken leegmaken
 Search=Zoeken
-Please enter search term=Voer een zoekterm in
 Click Here To Get More Results From DockerHub=Druk hier voor meer resultaten van DockerHub
 No Matching Applications Found On Docker Hub=Geen passende applicaties gevonden op DockerHub
 No Matching Applications Found=Geen passende applicaties gevonden
+
+; Repository Related
+Removed favourite repository=
+%s set as favourite repository=
+Click to remove favourite repository=
+Click to set %s as favourite repository=
+Search for apps in repository=
+No description present=
+Go to the forum page=
+Go to the webpage=
+Go to reddit=
+Go to facebook=
+Go to discord=
+Go to forum profile=
+Show Profile=
+Read more=
+Favourite Repository=
+Set as favourite repository=
+Total Applications=
+Total Known Downloads=
+Total Docker Applications=
+Total Plugin Applications=
+Total Languages=
+Average Downloads Per App=
+Web Page=
+Forum=
+Forum Profile=
+Facebook=
+Reddit=
+Twitter=
+Discord=
+Search Apps=
+Profile=
 
 ; Install Plugin title of openbox
 Install Plugin=Plug-in installeren
@@ -87,6 +122,9 @@ Unknown error happened Please post a screenshot in the support thread of the Sta
 Something really wrong happened Reloading the Apps tab will probably fix the problem=Iets ging verschrikkelijk fout. Herladen van de Apps pagina zal waarschijnlijk het probleem oplossen
 This plugin has a duplicated name from another plugin %s This will impact your ability to install both plugins simultaneously=Deze plug-in heeft een dubbele naam met een andere plug-in %s. Dit heeft invloed op beide plug-ins bij tegelijkertijd installeren
 You have been logged out=U bent uitgelogd
+Fatal Flash Drive Error=
+This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=
+
 
 ; CA Sections Keep the length reasonable
 MENU=MENU
@@ -106,6 +144,8 @@ Credits=Applaus
 Support=Ondersteuning
 VERSION=VERSIE
 Change Log=Wijzigingen
+Debugging=
+Repositories=
 
 ; Credits
 Development=Ontwikkeling
@@ -166,7 +206,9 @@ Community Applications Changelog=Community Applications wijzigingen
 
 Backup=Back-up
 Cloud=Cloud
+Crypto Currency=Cryptovaluta
 Downloaders=Downloaden
+Drivers=Stuurprogramma's
 Game Servers=Spel Servers
 Home Automation=Domotica
 Media Applications=Media-applicaties
@@ -226,6 +268,9 @@ OtherUncategorized=Overige:Ongesorteerd
 and %s more=en %s meer
 
 ; App Popup Related
+CLOSE=SLUITEN
+This application has additional requirements=Deze applicatie heeft aanvullende vereisten
+Additional Requirements=Aanvullende vereisten
 Donate To Author=Donatie aan de auteur
 Donate To Maintainer=Donatie aan de onderhouder
 Author=Auteur
@@ -256,6 +301,7 @@ WebUI=WebUI
 Reinstall=Herinstalleren
 Install=Installeren
 Project=Project
+Update=Update
 Install Using The Templates Default Tag=Installeer gebruikmakend van de sjabloon's Standaard tag
 Moderator Comments=Moderator Commentaar:
 Note not all authors keep up to date on change logs=Letop niet alle auteurs houden een wijzigingslog bij
@@ -284,6 +330,7 @@ Docker Application Installation finished=Docker applicatie installatie klaar
 
 ; Application Cards
 Private dockerHub Conversion=Privaat (dockerHub conversie)
+Private Application=Private toepassing
 Go to the project page=Ga naar de projectpagina
 Go to the support thread=Ga naar de hulplijn
 Uninstall Application=Applicatie verwijderen
@@ -321,6 +368,7 @@ Update Language Pack=Taalpakket bijwerken
 Installed Version=Geïnstalleerde versie
 A note about translations=Opmerking over vertalingen
 Click here to view the language changelog=Hier drukken om het taalwijzigingslogboek
+View Missing Translations=Toon ontbrekende translaties
 
 ; Help Text
 This chooses how to sort the results=Dit geeft aan hoe de resultaten te sorteren
@@ -338,6 +386,7 @@ On the previous apps section you can select multiple applications to install sim
 This is the recommended version to install by the application author themselves=Dit is de aanbevolen versie om te installeren van de applicatiemaker zelf
 For support for this plugin visit=Voor ondersteuning van deze plug-in
 To view the policies Community Applications has=Om het beleid van Community Applications te zien
+This sets a favourite repository which will appear first in any search result=
 Access Mode=Toegangsmodus
 Add another Path, Port, Variable, Label or Device=Pad, Poort, Variabele, Label of Apparaat toevoegen
 Add Configuration=Configuratie toevoegen
@@ -503,7 +552,7 @@ Azure=Azure
 B=B
 Back To Top=Terug naar Boven
 Basic=Basic
-Basic View=Standaard
+Basic View=Standaard weergave
 BIOS=BIOS
 Black=Zwart
 Browse=Bladeren
@@ -623,7 +672,7 @@ Last Modified=Laatst gewijzigd
 Left=Links
 less than a minute remaining=minder dan een minuut resterend
 less than a minute=minder dan een minuut
-Load=Laden
+Load=Belasting
 Location=Locatie
 Locked missing encryption key=Vergrendeld: ontbrekende versleutingssleutel
 Locked unknown error=Vergrendeld: onbekende fout
