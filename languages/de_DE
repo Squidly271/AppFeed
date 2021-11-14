@@ -8,15 +8,15 @@ Popup Blocked CA requires popups to be enabled under certain circumstances You m
 Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed=Docker Service nicht aktiviert - Es sind nur Plugins zum Installieren oder Verwalten verfügbar
 Community Applications works best when cookies are enabled in your browser Certain features may not be available=Community Applications funktioniert am besten wenn Browser Cookies aktiviert sind. Bestimmte Funktionen könnten nicht verfügbar sein.
 Backup Server Active Some icons may not appear, and plugin installations may be affected=Server Backup aktiv. Einige Icons werden vielleicht nicht angezeigt und die Installation von Plugins ist eventuell beeinträchtigt.
+Debugging enabled This significantly increases the memory used by your browser=
 
 ; Sorting Options
-Sorting options=Sortieroptionen
-Sorting options unavailable=Sortieroptionen nicht verfügbar
-Sort By Name Ascending=Aufsteigend nach Name sortieren
-Sort By Name Descending=Absteigend nach Name sortieren
-Sort By Downloads=Nach Downloads sortieren
-Sort By Trend=Nach Trend sortieren
-Sort By Date Added=Nach Hinzufügedatum sortieren
+Sort By=
+Name Ascending=
+Name Descending=
+Downloads=
+Date Added=
+Number Of Apps=
 ; Initial disclaimer translations
 Disclaimer=Haftungsausschluss
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=Alle hier aufgelisteten Programme für Unraid stammen von Drittanbietern, weder die Autoren der Community Applications noch Limetech übernehmen jegliche Garantie über die Angemessenheit der aufgeführten Programme
@@ -36,13 +36,47 @@ Select all on page=Alle auf der Seite auswählen
 
 ; Searches
 Search=Suche
-Please enter search term=Bitte Suchtext eingeben
 Click Here To Get More Results From DockerHub=Klick hier um zusätzliche Ergebnisse von DockerHub zu erhalten
-No Matching Applications Found On Docker Hub=Keine passenden Container auf DockerHub gefunden
 No Matching Applications Found=Keine passenden Anwendungen gefunden
 
+; Repository Related
+%s removed as favourite repository=
+%s set as favourite repository=
+Click to remove favourite repository=
+Click to set %s as favourite repository=
+Search for apps in repository=
+No description present=
+Go to the forum page=
+Go to the webpage=
+Go to reddit=
+Go to facebook=
+Go to discord=
+Go to forum profile=
+Show Profile=
+SHOW MORE=
+SHOW LESS=
+Read more=
+Total Applications=
+Total Known Downloads=
+Total Docker Applications=
+Total Plugin Applications=
+Total Languages=
+Average Downloads Per App=
+Web Page=
+Forum=
+Forum Profile=
+Profile=
+Facebook=
+Reddit=
+Twitter=
+Discord=
+Search Apps=
+Registry=
+Details=
+Added=
 ; Install Plugin title of openbox
 Install Plugin=Plugin installieren
+BACK=
 
 ; Remove App from previously installed
 Delete Template=Vorlage löschen
@@ -87,25 +121,29 @@ Unknown error happened Please post a screenshot in the support thread of the Sta
 Something really wrong happened Reloading the Apps tab will probably fix the problem=Etwas ist schief gegangen. Das Neuladen des App Tabs behebt das Problem wahrscheinlich
 This plugin has a duplicated name from another plugin %s This will impact your ability to install both plugins simultaneously=Dieses Plugin verwendeten bereits einen Name von einem anderen Plugin %s. Dies beeinträchtigt die Installation beider Plugins gleichzeitig
 You have been logged out=Sie wurden abgemeldet
+Fatal Flash Drive Error=
+This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=
+Fatal Docker Image Error=
+Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
 
 ; CA Sections Keep the length reasonable
-MENU=MENÜ
 Installed Apps=Installierte Apps
 Previous Apps=Vorherige Apps
 Pinned Apps=Markierte Apps
-CATEGORIES=KATEGORIE
-New Apps=Neue Apps
+Favourite Repo=
+Recently Added=
 Updated Apps=Aktualisierte Apps
 Random Apps=Zufällig Apps
 Top New Installs=Top neue Installationen
-Trending Apps=Trend-Apps
+Top Trending Apps=
+Spotlight Apps=
 All Apps=Alle Apps
-OTHER=ANDERE
 Statistics=Statistiken
 Credits=Credits
 Support=Hilfe
 VERSION=VERSION
 Change Log=Changelog
+Debugging=
 
 ; Credits
 Development=Entwicklung
@@ -119,31 +157,24 @@ Copyright=Copyright
 Translation=Übersetzung
 
 ; Statistics page
-Deprecated Applications are able to still be installed if you have previously had them installed New installations of these applications are blocked unless you enable Display Deprecated Applications within CAs General Settings=Veralterte Anwendungen können immer noch installiert werden falls du sie bereits installiert hattest. Neue Installationen diese Anwendungen sind blockiert außer du hast die Option Zeige veralterte Anwendungen in den Einstellungen von CA aktiviert
-The following applications are blacklisted CA will never allow you to install or reinstall these applications=Die folgenden Anwndungen sind gesperrt. CA wird nicht mehr erlauben diese zu installieren
-While highly not recommended to do, incompatible applications can be installed by enabling Display Incompatible Applications within CAs General Settings=Es ist möglich inkomaptible Anwendungen zu installieren wenn in den Einstellungen von CA Zeige nicht kompatible Anwendungen aktiviert wurde. Allerdings wird stark davon abgeraten
-This display is informational ONLY=Diese Anzeige dient NUR zur Information
+
 unknown=unbekannt
 Last Change To Application Feed=Letzte änderungen im Anwendungs Feed
-Number Of Docker Applications=Anzahl Docker Container
-Number Of Plugin Applications=Anzahl Plugin Anwendungen
-Number Of Templates=Anzahl Vorlagen
-Number Of Repositories=Anzahl Repositories
-Number Of Private Docker Applications=Anzahl privater Docker Container
-Number Of Invalid Templates=Anzahl ungültige Vorlagen
-Number Of Template Errors=Anzahl mit Fehler in Vorlagen
-Number Of Blacklisted Apps=Anzahl gesperrter Anwendungen
-Number Of Incompatible Applications=Anzahl inkomaptibler Anwendungen
-Number Of Deprecated Applications=Anzahl veralteter Anwendungen
-Number Of Moderation Entries=Anzahl der Moderationsbeiträge
+Docker Applications=
+Plugin Applications=
+Templates=
+Official Containers=
+Repositories=
+Private Docker Applications=
+Invalid Templates=
+Template Errors=Vorlagefehler
+Blacklisted Apps=
+Incompatible Applications=
+Deprecated Applications=
+Moderation Entries=
 Primary Server=Primärer Server
 Backup Server=Backup Server
-
-; Statistics Popup Titles
-Repository List=Repository Liste
-All Invalid Templates Found=Alle gefunden ungültigen Vorlagen
-Template Errors=Vorlagefehler
-All Moderation Entries=Alle Moderationsbeiträge
+Installs not allowed from this page=
 
 ; Statistics Popup
 No invalid templates found=Keine ungültigen Vorlagen gefunden
@@ -162,11 +193,19 @@ Individual Application Moderation=Individuelle Anwendungsmoderation
 ; Misc
 Community Applications Changelog=Community Applications Versionshinweise
 
+Each month we highlight some of the amazing work from our community=
+Check out these newly added applications from our awesome community=
+Check out these up and coming apps=
+These apps have the highest percentage of new installs=
+An assortment of randomly chosen apps=
+
 ; Categories try not to be excessively long This is displayed on the left of CA screen
 
 Backup=Backup
 Cloud=Cloud
+Crypto Currency=
 Downloaders=Downloader
+Drivers=
 Game Servers=Spieleserver
 Home Automation=Heimautomatisierung
 Media Applications=Medienanwendungen
@@ -187,6 +226,7 @@ VPN=VPN
 Web=Web
 Productivity=Produktivität
 Security=Sicherheit
+Spotlight=
 Tools Utilities=Werkzeuge / Dienstprogramme
 System=System
 Themes=Themes
@@ -221,25 +261,28 @@ NetworkOther=Netzwerk:Andere
 ToolsSystem=Werkzeuge:System
 ToolsThemes=Werkzeuge:Themes
 ToolsUtilities=Werkzeuge:Utilities
-Other=Andere
 OtherUncategorized=Andere:Ohne Kategorie
 and %s more=und %s mehr
 
 ; App Popup Related
+This application template has been blacklisted=Diese Anwendungsvorlage ist gesperrt
+This application template has been deprecated=Diese Anwenungsvorlage ist veraltet
+This application has additional requirements=
+Additional Requirements=
 Donate To Author=Spende an AutorIn
 Donate To Maintainer=Spende an BetreuerIn
+CLOSE=
 Author=AutorIn
 Maintainer=BetreuerIn
 DockerHub=DockerHub
 Application Template=Anwendungsvorlage
-Base OS=Basis OS
 DockerHub Stars=DockerHub Sterne
 Added to CA=Hinzugefügt zu CA
 Date Updated=Aktualisierungsdatum
 Current Version=Aktuelle Version
-Minimum OS=Mindest OS
+Min OS=
 Max OS=Maximales OS
-Total Downloads=Gesamt Downloads
+Total Downloads=Gesamte Downloads
 Licence=Lizenz
 30 Day Trend=Trend 30 Tage
 Ranked #%s=Platz #%s
@@ -247,15 +290,17 @@ Ranked #%s=Platz #%s
 Trending %s=Trendgin %s
 ; as in As of some date
 As of %s=Stand %s
-This application template has been blacklisted=Diese Anwendungsvorlage wurde gesperrt
-This application template has been deprecated=Diese Anwendungsvorlage ist veraltet
-This application is not compatible with your version of Unraid=Diese Anwendung ist nicht kompatibel mit dieser Version von Unraid
+Show Charts=
+Hide Charts=
+This application is not compatible with your version of Unraid=Diese Anwendung ist nicht kompatible mit dieser Version von Unraid
 Another browser tab or device has updated the displayed templates Some actions are not available=Ein anderer Browser Tab oder ein anderes Gerät hat die angezeige Vorlage aktualisiert. Einige Aktionen sind nicht verfügbar
-Reinstall default=Neuinstallation (standard)
 WebUI=WebUI
 Reinstall=Neuinstallieren
+Reinstall From Previous Apps=
 Install=Installieren
 Project=Projekt
+Read Me First=
+Install second instance=
 Install Using The Templates Default Tag=Instalieren mit den standard Vorgaben der Vorlage
 Moderator Comments=Moderator Kommentare
 Note not all authors keep up to date on change logs=Beachte, dass nicht alle Autoren das Changelog regelmäßig aktualisieren
@@ -267,13 +312,17 @@ Install The Update=Update installieren
 ; as in you have the latest version already installed
 Latest Version=Aktuellste Version
 Multi Language Support=Mehrsprachenunterstützung
+Support Forum=
 ; as in more than 100000
 More than %s=Mehr als %s
+Remove from Previous Apps=
+See All Apps=
+Favourite=
+Application Type=
 
 ; Graphs
 Trend Per Month=Trend pro Monat
 Downloads Per Month=Downloads pro Monat
-Total Downloads=Gesamte Downloads
 
 ; Multi install script
 Installing docker applications %s=Docker Container %s wird installiert
@@ -283,11 +332,15 @@ Setting installed applications to autostart=Autostart der Anwendung einschalten
 Docker Application Installation finished=Installation des Docker Containers abgeschlossen
 
 ; Application Cards
-Private dockerHub Conversion=Private (DockerHub Konversation)
-Go to the project page=Gehe zur Projektseite
-Go to the support thread=Gehe zum Hilfe-Thread
-Uninstall Application=Anwendung deinstallieren
-Remove Private Application=Private Anwendung entfernen
+This application is a driver plugin=This application is a driver (plugin)
+This is a language pack=
+This application is a docker container=
+This application is a plugin=
+This is a spotlight application=
+This is your favourite repository=
+This application is from your favourite repository=
+This application is pinned for later viewing=
+Private Application=
 Remove Application From List=Anwendung von Liste entfernen
 Check off to select multiple reinstalls=Abwählen um Multiple Neuinstalltionen ausführen zu können
 Go to the plugin settings=Gehe zu den Plugin Einstellungen
@@ -295,18 +348,27 @@ Click to reinstall the application using default values=Klicke um die Anwendung 
 Click to edit the application values=Klicke, um die Anwendungsparameter zu ändern
 Click to reinstall=Klicken zum Neuinstallieren
 Click to install=Klicken zum Installieren
-Install plugin=Plugin installieren
 Click to go to the WebUI=Klicke um zur WebUI zu gehen
-This application has been marked as being Beta=Diese Anwendung ist als Beta markiert
 This application template has been deprecated=Diese Anwenungsvorlage ist veraltet
-This application is not compatible with your version of Unraid=Diese Anwendung ist nicht kompatible mit dieser Version von Unraid
 This application template has been blacklisted=Diese Anwendungsvorlage ist gesperrt
-Search for more applications from %s=Suche mehr Anwendungen von %s
-Click for more information=Klicke für mehr Informationen
+Click info to see the notes regarding this application=
+This application has additional requirements=
+BETA= 
+INSTALLED=
+OFFICIAL=
+This is an official container=
+Digitally Signed=
+This container is digitally signed=
+Docker Hub=
+NOTE You must visit the dockerHub page to gather the information required to install correctly=
+Show CA templates=
 
-; Dockerhub searches
-Search For Containers From %s=Suche Container von %s
-Search for similar containers=Suche ähnliche Container
+Info=
+Attention=
+Repository=
+Why we picked it=
+Application Spotlight %s=
+Unraid Staff=
 
 ; Page Navigation
 Displaying %s - %s of %s=Zeige %1$s - %2$s (von %3$s)
@@ -321,23 +383,10 @@ Update Language Pack=Sprachpaket aktualisieren
 Installed Version=Installierte Version
 A note about translations=Hinweis zu den Übersetzungen
 Click here to view the language changelog=Klicken um die Übersetzungs Versionhinweise anzuzeigen
+View Missing Translations=
 
-; Help Text
-This chooses how to sort the results=Diese Auswahl bestimmt die Sortierreihenfolge
-These icons respectively will Install or Edit an application=Diese Icons installieren oder ändern eine Anwendung
-Clicking these icons will take you to an applications GUI or settings=Klicken auf diese Icons geht zur GUI der Anwendung oder in die Einstellungen
-This will update an application=Aktualisiert die Anwendung
-This will take you to the appropriate support thread for an application=Geht zum Hilfe-Thread der Anwendung
-This will immediately switch to the language=Ändert die Sprache sofort
-This will take you to the project page for an application=Geht zur Projektseite der Anwendung
-Clicking this icon will uninstall the application or delete it from the lists depending upon your current section=Klicken auf das Icon deinstalliert die Anwendung oder löscht sie je nach Auswahlt
-Clicking these icons will pin or unpin an application for later viewer from the Pinned Apps section=Klicken auf diese Icons setzt oder entfernt die Anwendung von der Merkliste zur späteren Durchsicht in der Merkliste
-Clicking this will display more information about the application NOTE You can also click on the applications icon to display more information=Klicke für mehr Informationen zur Anwendung. HINWEIS Klicken auf das Anwendungicon zeigt ebenfalls mehr Informationen der Anwendung
-Clicking this will display any warnings or extra comments about the application=Klicken zeigt Warnungen oder weitere Kommentare zur Anwendung
-On the previous apps section you can select multiple applications to install simultaneously=Im Menü Vorherige Apps können mehrer Anwendungen gleichzeitig installiert werden
-This is the recommended version to install by the application author themselves=Dies ist die vom/von der AutorIn empfohlene Version zur Installation
-For support for this plugin visit=Für Hilfe zu diesem Plugin gehe zu
-To view the policies Community Applications has=Um die Richtlinien der Community Applications zu sehen
+; WebGui
+Click Install to download and install the Community Applications plugin=Click **Install** to download and install the **Community Applications** plugin
 Access Mode=Zugriffsrechte
 Add another Path, Port, Variable, Label or Device=Weiteren Pfad, Port, Variable oder Bezeichnung hinzufügen
 Add Configuration=Konfiguration hinzufügen

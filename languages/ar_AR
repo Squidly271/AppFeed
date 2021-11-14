@@ -8,15 +8,15 @@ Popup Blocked CA requires popups to be enabled under certain circumstances You m
 Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed=خدمة حاويات دوكر غير متوفرة - تتوفر الملحقات الإضافية فقط للتثبيت أو الإدارة
 Community Applications works best when cookies are enabled in your browser Certain features may not be available=تعمل تطبيقات المجتمع بشكل أفضل عندما تكون ملفات تعريف الارتباط مُمَكّنة في متصفحك، قد لا تتوفر بعض الميزات
 Backup Server Active Some icons may not appear, and plugin installations may be affected=الخادم الاحتياطي نشط، قد لا تظهر بعض الرموز ، وقد تتأثر تثبيتات بعض المكونات الإضافية
+Debugging enabled This significantly increases the memory used by your browser=
 
 ; Sorting Options
-Sorting options=خيارات الترتيب
-Sorting options unavailable=خيارات الترتيب غير متاحة
-Sort By Name Ascending=ترتيب الأسماء تصاعديًا
-Sort By Name Descending=ترتيب الأسماء تنازليًا
-Sort By Downloads=ترتيب حسب عدد التنزيلات
-Sort By Trend=ترتيب حسب الاتجاه الرائج
-Sort By Date Added=ترتيب حسب التاريخ
+Sort By=
+Name Ascending=
+Name Descending=
+Downloads=
+Date Added=
+Number Of Apps=
 ; Initial disclaimer translations
 Disclaimer=إخلاء مسؤولية
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=جميع التطبيقات المدرجة هنا هي إضافات من طرف ثالث إلى Unraid، لا يقدم أصحاب تطبيقات المجتمع وشركة Limetech أي ضمان فيما يتعلق بملاءمة أي تطبيق مدرج هنا
@@ -36,24 +36,58 @@ Select all on page=
 
 ; Searches
 Search=بحث
-Please enter search term=ادخل كلمة البحث
 Click Here To Get More Results From DockerHub=اضغط هنا للحصول على نتائج من DockerHub
-No Matching Applications Found On Docker Hub=لا توجد نتائج متوفرة من DockerHub
 No Matching Applications Found=لا توجد نتائج للتطبيقات
 
+; Repository Related
+%s removed as favourite repository=
+%s set as favourite repository=
+Click to remove favourite repository=
+Click to set %s as favourite repository=
+Search for apps in repository=
+No description present=
+Go to the forum page=
+Go to the webpage=
+Go to reddit=
+Go to facebook=
+Go to discord=
+Go to forum profile=
+Show Profile=
+SHOW MORE=
+SHOW LESS=
+Read more=
+Total Applications=
+Total Known Downloads=
+Total Docker Applications=
+Total Plugin Applications=
+Total Languages=
+Average Downloads Per App=
+Web Page=
+Forum=
+Forum Profile=
+Profile=
+Facebook=
+Reddit=
+Twitter=
+Discord=
+Search Apps=
+Registry=
+Details=
+Added=
 ; Install Plugin title of openbox
 Install Plugin=تثبيت الملحق الإضافي
+BACK=
 
 ; Remove App from previously installed
 Delete Template=حذف القالب
 Yes, delete it=نعم، احذفه
 
 ; Uninstall popup
-Uninstall Application=حذف التطبيق
+Uninstall Application=إزالة التطبيق
 Yes uninstall it=نعم، احذفه
 
 ; Remove Private Application
-Remove Private Application=حذف التطبيق الخاص
+Remove Private Application=إزالة التطبيق الخاص
 Yes, remove it=نعم، احذفه
 
 ; App Pinning
@@ -87,25 +121,29 @@ Unknown error happened Please post a screenshot in the support thread of the Sta
 Something really wrong happened Reloading the Apps tab will probably fix the problem=حدث خطأ ما، تحديث صفحة التطبيقات قد يصلح المشكلة
 This plugin has a duplicated name from another plugin %s This will impact your ability to install both plugins simultaneously=يحتوي هذا الملحق الإضافي على اسم مكرر من ملحق إضافي آخر **%s** سيؤثر هذا على قدرتك على تثبيت كلا الملحقين الإضافيين في وقت واحد
 You have been logged out=
+Fatal Flash Drive Error=
+This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=
+Fatal Docker Image Error=
+Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
 
 ; CA Sections Keep the length reasonable
-MENU=القائمة
 Installed Apps=التطبيقات المثبتة
 Previous Apps=التطبيقات السابقة
 Pinned Apps=التطبيقات المعلقة
-CATEGORIES=التصنفيات
-New Apps=التطبيقات الجديدة
+Favourite Repo=
+Recently Added=
 Updated Apps=التطبيقات المحدثة
 Random Apps=تطبيقات عشوائية
 Top New Installs=أفضل أحدث  التثبيتات
-Trending Apps=التطبيقات الرائجة
+Top Trending Apps=
+Spotlight Apps=
 All Apps=جميع التطبيقات
-OTHER=أخرى
 Statistics=إحصائيات
 Credits=الحقوق
 Support=الدعم
 VERSION=الإصدار
 Change Log=سجل التغييرات
+Debugging=
 
 ; Credits
 Development=التطوير
@@ -119,31 +157,24 @@ Copyright=حقوق الطبع
 Translation=الترجمة
 
 ; Statistics page
-Deprecated Applications are able to still be installed if you have previously had them installed New installations of these applications are blocked unless you enable Display Deprecated Applications within CAs General Settings=هناك إمكانية لتثبيت التطبيقات المهملة إذا سبق لك تثبيتها، تحظر عمليات التثبيت الجديدة لهذه التطبيقات ما لم تقم بالتمكن من عرض التطبيقات المهملة داخل الإعدادات العامة لتطبيقات المجتمع
-The following applications are blacklisted CA will never allow you to install or reinstall these applications=هذه التطبيقات محظورة ولن  تدعك تطبيقات المجتمع بتثبيتها أو إعادة تثبيتها أبدًا
-While highly not recommended to do, incompatible applications can be installed by enabling Display Incompatible Applications within CAs General Settings=**على الرغم من عدم نصحنا بهذا الإجراء، ** يمكن تثبيت تطبيقات غير متوافقة بعد تمكين عرض التطبيقات غير المتوافقة في إعدادات تطبيقات المجتمع
-This display is informational ONLY=هذا العرض للعلم فقط
+
 unknown=غير معروف
 Last Change To Application Feed=آخر تعديل في موجز التطبيقات
-Number Of Docker Applications=عدد تطبيقات دوكر
-Number Of Plugin Applications=عدد تطبيقات الملحقات الإضافية
-Number Of Templates=عدد القوالب
-Number Of Repositories=عدد المستودعات
-Number Of Private Docker Applications=عدد تطبيقات دوكر الشخصية
-Number Of Invalid Templates=عدد القوالب غير الصالحة
-Number Of Template Errors=عدد أخطاء القوالب
-Number Of Blacklisted Apps=عدد التطبيقات المحظورة
-Number Of Incompatible Applications=عدد التطبيقات غير المتوافقة
-Number Of Deprecated Applications=عدد التطبيقات المهملة
-Number Of Moderation Entries=عدد تغييرات الإشراف
+Docker Applications=
+Plugin Applications=
+Templates=
+Official Containers=
+Repositories=
+Private Docker Applications=
+Invalid Templates=
+Template Errors=أخطاء القوالب
+Blacklisted Apps=
+Incompatible Applications=
+Deprecated Applications=
+Moderation Entries=
 Primary Server=الخادم الرئيسي
 Backup Server=الخادم الاحتياطي
-
-; Statistics Popup Titles
-Repository List=قائمة المستودعات
-All Invalid Templates Found=جميع القوالب غير الصالحة
-Template Errors=أخطاء القوالب
-All Moderation Entries=كل تغييرات الإشراف
+Installs not allowed from this page=
 
 ; Statistics Popup
 No invalid templates found=لا يوجد قوالب غير صالحة
@@ -162,11 +193,19 @@ Individual Application Moderation=الإشراف الفردي على التطب�
 ; Misc
 Community Applications Changelog=سجل تغييرات تطبيقات المجتمع
 
+Each month we highlight some of the amazing work from our community=
+Check out these newly added applications from our awesome community=
+Check out these up and coming apps=
+These apps have the highest percentage of new installs=
+An assortment of randomly chosen apps=
+
 ; Categories try not to be excessively long This is displayed on the left of CA screen
 
 Backup=نسخ احتياطي
 Cloud=سحابة
+Crypto Currency=
 Downloaders=أدوات التنزيل
+Drivers=
 Game Servers=خوادم الألعاب
 Home Automation=أنظمة تحكم منزلية تلقائية
 Media Applications=تطبيقات الوسائط
@@ -187,6 +226,7 @@ VPN=VPN
 Web=ويب
 Productivity=الإنتاجية
 Security=الأمن
+Spotlight=
 Tools Utilities=أدوات/ أدوات مساعدة
 System=نظام
 Themes=سمات
@@ -221,25 +261,28 @@ NetworkOther=شبكة أخرى
 ToolsSystem=أدوات النظام
 ToolsThemes=أدوات السمات
 ToolsUtilities=أدوات أدوات مساعدة
-Other=أخرى
 OtherUncategorized=أخرى غير مصنفة
 and %s more=و أخرى %s
 
 ; App Popup Related
+This application template has been blacklisted=قالب التطبيق هذا محظور
+This application template has been deprecated=تم إهمال قالب التطبيق هذا
+This application has additional requirements=
+Additional Requirements=
 Donate To Author=تبرع للمؤلف
 Donate To Maintainer=تبرع للمصلح
+CLOSE=
 Author=الناشر
 Maintainer=المصلح
 DockerHub=DockerHub
 Application Template=قالب التطبيق
-Base OS=قاعدة نظام التشغيل
 DockerHub Stars=نجوم DockerHub
 Added to CA=أضف إلى تطبيقات المجتمع
 Date Updated=تاريخ التحديث
 Current Version=الإصدار الحالي
-Minimum OS=نظام تشغيل الأدنى
+Min OS=
 Max OS=نظام التشغيل الأقصى
-Total Downloads=عدد التنزيلات
+Total Downloads=إجمالي التنزيلات
 Licence=الترخيص
 30 Day Trend=اتجاه 30 يوم
 Ranked #%s=قيم **#%s**
@@ -247,15 +290,17 @@ Ranked #%s=قيم **#%s**
 Trending %s=الاتجاه %s
 ; as in As of some date
 As of %s=(As of %s)
-This application template has been blacklisted=تم حظر قالب هذا التطبيق
-This application template has been deprecated=تم إهمال قالب هذا التطبيق
+Show Charts=
+Hide Charts=
 This application is not compatible with your version of Unraid=هذا التطبيق غير متوافق مع إصدار نظام Unraid خاصتك
 Another browser tab or device has updated the displayed templates Some actions are not available=قام صفحة متصفح أو جهاز آخر بتحديث بعض القوالب المعروضة، بعض الإجراءات غير متاحة
-Reinstall default=إعادة تثبيت الخيار الافتراضي
 WebUI=WebUI
 Reinstall=إعادة التثبيت
+Reinstall From Previous Apps=
 Install=تثبيت
 Project=مشروع
+Read Me First=
+Install second instance=
 Install Using The Templates Default Tag=استخدم علامة القالب الافتراضي للتثبيت
 Moderator Comments=تعليقات المشرف
 Note not all authors keep up to date on change logs=**تنبيه** لا يقوم جميع الكؤلفون بتحديث سجل التغييرات
@@ -267,13 +312,17 @@ Install The Update=تثبيت التحديث
 ; as in you have the latest version already installed
 Latest Version=أحدث إصدار
 Multi Language Support=دعم لغات متعددة
+Support Forum=
 ; as in more than 100000
 More than %s=اكثر من %s
+Remove from Previous Apps=
+See All Apps=
+Favourite=
+Application Type=
 
 ; Graphs
 Trend Per Month=الاتجاه حسب الشهر
 Downloads Per Month=التنزيل حسب الشهر
-Total Downloads=إجمالي التنزيلات
 
 ; Multi install script
 Installing docker applications %s=تثبيت تطبيقات دوكر %s
@@ -283,11 +332,15 @@ Setting installed applications to autostart=إعدادات التطبيقات ا
 Docker Application Installation finished=انتهاء تثبيت تطبيق دوكر
 
 ; Application Cards
-Private dockerHub Conversion=خاص DockerHub تحويل
-Go to the project page=اذهب إلى صفحة المشروع
-Go to the support thread=اذهب إلى صفحة الدعم
-Uninstall Application=إزالة التطبيق
-Remove Private Application=إزالة التطبيق الخاص
+This application is a driver plugin=This application is a driver (plugin)
+This is a language pack=
+This application is a docker container=
+This application is a plugin=
+This is a spotlight application=
+This is your favourite repository=
+This application is from your favourite repository=
+This application is pinned for later viewing=
+Private Application=
 Remove Application From List=إزالة التطبيق من القائمة
 Check off to select multiple reinstalls=تحقق من إعادة التثبيت المتعددة
 Go to the plugin settings=إذهب إلى إعدادات الملحق الإضافي
@@ -295,18 +348,27 @@ Click to reinstall the application using default values=انقر لإعادة ت
 Click to edit the application values=انقر لتحرير قيم التطبيق
 Click to reinstall=انقر لإعادة التثبيت
 Click to install=انقر للتثبيت
-Install plugin=تثبيت الملحق الإضافي
 Click to go to the WebUI=انقر للذهاب إلى WebUI
-This application has been marked as being Beta=تم تصنيف هذا التطبيق من الصنف بيتا
 This application template has been deprecated=تم إهمال قالب التطبيق هذا
-This application is not compatible with your version of Unraid=هذا التطبيق غير متوافق مع إصدار نظام Unraid خاصتك
 This application template has been blacklisted=قالب التطبيق هذا محظور
-Search for more applications from %s=ابحث عن المزيد من التطبيقات من %s
-Click for more information=انقر لمزيد من المعلومات
+Click info to see the notes regarding this application=
+This application has additional requirements=
+BETA= 
+INSTALLED=
+OFFICIAL=
+This is an official container=
+Digitally Signed=
+This container is digitally signed=
+Docker Hub=
+NOTE You must visit the dockerHub page to gather the information required to install correctly=
+Show CA templates=
 
-; Dockerhub searches
-Search For Containers From %s=ابحث عن حاويات من %s
-Search for similar containers=ابحث عن حاويات مشابهة
+Info=
+Attention=
+Repository=
+Why we picked it=
+Application Spotlight %s=
+Unraid Staff=
 
 ; Page Navigation
 Displaying %s - %s of %s=عرض %1$s - %2$s (من %3$s)
@@ -321,23 +383,10 @@ Update Language Pack=تحديث حزمة اللغة
 Installed Version=الإصدار المثبت
 A note about translations=
 Click here to view the language changelog=
+View Missing Translations=
 
-; Help Text
-This chooses how to sort the results=لاختيار كيفية تصنيف النتائج
-These icons respectively will Install or Edit an application=ستثبت أو تحرر  هذه الأيقونات على التوالي تطبيق ما
-Clicking these icons will take you to an applications GUI or settings=النقر على هذه الأيقونات سينقلك لصفحة التطبيقات GUI أو الإعدادات
-This will update an application=هذا سيحدّث تطبيقًا
-This will take you to the appropriate support thread for an application=هذا سينقلك لمنتدى الدعم الموافق للتطبيق
-This will immediately switch to the language=هذا سينتقل مباشرة إلى اللغة
-This will take you to the project page for an application=هذا سينقلك لصفحة مشروع التطبيق
-Clicking this icon will uninstall the application or delete it from the lists depending upon your current section=النقر على هذه الأيقونة سيزيل التطبيق أو يحذفه من القائمة حسب خيارك الحالي
-Clicking these icons will pin or unpin an application for later viewer from the Pinned Apps section=النقر على هذه الأيقونات سيعلق  أو يزيل تعليق تطبيق لمشاهد لاحق من قسم تطبيق معلق
-Clicking this will display more information about the application NOTE You can also click on the applications icon to display more information=النقر على هذا سيظهر المزيد من المعلومات عن التطبيق، يمكنك أيضًا النقر على أيقونة التطبيق لعرض المزيد من المعلومات
-Clicking this will display any warnings or extra comments about the application=النقر على هذا سيعرض تحذيرات أو تعليقات إضافية عن التطبيق
-On the previous apps section you can select multiple applications to install simultaneously=في قسم التطبيقات السابقة، يمكنك تحديد عدة تطبيقات لتثبيتها في نفس الوقت
-This is the recommended version to install by the application author themselves=هذا الإصدار الموصى بتثبيته من قبل مؤلف التطبيق نفسه
-For support for this plugin visit=لمزيد من الدعم للملحق الإضافي هذا قم بزيارة
-To view the policies Community Applications has=لقراءة نهج تطبيقات المجتمع
+; WebGui
+Click Install to download and install the Community Applications plugin=Click **Install** to download and install the **Community Applications** plugin
 Access Mode=وضع الوصول
 Add another Path, Port, Variable, Label or Device=أضف مسار، منفذ، متغير، تسمية، أو جهاز
 Add Configuration=أضف تكوينات

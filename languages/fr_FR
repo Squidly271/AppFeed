@@ -40,7 +40,7 @@ Click Here To Get More Results From DockerHub=Cliquer ici pour obtenir plus de r
 No Matching Applications Found=Aucune application correspondante trouvée
 
 ; Repository Related
-Removed favourite repository=Dépôt favori supprimé
+%s removed as favourite repository=
 %s set as favourite repository=définir comme référentiel favori
 Click to remove favourite repository=Cliquer pour supprimer le référentiel favori
 Click to set %s as favourite repository=Cliquer pour définir %s comme référentiel favori
@@ -77,6 +77,7 @@ Added=Ajouté
 ; Install Plugin title of openbox
 Install Plugin=Installer Plugin
 BACK=RETOUR
+
 ; Remove App from previously installed
 Delete Template=Supprimer le Modèle
 Yes, delete it=Oui, supprimez la
@@ -162,6 +163,7 @@ Last Change To Application Feed=Dernier Changement au Feed d'Applications
 Docker Applications=Applications Docker
 Plugin Applications=Applications Plugin
 Templates=Modèles
+Official Containers=
 Repositories=Dépôts
 Private Docker Applications=Application Docker Privées
 Invalid Templates=Modèles Invalides
@@ -263,8 +265,8 @@ OtherUncategorized=Autres:Non-catégorisé
 and %s more=et %s de plus
 
 ; App Popup Related
-This application template has been blacklisted=Ce modèle d'application a été mis sur liste noire
-This application template has been deprecated=Ce modèle d'application est obsolète																						   
+This application template has been blacklisted=Ce modèle d'Apps a été mis sur liste noire
+This application template has been deprecated=Ce modèle d'application est obsolète
 This application has additional requirements=Cette application a des exigences supplémentaires
 Additional Requirements=Exigences supplémentaires
 Donate To Author=Faire un Don a l'Auteur
@@ -290,11 +292,11 @@ Trending %s=Tendance %s
 As of %s=(Depuis %s)
 Show Charts=Afficher les graphiques
 Hide Charts=Masquer les graphiques
-This application is not compatible with your version of unRaid=Cette application n'est pas comptible avec votre version de unRaid
+This application is not compatible with your version of Unraid=
 Another browser tab or device has updated the displayed templates Some actions are not available=Un autre onglet ou navigateur a mis à jour les modèles affichés Certaines actions ne sont pas disponibles
-Reinstall default=Réinstaller (par défaut)
 WebUI=WebUI
 Reinstall=Réinstaller
+Reinstall From Previous Apps=
 Install=Installer
 Project=Projet
 Read Me First=Lisez-moi d'abord
@@ -310,6 +312,7 @@ Install The Update=Installer la Mise-à-jour
 ; as in you have the latest version already installed
 Latest Version=Dernière Version
 Multi Language Support=Prise en charge Multilingue
+Support Forum=
 ; as in more than 100000
 More than %s=Plus de %s
 Remove from Previous Apps=Supprimer des Apps précédentes
@@ -329,6 +332,14 @@ Setting installed applications to autostart=Configuration des applications insta
 Docker Application Installation finished=Installation de l'Application Docker terminée
 
 ; Application Cards
+This application is a driver plugin=This application is a driver (plugin)
+This is a language pack=
+This application is a docker container=
+This application is a plugin=
+This is a spotlight application=
+This is your favourite repository=
+This application is from your favourite repository=
+This application is pinned for later viewing=
 Private Application=Application privée
 Remove Application From List=Retirer l'Application de la liste
 Check off to select multiple reinstalls=Décocher pour sélectionner des réinstallations multiples
@@ -340,10 +351,17 @@ Click to install=Cliquez pour installer
 Click to go to the WebUI=Cliquez pour aller à l'interface Web
 This application template has been deprecated=Ce modèle d'application est obsolète
 This application template has been blacklisted=Ce modèle d'Apps a été mis sur liste noire
-; BETA translation.  HIGHLY recommended to not do any translation longer than 4 characters
+Click info to see the notes regarding this application=
+This application has additional requirements=Cette application a des exigences supplémentaires
 BETA=BETA 
-; INSTALLED translation  HIGHLY recommeneded to do keep the same length (Use html escaped spaces if necessary to pad)
 INSTALLED=INSTALLÉ
+OFFICIAL=
+This is an official container=
+Digitally Signed=
+This container is digitally signed=
+Docker Hub=
+NOTE You must visit the dockerHub page to gather the information required to install correctly=
+Show CA templates=
 
 Info=Info
 Attention=Attention
@@ -352,7 +370,7 @@ Why we picked it=Pourquoi nous l'avons choisi
 Application Spotlight %s=Applications en vedette %s=
 Unraid Staff=Équipe Unraid
 
-;Page Navigation
+; Page Navigation
 Displaying %s - %s of %s=Affichage %1$s - %2$s (de %3$s)
 
 Updating Content=Mise-à-jour du contenu
@@ -365,7 +383,11 @@ Update Language Pack=Mettre a jour le Module Linguistique
 Installed Version=Version Installée
 A note about translations=A propos des traductions
 Click here to view the language changelog=Cliquer ici pour voir le changelog de la langue
-View Missing Translations=Afficher les traductions manquantesAccess Mode=Mode d'accès
+View Missing Translations=Afficher les traductions manquantes
+
+; WebGui
+Click Install to download and install the Community Applications plugin=Click **Install** to download and install the **Community Applications** plugin
+Access Mode=Mode d'accès
 Add another Path, Port, Variable, Label or Device=Ajouter un Chemin, un Port, une Variable, une Étiquette, ou un Périphérique supplémentaire
 Add Configuration=Ajouter Configuration
 Add=Ajouter

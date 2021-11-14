@@ -8,15 +8,15 @@ Popup Blocked CA requires popups to be enabled under certain circumstances You m
 Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed=Docker-tjenesten er ikke aktivert - bare programtillegg er tilgjengelig for å bli installert eller administrert
 Community Applications works best when cookies are enabled in your browser Certain features may not be available=Samfunnsapplikasjoner fungerer best når informasjonskapsler er aktivert i nettleseren din. Visse funksjoner er kanskje ikke tilgjengelige
 Backup Server Active Some icons may not appear, and plugin installations may be affected=Backup Server aktiv. Noen ikoner vises kanskje ikke, og programtillegg-installasjoner kan påvirkes
+Debugging enabled This significantly increases the memory used by your browser=
 
 ; Sorting Options
-Sorting options=Sorteringsalternativer
-Sorting options unavailable=Sorteringsalternativer utillgjengelig
-Sort By Name Ascending=Sorter etter navn stigende
-Sort By Name Descending=Sorter etter navn synkende
-Sort By Downloads=Sorter etter Nedlastninger
-Sort By Trend=Sorter etter Trend
-Sort By Date Added=Sorter etter dato lagt til
+Sort By=
+Name Ascending=
+Name Descending=
+Downloads=
+Date Added=
+Number Of Apps=
 ; Initial disclaimer translations
 Disclaimer=ansvarsfraskrivelse
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=Alle applikasjoner som er oppført her, er tredjeparts tillegg til Unraid Verken forfatterne av Community Applications eller Limetech gir noen garanti for egnetheten til applikasjoner som er oppført her
@@ -36,24 +36,58 @@ Select all on page=Velg alt på siden
 
 ; Searches
 Search=Søk
-Please enter search term=Vennligst skriv inn søkeord
 Click Here To Get More Results From DockerHub=Klikk her for å få flere resultater fra Docker Hub
-No Matching Applications Found On Docker Hub=Ingen samsvarende applikasjoner funnet på Docker Hub
 No Matching Applications Found=Ingen samsvarende applikasjoner funnet
 
+; Repository Related
+%s removed as favourite repository=
+%s set as favourite repository=
+Click to remove favourite repository=
+Click to set %s as favourite repository=
+Search for apps in repository=
+No description present=
+Go to the forum page=
+Go to the webpage=
+Go to reddit=
+Go to facebook=
+Go to discord=
+Go to forum profile=
+Show Profile=
+SHOW MORE=
+SHOW LESS=
+Read more=
+Total Applications=
+Total Known Downloads=
+Total Docker Applications=
+Total Plugin Applications=
+Total Languages=
+Average Downloads Per App=
+Web Page=
+Forum=
+Forum Profile=
+Profile=
+Facebook=
+Reddit=
+Twitter=
+Discord=
+Search Apps=
+Registry=
+Details=
+Added=
 ; Install Plugin title of openbox
 Install Plugin=Installer programtillegg
+BACK=
 
 ; Remove App from previously installed
 Delete Template=Slett Mal
 Yes, delete it=Ja. Slett det
 
 ; Uninstall popup
-Uninstall Application=Avinstallere applikasjon
+Uninstall Application=Avinstallere Program
 Yes uninstall it=Ja. Slett det
 
 ; Remove Private Application
-Remove Private Application=Avinstallere applikasjon
+Remove Private Application=Fjern Privat Program
 Yes, remove it=Ja. Slett det
 
 ; App Pinning
@@ -87,25 +121,29 @@ Unknown error happened Please post a screenshot in the support thread of the Sta
 Something really wrong happened Reloading the Apps tab will probably fix the problem=Noe virkelig galt skjedde. Å laste inn app-fanen vil trolig løse problemet
 This plugin has a duplicated name from another plugin %s This will impact your ability to install both plugins simultaneously=Dette pluginet har et duplisert navn fra et annet plugin %s Dette vil påvirke muligheten din for å installere begge plugins samtidig
 You have been logged out=Du har blitt logget ut
+Fatal Flash Drive Error=
+This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=
+Fatal Docker Image Error=
+Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
 
 ; CA Sections Keep the length reasonable
-MENU=Meny
 Installed Apps=Installerte apper
 Previous Apps=Tidligere apper
 Pinned Apps=Festede apper
-CATEGORIES=Kategorier
-New Apps=Nye Apper
+Favourite Repo=
+Recently Added=
 Updated Apps=Oppdaterte apper
 Random Apps=Tilfeldige apper
 Top New Installs=Topp nye installasjoner
-Trending Apps=Populære apper
+Top Trending Apps=
+Spotlight Apps=
 All Apps=Alle apper
-OTHER=Diverse
 Statistics=Statistikk
 Credits=Bidragsytere
 Support=Støtte
 VERSION=VERSJON
 Change Log=Endringslogg
+Debugging=
 
 ; Credits
 Development=Utviklere 
@@ -119,31 +157,24 @@ Copyright=Opphavsrett
 Translation=Oversettelse
 
 ; Statistics page
-Deprecated Applications are able to still be installed if you have previously had them installed New installations of these applications are blocked unless you enable Display Deprecated Applications within CAs General Settings=Utfasede applikasjoner kan fortsatt installeres hvis du tidligere har hatt dem installert Nye installasjoner av disse applikasjonene er blokkert med mindre du aktiverer Vis utdaterte applikasjoner i CAs Generelle innstillinger
-The following applications are blacklisted CA will never allow you to install or reinstall these applications=Følgende applikasjoner er svartelistet, CA vil aldri tillate deg å installere eller installere disse programmene på nytt
-While highly not recommended to do, incompatible applications can be installed by enabling Display Incompatible Applications within CAs General Settings=Selv om det ikke anbefales å gjøre det, kan inkompatible applikasjoner installeres ved å aktivere skjermkompatible applikasjoner i CAs Generelle innstillinger
-This display is informational ONLY=Denne skjermbilde er KUN informativt
+
 unknown=ukjent
 Last Change To Application Feed=Siste endring i applikasjonsstrøm
-Number Of Docker Applications=Antall Docker-applikasjoner
-Number Of Plugin Applications=Antall Programvaretillegg
-Number Of Templates=Antall Maler
-Number Of Repositories=Antall arkiver
-Number Of Private Docker Applications=Antall private Docker-applikasjoner
-Number Of Invalid Templates=Antall ugyldige maler
-Number Of Template Errors=Antall maler med feil
-Number Of Blacklisted Apps=Antall apper på svartelisten
-Number Of Incompatible Applications=Antall inkompatible applikasjoner
-Number Of Deprecated Applications=Antall utdaterte applikasjoner
-Number Of Moderation Entries=Antall moderasjonsoppføringer
+Docker Applications=
+Plugin Applications=
+Templates=
+Official Containers=
+Repositories=
+Private Docker Applications=
+Invalid Templates=
+Template Errors=Malfeil
+Blacklisted Apps=
+Incompatible Applications=
+Deprecated Applications=
+Moderation Entries=
 Primary Server=Primær server
 Backup Server=
-
-; Statistics Popup Titles
-Repository List=Datalagerliste
-All Invalid Templates Found=Alle ugyldige maler funnet
-Template Errors=Malfeil
-All Moderation Entries=Alle moderasjonsoppføringer
+Installs not allowed from this page=
 
 ; Statistics Popup
 No invalid templates found=Fant ingen ugyldige maler
@@ -162,11 +193,19 @@ Individual Application Moderation=Individuell applikasjons moderering
 ; Misc
 Community Applications Changelog=Samfunnsapplikasjonens Endringslogg
 
+Each month we highlight some of the amazing work from our community=
+Check out these newly added applications from our awesome community=
+Check out these up and coming apps=
+These apps have the highest percentage of new installs=
+An assortment of randomly chosen apps=
+
 ; Categories try not to be excessively long This is displayed on the left of CA screen
 
 Backup=
 Cloud=Skytjenester
+Crypto Currency=
 Downloaders=Nedlastere
+Drivers=
 Game Servers=Spillservere
 Home Automation=Hjemme automatisering
 Media Applications=Media applikasjoner
@@ -187,7 +226,9 @@ VPN=
 Web=
 Productivity=Productivitet
 Security=Sikkerhet
+Spotlight=
 Tools Utilities=Verktøy
+System=
 Themes=Utseende
 Utilities=Verktøy
 Private Apps=Private applikasjoner
@@ -220,24 +261,28 @@ NetworkOther=Nettverk:Other
 ToolsSystem=Verktøy:System
 ToolsThemes=Verktøy:Themes
 ToolsUtilities=Verktøy:Utilities
-Other=Andre
 OtherUncategorized=Andre:Ukategorisert
+and %s more=
 
 ; App Popup Related
+This application template has been blacklisted=Denne applikasjonsmalen er svartelistet
+This application template has been deprecated=Denne applikasjonsmalen er avviklet
+This application has additional requirements=
+Additional Requirements=
 Donate To Author=Donèr til Forfatter
 Donate To Maintainer=Donèr til Vedlikeholder
+CLOSE=
 Author=Forfatter
 Maintainer=Vedlikeholder
 DockerHub=
 Application Template=Applkasjonsmal
-Base OS=
 DockerHub Stars=DockerHub Stjerner
 Added to CA=Lagt til i CA
 Date Updated=Dato Oppdatert
 Current Version=Nåværende Versjon
-Minimum OS=Minstekrav Operativ System
+Min OS=
 Max OS=Maks Operativ System tillatt
-Total Downloads=Totalt antall nedlastninger
+Total Downloads=Antall nedlastninger
 Licence=Lisens
 30 Day Trend=30 Dagers trend
 Ranked #%s=
@@ -245,15 +290,17 @@ Ranked #%s=
 Trending %s=
 ; as in As of some date
 As of %s=(As of %s)
-This application template has been blacklisted=Denne applikasjonsmalen er svartelistet
-This application template has been deprecated=Denne applikasjonsmalen er avviklet
+Show Charts=
+Hide Charts=
 This application is not compatible with your version of Unraid=Denne applikasjonen er ikke kompatibel med din versjon av Unraid
 Another browser tab or device has updated the displayed templates Some actions are not available=En annen nettleserfane eller enhet har oppdatert malene som vises. Noen handlinger er ikke tilgjengelige
-Reinstall default=Installer standard
 WebUI=Nettlesergrensesnitt
 Reinstall=Reinstaller
+Reinstall From Previous Apps=
 Install=Installer
 Project=Prosjekt
+Read Me First=
+Install second instance=
 Install Using The Templates Default Tag=Installer ved hjelp av Siste versjonsmerke 
 Moderator Comments=Moderatorkommentarer:
 Note not all authors keep up to date on change logs=Merk at ikke alle forfattere holder seg oppdatert på endringslogger
@@ -265,13 +312,17 @@ Install The Update=Installer oppdatering
 ; as in you have the latest version already installed
 Latest Version=Siste versjon
 Multi Language Support=Fler språkstøtte 
+Support Forum=
 ; as in more than 100000
 More than %s=Mer enn
+Remove from Previous Apps=
+See All Apps=
+Favourite=
+Application Type=
 
 ; Graphs
 Trend Per Month=Trend Per Måned
 Downloads Per Month=Nedlastninger Per Måned
-Total Downloads=Antall nedlastninger
 
 ; Multi install script
 Installing docker applications %s=Installerer docker-applikasjoner %s
@@ -281,11 +332,15 @@ Setting installed applications to autostart=Angi installerte applikasjoner til a
 Docker Application Installation finished=Installasjonen av Docker-applikasjonen er fullført
 
 ; Application Cards
-Private dockerHub Conversion=Privat (dockerHub Konvertering)
-Go to the project page=Gå til prosjekt siden
-Go to the support thread=Gå til støttetråden
-Uninstall Application=Avinstallere Program
-Remove Private Application=Fjern Privat Program
+This application is a driver plugin=This application is a driver (plugin)
+This is a language pack=
+This application is a docker container=
+This application is a plugin=
+This is a spotlight application=
+This is your favourite repository=
+This application is from your favourite repository=
+This application is pinned for later viewing=
+Private Application=
 Remove Application From List=Fjern Applkasjon fra listen
 Check off to select multiple reinstalls=Kryss av for å velge flere installasjoner på nytt
 Go to the plugin settings=Gå til programtilleggs innstillinger
@@ -293,18 +348,27 @@ Click to reinstall the application using default values=Klikk for å installere 
 Click to edit the application values=Klikk for å redigere programverdiene
 Click to reinstall=Klikk for å installere på nytt
 Click to install=Klikk for å installere
-Install plugin=Installer Programvaretillegg
 Click to go to the WebUI=Klikk for å gå til Nettlesergrensesnitt
-This application has been marked as being Beta=Denne applikasjonen er merket som BETA versjon
 This application template has been deprecated=Denne applikasjonsmalen er avviklet
-This application is not compatible with your version of Unraid=Denne applikasjonen er ikke kompatibel med din versjon av Unraid
 This application template has been blacklisted=Denne applikasjonsmalen er svartelistet
-Search for more applications from %s=Søk etter flere applikasjoner fra %s
-Click for more information=Klikk for mer informasjon
+Click info to see the notes regarding this application=
+This application has additional requirements=
+BETA= 
+INSTALLED=
+OFFICIAL=
+This is an official container=
+Digitally Signed=
+This container is digitally signed=
+Docker Hub=
+NOTE You must visit the dockerHub page to gather the information required to install correctly=
+Show CA templates=
 
-; Dockerhub searches
-Search For Containers From %s=Søk etter containere fra %s
-Search for similar containers=Søk etter lignende containere 
+Info=
+Attention=
+Repository=
+Why we picked it=
+Application Spotlight %s=
+Unraid Staff=
 
 ; Page Navigation
 Displaying %s - %s of %s=Viser %1$s - %2$s (av %3$s)
@@ -319,23 +383,10 @@ Update Language Pack=Oppdater Språkpakke
 Installed Version=Installert versjon
 A note about translations=Merknad om Oversettelser
 Click here to view the language changelog=Klikk her for å se språkpakkens endringslogg
+View Missing Translations=
 
-; Help Text
-This chooses how to sort the results=Dette velger hvordan resultatene skal sorteres
-These icons respectively will Install or Edit an application=Disse ikonene vil henholdsvis installere eller redigere et program
-Clicking these icons will take you to an applications GUI or settings=Hvis du klikker på disse ikonene, kommer du til en applikasjons-GUI eller innstillinger
-This will update an application=Dette vil oppdatere et program
-This will take you to the appropriate support thread for an application=Dette tar deg til riktig støttetråd for en applikasjon
-This will immediately switch to the language=Dette bytter umiddelbart til språket
-This will take you to the project page for an application=Dette fører deg til prosjektsiden for en applikasjon
-Clicking this icon will uninstall the application or delete it from the lists depending upon your current section=Ved å klikke på dette ikonet avinstalleres applikasjonen eller slettes fra listene, avhengig av din nåværende seksjon
-Clicking these icons will pin or unpin an application for later viewer from the Pinned Apps section=Hvis du klikker på disse ikonene, festes eller løsnes et program for senere visning fra Festede Applkasjons-delen
-Clicking this will display more information about the application NOTE You can also click on the applications icon to display more information=Ved å klikke på dette vises mer informasjon om applikasjonen. MERKNAD Du kan også klikke på applikasjonsikonet for å vise mer informasjon
-Clicking this will display any warnings or extra comments about the application=Hvis du klikker på dette, vises advarsler eller ekstra kommentarer om applikasjonen
-On the previous apps section you can select multiple applications to install simultaneously=I den forrige appdelen kan du velge flere applikasjoner som skal installeres samtidig
-This is the recommended version to install by the application author themselves=Dette er den anbefalte versjonen å installere av programforfatteren selv
-For support for this plugin visit=For støtte for dette pluginet besøk
-To view the policies Community Applications has=For å se retningslinjene Community Applications har
+; WebGui
+Click Install to download and install the Community Applications plugin=Click **Install** to download and install the **Community Applications** plugin
 Access Mode=Tilgangsmodus
 Add another Path, Port, Variable, Label or Device=Legg til Sti, Port, Variabel, Merkelapp eller Enhet
 Add Configuration=Legg til konfigurasjon
