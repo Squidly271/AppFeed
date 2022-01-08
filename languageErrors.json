@@ -581,6 +581,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Favourite Repo",
                 "Recently Added",
                 "Top Trending Apps",
@@ -620,6 +621,7 @@
                 "See All Apps",
                 "Favourite",
                 "Application Type",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -694,13 +696,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ],
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ]
-        }
+        ]
     },
     "de_DE - German / Deutsch": {
         "missing": {
@@ -747,6 +743,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Favourite Repo",
                 "Recently Added",
                 "Top Trending Apps",
@@ -782,6 +779,7 @@
                 "Read Me First",
                 "Install second instance",
                 "Remove from Previous Apps",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -979,35 +977,64 @@
                 "If you set the 'Power Save' CPU Governor, you may see your processors stuck at 800 MHz",
                 "It is recommended you use the 'Performance' Governor for best performance and power savings"
             ],
+            "Unassigned Devices/editsettings.txt": [
+                "Click the 'Default' button to select the default Device Script File",
+                "Default",
+                "Delete Device Script File",
+                "Edit Device Script",
+                "Enter Device Script File Name",
+                "Enter and Edit the Device Script that runs when a udev or operator event occurs",
+                "Enter the User Script that will be using this device",
+                "Load the default Device Script",
+                "Delete Device Script File",
+                "Run in background",
+                "Mount Device Read only",
+                "Mount Device when Plugged in or Array is Started",
+                "Mount ISO File when Array is Started",
+                "Mount Remote SMB or NFS Share when Array is Started",
+                "Run Device Script File in the background",
+                "Save your Device Script File changes",
+                "Save",
+                "Script content",
+                "Share Device with SMB and NFS",
+                "Share Remote Mount with SMB and NFS",
+                "Mark this Device as passed through to a VM or Docker",
+                "Unassigned Devices Settings",
+                "Undo your changes since last Save",
+                "Volume"
+            ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Disk spin down is managed by Unraid",
+                "Enter Pool Mount Point",
                 "Legacy Mount Point Compatibility",
                 "NFS must be enabled in Settings->NFS to enable NFS Export",
                 "NFS Version to use when Mounting Remote Shares",
+                "Set Pool Mount Point",
+                "Set the Pool Mount Point for this disk",
                 "Specify SMB Version when Mounting Remote Shares",
-                "Unraid 6.10 is required for NFSv4 support"
+                "Unraid 6.10 or later is required for NFSv4 support",
+                "Use only when directed for support"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Add Remote SMB",
-                "NFS Share",
                 "Browse Remote SMB",
-                "NFS Share",
                 "Change Disk Mount Point",
                 "Change ISO File Mount Point",
                 "Change SMB",
-                "NFS Mount Point",
                 "Changing the Mount Point will also change the disk label",
                 "Click to view/hide partitions and mount points",
                 "Disks",
                 "Disk Label",
                 "Do NOT use a remote share local mount in a Docker container or VM for critical data",
                 "Edit Remote SMB",
-                "NFS Script",
                 "File System Scrub",
                 "ISO File is",
                 "Loading",
-                "No Remote SMB",
+                "NFS Mount Point",
                 "NFS or ISO File Shares configured",
+                "NFS Script",
+                "NFS Share",
+                "No Remote SMB",
                 "not installed",
                 "You must enable NFS in Settings->NFS to mount NFS shares",
                 "You must enable SMB in Settings->SMB to mount SMB shares",
@@ -1015,7 +1042,6 @@
                 "Remote Share is",
                 "Remote share mounts are dependent on a solid and reliable network connection and that is difficult to achieve",
                 "Remove Remote SMB",
-                "NFS Share",
                 "Shares",
                 "SSD cannot be spun down",
                 "Show Historical Devices",
@@ -1027,23 +1053,7 @@
                 "You must enable SMB in Settings->SMB to mount SMB shares",
                 "You must enable the Destructive Mode in UD Settings before you can Format this disk",
                 "WARNING",
-                "You WILL have problems if you do"
-            ]
-        },
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ],
-            "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Enter Pool Mount Point",
-                "Set Pool Mount Point",
-                "Set the Pool Mount Point for this disk",
-                "Unraid 6.10 or later is required for NFSv4 support",
-                "Use only when directed for support",
-                "> **Note:** The normal rule used by UD is '*(sec"
-            ],
-            "/Unassigned Devices/unassigneddevices.txt": [
+                "You WILL have problems if you do",
                 "You will need to enter credentials for Windows shares just to list them"
             ]
         },
@@ -1061,9 +1071,13 @@
             "/Dynamix System Info/systemprofiler.txt",
             "/Dynamix System Stats/statsettings.txt",
             "/Dynamix System Stats/stats.txt",
-            "/Dynamix System Temp/tempsettings.txt",
-            "/Unassigned Devices/editsettings.txt"
-        ]
+            "/Dynamix System Temp/tempsettings.txt"
+        ],
+        "new": {
+            "/Unassigned Devices/unassigneddevicessettings.txt": [
+                "> **Note:** The normal rule used by UD is '*(sec"
+            ]
+        }
     },
     "es_ES - Spanish / Espa\u00f1ol": {
         "missing": {
@@ -1471,6 +1485,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Favourite Repo",
                 "Recently Added",
                 "Top Trending Apps",
@@ -1510,6 +1525,7 @@
                 "See All Apps",
                 "Favourite",
                 "Application Type",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -1643,19 +1659,31 @@
                 "Driver",
                 "Governor"
             ],
-            "Unassigned Devices/editscript.txt": [
-                "Default Script",
-                "Edit Script",
-                "Enter Script File Name",
-                "Enter and Edit the Script that runs when a udev or operator event occurs",
-                "Load the default script",
-                "Remove Script File",
+            "Unassigned Devices/editsettings.txt": [
+                "Click the 'Default' button to select the default Device Script File",
+                "Default",
+                "Delete Device Script File",
+                "Edit Device Script",
+                "Enter Device Script File Name",
+                "Enter and Edit the Device Script that runs when a udev or operator event occurs",
+                "Enter the User Script that will be using this device",
+                "Load the default Device Script",
+                "Delete Device Script File",
                 "Run in background",
-                "Save your changes and save to Script File",
+                "Mount Device Read only",
+                "Mount Device when Plugged in or Array is Started",
+                "Mount ISO File when Array is Started",
+                "Mount Remote SMB or NFS Share when Array is Started",
+                "Run Device Script File in the background",
+                "Save your Device Script File changes",
                 "Save",
                 "Script content",
-                "Turn on to run Script File in the background",
-                "Undo your changes since last Save"
+                "Share Device with SMB and NFS",
+                "Share Remote Mount with SMB and NFS",
+                "Mark this Device as passed through to a VM or Docker",
+                "Unassigned Devices Settings",
+                "Undo your changes since last Save",
+                "Volume"
             ],
             "Unassigned Devices/scriptlog.txt": [
                 "Script Log"
@@ -1673,6 +1701,7 @@
                 "Enable NFS export",
                 "Enable SMB Security",
                 "Enter Disk Password",
+                "Enter Pool Mount Point",
                 "Legacy Mount Point Compatibility",
                 "Mount SSDs with discard option",
                 "NFS Security",
@@ -1681,22 +1710,23 @@
                 "NFS Version to use when Mounting Remote Shares",
                 "Rule",
                 "SMB Security",
-                "Select Disk to change UUID",
                 "Select Disk",
                 "Set Encrypted Disk Password",
                 "Set Password",
+                "Set Pool Mount Point",
+                "Set the Pool Mount Point for this disk",
                 "Set the disk Password",
                 "Specify SMB Version when Mounting Remote Shares",
                 "Spin down disks",
                 "The Unassigned Devices Plus plugin must be installed to enable Destructive Mode",
                 "to SMB share config",
                 "Unassigned Devices",
-                "Unraid 6.10 is required for NFSv4 support"
+                "Unraid 6.10 or later is required for NFSv4 support",
+                "Use only when directed for support"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Add ISO File Share",
                 "Add Remote SMB",
-                "NFS Share",
                 "An XFS or BTRFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
                 "Any data on this disk will be lost",
                 "Are you sure",
@@ -1705,7 +1735,6 @@
                 "Browse Disk Share",
                 "Browse ISO File Share",
                 "Browse Remote SMB",
-                "NFS Share",
                 "Choose File System Format",
                 "Choose ISO File",
                 "Choose Server",
@@ -1714,7 +1743,6 @@
                 "Change Disk Mount Point",
                 "Change ISO File Mount Point",
                 "Change SMB",
-                "NFS Mount Point",
                 "Changing the Mount Point will also change the disk label",
                 "Click to select ISO file",
                 "Click to view/hide partitions and mount points",
@@ -1727,7 +1755,6 @@
                 "Edit Device Script",
                 "Edit ISO File Script",
                 "Edit Remote SMB",
-                "NFS Script",
                 "Enter the Domain for the share if on a Domain",
                 "Enter the Password if the share is password protected",
                 "Enter the Username if the share is password protected",
@@ -1752,10 +1779,13 @@
                 "Log",
                 "Mount",
                 "Mounting",
+                "NFS Mount Point",
+                "NFS or ISO File Shares configured",
+                "NFS Script",
+                "NFS Share",
                 "NFS Shares",
                 "Next",
                 "No Remote SMB",
-                "NFS or ISO File Shares configured",
                 "No Unassigned Disks available",
                 "not installed",
                 "Note",
@@ -1774,12 +1804,10 @@
                 "Remove ISO File Share",
                 "Remove Partition",
                 "Remove Remote SMB",
-                "NFS Share",
                 "Remove partition",
                 "Run with CORRECT flag",
                 "Running",
                 "Shares",
-                "SMB Shares",
                 "Script",
                 "Search For Servers",
                 "Search for Servers, or enter the Server nameIP address manually",
@@ -1788,6 +1816,7 @@
                 "Serial Number Mountpoint",
                 "share for",
                 "Simple",
+                "SMB Shares",
                 "Source",
                 "SSD cannot be spun down",
                 "Success",
@@ -1813,23 +1842,6 @@
                 "You must enable the Destructive Mode in UD Settings before you can Format this disk",
                 "WARNING",
                 "You WILL have problems if you do",
-                "You will need to enter credentials for Windows 10 shares just to list them"
-            ]
-        },
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ],
-            "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Enter Pool Mount Point",
-                "Set Pool Mount Point",
-                "Set the Pool Mount Point for this disk",
-                "Unraid 6.10 or later is required for NFSv4 support",
-                "Use only when directed for support",
-                "> **Note:** The normal rule used by UD is '*(sec"
-            ],
-            "/Unassigned Devices/unassigneddevices.txt": [
                 "You will need to enter credentials for Windows shares just to list them"
             ]
         },
@@ -1848,9 +1860,13 @@
             "/Dynamix System Stats/statsettings.txt",
             "/Dynamix System Stats/stats.txt",
             "/Dynamix System Temp/tempsettings.txt",
-            "/Parity Check Tuning/paritychecktuning.txt",
-            "/Unassigned Devices/editsettings.txt"
-        ]
+            "/Parity Check Tuning/paritychecktuning.txt"
+        ],
+        "new": {
+            "/Unassigned Devices/unassigneddevicessettings.txt": [
+                "> **Note:** The normal rule used by UD is '*(sec"
+            ]
+        }
     },
     "fr_FR - French / Fran\u00e7ais": {
         "missing": {
@@ -1902,10 +1918,12 @@
             "Community Apps/apps.txt": [
                 "%s removed as favourite repository",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Official Containers",
                 "This application is not compatible with your version of Unraid",
                 "Reinstall From Previous Apps",
                 "Support Forum",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -1964,53 +1982,38 @@
                 "Load the default Device Script",
                 "Delete Device Script File",
                 "Run Device Script File in the background",
-                "Save your Device Script File changes",
-                "<?endif;?>"
+                "Save your Device Script File changes"
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
+                "Enter Pool Mount Point",
                 "NFS must be enabled in Settings->NFS to enable NFS Export",
                 "NFS Version to use when Mounting Remote Shares",
-                "Unraid 6.10 is required for NFSv4 support"
+                "Set Pool Mount Point",
+                "Set the Pool Mount Point for this disk",
+                "Unraid 6.10 or later is required for NFSv4 support",
+                "Use only when directed for support"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Add Remote SMB",
-                "NFS Share",
                 "Browse Remote SMB",
-                "NFS Share",
                 "Change SMB",
-                "NFS Mount Point",
                 "Disk Label",
                 "Do NOT use a remote share local mount in a Docker container or VM for critical data",
                 "Edit Remote SMB",
-                "NFS Script",
                 "File System Scrub",
-                "No Remote SMB",
+                "NFS Mount Point",
                 "NFS or ISO File Shares configured",
+                "NFS Script",
+                "NFS Share",
+                "No Remote SMB",
                 "You must enable NFS in Settings->NFS to mount NFS shares",
                 "You must enable SMB in Settings->SMB to mount SMB shares",
                 "Remove Remote SMB",
-                "NFS Share",
                 "View Remote SMB",
                 "NFS Script Log",
                 "You must enable NFS in Settings->NFS to mount NFS shares",
                 "You must enable SMB in Settings->SMB to mount SMB shares",
-                "WARNING"
-            ]
-        },
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ],
-            "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Enter Pool Mount Point",
-                "Set Pool Mount Point",
-                "Set the Pool Mount Point for this disk",
-                "Unraid 6.10 or later is required for NFSv4 support",
-                "Use only when directed for support",
-                "> **Note:** The normal rule used by UD is '*(sec"
-            ],
-            "/Unassigned Devices/unassigneddevices.txt": [
+                "WARNING",
                 "You will need to enter credentials for Windows shares just to list them"
             ]
         },
@@ -2023,7 +2026,12 @@
             "/Dynamix System Temp/tempsettings.txt",
             "/Recycle Bin/recyclebin.txt",
             "/Tips and Tweaks/tipsandtweaks.txt"
-        ]
+        ],
+        "new": {
+            "/Unassigned Devices/unassigneddevicessettings.txt": [
+                "> **Note:** The normal rule used by UD is '*(sec"
+            ]
+        }
     },
     "it_IT - Italian / Italiano": {
         "missing": {
@@ -3460,6 +3468,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Installed Apps",
                 "Previous Apps",
                 "Pinned Apps",
@@ -3607,6 +3616,7 @@
                 "%s failed to start You should install it by itself to fix the errors",
                 "Setting installed applications to autostart",
                 "Docker Application Installation finished",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -3726,13 +3736,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ],
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ]
-        }
+        ]
     },
     "ko_KO - Korean / \ud55c\uad6d\uc778": {
         "files": [
@@ -6061,6 +6065,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Installed Apps",
                 "Previous Apps",
                 "Pinned Apps",
@@ -6208,6 +6213,7 @@
                 "%s failed to start You should install it by itself to fix the errors",
                 "Setting installed applications to autostart",
                 "Docker Application Installation finished",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -6327,52 +6333,28 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ],
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ]
-        }
+        ]
     },
     "nl_NL - Dutch / Nederlands": {
         "missing": {
             "Unassigned Devices/unassigneddevices.txt": [
-                "not installed",
-                "You must enable NFS in Settings->NFS to mount NFS shares",
-                "You must enable SMB in Settings->SMB to mount SMB shares",
-                "Pass Thru",
-                "Refresh Disks and Configuration",
-                "Remote Share is",
-                "Remote share mounts are dependent on a solid and reliable network connection and that is difficult to achieve"
+                "Pass Thru"
             ]
         },
         "new": {
-            "/Community Apps/apps.txt": [
-                "Actions"
+            "/Dynamix Cache Dirs/folderchacingsettings.txt": [
+                "> Set cache_pressure to NN (default ",
+                "> to reset the cache-pressure execute 'sudo sysctl vm.vfs_cache_pressure",
+                "> set ulimit to NN to limit memory used by script (default"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ]
         },
         "files": [
-            "/Dynamix Active Streams/activestreams.txt",
-            "/Dynamix Auto Fan/fansettings.txt",
-            "/Dynamix Cache Dirs/folderchacingsettings.txt",
-            "/Dynamix Date Time/datetime.txt",
-            "/Dynamix Day Night/daynightssettings.txt",
-            "/Dynamix File Integrity/fileintegrity.txt",
-            "/Dynamix File Integrity/integrity.txt",
-            "/Dynamix Local Master/smb.txt",
             "/Dynamix S3 Sleep/sleepsettings.txt",
-            "/Dynamix SSD Trim/scheduler.txt",
-            "/Dynamix System Info/systemprofiler.txt",
-            "/Dynamix System Stats/statsettings.txt",
-            "/Dynamix System Stats/stats.txt",
-            "/Dynamix System Temp/tempsettings.txt",
             "/Enhanced Log/enhancedsyslogsettings.txt",
             "/Enhanced Log/enhancedsyslog.txt",
-            "/File Activity/fileactivity.txt",
             "/Hotplug USB/libvirthotplugusb.txt",
             "/Open Files/openfiles.txt",
             "/Parity Check Tuning/paritychecktuning.txt",
@@ -6913,6 +6895,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Favourite Repo",
                 "Recently Added",
                 "Top Trending Apps",
@@ -6968,6 +6951,7 @@
                 "See All Apps",
                 "Favourite",
                 "Application Type",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -7041,13 +7025,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ],
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ]
-        }
+        ]
     },
     "pl_PL - Polish / Polski": {
         "missing": {
@@ -7131,6 +7109,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Favourite Repo",
                 "Recently Added",
                 "Top Trending Apps",
@@ -7170,6 +7149,7 @@
                 "See All Apps",
                 "Favourite",
                 "Application Type",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -7231,38 +7211,40 @@
                 "Load the default Device Script",
                 "Delete Device Script File",
                 "Run Device Script File in the background",
-                "Save your Device Script File changes",
-                "<?endif;?>"
+                "Save your Device Script File changes"
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
+                "Enter Pool Mount Point",
                 "NFS must be enabled in Settings->NFS to enable NFS Export",
                 "NFS Version to use when Mounting Remote Shares",
-                "Unraid 6.10 is required for NFSv4 support"
+                "Set Pool Mount Point",
+                "Set the Pool Mount Point for this disk",
+                "Unraid 6.10 or later is required for NFSv4 support",
+                "Use only when directed for support"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Add Remote SMB",
-                "NFS Share",
                 "Browse Remote SMB",
-                "NFS Share",
                 "Change SMB",
-                "NFS Mount Point",
                 "Disk Label",
                 "Do NOT use a remote share local mount in a Docker container or VM for critical data",
                 "Edit Remote SMB",
-                "NFS Script",
                 "File System Scrub",
-                "No Remote SMB",
+                "NFS Mount Point",
                 "NFS or ISO File Shares configured",
+                "NFS Script",
+                "NFS Share",
+                "No Remote SMB",
                 "You must enable NFS in Settings->NFS to mount NFS shares",
                 "You must enable SMB in Settings->SMB to mount SMB shares",
                 "Remove Remote SMB",
-                "NFS Share",
                 "View Remote SMB",
                 "NFS Script Log",
                 "You must enable NFS in Settings->NFS to mount NFS shares",
                 "You must enable SMB in Settings->SMB to mount SMB shares",
                 "You must enable the Destructive Mode in UD Settings before you can Format this disk",
-                "WARNING"
+                "WARNING",
+                "You will need to enter credentials for Windows shares just to list them"
             ]
         },
         "files": [
@@ -7285,20 +7267,8 @@
             "/Tips and Tweaks/tipsandtweaks.txt"
         ],
         "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Enter Pool Mount Point",
-                "Set Pool Mount Point",
-                "Set the Pool Mount Point for this disk",
-                "Unraid 6.10 or later is required for NFSv4 support",
-                "Use only when directed for support",
                 "> **Note:** The normal rule used by UD is '*(sec"
-            ],
-            "/Unassigned Devices/unassigneddevices.txt": [
-                "You will need to enter credentials for Windows shares just to list them"
             ]
         }
     },
@@ -7938,6 +7908,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Favourite Repo",
                 "Recently Added",
                 "Top Trending Apps",
@@ -7977,6 +7948,7 @@
                 "See All Apps",
                 "Favourite",
                 "Application Type",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -8049,13 +8021,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ],
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ]
-        }
+        ]
     },
     "sv_SE - Swedish / Svenska": {
         "missing": {
@@ -9957,6 +9923,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Installed Apps",
                 "Previous Apps",
                 "Pinned Apps",
@@ -10104,6 +10071,7 @@
                 "%s failed to start You should install it by itself to fix the errors",
                 "Setting installed applications to autostart",
                 "Docker Application Installation finished",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -10223,13 +10191,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ],
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ]
-        }
+        ]
     },
     "zh_CN - Simplified Chinese / \u7b80\u4f53\u4e2d\u6587": {
         "missing": {
@@ -10528,6 +10490,7 @@
                 "Fatal Docker Image Error",
                 "Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics",
                 "This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system",
+                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Debugging",
                 "Docker Applications",
                 "Plugin Applications",
@@ -10559,6 +10522,7 @@
                 "Remove from Previous Apps",
                 "See All Apps",
                 "Favourite",
+                "Actions",
                 "This is a language pack",
                 "This application is a docker container",
                 "This application is a plugin",
@@ -10600,32 +10564,7 @@
                 "Enable developer mode",
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ],
-            "Dynamix System Temp/tempsettings.txt": [
-                "No drivers detected"
-            ],
-            "Recycle Bin/recyclebin.txt": [
-                "Array",
-                "Array is stopped",
-                "Browse the Share Recycle Bin",
-                "Empty the",
-                "Recycle Bin Log",
-                "Refresh the Recycle Bin page",
-                "Remove aged files from the Recycle Bin",
-                "Remove all files from the Recycle Bin",
-                "Restart the Recycle Bin",
-                "SMB Share",
-                "Start the Recycle Bin",
-                "Starting and stopping the Recycle Bin can cause SMB shares to go offline for a short period",
-                "Stop the Recycle Bin",
-                "These actions apply to all shares"
-            ]
-        },
-        "new": {
-            "/Community Apps/apps.txt": [
-                "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
-                "Actions"
-            ],
-            "/Dynamix System Stats/statsettings.txt": [
+            "Dynamix System Stats/statsettings.txt": [
                 "30 seconds",
                 "1 minute",
                 "2 minutes",
@@ -10647,6 +10586,25 @@
                 "Since start",
                 "Storage",
                 "System Stats"
+            ],
+            "Dynamix System Temp/tempsettings.txt": [
+                "No drivers detected"
+            ],
+            "Recycle Bin/recyclebin.txt": [
+                "Array",
+                "Array is stopped",
+                "Browse the Share Recycle Bin",
+                "Empty the",
+                "Recycle Bin Log",
+                "Refresh the Recycle Bin page",
+                "Remove aged files from the Recycle Bin",
+                "Remove all files from the Recycle Bin",
+                "Restart the Recycle Bin",
+                "SMB Share",
+                "Start the Recycle Bin",
+                "Starting and stopping the Recycle Bin can cause SMB shares to go offline for a short period",
+                "Stop the Recycle Bin",
+                "These actions apply to all shares"
             ]
         },
         "files": [
