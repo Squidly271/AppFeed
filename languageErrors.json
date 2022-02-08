@@ -33,10 +33,13 @@
                 "Container Device"
             ],
             "/main.txt": [
+                "Action",
                 "auto",
                 "completed",
                 "Convert to raid1c3 mode",
                 "Convert to raid1c4 mode",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "Enable user share assignment",
                 "enter disk index and device name as applicable to your controller",
                 "Erase Device Content",
@@ -44,15 +47,34 @@
                 "Flash device is set as public share",
                 "Invalid, missing or expired",
                 "next device",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "Please change share SMB security",
                 "previous device",
                 "See %s Settings",
                 "SMART controller type",
                 "SMART notification tolerance level",
                 "SMART self-test in progress",
+                "Started, clearing",
+                "Started, copying",
                 "This will ERASE ALL device content",
                 "This will ERASE content of ALL devices in the pool",
                 "Unassigned Devices",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -74,6 +96,8 @@
             ],
             "/settings.txt": [
                 "%s ago",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Activate",
                 "Activated",
                 "Activating",
@@ -100,6 +124,7 @@
                 "connect to any device on the VPN tunnel",
                 "connect to this server using IP address",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Data received",
                 "Data sent",
                 "Deactivate",
@@ -254,10 +279,7 @@
                 "WireGuard Configuration",
                 "xfs vDisk",
                 "Your server has been registered",
-                "Your Unraid Server is reachable from the internet",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "Your Unraid Server is reachable from the internet"
             ],
             "/tools.txt": [
                 "Array slots",
@@ -285,6 +307,8 @@
                 "complete",
                 "Confirm Password",
                 "Copying",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Docker",
                 "Docs",
                 "Erase",
@@ -296,6 +320,7 @@
                 "month",
                 "NFS",
                 "object",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -666,41 +691,6 @@
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -731,12 +721,40 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ]
+        }
     },
     "de_DE - German / Deutsch": {
         "missing": {
             "/main.txt": [
+                "Action",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "enter disk index and device name as applicable to your controller",
+                "Parity Operation History",
+                "Parity-Sync in progress",
+                "Started, clearing",
+                "Started, copying",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -746,7 +764,10 @@
                 "wiki entry"
             ],
             "/settings.txt": [
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Certificate subject",
+                "Cumulative parity check",
                 "DNS Propagation is PENDING",
                 "DNS Rebinding Protection is ENABLED",
                 "Docker custom network type",
@@ -754,10 +775,7 @@
                 "ipvlan",
                 "macvlan",
                 "No change to report",
-                "Terminal font size",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "Terminal font size"
             ],
             "/tools.txt": [
                 "Beta",
@@ -765,7 +783,10 @@
                 "Stable"
             ],
             "/translations.txt": [
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Keep server details anonymous",
+                "Parity-Sync",
                 "Have a USB flash device that already has an account associated with it"
             ],
             "Community Apps/apps.txt": [
@@ -1093,35 +1114,6 @@
             ]
         },
         "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
             "/Community Apps/apps.txt": [
                 "Last Update",
                 "Note All statistics are only gathered every 30 days"
@@ -1188,10 +1180,13 @@
                 "Container Device"
             ],
             "/main.txt": [
+                "Action",
                 "auto",
                 "completed",
                 "Convert to raid1c3 mode",
                 "Convert to raid1c4 mode",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "Enable user share assignment",
                 "enter disk index and device name as applicable to your controller",
                 "Erase Device Content",
@@ -1199,14 +1194,33 @@
                 "Flash device is set as public share",
                 "Invalid, missing or expired",
                 "next device",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "Please change share SMB security",
                 "previous device",
                 "See %s Settings",
                 "SMART controller type",
                 "SMART notification tolerance level",
                 "SMART self-test in progress",
+                "Started, clearing",
+                "Started, copying",
                 "This will ERASE ALL device content",
                 "This will ERASE content of ALL devices in the pool",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -1234,6 +1248,8 @@
             ],
             "/settings.txt": [
                 "%s ago",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Add Peer",
                 "Add Tunnel",
                 "Advanced",
@@ -1255,6 +1271,7 @@
                 "connect to any device on the VPN tunnel",
                 "connect to this server using IP address",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Data received",
                 "Data sent",
                 "Day, DD.MM.YYYY",
@@ -1395,10 +1412,7 @@
                 "VM manager",
                 "VPN tunneled access",
                 "WireGuard Configuration",
-                "xfs vDisk",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "xfs vDisk"
             ],
             "/tools.txt": [
                 "Array slots",
@@ -1424,6 +1438,8 @@
                 "Checking Wan IPs",
                 "complete",
                 "Copying",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Docker",
                 "Docs",
                 "Erase",
@@ -1433,6 +1449,7 @@
                 "Keep server details anonymous",
                 "Max password length is 128 characters",
                 "object",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -1921,35 +1938,6 @@
             ]
         },
         "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
             "/Community Apps/apps.txt": [
                 "Last Update",
                 "Note All statistics are only gathered every 30 days"
@@ -1995,6 +1983,28 @@
                 "Read Me First"
             ],
             "/main.txt": [
+                "Action",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
+                "Parity Operation History",
+                "Parity-Sync in progress",
+                "Started, clearing",
+                "Started, copying",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -2004,21 +2014,24 @@
                 "wiki entry"
             ],
             "/settings.txt": [
+                "Accumulation duration",
+                "Accumulation frequency",
+                "Cumulative parity check",
                 "Docker custom network type",
                 "FTP Server",
                 "ipvlan",
                 "macvlan",
                 "No change to report",
-                "Terminal font size",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "Terminal font size"
             ],
             "/translations.txt": [
                 "aborted",
                 "Anonymous Mode",
                 "Checking Wan IPs",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Keep server details anonymous",
+                "Parity-Sync",
                 "This will start your free 30-day Trial",
                 "Still working our magic",
                 "Switch Language",
@@ -2133,35 +2146,6 @@
             ]
         },
         "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
             "/Community Apps/apps.txt": [
                 "Last Update",
                 "Note All statistics are only gathered every 30 days"
@@ -2218,25 +2202,47 @@
                 "Container Device"
             ],
             "/main.txt": [
+                "Action",
                 "auto",
                 "completed",
                 "Convert to raid1c3 mode",
                 "Convert to raid1c4 mode",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "enter disk index and device name as applicable to your controller",
                 "Erase Device Content",
                 "Existing content is permanently lost",
                 "Flash device is set as public share",
                 "Invalid, missing or expired",
                 "next device",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "Please change share SMB security",
                 "previous device",
                 "See %s Settings",
                 "SMART controller type",
                 "SMART notification tolerance level",
                 "SMART self-test in progress",
+                "Started, clearing",
+                "Started, copying",
                 "The replacement disk must be as big or bigger than the original",
                 "This will ERASE ALL device content",
                 "This will ERASE content of ALL devices in the pool",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -2294,6 +2300,8 @@
                 "%s ago",
                 "12 hours",
                 "24 hours",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Activate",
                 "Activated",
                 "Activating",
@@ -2393,6 +2401,7 @@
                 "CPU Pinning VM",
                 "CPU Pinning",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Current date and time",
                 "Custom banner",
                 "Custom UPS cable",
@@ -2925,10 +2934,7 @@
                 "Your router or DNS server has DNS rebinding protection enabled, preventing",
                 "Your server has been registered",
                 "Your Unraid Server is reachable from the internet",
-                "YYYY-MM-DD",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "YYYY-MM-DD"
             ],
             "/shares.txt": [
                 "Add Share",
@@ -3139,6 +3145,8 @@
                 "complete",
                 "Confirm Password",
                 "Copying",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Docs",
                 "Erase",
                 "Force lower",
@@ -3150,6 +3158,7 @@
                 "month",
                 "NFS",
                 "object",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -3861,41 +3870,6 @@
                 "Are you sure you want to delete %s applications from the previously installed list"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -3926,7 +3900,13 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ]
+        }
     },
     "ko_KO - Korean / \ud55c\uad6d\uc778": {
         "files": [
@@ -4274,6 +4254,7 @@
             ],
             "/main.txt": [
                 "Aborted",
+                "Action",
                 "Add",
                 "Add Pool",
                 "All existing data on this device will be OVERWRITTEN when array is Started",
@@ -4321,6 +4302,7 @@
                 "Critical disk temperature threshold",
                 "Critical disk utilization threshold",
                 "Current position",
+                "Data-Rebuild in progress",
                 "Date of purchase",
                 "Date",
                 "Delete Pool",
@@ -4331,6 +4313,7 @@
                 "Device to be encrypted",
                 "Disk in parity slot is not biggest",
                 "Disk Log Information",
+                "Disk-Clear in progress",
                 "Do not use reserved names",
                 "Do not use user share names",
                 "Download SMART report",
@@ -4400,6 +4383,8 @@
                 "Parity is already valid",
                 "Parity operation is running",
                 "Parity-Check in progress",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "Partition format",
                 "Partition size",
                 "Passed",
@@ -4456,6 +4441,8 @@
                 "Spin Up",
                 "Started, array protected",
                 "Started, array unprotected",
+                "Started, clearing",
+                "Started, copying",
                 "Started, formatting",
                 "Starting",
                 "Stopping",
@@ -4500,15 +4487,30 @@
                 "will pause the Clearing",
                 "will pause the Parity-Check",
                 "will pause the Read-Check",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
                 "will record all disk information and bring the array on-line",
                 "will record all disk information, bring the array on-line, and start Parity-Sync",
                 "will remove the missing cache disk and then bring the array on-line",
                 "will resume the paused Clearing",
                 "will resume the paused Parity-Check",
                 "will resume the paused Read-Check",
-                "will stop Clearing",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
                 "will stop the Parity-Check",
                 "will stop the Read-Check",
+                "will stop Clearing",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "will take the array off-line",
                 "Worst",
                 "Write corrections to parity",
@@ -4573,6 +4575,8 @@
                 "%s ago",
                 "12 hours",
                 "24 hours",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Activate",
                 "Activated",
                 "Activating",
@@ -4672,6 +4676,7 @@
                 "CPU Pinning VM",
                 "CPU Pinning",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Current date and time",
                 "Custom banner",
                 "Custom UPS cable",
@@ -5204,10 +5209,7 @@
                 "Your router or DNS server has DNS rebinding protection enabled, preventing",
                 "Your server has been registered",
                 "Your Unraid Server is reachable from the internet",
-                "YYYY-MM-DD",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "YYYY-MM-DD"
             ],
             "/shares.txt": [
                 "Add Share",
@@ -5484,6 +5486,7 @@
                 "Copying",
                 "CPU",
                 "Dashboard",
+                "Data-Rebuild",
                 "day",
                 "days",
                 "Default",
@@ -5500,6 +5503,7 @@
                 "disabled",
                 "Disk",
                 "disk",
+                "Disk-Clear",
                 "Do you want to update to the new version",
                 "Docker",
                 "Docs",
@@ -5635,6 +5639,7 @@
                 "Parity",
                 "parity",
                 "Parity-Check",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -6493,41 +6498,6 @@
                 "Are you sure you want to delete %s applications from the previously installed list"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -6558,39 +6528,16 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ]
+        }
     },
     "nl_NL - Dutch / Nederlands": {
         "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
             "/Community Apps/apps.txt": [
                 "Last Update",
                 "Note All statistics are only gathered every 30 days"
@@ -6651,10 +6598,32 @@
                 "Container Device"
             ],
             "/main.txt": [
+                "Action",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "Enable user share assignment",
                 "enter disk index and device name as applicable to your controller",
                 "next device",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "previous device",
+                "Started, clearing",
+                "Started, copying",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -6675,6 +6644,8 @@
             ],
             "/settings.txt": [
                 "%s ago",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "active-backup",
                 "Add Peer",
                 "Add Tunnel",
@@ -6701,6 +6672,7 @@
                 "connect to this server using IP address",
                 "Correct file system errors",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Data received",
                 "Data sent",
                 "Delete Peer",
@@ -6852,10 +6824,7 @@
                 "VPN Manager",
                 "VPN tunneled access",
                 "Watts",
-                "WireGuard Configuration",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "WireGuard Configuration"
             ],
             "/shares.txt": [
                 "Automatically split only the top five directory levels as required",
@@ -6886,6 +6855,8 @@
                 "complete",
                 "Confirm Password",
                 "Copying",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Docker",
                 "Docs",
                 "Hide Password",
@@ -6895,6 +6866,7 @@
                 "month",
                 "NFS",
                 "object",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -7254,41 +7226,6 @@
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -7319,7 +7256,13 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ]
+        }
     },
     "pl_PL - Polish / Polski": {
         "missing": {
@@ -7331,6 +7274,28 @@
                 "Read Me First"
             ],
             "/main.txt": [
+                "Action",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
+                "Parity Operation History",
+                "Parity-Sync in progress",
+                "Started, clearing",
+                "Started, copying",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -7340,14 +7305,17 @@
                 "wiki entry"
             ],
             "/settings.txt": [
-                "No change to report",
-                "Terminal font size",
                 "Accumulation duration",
                 "Accumulation frequency",
-                "Cumulative parity check"
+                "Cumulative parity check",
+                "No change to report",
+                "Terminal font size"
             ],
             "/translations.txt": [
                 "Checking Wan IPs",
+                "Data-Rebuild",
+                "Disk-Clear",
+                "Parity-Sync",
                 "This will start your free 30-day Trial"
             ],
             "/vms.txt": [
@@ -7541,51 +7509,6 @@
                 "You will need to enter credentials for Windows shares just to list them"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ],
-            "/Unassigned Devices/editsettings.txt": [
-                "Device Script content",
-                "Disk Name"
-            ],
-            "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "> **Note:** The normal rule used by UD is '*(sec"
-            ],
-            "/Unassigned Devices/unassigneddevices.txt": [
-                "Device"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -7604,7 +7527,23 @@
             "/Hotplug USB/libvirthotplugusb.txt",
             "/Parity Check Tuning/paritychecktuning.txt",
             "/Tips and Tweaks/tipsandtweaks.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ],
+            "/Unassigned Devices/editsettings.txt": [
+                "Device Script content",
+                "Disk Name"
+            ],
+            "/Unassigned Devices/unassigneddevicessettings.txt": [
+                "> **Note:** The normal rule used by UD is '*(sec"
+            ],
+            "/Unassigned Devices/unassigneddevices.txt": [
+                "Device"
+            ]
+        }
     },
     "pt_BR - Brazilian Portuguese / Portugu\u00eas do Brasil": {
         "files": [
@@ -7689,10 +7628,13 @@
                 "Container Device"
             ],
             "/main.txt": [
+                "Action",
                 "auto",
                 "completed",
                 "Convert to raid1c3 mode",
                 "Convert to raid1c4 mode",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "Enable user share assignment",
                 "enter disk index and device name as applicable to your controller",
                 "Erase Device Content",
@@ -7700,15 +7642,34 @@
                 "Flash device is set as public share",
                 "Invalid, missing or expired",
                 "next device",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "Please change share SMB security",
                 "previous device",
                 "See %s Settings",
                 "SMART controller type",
                 "SMART notification tolerance level",
                 "SMART self-test in progress",
+                "Started, clearing",
+                "Started, copying",
                 "This will ERASE ALL device content",
                 "This will ERASE content of ALL devices in the pool",
                 "Unassigned Devices",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -7736,6 +7697,8 @@
             ],
             "/settings.txt": [
                 "%s ago",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Activate",
                 "Activated",
                 "Activating",
@@ -7764,6 +7727,7 @@
                 "connect to any device on the VPN tunnel",
                 "connect to this server using IP address",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Data received",
                 "Data sent",
                 "Deactivate",
@@ -7918,10 +7882,7 @@
                 "WireGuard Configuration",
                 "xfs vDisk",
                 "Your server has been registered",
-                "Your Unraid Server is reachable from the internet",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "Your Unraid Server is reachable from the internet"
             ],
             "/tools.txt": [
                 "Array slots",
@@ -7949,6 +7910,8 @@
                 "complete",
                 "Confirm Password",
                 "Copying",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Docs",
                 "Erase",
                 "Hide Password",
@@ -7958,6 +7921,7 @@
                 "month",
                 "NFS",
                 "object",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -8325,41 +8289,6 @@
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -8390,7 +8319,13 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ]
+        }
     },
     "sv_SE - Swedish / Svenska": {
         "missing": {
@@ -8491,6 +8426,7 @@
             ],
             "/main.txt": [
                 "Aborted",
+                "Action",
                 "Array Operation",
                 "auto",
                 "Balance Status",
@@ -8510,9 +8446,11 @@
                 "Convert to raid1c3 mode",
                 "Convert to raid1c4 mode",
                 "Creation error",
+                "Data-Rebuild in progress",
                 "detected",
                 "Disk in parity slot is not biggest",
                 "Disk Log Information",
+                "Disk-Clear in progress",
                 "Do not use user share names",
                 "Enable user share assignment",
                 "enter disk index and device name as applicable to your controller",
@@ -8539,6 +8477,8 @@
                 "Parity is already valid",
                 "Parity operation is running",
                 "Parity-Check in progress",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "Partition format",
                 "Partition size",
                 "Passed",
@@ -8595,6 +8535,8 @@
                 "Spin Up",
                 "Started, array protected",
                 "Started, array unprotected",
+                "Started, clearing",
+                "Started, copying",
                 "Started, formatting",
                 "Starting",
                 "Stopping",
@@ -8639,15 +8581,30 @@
                 "will pause the Clearing",
                 "will pause the Parity-Check",
                 "will pause the Read-Check",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
                 "will record all disk information and bring the array on-line",
                 "will record all disk information, bring the array on-line, and start Parity-Sync",
                 "will remove the missing cache disk and then bring the array on-line",
                 "will resume the paused Clearing",
                 "will resume the paused Parity-Check",
                 "will resume the paused Read-Check",
-                "will stop Clearing",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
                 "will stop the Parity-Check",
                 "will stop the Read-Check",
+                "will stop Clearing",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "will take the array off-line",
                 "Worst",
                 "Write corrections to parity",
@@ -8712,6 +8669,8 @@
                 "%s ago",
                 "12 hours",
                 "24 hours",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Activate",
                 "Activated",
                 "Activating",
@@ -8811,6 +8770,7 @@
                 "CPU Pinning VM",
                 "CPU Pinning",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Current date and time",
                 "Custom banner",
                 "Custom UPS cable",
@@ -9343,10 +9303,7 @@
                 "Your router or DNS server has DNS rebinding protection enabled, preventing",
                 "Your server has been registered",
                 "Your Unraid Server is reachable from the internet",
-                "YYYY-MM-DD",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "YYYY-MM-DD"
             ],
             "/shares.txt": [
                 "Add Share",
@@ -9623,6 +9580,7 @@
                 "Copying",
                 "CPU",
                 "Dashboard",
+                "Data-Rebuild",
                 "day",
                 "days",
                 "Default",
@@ -9639,6 +9597,7 @@
                 "disabled",
                 "Disk",
                 "disk",
+                "Disk-Clear",
                 "Do you want to update to the new version",
                 "Docker",
                 "Docs",
@@ -9774,6 +9733,7 @@
                 "Parity",
                 "parity",
                 "Parity-Check",
+                "Parity-Sync",
                 "Password confirmation does not match",
                 "Password recovery",
                 "Password",
@@ -10530,41 +10490,6 @@
                 "Are you sure you want to delete %s applications from the previously installed list"
             ]
         },
-        "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
-            "/Community Apps/apps.txt": [
-                "Last Update",
-                "Note All statistics are only gathered every 30 days"
-            ]
-        },
         "files": [
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
@@ -10595,7 +10520,13 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt",
             "/Unassigned Devices/unassigneddevices.txt"
-        ]
+        ],
+        "new": {
+            "/Community Apps/apps.txt": [
+                "Last Update",
+                "Note All statistics are only gathered every 30 days"
+            ]
+        }
     },
     "zh_CN - Simplified Chinese / \u7b80\u4f53\u4e2d\u6587": {
         "missing": {
@@ -10610,10 +10541,32 @@
                 "Read Me First"
             ],
             "/main.txt": [
+                "Action",
+                "Data-Rebuild in progress",
+                "Disk-Clear in progress",
                 "Enable user share assignment",
                 "enter disk index and device name as applicable to your controller",
                 "next device",
+                "Parity Operation History",
+                "Parity-Sync in progress",
                 "previous device",
+                "Started, clearing",
+                "Started, copying",
+                "will pause Data-Rebuild",
+                "will pause Disk-Clear",
+                "will pause Parity-Check",
+                "will pause Parity-Sync",
+                "will pause Read-Check",
+                "will resume Data-Rebuild",
+                "will resume Disk-Clear",
+                "will resume Parity-Check",
+                "will resume Parity-Sync",
+                "will resume Read-Check",
+                "will stop Disk-Clear",
+                "will stop Data-Rebuild",
+                "will stop Parity-Check",
+                "will stop Parity-Sync",
+                "will stop Read-Check",
                 "Check this",
                 "for more information",
                 "Make sure your server supports S3 sleep",
@@ -10635,6 +10588,8 @@
             ],
             "/settings.txt": [
                 "%s ago",
+                "Accumulation duration",
+                "Accumulation frequency",
                 "Activate",
                 "Activated",
                 "Activating",
@@ -10662,6 +10617,7 @@
                 "connect to any device on the VPN tunnel",
                 "connect to this server using IP address",
                 "CRAM-MD5",
+                "Cumulative parity check",
                 "Data received",
                 "Data sent",
                 "Deactivate",
@@ -10816,10 +10772,7 @@
                 "WireGuard Configuration",
                 "xfs vDisk",
                 "Your server has been registered",
-                "Your Unraid Server is reachable from the internet",
-                "Accumulation duration",
-                "Accumulation frequency",
-                "Cumulative parity check"
+                "Your Unraid Server is reachable from the internet"
             ],
             "/translations.txt": [
                 "aborted",
@@ -10827,9 +10780,12 @@
                 "Browser cookie support required for Unraid OS webgui",
                 "Cache",
                 "Checking Wan IPs",
+                "Data-Rebuild",
+                "Disk-Clear",
                 "Docker",
                 "Docs",
                 "Keep server details anonymous",
+                "Parity-Sync",
                 "Please also ensure you have cookies enabled",
                 "Please set a password for the root user account",
                 "This will start your free 30-day Trial",
@@ -11012,35 +10968,6 @@
             ]
         },
         "new": {
-            "/main.txt": [
-                "Disk-Clear in progress",
-                "Parity Operation History",
-                "Started, clearing",
-                "Started, copying",
-                "will bring the array on-line and start Data-Rebuild",
-                "will bring the array on-line and start Disk-Clear of new data disks",
-                "will bring the array on-line and start Parity-Sync",
-                "will pause Data-Rebuild",
-                "will pause Disk-Clear",
-                "will pause Parity-Check",
-                "will pause Parity-Sync",
-                "will pause Read-Check",
-                "will resume Disk-Clear",
-                "will resume Parity-Check",
-                "will resume Read-Check",
-                "will start Disk-Clear of new data disks",
-                "will start Data-Rebuild",
-                "will start Parity-Sync",
-                "will stop Disk-Clear",
-                "will stop Data-Rebuild",
-                "will stop Parity-Check",
-                "will stop Parity-Sync",
-                "will stop Read-Check"
-            ],
-            "/translations.txt": [
-                "Disk-Clear",
-                "Parity-Sync"
-            ],
             "/Community Apps/apps.txt": [
                 "Last Update",
                 "Note All statistics are only gathered every 30 days"
