@@ -698,6 +698,8 @@
 				"Verifying"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Debugging enabled This significantly increases the memory used by your browser",
 				"Browser translation detected Display issues may result",
 				"Sort By",
@@ -807,7 +809,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -873,14 +875,7 @@
 			"/Unassigned Devices/scriptlog.txt",
 			"/Unassigned Devices/unassigneddevicessettings.txt",
 			"/Unassigned Devices/unassigneddevices.txt"
-		],
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			]
-		}
+		]
 	},
 	"de_DE - German / Deutsch": {
 		"missing": {
@@ -1086,6 +1081,8 @@
 				"Invalid storage path"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Debugging enabled This significantly increases the memory used by your browser",
 				"Browser translation detected Display issues may result",
 				"Click to remove favourite repository",
@@ -1148,7 +1145,7 @@
 				"Private Application",
 				"Click info to see the notes regarding this application",
 				"This application has additional requirements",
-				"Update Available",
+				"UPDATED",
 				"NOTE You must visit the dockerHub page to gather the information required to install correctly",
 				"Show CA templates",
 				"Deprecated",
@@ -1381,17 +1378,24 @@
 			],
 			"Unassigned Devices/unassigneddevices.txt": [
 				"Add Remote SMB",
+				"Add Root Share",
 				"Browse Remote SMB",
 				"Change Disk Mount Point",
 				"Change ISO File Mount Point",
+				"Change Remote Share Mount Point",
 				"Change SMB",
 				"Changing the Mount Point will also change the disk label",
 				"Click to view/hide partitions and mount points",
 				"Disks",
 				"Disk Label",
+				"Disk Sharing must be disabled to add a Root Share",
 				"Do NOT use a remote share local mount in a Docker container or VM for critical data",
+				"Do not put files or folders into the /mnt/rootshare/ folder",
 				"Edit Remote SMB",
 				"File System Scrub",
+				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
+				"If this disk was pre-cleared, you will remove the pre-clear signature. ",
+				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
 				"ISO File is",
 				"Device",
 				"Loading",
@@ -1408,46 +1412,25 @@
 				"Remote share mounts are dependent on a solid and reliable network connection and that is difficult to achieve",
 				"Remove Remote SMB",
 				"Shares",
+				"Select the Mount Point to Root Share",
 				"SSD cannot be spun down",
 				"Show Historical Devices",
 				"Show SMB/NFS/ISO Shares",
 				"Show Disk Devices",
+				"This is a way to gather Unraid shares into one Root Share",
+				"Use caution when gathering shares into one Root Share",
+				"User and Pool Shares",
+				"User Shares",
 				"View Remote SMB",
+				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
 				"NFS Script Log",
+				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
 				"You must enable NFS in Settings->NFS to mount NFS shares",
 				"You must enable SMB in Settings->SMB to mount SMB shares",
 				"You must enable the Destructive Mode in UD Settings before you can Format this disk",
 				"WARNING",
 				"You WILL have problems if you do",
 				"You will need to enter credentials to list the shares"
-			]
-		},
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			],
-			"/Unassigned Devices/unassigneddevicessettings.txt": [
-				"> **Note:** The normal rule used by UD is '*(sec"
-			],
-			"/Unassigned Devices/unassigneddevices.txt": [
-				"Add Root Share",
-				"Change Remote Share Mount Point",
-				"Disk Sharing must be disabled to add a Root Share",
-				"Do not put files or folders into the /mnt/rootshare/ folder",
-				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
-				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
-				"Select the Mount Point to Root Share",
-				"This is a way to gather Unraid shares into one Root Share",
-				"Use caution when gathering shares into one Root Share",
-				"User and Pool Shares",
-				"User Shares",
-				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
-				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
-				"> + '/usr/local/sbin/rc.unassigned mount name",
-				"> + '/usr/local/sbin/rc.unassigned umount name",
-				"> + '/usr/local/sbin/rc.unassigned spindown name"
 			]
 		},
 		"files": [
@@ -1465,7 +1448,17 @@
 			"/Dynamix System Stats/statsettings.txt",
 			"/Dynamix System Stats/stats.txt",
 			"/Dynamix System Temp/tempsettings.txt"
-		]
+		],
+		"new": {
+			"/Unassigned Devices/unassigneddevicessettings.txt": [
+				"> **Note:** The normal rule used by UD is '*(sec"
+			],
+			"/Unassigned Devices/unassigneddevices.txt": [
+				"> + '/usr/local/sbin/rc.unassigned mount name",
+				"> + '/usr/local/sbin/rc.unassigned umount name",
+				"> + '/usr/local/sbin/rc.unassigned spindown name"
+			]
+		}
 	},
 	"es_ES - Spanish / Espa\u00f1ol": {
 		"missing": {
@@ -1962,6 +1955,8 @@
 				"Verifying"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Debugging enabled This significantly increases the memory used by your browser",
 				"Browser translation detected Display issues may result",
 				"Sort By",
@@ -2071,7 +2066,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -2265,6 +2260,7 @@
 			"Unassigned Devices/unassigneddevices.txt": [
 				"Add ISO File Share",
 				"Add Remote SMB",
+				"Add Root Share",
 				"An XFS or BTRFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
 				"Any data on this disk will be lost",
 				"Are you sure",
@@ -2280,6 +2276,7 @@
 				"Click on Icon to Choose Protocol",
 				"Change Disk Mount Point",
 				"Change ISO File Mount Point",
+				"Change Remote Share Mount Point",
 				"Change SMB",
 				"Changing the Mount Point will also change the disk label",
 				"Click to select ISO file",
@@ -2288,7 +2285,9 @@
 				"Disks",
 				"Disk Label",
 				"Disk Log Information",
+				"Disk Sharing must be disabled to add a Root Share",
 				"Do NOT use a remote share local mount in a Docker container or VM for critical data",
+				"Do not put files or folders into the /mnt/rootshare/ folder",
 				"Domain",
 				"Edit Device Script",
 				"Edit ISO File Script",
@@ -2306,7 +2305,10 @@
 				"Formatting",
 				"Free",
 				"from disk",
+				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
 				"Historical Devices",
+				"If this disk was pre-cleared, you will remove the pre-clear signature. ",
+				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
 				"ISO File is",
 				"ISO File Shares",
 				"Identification",
@@ -2352,6 +2354,7 @@
 				"Search for Servers, or enter the Server nameIP address manually",
 				"Search for Shares or enter the Share name manually",
 				"Searching",
+				"Select the Mount Point to Root Share",
 				"Serial Number Mountpoint",
 				"share for",
 				"Simple",
@@ -2362,6 +2365,7 @@
 				"Show Historical Devices",
 				"Show SMB/NFS/ISO Shares",
 				"Show Disk Devices",
+				"This is a way to gather Unraid shares into one Root Share",
 				"This will remove the ISO file share for",
 				"This will remove the remote",
 				"This will remove the saved configuration of",
@@ -2370,46 +2374,23 @@
 				"to format",
 				"Unmount",
 				"Unmounting",
+				"Use caution when gathering shares into one Root Share",
 				"Used",
+				"User and Pool Shares",
+				"User Shares",
 				"Username",
 				"View Device Script Log",
 				"View ISO File Script Log",
 				"View Remote SMB",
+				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
 				"NFS Script Log",
+				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
 				"You must enable NFS in Settings->NFS to mount NFS shares",
 				"You must enable SMB in Settings->SMB to mount SMB shares",
 				"You must enable the Destructive Mode in UD Settings before you can Format this disk",
 				"WARNING",
 				"You WILL have problems if you do",
 				"You will need to enter credentials to list the shares"
-			]
-		},
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			],
-			"/Unassigned Devices/unassigneddevicessettings.txt": [
-				"> **Note:** The normal rule used by UD is '*(sec"
-			],
-			"/Unassigned Devices/unassigneddevices.txt": [
-				"Add Root Share",
-				"Change Remote Share Mount Point",
-				"Disk Sharing must be disabled to add a Root Share",
-				"Do not put files or folders into the /mnt/rootshare/ folder",
-				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
-				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
-				"Select the Mount Point to Root Share",
-				"This is a way to gather Unraid shares into one Root Share",
-				"Use caution when gathering shares into one Root Share",
-				"User and Pool Shares",
-				"User Shares",
-				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
-				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
-				"> + '/usr/local/sbin/rc.unassigned mount name",
-				"> + '/usr/local/sbin/rc.unassigned umount name",
-				"> + '/usr/local/sbin/rc.unassigned spindown name"
 			]
 		},
 		"files": [
@@ -2428,7 +2409,17 @@
 			"/Dynamix System Stats/stats.txt",
 			"/Dynamix System Temp/tempsettings.txt",
 			"/Parity Check Tuning/paritychecktuning.txt"
-		]
+		],
+		"new": {
+			"/Unassigned Devices/unassigneddevicessettings.txt": [
+				"> **Note:** The normal rule used by UD is '*(sec"
+			],
+			"/Unassigned Devices/unassigneddevices.txt": [
+				"> + '/usr/local/sbin/rc.unassigned mount name",
+				"> + '/usr/local/sbin/rc.unassigned umount name",
+				"> + '/usr/local/sbin/rc.unassigned spindown name"
+			]
+		}
 	},
 	"fr_FR - French / Fran\u00e7ais": {
 		"missing": {
@@ -2631,6 +2622,8 @@
 				"Verifying"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Browser translation detected Display issues may result",
 				"%s removed as favourite repository",
 				"Pin App",
@@ -2654,7 +2647,7 @@
 				"This application is pinned for later viewing",
 				"Click info to see the notes regarding this application",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -2723,12 +2716,19 @@
 			],
 			"Unassigned Devices/unassigneddevices.txt": [
 				"Add Remote SMB",
+				"Add Root Share",
 				"Browse Remote SMB",
+				"Change Remote Share Mount Point",
 				"Change SMB",
 				"Disk Label",
+				"Disk Sharing must be disabled to add a Root Share",
 				"Do NOT use a remote share local mount in a Docker container or VM for critical data",
+				"Do not put files or folders into the /mnt/rootshare/ folder",
 				"Edit Remote SMB",
 				"File System Scrub",
+				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
+				"If this disk was pre-cleared, you will remove the pre-clear signature. ",
+				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
 				"Device",
 				"NFS Mount Point",
 				"NFS or ISO File Shares configured",
@@ -2738,40 +2738,19 @@
 				"You must enable NFS in Settings->NFS to mount NFS shares",
 				"You must enable SMB in Settings->SMB to mount SMB shares",
 				"Remove Remote SMB",
-				"View Remote SMB",
-				"NFS Script Log",
-				"You must enable NFS in Settings->NFS to mount NFS shares",
-				"You must enable SMB in Settings->SMB to mount SMB shares",
-				"WARNING",
-				"You will need to enter credentials to list the shares"
-			]
-		},
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			],
-			"/Unassigned Devices/unassigneddevicessettings.txt": [
-				"> **Note:** The normal rule used by UD is '*(sec"
-			],
-			"/Unassigned Devices/unassigneddevices.txt": [
-				"Add Root Share",
-				"Change Remote Share Mount Point",
-				"Disk Sharing must be disabled to add a Root Share",
-				"Do not put files or folders into the /mnt/rootshare/ folder",
-				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
-				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
 				"Select the Mount Point to Root Share",
 				"This is a way to gather Unraid shares into one Root Share",
 				"Use caution when gathering shares into one Root Share",
 				"User and Pool Shares",
 				"User Shares",
+				"View Remote SMB",
 				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
+				"NFS Script Log",
 				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
-				"> + '/usr/local/sbin/rc.unassigned mount name",
-				"> + '/usr/local/sbin/rc.unassigned umount name",
-				"> + '/usr/local/sbin/rc.unassigned spindown name"
+				"You must enable NFS in Settings->NFS to mount NFS shares",
+				"You must enable SMB in Settings->SMB to mount SMB shares",
+				"WARNING",
+				"You will need to enter credentials to list the shares"
 			]
 		},
 		"files": [
@@ -2783,7 +2762,17 @@
 			"/Dynamix System Temp/tempsettings.txt",
 			"/Recycle Bin/recyclebin.txt",
 			"/Tips and Tweaks/tipsandtweaks.txt"
-		]
+		],
+		"new": {
+			"/Unassigned Devices/unassigneddevicessettings.txt": [
+				"> **Note:** The normal rule used by UD is '*(sec"
+			],
+			"/Unassigned Devices/unassigneddevices.txt": [
+				"> + '/usr/local/sbin/rc.unassigned mount name",
+				"> + '/usr/local/sbin/rc.unassigned umount name",
+				"> + '/usr/local/sbin/rc.unassigned spindown name"
+			]
+		}
 	},
 	"hu_HU - Hungarian / Magyar": {
 		"files": [
@@ -4313,6 +4302,8 @@
 				"Please Enjoy Responsibly",
 				"Popup Blocked CA requires popups to be enabled under certain circumstances You must white list your server within your browser to allow popups",
 				"Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed",
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Community Applications works best when cookies are enabled in your browser Certain features may not be available",
 				"Backup Server Active Some icons may not appear, and plugin installations may be affected",
 				"Debugging enabled This significantly increases the memory used by your browser",
@@ -4579,7 +4570,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -4680,14 +4671,7 @@
 			"/Unassigned Devices/scriptlog.txt",
 			"/Unassigned Devices/unassigneddevicessettings.txt",
 			"/Unassigned Devices/unassigneddevices.txt"
-		],
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			]
-		}
+		]
 	},
 	"ko_KO - Korean / \ud55c\uad6d\uc778": {
 		"files": [
@@ -7094,6 +7078,8 @@
 				"Please Enjoy Responsibly",
 				"Popup Blocked CA requires popups to be enabled under certain circumstances You must white list your server within your browser to allow popups",
 				"Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed",
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Community Applications works best when cookies are enabled in your browser Certain features may not be available",
 				"Backup Server Active Some icons may not appear, and plugin installations may be affected",
 				"Debugging enabled This significantly increases the memory used by your browser",
@@ -7360,7 +7346,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -7461,23 +7447,18 @@
 			"/Unassigned Devices/scriptlog.txt",
 			"/Unassigned Devices/unassigneddevicessettings.txt",
 			"/Unassigned Devices/unassigneddevices.txt"
-		],
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			]
-		}
+		]
 	},
 	"nl_NL - Dutch / Nederlands": {
 		"missing": {
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Browser translation detected Display issues may result",
 				"Pin App",
 				"Unpin App",
 				"Privacy",
-				"Update Available",
+				"UPDATED",
 				"Determine configuration",
 				"An error occurred - Could not determine configuration"
 			],
@@ -7535,15 +7516,24 @@
 				"Disable Mount"
 			],
 			"Unassigned Devices/unassigneddevices.txt": [
+				"Add Root Share",
+				"Change Remote Share Mount Point",
+				"Disk Sharing must be disabled to add a Root Share",
+				"Do not put files or folders into the /mnt/rootshare/ folder",
+				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
+				"If this disk was pre-cleared, you will remove the pre-clear signature. ",
+				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
+				"Select the Mount Point to Root Share",
+				"This is a way to gather Unraid shares into one Root Share",
+				"Use caution when gathering shares into one Root Share",
+				"User and Pool Shares",
+				"User Shares",
+				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
+				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
 				"You will need to enter credentials to list the shares"
 			]
 		},
 		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			],
 			"/Dynamix Cache Dirs/foldercachingsettings.txt": [
 				"> Set cache_pressure to NN (default ",
 				"> to reset the cache-pressure execute 'sudo sysctl vm.vfs_cache_pressure",
@@ -7556,19 +7546,6 @@
 				"> **Note:** The normal rule used by UD is '*(sec"
 			],
 			"/Unassigned Devices/unassigneddevices.txt": [
-				"Add Root Share",
-				"Change Remote Share Mount Point",
-				"Disk Sharing must be disabled to add a Root Share",
-				"Do not put files or folders into the /mnt/rootshare/ folder",
-				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
-				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
-				"Select the Mount Point to Root Share",
-				"This is a way to gather Unraid shares into one Root Share",
-				"Use caution when gathering shares into one Root Share",
-				"User and Pool Shares",
-				"User Shares",
-				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
-				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
 				"> + '/usr/local/sbin/rc.unassigned mount name",
 				"> + '/usr/local/sbin/rc.unassigned umount name",
 				"> + '/usr/local/sbin/rc.unassigned spindown name"
@@ -8228,6 +8205,8 @@
 				"Verifying"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Debugging enabled This significantly increases the memory used by your browser",
 				"Browser translation detected Display issues may result",
 				"Sort By",
@@ -8351,7 +8330,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -8416,14 +8395,7 @@
 			"/Unassigned Devices/scriptlog.txt",
 			"/Unassigned Devices/unassigneddevicessettings.txt",
 			"/Unassigned Devices/unassigneddevices.txt"
-		],
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			]
-		}
+		]
 	},
 	"pl_PL - Polish / Polski": {
 		"missing": {
@@ -8592,6 +8564,8 @@
 				"Specify a ISO storage path first"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Debugging enabled This significantly increases the memory used by your browser",
 				"Browser translation detected Display issues may result",
 				"Sort By",
@@ -8699,7 +8673,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -8767,12 +8741,19 @@
 			],
 			"Unassigned Devices/unassigneddevices.txt": [
 				"Add Remote SMB",
+				"Add Root Share",
 				"Browse Remote SMB",
+				"Change Remote Share Mount Point",
 				"Change SMB",
 				"Disk Label",
+				"Disk Sharing must be disabled to add a Root Share",
 				"Do NOT use a remote share local mount in a Docker container or VM for critical data",
+				"Do not put files or folders into the /mnt/rootshare/ folder",
 				"Edit Remote SMB",
 				"File System Scrub",
+				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
+				"If this disk was pre-cleared, you will remove the pre-clear signature. ",
+				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
 				"Device",
 				"NFS Mount Point",
 				"NFS or ISO File Shares configured",
@@ -8782,8 +8763,15 @@
 				"You must enable NFS in Settings->NFS to mount NFS shares",
 				"You must enable SMB in Settings->SMB to mount SMB shares",
 				"Remove Remote SMB",
+				"Select the Mount Point to Root Share",
+				"This is a way to gather Unraid shares into one Root Share",
+				"Use caution when gathering shares into one Root Share",
+				"User and Pool Shares",
+				"User Shares",
 				"View Remote SMB",
+				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
 				"NFS Script Log",
+				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
 				"You must enable NFS in Settings->NFS to mount NFS shares",
 				"You must enable SMB in Settings->SMB to mount SMB shares",
 				"You must enable the Destructive Mode in UD Settings before you can Format this disk",
@@ -8811,28 +8799,10 @@
 			"/Tips and Tweaks/tipsandtweaks.txt"
 		],
 		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			],
 			"/Unassigned Devices/unassigneddevicessettings.txt": [
 				"> **Note:** The normal rule used by UD is '*(sec"
 			],
 			"/Unassigned Devices/unassigneddevices.txt": [
-				"Add Root Share",
-				"Change Remote Share Mount Point",
-				"Disk Sharing must be disabled to add a Root Share",
-				"Do not put files or folders into the /mnt/rootshare/ folder",
-				"Go to Settings->Global Share Settings and set Enable Disk Shares to Auto or Off",
-				"If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
-				"Select the Mount Point to Root Share",
-				"This is a way to gather Unraid shares into one Root Share",
-				"Use caution when gathering shares into one Root Share",
-				"User and Pool Shares",
-				"User Shares",
-				"When you copy files between shares in the Root Share, the files may not end up on the expected disks",
-				"You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
 				"> + '/usr/local/sbin/rc.unassigned mount name",
 				"> + '/usr/local/sbin/rc.unassigned umount name",
 				"> + '/usr/local/sbin/rc.unassigned spindown name"
@@ -9592,6 +9562,8 @@
 				"Verifying"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Debugging enabled This significantly increases the memory used by your browser",
 				"Browser translation detected Display issues may result",
 				"Sort By",
@@ -9701,7 +9673,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -9765,14 +9737,7 @@
 			"/Unassigned Devices/scriptlog.txt",
 			"/Unassigned Devices/unassigneddevicessettings.txt",
 			"/Unassigned Devices/unassigneddevices.txt"
-		],
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			]
-		}
+		]
 	},
 	"sv_SE - Swedish / Svenska": {
 		"missing": {
@@ -11752,6 +11717,8 @@
 				"Please Enjoy Responsibly",
 				"Popup Blocked CA requires popups to be enabled under certain circumstances You must white list your server within your browser to allow popups",
 				"Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed",
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Community Applications works best when cookies are enabled in your browser Certain features may not be available",
 				"Backup Server Active Some icons may not appear, and plugin installations may be affected",
 				"Debugging enabled This significantly increases the memory used by your browser",
@@ -12018,7 +11985,7 @@
 				"BETA",
 				"INSTALLED",
 				"OFFICIAL",
-				"Update Available",
+				"UPDATED",
 				"This is an official container",
 				"Digitally Signed",
 				"This container is digitally signed",
@@ -12119,14 +12086,7 @@
 			"/Unassigned Devices/scriptlog.txt",
 			"/Unassigned Devices/unassigneddevicessettings.txt",
 			"/Unassigned Devices/unassigneddevices.txt"
-		],
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
-			]
-		}
+		]
 	},
 	"zh_CN - Simplified Chinese / \u7b80\u4f53\u4e2d\u6587": {
 		"missing": {
@@ -12450,6 +12410,8 @@
 				"Verifying"
 			],
 			"Community Apps/apps.txt": [
+				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
+				"Array not started - Only Plugins Available To Be Installed Or Managed",
 				"Browser translation detected Display issues may result",
 				"Go to forum profile",
 				"Show Profile",
@@ -12465,7 +12427,7 @@
 				"Read Me First",
 				"Actions",
 				"This is a spotlight application",
-				"Update Available",
+				"UPDATED",
 				"Info",
 				"Attention",
 				"Application Spotlight %s",
@@ -12484,13 +12446,6 @@
 			],
 			"Recycle Bin/recyclebin.txt": [
 				"These actions apply to all shares"
-			]
-		},
-		"new": {
-			"/Community Apps/apps.txt": [
-				"Docker system failed to start - Only Plugins Available To Be Installed Or Managed",
-				"Array not started - Only Plugins Available To Be Installed Or Managed",
-				"UPDATED"
 			]
 		},
 		"files": [
