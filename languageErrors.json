@@ -234,6 +234,7 @@
                 "Not up-to-date",
                 "not used",
                 "or",
+                "Output voltage",
                 "Peer allowed IPs",
                 "Peer DNS server",
                 "Peer endpoint",
@@ -273,6 +274,7 @@
                 "Show banner background color fade",
                 "Show Peer Config",
                 "shutdown",
+                "Slave",
                 "Stop corresponding docker containers",
                 "subnet",
                 "TCP",
@@ -826,7 +828,6 @@
                 "Update Plugin",
                 "Requirements not met",
                 "The requirements for this upgrade have not been met on your system",
-                "The sidebar for the app (click info) will list the details",
                 "BACK",
                 "Pin App",
                 "Unpin App",
@@ -949,9 +950,6 @@
                 "Enhance your Unraid experience with these<br> My Servers BETA features",
                 "This will connect your server to My Servers <sup>BETA</sup>",
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license"
-            ],
-            "/Community Apps/apps.txt": [
-                "The sidebar for the app click info will list the details"
             ]
         },
         "files": [
@@ -1107,9 +1105,11 @@
                 "macvlan",
                 "No Balance required",
                 "No change to report",
+                "Output voltage",
                 "recommended",
                 "Scrub schedule",
                 "Show banner background color fade",
+                "Slave",
                 "Stop corresponding docker containers",
                 "Terminal font size",
                 "Tunnel has running containers attached",
@@ -1596,7 +1596,12 @@
             ],
             "Tips and Tweaks/tipsandtweaks.txt": [
                 "If you set the 'Power Save' CPU Governor, you may see your processors stuck at 800 MHz",
-                "It is recommended you use the 'Performance' Governor for best performance and power savings"
+                "It is recommended you use the 'Performance' Governor for best performance and power savings",
+                "Normal CPU Scaling Governor",
+                "Power Saving CPU Scaling Governor",
+                "Schedule CPU Power Saving Mode",
+                "Time to set Normal CPU Scaling",
+                "Time to set Power Saving CPU Scaling"
             ],
             "Unassigned Devices/editsettings.txt": [
                 "Click the 'Default' button to select the default Device Script File",
@@ -1706,13 +1711,6 @@
                 "This will connect your server to My Servers <sup>BETA</sup>",
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license"
             ],
-            "/Tips and Tweaks/tipsandtweaks.txt": [
-                "Normal CPU Scaling Governor",
-                "Power Saving CPU Scaling Governor",
-                "Schedule CPU Power Saving Mode",
-                "Time to set Normal CPU Scaling",
-                "Time to set Power Saving CPU Scaling"
-            ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
@@ -1755,11 +1753,13 @@
                 "In most cases, this should be your public WAN IPv4 instead",
                 "In most cases, this should be your public WAN IPv6 instead",
                 "is not in the",
+                "Output voltage",
                 "Please consider re-applying all configurations",
                 "Port %s is already in use by other services",
                 "Rules contain duplicate MAC address assignments",
                 "Send crash information to Unraid developers",
                 "Show banner background color fade",
+                "Slave",
                 "Stop corresponding docker containers",
                 "The Local endpoint does not resolve to an IPv4 address",
                 "The Local endpoint does not resolve to an IPv6 address",
@@ -1777,13 +1777,72 @@
                 "Stale configuration",
                 "Get quick real-time info on the status of your servers such as storage, container, and VM usage",
                 "Have a USB flash device that already has an account associated with it",
-                "Not Connected to Mothership"
+                "Not Connected to Mothership",
+                "Executes `unraid-api start`; no terminal needed"
             ],
             "/vms.txt": [
                 "Guest not running or guest agent not installed"
             ],
             "Community Apps/apps.txt": [
                 "Requirements not met"
+            ],
+            "Tips and Tweaks/tipsandtweaks.txt": [
+                "After a reboot from a lockup or hung server, you can view the saved log using the Syslog viewer",
+                "Check the",
+                "Click on Help for more information",
+                "Correct any problems that are identified before doing any tweaking",
+                "Current Disk Cache Settings",
+                "Current Inotify Settings",
+                "Current NIC settings",
+                "Dont change the Disk Cache settings until you read and understand this",
+                "Enable Intel TurboAMD Performance Boost",
+                "Enable syslog Archiving",
+                "for additional ideas on improving your Unraid performance and solving problems",
+                "for information on the issue",
+                "Go to Settings->Syslog Server and enable the Syslog Server",
+                "Governor",
+                "If you are experiencing OOM errors, try adjusting the Disk Cache settings on the Tweaks page",
+                "If you configure VLANs on Unraid, you should make Unraid the Master Browser",
+                "If you dont Unraid may not detect the Master Browser for all network interfaces correctly",
+                "If you have an Intel Processor, it may appear that all CPUs are constantly running at full speed",
+                "If you set the 'Power Save' CPU Governor, you may see your processors stuck at 800 MHz",
+                "Install the Fix Common Problems plugin and resolve any Unraid configuration problems",
+                "It is recommended that you update Unraid to the latest stable version to get the latest features, bug fixes, and security updates",
+                "It is recommended to use the pstate driver on Intel processors if you want the most performance",
+                "It is recommended you use the 'Performance' Governor for best performance and power savings",
+                "Make changes slowly",
+                "Make one change at a time and verify if it improves your situation",
+                "Making changes here can briefly interrupt your network operation",
+                "Many plugins are no longer compatible with older Unraid versons",
+                "Max Watches",
+                "Normal CPU Scaling Governor",
+                "Number of syslogs to Archive",
+                "post",
+                "Power Saving CPU Scaling Governor",
+                "Processes to kill before Array is Stopped",
+                "Put the IP address of your server in the Remote syslog server field",
+                "Schedule CPU Power Saving Mode",
+                "Some have reported better VM performance with media streaming and gaming VMs with the suggestions on this",
+                "Some have reported faster and more consistent network performance by making changes in networking parameters on the Tweaks tab of this plugin",
+                "Some of the settings will consume RAM and may end up causing Linux to terminate some processes to free up RAM",
+                "Some people are reporting OOM out of memory errors",
+                "Support for older versions of Unraid is being phased out",
+                "The dashboard shows CPU loading and not CPU frequency",
+                "The feature is not available on any of your NICs",
+                "The first thing you should do is to install the Fix Common Problems plugin to find and fix common problems",
+                "The Tips below are suggestions, workarounds for known problems, and potential fixes",
+                "There is a very cool feature in Unraid 6 and up that can be used to capture your logs and help in troubleshooting a situation where your server locks up or becomes unresponsive",
+                "This will identify potential problems to be solved before you upgrade the Unraid OS",
+                "This will log all your server log enries to the Syslog Server and save the log to an array share",
+                "This seems to be occurring more now because of the large amounts of memory being installed in Unraid and the default Disk Cache settings too high",
+                "Time to set Normal CPU Scaling",
+                "Time to set Power Saving CPU Scaling",
+                "Tips",
+                "Tips and Tweaks wiki",
+                "Tweaks",
+                "Use the Update Assistant that is part of the Fix Common Problems plugin",
+                "You can check CPU frequencies on the command line with",
+                "You may actually cause more problems than you solve if there are problems with your Unraid configuration"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Remote share mounts are dependent on a solid and reliable network connection and that is difficult to achieve",
@@ -1796,13 +1855,6 @@
                 "Enhance your Unraid experience with these<br> My Servers BETA features",
                 "This will connect your server to My Servers <sup>BETA</sup>",
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license"
-            ],
-            "/Tips and Tweaks/tipsandtweaks.txt": [
-                "Normal CPU Scaling Governor",
-                "Power Saving CPU Scaling Governor",
-                "Schedule CPU Power Saving Mode",
-                "Time to set Normal CPU Scaling",
-                "Time to set Power Saving CPU Scaling"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
@@ -1893,9 +1945,11 @@
                 "macvlan",
                 "No Balance required",
                 "No change to report",
+                "Output voltage",
                 "recommended",
                 "Scrub schedule",
                 "Show banner background color fade",
+                "Slave",
                 "Stop corresponding docker containers",
                 "Terminal font size",
                 "Tunnel has running containers attached",
@@ -2917,6 +2971,7 @@
                 "Only PNG images are allowed",
                 "Oops",
                 "or",
+                "Output voltage",
                 "Page view",
                 "Parity Check",
                 "Password",
@@ -3017,6 +3072,7 @@
                 "Shutdown VMs",
                 "shutdown",
                 "Simple",
+                "Slave",
                 "Small",
                 "Smart",
                 "SMB Extras",
@@ -5414,6 +5470,7 @@
                 "Only PNG images are allowed",
                 "Oops",
                 "or",
+                "Output voltage",
                 "Page view",
                 "Parity Check",
                 "Password",
@@ -5514,6 +5571,7 @@
                 "Shutdown VMs",
                 "shutdown",
                 "Simple",
+                "Slave",
                 "Small",
                 "Smart",
                 "SMB Extras",
@@ -7254,6 +7312,13 @@
             "Recycle Bin/recyclebin.txt": [
                 "Recycle Bin is empty"
             ],
+            "Tips and Tweaks/tipsandtweaks.txt": [
+                "Normal CPU Scaling Governor",
+                "Power Saving CPU Scaling Governor",
+                "Schedule CPU Power Saving Mode",
+                "Time to set Normal CPU Scaling",
+                "Time to set Power Saving CPU Scaling"
+            ],
             "Unassigned Devices/editsettings.txt": [
                 "Disable Mount"
             ],
@@ -7292,11 +7357,6 @@
                 "> set ulimit to NN to limit memory used by script (default"
             ],
             "/Tips and Tweaks/tipsandtweaks.txt": [
-                "Normal CPU Scaling Governor",
-                "Power Saving CPU Scaling Governor",
-                "Schedule CPU Power Saving Mode",
-                "Time to set Normal CPU Scaling",
-                "Time to set Power Saving CPU Scaling",
                 "> For streaming and gaming VMs, set the values low in the single digits.  Recommended values are: vm.dirty_background_ratio"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
@@ -7527,6 +7587,7 @@
                 "Online",
                 "Oops",
                 "or",
+                "Output voltage",
                 "PCnet",
                 "Peer allowed IPs",
                 "Peer DNS server",
@@ -7562,6 +7623,7 @@
                 "Show banner background color fade",
                 "Show Peer Config",
                 "shutdown",
+                "Slave",
                 "Smart",
                 "SMB",
                 "SNMP",
@@ -8296,9 +8358,11 @@
                 "Header custom secondary text color",
                 "No Balance required",
                 "No change to report",
+                "Output voltage",
                 "recommended",
                 "Scrub schedule",
                 "Show banner background color fade",
+                "Slave",
                 "Stop corresponding docker containers",
                 "Terminal font size",
                 "Tunnel has running containers attached",
@@ -8932,6 +8996,7 @@
                 "Not up-to-date",
                 "not used",
                 "or",
+                "Output voltage",
                 "Peer allowed IPs",
                 "Peer DNS server",
                 "Peer endpoint",
@@ -8971,6 +9036,7 @@
                 "Show banner background color fade",
                 "Show Peer Config",
                 "shutdown",
+                "Slave",
                 "Stop corresponding docker containers",
                 "subnet",
                 "TCP",
@@ -10457,6 +10523,7 @@
                 "Only PNG images are allowed",
                 "Oops",
                 "or",
+                "Output voltage",
                 "Page view",
                 "Parity Check",
                 "Password",
@@ -10557,6 +10624,7 @@
                 "Shutdown VMs",
                 "shutdown",
                 "Simple",
+                "Slave",
                 "Small",
                 "Smart",
                 "SMB Extras",
@@ -12242,6 +12310,7 @@
                 "not received",
                 "Not up-to-date",
                 "not used",
+                "Output voltage",
                 "Peer allowed IPs",
                 "Peer DNS server",
                 "Peer endpoint",
@@ -12261,6 +12330,7 @@
                 "Replied",
                 "Server to server access",
                 "Show Peer Config",
+                "Slave",
                 "Stop corresponding docker containers",
                 "The Local endpoint does not resolve to an IPv4 address",
                 "The Local endpoint does not resolve to an IPv6 address",
