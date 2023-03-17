@@ -146,7 +146,10 @@ This usually means your flash drive is corrupted or has dropped offline The rest
 Fatal Docker Image Error=Fatale Docker-image fout
 Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=De docker-image of -map is ofwel alleen-lezen of volledig vol. Hierdoor zullen problemen het gevolg zijn. U moet een nieuw bericht maken in de Unraid-forums en uw diagnose toevoegen
 This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system=Deze sjabloon is ingesteld om een aangepast netwerk te gebruiken. Mogelijk moet u het netwerk of IP-adres enz. aanpassen aan uw systeem
+This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
 One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template=Een of meerdere poorted gebruikt door deze applicatie zijn al in gebuik door een andere service of app die op uw server wordt uitgevoerd. U moet de hostpoorten aanpassen aan de hand van de template
+Not Enough Memory=
+Community Applications (and Unraid OS) have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
 
 ; CA Sections Keep the length reasonable
 Home=Thuis
@@ -308,6 +311,7 @@ Current Version=Huidige versie
 Min OS=Minimale OS
 Max OS=Maximale OS
 Total Downloads=Totaal downloads
+Popularity=
 Licence=Licentie
 Ranked #%s=Geplaatst #%s
 ; as in Trending up or down arrow
@@ -441,7 +445,7 @@ An error occurred - Could not determine configuration=Er is een fout opgetreden 
 Click Install to download and install the Community Applications plugin=Klik op **Installeren** om de **Community Applications** plug-in te downloaden en te installeren
 
 
-; Note: September 16, 2022 - 2 missing translations
+; Note: March 17, 2023 - 6 missing translations
 Access Mode=Toegangsmodus
 Add another Path, Port, Variable, Label or Device=Pad, Poort, Variabele, Label of Apparaat toevoegen
 Add Configuration=Configuratie toevoegen
@@ -451,8 +455,8 @@ Always=Altijd
 App to Host=App naar Host
 Application=Applicatie
 apply update=updates toepassen
-Array must be Started to view Docker containers=De array moet **Gestart** zijn om Docker containers te zien
 Are you sure=Weet u het zeker
+Array must be Started to view Docker containers=De array moet **Gestart** zijn om Docker containers te zien
 Autostart=Autostart
 Back=Terug
 Backup=Back-up
@@ -503,6 +507,7 @@ Icon URL=URL-icoon
 Image ID=Image ID
 Key=Sleutel
 Label=Label
+Lock sortable items=
 Management=Management
 MediaApp=MediaApp
 MediaServer=MediaServer
@@ -563,6 +568,7 @@ The command finished successfully=De opdracht is succesvol uitgevoerd
 TOTAL DATA PULLED=TOTALE GEGEVENS OPGEHAALD
 Total size=Totale grootte
 Unknown action=Onbekende actie
+Unlock sortable items=
 Update All=Alles bijwerken
 update ready=update gereed
 Value=Waarde
@@ -575,6 +581,8 @@ Was this container created using this plugin=Is deze container gemaakt m.b.v. de
 Web=Web
 WebUI=WebUI
 Writable=Schrijfbaar
+
+; Note: March 17, 2023 - 2 missing translations
 %s day ago=%s dag geleden
 %s days ago=%s dagen geleden
 %s hour ago=%s uur geleden
@@ -1010,6 +1018,23 @@ YesTime Machine=Ja/Time Machine
 You must reboot for changes to take effect=Herstarten is nodig om veranderingen actief te maken
 Your browser does not support HTML5 file uploads=De browser ondersteunt geen HTML5 bestandsuploads
 Your browser has JavaScript disabled=De browser heeft Javascript uitgeschakeld
+Dated=
+Command execution=
+Configuration not found=
+of=
+Pulling image=
+Removing container=
+Removing orphan image=
+Stopping container=
+Successfully removed container=
+Successfully removed orphan image=
+Successfully stopped container=
+The command failed=
+The command finished successfully=
+TOTAL DATA PULLED=
+Was this container created using this plugin=
+Executes `unraid-api start`; no terminal needed=
+Please use a high quality name brand device at least 1GB in size min 4GB recommended=Please use a high quality name brand device at least 1GB in size (min 4GB recommended)
 
 ; Dynamix.system.button plugin
 Array busy=Array is bezet
@@ -1177,8 +1202,8 @@ Sign In to Purchase Key=Inloggen om een sleutel te kopen
 Sign In to resolve=Inloggen om op te lossen
 Sign In=Inloggen
 Sign me up for the monthly Unraid newsletter=Meld me aan voor de maandelijkse Unraid-nieuwsbrief
-Sign Out=Uitloggen
 Sign Out of Unraidnet=Afmelden bij Unraid.net
+Sign Out=Uitloggen
 Sign Up for Unraidnet=Inloggen voor Unraid.net
 Sign Up=Aanmelden
 Signing in %s to Unraidnet account=Aanmelden van %s bij Unraid.net-account
@@ -1254,20 +1279,19 @@ Your Unraid registration key is ineligible for replacement as it has been replac
 Your USB Flash GUID and other relevant server data will also be sent=Het USB-flash-GUID en andere relevante servergegevens worden ook verzonden
 
 ; My Servers - 2022-03-13
-Remark your WAN IPv4 is %s=LETOP: het WAN IPv4 is **%s**
-Remark Unraids WAN IPv4 %1s does not match your clients WAN IPv4 %2s=LETOP: Unraid's WAN IPv4 **%1s** komt niet overeen met uw klant WAN IPv4 **%2s**
-This may indicate a complex network that will not work with this Remote Access solution=Dit kan duiden op een complex netwerk dat niet werkt met deze Remote Access-oplossing
-Ignore this message if you are currently connected via Remote Access or VPN=Negeer dit bericht als u momenteel verbonden bent via Remote Access of VPN
-
 Automated flash backups will be disabled until you sign in again=Automatische flash-back-ups worden uittotdat u zich opnieuw aanmeldt
 Click to copy LAN IP %s=Klik om LAN IP %s te kopiëren
 DNS issue, unable to resolve wanip4unraidnet=DNS issue, unable to resolve wanip4.unraid.net
 Download latest backup from My Servers Dashboard before signing out=
 Have the code now Go Back=Have the code now? Go Back
+Ignore this message if you are currently connected via Remote Access or VPN=Negeer dit bericht als u momenteel verbonden bent via Remote Access of VPN
 LAN IP Copied=LAN IP gekopieerd
+Remark Unraids WAN IPv4 %1s does not match your clients WAN IPv4 %2s=LETOP: Unraid's WAN IPv4 **%1s** komt niet overeen met uw klant WAN IPv4 **%2s**
+Remark your WAN IPv4 is %s=LETOP: het WAN IPv4 is **%s**
 Remote access will be disabled=Toegang op afstand wordt uitgeschakeld
 Resend Code=Code nogmaals versturen
 Resend Email Verification Code=E-mailverificatiecode opnieuw verzenden
+This may indicate a complex network that will not work with this Remote Access solution=Dit kan duiden op een complex netwerk dat niet werkt met deze Remote Access-oplossing
 We have sent a verifcation email to %s=We hebben een verificatie-e-mail gestuurd naar %s
 You will no longer have access to this server using this url=Je hebt geen toegang meer tot deze server met <abbr title="%s" class="italic">deze url</abbr>
 
@@ -1289,8 +1313,8 @@ Copy File=Bestand kopiëren
 Copy Folder=Map kopiëren
 Copy Share=Gedeelde Map kopiëren
 copy to=kopiëer naar
-Create=Aanmaken
 Create Folder=Map aanmaken
+Create=Aanmaken
 Creating=Aanmaken
 Current file name=Huidige bestandsnaam
 Current folder name=Huidige mapnaam
@@ -1298,8 +1322,8 @@ Delete Device=Opslag verwijderen
 Delete File=Bestand verwijderen
 Delete Folder=Map verwijderen
 Delete Share=Gedeelde Map verwijderen
-DEVICE=OPSLAG
 Device name=Opslagnaam
+DEVICE=OPSLAG
 Download File=Bestand downloaden
 Enter a valid target=Voer een geldig doel in
 Expand=Vergroten
@@ -1346,8 +1370,8 @@ Rename Folder=Map hernoemen
 rename to=hernoem naar
 Renaming=Hernoemen
 Save=Opslaan
-Search=Zoeken
 Search string=Zoekterm
+Search=Zoeken
 Share name=Gedeelde mapnaam
 SHARE=GEDEELDE MAP
 Source device=Bronopslag
@@ -1365,33 +1389,34 @@ This changes the permission of the source recursively=Dit verandert de toestemmi
 This copies all the selected sources=Dit kopieert alle geselecteerde bronnen
 This copies the device and all its content to another device=Dit kopieert de opslag en al zijn inhoud naar een andere opslag
 This copies the folder and all its content to another folder=Dit kopieert de map en al zijn inhoud naar een andere map
-This copies the share and all its content to another share=Dit kopieert de gedeelde map en al zijn inhoud naar een andere gedeelde map
 This copies the selected file=Dit kopieert het geselecteerde bestand
+This copies the share and all its content to another share=Dit kopieert de gedeelde map en al zijn inhoud naar een andere gedeelde map
 This creates a folder at the current level=Dit creëert een map op het huidige niveau
 This deletes all selected sources=Dit verwijdert alle geselecteerde bronnen
 This deletes the device and all its content=Dit verwijdert de opslag en al zijn inhoud
 This deletes the folder and all its content=Dit verwijdert de map en al zijn inhoud
-This deletes the share and all its content=Dit verwijdert de gedeelde map en al zijn inhoud
 This deletes the selected file=Dit verwijdert het geselecteerde bestand
+This deletes the share and all its content=Dit verwijdert de gedeelde map en al zijn inhoud
 This moves all the selected sources=Dit verplaatst alle geselecteerde bronnen
 This moves the device and all its content to another device=Dit verplaatst de opslag en al zijn inhoud naar een andere opslag
 This moves the folder and all its content to another folder=Dit verplaatst de map en al zijn inhoud naar een andere map
-This moves the share and all its content to another share=Dit verplaatst de gedeelde map en al zijn inhoud naar een andere gedeelde map
 This moves the selected file=Dit verplaatst het geselecteerde bestand
+This moves the share and all its content to another share=Dit verplaatst de gedeelde map en al zijn inhoud naar een andere gedeelde map
 This renames the folder to the new name=Dit hernoemt de map naar de nieuwe naam
 This renames the selected file=Dit hernoemt het geselecteerde bestand
 This renames the selected source=Dit hernoemt de geselecteerde bron
 Toggle TimeAge display=Wissel Tijd/Leeftijd weergave
 Total occupied space=Totale bezette ruimte
 Updating=Bijwerken
+Use sparse option=
 year=jaar
 years=jaren
 
 ; My Servers refactor - 2022-05-20
-
 A Trial key provides all the functionality of a Pro Registration key=Een proefsleutel biedt alle functionaliteit van een Pro-registratiesleutel
 All you need is an active internet connection, an Unraidnet account, and the <span>My Servers<span> plugin=Het enige dat nodig is, een actieve internetverbinding, een Unraid.net-account en de plug-in <span class="inline-block">Mijn servers</span>
 All you need is an active internet connection, an Unraidnet account, and the My Servers plugin=Het enige dat nodig is, een actieve internetverbinding, een Unraid.net-account en de plug-in <span class="inline-block">Mijn servers</span>
+Be sure to let the install complete before you close the window=Zorg ervoor dat de installatie is voltooid voordat u het venster sluit
 Checkout the My Servers docs=Bekijk de My Servers-documenten
 Close My Servers details and continue to webGUI=Sluit de details van My Servers en ga verder naar webGUI
 Confirm My Servers plugin removal=Verwijderen van My Servers-plug-in bevestigen
@@ -1401,8 +1426,9 @@ Continue using My Servers=Doorgaan met het gebruik van My Servers
 DNS issue, unable to resolve wanip4unraidnet=DNS issue, unable to resolve wanip4.unraid.net
 Enhance your experience with My Servers=Verbeter uw ervaring met My Servers
 Enhance your Unraid experience with these My Servers BETA features=Verbeter uw Unraid-ervaring met deze<br>My Servers (BETA)-functies
-Enhance your Unraid experience with these<br> My Servers BETA features=Verbeter uw Unraid-ervaring met deze<br class=\"hidden sm:block\"/>My Servers (BETA)-functies
+Enhance your Unraid experience with these<br> My Servers BETA features=Verbeter uw Unraid-ervaring met deze<br class=\hidden sm:block\/>My Servers (BETA)-functies
 Executes `unraid-api start`; no terminal needed=
+For best results, use one of these urls=
 Get started by installing the plugin=Ga aan de slag door de plug-in te installeren
 Go to My Servers Dashboard=Ga naar Mijn Servers-dashboard
 Important=Belangrijk
@@ -1410,16 +1436,27 @@ Install Plugin=Plugin installeren
 Installing My Servers beta=Installing My Servers (beta)
 Invalid 2FA token=Ongeldig 2FA token
 Invalid username or password=Ongeldige gebuikersnaam of wachtwoord
+Key file not valid=Sleutelbestand is ongeldig
 Key management is done via the dropdown in the top right of the webGUI on every page=Sleutelbeheer gebeurt via de keuzelijst rechtsboven in de webGUI op elke pagina
+Local T2FA requires a myunraidnet certificate=Lokale T2FA vereist een *.myunraid.net-certificaat
+Local T2FA requires Unraid 610 or higher and a myunraidnet certificate=Lokale T2FA vereist Unraid 6.10 of hoger en een *.myunraid.net-certificaat
+Local T2FA requires Unraid 610 or higher=Lokale T2FA vereist Unraid 6.10 of hoger
+Local T2FA requires Use SSLTLS to be Strict and a myunraidnet certificate=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt en een *.myunraid.net-certificaat
+Local T2FA requires Use SSLTLS to be Strict and Unraid 610 or higher=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt en Unraid 6.10 of hoger
+Local T2FA requires Use SSLTLS to be Strict, Unraid 610 or higher, and a myunraidnet certificate=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt, Unraid 6.10 of hoger en een *.myunraid.net-certificaat
+Local T2FA requires Use SSLTLS to be Strict=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt
+My Servers plugin install failed=Installatie van plug-in My Servers is mislukt
 No 2FA token detected=Geen 2FA token gevonden
 No thanks=Nee bedankt
 Not ready to purchase=Niet klaar om te kopen?
 Note USB memory card readers are generally not supported because most do not present unique serial numbers=Opmerking: USB-geheugenkaartlezers worden over het algemeen niet ondersteund omdat de meeste geen unieke serienummers hebben
+Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license=Oh nee! Heb je een illegale kopie van Unraid OS?<br>Ben je klaar om een echte licentie te kopen?
 Open Dropdown=Open keuzelijst
 Password confirmation must match=Wachtwoordbevestiging moet overeenkomen
 Please access this server via the My Servers Dashboard=Ga naar deze server via het My Servers dashboard
 Please make sure there is a DNS server specified=org ervoor dat er een DNS-server is opgegeven
 Please make sure your server time is accurate to within 5 minutes=Zorg ervoor dat de servertijd tot op 5 minuten nauwkeurig is
+Please uninstall and reinstall the My Servers plugin=Verwijder de plug-in voor My Servers en installeer deze opnieuw
 Please use a high quality name brand device at least 1GB in size=Gebruik een merknaam apparaat van hoge kwaliteit van ten minste 1 GB
 Plus more on the way=En nog meer onderweg
 Receive an additional 15 days for your trial=Ontvang 15 extra dagen voor de proefperiode
@@ -1433,28 +1470,17 @@ Restarting=Herstarten
 Sign In Up=Aanmelden
 Start Trial=Preof starten
 Stop unraid-api=unraid-api stoppen
+Strict=Strikt
 Thank you for choosing Unraid OS and My Servers=Bedankt voor het kiezen van Unraid OS en My Servers
 Thank you installing My Servers=Bedankt voor het installeren van My Servers
+The My Servers plugin install is incomplete=De installatie van de plug-in My Servers is onvolledig
 This will connect your server to My Servers <sup>BETA</sup>=Hiermee wordt de server verbonden met My Servers <sup>BETA</sup>
 To support more storage devices as your server grows click the Open Dropdown button=Om meer opslagapparaten te ondersteunen naarmate de server groeit, klikt u op de *Open Dropdown*-knop
 To support more storage devices as your server grows click the Open Dropdown button=Om meer opslagapparaten te ondersteunen naarmate de server groeit, klikt u op de *Open Dropdown*-knop
 To support more storage devices as your server grows click Upgrade Key=Om meer opslagapparaten te ondersteunen naarmate de server groeit, klik dan op Sleutel upgraden
 Transparent 2FA Token timed out=Time-out voor transparante 2FA-token
+Your current url %s is not in the list of allowed origins for this server=Your current url **%s** is not in the list of allowed origins for this server
 Your server will not be usable until you purchase a Registration key or install a free 30-day Trial key=Uw server is pas bruikbaar als u een registratiesleutel aanschaft of een gratis proefsleutel van 30 dagen installeert
 Your Unraid registration key is ineligible for replacement as it is blacklisted=Uw Unraid-registratiesleutel komt niet in aanmerking voor vervanging omdat deze op de zwarte lijst staat
-Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license=Oh nee! Heb je een illegale kopie van Unraid OS?<br>Ben je klaar om een echte licentie te kopen?
-Strict=Strikt
-Local T2FA requires Use SSLTLS to be Strict, Unraid 610 or higher, and a myunraidnet certificate=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt, Unraid 6.10 of hoger en een *.myunraid.net-certificaat
-Local T2FA requires Use SSLTLS to be Strict=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt
-Local T2FA requires Use SSLTLS to be Strict and Unraid 610 or higher=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt en Unraid 6.10 of hoger
-Local T2FA requires Use SSLTLS to be Strict and a myunraidnet certificate=Lokale T2FA vereist dat SSL/TLS verplicht wordt gebruikt en een *.myunraid.net-certificaat
-Local T2FA requires Unraid 610 or higher=Lokale T2FA vereist Unraid 6.10 of hoger
-Local T2FA requires Unraid 610 or higher and a myunraidnet certificate=Lokale T2FA vereist Unraid 6.10 of hoger en een *.myunraid.net-certificaat
-Local T2FA requires a myunraidnet certificate=Lokale T2FA vereist een *.myunraid.net-certificaat
-Key file not valid=Sleutelbestand is ongeldig
-My Servers plugin install failed=Installatie van plug-in My Servers is mislukt
-The My Servers plugin install is incomplete=De installatie van de plug-in My Servers is onvolledig
-Please uninstall and reinstall the My Servers plugin=Verwijder de plug-in voor My Servers en installeer deze opnieuw
-Be sure to let the install complete before you close the window=Zorg ervoor dat de installatie is voltooid voordat u het venster sluit
 
-; Note: August 13, 2022 - 2 missing translations
+; Note: March 17, 2023 - 20 missing translations

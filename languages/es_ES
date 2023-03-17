@@ -146,7 +146,10 @@ This usually means your flash drive is corrupted or has dropped offline The rest
 Fatal Docker Image Error=Error fatal de imagen de Docker
 Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=La imagen docker es de solo lectura o está completamente llena lo que producirán problemas. Debe crear una nueva publicación en los foros de Unraid e incluir sus diagnósticos.
 This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system=Esta plantilla está configurada para usar una red personalizada. Es posible que deba ajustar la red o la dirección IP para que coincida con su sistema
+This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
 One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template=Uno o varios puertos utilizados por esta aplicación ya están en uso por otro servicio o aplicación. Deberá ajustar los puertos de host según corresponda en la plantilla.
+Not Enough Memory=
+Community Applications (and Unraid OS) have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
 
 ; CA Sections Keep the length reasonable
 Home=Inicio
@@ -308,6 +311,7 @@ Current Version=Versión Actual
 Min OS=Min. S.O.
 Max OS=Max. S.O.
 Total Downloads=Descargas Totales
+Popularity=
 Licence=Licencia
 Ranked #%s=Posición #%s
 ; as in Trending up or down arrow
@@ -441,7 +445,7 @@ An error occurred - Could not determine configuration=Error - No se puede determ
 Click Install to download and install the Community Applications plugin=Haga clic en **Instalar** para descargar e instalar el plugin **Community Applications**
 
 
-; Note: September 16, 2022 - 1 missing translations
+; Note: March 17, 2023 - 5 missing translations
 Access Mode=Modo de acceso
 Add another Path, Port, Variable, Label or Device=Agregar otra Ruta, Puerto, Variable, Etiqueta o Dispositivo
 Add Configuration=Agregar configuración
@@ -451,8 +455,8 @@ Always=Siempre
 App to Host=Usados por la App
 Application=Aplicación
 apply update=iniciar actualización
-Array must be Started to view Docker containers=El array debe estar **Iniciado** para ver los contenedores Docker
 Are you sure=Está seguro
+Array must be Started to view Docker containers=El array debe estar **Iniciado** para ver los contenedores Docker
 Autostart=Auto-Iniciar
 Back=Atrás
 Backup=Copia de seguridad
@@ -503,6 +507,7 @@ Icon URL=URL del icono
 Image ID=ID de la imagen
 Key=Licencia
 Label=Etiqueta
+Lock sortable items=
 Management=Administración
 MediaApp=App multimedia
 MediaServer=Servidor multimedia
@@ -563,6 +568,7 @@ The command finished successfully=El comando se completó con éxito
 TOTAL DATA PULLED=DATOS TOTALES DESCARGADOS
 Total size=Tamaño total
 Unknown action=Acción desconocida
+Unlock sortable items=
 Update All=Actualizar todos
 update ready=Actualización lista
 Value=Valor
@@ -575,6 +581,8 @@ Was this container created using this plugin=Se creó este contenedor usando est
 Web=Web
 WebUI=Interfaz Web
 Writable=Grabable
+
+; Note: March 17, 2023 - 2 missing translations
 %s day ago=hace %s día
 %s days ago=hace %s días
 %s hour ago=hace %s hora
@@ -1010,6 +1018,23 @@ YesTime Machine=Sí/Time Machine
 You must reboot for changes to take effect=Debe reiniciar para que los cambios tengan efecto
 Your browser does not support HTML5 file uploads=Su navegador no soporta la subida de archivos con HTML5
 Your browser has JavaScript disabled=Su navegador tiene JavaScript deshabilitado
+Dated=
+Command execution=
+Configuration not found=
+of=
+Pulling image=
+Removing container=
+Removing orphan image=
+Stopping container=
+Successfully removed container=
+Successfully removed orphan image=
+Successfully stopped container=
+The command failed=
+The command finished successfully=
+TOTAL DATA PULLED=
+Was this container created using this plugin=
+Executes `unraid-api start`; no terminal needed=
+Please use a high quality name brand device at least 1GB in size min 4GB recommended=Please use a high quality name brand device at least 1GB in size (min 4GB recommended)
 
 ; Dynamix.system.button plugin
 Array busy=Array en uso
@@ -1177,8 +1202,8 @@ Sign In to Purchase Key=Iniciar Sesión para comprar la licencia
 Sign In to resolve=Iniciar Sesión para resolver
 Sign In=Iniciar Sesión
 Sign me up for the monthly Unraid newsletter=Inscríbeme en el boletín mensual de Unraid
-Sign Out=Cerrar Sesión
 Sign Out of Unraidnet=Sign Out of Unraid.net
+Sign Out=Cerrar Sesión
 Sign Up for Unraidnet=Regístrese para Unraid.net
 Sign Up=Registrarse
 Signing in %s to Unraidnet account=Iniciando sesión de %s en la cuenta de Unraid.net
@@ -1254,20 +1279,19 @@ Your Unraid registration key is ineligible for replacement as it has been replac
 Your USB Flash GUID and other relevant server data will also be sent=También se enviarán su GUID del flash USB y otros datos relevantes del servidor
 
 ; My Servers - 2022-03-13
-Remark your WAN IPv4 is %s=Observación: Su IPv4 WAN es **%s**
-Remark Unraids WAN IPv4 %1s does not match your clients WAN IPv4 %2s=Observación: La IPv4 de Unraid es **%1s** no coincide con sus clientes WAN IPv4 **%2s**
-This may indicate a complex network that will not work with this Remote Access solution=Esto puede indicar una red compleja que no funcionará con esta solución de Acceso Remoto
-Ignore this message if you are currently connected via Remote Access or VPN=Ignore este mensaje si actualmente está conectado a través de acceso remoto o VPN
-
 Automated flash backups will be disabled until you sign in again=Las copias de seguridad flash automáticas se desactivarán hasta que vuelva a iniciar sesión
 Click to copy LAN IP %s=Haga click aqui para copiar la IP LAN %s
 DNS issue, unable to resolve wanip4unraidnet=Problemas con el DNS, no se puede resolver wanip4.unraid.net
 Download latest backup from My Servers Dashboard before signing out=Descargue la última copia de seguridad desde el Tablero de Mis Servidores antes de cerrar la sesión
 Have the code now Go Back=¿Tienes el código ahora? Volver
+Ignore this message if you are currently connected via Remote Access or VPN=Ignore este mensaje si actualmente está conectado a través de acceso remoto o VPN
 LAN IP Copied=IP LAN copiada
+Remark Unraids WAN IPv4 %1s does not match your clients WAN IPv4 %2s=Observación: La IPv4 de Unraid es **%1s** no coincide con sus clientes WAN IPv4 **%2s**
+Remark your WAN IPv4 is %s=Observación: Su IPv4 WAN es **%s**
 Remote access will be disabled=El acceso remoto se desactivará
 Resend Code=Reenviar código
 Resend Email Verification Code=Reenviar código de verificación de correo electrónico
+This may indicate a complex network that will not work with this Remote Access solution=Esto puede indicar una red compleja que no funcionará con esta solución de Acceso Remoto
 We have sent a verifcation email to %s=Se ha enviado un correo electrónico de verificación a %s
 You will no longer have access to this server using this url=Ya no tendrás acceso a este servidor usando <abbr title="%s" class="italic">esta url</abbr>
 
@@ -1289,8 +1313,8 @@ Copy File=Copiar archivo
 Copy Folder=Copiar directorio
 Copy Share=Copiar share
 copy to=copiar a
-Create=Crear
 Create Folder=Crear directorio
+Create=Crear
 Creating=Creando
 Current file name=Nombre del archivo actual
 Current folder name=Nombre del directorio actual
@@ -1298,8 +1322,8 @@ Delete Device=Eliminar dispisitivo
 Delete File=Eliminar archivo
 Delete Folder=Eliminar directorio
 Delete Share=Eliminar share
-DEVICE=DISPOSITIVO
 Device name=Nombre dispositivo
+DEVICE=DISPOSITIVO
 Download File=Descargar archivo
 Enter a valid target=Introducir un objeto válido
 Expand=Expandir
@@ -1346,8 +1370,8 @@ Rename Folder=Renombrar directorio
 rename to=renombrar a
 Renaming=Renombrando
 Save=Guardar
-Search=Buscar
 Search string=Cadena de búsqueda
+Search=Buscar
 Share name=Nombre del recursos
 SHARE=SHARE
 Source device=Dispositivo de origen
@@ -1365,33 +1389,34 @@ This changes the permission of the source recursively=Esto cambia los permisos d
 This copies all the selected sources=Esto copia todas las fuentes seleccionadas
 This copies the device and all its content to another device=Esto copia el dispositivo y todo su contenido a otro dispositivo
 This copies the folder and all its content to another folder=Esto copia el directorio y todo su contenido a otro directorio
-This copies the share and all its content to another share=Esto copia el recurso compartido y todo su contenido a otro recurso compartido
 This copies the selected file=Esto copia el archivo seleccionado.
+This copies the share and all its content to another share=Esto copia el recurso compartido y todo su contenido a otro recurso compartido
 This creates a folder at the current level=Esto crea una carpeta en el nivel actual
 This deletes all selected sources=Esto elimina todas las fuentes seleccionadas
 This deletes the device and all its content=Esto elimina el dispositivo y todo su contenido
 This deletes the folder and all its content=Esto eliminar el directorio y todo su contenido
-This deletes the share and all its content=Esto elimina el recurso compartido y todo su contenido
 This deletes the selected file=Esto elimina el archivo seleccionado.
+This deletes the share and all its content=Esto elimina el recurso compartido y todo su contenido
 This moves all the selected sources=Esto mueve todas las fuentes seleccionadas
 This moves the device and all its content to another device=Esto mueve el dispositivo y todo su contenido a otro dispositivo
 This moves the folder and all its content to another folder=Esto mueve el directorio y todo su contenido a otro directorio
-This moves the share and all its content to another share=Esto mueve el recurso compartido y todo su contenido a otro recurso compartido
 This moves the selected file=Esto mueve el archivo seleccionado
+This moves the share and all its content to another share=Esto mueve el recurso compartido y todo su contenido a otro recurso compartido
 This renames the folder to the new name=Esto cambia el nombre del directorio al nuevo nombre
 This renames the selected file=Esto cambia el nombre del archivo seleccionado
 This renames the selected source=Esto cambia el nombre de la fuente seleccionada
 Toggle TimeAge display=Alternar visualización de tiempo/año
 Total occupied space=Espacio total ocupado
 Updating=Actualizando
+Use sparse option=
 year=año
 years=años
 
 ; My Servers refactor - 2022-05-20
-
 A Trial key provides all the functionality of a Pro Registration key=Una clave de prueba proporciona toda la funcionalidad de una clave de registro Pro
 All you need is an active internet connection, an Unraidnet account, and the <span>My Servers<span> plugin=Todo lo que necesita es una conexión a Internet activa, una cuenta de Unraidnet y el complemento <span class="inline-block">My Servers</span>
 All you need is an active internet connection, an Unraidnet account, and the My Servers plugin=Todo lo que necesita es una conexión a Internet activa, una cuenta de Unraid.net y el complemento <span>My Servers</span>
+Be sure to let the install complete before you close the window=Asegúrese de dejar que la instalación se complete antes de cerrar la ventana
 Checkout the My Servers docs=Consulte la documentación de My Servers
 Close My Servers details and continue to webGUI=Cierre los detalles de My Servers y continúe con webGUI
 Confirm My Servers plugin removal=Confirma la eliminación del complemento My Servers
@@ -1401,8 +1426,9 @@ Continue using My Servers=Continuar usando My Servers
 DNS issue, unable to resolve wanip4unraidnet=Problemas con el DNS, no se puede resolver wanip4.unraid.net
 Enhance your experience with My Servers=Mejore su experiencia con My Servers
 Enhance your Unraid experience with these My Servers BETA features=Mejore su experiencia en Unraid con las funciones de My Servers (BETA)
-Enhance your Unraid experience with these<br> My Servers BETA features=Mejore su experiencia en Unraid con las funciones de <br class=\"hidden sm:block\"/> My Servers (BETA)
+Enhance your Unraid experience with these<br> My Servers BETA features=Mejore su experiencia en Unraid con las funciones de <br class=\hidden sm:block\/> My Servers (BETA)
 Executes `unraid-api start`; no terminal needed=
+For best results, use one of these urls=
 Get started by installing the plugin=Comience instalando el plugin
 Go to My Servers Dashboard=Ir al panel My Servers
 Important=Importante
@@ -1410,16 +1436,27 @@ Install Plugin=Instalar plugin
 Installing My Servers beta=Instalando My Servers (beta)
 Invalid 2FA token=Token 2FA no válido
 Invalid username or password=Usuario o contraseña no válido
+Key file not valid=Archivo de claves no válido
 Key management is done via the dropdown in the top right of the webGUI on every page=La administración de claves se realiza a través del menú desplegable en la parte superior derecha de la webGUI
+Local T2FA requires a myunraidnet certificate=T2FA requiere un certificado *.myunraid.net
+Local T2FA requires Unraid 610 or higher and a myunraidnet certificate=T2FA requiere Unraid 6.10 o superior y un certificado *.myunraid.net
+Local T2FA requires Unraid 610 or higher=T2FA requiere Unraid 6.10 o superior
+Local T2FA requires Use SSLTLS to be Strict and a myunraidnet certificate=T2FA requiere usar SSL/TLS para ser estricto y un certificado *.myunraid.net
+Local T2FA requires Use SSLTLS to be Strict and Unraid 610 or higher=T2FA requiere usar SSL/TLS para ser estricto y Unraid 6.10 o superior
+Local T2FA requires Use SSLTLS to be Strict, Unraid 610 or higher, and a myunraidnet certificate=T2FA requiere usar SSL/TLS para ser estricto, Unraid 6.10 o superior y un certificado *.myunraid.net
+Local T2FA requires Use SSLTLS to be Strict=T2FA requiere Usar SSL/TLS para ser estricto
+My Servers plugin install failed=Fallo en la instalación del plugin My Servers
 No 2FA token detected=2FA token NO detectado
 No thanks=No, gracias
 Not ready to purchase=¿No estás lista para comprar?
 Note USB memory card readers are generally not supported because most do not present unique serial numbers=Nota: Los lectores de tarjetas de memoria USB generalmente no son compatibles porque la mayoría no presenta números de serie únicos
+Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license=Oh no, ¿estás pirateando Unraid OS<br> ¿Estás listo para comprar una licencia real?
 Open Dropdown=Abrir menú desplegable
 Password confirmation must match=La confirmación de la contraseña debe coincidir
 Please access this server via the My Servers Dashboard=Acceda a este servidor a través del panel My Servers
 Please make sure there is a DNS server specified=Asegúrese de que haya especificado un servidor DNS
 Please make sure your server time is accurate to within 5 minutes=Asegúrese de que la hora de su servidor sea precisa dentro de los 5 minutos.
+Please uninstall and reinstall the My Servers plugin=Por favor, desinstale y vuelva a instalar el plugin My Servers
 Please use a high quality name brand device at least 1GB in size=Utilice un dispositivo de marca de alta calidad de al menos 1 GB de tamaño
 Plus more on the way=Y más en camino
 Receive an additional 15 days for your trial=Reciba 15 días adicionales para su prueba
@@ -1433,28 +1470,17 @@ Restarting=Reiniciando
 Sign In Up=Iniciar sesión
 Start Trial=Iniciar prueba
 Stop unraid-api=Para unraid-api
+Strict=Estricto
 Thank you for choosing Unraid OS and My Servers=Gracias por elegir Unraid OS y My Servers
 Thank you installing My Servers=Gracias por instalar My Servers
+The My Servers plugin install is incomplete=La instalación del plugin My Servers está incompleta
 This will connect your server to My Servers <sup>BETA</sup>=Esto conectará su servidor a My Servers <sup>BETA</sup>
 To support more storage devices as your server grows click the Open Dropdown button=Para admitir más dispositivos de almacenamiento a medida que crece su servidor, haga clic en el botón Abrir menú desplegable
 To support more storage devices as your server grows click the Open Dropdown button=Para admitir más dispositivos de almacenamiento a medida que crece su servidor, haga clic en el botón Abrir menú desplegable
 To support more storage devices as your server grows click Upgrade Key=Para agregar más dispositivos de almacenamiento a medida que su servidor crece, haga clic en Actualizar Licencia
 Transparent 2FA Token timed out=Se agotó el tiempo de espera del token 2FA
+Your current url %s is not in the list of allowed origins for this server=Your current url **%s** is not in the list of allowed origins for this server
 Your server will not be usable until you purchase a Registration key or install a free 30-day Trial key=Su servidor no podrá utilizarse hasta que compre una clave de registro o instale una clave de prueba gratuita de 30 días
 Your Unraid registration key is ineligible for replacement as it is blacklisted=Su clave de registro Unraid no es elegible para reemplazo ya que está en la lista negra
-Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license=Oh no, ¿estás pirateando Unraid OS<br> ¿Estás listo para comprar una licencia real?
-Strict=Estricto
-Local T2FA requires Use SSLTLS to be Strict, Unraid 610 or higher, and a myunraidnet certificate=T2FA requiere usar SSL/TLS para ser estricto, Unraid 6.10 o superior y un certificado *.myunraid.net
-Local T2FA requires Use SSLTLS to be Strict=T2FA requiere Usar SSL/TLS para ser estricto
-Local T2FA requires Use SSLTLS to be Strict and Unraid 610 or higher=T2FA requiere usar SSL/TLS para ser estricto y Unraid 6.10 o superior
-Local T2FA requires Use SSLTLS to be Strict and a myunraidnet certificate=T2FA requiere usar SSL/TLS para ser estricto y un certificado *.myunraid.net
-Local T2FA requires Unraid 610 or higher=T2FA requiere Unraid 6.10 o superior
-Local T2FA requires Unraid 610 or higher and a myunraidnet certificate=T2FA requiere Unraid 6.10 o superior y un certificado *.myunraid.net
-Local T2FA requires a myunraidnet certificate=T2FA requiere un certificado *.myunraid.net
-Key file not valid=Archivo de claves no válido
-My Servers plugin install failed=Fallo en la instalación del plugin My Servers
-The My Servers plugin install is incomplete=La instalación del plugin My Servers está incompleta
-Please uninstall and reinstall the My Servers plugin=Por favor, desinstale y vuelva a instalar el plugin My Servers
-Be sure to let the install complete before you close the window=Asegúrese de dejar que la instalación se complete antes de cerrar la ventana
 
-; Note: September 16, 2022 - 6 missing translations
+; Note: March 17, 2023 - 24 missing translations
