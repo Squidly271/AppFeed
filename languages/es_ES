@@ -89,7 +89,6 @@ Added=Añadido
 Install Plugin=Instalar plugin
 Update Plugin=Actualizar Plugin
 
-Requirements not met=
 The requirements for this upgrade have not been met on your system=Los requisitos para esta actualización no se han cumplido en este sistema
 The sidebar for the app click info will list the details=En la barra lateral de la aplicación (haga clic en información) aparecerán los detalles
 
@@ -146,10 +145,7 @@ This usually means your flash drive is corrupted or has dropped offline The rest
 Fatal Docker Image Error=Error fatal de imagen de Docker
 Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=La imagen docker es de solo lectura o está completamente llena lo que producirán problemas. Debe crear una nueva publicación en los foros de Unraid e incluir sus diagnósticos.
 This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system=Esta plantilla está configurada para usar una red personalizada. Es posible que deba ajustar la red o la dirección IP para que coincida con su sistema
-This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
 One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template=Uno o varios puertos utilizados por esta aplicación ya están en uso por otro servicio o aplicación. Deberá ajustar los puertos de host según corresponda en la plantilla.
-Not Enough Memory=
-Community Applications (and Unraid OS) have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
 
 ; CA Sections Keep the length reasonable
 Home=Inicio
@@ -311,7 +307,6 @@ Current Version=Versión Actual
 Min OS=Min. S.O.
 Max OS=Max. S.O.
 Total Downloads=Descargas Totales
-Popularity=
 Licence=Licencia
 Ranked #%s=Posición #%s
 ; as in Trending up or down arrow
@@ -445,7 +440,17 @@ An error occurred - Could not determine configuration=Error - No se puede determ
 Click Install to download and install the Community Applications plugin=Haga clic en **Instalar** para descargar e instalar el plugin **Community Applications**
 
 
-; Note: March 17, 2023 - 5 missing translations
+; Note: April 28, 2023 - 10 missing translations
+Requirements not met=
+This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
+Not Enough Memory=
+Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
+Installation already in progress=
+Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again=
+%s is incompatible with your OS version Please update the OS to proceed=
+%s is incompatible with your OS version Either uninstall %s or update the OS=
+Featured Applications=
+Popularity=
 Access Mode=Modo de acceso
 Add another Path, Port, Variable, Label or Device=Agregar otra Ruta, Puerto, Variable, Etiqueta o Dispositivo
 Add Configuration=Agregar configuración
@@ -1205,7 +1210,6 @@ Confirm closure then continue to webGUI=Confirme el cierre y luego continúe con
 Confirm Password=Confirmar Contraseña
 Confirm=Confirmar
 Connect your Unraidnet account to get started=Conecta tu cuenta de unraid.net para empezar
-Connected to Mothership=Conectado a la nave nodriza
 Continue to Unraid=Continuar con Unraid
 Continue Trial=Continuar Prueba
 Copied key url=URL de clave copiada
@@ -1428,7 +1432,7 @@ Your Unraid registration key is ineligible for replacement as it has been replac
 Your Unraid registration key is ineligible for replacement as it is blacklisted=Su clave de registro Unraid no es elegible para reemplazo ya que está en la lista negra
 Your USB Flash GUID and other relevant server data will also be sent=También se enviarán su GUID del flash USB y otros datos relevantes del servidor
 
-; Note: April 28, 2023 - 72 missing translations
+; Note: April 28, 2023 - 79 missing translations
 Calculated free space value=
 Job=
 Max password length is 128 characters=
@@ -1466,21 +1470,25 @@ Confirm Connect plugin removal=
 Connect Error=
 Connect plugin install failed=
 Connect=
+Connected to Mothership=
+Connected=
 Continue using Connect=
 Customizable Dashboard Tiles=
 Deep Linking=
+Disconnected=
 Download latest backup from Connect Dashboard before signing out=
 Download latest backup from Go to Connect before signing out=
 Download unraid-api Logs=
 Dynamic Remote Access=
 Enhance your experience with Connect=
-Executes `unraid-api start`; no terminal needed=
 For best results, use one of these urls=
 Get quick real-time info on the status of your servers such as storage, container, and VM usage=
 Go to Connect=
 Go to Go to Connect=
+Go to My Servers Dashboard=
 Have a USB flash device that already has an account associated with it=
 If you need to change flash drives, generate a backup from Connect and be up and running in minutes=
+Installing Connect beta=Installing Connect (beta)
 License Management=
 Loading Connect data=
 Manage multiple servers from your phone, tablet, laptop, or PC in the same browser window=
@@ -1490,6 +1498,7 @@ Never ever be left without a backup of your config=
 Not Connected to Mothership=
 Online Flash Backup=
 Please access this server via the Go to Connect=
+Please access this server via the My Servers Dashboard=
 Please uninstall and reinstall the Connect plugin=
 Please wait…=
 Register for Connect by signing in to Unraid.net=
@@ -1501,3 +1510,5 @@ Thank you installing Connect=
 The Connect dashboard links to relevant sections of the webgui, allowing quick access to those settings and server sections=
 The Connect plugin install is incomplete=
 This will register your server with Connect <sup>BETA</sup>=
+Trial key expired at %s=
+With an Unraidnet account you can start using Connect beta which gives you access to the following features=With an Unraid.net account you can start using Connect (beta) which gives you access to the following features:

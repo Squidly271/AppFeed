@@ -144,12 +144,8 @@ You have been logged out=你已注销
 Fatal Flash Drive Error=致命闪存驱动器错误
 This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=这通常意味着您的闪存驱动器已损坏或已脱机。如果此错误继续存在，Unraid GUI的其余部分也将受到影响，请在Unraid论坛中反馈
 Fatal Docker Image Error=致命 Docker 镜像错误
-Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
 This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system=此模板设置为使用自定义网络 您可能需要调整网络或 IP 地址等以匹配您的系统
-This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
 One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template=此应用程序使用的一个或多个端口已被服务器上运行的另一服务或应用程序使用，您需要在模板上相应地调整端口
-Not Enough Memory=
-Community Applications (and Unraid OS) have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
 
 ; CA Sections Keep the length reasonable
 Home=首页
@@ -250,7 +246,6 @@ Proxy=代理
 VOIP=VOIP
 VPN=VPN
 Web=Web
-Privacy=
 Productivity=生产力
 Security=安全性
 Spotlight=推荐
@@ -311,7 +306,6 @@ Current Version=当前版本
 Min OS=最低 OS
 Max OS=最高 OS
 Total Downloads=总下载量
-Popularity=
 Licence=许可证
 Ranked #%s=排名＃%s
 ; as in Trending up or down arrow
@@ -365,7 +359,6 @@ Docker Application Installation finished=Docker 应用程序安装完成
 
 ; Application Cards
 Actions=更多操作
-Pending=
 This application is a driver plugin=此应用程序是一个驱动程序（插件）
 This is a language pack=这是一个语言包
 This application is a docker container=此应用程序是一个 Docker 容器
@@ -411,7 +404,6 @@ Info=信息
 Attention=注意
 Repository=存储库
 Why we picked it=我们为什么选它
-Application Spotlight %s=
 Unraid Staff=Unraid 员工
 
 ; Page Navigation
@@ -445,7 +437,20 @@ An error occurred - Could not determine configuration=发生错误 - 无法确�
 Click Install to download and install the Community Applications plugin=Click **Install** to download and install the **Community Applications** plugin
 
 
-; Note: March 17, 2023 - 8 missing translations
+; Note: April 28, 2023 - 13 missing translations
+Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
+This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
+Not Enough Memory=
+Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
+Installation already in progress=
+Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again=
+%s is incompatible with your OS version Please update the OS to proceed=
+%s is incompatible with your OS version Either uninstall %s or update the OS=
+Featured Applications=
+Privacy=
+Popularity=
+Pending=
+Application Spotlight %s=
 Access Mode=访问模式
 Add another Path, Port, Variable, Label or Device=添加另一个路径、端口、变量、标签或设备
 Add Configuration=添加配置
@@ -1196,7 +1201,6 @@ Confirm closure then continue to webGUI=确认关闭，然后继续访问 webGUI
 Confirm Password=确认密码
 Confirm=确认
 Connect your Unraidnet account to get started=连接您的 Unraidnet 帐户以开始使用
-Connected to Mothership=连接到 Mothership
 Continue to Unraid=继续使用 Unraid
 Continue Trial=继续试用
 Copied key url=复制的密钥网址
@@ -1418,7 +1422,7 @@ Your Unraid registration key is ineligible for replacement as it has been replac
 Your Unraid registration key is ineligible for replacement as it is blacklisted=您的 Unraid 注册码已被列入黑名单，无法更换
 Your USB Flash GUID and other relevant server data will also be sent=您的 USB 闪存 GUID 和其他相关服务器数据也将一并发送
 
-; Note: April 28, 2023 - 82 missing translations
+; Note: April 28, 2023 - 89 missing translations
 bond down=
 Calculated free space value=
 Job=
@@ -1465,19 +1469,23 @@ Confirm Connect plugin removal=
 Connect Error=
 Connect plugin install failed=
 Connect=
+Connected to Mothership=
+Connected=
 Continue using Connect=
 Customizable Dashboard Tiles=
 Deep Linking=
+Disconnected=
 Download latest backup from Connect Dashboard before signing out=
 Download latest backup from Go to Connect before signing out=
 Download unraid-api Logs=
 Dynamic Remote Access=
 Enhance your experience with Connect=
-Executes `unraid-api start`; no terminal needed=
 For best results, use one of these urls=
 Go to Connect=
 Go to Go to Connect=
+Go to My Servers Dashboard=
 If you need to change flash drives, generate a backup from Connect and be up and running in minutes=
+Installing Connect beta=Installing Connect (beta)
 Key management is done via the dropdown in the top right of the webGUI on every page=
 License Management=
 Loading Connect data=
@@ -1487,6 +1495,7 @@ Manage Your Server Within Connect=
 Never ever be left without a backup of your config=
 Online Flash Backup=
 Please access this server via the Go to Connect=
+Please access this server via the My Servers Dashboard=
 Please uninstall and reinstall the Connect plugin=
 Please wait…=
 Register for Connect by signing in to Unraid.net=
@@ -1501,3 +1510,5 @@ Thank you installing Connect=
 The Connect dashboard links to relevant sections of the webgui, allowing quick access to those settings and server sections=
 The Connect plugin install is incomplete=
 This will register your server with Connect <sup>BETA</sup>=
+Trial key expired at %s=
+With an Unraidnet account you can start using Connect beta which gives you access to the following features=With an Unraid.net account you can start using Connect (beta) which gives you access to the following features:
