@@ -6,8 +6,13 @@ Happy Holidays from Andrew, Tracey, and family=Frohe Feiertage von Andrew, Trace
 Please Enjoy Responsibly=Genieße, Verantwortungsvoll
 Popup Blocked CA requires popups to be enabled under certain circumstances You must white list your server within your browser to allow popups=Ein Popup wurde blockiert CA braucht Popups unter bestimmten Bedingungen. Du musst Popups für deinen Server in deinem Browser erlauben.
 Docker Service Not Enabled - Only Plugins Available To Be Installed Or Managed=Docker Service nicht aktiviert - Es sind nur Plugins zum Installieren oder Verwalten verfügbar
+Docker system failed to start - Only Plugins Available To Be Installed Or Managed=
+Array not started - Only Plugins Available To Be Installed Or Managed=
 Community Applications works best when cookies are enabled in your browser Certain features may not be available=Community Applications funktioniert am besten wenn Browser Cookies aktiviert sind. Bestimmte Funktionen könnten nicht verfügbar sein.
 Backup Server Active Some icons may not appear, and plugin installations may be affected=Server Backup aktiv. Einige Icons werden vielleicht nicht angezeigt und die Installation von Plugins ist eventuell beeinträchtigt.
+Debugging enabled This significantly increases the memory used by your browser=
+Browser translation detected Display issues may result=
+Action Centre Enabled=
 
 ; Sorting Options
 Sort By=Sortieren nach
@@ -24,6 +29,8 @@ Application Policy=Anwendungsrichtlinie
 I Understand=Einverstanden
 Installations of apps disabled You must accept the warning to be able to install applications=Die Installation von Apps ist deaktiviert. Bitte die Warnung akzeptieren um Programme installieren zu können
 Click here=Klicke hier
+%s Results Per Page=
+Results Per Page: %s=
 
 ; Plugin Disclaimer
 Community Applications contains both docker containers and plugin applications Plugins are designed for OS enhancements, and run with full privileges on your system and are clearly identified within CA=Community Applications enthält Docker Container und Plugins. Plugins sind zur Systemverbesserungen entwickelt, werden mit allen Benutzerrechten auf dem System ausgeführt und sind klar innerhalb CA identifiziert
@@ -32,6 +39,10 @@ Plugin Note=Plugin Hinweis
 ; Multi Install
 Install Plugin Applications=Plugin installieren
 Select all on page=Alle auf der Seite auswählen
+Install Application=
+Install Applications=
+Update Applications=
+Are you sure you want to update %s applications=
 Are you sure you want to install %s docker and %s plugin applications=Are you sure you want to install %1$s docker and %2$s plugin application(s)
 
 ; Searches
@@ -42,6 +53,9 @@ No Matching Applications Found=Keine passenden Anwendungen gefunden
 ; Repository Related
 %s removed as favourite repository=%s als bevorzugte Quelle entfernt
 %s set as favourite repository=%s als bevorzugte Quelle hinzugefügt
+Click to remove favourite repository=
+Click to set %s as favourite repository=
+Search for apps in repository=
 No description present=Keine Beschreibung verfügbar
 Go to the forum page=Gehe zum Forumsbeitrag
 Go to the webpage=Gehe zur Homepage
@@ -73,7 +87,11 @@ Details=Details
 Added=Hinzugefügt
 ; Install Plugin title of openbox
 Install Plugin=Plugin installieren
+Update Plugin=
 
+Requirements not met=
+The requirements for this upgrade have not been met on your system=
+The sidebar for the app click info will list the details=The sidebar for the app (click info) will list the details
 
 BACK=ZURÜCK
 
@@ -92,6 +110,8 @@ Yes, remove it=Ja, entfernen
 ; App Pinning
 Click to pin this application=Klicke um Anwendung zu makieren
 Click to unpin this application=Klicke um die Makierung der Anwendung aufzuheben
+Pin App=
+Unpin App=
 
 ; Branch installations
 Choose A Branch To Install=Wähle einen Branch zum installieren
@@ -107,6 +127,7 @@ Yes, install them=Ja, installieren
 Cookies not enabled Plugins must be separately installed from docker applications=Cookies sind nicht aktiviert Plugins müssen getrennt von Docker Container installiert werden
 Docker applications will be installed utilizing the most recently saved template with no user input on your part=Docker Container werden mit der aktuellsten Vorlage ohne benutzerdefinierte Eingaben installiert
 Updating Support Links=Hilfe Links werden aktualisiert
+Downloading docker icons=
 Finished Installing If the DONE button did not appear, then you will need to click the red X in the top right corner=Installation abgeschlossen. Falls der FERTIG Button nicht erscheint, klicke bitte das rote X in der oberen rechten Ecke
 
 ; error messages
@@ -120,19 +141,39 @@ Unknown error happened Please post a screenshot in the support thread of the Sta
 Something really wrong happened Reloading the Apps tab will probably fix the problem=Etwas ist schief gegangen. Das Neuladen des App Tabs behebt das Problem wahrscheinlich
 This plugin has a duplicated name from another plugin %s This will impact your ability to install both plugins simultaneously=Dieses Plugin verwendeten bereits einen Name von einem anderen Plugin %s. Dies beeinträchtigt die Installation beider Plugins gleichzeitig
 You have been logged out=Sie wurden abgemeldet
+Fatal Flash Drive Error=
+This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=
+Fatal Docker Image Error=
+Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
+This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system=
+This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
+One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template=
+Not Enough Memory=
+Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
+Installation already in progress=
+Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again=
+%s is incompatible with your OS version Please update the OS to proceed=
+%s is incompatible with your OS version Either uninstall %s or update the OS=
 
 ; CA Sections Keep the length reasonable
+Home=
 Installed Apps=Installierte Apps
 Previous Apps=Vorherige Apps
 Pinned Apps=Markierte Apps
+Favourite Repo=
+Action Centre=
+Recently Added=
 Random Apps=Zufällig Apps
 Top New Installs=Top neue Installationen
+Top Trending Apps=
+Spotlight Apps=
 All Apps=Alle Apps
 Statistics=Statistiken
 Credits=Credits
 Support=Hilfe
 VERSION=VERSION
 Change Log=Changelog
+Debugging=
 
 ; Credits
 Development=Entwicklung
@@ -149,9 +190,21 @@ Translation=Übersetzung
 
 unknown=unbekannt
 Last Change To Application Feed=Letzte änderungen im Anwendungs Feed
+Docker Applications=
+Plugin Applications=
+Templates=
+Official Containers=
+Repositories=
+Private Docker Applications=
+Invalid Templates=
 Template Errors=Vorlagefehler
+Blacklisted Apps=
+Incompatible Applications=
+Deprecated Applications=
+Moderation Entries=
 Primary Server=Primärer Server
 Backup Server=Backup Server
+Installs not allowed from this page=
 
 ; Statistics Popup
 No invalid templates found=Keine ungültigen Vorlagen gefunden
@@ -170,12 +223,20 @@ Individual Application Moderation=Individuelle Anwendungsmoderation
 ; Misc
 Community Applications Changelog=Community Applications Versionshinweise
 
+Each month we highlight some of the amazing work from our community=
+Check out these newly added applications from our awesome community=
+Check out these up and coming apps=
+These apps have the highest percentage of new installs=
+An assortment of randomly chosen apps=
+Featured Applications=
 
 ; Categories try not to be excessively long This is displayed on the left of CA screen
 
 Backup=Backup
 Cloud=Cloud
+Crypto Currency=
 Downloaders=Downloader
+Drivers=
 Game Servers=Spieleserver
 Home Automation=Heimautomatisierung
 Media Applications=Medienanwendungen
@@ -194,8 +255,10 @@ Proxy=Proxy
 VOIP=VOIP
 VPN=VPN
 Web=Web
+Privacy=
 Productivity=Produktivität
 Security=Sicherheit
+Spotlight=
 Tools Utilities=Werkzeuge / Dienstprogramme
 System=System
 Themes=Themes
@@ -237,8 +300,11 @@ and %s more=und %s mehr
 ; App Popup Related
 This application template has been blacklisted=Diese Anwendungsvorlage ist gesperrt
 This application template has been deprecated=Diese Anwenungsvorlage ist veraltet
+This application has additional requirements=
+Additional Requirements=
 Donate To Author=Spende an AutorIn
 Donate To Maintainer=Spende an BetreuerIn
+CLOSE=
 Author=AutorIn
 Maintainer=BetreuerIn
 DockerHub=DockerHub
@@ -247,24 +313,34 @@ DockerHub Stars=DockerHub Sterne
 Added to CA=Hinzugefügt zu CA
 Date Updated=Aktualisierungsdatum
 Current Version=Aktuelle Version
+Min OS=
 Max OS=Maximales OS
 Total Downloads=Gesamte Downloads
+Popularity=
 Licence=Lizenz
 Ranked #%s=Platz #%s
 ; as in Trending up or down arrow
 Trending %s=Trendgin %s
 ; as in As of some date
 As of %s=Stand %s
+Play Video=
+Play Video %s=
 This application is not compatible with your version of Unraid=Diese Anwendung ist nicht kompatible mit dieser Version von Unraid
 Another browser tab or device has updated the displayed templates Some actions are not available=Ein anderer Browser Tab oder ein anderes Gerät hat die angezeige Vorlage aktualisiert. Einige Aktionen sind nicht verfügbar
 WebUI=WebUI
 Reinstall=Neuinstallieren
+Reinstall From Previous Apps=
 Install=Installieren
+Uninstall=
 Project=Projekt
+Read Me First=
+Install second instance=
 Install Using The Templates Default Tag=Instalieren mit den standard Vorgaben der Vorlage
 Moderator Comments=Moderator Kommentare
 Note not all authors keep up to date on change logs=Beachte, dass nicht alle Autoren das Changelog regelmäßig aktualisieren
 Note not all maintainers keep up to date on change logs=Beachte, dass nicht alle Betreuer das Changelog regelmäßig aktualisieren
+Last Update=
+Note All statistics are only gathered every 30 days=
 ;the following if using a space you MUST use nbsp but keep it down to one word if at all possible
 Donate=Spende
 Currently Installed Version=Aktuell installierte Version
@@ -275,6 +351,8 @@ Multi Language Support=Mehrsprachenunterstützung
 Support Forum=Hilfe Forum
 ; as in more than 100000
 More than %s=Mehr als %s
+Remove from Previous Apps=
+Remove=
 See All Apps=Alle Apps anzeigen
 Favourite=Favorit
 Application Type=App Typ
@@ -291,6 +369,17 @@ Setting installed applications to autostart=Autostart der Anwendung einschalten
 Docker Application Installation finished=Installation des Docker Containers abgeschlossen
 
 ; Application Cards
+Actions=
+Pending=
+This application is a driver plugin=This application is a driver (plugin)
+This is a language pack=
+This application is a docker container=
+This application is a plugin=
+This is a spotlight application=
+This is your favourite repository=
+This application is from your favourite repository=
+This application is pinned for later viewing=
+Private Application=
 Remove Application From List=Anwendung von Liste entfernen
 Check off to select multiple reinstalls=Abwählen um Multiple Neuinstalltionen ausführen zu können
 Go to the plugin settings=Gehe zu den Plugin Einstellungen
@@ -301,19 +390,34 @@ Click to install=Klicken zum Installieren
 Click to go to the WebUI=Klicke um zur WebUI zu gehen
 This application template has been deprecated=Diese Anwenungsvorlage ist veraltet
 This application template has been blacklisted=Diese Anwendungsvorlage ist gesperrt
+Click info to see the notes regarding this application=
+This application has additional requirements=
 BETA=BETA
 INSTALLED=INSTALLIERT
 OFFICIAL=OFFIZIEL
+UPDATED=
 This is an official container=Dies ist ein offizieller Container
 Digitally Signed=Digital Signiert
 This container is digitally signed=Der Container ist Digial Signiert
 Docker Hub=Docker Hub
+NOTE You must visit the dockerHub page to gather the information required to install correctly=
+Show CA templates=
+Deprecated=
+Incompatible=
+Blacklisted=
+Template Exists=
+Template already exists in Apps=
 ; eg: LinuxServer Repository
+%s Repository=
 ; eg: Squid's Repository
+%s's Repository=
 
 Info=Info
 Attention=Achtung
+Repository=
 Why we picked it=Warum wir es ausgewählt haben
+Application Spotlight %s=
+Unraid Staff=
 
 ; Page Navigation
 Displaying %s - %s of %s=Zeige %1$s - %2$s (von %3$s)
@@ -331,126 +435,22 @@ Click here to view the language changelog=Klicken um die Übersetzungs Versionhi
 View Missing Translations=Fehlende Übersetzungen anzeigen
 
 ; Update Checks
-
-; dockerHub conversions
-; WebGui
-
-
-; Note: April 29, 2023 - 114 missing translations
-Docker system failed to start - Only Plugins Available To Be Installed Or Managed=
-Array not started - Only Plugins Available To Be Installed Or Managed=
-Debugging enabled This significantly increases the memory used by your browser=
-Browser translation detected Display issues may result=
-Action Centre Enabled=
-%s Results Per Page=
-Results Per Page: %s=
-Install Application=
-Install Applications=
-Update Applications=
-Are you sure you want to update %s applications=
-Click to remove favourite repository=
-Click to set %s as favourite repository=
-Search for apps in repository=
-Update Plugin=
-Requirements not met=
-The requirements for this upgrade have not been met on your system=
-The sidebar for the app click info will list the details=The sidebar for the app (click info) will list the details
-Pin App=
-Unpin App=
-Downloading docker icons=
-Fatal Flash Drive Error=
-This usually means your flash drive is corrupted or has dropped offline The rest of the Unraid GUI will also be affected Post a new thread in the Unraid forums if this error continues=
-Fatal Docker Image Error=
-Your docker image or folder is either read-only or completely full Issues will result because of this You should create a new post in the Unraid forums and include your diagnostics=
-This template is set up to use a custom network You may have to adjust the network or IP address etc to match your system=
-This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly=
-One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template=
-Not Enough Memory=
-Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met=
-Installation already in progress=
-Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again=
-%s is incompatible with your OS version Please update the OS to proceed=
-%s is incompatible with your OS version Either uninstall %s or update the OS=
-Home=
-Favourite Repo=
-Action Centre=
-Recently Added=
-Top Trending Apps=
-Spotlight Apps=
-Debugging=
-Docker Applications=
-Plugin Applications=
-Templates=
-Official Containers=
-Repositories=
-Private Docker Applications=
-Invalid Templates=
-Blacklisted Apps=
-Incompatible Applications=
-Deprecated Applications=
-Moderation Entries=
-Installs not allowed from this page=
-Each month we highlight some of the amazing work from our community=
-Check out these newly added applications from our awesome community=
-Check out these up and coming apps=
-These apps have the highest percentage of new installs=
-An assortment of randomly chosen apps=
-Featured Applications=
-Crypto Currency=
-Drivers=
-Privacy=
-Spotlight=
-This application has additional requirements=
-Additional Requirements=
-CLOSE=
-Min OS=
-Popularity=
-Play Video=
-Play Video %s=
-Reinstall From Previous Apps=
-Uninstall=
-Read Me First=
-Install second instance=
-Last Update=
-Note All statistics are only gathered every 30 days=
-Remove from Previous Apps=
-Remove=
-Actions=
-Pending=
-This application is a driver plugin=This application is a driver (plugin)
-This is a language pack=
-This application is a docker container=
-This application is a plugin=
-This is a spotlight application=
-This is your favourite repository=
-This application is from your favourite repository=
-This application is pinned for later viewing=
-Private Application=
-Click info to see the notes regarding this application=
-This application has additional requirements=
-UPDATED=
-NOTE You must visit the dockerHub page to gather the information required to install correctly=
-Show CA templates=
-Deprecated=
-Incompatible=
-Blacklisted=
-Template Exists=
-Template already exists in Apps=
-%s Repository=
-%s's Repository=
-Repository=
-Application Spotlight %s=
-Unraid Staff=
 Check For Updates=
 Check for updates already running=
 Checking for docker container updates=
 Checking for plugin updates=
 Checking for language updates=
 Checking %s=
+
+; dockerHub conversions
 Determine configuration=
 Would you like CA to attempt to determine any applicable paths, ports, and variables for the template This will entail performing a test installation of the container It will be automatically deleted after processing The container will not be started=Would you like CA to attempt to determine any applicable paths, ports, and variables for the template?  This will entail performing a test installation of the container.  It will be automatically deleted after processing.  The container will not be started.
 An error occurred - Could not determine configuration=
+; WebGui
 Click Install to download and install the Community Applications plugin=Click **Install** to download and install the **Community Applications** plugin
+
+
+; Note: April 29, 2023 - 114 missing translations
 Access Mode=Zugriffsrechte
 Add another Path, Port, Variable, Label or Device=Weiteren Pfad, Port, Variable, Bezeichnung oder Gerät hinzufügen
 Add Configuration=Konfiguration hinzufügen
