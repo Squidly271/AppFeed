@@ -1477,18 +1477,24 @@
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Command times",
+                "Disabled",
                 "Disk spin down is managed by Unraid",
                 "Enter Pool Mount Point",
                 "Legacy Mount Point Compatibility",
                 "NFS must be enabled in Settings->NFS to enable NFS Export",
                 "NFS Version to use when Mounting Remote Shares",
+                "Public",
+                "Private",
+                "Private Hidden",
                 "Refresh and Update",
+                "Remote Share Mount Wait Time",
+                "SMB Settings",
                 "Set Pool Mount Point",
                 "Set the Pool Mount Point for this disk",
                 "Specify SMB Version when Mounting Remote Shares",
                 "Udev and Hotplug",
                 "Unraid 6.10 or later is required for NFSv4 support",
-                "Use only when directed for support"
+                "Use only when directed for support because the messages can flood the log"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Add Remote SMB",
@@ -1515,6 +1521,7 @@
                 "Historical Device is",
                 "If this disk was pre-cleared, you will remove the pre-clear signature",
                 "If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
+                "Invalid Configuration - Remove and Re-add",
                 "is offline",
                 "ISO File is",
                 "Device",
@@ -1526,7 +1533,9 @@
                 "NFS Script Log",
                 "NFS Share",
                 "No Remote SMB",
+                "Not Enabled",
                 "not installed",
+                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
                 "offilne",
                 "You must enable NFS in Settings->NFS to mount NFS shares",
                 "You must enable SMB in Settings->SMB to mount SMB shares",
@@ -1546,6 +1555,8 @@
                 "Use caution when gathering shares into one Root Share",
                 "User and Pool Shares",
                 "User Shares",
+                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
+                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
                 "View Remote SMB",
                 "WARNING",
                 "When you copy files between shares in the Root Share, the files may not end up on the expected disks",
@@ -1556,7 +1567,8 @@
                 "You must enable the Destructive Mode in UD Settings before you can Format this disk",
                 "You WILL have problems if you do",
                 "You will need to enter credentials to list the shares",
-                "ZFS Pool Name"
+                "ZFS Pool Name",
+                "ZFS Volume"
             ]
         },
         "new": {
@@ -1568,22 +1580,9 @@
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Disabled",
-                "Public",
-                "Private",
-                "Private Hidden",
-                "Remote Share Mount Wait Time",
-                "SMB Settings",
-                "Use only when directed for support because the messages can flood the log",
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Invalid Configuration - Remove and Re-add",
-                "Not Enabled",
-                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
-                "ZFS Volume",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -1947,19 +1946,32 @@
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Command times",
+                "Disabled",
+                "Public",
+                "Private",
+                "Private Hidden",
                 "Refresh and Update",
-                "Udev and Hotplug"
+                "Remote Share Mount Wait Time",
+                "SMB Settings",
+                "Udev and Hotplug",
+                "Use only when directed for support because the messages can flood the log"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "An XFS, BTRFS, or ZFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
                 "Clear",
                 "Historical Device is",
+                "Invalid Configuration - Remove and Re-add",
                 "is offline",
+                "Not Enabled",
+                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
                 "offilne",
                 "Remote share mounts are dependent on a solid and reliable network connection and that is difficult to achieve",
                 "Select the Mount Point to Root Share",
+                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
+                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
                 "Working",
-                "ZFS Pool Name"
+                "ZFS Pool Name",
+                "ZFS Volume"
             ]
         },
         "new": {
@@ -1979,22 +1991,9 @@
                 "> For streaming and gaming VMs, set the values low in the single digits.  Recommended values are: vm.dirty_background_ratio"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Disabled",
-                "Public",
-                "Private",
-                "Private Hidden",
-                "Remote Share Mount Wait Time",
-                "SMB Settings",
-                "Use only when directed for support because the messages can flood the log",
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Invalid Configuration - Remove and Re-add",
-                "Not Enabled",
-                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
-                "ZFS Volume",
                 "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
             ]
         },
@@ -2315,24 +2314,36 @@
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Command times",
+                "Disabled",
                 "Enter Pool Mount Point",
                 "NFS must be enabled in Settings->NFS to enable NFS Export",
                 "NFS Version to use when Mounting Remote Shares",
+                "Public",
+                "Private",
+                "Private Hidden",
                 "Refresh and Update",
+                "Remote Share Mount Wait Time",
+                "SMB Settings",
                 "Set Pool Mount Point",
                 "Set the Pool Mount Point for this disk",
                 "Udev and Hotplug",
                 "Unraid 6.10 or later is required for NFSv4 support",
-                "Use only when directed for support"
+                "Use only when directed for support because the messages can flood the log"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "An XFS, BTRFS, or ZFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
                 "Clear",
                 "Historical Device is",
+                "Invalid Configuration - Remove and Re-add",
                 "is offline",
+                "Not Enabled",
+                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
                 "offilne",
+                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
+                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
                 "Working",
-                "ZFS Pool Name"
+                "ZFS Pool Name",
+                "ZFS Volume"
             ]
         },
         "new": {
@@ -2341,22 +2352,9 @@
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Disabled",
-                "Public",
-                "Private",
-                "Private Hidden",
-                "Remote Share Mount Wait Time",
-                "SMB Settings",
-                "Use only when directed for support because the messages can flood the log",
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Invalid Configuration - Remove and Re-add",
-                "Not Enabled",
-                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
-                "ZFS Volume",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -7492,8 +7490,15 @@
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Command times",
+                "Disabled",
+                "Public",
+                "Private",
+                "Private Hidden",
                 "Refresh and Update",
-                "Udev and Hotplug"
+                "Remote Share Mount Wait Time",
+                "SMB Settings",
+                "Udev and Hotplug",
+                "Use only when directed for support because the messages can flood the log"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Add Root Share",
@@ -7507,8 +7512,11 @@
                 "Historical Device is",
                 "If this disk was pre-cleared, you will remove the pre-clear signature",
                 "If you add the disk to the array and the pre-clear signature is removed, Unraid will go through the lengthy process of clearing the disk again",
+                "Invalid Configuration - Remove and Re-add",
                 "is offline",
                 "Mount Point",
+                "Not Enabled",
+                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
                 "offilne",
                 "Reboot",
                 "Select the Mount Point to Root Share",
@@ -7517,11 +7525,14 @@
                 "Use caution when gathering shares into one Root Share",
                 "User and Pool Shares",
                 "User Shares",
+                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
+                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
                 "When you copy files between shares in the Root Share, the files may not end up on the expected disks",
                 "Working",
                 "You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
                 "You will need to enter credentials to list the shares",
-                "ZFS Pool Name"
+                "ZFS Pool Name",
+                "ZFS Volume"
             ]
         },
         "new": {
@@ -7538,22 +7549,9 @@
                 "> For streaming and gaming VMs, set the values low in the single digits.  Recommended values are: vm.dirty_background_ratio"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Disabled",
-                "Public",
-                "Private",
-                "Private Hidden",
-                "Remote Share Mount Wait Time",
-                "SMB Settings",
-                "Use only when directed for support because the messages can flood the log",
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Invalid Configuration - Remove and Re-add",
-                "Not Enabled",
-                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
-                "ZFS Volume",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -9214,20 +9212,33 @@
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Command times",
+                "Disabled",
+                "Public",
+                "Private",
+                "Private Hidden",
                 "Refresh and Update",
-                "Udev and Hotplug"
+                "Remote Share Mount Wait Time",
+                "SMB Settings",
+                "Udev and Hotplug",
+                "Use only when directed for support because the messages can flood the log"
             ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "An XFS, BTRFS, or ZFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
                 "Clear",
                 "Historical Device is",
+                "Invalid Configuration - Remove and Re-add",
                 "is offline",
+                "Not Enabled",
+                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
                 "offilne",
                 "Select the Mount Point to Root Share",
                 "This is a way to gather Unraid shares into one Root Share",
                 "Use caution when gathering shares into one Root Share",
+                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
+                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
                 "Working",
-                "ZFS Pool Name"
+                "ZFS Pool Name",
+                "ZFS Volume"
             ]
         },
         "new": {
@@ -9236,22 +9247,9 @@
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
-                "Disabled",
-                "Public",
-                "Private",
-                "Private Hidden",
-                "Remote Share Mount Wait Time",
-                "SMB Settings",
-                "Use only when directed for support because the messages can flood the log",
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Invalid Configuration - Remove and Re-add",
-                "Not Enabled",
-                "Note: With User Shares, files on the Cache and Pool Devices will not show in the Root Share",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
-                "ZFS Volume",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -13241,7 +13239,6 @@
         "new": {
             "/translations.txt": [
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "Set custom server tiles how you like and automatically display your servers banner image on your Connect Dashboard",
                 "This will register your server with Connect <sup>BETA</sup>"
             ]
         },
