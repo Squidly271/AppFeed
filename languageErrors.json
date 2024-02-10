@@ -1332,6 +1332,7 @@
                 "Debugging enabled This significantly increases the memory used by your browser",
                 "Browser translation detected Display issues may result",
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
                 "Sort By",
                 "Name Ascending",
                 "Name Descending",
@@ -1343,6 +1344,7 @@
                 "Select all on page",
                 "Install Application",
                 "Install Applications",
+                "Update Application",
                 "Update Applications",
                 "Are you sure you want to update %s applications",
                 "%s removed as favourite repository",
@@ -1396,10 +1398,15 @@
                 "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Home",
                 "Favourite Repo",
                 "Action Centre",
@@ -1517,15 +1524,6 @@
             "/vms.txt": [
                 "Description ",
                 "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
             ]
         },
         "files": [
@@ -1636,6 +1634,34 @@
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
                 "Featured Applications",
                 "CLOSE"
+            ],
+            "Open Files/openfiles.txt": [
+                "Open",
+                "May prevent shutdown"
+            ],
+            "Tips and Tweaks/tipsandtweaks.txt": [
+                "Max User Instances",
+                "Power Saving Settings"
+            ],
+            "Unassigned Devices/editdevicesettings.txt": [
+                "Click to select file or click Default button for the Device Script File"
+            ],
+            "Unassigned Devices/unassigneddevices.txt": [
+                "Encrypt CIFS Mount",
+                "User Shares without Pools",
+                "Partition",
+                "Passed",
+                "Passed Through",
+                "Pool",
+                "Preclear",
+                "Remote Shares",
+                "Search for Servers, or enter the Server name or IP address manually",
+                "Select the Root Share",
+                "Unassigned Devices",
+                "Unassigned Disks",
+                "User Shares without Pools",
+                "User Shares - allow access to User Shares, including Cache and Pool files",
+                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files"
             ]
         },
         "new": {
@@ -1665,40 +1691,16 @@
                 "> to reset the cache-pressure execute 'sudo sysctl vm.vfs_cache_pressure",
                 "> set ulimit to NN to limit memory used by script (default"
             ],
-            "/Open Files/openfiles.txt": [
-                "Open",
-                "May prevent shutdown"
-            ],
             "/Parity Check Tuning/paritychecktuning.txt": [
                 ">* The parity check will now actually take 10 days elapsed time (10 x 3 "
             ],
             "/Tips and Tweaks/tipsandtweaks.txt": [
-                "Max User Instances",
-                "Power Saving Settings",
                 "> For streaming and gaming VMs, set the values low in the single digits.  Recommended values are: vm.dirty_background_ratio"
-            ],
-            "/Unassigned Devices/editdevicesettings.txt": [
-                "Click to select file or click Default button for the Device Script File"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Encrypt CIFS Mount",
-                "User Shares without Pools",
-                "Passed",
-                "Passed Through",
-                "Pool",
-                "Preclear",
-                "Remote Shares",
-                "Search for Servers, or enter the Server name or IP address manually",
-                "Select the Root Share",
-                "Serial Number (Mount Point)",
-                "Unassigned Devices",
-                "Unassigned Disks",
-                "User Shares without Pools",
-                "User Shares - allow access to User Shares, including Cache and Pool files",
-                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
             ]
         },
@@ -2050,15 +2052,47 @@
                 "VM Name",
                 "Warning removing Snapshots can break the chain"
             ],
+            "Community Apps/apps.txt": [
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
+                "Update Application",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page"
+            ],
+            "Open Files/openfiles.txt": [
+                "Open",
+                "May prevent shutdown"
+            ],
+            "Tips and Tweaks/tipsandtweaks.txt": [
+                "Max User Instances",
+                "Power Saving Settings"
+            ],
             "Unassigned Devices/unassigneddevices.txt": [
                 "Changing the Mount Point will also change the disk label on all disks and the pool name on a ZFS disk",
+                "Encrypt CIFS Mount",
                 "Enter the server name and it will be added to the local DNS names and will then resolve by name",
                 "failed to",
                 "If the IP address of the server shows in the list after searching, your DNS server is not resolving the name",
                 "If shares do not show, check your credentials",
                 "offline",
+                "User Shares without Pools",
+                "Partition",
+                "Passed",
+                "Passed Through",
+                "Pool",
+                "Preclear",
                 "Remote Server is",
-                "Remote share mounts are dependent on a solid and reliable network connection and that can be difficult to achieve"
+                "Remote Shares",
+                "Remote share mounts are dependent on a solid and reliable network connection and that can be difficult to achieve",
+                "Search for Servers, or enter the Server name or IP address manually",
+                "Select the Root Share",
+                "Unassigned Devices",
+                "Unassigned Disks",
+                "User Shares without Pools",
+                "User Shares - allow access to User Shares, including Cache and Pool files",
+                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files"
             ]
         },
         "new": {
@@ -2070,51 +2104,21 @@
                 "Description ",
                 "Top Image "
             ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
-            ],
             "/Dynamix Cache Dirs/foldercachingsettings.txt": [
                 "> Set cache_pressure to NN (default ",
                 "> to reset the cache-pressure execute 'sudo sysctl vm.vfs_cache_pressure",
                 "> set ulimit to NN to limit memory used by script (default"
             ],
-            "/Open Files/openfiles.txt": [
-                "Open",
-                "May prevent shutdown"
-            ],
             "/Parity Check Tuning/paritychecktuning.txt": [
                 ">* The parity check will now actually take 10 days elapsed time (10 x 3 "
             ],
             "/Tips and Tweaks/tipsandtweaks.txt": [
-                "Max User Instances",
-                "Power Saving Settings",
                 "> For streaming and gaming VMs, set the values low in the single digits.  Recommended values are: vm.dirty_background_ratio"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Encrypt CIFS Mount",
-                "User Shares without Pools",
-                "Passed",
-                "Passed Through",
-                "Pool",
-                "Preclear",
-                "Remote Shares",
-                "Search for Servers, or enter the Server name or IP address manually",
-                "Select the Root Share",
-                "Serial Number (Mount Point)",
-                "Unassigned Devices",
-                "Unassigned Disks",
-                "User Shares without Pools",
-                "User Shares - allow access to User Shares, including Cache and Pool files",
-                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
             ]
         },
@@ -2719,12 +2723,19 @@
                 "wsport for virtual console"
             ],
             "Community Apps/apps.txt": [
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
+                "Update Application",
                 "This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Featured Applications",
                 "Popularity"
             ],
@@ -2733,6 +2744,10 @@
                 "Allows CA to automatically open the sidebar for more information when hovering over an application's icon",
                 "Disable Mouse Wheel Page Changes",
                 "This setting disables using left or right on a mouse wheel to change the page"
+            ],
+            "Open Files/openfiles.txt": [
+                "Open",
+                "May prevent shutdown"
             ],
             "Parity Check Tuning/paritychecktuning.txt": [
                 "Parity Check Tuning",
@@ -2778,6 +2793,7 @@
                 "An XFS, BTRFS, or ZFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
                 "Changing the Mount Point will also change the disk label on all disks and the pool name on a ZFS disk",
                 "Clear",
+                "Encrypt CIFS Mount",
                 "Enter the server name and it will be added to the local DNS names and will then resolve by name",
                 "Exclusive Share files will not be accessible in a Root Share",
                 "failed to",
@@ -2788,10 +2804,22 @@
                 "is offline",
                 "Not Enabled",
                 "offline",
+                "User Shares without Pools",
+                "Partition",
+                "Passed",
+                "Passed Through",
+                "Pool",
+                "Preclear",
                 "Remote Server is",
+                "Remote Shares",
                 "Remote share mounts are dependent on a solid and reliable network connection and that can be difficult to achieve",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
+                "Search for Servers, or enter the Server name or IP address manually",
+                "Select the Root Share",
+                "Unassigned Devices",
+                "Unassigned Disks",
+                "User Shares without Pools",
+                "User Shares - allow access to User Shares, including Cache and Pool files",
+                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "Working",
                 "ZFS Pool Name",
                 "ZFS Volume"
@@ -2806,38 +2834,10 @@
                 "Description ",
                 "Top Image "
             ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
-            ],
-            "/Open Files/openfiles.txt": [
-                "Open",
-                "May prevent shutdown"
-            ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Encrypt CIFS Mount",
-                "User Shares without Pools",
-                "Passed",
-                "Passed Through",
-                "Pool",
-                "Preclear",
-                "Remote Shares",
-                "Search for Servers, or enter the Server name or IP address manually",
-                "Select the Root Share",
-                "Serial Number (Mount Point)",
-                "Unassigned Devices",
-                "Unassigned Disks",
-                "User Shares without Pools",
-                "User Shares - allow access to User Shares, including Cache and Pool files",
-                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -4686,6 +4686,7 @@
                 "Debugging enabled This significantly increases the memory used by your browser",
                 "Browser translation detected Display issues may result",
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
                 "Sort By",
                 "Name Ascending",
                 "Name Descending",
@@ -4707,6 +4708,7 @@
                 "Select all on page",
                 "Install Application",
                 "Install Applications",
+                "Update Application",
                 "Update Applications",
                 "Are you sure you want to update %s applications",
                 "Search",
@@ -4788,10 +4790,15 @@
                 "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Home",
                 "Installed Apps",
                 "Previous Apps",
@@ -5060,15 +5067,6 @@
             "/vms.txt": [
                 "Description ",
                 "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
             ]
         },
         "files": [
@@ -8152,6 +8150,7 @@
                 "Debugging enabled This significantly increases the memory used by your browser",
                 "Browser translation detected Display issues may result",
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
                 "Sort By",
                 "Name Ascending",
                 "Name Descending",
@@ -8173,6 +8172,7 @@
                 "Select all on page",
                 "Install Application",
                 "Install Applications",
+                "Update Application",
                 "Update Applications",
                 "Are you sure you want to update %s applications",
                 "Search",
@@ -8254,10 +8254,15 @@
                 "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Home",
                 "Installed Apps",
                 "Previous Apps",
@@ -8526,15 +8531,6 @@
             "/vms.txt": [
                 "Description ",
                 "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
             ]
         },
         "files": [
@@ -8825,13 +8821,20 @@
             ],
             "Community Apps/apps.txt": [
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
+                "Update Application",
                 "This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Featured Applications",
                 "Popularity",
                 "Pending"
@@ -8844,6 +8847,10 @@
             ],
             "File Activity/fileactivity.txt": [
                 "Refresh Page"
+            ],
+            "Open Files/openfiles.txt": [
+                "Open",
+                "May prevent shutdown"
             ],
             "Parity Check Tuning/paritychecktuning.txt": [
                 "Parity Problems Assistant",
@@ -8906,8 +8913,10 @@
                 "Available User Watches",
                 "Current User Watches",
                 "Max SMB Open Files",
+                "Max User Instances",
                 "Max User Watches",
                 "Normal CPU Scaling Governor",
+                "Power Saving Settings",
                 "Power Saving CPU Scaling Governor",
                 "Schedule CPU Power Saving Mode",
                 "Time to set Normal CPU Scaling",
@@ -8937,6 +8946,7 @@
                 "Clear",
                 "Disk Sharing must be disabled to add a Root Share",
                 "Do not put files or folders into the /mnt/rootshare/ folder",
+                "Encrypt CIFS Mount",
                 "Enter the server name and it will be added to the local DNS names and will then resolve by name",
                 "Exclusive Share files will not be accessible in a Root Share",
                 "failed to",
@@ -8952,17 +8962,28 @@
                 "Mount Point",
                 "Not Enabled",
                 "offline",
+                "User Shares",
+                "User Shares without Pools",
+                "Partition",
+                "Passed",
+                "Passed Through",
+                "Pool",
+                "Preclear",
                 "Reboot",
                 "Remote Server is",
+                "Remote Shares",
                 "Remote share mounts are dependent on a solid and reliable network connection and that can be difficult to achieve",
-                "Select the Mount Point to Root Share",
+                "Search for Servers, or enter the Server name or IP address manually",
+                "Select the Root Share",
                 "Share Type",
                 "This is a way to gather Unraid shares into one Root Share",
+                "Unassigned Devices",
+                "Unassigned Disks",
                 "Use caution when gathering shares into one Root Share",
-                "User and Pool Shares",
                 "User Shares",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
+                "User Shares without Pools",
+                "User Shares - allow access to User Shares, including Cache and Pool files",
+                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "When you copy files between shares in the Root Share, the files may not end up on the expected disks",
                 "Working",
                 "You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share",
@@ -8980,48 +9001,18 @@
                 "Description ",
                 "Top Image "
             ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
-            ],
             "/Dynamix Cache Dirs/foldercachingsettings.txt": [
                 "> Set cache_pressure to NN (default ",
                 "> to reset the cache-pressure execute 'sudo sysctl vm.vfs_cache_pressure",
                 "> set ulimit to NN to limit memory used by script (default"
             ],
-            "/Open Files/openfiles.txt": [
-                "Open",
-                "May prevent shutdown"
-            ],
             "/Tips and Tweaks/tipsandtweaks.txt": [
-                "Max User Instances",
-                "Power Saving Settings",
                 "> For streaming and gaming VMs, set the values low in the single digits.  Recommended values are: vm.dirty_background_ratio"
             ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Encrypt CIFS Mount",
-                "User Shares without Pools",
-                "Passed",
-                "Passed Through",
-                "Pool",
-                "Preclear",
-                "Remote Shares",
-                "Search for Servers, or enter the Server name or IP address manually",
-                "Select the Root Share",
-                "Serial Number (Mount Point)",
-                "Unassigned Devices",
-                "Unassigned Disks",
-                "User Shares without Pools",
-                "User Shares - allow access to User Shares, including Cache and Pool files",
-                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -9783,6 +9774,7 @@
                 "Debugging enabled This significantly increases the memory used by your browser",
                 "Browser translation detected Display issues may result",
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
                 "Sort By",
                 "Name Ascending",
                 "Name Descending",
@@ -9793,6 +9785,7 @@
                 "Results Per Page: %s",
                 "Install Application",
                 "Install Applications",
+                "Update Application",
                 "Update Applications",
                 "Are you sure you want to update %s applications",
                 "%s removed as favourite repository",
@@ -9845,10 +9838,15 @@
                 "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Home",
                 "Favourite Repo",
                 "Action Centre",
@@ -9981,15 +9979,6 @@
             "/vms.txt": [
                 "Description ",
                 "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
             ]
         },
         "files": [
@@ -10801,13 +10790,20 @@
                 "wsport for virtual console"
             ],
             "Community Apps/apps.txt": [
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
+                "Update Application",
                 "This template is set up to run as Privileged This is a possible security risk and usually does not need to be enabled Note that some applications require privileged in order to operate correctly",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Featured Applications",
                 "Popularity"
             ],
@@ -10819,6 +10815,10 @@
             ],
             "File Activity/fileactivity.txt": [
                 "Refresh Page"
+            ],
+            "Open Files/openfiles.txt": [
+                "Open",
+                "May prevent shutdown"
             ],
             "Unassigned Devices/unassigneddevicessettings.txt": [
                 "Command times",
@@ -10836,6 +10836,7 @@
                 "An XFS, BTRFS, or ZFS disk partitioned in UD is compatible with the array disk partitioning and can be added to the array",
                 "Changing the Mount Point will also change the disk label on all disks and the pool name on a ZFS disk",
                 "Clear",
+                "Encrypt CIFS Mount",
                 "Enter the server name and it will be added to the local DNS names and will then resolve by name",
                 "Exclusive Share files will not be accessible in a Root Share",
                 "failed to",
@@ -10846,13 +10847,24 @@
                 "is offline",
                 "Not Enabled",
                 "offline",
+                "User Shares without Pools",
+                "Partition",
+                "Passed",
+                "Passed Through",
+                "Pool",
+                "Preclear",
                 "Remote Server is",
+                "Remote Shares",
                 "Remote share mounts are dependent on a solid and reliable network connection and that can be difficult to achieve",
-                "Select the Mount Point to Root Share",
+                "Search for Servers, or enter the Server name or IP address manually",
+                "Select the Root Share",
                 "This is a way to gather Unraid shares into one Root Share",
+                "Unassigned Devices",
+                "Unassigned Disks",
                 "Use caution when gathering shares into one Root Share",
-                "User and Pool Shares will include all files in User Shares, Cache and Pool Devices",
-                "User Shares will allow access to User Shares, but the Root Share will not include Cache and Pool Device files",
+                "User Shares without Pools",
+                "User Shares - allow access to User Shares, including Cache and Pool files",
+                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "Working",
                 "ZFS Pool Name",
                 "ZFS Volume"
@@ -10867,38 +10879,10 @@
                 "Description ",
                 "Top Image "
             ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
-            ],
-            "/Open Files/openfiles.txt": [
-                "Open",
-                "May prevent shutdown"
-            ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Encrypt CIFS Mount",
-                "User Shares without Pools",
-                "Passed",
-                "Passed Through",
-                "Pool",
-                "Preclear",
-                "Remote Shares",
-                "Search for Servers, or enter the Server name or IP address manually",
-                "Select the Root Share",
-                "Serial Number (Mount Point)",
-                "Unassigned Devices",
-                "Unassigned Disks",
-                "User Shares without Pools",
-                "User Shares - allow access to User Shares, including Cache and Pool files",
-                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "> + '/usr/local/sbin/rc.unassigned mount name",
                 "> + '/usr/local/sbin/rc.unassigned umount name",
                 "> + '/usr/local/sbin/rc.unassigned spindown name",
@@ -12233,6 +12217,7 @@
                 "Debugging enabled This significantly increases the memory used by your browser",
                 "Browser translation detected Display issues may result",
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
                 "Sort By",
                 "Name Ascending",
                 "Name Descending",
@@ -12245,6 +12230,7 @@
                 "Select all on page",
                 "Install Application",
                 "Install Applications",
+                "Update Application",
                 "Update Applications",
                 "Are you sure you want to update %s applications",
                 "%s removed as favourite repository",
@@ -12297,10 +12283,15 @@
                 "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Home",
                 "Favourite Repo",
                 "Action Centre",
@@ -12416,15 +12407,6 @@
             "/vms.txt": [
                 "Description ",
                 "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
             ]
         },
         "files": [
@@ -15077,6 +15059,7 @@
                 "Debugging enabled This significantly increases the memory used by your browser",
                 "Browser translation detected Display issues may result",
                 "Action Centre Enabled",
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
                 "Sort By",
                 "Name Ascending",
                 "Name Descending",
@@ -15098,6 +15081,7 @@
                 "Select all on page",
                 "Install Application",
                 "Install Applications",
+                "Update Application",
                 "Update Applications",
                 "Are you sure you want to update %s applications",
                 "Search",
@@ -15179,10 +15163,15 @@
                 "One or more ports used by this application are already in use by another service or app running on your server You will need to adjust the host ports accordingly on the template",
                 "Not Enough Memory",
                 "Community Applications and Unraid OS have a minimum required installed memory of 4G CA cannot run without those mimimums being met",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
                 "Installation already in progress",
                 "Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again",
                 "%s is incompatible with your OS version Please update the OS to proceed",
                 "%s is incompatible with your OS version Either uninstall %s or update the OS",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page",
                 "Home",
                 "Installed Apps",
                 "Previous Apps",
@@ -15451,15 +15440,6 @@
             "/vms.txt": [
                 "Description ",
                 "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
             ]
         },
         "files": [
@@ -15574,10 +15554,39 @@
             "/vms.txt": [
                 "define Multifunctiion Support"
             ],
+            "Community Apps/apps.txt": [
+                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
+                "Update Application",
+                "Run Anyways",
+                "Memory Requirements not met Problems may result",
+                "Browser failed to communicate with Unraid Server",
+                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
+                "Attempt to Fix Via Reload Page"
+            ],
+            "Unassigned Devices/editdevicesettings.txt": [
+                "Click to select file or click Default button for the Device Script File"
+            ],
             "Unassigned Devices/fsck.txt": [
                 "Cannot determine file system on an encrypted disk",
                 "Executing file system check",
                 "Executing file system scrub"
+            ],
+            "Unassigned Devices/unassigneddevices.txt": [
+                "Encrypt CIFS Mount",
+                "User Shares without Pools",
+                "Partition",
+                "Passed",
+                "Passed Through",
+                "Pool",
+                "Preclear",
+                "Remote Shares",
+                "Search for Servers, or enter the Server name or IP address manually",
+                "Select the Root Share",
+                "Unassigned Devices",
+                "Unassigned Disks",
+                "User Shares without Pools",
+                "User Shares - allow access to User Shares, including Cache and Pool files",
+                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files"
             ]
         },
         "new": {
@@ -15589,37 +15598,10 @@
                 "Description ",
                 "Top Image "
             ],
-            "/Community Apps/apps.txt": [
-                "Deprecated OS version No further updates to Community Applications will be issued for this OS version",
-                "Update Application",
-                "Run Anyways",
-                "Memory Requirements not met Problems may result",
-                "Browser failed to communicate with Unraid Server",
-                "For unknown reasons, your browser was unable to communicate with Community Applications running on your server",
-                "Attempt to Fix Via Reload Page"
-            ],
-            "/Unassigned Devices/editdevicesettings.txt": [
-                "Click to select file or click Default button for the Device Script File"
-            ],
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(sec"
             ],
             "/Unassigned Devices/unassigneddevices.txt": [
-                "Encrypt CIFS Mount",
-                "User Shares without Pools",
-                "Passed",
-                "Passed Through",
-                "Pool",
-                "Preclear",
-                "Remote Shares",
-                "Search for Servers, or enter the Server name or IP address manually",
-                "Select the Root Share",
-                "Serial Number (Mount Point)",
-                "Unassigned Devices",
-                "Unassigned Disks",
-                "User Shares without Pools",
-                "User Shares - allow access to User Shares, including Cache and Pool files",
-                "User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files",
                 "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
             ]
         },
