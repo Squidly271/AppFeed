@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Upload Staging Plugin to Cloudflare Bucket
         uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --delete --follow-symlinks --exclude '.git/*' --exclude '.github/*'
         env:
           AWS_S3_ENDPOINT: ${{ secrets.CF_ENDPOINT }}
           AWS_S3_BUCKET: ${{ secrets.CF_BUCKET }}
