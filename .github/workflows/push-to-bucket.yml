@@ -1,0 +1,24 @@
+name: Push to S3 Bucket
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Upload Staging Plugin to Cloudflare Bucket
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --delete --follow-symlinks --exclude '.git/*' --exclude '.github/*'
+        env:
+          AWS_S3_ENDPOINT: ${{ secrets.CF_ENDPOINT }}
+          AWS_S3_BUCKET: ${{ secrets.CF_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.CF_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CF_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'auto'
+          DEST_DIR: 'feed/'
