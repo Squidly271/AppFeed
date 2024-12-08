@@ -22,7 +22,6 @@ Name Descending=Nome (Z-A)
 Downloads=Download
 Date Added=Data di aggiunta
 Number Of Apps=Numero di app
-
 ; Initial disclaimer translations
 Disclaimer=Informativa
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=
@@ -88,13 +87,14 @@ Search Apps=Cerca App
 Registry=Registro
 Details=Dettagli
 Added=Aggiunto
-
 ; Install Plugin title of openbox
 Install Plugin=Installa Plugin
 Update Plugin=Aggiorna Plugin
+
 Requirements not met=Requisiti non rispettati
 The requirements for this upgrade have not been met on your system=
 The sidebar for the app click info will list the details=The sidebar for the app (click info) will list the details
+
 BACK=INDIETRO
 
 ; Remove App from previously installed
@@ -121,6 +121,7 @@ Choose A Branch To Install=
 ; Multiple application installs
 ; no apps selected
 Install Selected Applications=Installa le app selezionate
+
 Yes, install it=Sì, installa le app
 
 ; Multi-install popup
@@ -155,11 +156,14 @@ Run Anyways=
 Memory Requirements not met Problems may result=
 Installation already in progress=
 Another plugin installation or update is already in progress and this one cannot start Wait until the current installation or update is completed and try again=
+Clear Flag=
 %s is incompatible with your OS version Please update the OS to proceed=
 %s is incompatible with your OS version Either uninstall %s or update the OS=
 Browser failed to communicate with Unraid Server=
 For unknown reasons, your browser was unable to communicate with Community Applications running on your server=
 Attempt to Fix Via Reload Page=
+External Link=
+Clicking OK will take you to a 3rd party website not associated with Limetech=
 
 ; CA Sections Keep the length reasonable
 Home=
@@ -193,6 +197,7 @@ Copyright=Copyright
 Translation=Traduzione
 
 ; Statistics page
+
 unknown=sconosciuto
 Last Change To Application Feed=
 Docker Applications=
@@ -303,9 +308,9 @@ OtherUncategorized=Other:Uncategorized
 and %s more=
 
 ; App Popup Related
-This application template has been blacklisted=This application / template has been blacklisted
-This application template has been deprecated=This application / template has been deprecated
-This application has additional requirements=
+This application template has been blacklisted=Questo modello di app è stato inserito nella blacklist
+This application template has been deprecated=Questo modello di app è abbandonato
+This application has additional requirements=Questa app ha requisiti aggiuntivi
 Additional Requirements=
 Donate To Author=
 Donate To Maintainer=
@@ -324,10 +329,8 @@ Total Downloads=
 Popularity=
 Licence=
 Ranked #%s=
-
 ; as in Trending up or down arrow
 Trending %s=
-
 ; as in As of some date
 As of %s=(As of %s)
 Play Video=
@@ -341,24 +344,21 @@ Install=
 Uninstall=
 Project=
 Read Me First=
-Install second instance=
+Install another instance=
 Install Using The Templates Default Tag=Install Using The Template's Default Tag
 Moderator Comments=Moderator Comments:
 Note not all authors keep up to date on change logs=
 Note not all maintainers keep up to date on change logs=
 Last Update=
 Note All statistics are only gathered every 30 days=
-
-; the following if using a space you MUST use nbsp but keep it down to one word if at all possible
+;the following if using a space you MUST use nbsp but keep it down to one word if at all possible
 Donate=
 Currently Installed Version=
 Install The Update=
-
 ; as in you have the latest version already installed
 Latest Version=
 Multi Language Support=
 Support Forum=Forum di Supporto
-
 ; as in more than 100000
 More than %s=
 Remove from Previous Apps=
@@ -417,6 +417,11 @@ Incompatible=Incompatibili
 Blacklisted=Nella blacklist
 Template Exists=Modello esistente
 Template already exists in Apps=Il modello esiste già nelle App
+; eg: LinuxServer Repository
+%s Repository=%s Repository
+; eg: Squid's Repository
+%s's Repository=Repository di %s
+
 Info=Info
 Attention=Attenzione
 Repository=
@@ -424,14 +429,9 @@ Why we picked it=Perché l'abbiamo scelta
 Application Spotlight %s=App in evidenza %s
 Unraid Staff=Staff di Unraid
 
-; eg: LinuxServer Repository
-%s Repository=%s Repository
-
-; eg: Squid's Repository
-%s's Repository=Repository di %s
-
 ; Page Navigation
 Displaying %s - %s of %s=Displaying %1$s - %2$s (of %3$s)
+
 Updating Content=Aggiorno contenuto…
 Language=Lingua
 Switch to this language=
@@ -456,12 +456,11 @@ Checking %s=Verifico %s
 Determine configuration=
 Would you like CA to attempt to determine any applicable paths, ports, and variables for the template This will entail performing a test installation of the container It will be automatically deleted after processing The container will not be started=Would you like CA to attempt to determine any applicable paths, ports, and variables for the template?  This will entail performing a test installation of the container.  It will be automatically deleted after processing.  The container will not be started.
 An error occurred - Could not determine configuration=
-
 ; WebGui
 Click Install to download and install the Community Applications plugin=Clicca **Installa** per scaricare e installare il plugin **App della Community**
 
 
-; Note: February 10, 2024 - 362 missing translations
+; Note: December 8, 2024 - 176 missing translations
 Access Mode=Modalità d'accesso
 Add another Path, Port, Variable, Label or Device=Aggiungi Percorso, Porta, Variabile, Etichetta o Dispositivo
 Add Configuration=Aggiungi configurazione
@@ -523,6 +522,7 @@ Icon URL=URL Icona
 Image ID=ID Immagine
 Key=Chiave
 Label=Etichetta
+Lock sortable items=Abilita personalizzazione elenco
 Management=Gestione
 MediaApp=MediaApp
 MediaServer=MediaServer
@@ -583,6 +583,7 @@ The command finished successfully=Comando terminato correttamente
 TOTAL DATA PULLED=TOTALE DATI ESTRATTI
 Total size=Dimensione totale
 Unknown action=Azione sconosciuta
+Unlock sortable items=Disabilita personalizzazione elenco
 Update All=Aggiorna tutto
 update ready=aggiornamento pronto
 Value=Valore
@@ -595,8 +596,6 @@ Was this container created using this plugin=Questo contenitore è stato creato 
 Web=Web
 WebUI=WebUI
 Writable=Scrivibile
-Lock sortable items=Abilita personalizzazione elenco
-Unlock sortable items=Disabilita personalizzazione elenco
 %s day ago=%s giorno fa
 %s days ago=%s giorni fa
 %s hour ago=%s ora fa
@@ -620,11 +619,11 @@ Add VM=Aggiungi VM
 Advanced View=Vista Avanzata
 AFP Security Settings=Impostazioni di sicurezza AFP
 ago=fa
+Always Allow=
 All=Tutti
 Anonymize diagnostics may make troubleshooting more difficult=La diagnostica anonima può rendere la risoluzione dei problemi più difficile
 Anonymous Mode=Modalità Anonima
 Apply=Applica
-Array must be Stopped to change=L'array deve essere **fermato** per apportare le modifiche
 Apps=App
 Array Clearing=Pulizia array…
 Array Copying=Array in Copia…
@@ -657,7 +656,7 @@ bytes=bytes
 By default UEFI and Legacy boot mode are both enabled when GRUB is used to boot the machine=
 Cache=Cache
 Calculated free space value=
-Cancel=Cancella
+Cancel=Annulla
 Capabilities=Funzionalità
 Case-sensitive names=Nomi Case-sensitive
 Center=Centro
@@ -668,14 +667,15 @@ Clear=Pulito
 Clearing=Pulizia
 Click for context menu=Fai click per il menù contestuale
 Click=Click
+Clicking OK will take you to a 3rd party website not associated with Lime Technology=
 close all notifications=chiudi tutte le notifiche
 Close=Chiudi
 close=chiudi
 Command execution=
 Comment=Commento
 complete=completo
+Configuration not found=Configurazione non trovata
 Confirm Password=Conferma Password
-Configuration not found=
 Contact Email Address=Email di contatto
 Contact Support=Contatta il Supporto
 containing your key file URL=URL del tuo file key
@@ -730,6 +730,7 @@ Errors=Errori
 errors=errori
 Expected results=Risultati attesi
 Export=Esporta
+External Link=
 Faulty=Difettoso
 faulty=difettoso
 Feedback=Feedback
@@ -746,13 +747,14 @@ FOLDER=CARTELLA
 folder=cartella
 Force lower=Imponi le minuscole
 Format=Formatta
-Formatting devices=Formattazione dispositivi
+Formatting devices=Formattazione dispoditivi
 Forum=Forum
 GB=GB
 Go to My Servers Dashboard=
 Go to Registration page=Vai alla pagina di registrazione
 GPT 4KiB-aligned=Allineamento GPT 4KiB
 Gray=Grigio
+GRUB configuration=
 Guests have no access=Gli *Ospiti* **non** hanno l'accesso
 Guests have read-only access=Gli *Ospiti* hanno l'accesso in **sola lettura**
 Heat alarm=Allarme temperatura
@@ -863,8 +865,8 @@ Parity is valid=Parità valida
 Parity=Parità
 parity=parità
 Parity-Check=Controllo-parità
-Parity-Sync=Sincronizzazione della parità
 Parity-Sync Data-Rebuild=Sincronizzazione della parità/Ricostruzione dati
+Parity-Sync=Sincronizzazione della parità
 Password confirmation does not match=La password di conferma non corrisponde
 Password recovery=Recupera password
 Password=Password
@@ -881,10 +883,11 @@ Please set a password for the root user account=Imposta una password per l'utent
 Please summarize your suggestion here=Riassumi qui il tuo suggerimento
 Please try a different browser=Prova con un altro browser
 Please try again later=Riprova più tardi
-Please wait=Attendi
 Please use a high quality name brand device at least 1GB in size min 4GB recommended=Please use a high quality name brand device at least 1GB in size (min 4GB recommended)
+Please wait=Attendi
 Plugins=Plugin
 Plus=Più
+Popup Blocked=
 prefix_IEC=K M G T P E Z Y
 prefix_SI=K M G T P E Z Y
 Press ANY KEY to close this window=Premi QUALSIASI TASTO per chiudere questa finestra
@@ -911,8 +914,8 @@ Registration=Registrazione
 reiserfs=ReiserFS
 Release Notes=Note di rilascio
 Remove=Rimuovi
-Removing container=Rimuovo il contenitore…
-Removing orphan image=Rimuovo l'immagine orfana…
+Removing container=Rimuovo contenitore…
+Removing orphan image=Rimuovo immagine orfana…
 Rename=Rinomina
 Renew=Rinnova
 Reset=Reset
@@ -930,12 +933,13 @@ seconds=secondi
 Secure=Sicuro
 Security Settings=Impostazioni di sicurezza
 Security=Sicurezza
+See Help=
 select=seleziona
 Self-Test=Test manuale
 Server=Server
 Set Password=Imposta password
 Settings=Impostazioni
-Share name=Nome condivisione
+Share name=Nome Condivisione
 Share=Condivisione
 Shares List=Lista condivisioni
 Shares=Condivisioni
@@ -948,9 +952,9 @@ SMB=SMB
 sn=sn
 Sorry, an error occurred=Si è verificato un errore
 Sorry, this feature is not supported by MSIEEdge=Spiacenti, questa funzionalità non è supportata da IE/Edge
+Stale configuration=
 Standby=Standby
 standby=standby
-Stale configuration=
 Start=Avvia
 Started=In esecuzione
 started=in esecuzione
@@ -959,16 +963,16 @@ status=stato
 Stop=Ferma
 Stopped=Fermato
 stopped=fermato
-Stopping container=
+Stopping container=Fermo il contenitore…
 Streams=
 Subject=
 Submission of this bug report will automatically send your system diagnostics to Lime Technology=Questa segnalazione invierà automaticamente la diagnostica del sistema a Lime Technology
 Submission of this troubleshooting request will automatically send your system diagnostics to Lime Technology=
 Submit=Invia
 Successfully logged out=Disconnessione riuscita
-Successfully logged out=Disconnessione riuscita
 Successfully removed container=Contenitore rimosso correttamente
 Successfully removed orphan image=Immagine orfana rimossa correttamente
+Successfully stopped container=Contenitore fermato correttamente
 System Information=Informazioni di sistema
 System is going down=Il sistema si sta spegnendo
 System is offline=Il sistema è offline
@@ -983,7 +987,7 @@ Temperature=Temp.
 Template Repositories=
 Terminal=Terminale
 Test result=Risultato Test
-Thank you for choosing Unraid OS=Grazie per aver scelto Unraid OS
+Thank you for choosing Unraid OS=Thank you for choosing Unraid OS!
 Thank You=Grazie
 The command failed revert to rsync=
 The command failed=
@@ -1028,8 +1032,8 @@ Upload=Carica
 Uptime=Avviato da
 up-to-date=Aggiornato
 User Access=Accesso utente
-Username=Nome utente
 Username not changeable=Nome utente non modificabile
+Username=Nome utente
 Users=Utenti
 Utilization=Utilizzo
 Version=Versione
@@ -1042,6 +1046,7 @@ Was this container created using this plugin=
 Website=Sito web
 White=Bianco
 Wiki=Wiki
+Windows may require a valid User to be defined even for Public shares=
 Write settings to=Salva modifiche in
 Write=Scrivi
 Wrong=Errato
@@ -1060,24 +1065,6 @@ YesTime Machine=Sì/Time Machine
 You must reboot for changes to take effect=È necessario riavviare affinché le modifiche abbiano effetto
 Your browser does not support HTML5 file uploads=Il tuo browser non supporta il caricamento di file HTML5
 Your browser has JavaScript disabled=Il tuo browser ha JavaScript disabilitato
-Dated=
-Command execution=
-Configuration not found=Configurazione non trovata
-of=di
-Pulling image=
-Removing container=Rimuovo contenitore…
-Removing orphan image=Rimuovo immagine orfana…
-Stopping container=Fermo il contenitore…
-Successfully removed container=Contenitore rimosso correttamente
-Successfully removed orphan image=Immagine orfana rimossa correttamente
-Successfully stopped container=Contenitore fermato correttamente
-The command failed=
-The command finished successfully=
-TOTAL DATA PULLED=
-Was this container created using this plugin=
-Please use a high quality name brand device at least 1GB in size min 4GB recommended=Please use a high quality name brand device at least 1GB in size (min 4GB recommended)
-Your browser has JavaScript disabled=Il tuo browser ha JavaScript disabilitato
-
 
 ; Dynamix.system.button plugin
 Array busy=Array occupato
@@ -1106,7 +1093,7 @@ Calculate=Calcola
 change owner=modifica proprietario
 Change Owner=Modifica Proprietario
 change permission=modifica permessi
-Change Permission=Modifica Permessi 
+Change Permission=Modifica Permessi
 Common=
 Completed=Completato
 Compress=Compresso
@@ -1399,7 +1386,7 @@ Please confirm closure=
 Please copy the correct key file to the config directory on your USB Flash boot device or choose Purchase Key or Replace Key=Please copy the correct key file to the */config* directory on your USB Flash boot device or choose Purchase Key or Replace Key
 Please copy the correct key file to the config directory on your USB Flash boot device or choose Purchase Key=Please copy the correct key file to the */config* directory on your USB Flash boot device or choose Purchase Key
 Please copy the Key URL before closing this window=
-Please keep this window open=Mantieni aperta questa finestra
+Please keep this window open=
 Please make sure there is a DNS server specified=
 Please make sure your server time is accurate to within 5 minutes=
 Please refresh the page to ensure you load your latest configuration=
@@ -1465,14 +1452,6 @@ Still working our magic=
 Stop unraid-api=
 Strict=
 Submitting=
-Success=
-Switch Language=Modifica Lingua
-Terms of Use=Termini di utilizzo
-Thank you for choosing Unraid OS and Connect=Grazie per aver scelto Unraid OS e Connect
-Thank you for contacting Unraid=Grazie per averci contattato
-Thank you installing Connect=Grazie per aver installato Connect
-Thanks for supporting Unraid=Grazie per il tuo supporto a Unraid
-The Connect dashboard links to relevant sections of the webgui, allowing quick access to those settings and server sections=
 Success=Success!
 Switch Language=Cambia Lingua
 Terms of Use=
@@ -1856,3 +1835,5 @@ Open a bug report=
 %s seconds=%s secondi
 %s year=%s anno
 %s years=%s anni
+
+; Note: December 8, 2024 - 502 missing translations
