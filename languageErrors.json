@@ -260,6 +260,17 @@
                 "This will put the system in sleep mode",
                 "wiki entry"
             ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
+            ],
             "/plugins.txt": [
                 "Alert Message",
                 "Checking connectivity",
@@ -1422,16 +1433,13 @@
                 "Edit VM after clone",
                 "Eject CD Drive",
                 "Enable USB boot",
+                "Enter name",
                 "ETA",
-                "Evdev Device",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest agent not installed",
                 "Guest CPU",
@@ -1439,6 +1447,7 @@
                 "Guest not running",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "Insert CD",
                 "Insert",
                 "Interfaces",
@@ -1446,6 +1455,7 @@
                 "IP Address",
                 "ISO Image",
                 "keyboard for VM Console",
+                "Leaving blank will use OS name",
                 "Location of virtual machine files",
                 "Lock sortable items",
                 "Memory dump",
@@ -1478,7 +1488,6 @@
                 "Remove Meta",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "Select ISO image",
@@ -1488,9 +1497,6 @@
                 "Serial",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshot Name",
@@ -1498,7 +1504,6 @@
                 "Snapshots being removed",
                 "Snapshots",
                 "Specify a ISO storage path first",
-                "SSD",
                 "SSD",
                 "Start Cloned VM",
                 "Template Name",
@@ -1724,8 +1729,25 @@
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ]
         },
+        "new": {
+            "/translations.txt": [
+                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
+                "This will register your server with Connect <sup>BETA</sup>"
+            ],
+            "/vms.txt": [
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
+            ],
+            "/Community Apps/apps.txt": [
+                "Additional information may be within Tools, PHPSettings - View Log"
+            ],
+            "/Community Apps/ca_settings.txt": [
+                "Allow install of second instance",
+                "Mouse wheel threshold",
+                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
+                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
+            ]
+        },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -1760,27 +1782,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevices.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt"
-        ],
-        "new": {
-            "/translations.txt": [
-                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "This will register your server with Connect <sup>BETA</sup>"
-            ],
-            "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Additional information may be within Tools, PHPSettings - View Log"
-            ],
-            "/Community Apps/ca_settings.txt": [
-                "Allow install of second instance",
-                "Mouse wheel threshold",
-                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
-                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
-            ]
-        }
+        ]
     },
     "bn_BN - Bengali / \u09ac\u09be\u0982\u09b2\u09be": {
         "files": [
@@ -1789,7 +1791,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -1844,7 +1846,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -1936,6 +1938,17 @@
                 "No array devices have been assigned",
                 "No devices",
                 "special - Metadata storage"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/settings.txt": [
                 "Allocation profile",
@@ -2039,22 +2052,20 @@
                 "Remove from favorites"
             ],
             "/vms.txt": [
-                "Template Name",
+                "Leaving blank will use OS name",
                 "Discard",
                 "Disk IO",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "Memory dump",
                 "Network IO",
                 "No GPU",
@@ -2062,17 +2073,13 @@
                 "Remove all files",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshots being removed",
                 "SSD",
-                "SSD",
+                "Template Name",
                 "Unchecked will use QEMU External Snapshot",
                 "VM Being removed",
                 "VM Usage Statisics",
@@ -2089,18 +2096,13 @@
                 "CLOSE"
             ]
         },
-        "files": [
-            "/outgoingproxymanager.txt"
-        ],
         "new": {
             "/translations.txt": [
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
             ],
             "/Cleanup Appdata/cleanupappdata.txt": [
                 "Note that this module looks at all of your previously installed docker applications to determine which appdata folders are abandoned If you have deleted the previously installed list either through Community Applications or manually, then it will not display those result In other words, if there is not a record for the folder within the previously installed apps, then you will not be prompted to delete the folder"
@@ -2170,9 +2172,9 @@
                 "Time state"
             ],
             "/vms.txt": [
+                "Enter name",
                 "FS Native Snapshot",
-                "Set SSD flag",
-                "Set SSD flag"
+                "If name already exists it will be replaced"
             ]
         },
         "new": {
@@ -2181,9 +2183,7 @@
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
             ],
             "/Dynamix Cache Dirs/foldercachingsettings.txt": [
                 "> Set cache_pressure to NN (default ",
@@ -2266,6 +2266,17 @@
                 "Upgrade Pool",
                 "While there is some risk, if it is not possible to first mount the filesystem to clear the log, zeroing it is the only option to try and repair the filesystem, and in most cases it results in little or no data loss",
                 "Zero Log"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/settings.txt": [
                 "Allocation profile",
@@ -2396,21 +2407,20 @@
                 "Checkout the Connect docs"
             ],
             "/vms.txt": [
+                "Leaving blank will use OS name",
                 "Discard",
                 "Disk IO",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "ISO Image",
                 "keyboard for VM Console",
                 "Memory dump",
@@ -2420,16 +2430,11 @@
                 "Remove all files",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshots being removed",
-                "SSD",
                 "SSD",
                 "Template Name",
                 "Tickpolicy",
@@ -2593,30 +2598,13 @@
                 "Working"
             ]
         },
-        "files": [
-            "/outgoingproxymanager.txt",
-            "/Cleanup Appdata/cleanupappdata.txt",
-            "/Dynamix File Integrity/fileintegrity.txt",
-            "/Dynamix File Integrity/integrity.txt",
-            "/Dynamix Local Master/smb.txt",
-            "/Dynamix S3 Sleep/sleepsettings.txt",
-            "/Dynamix System Info/systemprofiler.txt",
-            "/Dynamix System Temp/tempsettings.txt",
-            "/Gui Search/javascript.guiSearch.txt",
-            "/Recycle Bin/recyclebin.txt",
-            "/Tips and Tweaks/tipsandtweaks.txt",
-            "/Unassigned Devices Preclear/javascript.preclear.txt",
-            "/Unassigned Devices Preclear/preclear.txt"
-        ],
         "new": {
             "/translations.txt": [
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
             ],
             "/Community Apps/apps.txt": [
                 "Additional information may be within Tools, PHPSettings - View Log"
@@ -2635,7 +2623,21 @@
                 "> + '/usr/local/sbin/rc.unassigned detach name",
                 "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
             ]
-        }
+        },
+        "files": [
+            "/Cleanup Appdata/cleanupappdata.txt",
+            "/Dynamix File Integrity/fileintegrity.txt",
+            "/Dynamix File Integrity/integrity.txt",
+            "/Dynamix Local Master/smb.txt",
+            "/Dynamix S3 Sleep/sleepsettings.txt",
+            "/Dynamix System Info/systemprofiler.txt",
+            "/Dynamix System Temp/tempsettings.txt",
+            "/Gui Search/javascript.guiSearch.txt",
+            "/Recycle Bin/recyclebin.txt",
+            "/Tips and Tweaks/tipsandtweaks.txt",
+            "/Unassigned Devices Preclear/javascript.preclear.txt",
+            "/Unassigned Devices Preclear/preclear.txt"
+        ]
     },
     "hu_HU - Hungarian / Magyar": {
         "files": [
@@ -2644,7 +2646,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -2774,6 +2776,17 @@
                 "While there is some risk, if it is not possible to first mount the filesystem to clear the log, zeroing it is the only option to try and repair the filesystem, and in most cases it results in little or no data loss",
                 "will remove the missing pool disk and then bring the array on-line",
                 "Zero Log"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/settings.txt": [
                 "a value of zero means no automatic closure",
@@ -3924,22 +3937,21 @@
                 "define OS boot options",
                 "Discard",
                 "Disk IO",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest agent not installed",
                 "Guest CPU",
                 "Guest not running",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "keyboard for VM Console",
+                "Leaving blank will use OS name",
                 "Location of virtual machine files",
                 "Memory dump",
                 "Migratable",
@@ -3966,7 +3978,6 @@
                 "Remove Meta",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "Select ISO image",
@@ -3974,13 +3985,9 @@
                 "Select ISOs for CDROMs",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshots being removed",
-                "SSD",
                 "SSD",
                 "Start Cloned VM",
                 "Template Name",
@@ -4206,8 +4213,25 @@
                 "Are you sure you want to delete %s applications from the previously installed list"
             ]
         },
+        "new": {
+            "/translations.txt": [
+                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
+                "This will register your server with Connect <sup>BETA</sup>"
+            ],
+            "/vms.txt": [
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
+            ],
+            "/Community Apps/apps.txt": [
+                "Additional information may be within Tools, PHPSettings - View Log"
+            ],
+            "/Community Apps/ca_settings.txt": [
+                "Allow install of second instance",
+                "Mouse wheel threshold",
+                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
+                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
+            ]
+        },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -4241,27 +4265,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevices.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt"
-        ],
-        "new": {
-            "/translations.txt": [
-                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "This will register your server with Connect <sup>BETA</sup>"
-            ],
-            "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Additional information may be within Tools, PHPSettings - View Log"
-            ],
-            "/Community Apps/ca_settings.txt": [
-                "Allow install of second instance",
-                "Mouse wheel threshold",
-                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
-                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
-            ]
-        }
+        ]
     },
     "ko_KO - Korean / \ud55c\uad6d\uc5b4": {
         "files": [
@@ -4270,7 +4274,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -5058,6 +5062,17 @@
                 "System in sleep mode",
                 "This will put the system in sleep mode",
                 "wiki entry"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/plugins.txt": [
                 "Alert Message",
@@ -7292,8 +7307,8 @@
                 "Eject CD Drive",
                 "Emulated",
                 "Enable USB boot",
+                "Enter name",
                 "ETA",
-                "Evdev Device",
                 "Evdev Device",
                 "Extracting",
                 "Files being removed",
@@ -7303,10 +7318,7 @@
                 "free",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Graphics Card",
                 "Graphics ROM BIOS",
@@ -7322,6 +7334,7 @@
                 "Hyper-V",
                 "i440fx will work for most",
                 "Icon",
+                "If name already exists it will be replaced",
                 "Initial",
                 "Insert CD",
                 "Insert",
@@ -7333,6 +7346,7 @@
                 "ISO storage path was empty",
                 "keyboard for VM Console",
                 "keyboard for VNC",
+                "Leaving blank will use OS name",
                 "LibreELEC Version",
                 "LibreELEC",
                 "Libvirt Service failed to start",
@@ -7406,7 +7420,6 @@
                 "Remove this OpenELEC file",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "SeaBIOS will work for most",
@@ -7424,9 +7437,6 @@
                 "Serial",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "shares",
                 "Show Inline XML",
                 "Snapshot Method",
@@ -7436,7 +7446,6 @@
                 "Snapshots",
                 "Sound Card",
                 "Specify a ISO storage path first",
-                "SSD",
                 "SSD",
                 "Start All",
                 "Start Cloned VM",
@@ -7887,8 +7896,25 @@
                 "Are you sure you want to delete %s applications from the previously installed list"
             ]
         },
+        "new": {
+            "/translations.txt": [
+                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
+                "This will register your server with Connect <sup>BETA</sup>"
+            ],
+            "/vms.txt": [
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
+            ],
+            "/Community Apps/apps.txt": [
+                "Additional information may be within Tools, PHPSettings - View Log"
+            ],
+            "/Community Apps/ca_settings.txt": [
+                "Allow install of second instance",
+                "Mouse wheel threshold",
+                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
+                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
+            ]
+        },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -7923,27 +7949,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevices.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt"
-        ],
-        "new": {
-            "/translations.txt": [
-                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "This will register your server with Connect <sup>BETA</sup>"
-            ],
-            "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Additional information may be within Tools, PHPSettings - View Log"
-            ],
-            "/Community Apps/ca_settings.txt": [
-                "Allow install of second instance",
-                "Mouse wheel threshold",
-                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
-                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
-            ]
-        }
+        ]
     },
     "nl_NL - Dutch / Nederlands": {
         "missing": {
@@ -7967,82 +7973,11 @@
                 "Zero Log"
             ],
             "/settings.txt": [
-                "Allocation profile",
-                "Caution",
-                "Change power mode",
-                "Copy syslog to flash on shutdown",
-                "Default file system for Array disks",
-                "Docker PID Limit",
-                "Docker storage driver",
-                "Dont show RDP option",
-                "Enable Outgoing Proxy",
-                "Erase Pool",
-                "Favorites enabled",
-                "File system corruption fixed",
-                "GRUB Configuration",
-                "is only available when the filesyestem is mounted",
-                "Multicast",
-                "native",
-                "No suitable interfaces found for PTP",
-                "Note",
-                "NTP interval",
-                "NTP",
-                "Optional",
-                "Outgoing Proxy Manager",
-                "Outgoing Proxy",
-                "overlay2",
-                "Please match the requested format",
-                "pool device stats",
-                "Pool Device Status",
-                "Pool Information",
-                "raidz1",
-                "Remove pool",
-                "Remove Pool",
-                "Required",
-                "Scrub Schedule",
-                "Select Proxy",
-                "Show RDP menu option",
-                "Show RDP option",
-                "Show VM Usage",
-                "Software",
-                "stripe",
-                "System identifier for logfile name",
-                "Tailscale URLs",
-                "This will unassign all devices from the pool but will NOT modify any device contents",
-                "UDPv4",
-                "UDPv6",
-                "unavailable",
-                "Unicast",
-                "Upgrade ZFS Pool",
-                "URL",
-                "User",
-                "View the Docs for more information",
-                "VPN tunnel access for System",
-                "When running Unraid virtualized, there are no available power modes",
-                "WireGuard URLs",
-                "Wrong PTP server address",
-                "zfs pool information"
+                "Allocation profile"
             ],
             "/translations.txt": [
-                "Always Allow",
-                "By default UEFI and Legacy boot mode are both enabled when GRUB is used to boot the machine",
-                "Clicking OK will take you to a 3rd party website not associated with Lime Technology",
-                "Data copied",
-                "External Link",
-                "Go to My Servers Dashboard",
-                "GRUB configuration",
-                "Options for Block commit",
-                "Options for Block Commit",
-                "Options for Block copy",
-                "Options for Block Copy",
-                "Options for Block pull",
-                "Options for Block Pull",
-                "Percentage",
                 "Please access this server via the My Servers Dashboard",
                 "Please enable cookies to use the Unraid webGUI",
-                "Popup Blocked",
-                "required",
-                "See Help",
                 "Submission of this troubleshooting request will automatically send your system diagnostics to Lime Technology",
                 "The command failed revert to rsync",
                 "This will start your free 30 day Trial",
@@ -8254,20 +8189,19 @@
                 "Discard",
                 "Disk IO",
                 "Edit VM after clone",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "keyboard for VM Console",
+                "Leaving blank will use OS name",
                 "Location of virtual machine files",
                 "Memory dump",
                 "Migratable",
@@ -8291,7 +8225,6 @@
                 "Remove Meta",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "Select ISO image",
@@ -8299,16 +8232,12 @@
                 "Select ISOs for CDROMs",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshot Name",
                 "Snapshot",
                 "Snapshots being removed",
                 "Snapshots",
-                "SSD",
                 "SSD",
                 "Start Cloned VM",
                 "Template Name",
@@ -8605,22 +8534,13 @@
                 "Working"
             ]
         },
-        "files": [
-            "/outgoingproxymanager.txt",
-            "/Cleanup Appdata/cleanupappdata.txt",
-            "/Gui Search/javascript.guiSearch.txt",
-            "/Unassigned Devices Preclear/javascript.preclear.txt",
-            "/Unassigned Devices Preclear/preclear.txt"
-        ],
         "new": {
             "/translations.txt": [
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
             ],
             "/Community Apps/apps.txt": [
                 "Additional information may be within Tools, PHPSettings - View Log"
@@ -8644,7 +8564,13 @@
                 "> + '/usr/local/sbin/rc.unassigned detach name",
                 "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
             ]
-        }
+        },
+        "files": [
+            "/Cleanup Appdata/cleanupappdata.txt",
+            "/Gui Search/javascript.guiSearch.txt",
+            "/Unassigned Devices Preclear/javascript.preclear.txt",
+            "/Unassigned Devices Preclear/preclear.txt"
+        ]
     },
     "no_NO - Norwegian / Norsk": {
         "missing": {
@@ -8769,6 +8695,17 @@
                 "While there is some risk, if it is not possible to first mount the filesystem to clear the log, zeroing it is the only option to try and repair the filesystem, and in most cases it results in little or no data loss",
                 "will remove the missing pool disk and then bring the array on-line",
                 "Zero Log"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/settings.txt": [
                 "a value of zero means no automatic closure",
@@ -9525,20 +9462,19 @@
                 "Discard",
                 "Disk IO",
                 "Edit VM after clone",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "keyboard for VM Console",
+                "Leaving blank will use OS name",
                 "Location of virtual machine files",
                 "Memory dump",
                 "Migratable",
@@ -9562,7 +9498,6 @@
                 "Remove Meta",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "Select ISO image",
@@ -9570,16 +9505,12 @@
                 "Select ISOs for CDROMs",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshot Name",
                 "Snapshot",
                 "Snapshots being removed",
                 "Snapshots",
-                "SSD",
                 "SSD",
                 "Start Cloned VM",
                 "Template Name",
@@ -9803,8 +9734,25 @@
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ]
         },
+        "new": {
+            "/translations.txt": [
+                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
+                "This will register your server with Connect <sup>BETA</sup>"
+            ],
+            "/vms.txt": [
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
+            ],
+            "/Community Apps/apps.txt": [
+                "Additional information may be within Tools, PHPSettings - View Log"
+            ],
+            "/Community Apps/ca_settings.txt": [
+                "Allow install of second instance",
+                "Mouse wheel threshold",
+                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
+                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
+            ]
+        },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -9839,27 +9787,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevices.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt"
-        ],
-        "new": {
-            "/translations.txt": [
-                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "This will register your server with Connect <sup>BETA</sup>"
-            ],
-            "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Additional information may be within Tools, PHPSettings - View Log"
-            ],
-            "/Community Apps/ca_settings.txt": [
-                "Allow install of second instance",
-                "Mouse wheel threshold",
-                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
-                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
-            ]
-        }
+        ]
     },
     "pl_PL - Polish / Polski": {
         "missing": {
@@ -9925,6 +9853,17 @@
                 "Upgrade Pool",
                 "While there is some risk, if it is not possible to first mount the filesystem to clear the log, zeroing it is the only option to try and repair the filesystem, and in most cases it results in little or no data loss",
                 "Zero Log"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/settings.txt": [
                 "a value of zero means no automatic closure",
@@ -10562,15 +10501,12 @@
                 "Edit VM after clone",
                 "Eject CD Drive",
                 "Enable USB boot",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest agent not installed",
                 "Guest CPU",
@@ -10578,10 +10514,12 @@
                 "Guest not running",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "Insert CD",
                 "Insert",
                 "ISO Image",
                 "keyboard for VM Console",
+                "Leaving blank will use OS name",
                 "Location of virtual machine files",
                 "Lock sortable items",
                 "Memory dump",
@@ -10612,7 +10550,6 @@
                 "Remove Meta",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "Select ISO image",
@@ -10622,16 +10559,12 @@
                 "Serial",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshot Name",
                 "Snapshot",
                 "Snapshots being removed",
                 "Snapshots",
-                "SSD",
                 "SSD",
                 "Start Cloned VM",
                 "Template Name",
@@ -10851,8 +10784,33 @@
                 "Working"
             ]
         },
+        "new": {
+            "/translations.txt": [
+                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
+                "This will register your server with Connect <sup>BETA</sup>"
+            ],
+            "/vms.txt": [
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
+            ],
+            "/Community Apps/apps.txt": [
+                "Additional information may be within Tools, PHPSettings - View Log"
+            ],
+            "/Community Apps/ca_settings.txt": [
+                "Allow install of second instance",
+                "Mouse wheel threshold",
+                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
+                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
+            ],
+            "/Unassigned Devices/unassigneddevices.txt": [
+                "Script is already running",
+                "> + '/usr/local/sbin/rc.unassigned mount name",
+                "> + '/usr/local/sbin/rc.unassigned umount name",
+                "> + '/usr/local/sbin/rc.unassigned spindown name",
+                "> + '/usr/local/sbin/rc.unassigned detach name",
+                "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
+            ]
+        },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -10874,35 +10832,7 @@
             "/Tips and Tweaks/tipsandtweaks.txt",
             "/Unassigned Devices Preclear/javascript.preclear.txt",
             "/Unassigned Devices Preclear/preclear.txt"
-        ],
-        "new": {
-            "/translations.txt": [
-                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "This will register your server with Connect <sup>BETA</sup>"
-            ],
-            "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Additional information may be within Tools, PHPSettings - View Log"
-            ],
-            "/Community Apps/ca_settings.txt": [
-                "Allow install of second instance",
-                "Mouse wheel threshold",
-                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
-                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
-            ],
-            "/Unassigned Devices/unassigneddevices.txt": [
-                "Script is already running",
-                "> + '/usr/local/sbin/rc.unassigned mount name",
-                "> + '/usr/local/sbin/rc.unassigned umount name",
-                "> + '/usr/local/sbin/rc.unassigned spindown name",
-                "> + '/usr/local/sbin/rc.unassigned detach name",
-                "> Note: /dev/sdX where 'X' is the device designator.  The devX is the device name in the UD page.  If the device name is 'Dev 1', then use dev1 as the device to spin down.  Using the name"
-            ]
-        }
+        ]
     },
     "pt_BR - Brazilian Portuguese / Portugu\u00eas do Brasil": {
         "files": [
@@ -10911,7 +10841,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -11219,6 +11149,17 @@
                 "System in sleep mode",
                 "This will put the system in sleep mode",
                 "wiki entry"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/plugins.txt": [
                 "Alert Message",
@@ -12335,20 +12276,19 @@
                 "Discard",
                 "Disk IO",
                 "Edit VM after clone",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "keyboard for VM Console",
+                "Leaving blank will use OS name",
                 "Location of virtual machine files",
                 "Memory dump",
                 "Migratable",
@@ -12372,7 +12312,6 @@
                 "Remove Meta",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Requires guest agent installed",
                 "Requires guest running",
                 "Select ISO image",
@@ -12380,16 +12319,12 @@
                 "Select ISOs for CDROMs",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshot Name",
                 "Snapshot",
                 "Snapshots being removed",
                 "Snapshots",
-                "SSD",
                 "SSD",
                 "Start Cloned VM",
                 "Template Name",
@@ -12598,8 +12533,25 @@
                 "This unlocks some extra features within CA generally only used by developers Not recommended to enable"
             ]
         },
+        "new": {
+            "/translations.txt": [
+                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
+                "This will register your server with Connect <sup>BETA</sup>"
+            ],
+            "/vms.txt": [
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
+            ],
+            "/Community Apps/apps.txt": [
+                "Additional information may be within Tools, PHPSettings - View Log"
+            ],
+            "/Community Apps/ca_settings.txt": [
+                "Allow install of second instance",
+                "Mouse wheel threshold",
+                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
+                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
+            ]
+        },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -12634,27 +12586,7 @@
             "/Unassigned Devices/scriptlog.txt",
             "/Unassigned Devices/unassigneddevices.txt",
             "/Unassigned Devices/unassigneddevicessettings.txt"
-        ],
-        "new": {
-            "/translations.txt": [
-                "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
-                "This will register your server with Connect <sup>BETA</sup>"
-            ],
-            "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
-            ],
-            "/Community Apps/apps.txt": [
-                "Additional information may be within Tools, PHPSettings - View Log"
-            ],
-            "/Community Apps/ca_settings.txt": [
-                "Allow install of second instance",
-                "Mouse wheel threshold",
-                "If you tilt the mouse wheel left or right, the browser returned value will change Set the threshold to the value returned Note that different browsers and operating systems may return different values",
-                "This is a global value for all devices If it causes issues, then disable Mouse Wheel Page Changes"
-            ]
-        }
+        ]
     },
     "sv_SE - Swedish / Svenska": {
         "missing": {
@@ -12717,6 +12649,17 @@
                 "Container Label",
                 "Container Device"
             ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
+            ],
             "/shares.txt": [
                 "Free Space will be calculated",
                 "is missing",
@@ -12731,6 +12674,7 @@
                 "Warning: Configured Pool"
             ],
             "/vms.txt": [
+                "Leaving blank will use OS name",
                 "9p Mode",
                 "Advanced tuning options",
                 "Base Image",
@@ -12738,20 +12682,18 @@
                 "define Multifunctiion Support",
                 "Discard",
                 "Disk IO",
+                "Enter name",
                 "ETA",
-                "Evdev Device",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "Initial",
                 "Memory dump",
                 "Network IO",
@@ -12763,16 +12705,11 @@
                 "Remove all files",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshots being removed",
-                "SSD",
                 "SSD",
                 "Template Name",
                 "Tickpolicy",
@@ -13190,9 +13127,7 @@
                 "Create a bug report on our forums with a description of the issue along with your diagsnotics"
             ],
             "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
             ],
             "/Community Apps/apps.txt": [
                 "Clear Flag",
@@ -13215,7 +13150,6 @@
             ]
         },
         "files": [
-            "/outgoingproxymanager.txt",
             "/CA Auto Update/autoupdateapps.txt",
             "/CA Config File Edit/configedit.txt",
             "/Cleanup Appdata/cleanupappdata.txt",
@@ -13259,7 +13193,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -13371,6 +13305,17 @@
                 "Upgrade Pool",
                 "While there is some risk, if it is not possible to first mount the filesystem to clear the log, zeroing it is the only option to try and repair the filesystem, and in most cases it results in little or no data loss",
                 "Zero Log"
+            ],
+            "/outgoingproxy.txt": [
+                "Enable Outgoing Proxy",
+                "Name",
+                "Optional",
+                "Outgoing Proxy",
+                "Password",
+                "Please match the requested format",
+                "Required",
+                "Select Proxy",
+                "User"
             ],
             "/settings.txt": [
                 "Allocation profile",
@@ -13488,22 +13433,20 @@
                 "Remove from favorites"
             ],
             "/vms.txt": [
-                "Template Name",
+                "Leaving blank will use OS name",
                 "Discard",
                 "Disk IO",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
+                "If name already exists it will be replaced",
                 "Memory dump",
                 "Network IO",
                 "No GPU",
@@ -13511,17 +13454,13 @@
                 "Remove all files",
                 "Remove User Template",
                 "Repeat",
-                "Repeat",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshots being removed",
                 "SSD",
-                "SSD",
+                "Template Name",
                 "Unchecked will use QEMU External Snapshot",
                 "VM Being removed",
                 "VM Usage Statisics",
@@ -13547,36 +13486,13 @@
                 "Click to select file or click Default button for the Device Script File"
             ]
         },
-        "files": [
-            "/outgoingproxymanager.txt",
-            "/Cleanup Appdata/cleanupappdata.txt",
-            "/Dynamix Active Streams/activestreams.txt",
-            "/Dynamix Cache Dirs/foldercachingsettings.txt",
-            "/Dynamix Date Time/datetime.txt",
-            "/Dynamix Day Night/daynightsettings.txt",
-            "/Dynamix Local Master/smb.txt",
-            "/Dynamix S3 Sleep/sleepsettings.txt",
-            "/Dynamix SSD Trim/scheduler.txt",
-            "/Dynamix System Stats/stats.txt",
-            "/Enhanced Log/enhancedsyslog.txt",
-            "/Enhanced Log/enhancedsyslogsettings.txt",
-            "/File Activity/fileactivity.txt",
-            "/Hotplug USB/libvirthotplugusb.txt",
-            "/Open Files/openfiles.txt",
-            "/Parity Check Tuning/paritychecktuning.txt",
-            "/Tips and Tweaks/tipsandtweaks.txt",
-            "/Unassigned Devices Preclear/javascript.preclear.txt",
-            "/Unassigned Devices Preclear/preclear.txt"
-        ],
         "new": {
             "/translations.txt": [
                 "Oh no Are you pirating Unraid OS<br>Are you ready to buy a real license",
                 "This will register your server with Connect <sup>BETA</sup>"
             ],
             "/vms.txt": [
-                "Description ",
-                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period ",
-                "Top Image "
+                "Name contains invalid characters or does not start with an alphanumberic for a ZFS storage locationOnly these special characters are valid Underscore _ Hyphen - Colon Period "
             ],
             "/Community Apps/apps.txt": [
                 "Additional information may be within Tools, PHPSettings - View Log"
@@ -13599,7 +13515,27 @@
             "/Unassigned Devices/unassigneddevicessettings.txt": [
                 "> **Note:** The normal rule used by UD is '*(rw,sec"
             ]
-        }
+        },
+        "files": [
+            "/Cleanup Appdata/cleanupappdata.txt",
+            "/Dynamix Active Streams/activestreams.txt",
+            "/Dynamix Cache Dirs/foldercachingsettings.txt",
+            "/Dynamix Date Time/datetime.txt",
+            "/Dynamix Day Night/daynightsettings.txt",
+            "/Dynamix Local Master/smb.txt",
+            "/Dynamix S3 Sleep/sleepsettings.txt",
+            "/Dynamix SSD Trim/scheduler.txt",
+            "/Dynamix System Stats/stats.txt",
+            "/Enhanced Log/enhancedsyslog.txt",
+            "/Enhanced Log/enhancedsyslogsettings.txt",
+            "/File Activity/fileactivity.txt",
+            "/Hotplug USB/libvirthotplugusb.txt",
+            "/Open Files/openfiles.txt",
+            "/Parity Check Tuning/paritychecktuning.txt",
+            "/Tips and Tweaks/tipsandtweaks.txt",
+            "/Unassigned Devices Preclear/javascript.preclear.txt",
+            "/Unassigned Devices Preclear/preclear.txt"
+        ]
     },
     "zh_TW - Traditional Chinese / \u7e41\u9ad4\u4e2d\u6587": {
         "files": [
@@ -13608,7 +13544,7 @@
             "/helptext.txt",
             "/javascript.txt",
             "/main.txt",
-            "/outgoingproxymanager.txt",
+            "/outgoingproxy.txt",
             "/plugins.txt",
             "/scripts.txt",
             "/settings.txt",
@@ -17261,29 +17197,19 @@
             ],
             "/vms.txt": [
                 "CreateModify Template",
-                "CreateModify Template",
-                "CreateModify Template",
-                "Description ",
                 "Discard",
                 "Disk IO",
-                "Enter name\\nIf name already exists it will be replaced",
-                "Enter name\\nIf name already exists it will be replaced",
-                "Enter name\\nIf name already exists it will be replaced",
-                "Evdev Device",
+                "Enter name",
                 "Evdev Device",
                 "Files being removed",
                 "FS Native Snapshot",
                 "grab options",
-                "grab options",
                 "Grab Toggle",
-                "Grab Toggle",
-                "Grab",
                 "Grab",
                 "Guest CPU",
                 "Hide inline xml",
                 "Host CPU",
-                "Leaving blank will use OS name",
-                "Leaving blank will use OS name",
+                "If name already exists it will be replaced",
                 "Leaving blank will use OS name",
                 "Memory dump",
                 "Memory inuseCurrentMaximum",
@@ -17295,19 +17221,13 @@
                 "Remove User Template",
                 "Rename disabled, snapshots exists",
                 "Repeat",
-                "Repeat",
                 "Set discard option",
                 "Set SDD flag",
-                "Set SDD flag",
-                "Set SSD flag",
-                "Set SSD flag",
                 "Show Inline XML",
                 "Snapshot Method",
                 "Snapshots being removed",
                 "SSD",
-                "SSD",
                 "Template Name",
-                "Top Image ",
                 "Type Method",
                 "Unchecked will use QEMU External Snapshot",
                 "VM Being removed",
@@ -17343,6 +17263,7 @@
             ]
         },
         "files": [
+            "/outgoingproxy.txt",
             "/Unassigned Devices Preclear/javascript.preclear.txt",
             "/Unassigned Devices Preclear/preclear.txt",
             "/Unassigned Devices/editdevicesettings.txt"
