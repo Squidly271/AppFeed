@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>immich-image-cleaner</Name>
+  <Repository>ghcr.io/dustinole/immich-image-cleaner:latest</Repository>
+  <Registry>https://ghcr.io/dustinole/immich-image-cleaner</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dustinole/immich-image-cleaner/issues</Support>
+  <Project>https://github.com/dustinole/immich-image-cleaner</Project>
+  <Overview>Immich Image Cleaner helps you identify and clean up screenshots, web cache files, and data recovery artifacts from your Immich photo library. Uses ML analysis to detect cleanup candidates with high confidence.&#xD;
+&#xD;
+Features:&#xD;
+• Detects screenshots, web cache, and data recovery artifacts&#xD;
+• Uses existing Immich ML infrastructure&#xD;
+• Beautiful web interface for bulk cleanup operations&#xD;
+• Automatic updates via GitHub releases&#xD;
+• Safe - only marks for deletion, you control all deletions</Overview>
+  <Category>Productivity: MediaApp:Photos</Category>
+  <WebUI>http://[IP]:[PORT:5001]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dustinole/immich-image-cleaner/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dustinole/immich-image-cleaner/main/icon.png</Icon>
+  <ExtraParams>--label net.unraid.docker.managed=dockerman --label org.opencontainers.image.source=https://github.com/dustinole/immich-image-cleaner</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1718823444</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+
+  <Config Name="WebUI Port" Target="5000" Default="5001" Mode="tcp" Description="Web interface port for accessing the Immich Image Cleaner" Type="Port" Display="always" Required="true" Mask="false">5001</Config>
+
+  <Config Name="Data Directory" Target="/app/data" Default="/mnt/user/appdata/immich-image-cleaner/data" Mode="rw" Description="Directory for storing analysis results and configuration" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/immich-image-cleaner/data</Config>
+
+  <Config Name="Logs Directory" Target="/app/logs" Default="/mnt/user/appdata/immich-image-cleaner/logs" Mode="rw" Description="Directory for storing application logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/immich-image-cleaner/logs</Config>
+
+  <Config Name="Immich Server IP" Target="IMMICH_SERVER_IP" Default="192.168.1.1" Mode="" Description="The IP address of your Immich server (e.g., 192.168.1.100)" Type="Variable" Display="always" Required="true" Mask="false">192.168.1.1</Config>
+
+  <Config Name="Immich Server Port" Target="IMMICH_SERVER_PORT" Default="8484" Mode="" Description="The port used by your Immich server (default is 2283 or 8484)" Type="Variable" Display="always" Required="true" Mask="false">8484</Config>
+
+  <Config Name="Immich API Key" Target="IMMICH_API_KEY" Default="" Mode="" Description="Your Immich API key (get from Immich Settings > Account Settings > API Keys)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+
+  <Config Name="Timezone" Target="TZ" Default="America/Denver" Mode="" Description="Container timezone (e.g., America/New_York, Europe/London)" Type="Variable" Display="always" Required="false" Mask="false">America/Denver</Config>
+
+  <Config Name="Secret Key" Target="SECRET_KEY" Default="immich-cleaner-secret-2024" Mode="" Description="Secret key for session security (change for production)" Type="Variable" Display="advanced" Required="false" Mask="true">immich-cleaner-secret-2024</Config>
+
+  <Config Name="Debug Mode" Target="DEBUG" Default="false" Mode="" Description="Enable debug logging (true/false)" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
