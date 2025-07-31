@@ -30,23 +30,14 @@ Processing /tmp/GitHub/repositoryClone/CordlessWool/unraid-docker-templates/shrt
 Downloading TopHat17's Repository
 
 From https://github.com/tophat17/jelly-request
-   77dc2ae..b219b98  main       -> origin/main
-Updating 77dc2ae..b219b98
+   b219b98..bd1fd23  main       -> origin/main
+Updating b219b98..bd1fd23
 Fast-forward
- Dockerfile                    |  13 +++
- README.md                     |  42 ++++++-
- app-running-screenshot.md     |   1 +
- config.py                     |   6 +
- header.py                     |  70 +++++++++++
- images/image-running-demo.png | Bin 0 -> 353703 bytes
- main.py                       |   4 +
- scrape_imdb_and_request.py    | 261 ------------------------------------------
- template.xml                  |   3 +-
- 9 files changed, 136 insertions(+), 264 deletions(-)
- create mode 100644 app-running-screenshot.md
- create mode 100644 header.py
- create mode 100644 images/image-running-demo.png
- delete mode 100644 scrape_imdb_and_request.py
+ imdb_scraper.py      |   6 +-
+ jellyseerr_client.py | 185 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+ main.py              | 164 ++++++++++++++++++++++++++++++++++++++++++---
+ utils.py             |   9 +++
+ 4 files changed, 352 insertions(+), 12 deletions(-)
 
 Array
 (
@@ -15713,6 +15704,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+octoeverywhere/octoeverywhere
+octoeverywhere/octoeverywhere Downloads: 70073  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -15880,9 +15873,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-devzwf/pihole-dot-doh
-devzwf/pihole-dot-doh:latest-v6 Downloads: 92415  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
