@@ -3098,22 +3098,25 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   ccf6701..927395a  main       -> origin/main
-Updating ccf6701..927395a
+   927395a..5e8a7b9  main       -> origin/main
+Updating 927395a..5e8a7b9
 Fast-forward
- app/__init__.py                                   |  25 ++-
- app/blueprints/admin/routes.py                    |  31 +++-
- app/extensions.py                                 |  11 +-
- app/forms/wizard.py                               |   4 +
- app/services/expiry.py                            |  43 ++++++
- app/services/media/plex.py                        |  36 +++--
- app/templates/admin/users.html                    | 179 ++++++++++++++++++++--
- app/templates/partials/library_checkboxes.html    |   6 +-
- app/templates/partials/server_library_picker.html |   4 +-
- app/templates/tables/expired_user_card.html       | 147 ++++++++++--------
- app/templates/tables/expiring_user_card.html      |  72 +++++++++
- 11 files changed, 454 insertions(+), 104 deletions(-)
- create mode 100644 app/templates/tables/expiring_user_card.html
+ app/blueprints/admin/routes.py              | 19 +++++-
+ app/blueprints/public/routes.py             | 17 +++++-
+ app/services/media/audiobookshelf.py        |  4 +-
+ app/services/media/client_base.py           | 40 ++++++++++++-
+ app/services/media/jellyfin.py              |  6 +-
+ app/services/media/kavita.py                |  9 +--
+ app/services/media/komga.py                 |  9 +--
+ app/services/media/plex.py                  | 14 ++++-
+ app/services/media/romm.py                  |  8 +--
+ app/tasks/maintenance.py                    | 17 +++---
+ app/templates/admin/users.html              |  4 +-
+ app/templates/modals/create-server.html     | 10 +++-
+ app/templates/modals/edit-server.html       | 10 +++-
+ app/templates/tables/expired_user_card.html | 90 +++++++++++------------------
+ app/templates/tables/user_card.html         | 10 ++++
+ 15 files changed, 162 insertions(+), 105 deletions(-)
 
 Array
 (
@@ -3842,7 +3845,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   f7c2060..2819725  main       -> origin/main
+Updating f7c2060..2819725
+Fast-forward
+ unraid/syncthing.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -16017,7 +16025,12 @@ Processing /tmp/GitHub/repositoryClone/Phil-Barker/unraid-templates/orbitalsync/
 
 Downloading Eurotimmy's Repository
 
-Already up to date.
+From https://github.com/Eurotimmy/unraid-templates
+   8520244..b494754  main       -> origin/main
+Updating 8520244..b494754
+Fast-forward
+ markets-open/MO.png | Bin 26382 -> 193518 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
 
 Array
 (
@@ -16534,8 +16547,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-noah231515/receipt-wrangler
-noah231515/receipt-wrangler:latest Downloads: 90785  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -16687,9 +16698,6 @@ noah231515/receipt-wrangler:latest Downloads: 90785  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
-Tagged - Can't determine last update
-securecompliance/gvm
-securecompliance/gvm:11.0.1-r3 Downloads: 2341268  Stars: 50  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
@@ -16720,24 +16728,11 @@ securecompliance/gvm:11.0.1-r3 Downloads: 2341268  Stars: 50  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
-signtools/signtools
-signtools/signtools Downloads: 88277  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-mauricenino/dashdot
-mauricenino/dashdot:latest Downloads: 3472016  Stars: 46  Base: unknown
-slskd/slskd
-slskd/slskd:latest Downloads: 1125334  Stars: 9  Base: unknown
-sahara101/dakosys
-ghcr.io/sahara101/dakosys:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-oleduc/docker-obsidian-livesync-couchdb
-oleduc/docker-obsidian-livesync-couchdb:stable Downloads: 58097  Stars: 3  Base: unknown
-brockbreacher/join-bot
-ghcr.io/brockbreacher/join-bot Downloads: 87  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
