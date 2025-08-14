@@ -2757,15 +2757,7 @@ Processing /tmp/GitHub/repositoryClone/kclif9/Unraid_Templates/HassActronIntegra
 
 Downloading waazaa's Repository
 
-From https://github.com/waazaa-fr/unraid-templates
-   f4881b2..1e02e36  main       -> origin/main
-Updating f4881b2..1e02e36
-Fast-forward
- my-zendo.xml |  29 +++++++++++++++++++++++++++++
- zendo.png    | Bin 0 -> 3413 bytes
- 2 files changed, 29 insertions(+)
- create mode 100644 my-zendo.xml
- create mode 100644 zendo.png
+Already up to date.
 
 Array
 (
@@ -3114,20 +3106,24 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   77438762..c11e5d53  main       -> origin/main
-Updating 77438762..c11e5d53
+   c11e5d53..6f70892c  main       -> origin/main
+Updating c11e5d53..6f70892c
 Fast-forward
- app/blueprints/admin/routes.py                     |   9 +-
- app/models.py                                      |  56 ++++++-
- app/services/invites.py                            |  81 +++++++++--
- app/templates/admin/accepted_invites_card.html     |  30 ++--
- app/templates/admin/user_details_modal.html        |   4 +-
- app/templates/admin/user_modal.html                |  10 +-
- app/templates/tables/invite_card.html              |  12 +-
- app/templates/tables/user_card.html                |   7 +-
- ...55dc4_add_many_to_many_relationship_between_.py | 161 +++++++++++++++++++++
- 9 files changed, 332 insertions(+), 38 deletions(-)
- create mode 100644 migrations/versions/d0a4dfc55dc4_add_many_to_many_relationship_between_.py
+ app/blueprints/admin/routes.py            |  31 +++++---
+ app/blueprints/public/routes.py           |  72 +++++++++++++++++--
+ app/blueprints/wizard/routes.py           |   8 +++
+ app/services/invitation_flow/manager.py   |   1 +
+ app/services/invitation_flow/workflows.py |  30 +++++++-
+ app/services/invitation_manager.py        |  13 ++++
+ app/services/invites.py                   |  78 ++++++++++++++++-----
+ app/services/media/audiobookshelf.py      |   8 +--
+ app/services/media/jellyfin.py            |  12 +---
+ app/services/media/kavita.py              |  15 +---
+ app/services/media/komga.py               |  10 +--
+ app/services/media/plex.py                |  55 +++++++++------
+ app/services/media/romm.py                |  11 +--
+ app/templates/user-plex-login.html        | 113 ++++++++++++++++++++----------
+ 14 files changed, 318 insertions(+), 139 deletions(-)
 
 Array
 (
@@ -16560,10 +16556,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-Tagged - Can't determine last update
-rishikanthc/zendo
-ghcr.io/rishikanthc/zendo:v0.2.0 Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/rishikanthc/zendo:v0.2.0
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -16738,15 +16730,6 @@ Pulling ghcr.io/rishikanthc/zendo:v0.2.0
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-speaches-ai/speaches
-ghcr.io/speaches-ai/speaches:latest-cpu Downloads:   Stars:   Base: unknown
-wardy784/erugo
-wardy784/erugo:latest Downloads: 106000  Stars: 5  Base: unknown
-hhftechnology/pangolin-cloudflare-tunnel
-hhftechnology/pangolin-cloudflare-tunnel:latest Downloads: 2601  Stars: 0  Base: unknown
-deceptifeed/server
-deceptifeed/server:latest Downloads: 1751  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
