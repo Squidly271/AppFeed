@@ -3111,37 +3111,19 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   e0ed3133..73d9e268  main       -> origin/main
- * [new tag]           2025.8.4rc -> 2025.8.4rc
-Updating e0ed3133..73d9e268
+   73d9e268..067a76de  main       -> origin/main
+Updating 73d9e268..067a76de
 Fast-forward
- .github/workflows/pre-release.yml       |   2 +
- .github/workflows/release.yml           |   3 +
- app/blueprints/media_servers/routes.py  |   3 +
- app/forms/settings.py                   |   1 +
- app/services/media/__init__.py          |   1 +
- app/services/media/navidrome.py         | 495 +++++++++++++++++++++++
- app/services/servers.py                 |  57 +++
- app/templates/modals/create-server.html |   1 +
- app/templates/modals/edit-server.html   |   1 +
- tests/README.md                         | 201 ++++++++++
- tests/e2e/test_invitation_e2e.py        | 405 +++++++++++++++++++
- tests/mocks/__init__.py                 |  32 ++
- tests/mocks/media_server_mocks.py       | 333 +++++++++++++++
- tests/test_debug_invitation.py          |  38 ++
- tests/test_invitation_comprehensive.py  | 691 ++++++++++++++++++++++++++++++++
- tests/test_invitation_performance.py    | 449 +++++++++++++++++++++
- tests/test_invitation_unit.py           | 469 ++++++++++++++++++++++
- 17 files changed, 3182 insertions(+)
- create mode 100644 app/services/media/navidrome.py
- create mode 100644 tests/README.md
- create mode 100644 tests/e2e/test_invitation_e2e.py
- create mode 100644 tests/mocks/__init__.py
- create mode 100644 tests/mocks/media_server_mocks.py
- create mode 100644 tests/test_debug_invitation.py
- create mode 100644 tests/test_invitation_comprehensive.py
- create mode 100644 tests/test_invitation_performance.py
- create mode 100644 tests/test_invitation_unit.py
+ Dockerfile                             |   7 +-
+ app/static/package-lock.json           |  14 -
+ app/templates/admin.html               |   7 +
+ pyproject.toml                         |   2 +
+ tests/e2e/test_invitation_e2e.py       |   4 +-
+ tests/mocks/media_server_mocks.py      |  18 +
+ tests/test_invitation_comprehensive.py |  45 ++-
+ tests/test_invitation_performance.py   |  22 +-
+ uv.lock                                | 694 +++++++++++++++++----------------
+ 9 files changed, 428 insertions(+), 385 deletions(-)
 
 Array
 (
@@ -16578,6 +16560,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+hacdias/webdav
+hacdias/webdav:latest Downloads: 114586  Stars: 35  Base: unknown
+iib0011/omni-tools
+iib0011/omni-tools Downloads: 591476  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
