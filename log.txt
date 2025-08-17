@@ -30,19 +30,25 @@ Processing /tmp/GitHub/repositoryClone/secretlycarl/onboarderr-unraid/templates/
 
 Downloading Tajniak81's Repository
 
-Already up to date.
+From https://github.com/tajniak81/unraid-docker-templates
+   a5b9d03..b7ba93f  main       -> origin/main
+Updating a5b9d03..b7ba93f
+Fast-forward
+ stalwart.xml => stalwart/stalwart.xml | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename stalwart.xml => stalwart/stalwart.xml (100%)
 
 Array
 (
     [https://github.com/tajniak81/unraid-docker-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart.xml
+            [0] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml
         )
 
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart.xml...Removed from CA
+Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml...Removed from CA
 
 
 Downloading Rusty6285's Repository
@@ -3111,19 +3117,21 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   73d9e268..067a76de  main       -> origin/main
-Updating 73d9e268..067a76de
+   067a76de..fd5066d1  main       -> origin/main
+Updating 067a76de..fd5066d1
 Fast-forward
- Dockerfile                             |   7 +-
- app/static/package-lock.json           |  14 -
- app/templates/admin.html               |   7 +
- pyproject.toml                         |   2 +
- tests/e2e/test_invitation_e2e.py       |   4 +-
- tests/mocks/media_server_mocks.py      |  18 +
- tests/test_invitation_comprehensive.py |  45 ++-
- tests/test_invitation_performance.py   |  22 +-
- uv.lock                                | 694 +++++++++++++++++----------------
- 9 files changed, 428 insertions(+), 385 deletions(-)
+ Dockerfile                             |  10 +-
+ app/services/invites.py                |  20 +++-
+ docker-entrypoint.sh                   |   2 +-
+ pyproject.toml                         |   1 +
+ pytest.ini                             |   5 +-
+ tests/e2e/test_invitation_e2e.py       |  18 ++--
+ tests/mocks/media_server_mocks.py      | 162 +++++++++++++++++++++++++++++++--
+ tests/test_debug_invitation.py         |   2 +-
+ tests/test_invitation_comprehensive.py |  48 +++++-----
+ tests/test_invitation_performance.py   |  14 +--
+ uv.lock                                |  51 +++++++++++
+ 11 files changed, 276 insertions(+), 57 deletions(-)
 
 Array
 (
@@ -3852,7 +3860,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   7471329..f8e88d2  main       -> origin/main
+Updating 7471329..f8e88d2
+Fast-forward
+ unraid/syncthing.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -5166,7 +5179,13 @@ Processing /tmp/GitHub/repositoryClone/brettm357/docker-templates/unifi.xml...Su
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   92011c1..0c79795  master     -> origin/master
+Updating 92011c1..0c79795
+Fast-forward
+ jlesage/images/file-centipede-icon.png | Bin 0 -> 136964 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 jlesage/images/file-centipede-icon.png
 
 Array
 (
@@ -16526,6 +16545,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
+cirx08/wedding_share
+cirx08/wedding_share:latest Downloads: 29830  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -16560,13 +16581,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-hacdias/webdav
-hacdias/webdav:latest Downloads: 114586  Stars: 35  Base: unknown
-iib0011/omni-tools
-iib0011/omni-tools Downloads: 591476  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+binhex/arch-qbittorrent
+ghcr.io/binhex/arch-qbittorrent Downloads: 455  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -16742,6 +16761,8 @@ iib0011/omni-tools Downloads: 591476  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
+thewicklowwolf/lidify
+thewicklowwolf/lidify Downloads: 118552  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
