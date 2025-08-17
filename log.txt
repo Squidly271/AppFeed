@@ -3110,7 +3110,38 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   e0ed3133..73d9e268  main       -> origin/main
+ * [new tag]           2025.8.4rc -> 2025.8.4rc
+Updating e0ed3133..73d9e268
+Fast-forward
+ .github/workflows/pre-release.yml       |   2 +
+ .github/workflows/release.yml           |   3 +
+ app/blueprints/media_servers/routes.py  |   3 +
+ app/forms/settings.py                   |   1 +
+ app/services/media/__init__.py          |   1 +
+ app/services/media/navidrome.py         | 495 +++++++++++++++++++++++
+ app/services/servers.py                 |  57 +++
+ app/templates/modals/create-server.html |   1 +
+ app/templates/modals/edit-server.html   |   1 +
+ tests/README.md                         | 201 ++++++++++
+ tests/e2e/test_invitation_e2e.py        | 405 +++++++++++++++++++
+ tests/mocks/__init__.py                 |  32 ++
+ tests/mocks/media_server_mocks.py       | 333 +++++++++++++++
+ tests/test_debug_invitation.py          |  38 ++
+ tests/test_invitation_comprehensive.py  | 691 ++++++++++++++++++++++++++++++++
+ tests/test_invitation_performance.py    | 449 +++++++++++++++++++++
+ tests/test_invitation_unit.py           | 469 ++++++++++++++++++++++
+ 17 files changed, 3182 insertions(+)
+ create mode 100644 app/services/media/navidrome.py
+ create mode 100644 tests/README.md
+ create mode 100644 tests/e2e/test_invitation_e2e.py
+ create mode 100644 tests/mocks/__init__.py
+ create mode 100644 tests/mocks/media_server_mocks.py
+ create mode 100644 tests/test_debug_invitation.py
+ create mode 100644 tests/test_invitation_comprehensive.py
+ create mode 100644 tests/test_invitation_performance.py
+ create mode 100644 tests/test_invitation_unit.py
 
 Array
 (
@@ -16535,9 +16566,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-Tagged - Can't determine last update
-docker.io/bitnami/mongodb
-docker.io/bitnami/mongodb:6.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -16683,8 +16711,6 @@ docker.io/bitnami/mongodb:6.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-lostb1t/replex
-ghcr.io/lostb1t/replex Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -16726,9 +16752,6 @@ ghcr.io/lostb1t/replex Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-aculix/bitplay
-ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
