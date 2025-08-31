@@ -3235,16 +3235,25 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   6cc2e981..1b44d4ec  main       -> origin/main
-Updating 6cc2e981..1b44d4ec
+   1b44d4ec..90089a79  main       -> origin/main
+ * [new tag]           2025.8.4   -> 2025.8.4
+ * [new tag]           v2025.9.0  -> v2025.9.0
+Updating 1b44d4ec..90089a79
 Fast-forward
- .github/workflows/pr-test.yml          |   2 +-
- tests/conftest.py                      |   9 ++
- tests/e2e/test_invitation_e2e.py       | 220 +++++++++++++++++++++++++--------
- tests/test_invitation_comprehensive.py |  12 +-
- tests/test_invitation_performance.py   |   2 +
- tests/test_migrations.py               |   1 +
- 6 files changed, 186 insertions(+), 60 deletions(-)
+ .github/workflows/pr-test.yml           |  5 +-
+ .github/workflows/pytest.yml            |  6 ++-
+ .github/workflows/release-please.yml    | 52 +++++++++++++++++++-
+ .release-please-manifest.json           |  2 +-
+ CHANGELOG.md                            | 20 ++++++++
+ Dockerfile                              |  4 +-
+ app/static/js/tiny-mde.min.js           |  2 +-
+ app/templates/hybrid-password-form.html | 44 +++++++++++++++--
+ app/templates/welcome-jellyfin.html     | 36 +++++++++++++-
+ pyproject.toml                          |  2 +-
+ release-please-config.json              | 16 +++----
+ tests/e2e/test_invitation_e2e.py        | 84 +++++++++++++--------------------
+ 12 files changed, 201 insertions(+), 72 deletions(-)
+ create mode 100644 CHANGELOG.md
 
 Array
 (
