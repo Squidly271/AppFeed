@@ -2739,7 +2739,12 @@ Processing /tmp/GitHub/repositoryClone/DavidWJR/unraid-templates/discord-tickets
 
 Downloading martial's Repository
 
-Already up to date.
+From https://github.com/mmartial/unraid-templates
+   ed5851a..a83a4b8  main       -> origin/main
+Updating ed5851a..a83a4b8
+Fast-forward
+ templates/ComfyUI-Nvidia-Docker.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -3235,25 +3240,29 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   1b44d4ec..90089a79  main       -> origin/main
- * [new tag]           2025.8.4   -> 2025.8.4
- * [new tag]           v2025.9.0  -> v2025.9.0
-Updating 1b44d4ec..90089a79
+   90089a79..d34068c9  main       -> origin/main
+Updating 90089a79..d34068c9
 Fast-forward
- .github/workflows/pr-test.yml           |  5 +-
- .github/workflows/pytest.yml            |  6 ++-
- .github/workflows/release-please.yml    | 52 +++++++++++++++++++-
- .release-please-manifest.json           |  2 +-
- CHANGELOG.md                            | 20 ++++++++
- Dockerfile                              |  4 +-
- app/static/js/tiny-mde.min.js           |  2 +-
- app/templates/hybrid-password-form.html | 44 +++++++++++++++--
- app/templates/welcome-jellyfin.html     | 36 +++++++++++++-
- pyproject.toml                          |  2 +-
- release-please-config.json              | 16 +++----
- tests/e2e/test_invitation_e2e.py        | 84 +++++++++++++--------------------
- 12 files changed, 201 insertions(+), 72 deletions(-)
- create mode 100644 CHANGELOG.md
+ .dockerignore                        |    3 +
+ .github/workflows/release-it.yml     |  145 +
+ .github/workflows/release-please.yml |   77 -
+ .release-it.json                     |   62 +
+ .release-please-manifest.json        |    3 -
+ CHANGELOG.md                         |   19 +-
+ Dockerfile                           |    2 +-
+ docker-entrypoint.sh                 |    2 +-
+ package-lock.json                    | 7298 ++++++++++++++++++++++++++++++++++
+ package.json                         |   19 +
+ pyproject.toml                       |    4 +-
+ release-please-config.json           |   71 -
+ 12 files changed, 7533 insertions(+), 172 deletions(-)
+ create mode 100644 .github/workflows/release-it.yml
+ delete mode 100644 .github/workflows/release-please.yml
+ create mode 100644 .release-it.json
+ delete mode 100644 .release-please-manifest.json
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ delete mode 100644 release-please-config.json
 
 Array
 (
@@ -16905,6 +16914,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+arr-tools/main
+ghcr.io/l4stidi0t/arr-tools/main:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
