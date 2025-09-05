@@ -47,7 +47,12 @@ Processing /tmp/GitHub/repositoryClone/MitchellThompkins/unraid-templates/tor-re
 
 Downloading Preposterous' Repository
 
-Already up to date.
+From https://github.com/benjaminRoberts01375/unraid-templates
+   49c5d6e..920929b  main       -> origin/main
+Updating 49c5d6e..920929b
+Fast-forward
+ CheckBag Unraid Template.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -3286,27 +3291,23 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   8875cfb0..57a2a95a  main       -> origin/main
- * [new tag]           2025.8.5rc -> 2025.8.5rc
-Updating 8875cfb0..57a2a95a
+   57a2a95a..d90e2c4e  main       -> origin/main
+ * [new tag]           2025.9.0   -> 2025.9.0
+ * [new tag]           2025.9.0rc -> 2025.9.0rc
+Updating 57a2a95a..d90e2c4e
 Fast-forward
- .github/workflows/release-it.yml               | 92 ++++++++++++++++++--------
- .release-it.json                               |  2 +-
- README.md                                      |  4 +-
- app/blueprints/admin/routes.py                 |  5 +-
- app/blueprints/api/api_routes.py               |  5 +-
- app/blueprints/wizard_admin/routes.py          |  6 +-
- app/services/companions/audiobookrequest.py    |  1 +
- app/services/companions/ombi.py                |  1 +
- app/services/media/plex.py                     |  2 +-
- app/services/wizard_export_import.py           | 18 ++---
- app/tasks/maintenance.py                       |  2 +-
- app/templates/admin/accepted_invites_card.html | 26 ++++++--
- app/templates/tables/expired_user_card.html    |  4 +-
- tests/mocks/media_server_mocks.py              |  6 +-
- tests/test_invitation_comprehensive.py         |  4 +-
- tests/test_invitation_unit.py                  | 22 +++---
- 16 files changed, 132 insertions(+), 68 deletions(-)
+ .github/workflows/publish-manifest.yml         |   10 +-
+ .github/workflows/release-it.yml               |  183 -
+ .release-it.json                               |   62 -
+ CHANGELOG.md                                   |   30 +
+ app/templates/admin/accepted_invites_card.html |    8 +-
+ app/templates/admin/home.html                  |   18 +-
+ app/templates/admin/user_modal.html            |   21 +
+ package-lock.json                              | 7287 +-----------------------
+ package.json                                   |   15 +-
+ 9 files changed, 84 insertions(+), 7550 deletions(-)
+ delete mode 100644 .github/workflows/release-it.yml
+ delete mode 100644 .release-it.json
 
 Array
 (
@@ -16968,12 +16969,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-jcostom/rollerblades
-ghcr.io/jcostom/rollerblades:latest Downloads:   Stars:   Base: unknown
-rafhaanshah/container-mon
-ghcr.io/rafhaanshah/container-mon:latest Downloads:   Stars:   Base: unknown
-gsariev/maintainerr-overlay-helperr
-gsariev/maintainerr-overlay-helperr:latest Downloads: 4157  Stars: 0  Base: unknown
+tbosk/mkfd
+tbosk/mkfd:latest Downloads: 7376  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
