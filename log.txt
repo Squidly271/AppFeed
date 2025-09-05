@@ -3285,7 +3285,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   d4297d2b..8875cfb0  main       -> origin/main
+Updating d4297d2b..8875cfb0
+Fast-forward
+ app/blueprints/admin/routes.py                     |  93 +++++
+ app/jinja_filters.py                               |  16 +
+ app/models.py                                      |   1 +
+ app/services/media/audiobookshelf.py               |  31 +-
+ app/services/media/client_base.py                  |  37 +-
+ app/services/media/jellyfin.py                     |  30 +-
+ app/services/media/navidrome.py                    |  29 +-
+ app/services/media/plex.py                         |  31 +-
+ app/services/media/romm.py                         |  16 +-
+ app/services/media/service.py                      | 105 +++++
+ app/static/package-lock.json                       | 168 ++++----
+ app/static/package.json                            |   8 +-
+ app/templates/_partials/delete_user_modal.html     | 152 ++++++++
+ app/templates/admin/user_modal.html                |  10 +
+ app/templates/admin/users.html                     |   6 +-
+ app/templates/tables/user_card.html                |  33 +-
+ .../14a87d76dff1_add_notes_field_to_user_model.py  |  32 ++
+ ...d6f32_add_allow_downloads_and_allow_live_tv_.py |  34 ++
+ pyproject.toml                                     |   4 +-
+ tests/test_identity_linking_fix.py                 | 432 +++++++++++++++++++++
+ uv.lock                                            |  10 +-
+ 21 files changed, 1133 insertions(+), 145 deletions(-)
+ create mode 100644 app/templates/_partials/delete_user_modal.html
+ create mode 100644 migrations/versions/14a87d76dff1_add_notes_field_to_user_model.py
+ create mode 100644 migrations/versions/6c39692d6f32_add_allow_downloads_and_allow_live_tv_.py
+ create mode 100644 tests/test_identity_linking_fix.py
 
 Array
 (
@@ -13516,12 +13545,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   bd2a93a..e3edb0f  main       -> origin/main
-Updating bd2a93a..e3edb0f
-Fast-forward
- automation/change_monitoring/data.json | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -16948,10 +16972,21 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+smeagolworms4/mqtt-explorer
+smeagolworms4/mqtt-explorer Downloads: 1512186  Stars: 7  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+jakec207/maintainerr-overlay
+jakec207/maintainerr-overlay:latest Downloads: 1344  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+home-operations/jbops
+ghcr.io/home-operations/jbops:rolling Downloads:   Stars:   Base: unknown
+pierredurrr/plex-randomizer
+pierredurrr/plex-randomizer:latest Downloads: 47  Stars: 0  Base: unknown
+opentofu/opentofu
+ghcr.io/opentofu/opentofu:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
