@@ -3291,7 +3291,28 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   b9e249c2..7616820e  main       -> origin/main
+Updating b9e249c2..7616820e
+Fast-forward
+ app/blueprints/wizard/routes.py                    | 48 ++++++++++---
+ app/blueprints/wizard_admin/routes.py              |  8 +++
+ app/forms/wizard.py                                | 14 +++-
+ app/models.py                                      |  4 ++
+ app/services/wizard_export_import.py               | 20 ++++++
+ app/static/js/wizard-steps.js                      | 81 +++++++++++++++++++++-
+ app/templates/modals/wizard-simple-step-form.html  | 10 +++
+ app/templates/modals/wizard-step-form.html         | 11 ++-
+ app/templates/settings/wizard/form.html            | 13 +++-
+ app/templates/settings/wizard/simple_form.html     | 13 +++-
+ app/templates/wizard/steps.html                    |  6 +-
+ docs/using-wizarr/customise-steps.md               | 37 +++++++---
+ ...add_require_interaction_field_to_wizard_step.py | 36 ++++++++++
+ tests/test_wizard_require_interaction.py           | 77 ++++++++++++++++++++
+ tests/test_wizard_step.py                          |  6 ++
+ 15 files changed, 357 insertions(+), 27 deletions(-)
+ create mode 100644 migrations/versions/20250907_add_require_interaction_field_to_wizard_step.py
+ create mode 100644 tests/test_wizard_require_interaction.py
 
 Array
 (
@@ -16773,6 +16794,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+bmmbmm01/sftp
+bmmbmm01/sftp:latest Downloads: 468  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -16952,6 +16975,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+imthai/iqbit
+imthai/iqbit Downloads: 2799  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
