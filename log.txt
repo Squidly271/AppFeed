@@ -3298,20 +3298,26 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   090eb9e8..27596f48  main       -> origin/main
- * [new tag]           2025.8.5   -> 2025.8.5
-Updating 090eb9e8..27596f48
+   27596f48..3d61903f  main       -> origin/main
+Updating 27596f48..3d61903f
 Fast-forward
- .dockerignore                 |  3 +--
- .github/workflows/ci.yml      | 12 ++++++++++++
- .github/workflows/pytest.yml  |  2 --
- .github/workflows/release.yml | 12 ++++++++++++
- CHANGELOG.md                  |  6 ------
- Dockerfile                    | 14 +++++++-------
- docker-entrypoint.sh          |  4 +++-
- package-lock.json             |  5 +++++
- unraid.xml                    | 11 ++---------
- 9 files changed, 42 insertions(+), 27 deletions(-)
+ .gitignore                               |   9 +-
+ app/blueprints/admin/routes.py           |  29 +--
+ app/models.py                            |  43 +++++
+ app/services/media/audiobookshelf.py     |  61 +++---
+ app/services/media/jellyfin.py           |  58 +++---
+ app/services/media/kavita.py             |  21 ++-
+ app/services/media/komga.py              |  21 ++-
+ app/services/media/navidrome.py          |  59 +++---
+ app/services/media/plex.py               |  64 ++++---
+ app/services/media/romm.py               |  29 +--
+ docker-compose.test.yml                  |  64 +++++++
+ tests/fixtures/media_server_bootstrap.py | 310 +++++++++++++++++++++++++++++++
+ tests/test-media/movies/README.md        |  19 ++
+ 13 files changed, 629 insertions(+), 158 deletions(-)
+ create mode 100644 docker-compose.test.yml
+ create mode 100644 tests/fixtures/media_server_bootstrap.py
+ create mode 100644 tests/test-media/movies/README.md
 
 Array
 (
@@ -6320,13 +6326,7 @@ Processing /tmp/GitHub/repositoryClone/RazorSiM/docker-templates/hass-configurat
 
 Downloading knex666's Repository
 
-From https://github.com/maschhoff/docker
-   45e85ff..f163a3d  master     -> origin/master
-Updating 45e85ff..f163a3d
-Fast-forward
- unraid xml/{my-netiso.xml => my-NetISO.xml} | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
- rename unraid xml/{my-netiso.xml => my-NetISO.xml} (91%)
+Already up to date.
 
 Array
 (
@@ -8466,7 +8466,12 @@ Processing /tmp/GitHub/repositoryClone/OctoPrint/Unraid-Template/OctoPrint/OctoP
 
 Downloading IBRACORP's Repository
 
-Already up to date.
+From https://github.com/ibracorp/unraid-templates
+   3bb6b4c..070fd81  master     -> origin/master
+Updating 3bb6b4c..070fd81
+Fast-forward
+ unraid-config-guardian/unraid-template.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -16795,6 +16800,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+aeharding/voyager
+ghcr.io/aeharding/voyager:latest Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+godver3/cli_debrid
+godver3/cli_debrid:dev Downloads: 27990  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -16987,6 +16997,17 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+rclone/rclone
+rclone/rclone:latest Downloads: 113140922  Stars: 257  Base: unknown
+2franix/cron-docker
+ghcr.io/2franix/cron-docker:latest Downloads:   Stars:   Base: unknown
+registry.gitlab.com/fmd-foss/fmd-server
+registry.gitlab.com/fmd-foss/fmd-server:latest Downloads:   Stars:   Base: unknown
+willfarrell/crontab
+willfarrell/crontab:latest Downloads: 2365818  Stars: 68  Base: unknown
+Tagged - Can't determine last update
+tozd/cron
+tozd/cron:ubuntu-trusty Downloads: 25152  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
