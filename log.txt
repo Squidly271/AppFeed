@@ -10091,131 +10091,8 @@ Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
 From https://gitlab.com/crafty-controller/crafty-4
-   9e74d17f..010853d4  master     -> origin/master
-Updating 9e74d17f..010853d4
-Fast-forward
- CHANGELOG.md                                       |   7 ++
- README.md                                          |   2 +-
- app/classes/web/routes/api/crafty/upload/index.py  |   9 +-
- app/config/version.json                            |   2 +-
- app/frontend/static/assets/css/base-style.css      | 120 +++++++++++----------
- app/frontend/static/assets/css/crafty.css          |   9 +-
- app/frontend/static/assets/css/dark/style.css      | 119 ++++++++++----------
- .../static/assets/css/internal/anti-lockout.css    |   4 +-
- app/frontend/static/assets/css/internal/root.css   |   4 +-
- .../static/assets/css/partial/crafty-terminal.css  |   2 +-
- app/frontend/static/assets/css/shared/style.css    | 108 ++++++++++---------
- app/frontend/static/assets/css/themes/dark.css     |   4 +-
- app/frontend/static/assets/css/themes/default.css  |   4 +-
- app/frontend/static/assets/css/themes/light.css    |   4 +-
- app/frontend/static/assets/css/themes/ronald.css   |   4 +-
- .../static/assets/css/vendors/datatables.min.css   |  27 +++++
- ...onHyperlegibleMono-Italic-VariableFont_wght.ttf | Bin 0 -> 55696 bytes
- .../AtkinsonHyperlegibleMono-VariableFont_wght.ttf | Bin 0 -> 53432 bytes
- ...onHyperlegibleNext-Italic-VariableFont_wght.ttf | Bin 0 -> 123148 bytes
- .../AtkinsonHyperlegibleNext-VariableFont_wght.ttf | Bin 0 -> 113948 bytes
- .../fonts/Atikinson_Hyperlegible_Next/OFL.txt      |  93 ++++++++++++++++
- .../fonts/Atikinson_Hyperlegible_Next/README.txt   |  77 +++++++++++++
- .../static/AtkinsonHyperlegibleMono-Bold.ttf       | Bin 0 -> 34268 bytes
- .../static/AtkinsonHyperlegibleMono-BoldItalic.ttf | Bin 0 -> 35684 bytes
- .../static/AtkinsonHyperlegibleMono-ExtraBold.ttf  | Bin 0 -> 34228 bytes
- .../AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf   | Bin 0 -> 35760 bytes
- .../static/AtkinsonHyperlegibleMono-ExtraLight.ttf | Bin 0 -> 34388 bytes
- .../AtkinsonHyperlegibleMono-ExtraLightItalic.ttf  | Bin 0 -> 35848 bytes
- .../static/AtkinsonHyperlegibleMono-Italic.ttf     | Bin 0 -> 35668 bytes
- .../static/AtkinsonHyperlegibleMono-Light.ttf      | Bin 0 -> 34336 bytes
- .../AtkinsonHyperlegibleMono-LightItalic.ttf       | Bin 0 -> 35852 bytes
- .../static/AtkinsonHyperlegibleMono-Medium.ttf     | Bin 0 -> 34356 bytes
- .../AtkinsonHyperlegibleMono-MediumItalic.ttf      | Bin 0 -> 35800 bytes
- .../static/AtkinsonHyperlegibleMono-Regular.ttf    | Bin 0 -> 34320 bytes
- .../static/AtkinsonHyperlegibleMono-SemiBold.ttf   | Bin 0 -> 34348 bytes
- .../AtkinsonHyperlegibleMono-SemiBoldItalic.ttf    | Bin 0 -> 35808 bytes
- .../static/AtkinsonHyperlegibleNext-Bold.ttf       | Bin 0 -> 47968 bytes
- .../static/AtkinsonHyperlegibleNext-BoldItalic.ttf | Bin 0 -> 52280 bytes
- .../static/AtkinsonHyperlegibleNext-ExtraBold.ttf  | Bin 0 -> 48044 bytes
- .../AtkinsonHyperlegibleNext-ExtraBoldItalic.ttf   | Bin 0 -> 52392 bytes
- .../static/AtkinsonHyperlegibleNext-ExtraLight.ttf | Bin 0 -> 48076 bytes
- .../AtkinsonHyperlegibleNext-ExtraLightItalic.ttf  | Bin 0 -> 52436 bytes
- .../static/AtkinsonHyperlegibleNext-Italic.ttf     | Bin 0 -> 52316 bytes
- .../static/AtkinsonHyperlegibleNext-Light.ttf      | Bin 0 -> 48088 bytes
- .../AtkinsonHyperlegibleNext-LightItalic.ttf       | Bin 0 -> 52504 bytes
- .../static/AtkinsonHyperlegibleNext-Medium.ttf     | Bin 0 -> 48036 bytes
- .../AtkinsonHyperlegibleNext-MediumItalic.ttf      | Bin 0 -> 52328 bytes
- .../static/AtkinsonHyperlegibleNext-Regular.ttf    | Bin 0 -> 48064 bytes
- .../static/AtkinsonHyperlegibleNext-SemiBold.ttf   | Bin 0 -> 47956 bytes
- .../AtkinsonHyperlegibleNext-SemiBoldItalic.ttf    | Bin 0 -> 52364 bytes
- app/frontend/static/assets/fonts/Sarabun/OFL.txt   |  93 ++++++++++++++++
- .../static/assets/fonts/Sarabun/Sarabun-Bold.ttf   | Bin 0 -> 82592 bytes
- .../assets/fonts/Sarabun/Sarabun-BoldItalic.ttf    | Bin 0 -> 85636 bytes
- .../assets/fonts/Sarabun/Sarabun-ExtraBold.ttf     | Bin 0 -> 82632 bytes
- .../fonts/Sarabun/Sarabun-ExtraBoldItalic.ttf      | Bin 0 -> 85448 bytes
- .../assets/fonts/Sarabun/Sarabun-ExtraLight.ttf    | Bin 0 -> 83276 bytes
- .../fonts/Sarabun/Sarabun-ExtraLightItalic.ttf     | Bin 0 -> 86368 bytes
- .../static/assets/fonts/Sarabun/Sarabun-Italic.ttf | Bin 0 -> 86024 bytes
- .../static/assets/fonts/Sarabun/Sarabun-Light.ttf  | Bin 0 -> 83224 bytes
- .../assets/fonts/Sarabun/Sarabun-LightItalic.ttf   | Bin 0 -> 86072 bytes
- .../static/assets/fonts/Sarabun/Sarabun-Medium.ttf | Bin 0 -> 83080 bytes
- .../assets/fonts/Sarabun/Sarabun-MediumItalic.ttf  | Bin 0 -> 86136 bytes
- .../assets/fonts/Sarabun/Sarabun-Regular.ttf       | Bin 0 -> 83080 bytes
- .../assets/fonts/Sarabun/Sarabun-SemiBold.ttf      | Bin 0 -> 82952 bytes
- .../fonts/Sarabun/Sarabun-SemiBoldItalic.ttf       | Bin 0 -> 86020 bytes
- .../static/assets/fonts/Sarabun/Sarabun-Thin.ttf   | Bin 0 -> 83408 bytes
- .../assets/fonts/Sarabun/Sarabun-ThinItalic.ttf    | Bin 0 -> 86344 bytes
- app/frontend/templates/base.html                   |   4 +-
- sonar-project.properties                           |   2 +-
- 69 files changed, 506 insertions(+), 192 deletions(-)
- create mode 100644 app/frontend/static/assets/css/vendors/datatables.min.css
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/AtkinsonHyperlegibleMono-Italic-VariableFont_wght.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/AtkinsonHyperlegibleMono-VariableFont_wght.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-Italic-VariableFont_wght.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/AtkinsonHyperlegibleNext-VariableFont_wght.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/OFL.txt
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/README.txt
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-Bold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-BoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-ExtraBold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-ExtraLight.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-ExtraLightItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-Italic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-Light.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-LightItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-Medium.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-MediumItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-Regular.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-SemiBold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleMono-SemiBoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-Bold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-BoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-ExtraBold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-ExtraBoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-ExtraLight.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-ExtraLightItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-Italic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-Light.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-LightItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-Medium.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-MediumItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-Regular.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-SemiBold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Atikinson_Hyperlegible_Next/static/AtkinsonHyperlegibleNext-SemiBoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/OFL.txt
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-Bold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-BoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-ExtraBold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-ExtraBoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-ExtraLight.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-ExtraLightItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-Italic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-Light.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-LightItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-Medium.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-MediumItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-Regular.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-SemiBold.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-SemiBoldItalic.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-Thin.ttf
- create mode 100644 app/frontend/static/assets/fonts/Sarabun/Sarabun-ThinItalic.ttf
+ * [new tag]           v4.5.4     -> v4.5.4
+Already up to date.
 
 Array
 (
@@ -16922,8 +16799,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
-meaning/pmda
-meaning/pmda:latest Downloads: 2450  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
