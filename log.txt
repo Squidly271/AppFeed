@@ -3334,25 +3334,18 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   aae7e02b..b410625e  main       -> origin/main
-Updating aae7e02b..b410625e
+   b410625e..1e75adba  main       -> origin/main
+ * [new tag]           v2025.9.4  -> v2025.9.4
+Updating b410625e..1e75adba
 Fast-forward
- .github/dependabot.yml                    | 38 +++++++++++++++++++++++++++++--
- .github/workflows/auto-release.yml        |  2 +-
- .github/workflows/calver-automation.yml   |  2 +-
- .github/workflows/ci.yml                  | 10 ++++----
- .github/workflows/create-release.yml      |  2 +-
- .github/workflows/i18n-template.yml       |  6 ++---
- .github/workflows/pr-test.yml             | 22 ++++++++++--------
- .github/workflows/publish-manifest.yml    |  2 +-
- .github/workflows/pytest.yml              |  8 +++----
- .github/workflows/release.yml             |  8 +++----
- .github/workflows/verify-translations.yml |  2 +-
- .pre-commit-config.yaml                   |  4 ++--
- pyproject.toml                            |  4 ++--
- tests/test_migrations.py                  |  4 +++-
- uv.lock                                   | 10 ++++----
- 15 files changed, 82 insertions(+), 42 deletions(-)
+ app/blueprints/admin/routes.py |   8 ++-
+ app/extensions.py              |  21 +++++-
+ app/services/update_check.py   |  40 +++++------
+ app/tasks/update_check.py      | 148 +++++++++++++++++++++++++++++++++++++++++
+ package.json                   |   2 +-
+ pyproject.toml                 |   2 +-
+ 6 files changed, 198 insertions(+), 23 deletions(-)
+ create mode 100644 app/tasks/update_check.py
 
 Array
 (
@@ -5486,12 +5479,7 @@ Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-cen
 
 Downloading dlandon's Repository
 
-From https://github.com/dlandon/docker.templates
-   1ad4bd2..65d4752  master     -> origin/master
-Updating 1ad4bd2..65d4752
-Fast-forward
- ownCloud.xml | 7 +++----
- 1 file changed, 3 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -8508,7 +8496,26 @@ Processing /tmp/GitHub/repositoryClone/OctoPrint/Unraid-Template/OctoPrint/OctoP
 
 Downloading IBRACORP's Repository
 
-Already up to date.
+From https://github.com/ibracorp/unraid-templates
+   3fb239a..e19d134  master     -> origin/master
+Updating 3fb239a..e19d134
+Fast-forward
+ IBRACORP_Logo.png                                  | Bin 3877 -> 0 bytes
+ README.md                                          |  55 +---
+ V3Icon.png                                         | Bin 0 -> 2107499 bytes
+ docs/templates-by-category.md                      | 282 +++++++++++++++++++++
+ lidatube.xml => lidatube/lidatube.xml              |   0
+ {icons => pterodactyl-panel}/pterodactyl-panel.png | Bin
+ pterodactyl-panel/pterodactyl-panel.xml            |   2 +-
+ {icons => traefik}/traefik.png                     | Bin
+ traefik/traefik.xml                                |   2 +-
+ 9 files changed, 290 insertions(+), 51 deletions(-)
+ delete mode 100644 IBRACORP_Logo.png
+ create mode 100644 V3Icon.png
+ create mode 100644 docs/templates-by-category.md
+ rename lidatube.xml => lidatube/lidatube.xml (100%)
+ rename {icons => pterodactyl-panel}/pterodactyl-panel.png (100%)
+ rename {icons => traefik}/traefik.png (100%)
 
 Array
 (
@@ -8525,43 +8532,43 @@ Array
             [8] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/cachet/cachet.xml
             [9] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/linkstack/linkstack.xml
             [10] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/maintainerr/maintainerr.xml
-            [11] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/unraid-config-guardian/unraid-template.xml
-            [12] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/casdoor/casdoor.xml
-            [13] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/zoraxy/zoraxy.xml
-            [14] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/authentik/authentik.xml
-            [15] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/yacht/yacht.xml
-            [16] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/authelia/authelia.xml
-            [17] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/ca_profile.xml
-            [18] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/serviio/serviio.xml
-            [19] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/picsur/picsur.xml
-            [20] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/owncloud-ocis/owncloud_ocis.xml
-            [21] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/quant-ux-frontend/quant-ux-frontend.xml
-            [22] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/traggo/traggo.xml
-            [23] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/databag/databag.xml
-            [24] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/ghost/ghost.xml
-            [25] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/plextraktsync/plextraktsync.xml
-            [26] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/fasten/fasten.xml
-            [27] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/docuseal/docuseal.xml
-            [28] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/formbricks/formbricks.xml
-            [29] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/timelite/timelite.xml
-            [30] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pomerium/pomerium.xml
-            [31] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/docker-socket-proxy/docker-socket-proxy.xml
-            [32] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pterodactyl-panel/pterodactyl-panel.xml
-            [33] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/crowdsec/crowdsec.xml
-            [34] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/send/send.xml
-            [35] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/quant-ux-backend/quant-ux-backend.xml
-            [36] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/wrapperr/wrapperr.xml
-            [37] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/cal.com/cal.com.xml
-            [38] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/vocechat-server/vocechat-server.xml
-            [39] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/homepage/homepage.xml
-            [40] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pterodactyl-daemon/pterodactyl-daemon.xml
-            [41] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/authentik-worker/authentik-worker.xml
-            [42] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/activepieces/activepieces.xml
-            [43] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/beatbump/beatbump.xml
-            [44] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/super-productivity/super-productivity.xml
-            [45] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/jellyseerr/jellyseerr.xml
-            [46] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/babybuddy/babybuddy.xml
-            [47] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/lidatube.xml
+            [11] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/lidatube/lidatube.xml
+            [12] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/unraid-config-guardian/unraid-template.xml
+            [13] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/casdoor/casdoor.xml
+            [14] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/zoraxy/zoraxy.xml
+            [15] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/authentik/authentik.xml
+            [16] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/yacht/yacht.xml
+            [17] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/authelia/authelia.xml
+            [18] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/ca_profile.xml
+            [19] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/serviio/serviio.xml
+            [20] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/picsur/picsur.xml
+            [21] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/owncloud-ocis/owncloud_ocis.xml
+            [22] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/quant-ux-frontend/quant-ux-frontend.xml
+            [23] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/traggo/traggo.xml
+            [24] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/databag/databag.xml
+            [25] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/ghost/ghost.xml
+            [26] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/plextraktsync/plextraktsync.xml
+            [27] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/fasten/fasten.xml
+            [28] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/docuseal/docuseal.xml
+            [29] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/formbricks/formbricks.xml
+            [30] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/timelite/timelite.xml
+            [31] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pomerium/pomerium.xml
+            [32] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/docker-socket-proxy/docker-socket-proxy.xml
+            [33] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pterodactyl-panel/pterodactyl-panel.xml
+            [34] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/crowdsec/crowdsec.xml
+            [35] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/send/send.xml
+            [36] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/quant-ux-backend/quant-ux-backend.xml
+            [37] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/wrapperr/wrapperr.xml
+            [38] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/cal.com/cal.com.xml
+            [39] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/vocechat-server/vocechat-server.xml
+            [40] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/homepage/homepage.xml
+            [41] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pterodactyl-daemon/pterodactyl-daemon.xml
+            [42] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/authentik-worker/authentik-worker.xml
+            [43] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/activepieces/activepieces.xml
+            [44] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/beatbump/beatbump.xml
+            [45] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/super-productivity/super-productivity.xml
+            [46] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/jellyseerr/jellyseerr.xml
+            [47] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/babybuddy/babybuddy.xml
             [48] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/evershop/evershop.xml
             [49] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pwm/pwm.xml
             [50] => /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/cachet-url-monitor/cachet-url-monitor.xml
@@ -8586,6 +8593,7 @@ Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/kimai/kimai.xml
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/cachet/cachet.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/linkstack/linkstack.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/maintainerr/maintainerr.xml...Removed from CA
+Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/lidatube/lidatube.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/unraid-config-guardian/unraid-template.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/casdoor/casdoor.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/zoraxy/zoraxy.xml...Success
@@ -8623,7 +8631,6 @@ Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/beatbump/beatbu
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/super-productivity/super-productivity.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/jellyseerr/jellyseerr.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/babybuddy/babybuddy.xml...Removed from CA
-Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/lidatube.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/evershop/evershop.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/pwm/pwm.xml...Success
 Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/cachet-url-monitor/cachet-url-monitor.xml...Success
@@ -9639,7 +9646,12 @@ Processing /tmp/GitHub/repositoryClone/Adidasdaniel98/RepetierDocker/repetier.xm
 
 Downloading jmztaylor's Repository
 
-Already up to date.
+From https://github.com/JmzTaylor/unraid_templates
+   a2fdcc0..760f8c6  master     -> origin/master
+Updating a2fdcc0..760f8c6
+Fast-forward
+ booklore.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -16847,9 +16859,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-Tagged - Can't determine last update
-docker.io/bitnami/mongodb
-docker.io/bitnami/mongodb:6.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -16993,8 +17002,6 @@ docker.io/bitnami/mongodb:6.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-lostb1t/replex
-ghcr.io/lostb1t/replex Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -17030,15 +17037,16 @@ ghcr.io/lostb1t/replex Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+booklore-app/booklore
+ghcr.io/booklore-app/booklore:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/booklore-app/booklore:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-aculix/bitplay
-ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
