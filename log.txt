@@ -3334,21 +3334,25 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   a3ac3410..aae7e02b  main       -> origin/main
-Updating a3ac3410..aae7e02b
+   aae7e02b..b410625e  main       -> origin/main
+Updating aae7e02b..b410625e
 Fast-forward
- .github/actions/calver-automation/action.sh |  179 ++++-
- .github/workflows/auto-release.yml          |  128 +++-
- .github/workflows/create-release.yml        |   32 +-
- RELEASE_AUTOMATION_SUMMARY.md               |   92 +++
- app/services/media/audiobookshelf.py        |   67 +-
- app/services/media/utils.py                 |   14 +-
- package.json                                |    2 +-
- plus                                        |    2 +-
- pyproject.toml                              |    2 +-
- uv.lock                                     | 1044 ++++++++++++++-------------
- 10 files changed, 984 insertions(+), 578 deletions(-)
- create mode 100644 RELEASE_AUTOMATION_SUMMARY.md
+ .github/dependabot.yml                    | 38 +++++++++++++++++++++++++++++--
+ .github/workflows/auto-release.yml        |  2 +-
+ .github/workflows/calver-automation.yml   |  2 +-
+ .github/workflows/ci.yml                  | 10 ++++----
+ .github/workflows/create-release.yml      |  2 +-
+ .github/workflows/i18n-template.yml       |  6 ++---
+ .github/workflows/pr-test.yml             | 22 ++++++++++--------
+ .github/workflows/publish-manifest.yml    |  2 +-
+ .github/workflows/pytest.yml              |  8 +++----
+ .github/workflows/release.yml             |  8 +++----
+ .github/workflows/verify-translations.yml |  2 +-
+ .pre-commit-config.yaml                   |  4 ++--
+ pyproject.toml                            |  4 ++--
+ tests/test_migrations.py                  |  4 +++-
+ uv.lock                                   | 10 ++++----
+ 15 files changed, 82 insertions(+), 42 deletions(-)
 
 Array
 (
@@ -5482,7 +5486,12 @@ Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-cen
 
 Downloading dlandon's Repository
 
-Already up to date.
+From https://github.com/dlandon/docker.templates
+   1ad4bd2..65d4752  master     -> origin/master
+Updating 1ad4bd2..65d4752
+Fast-forward
+ ownCloud.xml | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -16838,6 +16847,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+Tagged - Can't determine last update
+docker.io/bitnami/mongodb
+docker.io/bitnami/mongodb:6.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -16981,6 +16993,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+lostb1t/replex
+ghcr.io/lostb1t/replex Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -17022,6 +17036,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+Tagged - Can't determine last update
+aculix/bitplay
+ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
