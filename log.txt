@@ -49,15 +49,17 @@ Failed loading XML
 Downloading Skylinar's Repository
 
 From https://github.com/Skylinar/unraid_templates
-   b899a2b..876b081  main       -> origin/main
-Updating b899a2b..876b081
+   876b081..d1a8483  main       -> origin/main
+Updating 876b081..d1a8483
 Fast-forward
- images/traffmonetizer.png    | Bin 0 -> 140542 bytes
- templates/repocket.xml       |   6 +++---
- templates/traffmonetizer.xml |  30 ++++++++++++++++++++++++++++++
- 3 files changed, 33 insertions(+), 3 deletions(-)
- create mode 100644 images/traffmonetizer.png
- create mode 100644 templates/traffmonetizer.xml
+ .../twitch-channel-points-miner-v2-demo.png        | Bin 0 -> 130178 bytes
+ images/repocket.png                                | Bin 14269 -> 15046 bytes
+ images/twitch-channel-points-miner-v2.png          | Bin 0 -> 198479 bytes
+ templates/twitch-channel-points-miner-v2.xml       |  48 +++++++++++++++++++++
+ 4 files changed, 48 insertions(+)
+ create mode 100644 images/demo/twitch-channel-points-miner-v2/twitch-channel-points-miner-v2-demo.png
+ create mode 100644 images/twitch-channel-points-miner-v2.png
+ create mode 100644 templates/twitch-channel-points-miner-v2.xml
 
 Array
 (
@@ -65,11 +67,12 @@ Array
         (
             [0] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/ca_profile.xml
             [1] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/homehub.xml
-            [2] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/pi-dash.xml
-            [3] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/sure-worker.xml
-            [4] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/repocket.xml
-            [5] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/sure-web.xml
-            [6] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/traffmonetizer.xml
+            [2] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/twitch-channel-points-miner-v2.xml
+            [3] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/pi-dash.xml
+            [4] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/sure-worker.xml
+            [5] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/repocket.xml
+            [6] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/sure-web.xml
+            [7] => /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/traffmonetizer.xml
         )
 
 )
@@ -77,6 +80,7 @@ Array
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/homehub.xml...Success
+Processing /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/twitch-channel-points-miner-v2.xml...Success
 Processing /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/pi-dash.xml...Success
 Processing /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/sure-worker.xml...Success
 Processing /tmp/GitHub/repositoryClone/Skylinar/unraid_templates/templates/repocket.xml...Success
@@ -7221,7 +7225,104 @@ Processing /tmp/GitHub/repositoryClone/jbreed/docker-templates/nessus/nessus.xml
 
 Downloading Selfhosters Unraid Discord Repository
 
-Already up to date.
+From https://github.com/selfhosters/unRAID-CA-templates
+   26c6e1f..2a416cb  master     -> origin/master
+Updating 26c6e1f..2a416cb
+Fast-forward
+ .../workflows/{resize.yml => resize.yml.disable}   |   0
+ templates/anaconda3.xml                            |  42 -------------
+ templates/bitnami-openldap.xml                     |  41 ------------
+ templates/bw_plex.xml                              |  24 -------
+ templates/cloudflare-ddns.xml                      |  34 ----------
+ templates/{conreq.xml => conreq.xml.disable}       |   0
+ templates/crushftp9.xml                            |  28 ---------
+ templates/deemix.xml                               |  19 ------
+ templates/focalboard.xml                           |   2 +-
+ templates/graylog.xml                              |  33 ----------
+ templates/hexo.xml                                 |  18 ------
+ templates/img/anaconda3.png                        | Bin 20705 -> 20705 bytes
+ templates/img/cadvisor.png                         | Bin 26225 -> 26225 bytes
+ templates/img/qui.png                              | Bin 0 -> 10026 bytes
+ templates/img/themepark.png                        | Bin 28471 -> 28471 bytes
+ templates/img/tuyagateway_logo.png                 | Bin 9947 -> 9947 bytes
+ templates/img/wyze.png                             | Bin 16472 -> 16472 bytes
+ templates/img/zwavejs2mqtt.png                     | Bin 13004 -> 13004 bytes
+ templates/invoiceninja.xml                         |  37 -----------
+ templates/jira-software.xml                        |  21 -------
+ templates/kdenlive.xml                             |  18 ------
+ templates/lemur-cfssl.xml                          |  21 -------
+ templates/mango.xml                                |  31 ---------
+ templates/monica.xml                               |  52 ----------------
+ templates/navidrome.xml                            |   2 +-
+ templates/node-ffmpeg-mpegts-proxy.xml             |  15 -----
+ templates/nosqlclient.xml                          |  18 ------
+ templates/omegabrr.xml                             |  18 ------
+ templates/openldap.xml                             |  43 -------------
+ templates/paperless-ng.xml                         |  40 ------------
+ templates/phpldapadmin.xml                         |  36 -----------
+ templates/plex-ldap.xml                            |  18 ------
+ templates/plex-web.xml                             |  18 ------
+ templates/plpp.xml.disable                         |  53 ----------------
+ templates/podsync.xml                              |   4 +-
+ templates/quasselcore.xml                          |  16 -----
+ templates/qui.xml                                  |  17 +++++
+ templates/radarrsync.xml                           |  31 ---------
+ templates/replex.xml                               |  38 ------------
+ templates/rtmps-server.xml                         |  69 ---------------------
+ templates/seedsync.xml                             |  16 -----
+ templates/seekerr.xml                              |  30 ---------
+ templates/siad.xml                                 |  19 ------
+ templates/siteinspector.xml                        |  27 --------
+ templates/traktarr.xml                             |  26 --------
+ templates/tuyagateway.xml                          |  28 ---------
+ templates/web-pdf-toolbox.xml                      |  16 -----
+ templates/xbackbone.xml                            |  42 -------------
+ templates/xibo-cms.xml                             |  55 ----------------
+ templates/xibo-xmr.xml                             |  23 -------
+ templates/zwave2mqtt.xml                           |  17 -----
+ 51 files changed, 21 insertions(+), 1135 deletions(-)
+ rename .github/workflows/{resize.yml => resize.yml.disable} (100%)
+ delete mode 100644 templates/anaconda3.xml
+ delete mode 100644 templates/bitnami-openldap.xml
+ delete mode 100644 templates/bw_plex.xml
+ delete mode 100644 templates/cloudflare-ddns.xml
+ rename templates/{conreq.xml => conreq.xml.disable} (100%)
+ delete mode 100644 templates/crushftp9.xml
+ delete mode 100644 templates/deemix.xml
+ delete mode 100644 templates/graylog.xml
+ delete mode 100644 templates/hexo.xml
+ create mode 100644 templates/img/qui.png
+ delete mode 100644 templates/invoiceninja.xml
+ delete mode 100644 templates/jira-software.xml
+ delete mode 100644 templates/kdenlive.xml
+ delete mode 100644 templates/lemur-cfssl.xml
+ delete mode 100644 templates/mango.xml
+ delete mode 100644 templates/monica.xml
+ delete mode 100644 templates/node-ffmpeg-mpegts-proxy.xml
+ delete mode 100644 templates/nosqlclient.xml
+ delete mode 100644 templates/omegabrr.xml
+ delete mode 100644 templates/openldap.xml
+ delete mode 100644 templates/paperless-ng.xml
+ delete mode 100644 templates/phpldapadmin.xml
+ delete mode 100644 templates/plex-ldap.xml
+ delete mode 100644 templates/plex-web.xml
+ delete mode 100644 templates/plpp.xml.disable
+ delete mode 100644 templates/quasselcore.xml
+ create mode 100644 templates/qui.xml
+ delete mode 100644 templates/radarrsync.xml
+ delete mode 100644 templates/replex.xml
+ delete mode 100644 templates/rtmps-server.xml
+ delete mode 100644 templates/seedsync.xml
+ delete mode 100644 templates/seekerr.xml
+ delete mode 100644 templates/siad.xml
+ delete mode 100644 templates/siteinspector.xml
+ delete mode 100644 templates/traktarr.xml
+ delete mode 100644 templates/tuyagateway.xml
+ delete mode 100644 templates/web-pdf-toolbox.xml
+ delete mode 100644 templates/xbackbone.xml
+ delete mode 100644 templates/xibo-cms.xml
+ delete mode 100644 templates/xibo-xmr.xml
+ delete mode 100644 templates/zwave2mqtt.xml
 
 Array
 (
@@ -7233,147 +7334,110 @@ Array
             [3] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/navidrome.xml
             [4] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/requestrr.xml
             [5] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/trafegodns.xml
-            [6] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/xibo-xmr.xml
-            [7] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unimus.xml
-            [8] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/teedy-docs.xml
-            [9] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/radarrsync.xml
-            [10] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/xibo-cms.xml
-            [11] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/adminer.xml
-            [12] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac6.xml
-            [13] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/quasselcore.xml
-            [14] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rtmps-server.xml
-            [15] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rss-bridge.xml
-            [16] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/agate.xml
-            [17] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/web-pdf-toolbox.xml
-            [18] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/lemur-cfssl.xml
-            [19] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/monitorr.xml
-            [20] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/logarr.xml
-            [21] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/ts-dnsserver.xml
-            [22] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/chevereto.xml
-            [23] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/nosqlclient.xml
-            [24] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/fossflow.xml
-            [25] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/qbitrr.xml
-            [26] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/drone-runner-docker.xml
-            [27] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seedsync.xml
-            [28] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shoko-server.xml
-            [29] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/komga.xml
-            [30] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/companion.xml
-            [31] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hortusfox-web.xml
-            [32] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tabby-web.xml
-            [33] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unifi-poller.xml
-            [34] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/forgejo.xml
-            [35] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dozzle.xml
-            [36] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/searcharr.xml
-            [37] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/bitnami-openldap.xml
-            [38] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/paperless-ngx.xml
-            [39] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/technitium-dnsserver.xml
-            [40] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/traccar.xml
-            [41] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/paperless-ng.xml
-            [42] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ipfs-kubo.xml
-            [43] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tado-assistant.xml
-            [44] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dockerdiscordcontrol.xml
-            [45] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-bot.xml
-            [46] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/autobrr.xml
-            [47] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/plex-web.xml
-            [48] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/sstvproxy.xml
-            [49] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deemix.xml
-            [50] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mafl.xml
-            [51] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rancher.xml
-            [52] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kubek.xml
-            [53] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/agent_zero.xml
-            [54] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mango.xml
-            [55] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/teddycloud.xml
-            [56] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ca_profile.xml
-            [57] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monica_new.xml
-            [58] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ytdl-sub-gui.xml
-            [59] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kdenlive.xml
-            [60] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/bw_plex.xml
-            [61] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/imgburn.xml
-            [62] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/pocketbase.xml
-            [63] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zwavejs2mqtt.xml
-            [64] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/siteinspector.xml
-            [65] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/huginn.xml
-            [66] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/themepark.xml
-            [67] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/twonky-server.xml
-            [68] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/twitch-drops-miner.xml
-            [69] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/goaccess.xml
-            [70] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ampache.xml
-            [71] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/flaresolverr.xml
-            [72] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cadvisor.xml
-            [73] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/crushftp9.xml
-            [74] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/graylog.xml
-            [75] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seekerr.xml
-            [76] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/watchyourlan.xml
-            [77] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/backblaze.xml
-            [78] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/phpldapadmin.xml
-            [79] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/conreq.xml
-            [80] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ytdl-sub.xml
-            [81] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rebuild-dndc.xml
-            [82] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/siad.xml
-            [83] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kopia.xml
-            [84] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/focalboard.xml
-            [85] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shinobi_cctv.xml
-            [86] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/youtubedl-material.xml
-            [87] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hass-unraid.xml
-            [88] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/geoip2influx.xml
-            [89] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/jenkins.xml
-            [90] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/traktarr.xml
-            [91] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/nicotine-plus.xml
-            [92] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/red-discordbot.xml
-            [93] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/speedtest-tracker.xml
-            [94] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/privatebin.xml
-            [95] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/addarr.xml
-            [96] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/node-ffmpeg-mpegts-proxy.xml
-            [97] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prom-alertmanager.xml
-            [98] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/protonmail-bridge.xml
-            [99] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/list-sync.xml
-            [100] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/scrutiny.xml
-            [101] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/openldap.xml
-            [102] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hexo.xml
-            [103] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/podgrab.xml
-            [104] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ecowitt2mqtt.xml
-            [105] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/invoiceninja.xml
-            [106] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/drone.xml
-            [107] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/plex-ldap.xml
-            [108] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kitana.xml
-            [109] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seafile-notification-server.xml
-            [110] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/podsync.xml
-            [111] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tuyagateway.xml
-            [112] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/duplicacy.xml
-            [113] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/triliumnext.xml
-            [114] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/docker-wyze-bridge.xml
-            [115] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/pasta.xml
-            [116] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cloudflared.xml
-            [117] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/xbackbone.xml
-            [118] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/notifiarr.xml
-            [119] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airdcpp.xml
-            [120] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/postgis.xml
-            [121] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/overleaf.xml
-            [122] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/warp.xml
-            [123] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/wikijs.xml
-            [124] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/syncarr.xml
-            [125] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/namecheap-ddns-updater.xml
-            [126] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tiddlywiki.xml
-            [127] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cloudflare-ddns.xml
-            [128] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/replex.xml
-            [129] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac-fan-controller.xml
-            [130] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prometheus.xml
-            [131] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/vaultwarden.xml
-            [132] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monica.xml
-            [133] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/everything-presence-mmwave-configurator.xml
-            [134] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mealiev1.xml
-            [135] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/jira-software.xml
-            [136] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/anaconda3.xml
-            [137] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dizquetv.xml
-            [138] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-web.xml
-            [139] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zwave2mqtt.xml
-            [140] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/planka.xml
-            [141] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/omegabrr.xml
-            [142] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tdarr.xml
-            [143] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unpackerr.xml
-            [144] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tvapp2.xml
-            [145] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ddns-ipv64.xml
-            [146] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airconnect.xml
+            [6] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unimus.xml
+            [7] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/teedy-docs.xml
+            [8] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/adminer.xml
+            [9] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac6.xml
+            [10] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rss-bridge.xml
+            [11] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/agate.xml
+            [12] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/monitorr.xml
+            [13] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/logarr.xml
+            [14] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/ts-dnsserver.xml
+            [15] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/chevereto.xml
+            [16] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/fossflow.xml
+            [17] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/qbitrr.xml
+            [18] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/drone-runner-docker.xml
+            [19] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shoko-server.xml
+            [20] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/komga.xml
+            [21] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/companion.xml
+            [22] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hortusfox-web.xml
+            [23] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tabby-web.xml
+            [24] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unifi-poller.xml
+            [25] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/forgejo.xml
+            [26] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dozzle.xml
+            [27] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/searcharr.xml
+            [28] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/paperless-ngx.xml
+            [29] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/technitium-dnsserver.xml
+            [30] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/traccar.xml
+            [31] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ipfs-kubo.xml
+            [32] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tado-assistant.xml
+            [33] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dockerdiscordcontrol.xml
+            [34] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/qui.xml
+            [35] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-bot.xml
+            [36] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/autobrr.xml
+            [37] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/sstvproxy.xml
+            [38] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mafl.xml
+            [39] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rancher.xml
+            [40] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kubek.xml
+            [41] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/agent_zero.xml
+            [42] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/teddycloud.xml
+            [43] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ca_profile.xml
+            [44] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monica_new.xml
+            [45] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ytdl-sub-gui.xml
+            [46] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/imgburn.xml
+            [47] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/pocketbase.xml
+            [48] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zwavejs2mqtt.xml
+            [49] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/huginn.xml
+            [50] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/themepark.xml
+            [51] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/twonky-server.xml
+            [52] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/twitch-drops-miner.xml
+            [53] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/goaccess.xml
+            [54] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ampache.xml
+            [55] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/flaresolverr.xml
+            [56] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cadvisor.xml
+            [57] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/watchyourlan.xml
+            [58] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/backblaze.xml
+            [59] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ytdl-sub.xml
+            [60] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rebuild-dndc.xml
+            [61] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kopia.xml
+            [62] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/focalboard.xml
+            [63] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shinobi_cctv.xml
+            [64] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/youtubedl-material.xml
+            [65] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hass-unraid.xml
+            [66] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/geoip2influx.xml
+            [67] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/jenkins.xml
+            [68] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/nicotine-plus.xml
+            [69] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/red-discordbot.xml
+            [70] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/speedtest-tracker.xml
+            [71] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/privatebin.xml
+            [72] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/addarr.xml
+            [73] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prom-alertmanager.xml
+            [74] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/protonmail-bridge.xml
+            [75] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/list-sync.xml
+            [76] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/scrutiny.xml
+            [77] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/podgrab.xml
+            [78] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ecowitt2mqtt.xml
+            [79] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/drone.xml
+            [80] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kitana.xml
+            [81] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seafile-notification-server.xml
+            [82] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/podsync.xml
+            [83] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/duplicacy.xml
+            [84] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/triliumnext.xml
+            [85] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/docker-wyze-bridge.xml
+            [86] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/pasta.xml
+            [87] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cloudflared.xml
+            [88] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/notifiarr.xml
+            [89] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airdcpp.xml
+            [90] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/postgis.xml
+            [91] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/overleaf.xml
+            [92] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/warp.xml
+            [93] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/wikijs.xml
+            [94] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/syncarr.xml
+            [95] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/namecheap-ddns-updater.xml
+            [96] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tiddlywiki.xml
+            [97] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac-fan-controller.xml
+            [98] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prometheus.xml
+            [99] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/vaultwarden.xml
+            [100] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/everything-presence-mmwave-configurator.xml
+            [101] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mealiev1.xml
+            [102] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dizquetv.xml
+            [103] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-web.xml
+            [104] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/planka.xml
+            [105] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tdarr.xml
+            [106] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unpackerr.xml
+            [107] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tvapp2.xml
+            [108] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ddns-ipv64.xml
+            [109] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airconnect.xml
         )
 
 )
@@ -7385,28 +7449,19 @@ Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/navidrome.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/requestrr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/trafegodns.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/xibo-xmr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unimus.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/teedy-docs.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/radarrsync.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/xibo-cms.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/adminer.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac6.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/quasselcore.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rtmps-server.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rss-bridge.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/agate.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/web-pdf-toolbox.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/lemur-cfssl.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/monitorr.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/logarr.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/ts-dnsserver.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deprecated/chevereto.xml... ***DEPRECATED BY REPO PATH*** Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/nosqlclient.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/fossflow.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/qbitrr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/drone-runner-docker.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seedsync.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shoko-server.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/komga.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/companion.xml...Success
@@ -7416,34 +7471,27 @@ Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/forgejo.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dozzle.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/searcharr.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/bitnami-openldap.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/paperless-ngx.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/technitium-dnsserver.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/traccar.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/paperless-ng.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ipfs-kubo.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tado-assistant.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dockerdiscordcontrol.xml...Success
+Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/qui.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-bot.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/autobrr.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/plex-web.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/sstvproxy.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/deemix.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mafl.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rancher.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kubek.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/agent_zero.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mango.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/teddycloud.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monica_new.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ytdl-sub-gui.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kdenlive.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/bw_plex.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/imgburn.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/pocketbase.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zwavejs2mqtt.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/siteinspector.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/huginn.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/themepark.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/twonky-server.xml...Success
@@ -7452,16 +7500,10 @@ Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ampache.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/flaresolverr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cadvisor.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/crushftp9.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/graylog.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seekerr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/watchyourlan.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/backblaze.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/phpldapadmin.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/conreq.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ytdl-sub.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/rebuild-dndc.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/siad.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kopia.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/focalboard.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shinobi_cctv.xml...Success
@@ -7469,34 +7511,26 @@ Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hass-unraid.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/geoip2influx.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/jenkins.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/traktarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/nicotine-plus.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/red-discordbot.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/speedtest-tracker.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/privatebin.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/addarr.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/node-ffmpeg-mpegts-proxy.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prom-alertmanager.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/protonmail-bridge.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/list-sync.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/scrutiny.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/openldap.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/hexo.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/podgrab.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ecowitt2mqtt.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/invoiceninja.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/drone.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/plex-ldap.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/kitana.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/seafile-notification-server.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/podsync.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tuyagateway.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/duplicacy.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/triliumnext.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/docker-wyze-bridge.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/pasta.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cloudflared.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/xbackbone.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/notifiarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airdcpp.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/postgis.xml...Success
@@ -7506,21 +7540,14 @@ Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/syncarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/namecheap-ddns-updater.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tiddlywiki.xml...Removed from CA
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/cloudflare-ddns.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/replex.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac-fan-controller.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prometheus.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/vaultwarden.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monica.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/everything-presence-mmwave-configurator.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mealiev1.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/jira-software.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/anaconda3.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dizquetv.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-web.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zwave2mqtt.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/planka.xml...Success
-Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/omegabrr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tdarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unpackerr.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tvapp2.xml...Success
@@ -13469,15 +13496,7 @@ Processing /tmp/GitHub/repositoryClone/Kostecki/unraid-ca-templates/templates/nt
 
 Downloading Balya's Repository
 
-From https://github.com/Balya/unraid-templates
-   4e7c101..f115930  main       -> origin/main
-Updating 4e7c101..f115930
-Fast-forward
- n8n/icon-512.png | Bin 0 -> 3576 bytes
- n8n/n8n.xml      |  32 ++++++++++++++++++++++++++++++++
- 2 files changed, 32 insertions(+)
- create mode 100644 n8n/icon-512.png
- create mode 100644 n8n/n8n.xml
+Already up to date.
 
 Array
 (
@@ -16938,9 +16957,8 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
-traffmonetizer/cli_v2
-traffmonetizer/cli_v2:latest Downloads: 15378642  Stars: 40  Base: unknown
-Pulling traffmonetizer/cli_v2:latest
+rdavidoff/twitch-channel-points-miner-v2
+rdavidoff/twitch-channel-points-miner-v2 Downloads: 803433  Stars: 28  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
@@ -16981,9 +16999,6 @@ Pulling traffmonetizer/cli_v2:latest
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-Tagged - Can't determine last update
-donkevlar/koreaderpylink
-ghcr.io/donkevlar/koreaderpylink:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
@@ -17002,8 +17017,6 @@ ghcr.io/donkevlar/koreaderpylink:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/scummvm
-lscr.io/linuxserver/scummvm Downloads: 421  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -17116,6 +17129,11 @@ lscr.io/linuxserver/scummvm Downloads: 421  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+autobrr/qui
+ghcr.io/autobrr/qui:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/autobrr/qui:latest
+mxpv/podsync
+ghcr.io/mxpv/podsync Downloads: 19419718  Stars: 14  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -17154,10 +17172,6 @@ lscr.io/linuxserver/scummvm Downloads: 421  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-docker.n8n.io/n8nio/n8n
-docker.n8n.io/n8nio/n8n Downloads:   Stars:   Base: unknown
-Pulling docker.n8n.io/n8nio/n8n
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
@@ -17180,7 +17194,7 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 119
+Privileged: 118
 
 
 Updating GitHub
