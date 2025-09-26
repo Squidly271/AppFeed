@@ -13,7 +13,12 @@ Downloading Repo Info
 
 Downloading thedinz' Repository
 
-Already up to date.
+From https://github.com/thedinz/unraid-templates
+   ec39695..1212e24  main       -> origin/main
+Updating ec39695..1212e24
+Fast-forward
+ templates/kam.xml | 37 ++++++++++++++++++++++++++++---------
+ 1 file changed, 28 insertions(+), 9 deletions(-)
 
 Array
 (
@@ -3258,7 +3263,70 @@ Processing /tmp/GitHub/repositoryClone/donkevlar/Unraid-Docker-Templates/Bookshe
 
 Downloading mandarons' Repository
 
-Already up to date.
+From https://github.com/mandarons/icloud-drive-docker
+   b7df62e..227e795  main       -> origin/main
+Updating b7df62e..227e795
+Fast-forward
+ .github/copilot-instructions.md                    |  6 +-
+ .github/workflows/ci-pr-test.yml                   | 94 ++++++++++++++++++++++
+ Dockerfile                                         | 71 ++++++++++------
+ README.md                                          |  7 +-
+ docker-entrypoint.sh                               | 42 ++++++++++
+ init.sh                                            |  2 +-
+ root/etc/s6-overlay/s6-rc.d/ci-service-check/type  |  1 -
+ root/etc/s6-overlay/s6-rc.d/ci-service-check/up    |  0
+ root/etc/s6-overlay/s6-rc.d/init-adduser/run       | 29 -------
+ root/etc/s6-overlay/s6-rc.d/init-adduser/type      |  1 -
+ root/etc/s6-overlay/s6-rc.d/init-adduser/up        |  1 -
+ root/etc/s6-overlay/s6-rc.d/init-custom-files/run  |  0
+ root/etc/s6-overlay/s6-rc.d/init-custom-files/type |  1 -
+ root/etc/s6-overlay/s6-rc.d/init-custom-files/up   |  0
+ .../init-icd-config/dependencies.d/init-config     |  0
+ root/etc/s6-overlay/s6-rc.d/init-icd-config/run    | 19 -----
+ root/etc/s6-overlay/s6-rc.d/init-icd-config/type   |  1 -
+ root/etc/s6-overlay/s6-rc.d/init-icd-config/up     |  1 -
+ root/etc/s6-overlay/s6-rc.d/init-migrations/run    |  0
+ root/etc/s6-overlay/s6-rc.d/init-migrations/type   |  1 -
+ root/etc/s6-overlay/s6-rc.d/init-migrations/up     |  0
+ .../s6-rc.d/svc-icd/dependencies.d/init-services   |  0
+ root/etc/s6-overlay/s6-rc.d/svc-icd/run            |  5 --
+ root/etc/s6-overlay/s6-rc.d/svc-icd/type           |  1 -
+ root/etc/s6-overlay/s6-rc.d/svc-icd/up             |  1 -
+ .../s6-rc.d/user/contents.d/init-icd-config        |  0
+ .../etc/s6-overlay/s6-rc.d/user/contents.d/svc-icd |  0
+ src/__init__.py                                    | 41 ++++++++++
+ src/config_parser.py                               |  4 +
+ src/notify.py                                      |  6 +-
+ src/sync.py                                        |  4 +
+ src/sync_drive.py                                  |  5 +-
+ src/sync_photos.py                                 |  5 +-
+ tests/test_container_integration.py                | 40 +++++++++
+ tests/test_docker_entrypoint.py                    | 35 ++++++++
+ 35 files changed, 325 insertions(+), 99 deletions(-)
+ create mode 100644 docker-entrypoint.sh
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/ci-service-check/type
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/ci-service-check/up
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-adduser/run
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-adduser/type
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-adduser/up
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-custom-files/run
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-custom-files/type
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-custom-files/up
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/init-icd-config/dependencies.d/init-config
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-icd-config/run
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-icd-config/type
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-icd-config/up
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-migrations/run
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-migrations/type
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/init-migrations/up
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/svc-icd/dependencies.d/init-services
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/svc-icd/run
+ delete mode 100755 root/etc/s6-overlay/s6-rc.d/svc-icd/type
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/svc-icd/up
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/user/contents.d/init-icd-config
+ delete mode 100644 root/etc/s6-overlay/s6-rc.d/user/contents.d/svc-icd
+ create mode 100644 tests/test_container_integration.py
+ create mode 100644 tests/test_docker_entrypoint.py
 
 Array
 (
@@ -13630,13 +13698,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   aecc861..f45d367  main       -> origin/main
-Updating aecc861..f45d367
-Fast-forward
- templates/dawarich_sidekiq.xml       | 6 +++++-
- templates/sparky_fitness_backend.xml | 5 +++++
- 2 files changed, 10 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -16860,6 +16922,8 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
+tophat17/jelly-request
+tophat17/jelly-request:latest Downloads: 688  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
@@ -16898,9 +16962,113 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+waazaafr/gpt-subtrans-openai
+waazaafr/gpt-subtrans-openai:latest Downloads: 281  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+sintan1729/chhoto-url
+sintan1729/chhoto-url:latest Downloads: 102726  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+binhex/arch-intellij
+ghcr.io/binhex/arch-intellij Downloads: 112304  Stars: 4  Base: unknown
+binhex/arch-plex
+ghcr.io/binhex/arch-plex Downloads: 5761481  Stars: 26  Base: unknown
+binhex/arch-deluge
+ghcr.io/binhex/arch-deluge Downloads: 15720384  Stars: 35  Base: unknown
+binhex/arch-pycharm
+ghcr.io/binhex/arch-pycharm Downloads: 256665  Stars: 8  Base: unknown
+binhex/arch-qbittorrentvpn
+ghcr.io/binhex/arch-qbittorrentvpn Downloads: 21628289  Stars: 111  Base: unknown
+binhex/arch-fleet
+ghcr.io/binhex/arch-fleet Downloads: 1273  Stars: 0  Base: unknown
+binhex/arch-rclone
+ghcr.io/binhex/arch-rclone Downloads: 118998  Stars: 5  Base: unknown
+binhex/arch-sonarr
+ghcr.io/binhex/arch-sonarr Downloads: 20645162  Stars: 24  Base: unknown
+binhex/arch-plexpass
+ghcr.io/binhex/arch-plexpass Downloads: 9722838  Stars: 30  Base: unknown
+binhex/arch-krusader
+ghcr.io/binhex/arch-krusader Downloads: 28664777  Stars: 33  Base: unknown
+binhex/arch-rider
+ghcr.io/binhex/arch-rider Downloads: 33574  Stars: 1  Base: unknown
+binhex/arch-tvheadend
+ghcr.io/binhex/arch-tvheadend Downloads: 198756  Stars: 3  Base: unknown
+binhex/arch-emby
+ghcr.io/binhex/arch-emby Downloads: 2239641  Stars: 6  Base: unknown
+binhex/arch-nzbget
+ghcr.io/binhex/arch-nzbget Downloads: 1954424  Stars: 6  Base: unknown
+binhex/arch-goland
+ghcr.io/binhex/arch-goland Downloads: 2045  Stars: 0  Base: unknown
+binhex/arch-sabnzbdvpn
+ghcr.io/binhex/arch-sabnzbdvpn Downloads: 14664637  Stars: 24  Base: unknown
+binhex/arch-libreoffice
+ghcr.io/binhex/arch-libreoffice Downloads: 171039  Stars: 2  Base: unknown
+binhex/arch-bitmagnet
+ghcr.io/binhex/arch-bitmagnet Downloads: 6947  Stars: 0  Base: unknown
+binhex/arch-sabnzbd
+ghcr.io/binhex/arch-sabnzbd Downloads: 8844578  Stars: 9  Base: unknown
+binhex/arch-urbackup
+ghcr.io/binhex/arch-urbackup Downloads: 1413165  Stars: 4  Base: unknown
+binhex/arch-medusa
+ghcr.io/binhex/arch-medusa Downloads: 620547  Stars: 3  Base: unknown
+binhex/arch-code-server
+ghcr.io/binhex/arch-code-server Downloads: 279650  Stars: 1  Base: unknown
+binhex/arch-flaresolverr
+ghcr.io/binhex/arch-flaresolverr Downloads: 96096  Stars: 2  Base: unknown
+binhex/arch-rustrover
+ghcr.io/binhex/arch-rustrover Downloads: 1574  Stars: 0  Base: unknown
+binhex/arch-teamspeak
+ghcr.io/binhex/arch-teamspeak Downloads: 1916206  Stars: 9  Base: unknown
+binhex/arch-minidlna
+ghcr.io/binhex/arch-minidlna Downloads: 1798493  Stars: 14  Base: unknown
+binhex/arch-minecraftserver
+ghcr.io/binhex/arch-minecraftserver Downloads: 1588847  Stars: 5  Base: unknown
+binhex/arch-makemkv
+ghcr.io/binhex/arch-makemkv Downloads: 812706  Stars: 1  Base: unknown
+binhex/arch-readarr
+ghcr.io/binhex/arch-readarr Downloads: 1210526  Stars: 1  Base: unknown
+binhex/arch-overseerr
+ghcr.io/binhex/arch-overseerr Downloads: 118664  Stars: 0  Base: unknown
+rpardini/docker-registry-proxy
+rpardini/docker-registry-proxy Downloads: 560715  Stars: 6  Base: unknown
+binhex/arch-nicotineplus
+ghcr.io/binhex/arch-nicotineplus Downloads: 6611  Stars: 0  Base: unknown
+binhex/arch-radarr
+ghcr.io/binhex/arch-radarr Downloads: 20711741  Stars: 19  Base: unknown
+binhex/arch-jenkins
+ghcr.io/binhex/arch-jenkins Downloads: 529641  Stars: 1  Base: unknown
+binhex/arch-delugevpn
+ghcr.io/binhex/arch-delugevpn Downloads: 94973992  Stars: 263  Base: unknown
+binhex/arch-crafty-4
+ghcr.io/binhex/arch-crafty-4 Downloads: 57818  Stars: 2  Base: unknown
+binhex/arch-jackett
+ghcr.io/binhex/arch-jackett Downloads: 11251205  Stars: 9  Base: unknown
+binhex/arch-hexchat
+ghcr.io/binhex/arch-hexchat Downloads: 511625  Stars: 3  Base: unknown
+binhex/arch-prowlarr
+ghcr.io/binhex/arch-prowlarr Downloads: 1712034  Stars: 3  Base: unknown
+binhex/arch-lidarr
+ghcr.io/binhex/arch-lidarr Downloads: 4999575  Stars: 6  Base: unknown
+binhex/arch-nginx
+ghcr.io/binhex/arch-nginx Downloads: 304168  Stars: 2  Base: unknown
+binhex/arch-get-iplayer
+ghcr.io/binhex/arch-get-iplayer Downloads: 861056  Stars: 5  Base: unknown
+binhex/arch-webstorm
+ghcr.io/binhex/arch-webstorm Downloads: 1409  Stars: 0  Base: unknown
+binhex/arch-syncthing
+ghcr.io/binhex/arch-syncthing Downloads: 649145  Stars: 1  Base: unknown
+binhex/arch-gonic
+ghcr.io/binhex/arch-gonic Downloads: 606  Stars: 0  Base: unknown
+binhex/arch-nzbhydra2
+ghcr.io/binhex/arch-nzbhydra2 Downloads: 11355455  Stars: 16  Base: unknown
+binhex/arch-resilio-sync
+ghcr.io/binhex/arch-resilio-sync Downloads: 241059  Stars: 0  Base: unknown
+binhex/arch-minecraftbedrockserver
+ghcr.io/binhex/arch-minecraftbedrockserver Downloads: 1378955  Stars: 6  Base: unknown
+binhex/arch-jellyfin
+ghcr.io/binhex/arch-jellyfin Downloads: 1771445  Stars: 3  Base: unknown
+binhex/arch-privoxyvpn
+ghcr.io/binhex/arch-privoxyvpn Downloads: 2584984  Stars: 14  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -16979,6 +17147,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+manimatter/decluttarr
+ghcr.io/manimatter/decluttarr:latest Downloads: 0  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dlandon/file.activity/master/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dlandon/libvirt.hotplug.usb/master/libvirt.hotplug.usb.plg attempt 1...
@@ -17029,6 +17199,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+croc/unimus
+croc/unimus Downloads: 2751293  Stars: 8  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -17066,10 +17238,24 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+dumbwareio/dumbpad
+dumbwareio/dumbpad:latest Downloads: 213333  Stars: 3  Base: unknown
+dumbwareio/dumbdo
+dumbwareio/dumbdo:latest Downloads: 180570  Stars: 2  Base: unknown
+dumbwareio/dumbdrop
+dumbwareio/dumbdrop:latest Downloads: 159403  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+devmtl/noti
+devmtl/noti:latest Downloads: 15055  Stars: 0  Base: unknown
+itschasa/speedrr
+itschasa/speedrr:latest Downloads: 8498  Stars: 0  Base: unknown
+kometateam/quickstart
+kometateam/quickstart:latest Downloads: 37002  Stars: 0  Base: unknown
+datpat/ffmpeg
+datpat/ffmpeg:latest Downloads: 442  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
