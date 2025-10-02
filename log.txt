@@ -3459,19 +3459,19 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   6c993c02..9cb72962  main       -> origin/main
-Updating 6c993c02..9cb72962
+   9cb72962..ea6858c4  main       -> origin/main
+Updating 9cb72962..ea6858c4
 Fast-forward
- app/blueprints/wizard/routes.py            |  7 ++--
- app/services/wizard_widgets.py             | 57 ++++++++++++++++++++++--------
- wizard_steps/audiobookshelf/01_intro.md    | 20 ++++++++---
- wizard_steps/audiobookshelf/02_download.md | 20 +++++++++++
- wizard_steps/audiobookshelf/99_tips.md     | 17 +++++++++
- wizard_steps/emby/99_tips.md               |  2 +-
- wizard_steps/jellyfin/99_tips.md           |  2 +-
- 7 files changed, 103 insertions(+), 22 deletions(-)
- create mode 100644 wizard_steps/audiobookshelf/02_download.md
- create mode 100644 wizard_steps/audiobookshelf/99_tips.md
+ WIZARD_ARCHITECTURE.md               | 222 ++++++++++++++++++++++++
+ app/blueprints/wizard/routes.py      |  62 ++++++-
+ app/services/media/audiobookshelf.py |   2 +-
+ app/services/wizard_widgets.py       |   4 +
+ app/static/src/style.css             | 151 +++++++++++++++++
+ app/templates/wizard/_content.html   |  14 ++
+ app/templates/wizard/steps.html      | 316 ++++++++++++++++++++++++++++++++---
+ 7 files changed, 737 insertions(+), 34 deletions(-)
+ create mode 100644 WIZARD_ARCHITECTURE.md
+ create mode 100644 app/templates/wizard/_content.html
 
 Array
 (
@@ -5524,12 +5524,7 @@ Processing /tmp/GitHub/repositoryClone/brettm357/docker-templates/unifi.xml...Su
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   f05917a..ecc106b  master     -> origin/master
-Updating f05917a..ecc106b
-Fast-forward
- jlesage/makemkv.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
