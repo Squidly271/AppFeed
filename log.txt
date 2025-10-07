@@ -47,7 +47,12 @@ Processing /tmp/GitHub/repositoryClone/Shaneee/system-monitor/system-monitor.xml
 
 Downloading Pa7ricstar's Repository
 
-Already up to date.
+From https://github.com/Pa7rickStar/unraid_templates
+   608fa06..0f1b39b  main       -> origin/main
+Updating 608fa06..0f1b39b
+Fast-forward
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 
 Array
 (
@@ -1387,12 +1392,7 @@ Processing /tmp/GitHub/repositoryClone/glls/Docker-Templates-Unraid/go-vod.xml..
 
 Downloading DamonGolding's Repository
 
-From https://github.com/damongolding/immich-kiosk-unraid
-   45d236a..908834f  main       -> origin/main
-Updating 45d236a..908834f
-Fast-forward
- immich_kiosk.xml | 1 +
- 1 file changed, 1 insertion(+)
+Already up to date.
 
 Array
 (
@@ -3543,97 +3543,63 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   95454038..28574262  main       -> origin/main
-Updating 95454038..28574262
+   28574262..440ec0dc  main       -> origin/main
+Updating 28574262..440ec0dc
 Fast-forward
- .djlintrc                                          |    9 +
- .pre-commit-config.yaml                            |    7 +
- app/templates/_partials/delete_user_modal.html     |  210 ++--
- app/templates/_partials/test_result.html           |   62 +-
- app/templates/admin.html                           |  499 +++++----
- app/templates/admin/accepted_invites_card.html     |  182 ++-
- app/templates/admin/home.html                      |  159 ++-
- app/templates/admin/invites.html                   |   72 +-
- app/templates/admin/library_breakdown_card.html    |  246 ++--
- app/templates/admin/now_playing_cards.html         |  564 +++++-----
- app/templates/admin/recent_content_card.html       |  244 ++--
- app/templates/admin/server_health_card.html        |  313 +++---
- app/templates/admin/server_stats_card.html         |  153 ++-
- app/templates/admin/user_details_modal.html        |  295 ++---
- app/templates/admin/user_modal.html                |  291 +++--
- app/templates/admin/users.html                     |  531 +++++----
- app/templates/base.html                            |  154 +--
- app/templates/choose-password.html                 |   88 +-
- app/templates/components/admin_passkeys.html       |  132 +--
- app/templates/components/passkey_add_form.html     |   68 +-
- app/templates/components/passkey_error.html        |   41 +-
- app/templates/components/passkey_list.html         |   91 +-
- app/templates/components/passkey_management.html   |   93 +-
- app/templates/components/passkey_register.html     |   42 +-
- app/templates/components/password_result.html      |   34 +-
- app/templates/error/401.html                       |  199 ++--
- app/templates/error/404.html                       |   44 +-
- app/templates/error/500.html                       |   45 +-
- app/templates/hybrid-password-form.html            |  407 +++----
- app/templates/invalid-invite.html                  |   39 +-
- app/templates/login.html                           |  257 +++--
- app/templates/modals/bundle-add-steps.html         |   34 +-
- app/templates/modals/connection-form.html          |  144 +--
- app/templates/modals/create-admin.html             |   93 +-
- app/templates/modals/create-api-key.html           |  159 +--
- .../modals/create-notification-agent.html          |  222 ++--
- app/templates/modals/create-server.html            |  279 +++--
- app/templates/modals/edit-admin.html               |   95 +-
- app/templates/modals/edit-identity.html            |   85 +-
- app/templates/modals/edit-notification-agent.html  |  231 ++--
- app/templates/modals/edit-server.html              |  291 +++--
- app/templates/modals/invite.html                   |  719 ++++++------
- app/templates/modals/wizard-bundle-form.html       |   24 +-
- app/templates/modals/wizard-import-form.html       |   85 +-
- app/templates/modals/wizard-preset-form.html       |   44 +-
- app/templates/modals/wizard-simple-step-form.html  |   30 +-
- app/templates/modals/wizard-step-form.html         |  131 ++-
- app/templates/partials/api_keys_grid.html          |   85 +-
- app/templates/partials/library_checkboxes.html     |   21 +-
- app/templates/partials/server_library_picker.html  |   28 +-
- app/templates/profile.html                         |  142 +--
- app/templates/servers/form.html                    |   55 +-
- app/templates/servers/index.html                   |   78 +-
- app/templates/servers/partial_list.html            |   39 +-
- app/templates/settings/admins.html                 |  120 +-
- app/templates/settings/api_keys.html               |   39 +-
- app/templates/settings/connections.html            |  232 ++--
- app/templates/settings/connections/form.html       |  366 +++---
- app/templates/settings/general.html                |  368 +++---
- app/templates/settings/index.html                  |  229 ++--
- app/templates/settings/notifications.html          |   87 +-
- app/templates/settings/servers.html                |  187 ++--
- app/templates/settings/wizard/_sub_nav.html        |  208 ++--
- app/templates/settings/wizard/bundle_form.html     |   11 +-
- app/templates/settings/wizard/bundles.html         |  132 ++-
- app/templates/settings/wizard/form.html            |   28 +-
- app/templates/settings/wizard/import_form.html     |  359 +++---
- app/templates/settings/wizard/index.html           |   78 +-
+ .djlintrc                                          |    2 +-
+ .pre-commit-config.yaml                            |    3 +-
+ app/blueprints/admin/routes.py                     |   48 +-
+ app/blueprints/public/routes.py                    |   30 +-
+ app/services/image_proxy.py                        |  230 ++++-
+ app/templates/_partials/delete_user_modal.html     |   34 +-
+ app/templates/admin.html                           |  132 +--
+ app/templates/admin/accepted_invites_card.html     |   25 +-
+ app/templates/admin/home.html                      |  509 ++++-----
+ app/templates/admin/invites.html                   |   34 +-
+ app/templates/admin/users.html                     |   39 +-
+ app/templates/base.html                            |  116 ++-
+ app/templates/choose-password.html                 |    4 +-
+ app/templates/components/admin_passkeys.html       |   98 +-
+ app/templates/components/passkey_register.html     |  172 ++--
+ app/templates/error/401.html                       |  145 +--
+ app/templates/error/404.html                       |    1 +
+ app/templates/error/500.html                       |    1 +
+ app/templates/hybrid-password-form.html            |  181 ++--
+ app/templates/invalid-invite.html                  |    4 +-
+ app/templates/login.html                           |  250 ++---
+ app/templates/modals/connection-form.html          |   27 +-
+ app/templates/modals/create-admin.html             |    6 +-
+ app/templates/modals/create-api-key.html           |   30 +-
+ .../modals/create-notification-agent.html          |    5 +-
+ app/templates/modals/create-server.html            |   45 +-
+ app/templates/modals/edit-admin.html               |    6 +-
+ app/templates/modals/edit-notification-agent.html  |    3 +-
+ app/templates/modals/edit-server.html              |   45 +-
+ app/templates/modals/invite.html                   |  158 +--
+ app/templates/modals/wizard-import-form.html       |   72 +-
+ app/templates/modals/wizard-preset-form.html       |   46 +-
+ app/templates/modals/wizard-step-form.html         |  166 +--
+ app/templates/servers/form.html                    |    2 +-
+ app/templates/servers/index.html                   |    2 +-
+ app/templates/settings/connections/form.html       |   30 +-
+ app/templates/settings/general.html                |    2 +-
+ app/templates/settings/index.html                  |   60 +-
+ app/templates/settings/wizard/bundles.html         |    4 +-
+ app/templates/settings/wizard/import_form.html     |  216 ++--
+ app/templates/settings/wizard/index.html           |    4 +-
  app/templates/settings/wizard/preset_form.html     |   34 +-
- app/templates/settings/wizard/simple_form.html     |   16 +-
- app/templates/settings/wizard/steps.html           |   90 +-
- app/templates/setup/admin_account.html             |   99 +-
- app/templates/setup/server_details.html            |   13 +-
- app/templates/tables/expired_user_card.html        |  146 ++-
- app/templates/tables/expiring_user_card.html       |  142 +--
- app/templates/tables/invite_card.html              |  395 +++----
- app/templates/tables/user_card.html                |  420 ++++---
- app/templates/user-plex-login.html                 |  247 ++--
- app/templates/users.html                           |   26 +-
- app/templates/verify-server.html                   |   13 +-
- app/templates/welcome-jellyfin.html                |  409 +++----
- app/templates/wizard/_content.html                 |   19 +-
+ app/templates/settings/wizard/steps.html           |    4 +-
+ app/templates/setup/admin_account.html             |    4 +-
+ app/templates/setup/server_details.html            |    4 +-
+ app/templates/tables/invite_card.html              |  192 ++--
+ app/templates/tables/user_card.html                |    5 +-
+ app/templates/user-plex-login.html                 |  660 ++++++------
+ app/templates/users.html                           |    4 +-
+ app/templates/verify-server.html                   |    4 +-
+ app/templates/welcome-jellyfin.html                | 1087 ++++++++++----------
  app/templates/wizard/frame.html                    |    4 +-
- app/templates/wizard/steps.html                    |  158 +--
- pyproject.toml                                     |    1 +
- uv.lock                                            | 1183 +++++++++++---------
- 86 files changed, 7647 insertions(+), 6897 deletions(-)
- create mode 100644 .djlintrc
+ app/templates/wizard/steps.html                    |  451 ++++----
+ 53 files changed, 2862 insertions(+), 2578 deletions(-)
 
 Array
 (
@@ -17060,8 +17026,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
-corentinth/it-tools
-corentinth/it-tools:latest Downloads: 12790022  Stars: 203  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -17089,11 +17053,6 @@ corentinth/it-tools:latest Downloads: 12790022  Stars: 203  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-harung43/dollardollar
-harung43/dollardollar:latest Downloads: 28549  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-zhliau/fika-spt-server-docker
-ghcr.io/zhliau/fika-spt-server-docker:3.11.3 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -17290,8 +17249,6 @@ ghcr.io/zhliau/fika-spt-server-docker:3.11.3 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
-git.d3vyce.fr/d3vyce/teleinfo_exporter
-git.d3vyce.fr/d3vyce/teleinfo_exporter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
@@ -17299,9 +17256,6 @@ git.d3vyce.fr/d3vyce/teleinfo_exporter:latest Downloads:   Stars:   Base: unknow
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-Tagged - Can't determine last update
-nicolargo/glances
-nicolargo/glances:dev Downloads: 98799219  Stars: 205  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 119
