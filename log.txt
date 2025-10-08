@@ -3541,13 +3541,16 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   a2708e60..87dc0899  main       -> origin/main
-Updating a2708e60..87dc0899
+   87dc0899..2552c6ed  main       -> origin/main
+Updating 87dc0899..2552c6ed
 Fast-forward
- app/blueprints/api/api_routes.py | 71 +++++++++++++++++++++++++++++++++++++++-
- app/blueprints/api/models.py     | 19 +++++++++++
- tests/test_api_restx.py          | 29 ++++++++++++++++
- 3 files changed, 118 insertions(+), 1 deletion(-)
+ app/models.py                              |  18 +-
+ app/services/media/plex.py                 | 389 ++++++++++++++++++++---------
+ app/services/media/user_details.py         |   2 +
+ app/services/user_details.py               |  21 +-
+ app/templates/settings/wizard/bundles.html |   2 +-
+ pyproject.toml                             |   4 +
+ 6 files changed, 299 insertions(+), 137 deletions(-)
 
 Array
 (
@@ -13727,12 +13730,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   8875395..a055018  main       -> origin/main
-Updating 8875395..a055018
-Fast-forward
- automation/change_monitoring/data.json | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -17194,6 +17192,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+navino16/flixpatrol-top10-on-trakt
+ghcr.io/navino16/flixpatrol-top10-on-trakt:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -17205,6 +17205,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
+Tagged - Can't determine last update
+seafileltd/seafile-mc
+seafileltd/seafile-mc:12.0-latest Downloads: 17671053  Stars: 120  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
