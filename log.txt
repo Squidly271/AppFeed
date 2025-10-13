@@ -3540,18 +3540,23 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   57d24b34..0e27f895  main       -> origin/main
-Updating 57d24b34..0e27f895
+   0e27f895..a88d4b11  main       -> origin/main
+Updating 0e27f895..a88d4b11
 Fast-forward
- .github/workflows/calver-automation.yml | 2 +-
- .github/workflows/ci.yml                | 2 +-
- .github/workflows/i18n-template.yml     | 2 +-
- .github/workflows/pr-test.yml           | 2 +-
- .github/workflows/pytest.yml            | 2 +-
- .github/workflows/release.yml           | 2 +-
- app/static/package-lock.json            | 8 ++++----
- app/static/package.json                 | 2 +-
- 8 files changed, 11 insertions(+), 11 deletions(-)
+ app/blueprints/api/api_routes.py     |  53 +++++++++++++++-
+ app/services/media/audiobookshelf.py |  18 ++++++
+ app/services/media/client_base.py    |  14 ++++-
+ app/services/media/drop.py           |  20 ++++++
+ app/services/media/jellyfin.py       |  23 +++++++
+ app/services/media/kavita.py         |  20 ++++++
+ app/services/media/komga.py          |  20 ++++++
+ app/services/media/navidrome.py      |  22 ++++++-
+ app/services/media/plex.py           |  20 ++++++
+ app/services/media/romm.py           |  18 ++++++
+ app/services/media/service.py        |  56 +++++++++++++++++
+ tests/test_identity_linking_fix.py   |   3 +
+ uv.lock                              | 116 +++++++++++++++++------------------
+ 13 files changed, 342 insertions(+), 61 deletions(-)
 
 Array
 (
@@ -11086,12 +11091,7 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-From https://github.com/Goobaroo/unraid-templates
-   4a4b715..5aedf24  main       -> origin/main
-Updating 4a4b715..5aedf24
-Fast-forward
- vaulthunters3rdedition_server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -17012,8 +17012,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
-mainfrezzer/wg-bridge
-ghcr.io/mainfrezzer/wg-bridge:latest Downloads: 551  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
@@ -17197,6 +17195,8 @@ ghcr.io/mainfrezzer/wg-bridge:latest Downloads: 551  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+ianw/quickchart
+ianw/quickchart Downloads: 3711592  Stars: 12  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
