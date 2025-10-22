@@ -3607,7 +3607,23 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   330b0a63..1618ce77  main       -> origin/main
+Updating 330b0a63..1618ce77
+Fast-forward
+ app/activity/monitoring/session_manager.py | 120 +++++++++-------
+ app/blueprints/admin/routes.py             |  18 +--
+ app/models.py                              |  22 +++
+ app/scripts/cleanup_unknown_activity.py    | 216 +++++++++++++++++++++++++++++
+ app/services/activity/analytics.py         |  40 +++++-
+ app/services/activity/ingestion.py         |  58 +++++++-
+ app/services/expiry.py                     |  28 +++-
+ app/templates/tables/invite_card.html      |   4 +-
+ plus                                       |   2 +-
+ scripts/cleanup_unknown_sessions.py        | 107 ++++++++++++++
+ 10 files changed, 541 insertions(+), 74 deletions(-)
+ create mode 100644 app/scripts/cleanup_unknown_activity.py
+ create mode 100755 scripts/cleanup_unknown_sessions.py
 
 Array
 (
@@ -13789,12 +13805,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   710eaa6..14e175f  main       -> origin/main
-Updating 710eaa6..14e175f
-Fast-forward
- automation/change_monitoring/data.json | 22 +++++++++++-----------
- 1 file changed, 11 insertions(+), 11 deletions(-)
+Already up to date.
 
 Array
 (
