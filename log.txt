@@ -3608,51 +3608,11 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   e70263de..092c7331  main       -> origin/main
- * [new tag]           v2025.10.6 -> v2025.10.6
-Updating e70263de..092c7331
+   092c7331..faa8a403  main       -> origin/main
+Updating 092c7331..faa8a403
 Fast-forward
- app/__init__.py                                    |   2 +-
- app/activity/api/blueprint.py                      |   3 +-
- app/activity/api/helpers.py                        |   4 +-
- app/activity/monitoring/collectors/polling.py      |   2 +-
- app/blueprints/admin/routes.py                     |   2 +-
- app/blueprints/public/routes.py                    |   2 +-
- app/logging_config.py                              |   7 +-
- app/models.py                                      |  34 +--
- app/scripts/cleanup_unknown_activity.py            |  52 ++--
- app/services/activity/analytics.py                 |   8 +-
- app/services/historical/__init__.py                |   2 +-
- app/services/image_proxy.py                        |   2 +-
- app/services/invite_code_manager.py                |  10 +-
- app/services/invites.py                            |   7 +-
- app/services/media/audiobookshelf.py               |   2 +-
- app/services/media/client_base.py                  |   1 -
- app/services/media/drop.py                         |  14 --
- app/services/media/jellyfin.py                     |   4 +-
- app/services/media/kavita.py                       |  12 -
- app/services/media/komga.py                        |  20 +-
- app/services/media/navidrome.py                    |  35 ---
- app/services/media/plex.py                         |   6 +-
- app/services/media/romm.py                         |  11 -
- app/services/media/utils.py                        |   3 -
- app/static/src/style.css                           |  18 ++
- app/templates/_partials/delete_user_modal.html     | 205 ++++++++-------
- app/templates/admin.html                           |   2 +-
- app/templates/admin/user_details_modal.html        | 277 ++++++++++-----------
- app/templates/admin/user_modal.html                | 269 ++++++++++----------
- app/templates/admin/users.html                     |  11 +-
- app/templates/base.html                            |   2 +-
- app/templates/settings/index.html                  | 117 +++++----
- app/templates/users.html                           |  10 +-
- .../20250712_update_wizard_external_url.py         |   2 -
- package.json                                       |   2 +-
- pyproject.toml                                     |  19 +-
- tests/mocks/__init__.py                            |  12 +-
- tests/mocks/media_server_mocks.py                  |   4 +-
- tests/test_invitation_comprehensive.py             |   9 +-
- uv.lock                                            |   2 +-
- 40 files changed, 576 insertions(+), 630 deletions(-)
+ app/blueprints/admin/routes.py | 23 ++++++++++++++++++-----
+ 1 file changed, 18 insertions(+), 5 deletions(-)
 
 Array
 (
