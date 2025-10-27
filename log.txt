@@ -3610,13 +3610,22 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   1d722032..4f80aa4b  main       -> origin/main
-Updating 1d722032..4f80aa4b
+   4f80aa4b..cfc74396  main       -> origin/main
+Updating 4f80aa4b..cfc74396
 Fast-forward
- app/extensions.py                              | 58 +++++++++++++++++++++-----
- app/templates/admin/accepted_invites_card.html |  2 +-
- app/templates/tables/invite_card.html          |  4 +-
- 3 files changed, 51 insertions(+), 13 deletions(-)
+ .gitignore                                         |   3 +
+ .serena/project.yml                                |  68 ----
+ Dockerfile                                         |   6 +-
+ app/blueprints/media_servers/routes.py             |  49 +--
+ app/models.py                                      |  34 +-
+ app/services/media/kavita.py                       | 396 ++++++++++++++-------
+ app/static/package-lock.json                       |  16 +-
+ app/static/package.json                            |   4 +-
+ .../20251027_add_cascade_delete_to_foreign_keys.py |  91 +++++
+ uv.lock                                            |  62 ++--
+ 10 files changed, 442 insertions(+), 287 deletions(-)
+ delete mode 100644 .serena/project.yml
+ create mode 100644 migrations/versions/20251027_add_cascade_delete_to_foreign_keys.py
 
 Array
 (
