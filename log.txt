@@ -3610,20 +3610,13 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 Downloading Official Wizarr Repository
 
 From https://github.com/wizarrrr/wizarr
-   c9341eda..c022750c  main       -> origin/main
-Updating c9341eda..c022750c
+   c022750c..686d2625  main       -> origin/main
+Updating c022750c..686d2625
 Fast-forward
- .github/workflows/i18n-template.yml                |  4 +-
- .weblate                                           |  2 +
- Dockerfile                                         |  6 +-
- .../importers/audiobookshelf_importer.py           |  2 +-
- app/static/package-lock.json                       | 24 ++++----
- app/static/package.json                            |  6 +-
- package.json                                       |  2 +-
- pyproject.toml                                     |  5 +-
- uv.lock                                            | 71 +++++++++++++++-------
- 9 files changed, 76 insertions(+), 46 deletions(-)
- create mode 100644 .weblate
+ app/services/activity/ingestion.py      | 136 ++++++++-
+ tests/activity/test_session_grouping.py | 503 ++++++++++++++++++++++++++++++++
+ 2 files changed, 627 insertions(+), 12 deletions(-)
+ create mode 100644 tests/activity/test_session_grouping.py
 
 Array
 (
@@ -17115,6 +17108,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+mpgirro/docker-pihole-unbound
+mpgirro/docker-pihole-unbound Downloads: 28663  Stars: 3  Base: unknown
+ghcr.io/wg-easy
+ghcr.io/wg-easy Downloads:   Stars:   Base: unknown
+riddix/lidarr-deemix
+ghcr.io/riddix/lidarr-deemix:latest Downloads:   Stars:   Base: unknown
+nicolashaas/golang-kanban
+ghcr.io/nicolashaas/golang-kanban:latest Downloads:   Stars:   Base: unknown
+plantuml/plantuml-server
+plantuml/plantuml-server:latest Downloads: 48450985  Stars: 200  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -17304,12 +17307,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-codeberg.org/readeck/readeck
-codeberg.org/readeck/readeck:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+localstack/localstack-pro
+localstack/localstack-pro:latest Downloads: 2793013  Stars: 36  Base: unknown
+galexjunk/emoncms
+galexjunk/emoncms:latest Downloads:   Stars:   Base: unknown
+localstack/localstack
+localstack/localstack:latest Downloads: 375310890  Stars: 335  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -17327,9 +17334,6 @@ codeberg.org/readeck/readeck:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-Tagged - Can't determine last update
-nodiaque/steamcmd
-nodiaque/steamcmd:enshrouded_proton Downloads: 12037  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 119
