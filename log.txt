@@ -2850,13 +2850,7 @@ Processing /tmp/GitHub/repositoryClone/apfaffman/docker-templates/ca_profile.xml
 
 Downloading andaks' Repository
 
-From https://github.com/andaks/unraid-templates
-   1f01e3e..9944673  master     -> origin/master
-Updating 1f01e3e..9944673
-Fast-forward
- ca_profile.xml | 9 +++++++++
- 1 file changed, 9 insertions(+)
- create mode 100644 ca_profile.xml
+Already up to date.
 
 Array
 (
@@ -3623,7 +3617,40 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   cab8f7d6..46c8a85d  main       -> origin/main
+ * [new tag]           v2025.11.0 -> v2025.11.0
+Updating cab8f7d6..46c8a85d
+Fast-forward
+ .gitignore                                         |   3 +
+ WIZARD_ARCHITECTURE.md                             |   2 +-
+ app/__init__.py                                    |  24 +-
+ app/activity/monitoring/collectors/plex.py         | 119 ++++-
+ app/activity/monitoring/session_manager.py         | 460 +++++++++++++------
+ app/blueprints/admin/routes.py                     | 232 +++++++++-
+ app/blueprints/media_servers/routes.py             |  24 +-
+ app/blueprints/settings/routes.py                  |  26 +-
+ app/blueprints/wizard/routes.py                    |  16 +-
+ app/services/activity/ingestion.py                 |  66 +--
+ app/services/activity/queries.py                   |  13 +-
+ app/services/library_scanner.py                    |  77 ++++
+ app/services/media/audiobookshelf.py               | 119 +++++
+ app/services/media/client_base.py                  |  42 ++
+ app/services/media/jellyfin.py                     | 119 +++++
+ app/services/media/plex.py                         | 397 +++++++++++++---
+ app/services/media/plex_custom.py                  | 145 ++++++
+ app/services/media/service.py                      |  29 +-
+ app/static/js/tiny-mde.min.js                      |   2 +-
+ app/templates/admin/user_modal.html                | 511 +++++++++++++++------
+ app/templates/admin/users.html                     |   6 +-
+ .../versions/20251103_properly_fix_foreign_keys.py | 270 +++++++++++
+ package.json                                       |   2 +-
+ pyproject.toml                                     |   4 +-
+ uv.lock                                            |   2 +-
+ 25 files changed, 2244 insertions(+), 466 deletions(-)
+ create mode 100644 app/services/library_scanner.py
+ create mode 100644 app/services/media/plex_custom.py
+ create mode 100644 migrations/versions/20251103_properly_fix_foreign_keys.py
 
 Array
 (
