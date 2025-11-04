@@ -3619,7 +3619,29 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   b9723a76..3a294a02  main       -> origin/main
+Updating b9723a76..3a294a02
+Fast-forward
+ app/activity/api/blueprint.py                      | 106 +++++-
+ app/activity/monitoring/collectors/__init__.py     |   5 +-
+ app/activity/monitoring/collectors/plex.py         | 311 -----------------
+ app/activity/monitoring/collectors/polling.py      |  47 ++-
+ app/activity/monitoring/monitor.py                 |   8 +-
+ .../templates/activity/_activity_table.html        | 366 ++++++++++++++++++---
+ app/activity/templates/activity/dashboard.html     | 174 ++++++++--
+ app/activity/templates/activity/history_tab.html   | 174 +++++++++-
+ app/blueprints/admin/routes.py                     |  34 +-
+ app/forms/admin.py                                 |  27 +-
+ app/forms/join.py                                  |  22 +-
+ app/forms/setup.py                                 |  17 +-
+ app/forms/validators.py                            |  21 ++
+ app/services/activity/analytics.py                 |   2 +
+ tests/test_join_form_validation.py                 |  75 +++++
+ 15 files changed, 961 insertions(+), 428 deletions(-)
+ delete mode 100644 app/activity/monitoring/collectors/plex.py
+ create mode 100644 app/forms/validators.py
+ create mode 100644 tests/test_join_form_validation.py
 
 Array
 (
@@ -5614,16 +5636,7 @@ Processing /tmp/GitHub/repositoryClone/jason-bean/docker-templates/jasonbean-rep
 
 Downloading Official Plex Repository
 
-From https://github.com/plexinc/pms-docker
-   95c439a..15c47b5  master           -> origin/master
- * [new tag]         helm-chart-1.2.0 -> helm-chart-1.2.0
-Updating 95c439a..15c47b5
-Fast-forward
- charts/plex-media-server/Chart.yaml                 | 2 +-
- charts/plex-media-server/README.md                  | 4 +++-
- charts/plex-media-server/templates/statefulset.yaml | 6 ++++++
- charts/plex-media-server/values.yaml                | 9 +++++++++
- 4 files changed, 19 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -7383,7 +7396,12 @@ Processing /tmp/GitHub/repositoryClone/jbreed/docker-templates/nessus/nessus.xml
 
 Downloading Selfhosters Unraid Discord Repository
 
-Already up to date.
+From https://github.com/selfhosters/unRAID-CA-templates
+   dfebc68..3b389ff  master     -> origin/master
+Updating dfebc68..3b389ff
+Fast-forward
+ templates/traccar.xml | 1 +
+ 1 file changed, 1 insertion(+)
 
 Array
 (
@@ -17331,12 +17349,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-jcostom/rollerblades
-ghcr.io/jcostom/rollerblades:latest Downloads:   Stars:   Base: unknown
-rafhaanshah/container-mon
-ghcr.io/rafhaanshah/container-mon:latest Downloads:   Stars:   Base: unknown
-gsariev/maintainerr-overlay-helperr
-gsariev/maintainerr-overlay-helperr:latest Downloads: 6236  Stars: 0  Base: unknown
+tbosk/mkfd
+tbosk/mkfd:latest Downloads: 8356  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
