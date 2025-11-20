@@ -89,22 +89,16 @@ Success
 Downloading N85UK's Repository
 
 From https://github.com/N85UK/UNRAID_APP
-   62029e7..c125d79  main       -> origin/main
-Updating 62029e7..c125d79
+   c125d79..f62b366  main       -> origin/main
+Updating c125d79..f62b366
 Fast-forward
- _layouts/default.html          |  8 ++++++++
- assets/css/style.css           | 33 ++++++++++++++++++++++++++++++++-
- assets/js/theme-toggle.js      | 31 +++++++++++++++++++++++++++++++
- docs/AA_SMS_App.md             | 12 ++++++++++++
- docs/AWS_Ultimate_Messaging.md | 11 +++++++++++
- docs/Ultimate_Messages.md      | 12 ++++++++++++
- docs/X_Webhook-Receiver.md     | 11 +++++++++++
- 7 files changed, 117 insertions(+), 1 deletion(-)
- create mode 100644 assets/js/theme-toggle.js
- create mode 100644 docs/AA_SMS_App.md
- create mode 100644 docs/AWS_Ultimate_Messaging.md
- create mode 100644 docs/Ultimate_Messages.md
- create mode 100644 docs/X_Webhook-Receiver.md
+ _layouts/default.html     |  60 +++++---
+ _layouts/page.html        |   8 ++
+ assets/css/style.css      | 358 ++++++++++++++++++++++++++++++++++++++++------
+ assets/js/theme-toggle.js |  16 ++-
+ index.md                  | 260 ++++++++++++++++++---------------
+ 5 files changed, 513 insertions(+), 189 deletions(-)
+ create mode 100644 _layouts/page.html
 
 Array
 (
@@ -1837,12 +1831,7 @@ Processing /tmp/GitHub/repositoryClone/glls/Docker-Templates-Unraid/go-vod.xml..
 
 Downloading DamonGolding's Repository
 
-From https://github.com/damongolding/immich-kiosk-unraid
-   908834f..e5fbb38  main       -> origin/main
-Updating 908834f..e5fbb38
-Fast-forward
- immich_kiosk.xml | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -10225,15 +10214,7 @@ Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/viewtube/viewtu
 
 Downloading Natcoso9955's Repository
 
-From https://github.com/natcoso9955/unRAID-docker
-   8ccc9ec..b32f2ab  master     -> origin/master
-Updating 8ccc9ec..b32f2ab
-Fast-forward
- NMController_web_unraid.xml |  30 ++++++++++++++++++++++++++++++
- icons/NMControler_web.png   | Bin 0 -> 75133 bytes
- 2 files changed, 30 insertions(+)
- create mode 100644 NMController_web_unraid.xml
- create mode 100644 icons/NMControler_web.png
+Already up to date.
 
 Array
 (
@@ -14786,13 +14767,7 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 
 Downloading ZappyZap's Repository
 
-From https://github.com/devzwf/unraid-docker-templates
-   d56b737..970fd7e  main       -> origin/main
-Updating d56b737..970fd7e
-Fast-forward
- CHANGELOG.MD | 5 +++++
- pulse.xml    | 5 ++++-
- 2 files changed, 9 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -19093,10 +19068,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-elmerfds/trafegodns
-ghcr.io/elmerfds/trafegodns:latest Downloads:   Stars:   Base: unknown
-bachya/ecowitt2mqtt
-bachya/ecowitt2mqtt Downloads: 580985  Stars: 3  Base: unknown
+shokoanime/server
+shokoanime/server:latest Downloads: 1678997  Stars: 17  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -19116,10 +19089,6 @@ bachya/ecowitt2mqtt Downloads: 580985  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-fgrfn/nmcontroller_web
-fgrfn/nmcontroller_web Downloads: 1240  Stars: 0  Base: unknown
-Pulling fgrfn/nmcontroller_web
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
@@ -19152,6 +19121,10 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
+bitlessbyte/prowlarr
+bitlessbyte/prowlarr Downloads: 44017  Stars: 0  Base: unknown
+samuel19982/podfetch
+samuel19982/podfetch:latest Downloads: 324983  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
