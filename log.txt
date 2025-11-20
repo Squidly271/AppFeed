@@ -89,26 +89,22 @@ Success
 Downloading N85UK's Repository
 
 From https://github.com/N85UK/UNRAID_APP
-   ebd9845..62029e7  main       -> origin/main
-Updating ebd9845..62029e7
+   62029e7..c125d79  main       -> origin/main
+Updating 62029e7..c125d79
 Fast-forward
- _layouts/default.html          | 66 +++----------------------------
- assets/css/style.css           | 27 +++++++++++++
- docs/Octopus_Energy_Monitor.md |  9 +++++
- index.md                       | 50 ++++++++++++------------
- my-AA_SMS_App.xml              | 46 ++++++++++++++++++++++
- my-X_Webhook-Receiver.xml      | 41 +++++++++++++++++++
- my-aws-ultimate-messaging.xml  | 89 ++++++++++++++++++++++++++++++++++++++++++
- my-octopus-energy-monitor.xml  | 65 ++++++++++++++++++++++++++++++
- my-ultimate-messages.xml       | 39 ++++++++++++++++++
- 9 files changed, 345 insertions(+), 87 deletions(-)
- create mode 100644 assets/css/style.css
- create mode 100644 docs/Octopus_Energy_Monitor.md
- create mode 100644 my-AA_SMS_App.xml
- create mode 100644 my-X_Webhook-Receiver.xml
- create mode 100644 my-aws-ultimate-messaging.xml
- create mode 100644 my-octopus-energy-monitor.xml
- create mode 100644 my-ultimate-messages.xml
+ _layouts/default.html          |  8 ++++++++
+ assets/css/style.css           | 33 ++++++++++++++++++++++++++++++++-
+ assets/js/theme-toggle.js      | 31 +++++++++++++++++++++++++++++++
+ docs/AA_SMS_App.md             | 12 ++++++++++++
+ docs/AWS_Ultimate_Messaging.md | 11 +++++++++++
+ docs/Ultimate_Messages.md      | 12 ++++++++++++
+ docs/X_Webhook-Receiver.md     | 11 +++++++++++
+ 7 files changed, 117 insertions(+), 1 deletion(-)
+ create mode 100644 assets/js/theme-toggle.js
+ create mode 100644 docs/AA_SMS_App.md
+ create mode 100644 docs/AWS_Ultimate_Messaging.md
+ create mode 100644 docs/Ultimate_Messages.md
+ create mode 100644 docs/X_Webhook-Receiver.md
 
 Array
 (
@@ -1841,7 +1837,12 @@ Processing /tmp/GitHub/repositoryClone/glls/Docker-Templates-Unraid/go-vod.xml..
 
 Downloading DamonGolding's Repository
 
-Already up to date.
+From https://github.com/damongolding/immich-kiosk-unraid
+   908834f..e5fbb38  main       -> origin/main
+Updating 908834f..e5fbb38
+Fast-forward
+ immich_kiosk.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -4146,22 +4147,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   b30eb157..23ed5416  main       -> origin/main
-Updating b30eb157..23ed5416
-Fast-forward
- .github/workflows/auto-release.yml        |  2 +-
- .github/workflows/build-plus.yml.wip      |  2 +-
- .github/workflows/calver-automation.yml   |  2 +-
- .github/workflows/ci.yml                  | 24 ++++--------------------
- .github/workflows/create-release.yml      |  2 +-
- .github/workflows/i18n-template.yml       |  2 +-
- .github/workflows/pr-test.yml             |  2 +-
- .github/workflows/publish-manifest.yml    |  2 +-
- .github/workflows/pytest.yml              |  2 +-
- .github/workflows/release.yml             | 14 +++++---------
- .github/workflows/verify-translations.yml |  2 +-
- 11 files changed, 18 insertions(+), 38 deletions(-)
+Already up to date.
 
 Array
 (
@@ -10239,7 +10225,15 @@ Processing /tmp/GitHub/repositoryClone/ibracorp/unraid-templates/viewtube/viewtu
 
 Downloading Natcoso9955's Repository
 
-Already up to date.
+From https://github.com/natcoso9955/unRAID-docker
+   8ccc9ec..b32f2ab  master     -> origin/master
+Updating 8ccc9ec..b32f2ab
+Fast-forward
+ NMController_web_unraid.xml |  30 ++++++++++++++++++++++++++++++
+ icons/NMControler_web.png   | Bin 0 -> 75133 bytes
+ 2 files changed, 30 insertions(+)
+ create mode 100644 NMController_web_unraid.xml
+ create mode 100644 icons/NMControler_web.png
 
 Array
 (
@@ -10255,6 +10249,7 @@ Array
             [7] => /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/grafana_loki_unraid.xml
             [8] => /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/kapacitor_unraid.xml
             [9] => /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/rcon-webadmin_unraid.xml
+            [10] => /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/NMController_web_unraid.xml
         )
 
 )
@@ -10272,6 +10267,9 @@ Processing /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/grafana_loki_pr
 Processing /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/grafana_loki_unraid.xml...Success
 Processing /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/kapacitor_unraid.xml...Success
 Processing /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/rcon-webadmin_unraid.xml...Success
+Processing /tmp/GitHub/repositoryClone/natcoso9955/unRAID-docker/NMController_web_unraid.xml...CPU pinning removed from template
+
+Success
 
 
 Downloading opal_06's Repository
@@ -14788,7 +14786,13 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 
 Downloading ZappyZap's Repository
 
-Already up to date.
+From https://github.com/devzwf/unraid-docker-templates
+   d56b737..970fd7e  main       -> origin/main
+Updating d56b737..970fd7e
+Fast-forward
+ CHANGELOG.MD | 5 +++++
+ pulse.xml    | 5 ++++-
+ 2 files changed, 9 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -18960,10 +18964,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-icereed/paperless-gpt
-icereed/paperless-gpt:latest Downloads: 272507  Stars: 0  Base: unknown
-jl94x4/collexions
-jl94x4/collexions:latest Downloads: 1115  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -18984,10 +18984,6 @@ jl94x4/collexions:latest Downloads: 1115  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-isokoliuk/mcp-searxng
-isokoliuk/mcp-searxng Downloads: 22990  Stars: 0  Base: unknown
-cbcoutinho/nextcloud-mcp-server
-ghcr.io/cbcoutinho/nextcloud-mcp-server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19097,6 +19093,10 @@ ghcr.io/cbcoutinho/nextcloud-mcp-server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+elmerfds/trafegodns
+ghcr.io/elmerfds/trafegodns:latest Downloads:   Stars:   Base: unknown
+bachya/ecowitt2mqtt
+bachya/ecowitt2mqtt Downloads: 580985  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -19116,8 +19116,10 @@ ghcr.io/cbcoutinho/nextcloud-mcp-server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-aceberg/exercisediary
-aceberg/exercisediary Downloads: 194756  Stars: 1  Base: unknown
+fgrfn/nmcontroller_web
+fgrfn/nmcontroller_web Downloads: 1240  Stars: 0  Base: unknown
+Pulling fgrfn/nmcontroller_web
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
@@ -19137,17 +19139,10 @@ aceberg/exercisediary Downloads: 194756  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-goobaroo/ftbinteractionsremastered
-goobaroo/ftbinteractionsremastered:latest Downloads: 1500  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-jasongdove/tvrename
-jasongdove/tvrename:develop Downloads: 538  Stars: 0  Base: unknown
-zocker160/handbrake-nvenc
-zocker160/handbrake-nvenc:latest Downloads: 582527  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
