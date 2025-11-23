@@ -11755,7 +11755,137 @@ Processing /tmp/GitHub/repositoryClone/OFark/docker-templates/OFark/Compressarr.
 Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
-Already up to date.
+From https://gitlab.com/crafty-controller/crafty-4
+   ee15e9a8..cdd7a9e3  master     -> origin/master
+Updating ee15e9a8..cdd7a9e3
+Fast-forward
+ .gitlab/docker-build.yml                           |   2 +-
+ .gitlab/issue_templates/Bug.md                     |   1 +
+ .pylintrc                                          |   2 +-
+ CHANGELOG.md                                       |  17 +++
+ README.md                                          |   4 +-
+ app/classes/controllers/servers_controller.py      |   4 +-
+ app/classes/helpers/file_helpers.py                |  16 ++-
+ app/classes/helpers/helpers.py                     |   2 +
+ app/classes/shared/backup_mgr.py                   |  97 ++++++++++---
+ app/classes/shared/import_helper.py                |   6 +-
+ app/classes/shared/server.py                       | 124 +++++++++++++++--
+ app/classes/shared/tasks.py                        |  36 ++---
+ app/classes/web/panel_handler.py                   |   8 +-
+ app/classes/web/routes/api/crafty/config/index.py  |   7 +
+ app/classes/web/routes/api/crafty/upload/index.py  | 155 ++++++++++++---------
+ app/classes/web/webhooks/base_webhook.py           |  60 +++++++-
+ app/classes/web/webhooks/discord_webhook.py        |   3 +-
+ app/classes/web/webhooks/mattermost_webhook.py     |   6 +-
+ app/classes/web/webhooks/slack_webhook.py          |   6 +-
+ app/classes/web/webhooks/teams_adaptive_webhook.py |   9 +-
+ app/classes/web/webhooks/webhook_factory.py        |  62 ++++++---
+ app/config/version.json                            |   4 +-
+ app/frontend/static/assets/css/base-style.css      | 115 ++++++++-------
+ .../static/assets/css/internal/anti-lockout.css    |  14 +-
+ app/frontend/static/assets/css/internal/root.css   |  10 +-
+ .../static/assets/css/partial/crafty-webhooks.css  |   9 ++
+ app/frontend/static/assets/css/shared/style.css    | 103 +++++++-------
+ app/frontend/static/assets/css/themes/dark.css     |   8 +-
+ app/frontend/static/assets/css/themes/default.css  |   8 +-
+ app/frontend/static/assets/css/themes/light.css    |   8 +-
+ app/frontend/static/assets/css/themes/ronald.css   |  10 +-
+ .../AtkinsonHyperlegible.css                       |  21 +++
+ ...onHyperlegibleMono-Italic-VariableFont_wght.ttf | Bin
+ .../AtkinsonHyperlegibleMono-VariableFont_wght.ttf | Bin
+ ...onHyperlegibleNext-Italic-VariableFont_wght.ttf | Bin
+ .../AtkinsonHyperlegibleNext-VariableFont_wght.ttf | Bin
+ .../OFL.txt                                        |   0
+ .../README.txt                                     |   0
+ .../static/AtkinsonHyperlegibleMono-Bold.ttf       | Bin
+ .../static/AtkinsonHyperlegibleMono-BoldItalic.ttf | Bin
+ .../static/AtkinsonHyperlegibleMono-ExtraBold.ttf  | Bin
+ .../AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf   | Bin
+ .../static/AtkinsonHyperlegibleMono-ExtraLight.ttf | Bin
+ .../AtkinsonHyperlegibleMono-ExtraLightItalic.ttf  | Bin
+ .../static/AtkinsonHyperlegibleMono-Italic.ttf     | Bin
+ .../static/AtkinsonHyperlegibleMono-Light.ttf      | Bin
+ .../AtkinsonHyperlegibleMono-LightItalic.ttf       | Bin
+ .../static/AtkinsonHyperlegibleMono-Medium.ttf     | Bin
+ .../AtkinsonHyperlegibleMono-MediumItalic.ttf      | Bin
+ .../static/AtkinsonHyperlegibleMono-Regular.ttf    | Bin
+ .../static/AtkinsonHyperlegibleMono-SemiBold.ttf   | Bin
+ .../AtkinsonHyperlegibleMono-SemiBoldItalic.ttf    | Bin
+ .../static/AtkinsonHyperlegibleNext-Bold.ttf       | Bin
+ .../static/AtkinsonHyperlegibleNext-BoldItalic.ttf | Bin
+ .../static/AtkinsonHyperlegibleNext-ExtraBold.ttf  | Bin
+ .../AtkinsonHyperlegibleNext-ExtraBoldItalic.ttf   | Bin
+ .../static/AtkinsonHyperlegibleNext-ExtraLight.ttf | Bin
+ .../AtkinsonHyperlegibleNext-ExtraLightItalic.ttf  | Bin
+ .../static/AtkinsonHyperlegibleNext-Italic.ttf     | Bin
+ .../static/AtkinsonHyperlegibleNext-Light.ttf      | Bin
+ .../AtkinsonHyperlegibleNext-LightItalic.ttf       | Bin
+ .../static/AtkinsonHyperlegibleNext-Medium.ttf     | Bin
+ .../AtkinsonHyperlegibleNext-MediumItalic.ttf      | Bin
+ .../static/AtkinsonHyperlegibleNext-Regular.ttf    | Bin
+ .../static/AtkinsonHyperlegibleNext-SemiBold.ttf   | Bin
+ .../AtkinsonHyperlegibleNext-SemiBoldItalic.ttf    | Bin
+ .../templates/panel/server_backup_edit.html        |   4 +-
+ .../templates/panel/server_webhook_edit.html       |  10 +-
+ app/translations/cs_CS.json                        |   3 -
+ app/translations/de_DE.json                        |  10 +-
+ app/translations/en_EN.json                        |   4 +
+ app/translations/es_ES.json                        |   3 -
+ app/translations/fr_FR.json                        |   3 +-
+ app/translations/he_IL.json                        |   3 -
+ app/translations/it_IT.json                        |   1 -
+ app/translations/ja_JP.json                        |   1 -
+ app/translations/ko_KR.json                        |   4 +-
+ app/translations/lol_EN.json                       |   1 -
+ app/translations/lv_LV.json                        |   1 -
+ app/translations/nl_BE.json                        |   4 +-
+ app/translations/nl_NL.json                        |   3 +-
+ app/translations/pl_PL.json                        |   3 -
+ app/translations/ru_RU.json                        |   3 +-
+ app/translations/th_TH.json                        |   1 -
+ app/translations/tr_TR.json                        |   3 +-
+ app/translations/uk_UA.json                        |   2 -
+ app/translations/zh_CN.json                        |   3 +-
+ main.py                                            |   3 +
+ requirements.txt                                   |  18 +--
+ sonar-project.properties                           |   4 +-
+ 90 files changed, 692 insertions(+), 340 deletions(-)
+ create mode 100644 app/frontend/static/assets/css/partial/crafty-webhooks.css
+ create mode 100644 app/frontend/static/assets/fonts/Atkinson_Hyperlegible_Next/AtkinsonHyperlegible.css
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/AtkinsonHyperlegibleMono-Italic-VariableFont_wght.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/AtkinsonHyperlegibleMono-VariableFont_wght.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/AtkinsonHyperlegibleNext-Italic-VariableFont_wght.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/AtkinsonHyperlegibleNext-VariableFont_wght.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/OFL.txt (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/README.txt (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-Bold.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-BoldItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-ExtraBold.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-ExtraBoldItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-ExtraLight.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-ExtraLightItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-Italic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-Light.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-LightItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-Medium.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-MediumItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-Regular.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-SemiBold.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleMono-SemiBoldItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-Bold.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-BoldItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-ExtraBold.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-ExtraBoldItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-ExtraLight.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-ExtraLightItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-Italic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-Light.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-LightItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-Medium.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-MediumItalic.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-Regular.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-SemiBold.ttf (100%)
+ rename app/frontend/static/assets/fonts/{Atikinson_Hyperlegible_Next => Atkinson_Hyperlegible_Next}/static/AtkinsonHyperlegibleNext-SemiBoldItalic.ttf (100%)
 
 Array
 (
@@ -18932,8 +19062,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-varun-raj/immich-power-tools
-ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
+civilblur/mazanoke
+ghcr.io/civilblur/mazanoke:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -18956,6 +19086,10 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+msdeluise/plant-it-server
+msdeluise/plant-it-server:latest Downloads: 216303  Stars: 1  Base: unknown
+androidseb25/igotify-notification-assist
+ghcr.io/androidseb25/igotify-notification-assist:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -18973,6 +19107,8 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/shotcut
+lscr.io/linuxserver/shotcut Downloads: 11550  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19062,6 +19198,10 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
+josh5/tvh-iptv-config
+ghcr.io/josh5/tvh-iptv-config:latest Downloads: 23319  Stars: 0  Base: unknown
+josh5/tvh-iptv
+ghcr.io/josh5/tvh-iptv:latest Downloads: 14077  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
@@ -19105,12 +19245,6 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-localai/localai
-localai/localai:latest Downloads: 1824031  Stars: 81  Base: unknown
-sdr-enthusiasts/docker-rtlsdrairband
-ghcr.io/sdr-enthusiasts/docker-rtlsdrairband:latest Downloads:   Stars:   Base: unknown
-tedder42/browser-screenshot-service
-tedder42/browser-screenshot-service:latest Downloads: 13252  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19123,6 +19257,8 @@ tedder42/browser-screenshot-service:latest Downloads: 13252  Stars: 1  Base: unk
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+productiveops/dokemon
+productiveops/dokemon:latest Downloads: 211749  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
