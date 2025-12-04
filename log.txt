@@ -174,24 +174,11 @@ Success
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   45cf15b..2a65f2a  main       -> origin/main
-Updating 45cf15b..2a65f2a
+   2a65f2a..c1fb29a  main       -> origin/main
+Updating 2a65f2a..c1fb29a
 Fast-forward
- .env.example                                       |   2 +
- README.md                                          |  23 +++
- app/api/admin/orderworks/jobs/_helpers.ts          |   4 +
- app/api/checkout/route.ts                          |   6 +
- app/api/jobs/[paymentIntentId]/route.ts            | 100 ++++++++++++
- app/api/makerworks/jobs/route.ts                   | 178 +++++++++++++++++++++
- components/admin/JobQueue.tsx                      | 155 +++++++++++++++++-
- lib/orderworks.ts                                  |  31 +++-
- .../0032_job_payment_fulfillment/migration.sql     |   9 ++
- prisma/schema.prisma                               |  11 ++
- unraid/templates/makerworks-v2.xml                 |   1 +
- 11 files changed, 511 insertions(+), 9 deletions(-)
- create mode 100644 app/api/jobs/[paymentIntentId]/route.ts
- create mode 100644 app/api/makerworks/jobs/route.ts
- create mode 100644 prisma/migrations/0032_job_payment_fulfillment/migration.sql
+ lib/orderworks.ts | 105 ++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 86 insertions(+), 19 deletions(-)
 
 Array
 (
@@ -3452,12 +3439,7 @@ Removed from CA123
 
 Downloading bmartino1's Repository
 
-From https://github.com/bmartino1/unraid-docker-templates
-   e45fe26..4bc30df  main       -> origin/main
-Updating e45fe26..4bc30df
-Fast-forward
- immich-postgress.xml | 16 +++++++++-------
- 1 file changed, 9 insertions(+), 7 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19269,13 +19251,25 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-drewzh/meshcore-web-docker
-ghcr.io/drewzh/meshcore-web-docker:latest Downloads:   Stars:   Base: unknown
-mitchellthompkins/tor-relay
-mitchellthompkins/tor-relay:latest Downloads: 170  Stars: 0  Base: unknown
-benjaminroberts01375/checkbag
-ghcr.io/benjaminroberts01375/checkbag:latest Downloads:   Stars:   Base: unknown
+catapultcase/junctionrelay
+catapultcase/junctionrelay:latest Downloads: 246  Stars: 0  Base: unknown
+cleanuparr/cleanuparr
+ghcr.io/cleanuparr/cleanuparr:latest Downloads:   Stars:   Base: unknown
+obviousviking/artillery
+obviousviking/artillery Downloads: 1139  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
+particular/servicecontrol
+particular/servicecontrol:latest Downloads: 135450  Stars: 0  Base: unknown
+particular/servicepulse
+particular/servicepulse:latest Downloads: 157956  Stars: 1  Base: unknown
+particular/servicecontrol-audit
+particular/servicecontrol-audit:latest Downloads: 66643  Stars: 0  Base: unknown
+particular/servicecontrol-ravendb
+particular/servicecontrol-ravendb:latest Downloads: 90599  Stars: 0  Base: unknown
+particular/servicecontrol-monitoring
+particular/servicecontrol-monitoring:latest Downloads: 133767  Stars: 0  Base: unknown
+lymphatus/caesium-app-web
+lymphatus/caesium-app-web Downloads: 1001  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
@@ -19303,6 +19297,9 @@ ghcr.io/benjaminroberts01375/checkbag:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+Tagged - Can't determine last update
+bitnamilegacy/redis
+bitnamilegacy/redis:8.2.1-debian-12-r0 Downloads: 2585096  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -19469,9 +19466,6 @@ ghcr.io/benjaminroberts01375/checkbag:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
-Tagged - Can't determine last update
-toeverything/affine-graphql
-ghcr.io/toeverything/affine-graphql:stable Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
