@@ -30,7 +30,21 @@ Processing /tmp/GitHub/repositoryClone/JFLXCLOUD/NeXroll/nexroll-unraid-template
 
 Downloading ThePizzaNinja86's Repository
 
-Already up to date.
+From https://github.com/jlightner86/jellylooter
+   6d3b544..b1a41c5  main       -> origin/main
+ * [new tag]         v2.3.2     -> v2.3.2
+ * [new tag]         v2.3.2.1   -> v2.3.2.1
+ * [new tag]         v2.3.3     -> v2.3.3
+ * [new tag]         v2.4.0     -> v2.4.0
+Updating 6d3b544..b1a41c5
+Fast-forward
+ .github/workflows/docker-publish.yml |   41 +-
+ .github/workflows/main.yml           |   31 -
+ Dockerfile                           |   11 +-
+ looter_app.py                        |    7 +-
+ templates/index.html                 | 2732 ++++++++++++++++++++++------------
+ 5 files changed, 1811 insertions(+), 1011 deletions(-)
+ delete mode 100644 .github/workflows/main.yml
 
 Array
 (
@@ -95,124 +109,7 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-From https://github.com/kurrier-org/kurrier
-   4c73996..593c91a  main       -> origin/main
-Updating 4c73996..593c91a
-Fast-forward
- .../[view]/[year]/[month]/[day]/page.tsx           |   41 +
- .../calendar/[view]/[year]/[month]/[day]/page.tsx  |    8 -
- .../(unified)/(calendar)/calendar/[view]/page.tsx  |   11 -
- .../(unified)/(calendar)/calendar/layout.tsx       |   61 +-
- .../(unified)/(calendar)/calendar/loading.tsx      |    2 -
- .../(unified)/(calendar)/calendar/page.tsx         |   30 +-
- .../app/dashboard/(unified)/(calendar)/layout.tsx  |   49 +-
- .../app/dashboard/(unified)/(contacts)/layout.tsx  |   76 +-
- apps/web/app/dashboard/(unified)/(mail)/layout.tsx |   79 +-
- .../app/dashboard/(unified)/(platform)/layout.tsx  |   32 +-
- apps/web/app/dashboard/(unified)/layout.tsx        |   35 +-
- apps/web/app/globals.css                           |   36 +-
- .../calendars/calendar-add-event-popover.tsx       |   51 +
- .../calendars/calendar-box-indicator-layer.tsx     |   59 +
- .../dashboard/calendars/calendar-day-hour-box.tsx  |   58 +
- .../dashboard/calendars/calendar-events-layer.tsx  |  110 +
- .../dashboard/calendars/calendar-shell.tsx         |   14 -
- .../dashboard/calendars/calendar-side-bar.tsx      |  261 +-
- .../dashboard/calendars/calendar-top-bar.tsx       |  241 +-
- .../dashboard/calendars/client-helpers.ts          |  125 +
- .../calendars/new-calendar-event-form.tsx          |  190 +
- .../dashboard/calendars/new-event-button.tsx       |   44 +-
- .../components/dashboard/calendars/week-view.tsx   |  237 +-
- .../dashboard/contacts/contact-list-avatar.tsx     |    2 +-
- .../dashboard/contacts/searchable-contacts.tsx     |   62 +
- .../identities/add-email-identity-form.tsx         |   36 +-
- .../components/mailbox/default/webmail-list.tsx    |    2 +-
- apps/web/components/nav-main.tsx                   |  234 +-
- .../ui/dashboards/unified/default/app-sidebar.tsx  |   85 +-
- .../ui/dashboards/workspace/nav-user.tsx           |   42 +-
- apps/web/hooks/use-dynamic-context.tsx             |   44 +-
- apps/web/lib/actions/calendar.ts                   |  308 +
- apps/web/lib/actions/dashboard.ts                  |   27 +-
- apps/web/lib/actions/mailbox.ts                    |   62 +-
- apps/web/lib/day-js-extended.ts                    |   22 -
- apps/web/lib/utils.ts                              |   12 +-
- .../worker/lib/dav/calendar/dav-build-cal-event.ts |   48 +
- .../lib/dav/calendar/dav-create-calendar-event.ts  |  118 +
- .../lib/dav/calendar/dav-delete-calendar-event.ts  |  114 +
- .../lib/dav/calendar/dav-update-calendar-event.ts  |  141 +
- apps/worker/lib/dav/dav-create-account.ts          |  288 +-
- apps/worker/lib/dav/dav-create-contact.ts          |    3 +-
- apps/worker/lib/dav/dav-delete-contact.ts          |    3 +-
- apps/worker/lib/dav/dav-seed-account.ts            |   74 -
- apps/worker/lib/dav/dav-update-contact.ts          |    1 -
- apps/worker/lib/dav/sync/dav-sync-db.ts            |  317 +-
- apps/worker/lib/get-redis.ts                       |   11 +-
- apps/worker/lib/imap/backfill/backfill-full.ts     |  581 +-
- .../lib/imap/backfill/discover/discover-gmail.ts   |   36 +-
- .../lib/imap/backfill/discover/discover-helpers.ts |  159 +-
- .../imap/backfill/discover/discover-mailboxes.ts   |  333 +-
- .../lib/imap/backfill/discover/discover-trash.ts   |  211 +-
- apps/worker/lib/imap/imap-client.ts                |  202 +-
- apps/worker/lib/imap/imap-delta-fetch.ts           |  201 +-
- apps/worker/lib/message-payload-parser.ts          |  154 +-
- apps/worker/lib/migrations/0.0.86/seed.ts          |    4 +-
- apps/worker/lib/migrations/0.0.98/seed.ts          |  100 +
- apps/worker/lib/migrations/index.ts                |    2 +
- apps/worker/server/plugins/dav-worker.ts           |   65 +-
- apps/worker/server/plugins/search.ts               |   18 +-
- apps/worker/server/plugins/send-mail.ts            |   10 +-
- apps/worker/server/plugins/smtp-worker.ts          |   94 +-
- db/docker-compose.yml                              |    6 +-
- db/init/dav_config/baikal.yaml                     |    4 +-
- db/init/dav_data/db/db.sqlite                      |  Bin 110592 -> 110592 bytes
- db/init/migrations/009_migration.sql               |   60 +
- package.json                                       |    3 +-
- packages/common/src/constants.ts                   |    3 +-
- packages/common/src/day-js-extended.ts             |   39 +
- packages/common/src/index.ts                       |    1 +
- packages/common/src/redis-ops.ts                   |   38 +-
- packages/db/src/drizzle/0019_crazy_blink.sql       |   55 +
- packages/db/src/drizzle/0020_minor_cloak.sql       |    1 +
- packages/db/src/drizzle/0021_needy_queen_noir.sql  |    2 +
- packages/db/src/drizzle/drizzle-types.ts           |    9 +
- packages/db/src/drizzle/meta/0017_snapshot.json    | 8107 ++++++++++----------
- packages/db/src/drizzle/meta/0018_snapshot.json    | 8107 ++++++++++----------
- packages/db/src/drizzle/meta/0019_snapshot.json    | 4292 +++++++++++
- packages/db/src/drizzle/meta/0020_snapshot.json    | 4298 +++++++++++
- packages/db/src/drizzle/meta/0021_snapshot.json    | 4310 +++++++++++
- packages/db/src/drizzle/meta/_journal.json         |  297 +-
- packages/db/src/drizzle/schema.ts                  |  140 +
- packages/schema/src/types/calendar.ts              |   48 +-
- packages/schema/src/types/mail.ts                  |   12 +-
- pnpm-lock.yaml                                     |    8 +
- 85 files changed, 25014 insertions(+), 10902 deletions(-)
- create mode 100644 apps/web/app/dashboard/(unified)/(calendar)/calendar/[calendarPublicId]/[view]/[year]/[month]/[day]/page.tsx
- delete mode 100644 apps/web/app/dashboard/(unified)/(calendar)/calendar/[view]/[year]/[month]/[day]/page.tsx
- delete mode 100644 apps/web/app/dashboard/(unified)/(calendar)/calendar/[view]/page.tsx
- delete mode 100644 apps/web/app/dashboard/(unified)/(calendar)/calendar/loading.tsx
- create mode 100644 apps/web/components/dashboard/calendars/calendar-add-event-popover.tsx
- create mode 100644 apps/web/components/dashboard/calendars/calendar-box-indicator-layer.tsx
- create mode 100644 apps/web/components/dashboard/calendars/calendar-day-hour-box.tsx
- create mode 100644 apps/web/components/dashboard/calendars/calendar-events-layer.tsx
- delete mode 100644 apps/web/components/dashboard/calendars/calendar-shell.tsx
- create mode 100644 apps/web/components/dashboard/calendars/client-helpers.ts
- create mode 100644 apps/web/components/dashboard/calendars/new-calendar-event-form.tsx
- create mode 100644 apps/web/components/dashboard/contacts/searchable-contacts.tsx
- create mode 100644 apps/web/lib/actions/calendar.ts
- delete mode 100644 apps/web/lib/day-js-extended.ts
- create mode 100644 apps/worker/lib/dav/calendar/dav-build-cal-event.ts
- create mode 100644 apps/worker/lib/dav/calendar/dav-create-calendar-event.ts
- create mode 100644 apps/worker/lib/dav/calendar/dav-delete-calendar-event.ts
- create mode 100644 apps/worker/lib/dav/calendar/dav-update-calendar-event.ts
- delete mode 100644 apps/worker/lib/dav/dav-seed-account.ts
- create mode 100644 apps/worker/lib/migrations/0.0.98/seed.ts
- create mode 100644 db/init/migrations/009_migration.sql
- create mode 100644 packages/common/src/day-js-extended.ts
- create mode 100644 packages/db/src/drizzle/0019_crazy_blink.sql
- create mode 100644 packages/db/src/drizzle/0020_minor_cloak.sql
- create mode 100644 packages/db/src/drizzle/0021_needy_queen_noir.sql
- create mode 100644 packages/db/src/drizzle/meta/0019_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0020_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0021_snapshot.json
+Already up to date.
 
 Array
 (
@@ -290,12 +187,7 @@ Success
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   c1fb29a..ed87c2c  main       -> origin/main
-Updating c1fb29a..ed87c2c
-Fast-forward
- lib/orderworks.ts | 90 ++++++++++++++++++++++++++++++++++++++++++-------------
- 1 file changed, 70 insertions(+), 20 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4546,7 +4438,35 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   25f8c63e..0b2c90fe  main       -> origin/main
+Updating 25f8c63e..0b2c90fe
+Fast-forward
+ app/blueprints/admin/routes.py                     |  88 +++
+ app/blueprints/api/api_routes.py                   |  93 +++
+ app/blueprints/public/routes.py                    |  68 ++
+ app/models.py                                      |  33 +
+ app/services/media/client_base.py                  |  18 +
+ app/services/media/jellyfin.py                     |  31 +
+ app/services/media/service.py                      |  45 +-
+ app/services/password_reset.py                     | 256 +++++++
+ app/templates/modals/password-reset-link.html      | 201 ++++++
+ app/templates/password-reset-error.html            |  65 ++
+ app/templates/password-reset-form.html             |  82 +++
+ app/templates/password-reset-success.html          |  45 ++
+ app/templates/tables/user_card.html                |  23 +-
+ .../a052ac2ce6a9_add_password_reset_token_table.py |  43 ++
+ ...aad5_fix_password_reset_token_cascade_delete.py |  97 +++
+ tests/test_password_reset.py                       | 732 +++++++++++++++++++++
+ 16 files changed, 1918 insertions(+), 2 deletions(-)
+ create mode 100644 app/services/password_reset.py
+ create mode 100644 app/templates/modals/password-reset-link.html
+ create mode 100644 app/templates/password-reset-error.html
+ create mode 100644 app/templates/password-reset-form.html
+ create mode 100644 app/templates/password-reset-success.html
+ create mode 100644 migrations/versions/a052ac2ce6a9_add_password_reset_token_table.py
+ create mode 100644 migrations/versions/c854ad44aad5_fix_password_reset_token_cascade_delete.py
+ create mode 100644 tests/test_password_reset.py
 
 Array
 (
@@ -19577,6 +19497,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+calibrain/calibre-web-automated-book-downloader
+ghcr.io/calibrain/calibre-web-automated-book-downloader:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 123
