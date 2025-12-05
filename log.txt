@@ -173,7 +173,16 @@ Success
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   043fa66..321ed70  main       -> origin/main
+Updating 043fa66..321ed70
+Fast-forward
+ app/admin/page.tsx                       |   2 +-
+ app/admin/users/page.tsx                 |   2 +-
+ app/discover/page.tsx                    | 226 +++++++++++++++++++++++++------
+ components/admin/UsersAndBadgesPanel.tsx |  92 ++++++++-----
+ lib/admin/queries.ts                     |   2 +-
+ 5 files changed, 240 insertions(+), 84 deletions(-)
 
 Array
 (
@@ -5259,22 +5268,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 Downloading linuxserver's Repository
 
 From https://github.com/linuxserver/templates
-   228425a..2db56eb  main       -> origin/main
-Updating 228425a..2db56eb
+   2db56eb..8367acb  main       -> origin/main
+Updating 2db56eb..8367acb
 Fast-forward
- unraid/intellij-idea.xml | 39 +++++++++++++++++++++++++++++++++++++++
- unraid/modrinth.xml      | 39 +++++++++++++++++++++++++++++++++++++++
- unraid/pycharm.xml       | 39 +++++++++++++++++++++++++++++++++++++++
- unraid/telegram.xml      | 39 +++++++++++++++++++++++++++++++++++++++
- unraid/thunderbird.xml   | 39 +++++++++++++++++++++++++++++++++++++++
- unraid/vlc.xml           | 40 ++++++++++++++++++++++++++++++++++++++++
- 6 files changed, 235 insertions(+)
- create mode 100644 unraid/intellij-idea.xml
- create mode 100644 unraid/modrinth.xml
- create mode 100644 unraid/pycharm.xml
- create mode 100644 unraid/telegram.xml
- create mode 100644 unraid/thunderbird.xml
- create mode 100644 unraid/vlc.xml
+ unraid/signal.xml | 39 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+ create mode 100644 unraid/signal.xml
 
 Array
 (
@@ -5394,121 +5393,122 @@ Array
             [111] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/smokeping.xml
             [112] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dogwalk.xml
             [113] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kometa.xml
-            [114] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
-            [115] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
-            [116] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
-            [117] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
-            [118] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
-            [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
-            [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
-            [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
-            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
-            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
-            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
-            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
-            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
-            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
-            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
-            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
-            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
-            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
-            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
-            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
-            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
-            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
-            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
-            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
-            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
-            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
-            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
-            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
-            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/overseerr.xml
-            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
-            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
-            [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
-            [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webtop.xml
-            [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webcord.xml
-            [148] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wps-office.xml
-            [149] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckstation.xml
-            [150] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/budge.xml
-            [151] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/handbrake.xml
-            [152] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ldap-auth.xml
-            [153] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/inkscape.xml
-            [154] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/opera.xml
-            [155] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/radarr.xml
-            [156] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/beets.xml
-            [157] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rsnapshot.xml
-            [158] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/healthchecks.xml
-            [159] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pcsx2.xml
-            [160] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/scummvm.xml
-            [161] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kicad.xml
-            [162] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/hedgedoc.xml
-            [163] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jackett.xml
-            [164] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/chromium.xml
-            [165] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sickgear.xml
-            [166] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/speedtest-tracker.xml
-            [167] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/prowlarr.xml
-            [168] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml
-            [169] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/citron.xml
-            [170] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freecad.xml
-            [171] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lidarr.xml
-            [172] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mariadb.xml
-            [173] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kasm-static.xml
-            [174] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nginx.xml
-            [175] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/heimdall.xml
-            [176] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nextcloud.xml
-            [177] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/audacity.xml
-            [178] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/joplin.xml
-            [179] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/babybuddy.xml
-            [180] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grocy.xml
-            [181] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/doublecommander.xml
-            [182] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syncthing.xml
-            [183] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dosbox-staging.xml
-            [184] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piwigo.xml
-            [185] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/keepassxc.xml
-            [186] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/swag.xml
-            [187] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/remmina.xml
-            [188] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zotero.xml
-            [189] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rustdesk.xml
-            [190] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/adguardhome-sync.xml
-            [191] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/oscam.xml
-            [192] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xbackbone.xml
-            [193] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/htpcmanager.xml
-            [194] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/changedetection.io.xml
-            [195] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webgrabplus.xml
-            [196] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dolphin.xml
-            [197] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/series-troxide.xml
-            [198] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wikijs.xml
-            [199] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pidgin.xml
-            [200] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vscodium.xml
-            [201] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nano-wallet.xml
-            [202] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xemu.xml
-            [203] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openshot.xml
-            [204] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre-web.xml
-            [205] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lollypop.xml
-            [206] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/shotcut.xml
-            [207] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbhydra2.xml
-            [208] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mysql-workbench.xml
-            [209] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/monica.xml
-            [210] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piper.xml
-            [211] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ombi.xml
-            [212] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ardour.xml
-            [213] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/resilio-sync.xml
-            [214] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mstream.xml
-            [215] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ferdium.xml
-            [216] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/firefox.xml
-            [217] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/retroarch.xml
-            [218] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jellyfin.xml
-            [219] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/orcaslicer.xml
-            [220] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/your_spotify.xml
-            [221] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/foldingathome.xml
-            [222] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rpcs3.xml
-            [223] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/obsidian.xml
-            [224] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pwndrop.xml
-            [225] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/planka.xml
-            [226] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre.xml
-            [227] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zen.xml
-            [228] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mediaelch.xml
+            [114] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/signal.xml
+            [115] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
+            [116] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
+            [117] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
+            [118] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
+            [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
+            [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
+            [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
+            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
+            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
+            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
+            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
+            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
+            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
+            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
+            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
+            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
+            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
+            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
+            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
+            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
+            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
+            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
+            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
+            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
+            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
+            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
+            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
+            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
+            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/overseerr.xml
+            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
+            [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
+            [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
+            [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webtop.xml
+            [148] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webcord.xml
+            [149] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wps-office.xml
+            [150] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckstation.xml
+            [151] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/budge.xml
+            [152] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/handbrake.xml
+            [153] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ldap-auth.xml
+            [154] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/inkscape.xml
+            [155] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/opera.xml
+            [156] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/radarr.xml
+            [157] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/beets.xml
+            [158] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rsnapshot.xml
+            [159] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/healthchecks.xml
+            [160] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pcsx2.xml
+            [161] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/scummvm.xml
+            [162] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kicad.xml
+            [163] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/hedgedoc.xml
+            [164] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jackett.xml
+            [165] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/chromium.xml
+            [166] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sickgear.xml
+            [167] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/speedtest-tracker.xml
+            [168] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/prowlarr.xml
+            [169] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml
+            [170] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/citron.xml
+            [171] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freecad.xml
+            [172] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lidarr.xml
+            [173] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mariadb.xml
+            [174] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kasm-static.xml
+            [175] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nginx.xml
+            [176] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/heimdall.xml
+            [177] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nextcloud.xml
+            [178] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/audacity.xml
+            [179] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/joplin.xml
+            [180] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/babybuddy.xml
+            [181] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grocy.xml
+            [182] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/doublecommander.xml
+            [183] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syncthing.xml
+            [184] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dosbox-staging.xml
+            [185] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piwigo.xml
+            [186] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/keepassxc.xml
+            [187] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/swag.xml
+            [188] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/remmina.xml
+            [189] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zotero.xml
+            [190] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rustdesk.xml
+            [191] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/adguardhome-sync.xml
+            [192] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/oscam.xml
+            [193] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xbackbone.xml
+            [194] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/htpcmanager.xml
+            [195] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/changedetection.io.xml
+            [196] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webgrabplus.xml
+            [197] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dolphin.xml
+            [198] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/series-troxide.xml
+            [199] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wikijs.xml
+            [200] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pidgin.xml
+            [201] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vscodium.xml
+            [202] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nano-wallet.xml
+            [203] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xemu.xml
+            [204] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openshot.xml
+            [205] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre-web.xml
+            [206] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lollypop.xml
+            [207] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/shotcut.xml
+            [208] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbhydra2.xml
+            [209] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mysql-workbench.xml
+            [210] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/monica.xml
+            [211] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piper.xml
+            [212] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ombi.xml
+            [213] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ardour.xml
+            [214] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/resilio-sync.xml
+            [215] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mstream.xml
+            [216] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ferdium.xml
+            [217] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/firefox.xml
+            [218] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/retroarch.xml
+            [219] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jellyfin.xml
+            [220] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/orcaslicer.xml
+            [221] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/your_spotify.xml
+            [222] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/foldingathome.xml
+            [223] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rpcs3.xml
+            [224] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/obsidian.xml
+            [225] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pwndrop.xml
+            [226] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/planka.xml
+            [227] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre.xml
+            [228] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zen.xml
+            [229] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mediaelch.xml
         )
 
 )
@@ -5862,6 +5862,9 @@ Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dogwalk.xml.
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kometa.xml...No category entry present - using a guessed category
+
+Success
+Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/signal.xml...No category entry present
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml...No category entry present - using a guessed category
@@ -19278,20 +19281,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-quay.io/docling-project/docling-serve
-quay.io/docling-project/docling-serve Downloads:   Stars:   Base: unknown
-shaneee/system-monitor
-shaneee/system-monitor Downloads: 906  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-postgis/postgis
-postgis/postgis:17-3.5-alpine Downloads: 245989312  Stars: 288  Base: unknown
-Tagged - Can't determine last update
-redis
-redis:7.4-alpine Downloads: 10139502115  Stars: 13475  Base: unknown
-rtuszik/photon-docker
-rtuszik/photon-docker Downloads: 190203  Stars: 4  Base: unknown
-afairgiant/medikeep
-ghcr.io/afairgiant/medikeep:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19352,30 +19341,10 @@ ghcr.io/afairgiant/medikeep:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/pycharm
-lscr.io/linuxserver/pycharm Downloads: 96  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/pycharm
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/pycharm/manifests/latest": unauthorized
-linuxserver/intellij-idea
-lscr.io/linuxserver/intellij-idea Downloads: 340  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/intellij-idea
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/intellij-idea/manifests/latest": unauthorized
-linuxserver/telegram
-lscr.io/linuxserver/telegram Downloads: 92  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/telegram
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/telegram/manifests/latest": unauthorized
-linuxserver/vlc
-lscr.io/linuxserver/vlc Downloads: 339  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/vlc
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/vlc/manifests/latest": unauthorized
-linuxserver/modrinth
-lscr.io/linuxserver/modrinth Downloads: 115  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/modrinth
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/modrinth/manifests/latest": unauthorized
-linuxserver/thunderbird
-lscr.io/linuxserver/thunderbird Downloads: 449  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/thunderbird
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/thunderbird/manifests/latest": unauthorized
+linuxserver/signal
+lscr.io/linuxserver/signal Downloads: 119  Stars: 0  Base: unknown
+Pulling lscr.io/linuxserver/signal
+Error response from daemon: Head "https://ghcr.io/v2/linuxserver/signal/manifests/latest": unauthorized
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19500,12 +19469,6 @@ Error response from daemon: Head "https://ghcr.io/v2/linuxserver/thunderbird/man
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-fredrikburmester/streamystats-nextjs
-fredrikburmester/streamystats-nextjs:edge Downloads: 78946  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-fredrikburmester/streamystats-phoenix
-fredrikburmester/streamystats-phoenix:edge Downloads: 76606  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19518,8 +19481,6 @@ fredrikburmester/streamystats-phoenix:edge Downloads: 76606  Stars: 0  Base: unk
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
-invoiceninja/invoiceninja-debian
-invoiceninja/invoiceninja-debian Downloads: 180049  Stars: 11  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
