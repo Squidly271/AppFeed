@@ -47,7 +47,13 @@ Processing /tmp/GitHub/repositoryClone/jlightner86/jellylooter/jellylooter.xml..
 
 Downloading Anym001's Repository
 
-Already up to date.
+From https://github.com/anym001/unraid-docker-templates
+   b604594..a266bcf  main       -> origin/main
+Updating b604594..a266bcf
+Fast-forward
+ anym001/bitcoind.xml | 10 +++++-----
+ anym001/electrs.xml  |  6 +++---
+ 2 files changed, 8 insertions(+), 8 deletions(-)
 
 Array
 (
@@ -99,78 +105,7 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-From https://github.com/kurrier-org/kurrier
-   593c91a..e109d9e  main       -> origin/main
-Updating 593c91a..e109d9e
-Fast-forward
- .../[view]/[year]/[month]/[day]/page.tsx           |   13 +-
- .../(unified)/(calendar)/calendar/layout.tsx       |    6 +-
- .../(unified)/(calendar)/calendar/page.tsx         |   13 +-
- .../components/dashboard/calendars/add-guests.tsx  |  125 +
- .../calendars/calendar-add-event-popover.tsx       |   22 +-
- .../dashboard/calendars/calendar-day-hour-box.tsx  |    4 +-
- .../dashboard/calendars/calendar-events-layer.tsx  |    4 +-
- .../dashboard/calendars/combined-event-view.tsx    |   27 +
- .../dashboard/calendars/external-event-view.tsx    |  205 +
- .../components/dashboard/calendars/guest-list.tsx  |  126 +
- .../calendars/new-calendar-event-form.tsx          |   61 +-
- .../components/dashboard/calendars/week-view.tsx   |   16 +-
- .../dashboard/contacts/contact-list-avatar.tsx     |   95 +-
- .../dashboard/contacts/searchable-contacts.tsx     |   41 +-
- .../identities/add-email-identity-form.tsx         |   22 +
- .../default/editor/contact-suggestion-item.tsx     |   13 +-
- .../default/editor/email-header-contacts.tsx       |    2 +-
- apps/web/lib/actions/calendar.ts                   |  523 +-
- apps/web/lib/actions/mailbox.ts                    |   67 -
- .../worker/lib/dav/calendar/dav-build-cal-event.ts |  170 +-
- .../lib/dav/calendar/dav-create-calendar-event.ts  |   33 +-
- .../lib/dav/calendar/dav-delete-calendar-event.ts  |    7 +-
- apps/worker/lib/dav/calendar/dav-itip-notify.ts    |  350 ++
- apps/worker/lib/dav/calendar/dav-itip-processor.ts |  650 +++
- .../lib/dav/calendar/dav-sync-calendar-db.ts       |  304 ++
- .../lib/dav/calendar/dav-update-calendar-event.ts  |   12 +-
- apps/worker/lib/dav/dav-schema.ts                  |    1 +
- apps/worker/lib/imap/backfill/backfill-full.ts     |    7 +-
- apps/worker/lib/message-payload-parser.ts          |  185 +-
- apps/worker/server/plugins/dav-worker.ts           |   17 +-
- apps/worker/server/plugins/smtp-worker.ts          |    2 +-
- db/init/migrations/009_migration.sql               |   46 +
- packages/db/src/drizzle/0022_fine_alex_power.sql   |    2 +
- packages/db/src/drizzle/0023_clever_junta.sql      |    1 +
- .../db/src/drizzle/0024_noisy_mattie_franklin.sql  |    4 +
- packages/db/src/drizzle/0025_cute_shatterstar.sql  |   28 +
- .../db/src/drizzle/0026_acoustic_nick_fury.sql     |    2 +
- packages/db/src/drizzle/0027_demonic_selene.sql    |    1 +
- packages/db/src/drizzle/drizzle-types.ts           |   35 +-
- packages/db/src/drizzle/meta/0022_snapshot.json    | 4768 ++++++++++++++++++
- packages/db/src/drizzle/meta/0023_snapshot.json    | 4774 ++++++++++++++++++
- packages/db/src/drizzle/meta/0024_snapshot.json    | 4805 ++++++++++++++++++
- packages/db/src/drizzle/meta/0025_snapshot.json    | 5057 +++++++++++++++++++
- packages/db/src/drizzle/meta/0026_snapshot.json    | 5077 +++++++++++++++++++
- packages/db/src/drizzle/meta/0027_snapshot.json    | 5084 ++++++++++++++++++++
- packages/db/src/drizzle/meta/_journal.json         |  360 +-
- packages/db/src/drizzle/schema.ts                  |  117 +-
- packages/schema/src/types/calendar.ts              |   51 +-
- 48 files changed, 32723 insertions(+), 612 deletions(-)
- create mode 100644 apps/web/components/dashboard/calendars/add-guests.tsx
- create mode 100644 apps/web/components/dashboard/calendars/combined-event-view.tsx
- create mode 100644 apps/web/components/dashboard/calendars/external-event-view.tsx
- create mode 100644 apps/web/components/dashboard/calendars/guest-list.tsx
- create mode 100644 apps/worker/lib/dav/calendar/dav-itip-notify.ts
- create mode 100644 apps/worker/lib/dav/calendar/dav-itip-processor.ts
- create mode 100644 apps/worker/lib/dav/calendar/dav-sync-calendar-db.ts
- create mode 100644 packages/db/src/drizzle/0022_fine_alex_power.sql
- create mode 100644 packages/db/src/drizzle/0023_clever_junta.sql
- create mode 100644 packages/db/src/drizzle/0024_noisy_mattie_franklin.sql
- create mode 100644 packages/db/src/drizzle/0025_cute_shatterstar.sql
- create mode 100644 packages/db/src/drizzle/0026_acoustic_nick_fury.sql
- create mode 100644 packages/db/src/drizzle/0027_demonic_selene.sql
- create mode 100644 packages/db/src/drizzle/meta/0022_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0023_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0024_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0025_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0026_snapshot.json
- create mode 100644 packages/db/src/drizzle/meta/0027_snapshot.json
+Already up to date.
 
 Array
 (
@@ -248,7 +183,12 @@ Success
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   62dd9b6..035155a  main       -> origin/main
+Updating 62dd9b6..035155a
+Fast-forward
+ app/cart/page.tsx | 124 +++++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 85 insertions(+), 39 deletions(-)
 
 Array
 (
@@ -7703,7 +7643,12 @@ Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/matter-s
 
 Downloading CorneliousJD's Repository
 
-Already up to date.
+From https://github.com/CorneliousJD/Docker-Templates
+   2826e3a..4e2a2fe  master     -> origin/master
+Updating 2826e3a..4e2a2fe
+Fast-forward
+ amp.xml | 34 ++++++----------------------------
+ 1 file changed, 6 insertions(+), 28 deletions(-)
 
 Array
 (
@@ -19531,16 +19476,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-quenary/tugtainer
-quenary/tugtainer:latest Downloads: 116815  Stars: 2  Base: unknown
-hardcoreeng/collaborator
-hardcoreeng/collaborator:latest Downloads: 59433  Stars: 0  Base: unknown
-hardcoreeng/rekoni-service
-hardcoreeng/rekoni-service:latest Downloads: 144580  Stars: 0  Base: unknown
-hardcoreeng/workspace
-hardcoreeng/workspace:latest Downloads: 48457  Stars: 0  Base: unknown
-hardcoreeng/account
-hardcoreeng/account:latest Downloads: 83550  Stars: 0  Base: unknown
+idiosync000/romm-comm
+idiosync000/romm-comm:latest Downloads: 3592  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
