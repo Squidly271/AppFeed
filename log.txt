@@ -100,12 +100,32 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 Downloading debuggy12's Repository
 
 From https://github.com/kurrier-org/kurrier
-   e109d9e..31898a4  main       -> origin/main
-Updating e109d9e..31898a4
+   31898a4..f93325b  main       -> origin/main
+Updating 31898a4..f93325b
 Fast-forward
- apps/docs/package.json |   2 +-
- pnpm-lock.yaml         | 105 +++++++++++++++++++++++++------------------------
- 2 files changed, 54 insertions(+), 53 deletions(-)
+ .../web/components/common/reusable-form-button.tsx |  52 ++
+ .../calendars/calendar-add-event-popover.tsx       |   1 -
+ .../dashboard/calendars/calendar-events-layer.tsx  |   7 +-
+ .../dashboard/calendars/calendar-top-bar.tsx       |   3 +-
+ .../dashboard/calendars/external-event-view.tsx    |  86 +--
+ .../components/dashboard/calendars/guest-list.tsx  |  47 +-
+ .../calendars/new-calendar-event-form.tsx          |  85 ++-
+ .../ui/dashboards/mailbox/default/app-sidebar.tsx  |   2 +-
+ .../ui/dashboards/workspace/app-sidebar.tsx        |   2 +-
+ apps/web/lib/actions/calendar.ts                   |  75 +-
+ apps/web/next.config.ts                            |   3 +-
+ apps/web/package.json                              |  10 +-
+ .../lib/dav/calendar/dav-delete-calendar-event.ts  |  18 +-
+ apps/worker/lib/dav/calendar/dav-itip-notify.ts    |   4 +-
+ apps/worker/lib/dav/calendar/dav-itip-processor.ts | 203 +++--
+ apps/worker/lib/dav/calendar/dav-itip-reply.ts     | 332 ++++++++
+ apps/worker/server/plugins/dav-worker.ts           |   6 +-
+ db/init/migrations/009_migration.sql               |   3 +
+ packages/db/src/drizzle/schema.ts                  |   1 +
+ pnpm-lock.yaml                                     | 847 +++++++++++++++------
+ 20 files changed, 1364 insertions(+), 423 deletions(-)
+ create mode 100644 apps/web/components/common/reusable-form-button.tsx
+ create mode 100644 apps/worker/lib/dav/calendar/dav-itip-reply.ts
 
 Array
 (
@@ -183,7 +203,12 @@ Success
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   035155a..51ffdcf  main       -> origin/main
+Updating 035155a..51ffdcf
+Fast-forward
+ app/manifest.ts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -1180,17 +1205,12 @@ Success
 Downloading Tajniak81's Repository
 
 From https://github.com/tajniak81/unraid-docker-templates
-   a5748ae..ca6092b  main       -> origin/main
-Updating a5748ae..ca6092b
+   ca6092b..264faeb  main       -> origin/main
+Updating ca6092b..264faeb
 Fast-forward
- arcane/icon/arcane.png             | Bin 0 -> 17916 bytes
- electerm-web/icon/electerm-web.png | Bin 2243 -> 16992 bytes
- netbootxyz/icon/netbootxyz.png     | Bin 1141 -> 10900 bytes
- stalwart/icon/stalwart.png         | Bin 3612 -> 58871 bytes
- xpipe-webtop/icon/xpipe-webtop.png | Bin 2357 -> 59892 bytes
- yamtrack/icon/yamtrack.png         | Bin 3606 -> 22528 bytes
- 6 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 arcane/icon/arcane.png
+ arcane/arcane.xml | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 48 insertions(+)
+ create mode 100644 arcane/arcane.xml
 
 Array
 (
@@ -1199,7 +1219,8 @@ Array
             [0] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/xpipe-webtop/xpipe-webtop.xml
             [1] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/netbootxyz/netbootxyz.xml
             [2] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml
-            [3] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml
+            [3] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml
+            [4] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml
         )
 
 )
@@ -1208,6 +1229,9 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/xpipe-webtop/xpipe-webtop.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/netbootxyz/netbootxyz.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml...Success
+Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml...Privileged mode set.  This may not be necessary
+
+Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml...Success
 
 
@@ -14208,12 +14232,7 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-From https://github.com/JPDVM2014/unraid-templates
-   9cb4966..bd8db96  main       -> origin/main
-Updating 9cb4966..bd8db96
-Fast-forward
- spotizerr.xml | 48 ++++++++++++++++++++++++++----------------------
- 1 file changed, 26 insertions(+), 22 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19298,6 +19317,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+getarcaneapp/arcane
+ghcr.io/getarcaneapp/arcane:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/getarcaneapp/arcane:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19339,9 +19362,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-Tagged - Can't determine last update
-waazaafr/webserver-apache-php8
-waazaafr/webserver-apache-php8:8.2 Downloads: 1704  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19361,8 +19381,6 @@ waazaafr/webserver-apache-php8:8.2 Downloads: 1704  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/planka
-lscr.io/linuxserver/planka Downloads: 44493  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19451,8 +19469,6 @@ lscr.io/linuxserver/planka Downloads: 44493  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
-spaceinvaderone/tailvault
-spaceinvaderone/tailvault:latest Downloads: 696  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19485,10 +19501,8 @@ spaceinvaderone/tailvault:latest Downloads: 696  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-spotizerrphoenix/spotizerr
-spotizerrphoenix/spotizerr Downloads: 2175  Stars: 0  Base: unknown
-Pulling spotizerrphoenix/spotizerr
-Killed
+dumbwareio/dumbkan
+dumbwareio/dumbkan:latest Downloads: 65796  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
@@ -19512,7 +19526,7 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 123
+Privileged: 124
 
 
 Updating GitHub
