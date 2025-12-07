@@ -178,12 +178,19 @@ Success
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   51ffdcf..002c888  main       -> origin/main
-Updating 51ffdcf..002c888
+   002c888..79c0bf4  main       -> origin/main
+Updating 002c888..79c0bf4
 Fast-forward
- components/cart/AddToCartButtons.tsx | 15 +++++++++++++--
- unraid/templates/makerworks-v2.xml   |  4 ++--
- 2 files changed, 15 insertions(+), 4 deletions(-)
+ app/api/models/route.ts                   |  33 +++---
+ app/discover/page.tsx                     | 188 +++---------------------------
+ components/discover/DiscoverFilters.tsx   |  45 +++++++
+ components/discover/DiscoverModelList.tsx | 127 ++++++++++++++++++++
+ prisma/schema.prisma                      |   9 +-
+ types/discover.ts                         |  68 +++++++++++
+ 6 files changed, 279 insertions(+), 191 deletions(-)
+ create mode 100644 components/discover/DiscoverFilters.tsx
+ create mode 100644 components/discover/DiscoverModelList.tsx
+ create mode 100644 types/discover.ts
 
 Array
 (
@@ -19242,10 +19249,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
-schartrand77/mkw2
-ghcr.io/schartrand77/mkw2:latest Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/schartrand77/mkw2:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
@@ -19351,8 +19354,6 @@ Killed
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/yaak
-lscr.io/linuxserver/yaak Downloads: 15680  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19477,10 +19478,6 @@ lscr.io/linuxserver/yaak Downloads: 15680  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-njic/medassist
-ghcr.io/njic/medassist:latest Downloads: 302  Stars: 0  Base: unknown
-heyputer/puter
-ghcr.io/heyputer/puter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
