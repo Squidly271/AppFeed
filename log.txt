@@ -177,20 +177,7 @@ Success
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   002c888..79c0bf4  main       -> origin/main
-Updating 002c888..79c0bf4
-Fast-forward
- app/api/models/route.ts                   |  33 +++---
- app/discover/page.tsx                     | 188 +++---------------------------
- components/discover/DiscoverFilters.tsx   |  45 +++++++
- components/discover/DiscoverModelList.tsx | 127 ++++++++++++++++++++
- prisma/schema.prisma                      |   9 +-
- types/discover.ts                         |  68 +++++++++++
- 6 files changed, 279 insertions(+), 191 deletions(-)
- create mode 100644 components/discover/DiscoverFilters.tsx
- create mode 100644 components/discover/DiscoverModelList.tsx
- create mode 100644 types/discover.ts
+Already up to date.
 
 Array
 (
@@ -3771,32 +3758,40 @@ Processing /tmp/GitHub/repositoryClone/feederbox826/unraid-templates/feederbox82
 
 Downloading EDACerton's Repository
 
-Already up to date.
+From https://github.com/dkaser/unraid-plugins
+   63b3923..316ea1f  main       -> origin/main
+Updating 63b3923..316ea1f
+Fast-forward
+ auto-unlock-preview.xml | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+ create mode 100644 auto-unlock-preview.xml
 
 Array
 (
     [https://github.com/dkaser/unraid-plugins] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tailscale-docker.xml
-            [1] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/file.activity.xml
-            [2] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ddrescue.xml
-            [3] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/sl.xml
-            [4] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/storcli.xml
-            [5] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/plugin-diagnostics.xml
-            [6] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ncdu.xml
-            [7] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ca_profile.xml
-            [8] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsidp.xml
-            [9] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsdproxy.xml
-            [10] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/labelman.xml
-            [11] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/open.files.xml
-            [12] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/enhanced.log.xml
-            [13] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/motd.xml
+            [1] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/auto-unlock-preview.xml
+            [2] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/file.activity.xml
+            [3] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ddrescue.xml
+            [4] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/sl.xml
+            [5] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/storcli.xml
+            [6] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/plugin-diagnostics.xml
+            [7] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ncdu.xml
+            [8] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ca_profile.xml
+            [9] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsidp.xml
+            [10] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsdproxy.xml
+            [11] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/labelman.xml
+            [12] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/open.files.xml
+            [13] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/enhanced.log.xml
+            [14] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/motd.xml
         )
 
 )
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tailscale-docker.xml...Success
+Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/auto-unlock-preview.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/file.activity.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ddrescue.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/sl.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...Success
@@ -19322,6 +19317,7 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+ Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
@@ -19474,6 +19470,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+casantosmu/audiodeck
+casantosmu/audiodeck:latest Downloads: 4003  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
