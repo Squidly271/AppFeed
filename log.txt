@@ -100,18 +100,119 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 Downloading debuggy12's Repository
 
 From https://github.com/kurrier-org/kurrier
-   b9ef586..b45b87e  main       -> origin/main
-Updating b9ef586..b45b87e
+   b45b87e..5f0ba14  main       -> origin/main
+Updating b45b87e..5f0ba14
 Fast-forward
- README.md                                | 139 ++++++++++---
- apps/docs/app/(home)/page.tsx            |  31 +--
- apps/docs/content/docs/calendars.mdx     | 337 ++++++++++++++++++++++++++-----
- apps/docs/content/docs/index.mdx         |  50 +++--
- apps/docs/public/docs-calendar-dark.png  | Bin 0 -> 477132 bytes
- apps/docs/public/docs-calendar-light.png | Bin 0 -> 511309 bytes
- 6 files changed, 445 insertions(+), 112 deletions(-)
- create mode 100644 apps/docs/public/docs-calendar-dark.png
- create mode 100644 apps/docs/public/docs-calendar-light.png
+ .gitignore                                         |    1 +
+ packages/db/src/drizzle/0000_ambiguous_inertia.sql |  350 --
+ .../db/src/drizzle/0000_tough_virginia_dare.sql    |  657 +++
+ packages/db/src/drizzle/0001_messy_penance.sql     |    3 -
+ packages/db/src/drizzle/0004_tranquil_lockheed.sql |   29 -
+ .../db/src/drizzle/0005_dizzy_millenium_guard.sql  |    1 -
+ .../db/src/drizzle/0006_misty_golden_guardian.sql  |   24 -
+ packages/db/src/drizzle/0007_dizzy_centennial.sql  |    1 -
+ packages/db/src/drizzle/0008_cheerful_bedlam.sql   |   43 -
+ packages/db/src/drizzle/0009_brief_barracuda.sql   |   29 -
+ .../db/src/drizzle/0010_flaky_living_tribunal.sql  |    1 -
+ packages/db/src/drizzle/0011_steep_menace.sql      |   20 -
+ packages/db/src/drizzle/0012_cooing_magneto.sql    |   15 -
+ packages/db/src/drizzle/0013_nifty_loners.sql      |   44 -
+ packages/db/src/drizzle/0014_silly_agent_brand.sql |    4 -
+ .../db/src/drizzle/0015_tearful_sebastian_shaw.sql |    1 -
+ packages/db/src/drizzle/0016_clammy_dust.sql       |    2 -
+ .../src/drizzle/0017_vengeful_rocket_raccoon.sql   |    1 -
+ .../db/src/drizzle/0018_clumsy_serpent_society.sql |    1 -
+ packages/db/src/drizzle/0019_crazy_blink.sql       |   55 -
+ packages/db/src/drizzle/0020_minor_cloak.sql       |    1 -
+ packages/db/src/drizzle/0021_needy_queen_noir.sql  |    2 -
+ packages/db/src/drizzle/0022_fine_alex_power.sql   |    2 -
+ packages/db/src/drizzle/0023_clever_junta.sql      |    1 -
+ .../db/src/drizzle/0024_noisy_mattie_franklin.sql  |    4 -
+ packages/db/src/drizzle/0025_cute_shatterstar.sql  |   28 -
+ .../db/src/drizzle/0026_acoustic_nick_fury.sql     |    2 -
+ packages/db/src/drizzle/0027_demonic_selene.sql    |    1 -
+ packages/db/src/drizzle/meta/0000_snapshot.json    | 2220 ---------
+ packages/db/src/drizzle/meta/0001_snapshot.json    | 2251 ---------
+ packages/db/src/drizzle/meta/0004_snapshot.json    | 2492 ----------
+ packages/db/src/drizzle/meta/0005_snapshot.json    | 2497 ----------
+ packages/db/src/drizzle/meta/0006_snapshot.json    | 2679 -----------
+ packages/db/src/drizzle/meta/0007_snapshot.json    | 2679 -----------
+ packages/db/src/drizzle/meta/0008_snapshot.json    | 2998 ------------
+ packages/db/src/drizzle/meta/0009_snapshot.json    | 3226 -------------
+ packages/db/src/drizzle/meta/0010_snapshot.json    | 3232 -------------
+ packages/db/src/drizzle/meta/0011_snapshot.json    | 3362 -------------
+ packages/db/src/drizzle/meta/0012_snapshot.json    | 3472 -------------
+ packages/db/src/drizzle/meta/0013_snapshot.json    | 3814 ---------------
+ packages/db/src/drizzle/meta/0014_snapshot.json    | 3854 ---------------
+ packages/db/src/drizzle/meta/0015_snapshot.json    | 3860 ---------------
+ packages/db/src/drizzle/meta/0016_snapshot.json    | 3854 ---------------
+ packages/db/src/drizzle/meta/0017_snapshot.json    | 3860 ---------------
+ packages/db/src/drizzle/meta/0018_snapshot.json    | 3860 ---------------
+ packages/db/src/drizzle/meta/0019_snapshot.json    | 4292 -----------------
+ packages/db/src/drizzle/meta/0020_snapshot.json    | 4298 -----------------
+ packages/db/src/drizzle/meta/0021_snapshot.json    | 4310 -----------------
+ packages/db/src/drizzle/meta/0022_snapshot.json    | 4768 ------------------
+ packages/db/src/drizzle/meta/0023_snapshot.json    | 4774 ------------------
+ packages/db/src/drizzle/meta/0024_snapshot.json    | 4805 ------------------
+ packages/db/src/drizzle/meta/0025_snapshot.json    | 5057 -------------------
+ packages/db/src/drizzle/meta/0026_snapshot.json    | 5077 -------------------
+ packages/db/src/drizzle/meta/0027_snapshot.json    | 5084 --------------------
+ packages/db/src/drizzle/meta/_journal.json         |  202 -
+ 55 files changed, 658 insertions(+), 97542 deletions(-)
+ delete mode 100644 packages/db/src/drizzle/0000_ambiguous_inertia.sql
+ create mode 100644 packages/db/src/drizzle/0000_tough_virginia_dare.sql
+ delete mode 100644 packages/db/src/drizzle/0001_messy_penance.sql
+ delete mode 100644 packages/db/src/drizzle/0004_tranquil_lockheed.sql
+ delete mode 100644 packages/db/src/drizzle/0005_dizzy_millenium_guard.sql
+ delete mode 100644 packages/db/src/drizzle/0006_misty_golden_guardian.sql
+ delete mode 100644 packages/db/src/drizzle/0007_dizzy_centennial.sql
+ delete mode 100644 packages/db/src/drizzle/0008_cheerful_bedlam.sql
+ delete mode 100644 packages/db/src/drizzle/0009_brief_barracuda.sql
+ delete mode 100644 packages/db/src/drizzle/0010_flaky_living_tribunal.sql
+ delete mode 100644 packages/db/src/drizzle/0011_steep_menace.sql
+ delete mode 100644 packages/db/src/drizzle/0012_cooing_magneto.sql
+ delete mode 100644 packages/db/src/drizzle/0013_nifty_loners.sql
+ delete mode 100644 packages/db/src/drizzle/0014_silly_agent_brand.sql
+ delete mode 100644 packages/db/src/drizzle/0015_tearful_sebastian_shaw.sql
+ delete mode 100644 packages/db/src/drizzle/0016_clammy_dust.sql
+ delete mode 100644 packages/db/src/drizzle/0017_vengeful_rocket_raccoon.sql
+ delete mode 100644 packages/db/src/drizzle/0018_clumsy_serpent_society.sql
+ delete mode 100644 packages/db/src/drizzle/0019_crazy_blink.sql
+ delete mode 100644 packages/db/src/drizzle/0020_minor_cloak.sql
+ delete mode 100644 packages/db/src/drizzle/0021_needy_queen_noir.sql
+ delete mode 100644 packages/db/src/drizzle/0022_fine_alex_power.sql
+ delete mode 100644 packages/db/src/drizzle/0023_clever_junta.sql
+ delete mode 100644 packages/db/src/drizzle/0024_noisy_mattie_franklin.sql
+ delete mode 100644 packages/db/src/drizzle/0025_cute_shatterstar.sql
+ delete mode 100644 packages/db/src/drizzle/0026_acoustic_nick_fury.sql
+ delete mode 100644 packages/db/src/drizzle/0027_demonic_selene.sql
+ delete mode 100644 packages/db/src/drizzle/meta/0000_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0001_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0004_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0005_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0006_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0007_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0008_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0009_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0010_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0011_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0012_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0013_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0014_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0015_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0016_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0017_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0018_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0019_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0020_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0021_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0022_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0023_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0024_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0025_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0026_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/0027_snapshot.json
+ delete mode 100644 packages/db/src/drizzle/meta/_journal.json
 
 Array
 (
@@ -1185,7 +1286,12 @@ Success
 
 Downloading Tajniak81's Repository
 
-Already up to date.
+From https://github.com/tajniak81/unraid-docker-templates
+   264faeb..86b19d4  main       -> origin/main
+Updating 264faeb..86b19d4
+Fast-forward
+ arcane/arcane.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -1204,9 +1310,7 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/xpipe-webtop/xpipe-webtop.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/netbootxyz/netbootxyz.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml...Success
-Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml...Privileged mode set.  This may not be necessary
-
-Success
+Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml...Success
 
 
@@ -7076,7 +7180,41 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   4a2780c..b8dafee  master     -> origin/master
+Updating 4a2780c..b8dafee
+Fast-forward
+ jlesage/avidemux.xml               |  5 ++++-
+ jlesage/cloudberry-backup.xml      |  5 ++++-
+ jlesage/crashplan-enterprise.xml   |  5 ++++-
+ jlesage/crashplan-pro.xml          |  5 ++++-
+ jlesage/czkawka.xml                |  5 ++++-
+ jlesage/dupeguru.xml               |  5 ++++-
+ jlesage/file-centipede.xml         |  5 ++++-
+ jlesage/filezilla.xml              |  5 ++++-
+ jlesage/firefox-esr.xml            |  7 ++++++-
+ jlesage/firefox.xml                |  7 ++++++-
+ jlesage/freac.xml                  | 17 ++++++++++++++++-
+ jlesage/freefilesync.xml           | 18 +++++++++++++++++-
+ jlesage/handbrake.xml              | 20 +++++++++++++++++++-
+ jlesage/imgburn.xml                | 17 ++++++++++++++++-
+ jlesage/jdownloader-2.xml          | 17 ++++++++++++++++-
+ jlesage/jmkvpropedit.xml           | 17 ++++++++++++++++-
+ jlesage/makemkv.xml                | 17 ++++++++++++++++-
+ jlesage/mediainfo.xml              | 17 ++++++++++++++++-
+ jlesage/mkv-muxing-batch-gui.xml   | 17 ++++++++++++++++-
+ jlesage/mkvcleaver.xml             | 17 ++++++++++++++++-
+ jlesage/mkvtoolnix.xml             | 17 ++++++++++++++++-
+ jlesage/musicbrainz-picard.xml     | 17 ++++++++++++++++-
+ jlesage/putty.xml                  | 17 ++++++++++++++++-
+ jlesage/qdirstat.xml               | 17 ++++++++++++++++-
+ jlesage/thunderbird.xml            | 18 +++++++++++++++++-
+ jlesage/tixati.xml                 | 18 +++++++++++++++++-
+ jlesage/tsmuxer.xml                | 17 ++++++++++++++++-
+ jlesage/video-duplicate-finder.xml | 18 +++++++++++++++++-
+ jlesage/xfburn.xml                 | 17 ++++++++++++++++-
+ jlesage/xnview-mp.xml              | 18 +++++++++++++++++-
+ 30 files changed, 372 insertions(+), 30 deletions(-)
 
 Array
 (
@@ -19394,15 +19532,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/imgburn
-jlesage/imgburn Downloads: 1021  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
-kilvoctu/aiyabot
-ghcr.io/kilvoctu/aiyabot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -19482,16 +19616,6 @@ ghcr.io/kilvoctu/aiyabot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-seanap/auto-m4b
-seanap/auto-m4b:latest Downloads: 144217  Stars: 4  Base: unknown
-fscorrupt/docker-plexstatus2discord
-ghcr.io/fscorrupt/docker-plexstatus2discord Downloads:   Stars:   Base: unknown
-fscorrupt/docker-tautulli2discord
-ghcr.io/fscorrupt/docker-tautulli2discord Downloads:   Stars:   Base: unknown
-invoke-ai/invokeai
-ghcr.io/invoke-ai/invokeai:latest Downloads:   Stars:   Base: unknown
-ajnart/subs
-ghcr.io/ajnart/subs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19511,7 +19635,7 @@ ghcr.io/ajnart/subs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 124
+Privileged: 123
 
 
 Updating GitHub
