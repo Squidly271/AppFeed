@@ -100,30 +100,18 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 Downloading debuggy12's Repository
 
 From https://github.com/kurrier-org/kurrier
-   6e769f8..b9ef586  main       -> origin/main
- * [new tag]         v1.0.0     -> v1.0.0
- * [new tag]         v1.0.1     -> v1.0.1
-Updating 6e769f8..b9ef586
+   b9ef586..b45b87e  main       -> origin/main
+Updating b9ef586..b45b87e
 Fast-forward
- .../app/dashboard/(unified)/(calendar)/layout.tsx  |  7 +-
- .../dashboard/calendars/calendar-settings.tsx      | 97 ++++++++++++++++++++++
- .../dashboard/calendars/calendar-side-bar.tsx      |  4 +-
- apps/web/lib/actions/calendar.ts                   | 25 ++++++
- apps/worker/CHANGELOG.md                           |  6 ++
- .../worker/lib/dav/calendar/dav-build-cal-event.ts | 21 ++++-
- apps/worker/lib/dav/calendar/dav-itip-notify.ts    | 43 +++++++++-
- apps/worker/lib/dav/calendar/dav-itip-processor.ts | 12 +++
- .../lib/dav/calendar/dav-update-calendar-event.ts  | 18 ++--
- apps/worker/package.json                           |  3 +-
- db/docker-compose.yml                              |  4 +-
- packages/common/CHANGELOG.md                       |  6 ++
- packages/common/package.json                       |  2 +-
- packages/common/src/day-js-extended.ts             | 18 ++--
- packages/repo-version/CHANGELOG.md                 | 12 +++
- packages/repo-version/package.json                 |  2 +-
- pnpm-lock.yaml                                     |  4 +
- 17 files changed, 255 insertions(+), 29 deletions(-)
- create mode 100644 apps/web/components/dashboard/calendars/calendar-settings.tsx
+ README.md                                | 139 ++++++++++---
+ apps/docs/app/(home)/page.tsx            |  31 +--
+ apps/docs/content/docs/calendars.mdx     | 337 ++++++++++++++++++++++++++-----
+ apps/docs/content/docs/index.mdx         |  50 +++--
+ apps/docs/public/docs-calendar-dark.png  | Bin 0 -> 477132 bytes
+ apps/docs/public/docs-calendar-light.png | Bin 0 -> 511309 bytes
+ 6 files changed, 445 insertions(+), 112 deletions(-)
+ create mode 100644 apps/docs/public/docs-calendar-dark.png
+ create mode 100644 apps/docs/public/docs-calendar-light.png
 
 Array
 (
@@ -19406,11 +19394,15 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+jlesage/imgburn
+jlesage/imgburn Downloads: 1021  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
+kilvoctu/aiyabot
+ghcr.io/kilvoctu/aiyabot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -19490,10 +19482,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-hardcoreeng/front
-hardcoreeng/front:latest Downloads: 69311  Stars: 0  Base: unknown
-domistyle/jellysearch
-domistyle/jellysearch:latest Downloads: 68476  Stars: 1  Base: unknown
+seanap/auto-m4b
+seanap/auto-m4b:latest Downloads: 144217  Stars: 4  Base: unknown
+fscorrupt/docker-plexstatus2discord
+ghcr.io/fscorrupt/docker-plexstatus2discord Downloads:   Stars:   Base: unknown
+fscorrupt/docker-tautulli2discord
+ghcr.io/fscorrupt/docker-tautulli2discord Downloads:   Stars:   Base: unknown
+invoke-ai/invokeai
+ghcr.io/invoke-ai/invokeai:latest Downloads:   Stars:   Base: unknown
+ajnart/subs
+ghcr.io/ajnart/subs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
