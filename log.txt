@@ -196,7 +196,44 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-Already up to date.
+From https://github.com/kurrier-org/kurrier
+   ea73986..040cb0f  main       -> origin/main
+ * [new tag]         v1.0.3     -> v1.0.3
+Updating ea73986..040cb0f
+Fast-forward
+ apps/web/CHANGELOG.md                              |   6 +
+ .../[view]/[year]/[month]/[day]/page.tsx           |  98 ++++--
+ .../(unified)/(calendar)/calendar/page.tsx         |  68 +++-
+ apps/web/components/common/reusable-form-items.tsx | 187 +++++++++++
+ apps/web/components/common/reusable-form.tsx       | 371 ++++++---------------
+ .../dashboard/calendars/all-day-events-row.tsx     |  30 +-
+ .../calendars/calendar-add-event-popover.tsx       |  21 +-
+ .../dashboard/calendars/calendar-events-layer.tsx  |  26 +-
+ .../dashboard/calendars/combined-event-view.tsx    |  10 +-
+ .../calendars/new-calendar-event-form.tsx          |  58 +++-
+ .../calendars/recurrence-rules-form-input.tsx      | 330 ++++++++++++++++++
+ apps/web/lib/actions/calendar.ts                   | 161 ++++++++-
+ apps/web/package.json                              |   5 +-
+ apps/worker/CHANGELOG.md                           |   6 +
+ .../worker/lib/dav/calendar/dav-build-cal-event.ts |  10 +-
+ apps/worker/lib/dav/calendar/dav-itip-processor.ts |  13 +
+ apps/worker/package.json                           |   2 +-
+ db/init/migrations/010_migration.sql               |   2 +
+ packages/db/CHANGELOG.md                           |   6 +
+ packages/db/package.json                           |   2 +-
+ ...rginia_dare.sql => 0000_certain_silhouette.sql} |   2 +
+ packages/db/src/drizzle/schema.ts                  |   3 +
+ packages/repo-version/CHANGELOG.md                 |   6 +
+ packages/repo-version/package.json                 |   2 +-
+ packages/schema/CHANGELOG.md                       |   6 +
+ packages/schema/package.json                       |   2 +-
+ packages/schema/src/types/calendar.ts              |  37 +-
+ pnpm-lock.yaml                                     | 102 +++---
+ 28 files changed, 1136 insertions(+), 436 deletions(-)
+ create mode 100644 apps/web/components/common/reusable-form-items.tsx
+ create mode 100644 apps/web/components/dashboard/calendars/recurrence-rules-form-input.tsx
+ create mode 100644 db/init/migrations/010_migration.sql
+ rename packages/db/src/drizzle/{0000_tough_virginia_dare.sql => 0000_certain_silhouette.sql} (99%)
 
 Array
 (
@@ -19572,10 +19609,14 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-postgrest/postgrest
-postgrest/postgrest:latest Downloads: 41534367  Stars: 95  Base: unknown
-yeraze/meshmonitor
-ghcr.io/yeraze/meshmonitor Downloads:   Stars:   Base: unknown
+samdbmg/dhcp-netboot.xyz
+samdbmg/dhcp-netboot.xyz:latest Downloads: 14303  Stars: 1  Base: unknown
+swaggerapi/swagger-ui
+swaggerapi/swagger-ui:latest Downloads: 97831027  Stars: 288  Base: unknown
+swaggerapi/swagger-editor
+swaggerapi/swagger-editor:latest Downloads: 16429127  Stars: 386  Base: unknown
+gabe565/castsponsorskip
+ghcr.io/gabe565/castsponsorskip:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19588,6 +19629,8 @@ ghcr.io/yeraze/meshmonitor Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+infotrend/openai_webui
+infotrend/openai_webui:latest Downloads: 1762  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
