@@ -270,7 +270,20 @@ Success
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   06e5b5e..6f626ff  main       -> origin/main
+Updating 06e5b5e..6f626ff
+Fast-forward
+ app/api/models/[id]/comments/[commentId]/route.ts  |  12 +-
+ app/api/models/[id]/comments/route.ts              |  92 ++++++++-
+ app/api/models/[id]/download.zip/route.ts          |   9 +
+ app/api/models/[id]/route.ts                       |   8 +-
+ components/ModelComments.tsx                       | 209 +++++++++++++++++----
+ lib/comments.ts                                    |  55 ++++++
+ .../0032_comment_makes_and_downloads/migration.sql |  18 ++
+ prisma/schema.prisma                               |  19 ++
+ 8 files changed, 378 insertions(+), 44 deletions(-)
+ create mode 100644 prisma/migrations/0032_comment_makes_and_downloads/migration.sql
 
 Array
 (
@@ -344,12 +357,12 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/sparkison/m3u-editor
-   0152d08..0332a7f  master     -> origin/master
-Updating 0152d08..0332a7f
+   0332a7f..dbc47ee  master     -> origin/master
+ * [new tag]         0.8.18     -> 0.8.18
+Updating 0332a7f..dbc47ee
 Fast-forward
- app/Services/ProxyService.php | 4 +++-
- config/dev.php                | 4 ++--
- 2 files changed, 5 insertions(+), 3 deletions(-)
+ config/dev.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -19438,6 +19451,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+rishikanthc/zendo
+ghcr.io/rishikanthc/zendo:v0.2.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19581,8 +19597,15 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-donutware/fladder
-ghcr.io/donutware/fladder:latest Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+speaches-ai/speaches
+ghcr.io/speaches-ai/speaches:latest-cpu Downloads:   Stars:   Base: unknown
+wardy784/erugo
+wardy784/erugo:latest Downloads: 303566  Stars: 7  Base: unknown
+hhftechnology/pangolin-cloudflare-tunnel
+hhftechnology/pangolin-cloudflare-tunnel:latest Downloads: 3429  Stars: 0  Base: unknown
+deceptifeed/server
+deceptifeed/server:latest Downloads: 4410  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
