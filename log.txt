@@ -381,99 +381,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   61854f5..0f35927  main       -> origin/main
-Updating 61854f5..0f35927
-Fast-forward
- client/src/components/cards/GalleryCard.jsx        |  104 +
- client/src/components/cards/GroupCard.jsx          |   86 +
- client/src/components/cards/ImageCard.jsx          |   39 +
- client/src/components/cards/PerformerCard.jsx      |   52 +
- client/src/components/cards/StudioCard.jsx         |   82 +
- client/src/components/cards/TagCard.jsx            |  101 +
- .../cards/__tests__/GalleryCard.test.jsx           |   89 +
- .../components/cards/__tests__/GroupCard.test.jsx  |   90 +
- .../components/cards/__tests__/ImageCard.test.jsx  |   90 +
- .../cards/__tests__/PerformerCard.test.jsx         |   93 +
- .../components/cards/__tests__/StudioCard.test.jsx |   87 +
- .../components/cards/__tests__/TagCard.test.jsx    |   87 +
- client/src/components/cards/index.js               |    6 +
- client/src/components/grids/GalleryGrid.jsx        |   37 +
- client/src/components/grids/GroupGrid.jsx          |   37 +
- client/src/components/grids/ImageGrid.jsx          |   37 +
- client/src/components/grids/PerformerGrid.jsx      |   37 +
- client/src/components/grids/StudioGrid.jsx         |   37 +
- client/src/components/grids/TagGrid.jsx            |   37 +
- .../grids/__tests__/GalleryGrid.test.jsx           |   46 +
- .../components/grids/__tests__/GroupGrid.test.jsx  |   46 +
- .../components/grids/__tests__/ImageGrid.test.jsx  |   46 +
- .../grids/__tests__/PerformerGrid.test.jsx         |   46 +
- .../components/grids/__tests__/StudioGrid.test.jsx |   46 +
- .../components/grids/__tests__/TagGrid.test.jsx    |   46 +
- client/src/components/grids/index.js               |    6 +
- client/src/components/pages/Galleries.jsx          |  103 +-
- client/src/components/pages/GroupDetail.jsx        |    8 +-
- client/src/components/pages/Groups.jsx             |   52 +-
- client/src/components/pages/PerformerDetail.jsx    |   14 +-
- client/src/components/pages/StudioDetail.jsx       |   20 +-
- client/src/components/pages/Studios.jsx            |   62 +-
- client/src/components/pages/TagDetail.jsx          |   26 +-
- client/src/components/pages/Tags.jsx               |   47 +-
- client/src/components/ui/BaseCard.jsx              |  113 +
- client/src/components/ui/BaseGrid.jsx              |  102 +
- client/src/components/ui/CardComponents.jsx        |  121 +-
- client/src/components/ui/EntityGrid.jsx            |  389 ---
- client/src/components/ui/GridCard.jsx              |  100 -
- client/src/components/ui/PerformerCard.jsx         |   69 -
- client/src/components/ui/SearchableGrid.jsx        |  165 ++
- .../src/components/ui/__tests__/BaseCard.test.jsx  |  182 ++
- .../src/components/ui/__tests__/BaseGrid.test.jsx  |   74 +
- .../ui/__tests__/CardComponents.test.jsx           |   90 +
- .../ui/__tests__/SearchableGrid.test.jsx           |   13 +
- client/src/components/ui/index.js                  |    8 +-
- docs/plans/2025-01-12-card-grid-followup.md        |  100 +
- docs/plans/2025-01-12-card-grid-refactor-design.md |  256 ++
- ...2025-01-12-card-grid-refactor-implementation.md | 2519 ++++++++++++++++++++
- 49 files changed, 5292 insertions(+), 851 deletions(-)
- create mode 100644 client/src/components/cards/GalleryCard.jsx
- create mode 100644 client/src/components/cards/GroupCard.jsx
- create mode 100644 client/src/components/cards/ImageCard.jsx
- create mode 100644 client/src/components/cards/PerformerCard.jsx
- create mode 100644 client/src/components/cards/StudioCard.jsx
- create mode 100644 client/src/components/cards/TagCard.jsx
- create mode 100644 client/src/components/cards/__tests__/GalleryCard.test.jsx
- create mode 100644 client/src/components/cards/__tests__/GroupCard.test.jsx
- create mode 100644 client/src/components/cards/__tests__/ImageCard.test.jsx
- create mode 100644 client/src/components/cards/__tests__/PerformerCard.test.jsx
- create mode 100644 client/src/components/cards/__tests__/StudioCard.test.jsx
- create mode 100644 client/src/components/cards/__tests__/TagCard.test.jsx
- create mode 100644 client/src/components/cards/index.js
- create mode 100644 client/src/components/grids/GalleryGrid.jsx
- create mode 100644 client/src/components/grids/GroupGrid.jsx
- create mode 100644 client/src/components/grids/ImageGrid.jsx
- create mode 100644 client/src/components/grids/PerformerGrid.jsx
- create mode 100644 client/src/components/grids/StudioGrid.jsx
- create mode 100644 client/src/components/grids/TagGrid.jsx
- create mode 100644 client/src/components/grids/__tests__/GalleryGrid.test.jsx
- create mode 100644 client/src/components/grids/__tests__/GroupGrid.test.jsx
- create mode 100644 client/src/components/grids/__tests__/ImageGrid.test.jsx
- create mode 100644 client/src/components/grids/__tests__/PerformerGrid.test.jsx
- create mode 100644 client/src/components/grids/__tests__/StudioGrid.test.jsx
- create mode 100644 client/src/components/grids/__tests__/TagGrid.test.jsx
- create mode 100644 client/src/components/grids/index.js
- create mode 100644 client/src/components/ui/BaseCard.jsx
- create mode 100644 client/src/components/ui/BaseGrid.jsx
- delete mode 100644 client/src/components/ui/EntityGrid.jsx
- delete mode 100644 client/src/components/ui/GridCard.jsx
- delete mode 100644 client/src/components/ui/PerformerCard.jsx
- create mode 100644 client/src/components/ui/SearchableGrid.jsx
- create mode 100644 client/src/components/ui/__tests__/BaseCard.test.jsx
- create mode 100644 client/src/components/ui/__tests__/BaseGrid.test.jsx
- create mode 100644 client/src/components/ui/__tests__/CardComponents.test.jsx
- create mode 100644 client/src/components/ui/__tests__/SearchableGrid.test.jsx
- create mode 100644 docs/plans/2025-01-12-card-grid-followup.md
- create mode 100644 docs/plans/2025-01-12-card-grid-refactor-design.md
- create mode 100644 docs/plans/2025-01-12-card-grid-refactor-implementation.md
+Already up to date.
 
 Array
 (
@@ -19672,12 +19580,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-bellingcat/auto-archiver
-bellingcat/auto-archiver:latest Downloads: 3872  Stars: 1  Base: unknown
-dopeytree/tvx
-ghcr.io/dopeytree/tvx:latest Downloads:   Stars:   Base: unknown
-psalias2006/gpu-hot
-ghcr.io/psalias2006/gpu-hot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
