@@ -68,7 +68,14 @@ Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tr
 
 Downloading Indemnity83's Repository
 
-Already up to date.
+From https://github.com/Indemnity83/always-bring-a-gift
+   a71bbd7..cfa71e8  main       -> origin/main
+Updating a71bbd7..cfa71e8
+Fast-forward
+ composer.lock     | 177 ++++++++--------
+ package-lock.json | 598 ++++++++++++++++++++++--------------------------------
+ package.json      |   8 +-
+ 3 files changed, 332 insertions(+), 451 deletions(-)
 
 Array
 (
@@ -382,22 +389,24 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   154f130..f0fe302  main       -> origin/main
- * [new tag]         v3.0.0-beta.6 -> v3.0.0-beta.6
- * [new tag]         v3.0.0-beta.7 -> v3.0.0-beta.7
-Updating 154f130..f0fe302
+   f0fe302..628c2ea  main          -> origin/main
+ * [new tag]         v3.0.0-beta.9 -> v3.0.0-beta.9
+ * [new tag]         v3.0.0-beta.8 -> v3.0.0-beta.8
+Updating f0fe302..628c2ea
 Fast-forward
- client/package.json                                |   2 +-
- client/src/components/cards/StudioCard.jsx         |   1 +
- client/src/components/cards/TagCard.jsx            |   1 +
- .../utils/__tests__/performerFilterConfig.test.js  |  20 +-
- client/src/utils/filterConfig.js                   |   8 +-
- server/controllers/library/performers.ts           |  87 +++++++-
- server/package.json                                |   2 +-
- server/services/StashEntityService.ts              |  24 +++
- server/services/UserStatsService.ts                |   4 +-
- server/tests/filters/performerFilters.test.ts      | 240 ++++++++++++++++++++-
- 10 files changed, 364 insertions(+), 25 deletions(-)
+ client/package-lock.json                           |  4 +--
+ client/package.json                                |  2 +-
+ .../utils/__tests__/performerFilterConfig.test.js  |  4 +--
+ client/src/utils/filterConfig.js                   |  4 +--
+ server/controllers/library/performers.ts           | 32 ++++++++++++++--------
+ server/package-lock.json                           |  4 +--
+ server/package.json                                |  2 +-
+ .../migration.sql                                  |  2 ++
+ server/prisma/schema.prisma                        |  1 +
+ server/services/StashEntityService.ts              |  1 +
+ server/services/StashSyncService.ts                |  4 ++-
+ 11 files changed, 37 insertions(+), 23 deletions(-)
+ create mode 100644 server/prisma/migrations/20251215000000_add_performer_fake_tits/migration.sql
 
 Array
 (
@@ -19013,7 +19022,16 @@ Processing /tmp/GitHub/repositoryClone/disbedan015/nadekobotv4-unraid/NadekoBotV
 
 Downloading pureelectricity's Repository
 
-Already up to date.
+From https://github.com/ds-sebastian/unraid-templates
+   4450920..1ca2ae4  main       -> origin/main
+Updating 4450920..1ca2ae4
+Fast-forward
+ icons/ha-matter-hub-icon.png      | Bin 0 -> 21832 bytes
+ kokoro-tts-gpu/kokoro-tts-gpu.xml |  46 ++++++++++++++++++++++++++++++++++++++
+ pricecious/pricecious.xml         |   2 +-
+ 3 files changed, 47 insertions(+), 1 deletion(-)
+ create mode 100644 icons/ha-matter-hub-icon.png
+ create mode 100644 kokoro-tts-gpu/kokoro-tts-gpu.xml
 
 Array
 (
@@ -19022,6 +19040,7 @@ Array
             [0] => /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/librechat/librechat.xml
             [1] => /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/rreading-glasses/rreading-glasses.xml
             [2] => /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/pricecious/pricecious.xml
+            [3] => /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/kokoro-tts-gpu/kokoro-tts-gpu.xml
         )
 
 )
@@ -19029,7 +19048,8 @@ Array
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/librechat/librechat.xml...Success
 Processing /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/rreading-glasses/rreading-glasses.xml...Success
-Processing /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/pricecious/pricecious.xml...Unknown category data:analytics
+Processing /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/pricecious/pricecious.xml...Success
+Processing /tmp/GitHub/repositoryClone/ds-sebastian/unraid-templates/kokoro-tts-gpu/kokoro-tts-gpu.xml...Unknown category AI:Tools:Utilities
 
 Success
 
@@ -19415,8 +19435,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-fccview/cronmaster
-ghcr.io/fccview/cronmaster:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19445,6 +19463,9 @@ ghcr.io/fccview/cronmaster:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+Tagged - Can't determine last update
+docker.io/bitnami/mongodb
+docker.io/bitnami/mongodb:6.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg attempt 1...
@@ -19602,6 +19623,9 @@ ghcr.io/fccview/cronmaster:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+Tagged - Can't determine last update
+aculix/bitplay
+ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
