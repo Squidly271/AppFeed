@@ -381,7 +381,30 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   d84a89b..c7e7358  main       -> origin/main
+Updating d84a89b..c7e7358
+Fast-forward
+ client/src/App.jsx                                 |  27 +++--
+ client/src/components/pages/PerformerDetail.jsx    |  22 +++-
+ client/src/components/pages/Settings.jsx           |  34 ++++++
+ client/src/components/ui/FilterControls.jsx        |  94 +++++++++++++++
+ client/src/components/ui/SearchControls.jsx        |  70 ++++++++---
+ client/src/contexts/UnitPreferenceContext.js       |  10 ++
+ client/src/contexts/UnitPreferenceProvider.jsx     |  48 ++++++++
+ .../utils/__tests__/performerFilterConfig.test.js  |  93 ++++++++++++++-
+ client/src/utils/__tests__/unitConversions.test.js | 129 +++++++++++++++++++++
+ client/src/utils/filterConfig.js                   | 113 ++++++++++++++----
+ client/src/utils/unitConversions.js                | 116 ++++++++++++++++++
+ server/controllers/user.ts                         |  14 +++
+ .../migration.sql                                  |   2 +
+ server/prisma/schema.prisma                        |   1 +
+ 14 files changed, 718 insertions(+), 55 deletions(-)
+ create mode 100644 client/src/contexts/UnitPreferenceContext.js
+ create mode 100644 client/src/contexts/UnitPreferenceProvider.jsx
+ create mode 100644 client/src/utils/__tests__/unitConversions.test.js
+ create mode 100644 client/src/utils/unitConversions.js
+ create mode 100644 server/prisma/migrations/20251214000000_add_unit_preference/migration.sql
 
 Array
 (
@@ -4535,7 +4558,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   3d393538..5fac6cdd  main       -> origin/main
+Updating 3d393538..5fac6cdd
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 25 insertions(+), 25 deletions(-)
 
 Array
 (
@@ -19580,15 +19632,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-svenstaro/miniserve
-svenstaro/miniserve:alpine Downloads: 1116438  Stars: 25  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-ggerganov/llama
-ghcr.io/ggerganov/llama.cpp:server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19600,9 +19647,6 @@ ghcr.io/ggerganov/llama.cpp:server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
-Tagged - Can't determine last update
-seafileltd/seafile-mc
-seafileltd/seafile-mc:13.0-latest Downloads: 17802946  Stars: 120  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
