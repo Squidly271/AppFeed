@@ -195,31 +195,20 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 Downloading debuggy12's Repository
 
 From https://github.com/kurrier-org/kurrier
-   8681e5a..1aaff73  main       -> origin/main
- * [new tag]         v1.1.1     -> v1.1.1
-Updating 8681e5a..1aaff73
+   1aaff73..1e497b3  main       -> origin/main
+ * [new tag]         v1.1.3     -> v1.1.3
+ * [new tag]         v1.1.2     -> v1.1.2
+Updating 1aaff73..1e497b3
 Fast-forward
- apps/web/CHANGELOG.md                              |   6 +
- .../components/dashboard/drive/drive-uploader.tsx  | 168 +++++++++++++--------
- apps/web/lib/actions/drive.ts                      |  91 ++++++++++-
- apps/web/package.json                              |   2 +-
- apps/worker/CHANGELOG.md                           |   6 +
- apps/worker/package.json                           |   2 +-
- .../server/routes/webdav/entries/index.post.ts     | 103 +++++++++----
- db/docker-compose.yml                              |   4 +-
- db/init/migrations/012_migration.sql               |  26 ++++
- packages/db/CHANGELOG.md                           |   6 +
- packages/db/package.json                           |   2 +-
- packages/db/src/drizzle/0006_mushy_risque.sql      |  26 ++++
- packages/db/src/drizzle/schema.ts                  |  63 +++++++-
- packages/repo-version/CHANGELOG.md                 |   6 +
+ apps/web/lib/actions/drive.ts                      |  93 +++++++----
+ .../server/routes/webdav/entries/[id].get.ts       | 117 --------------
+ .../server/routes/webdav/entries/index.post.ts     |   9 +-
+ .../worker/server/routes/webdav/tokens/[id].get.ts | 179 +++++++++++++++++++++
+ packages/repo-version/CHANGELOG.md                 |  12 ++
  packages/repo-version/package.json                 |   2 +-
- packages/schema/CHANGELOG.md                       |   6 +
- packages/schema/package.json                       |   2 +-
- packages/schema/src/types/drive.ts                 |   5 +
- 18 files changed, 428 insertions(+), 98 deletions(-)
- create mode 100644 db/init/migrations/012_migration.sql
- create mode 100644 packages/db/src/drizzle/0006_mushy_risque.sql
+ 6 files changed, 259 insertions(+), 153 deletions(-)
+ delete mode 100644 apps/worker/server/routes/webdav/entries/[id].get.ts
+ create mode 100644 apps/worker/server/routes/webdav/tokens/[id].get.ts
 
 Array
 (
@@ -407,27 +396,28 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   049dbbe..1d48203  main       -> origin/main
- * [new tag]         v3.0.0-beta.11 -> v3.0.0-beta.11
-Updating 049dbbe..1d48203
+   1d48203..765abc4  main           -> origin/main
+ * [new tag]         v3.0.0-beta.12 -> v3.0.0-beta.12
+Updating 1d48203..765abc4
 Fast-forward
- client/package.json                                |    2 +-
- client/src/components/pages/Recommended.jsx        |   89 +-
- docs/development/content-restrictions.md           |    2 +-
- docs/plans/2025-12-15-v3.0.0-beta9-issues.md       |   22 +-
- ...25-12-16-recommendations-improvements-design.md |  235 ++++
- ...-recommendations-improvements-implementation.md | 1266 ++++++++++++++++++++
- server/controllers/library/scenes.ts               |  197 ++-
- server/package.json                                |    2 +-
- server/services/RecommendationScoringService.ts    |  307 +++++
- server/services/StashEntityService.ts              |  104 +-
- .../services/__tests__/StashEntityService.test.ts  |    2 +
- .../recommendations/recommendationScoring.test.ts  |  361 ++++++
- 12 files changed, 2444 insertions(+), 145 deletions(-)
- create mode 100644 docs/plans/2025-12-16-recommendations-improvements-design.md
- create mode 100644 docs/plans/2025-12-16-recommendations-improvements-implementation.md
- create mode 100644 server/services/RecommendationScoringService.ts
- create mode 100644 server/tests/recommendations/recommendationScoring.test.ts
+ client/package-lock.json                           |   4 +-
+ client/package.json                                |   2 +-
+ .../2025-12-16-query-architecture-consolidation.md | 217 +++++
+ ...2025-12-16-query-architecture-implementation.md | 949 +++++++++++++++++++++
+ server/controllers/library/scenes.ts               | 256 +++---
+ server/package-lock.json                           |   4 +-
+ server/package.json                                |   2 +-
+ server/services/RecommendationScoringService.ts    | 155 +++-
+ server/services/SceneQueryBuilder.ts               |  30 +
+ server/services/StashEntityService.ts              |  95 +++
+ .../__tests__/StashEntityService.scoring.test.ts   |  69 ++
+ .../services/SceneQueryBuilder.integration.test.ts |  36 +
+ server/types/entities.ts                           |  13 +
+ server/types/index.ts                              |   1 +
+ 14 files changed, 1695 insertions(+), 138 deletions(-)
+ create mode 100644 docs/plans/2025-12-16-query-architecture-consolidation.md
+ create mode 100644 docs/plans/2025-12-16-query-architecture-implementation.md
+ create mode 100644 server/services/__tests__/StashEntityService.scoring.test.ts
 
 Array
 (
@@ -9079,7 +9069,12 @@ Processing /tmp/GitHub/repositoryClone/jbreed/docker-templates/nessus/nessus.xml
 
 Downloading Selfhosters Unraid Discord Repository
 
-Already up to date.
+From https://github.com/selfhosters/unRAID-CA-templates
+   edc9dce..3bb91b8  master     -> origin/master
+Updating edc9dce..3bb91b8
+Fast-forward
+ templates/arr-dashboard.xml | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
 
 Array
 (
@@ -12261,7 +12256,33 @@ Processing /tmp/GitHub/repositoryClone/OFark/docker-templates/OFark/Compressarr.
 Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
-Already up to date.
+From https://gitlab.com/crafty-controller/crafty-4
+   cdd7a9e3..221b808e  master     -> origin/master
+ * [new tag]           v4.6.2     -> v4.6.2
+Updating cdd7a9e3..221b808e
+Fast-forward
+ CHANGELOG.md                                       | 17 ++++
+ README.md                                          |  2 +-
+ app/classes/shared/server.py                       |  6 --
+ app/classes/web/routes/api/index_handler.py        |  4 +-
+ .../api/servers/server/webhooks/webhook/index.py   | 26 +++++-
+ app/classes/web/webhooks/base_webhook.py           | 12 ++-
+ app/config/version.json                            |  2 +-
+ app/frontend/static/assets/js/motd.js              |  8 +-
+ .../templates/panel/parts/details_stats.html       |  2 +-
+ app/frontend/templates/public/status.html          |  9 ++-
+ app/frontend/templates/server/bedrock_wizard.html  | 24 ++++--
+ app/frontend/templates/server/wizard.html          | 12 ++-
+ app/translations/en_EN.json                        |  2 +-
+ app/translations/fr_FR.json                        | 10 ++-
+ app/translations/ko_KR.json                        | 11 ++-
+ app/translations/nl_NL.json                        |  8 +-
+ app/translations/ru_RU.json                        | 10 ++-
+ app/translations/th_TH.json                        | 92 +++++++++++++---------
+ app/translations/zh_CN.json                        |  8 +-
+ requirements.txt                                   |  2 +-
+ sonar-project.properties                           |  2 +-
+ 21 files changed, 184 insertions(+), 85 deletions(-)
 
 Array
 (
