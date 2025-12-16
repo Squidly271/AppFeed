@@ -194,7 +194,120 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-Already up to date.
+From https://github.com/kurrier-org/kurrier
+   2fcdb1f..8681e5a  main       -> origin/main
+ * [new tag]         v1.1.0     -> v1.1.0
+Updating 2fcdb1f..8681e5a
+Fast-forward
+ .gitignore                                         |    3 +
+ apps/docs/content/docs/installation.mdx            |   26 +-
+ apps/docs/package.json                             |    2 +-
+ apps/web/CHANGELOG.md                              |    6 +
+ .../(drive)/drive/[[...segments]]/layout.tsx       |   29 +
+ .../(drive)/drive/[[...segments]]/loading.tsx      |    2 +
+ .../(drive)/drive/[[...segments]]/page.tsx         |   23 +
+ .../web/app/dashboard/(unified)/(drive)/layout.tsx |   55 +
+ .../(unified)/(platform)/platform/storage/page.tsx |   92 +
+ .../web/components/common/reusable-form-button.tsx |   35 +-
+ .../dashboard/drive/drive-entry-options.tsx        |   46 +
+ .../web/components/dashboard/drive/drive-entry.tsx |  191 ++
+ .../components/dashboard/drive/drive-side-bar.tsx  |   91 +
+ .../components/dashboard/drive/drive-top-bar.tsx   |   91 +
+ .../components/dashboard/drive/drive-uploader.tsx  |  250 ++
+ .../dashboard/drive/new-upload-button.tsx          |   91 +
+ .../dashboard/identities/PROVIDER_CONFIG.tsx       |    7 +
+ .../dashboard/providers/provider-card.tsx          |   10 +-
+ .../dashboard/providers/provider-edit-form.tsx     |    1 -
+ .../dashboard/storage/add-volume-form.tsx          |   67 +
+ .../dashboard/storage/volumes-manager.tsx          |  174 +
+ apps/web/components/nav-main.tsx                   |   20 +-
+ .../ui/dashboards/unified/default/app-sidebar.tsx  |   53 +-
+ apps/web/hooks/use-dynamic-context.tsx             |   47 -
+ apps/web/lib/actions/dashboard.ts                  |  107 +-
+ apps/web/lib/actions/drive.ts                      |  522 +++
+ apps/web/next.config.ts                            |    3 +
+ apps/web/package.json                              |    5 +-
+ apps/web/pnpm-lock.yaml                            | 3610 ++++++++++++++++++++
+ apps/worker/CHANGELOG.md                           |    6 +
+ apps/worker/lib/create-client-ssr-from-request.ts  |   32 +
+ .../worker/lib/dav/drive/webdav-add-folder-path.ts |  143 +
+ apps/worker/lib/dav/drive/webdav-delete-path.ts    |   66 +
+ apps/worker/lib/dav/drive/webdav-discover.ts       |   37 +
+ apps/worker/lib/dav/drive/webdav-list-path.ts      |  204 ++
+ apps/worker/lib/dav/drive/webdav-list.ts           |   83 +
+ apps/worker/lib/migrations/0.0.99/seed.ts          |   44 +
+ apps/worker/lib/migrations/index.ts                |    2 +
+ apps/worker/nitro.config.ts                        |    6 +
+ apps/worker/package.json                           |    3 +-
+ apps/worker/server/plugins/common-worker.ts        |    4 +-
+ apps/worker/server/plugins/dav-worker.ts           |   19 +
+ .../server/routes/webdav/entries/[id].get.ts       |  117 +
+ .../server/routes/webdav/entries/index.post.ts     |   87 +
+ db/docker-compose.yml                              |   22 +
+ db/init/caddy/conf/Caddyfile                       |   10 +
+ db/init/migrations/011_migration.sql               |   78 +
+ db/init/webdav/config.yml                          |   10 +
+ package.json                                       |    2 +
+ packages/common/CHANGELOG.md                       |    6 +
+ packages/common/package.json                       |    2 +-
+ packages/common/src/constants.ts                   |    2 +-
+ packages/db/CHANGELOG.md                           |    6 +
+ packages/db/package.json                           |    2 +-
+ .../db/src/drizzle/0001_light_lethal_legion.sql    |   55 +
+ packages/db/src/drizzle/0002_military_xavin.sql    |    1 +
+ .../db/src/drizzle/0003_smiling_power_pack.sql     |    1 +
+ packages/db/src/drizzle/0004_useful_cerise.sql     |    8 +
+ packages/db/src/drizzle/0005_exotic_nova.sql       |    7 +
+ packages/db/src/drizzle/drizzle-types.ts           |   42 +-
+ packages/db/src/drizzle/schema.ts                  |  169 +-
+ packages/providers/CHANGELOG.md                    |    6 +
+ packages/providers/package.json                    |    5 +-
+ packages/providers/src/core.ts                     |   89 +
+ packages/providers/src/index.ts                    |   16 +-
+ packages/providers/src/store/s3.ts                 |  699 ++++
+ packages/repo-version/CHANGELOG.md                 |    6 +
+ packages/repo-version/package.json                 |    2 +-
+ packages/schema/CHANGELOG.md                       |    6 +
+ packages/schema/package.json                       |    2 +-
+ packages/schema/src/index.ts                       |    1 +
+ packages/schema/src/types/drive.ts                 |   21 +
+ packages/schema/src/types/providers.ts             |   21 +-
+ pnpm-lock.yaml                                     | 2213 ++++++------
+ 74 files changed, 8792 insertions(+), 1230 deletions(-)
+ create mode 100644 apps/web/app/dashboard/(unified)/(drive)/drive/[[...segments]]/layout.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(drive)/drive/[[...segments]]/loading.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(drive)/drive/[[...segments]]/page.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(drive)/layout.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(platform)/platform/storage/page.tsx
+ create mode 100644 apps/web/components/dashboard/drive/drive-entry-options.tsx
+ create mode 100644 apps/web/components/dashboard/drive/drive-entry.tsx
+ create mode 100644 apps/web/components/dashboard/drive/drive-side-bar.tsx
+ create mode 100644 apps/web/components/dashboard/drive/drive-top-bar.tsx
+ create mode 100644 apps/web/components/dashboard/drive/drive-uploader.tsx
+ create mode 100644 apps/web/components/dashboard/drive/new-upload-button.tsx
+ create mode 100644 apps/web/components/dashboard/storage/add-volume-form.tsx
+ create mode 100644 apps/web/components/dashboard/storage/volumes-manager.tsx
+ create mode 100644 apps/web/lib/actions/drive.ts
+ create mode 100644 apps/web/pnpm-lock.yaml
+ create mode 100644 apps/worker/lib/create-client-ssr-from-request.ts
+ create mode 100644 apps/worker/lib/dav/drive/webdav-add-folder-path.ts
+ create mode 100644 apps/worker/lib/dav/drive/webdav-delete-path.ts
+ create mode 100644 apps/worker/lib/dav/drive/webdav-discover.ts
+ create mode 100644 apps/worker/lib/dav/drive/webdav-list-path.ts
+ create mode 100644 apps/worker/lib/dav/drive/webdav-list.ts
+ create mode 100644 apps/worker/lib/migrations/0.0.99/seed.ts
+ create mode 100644 apps/worker/server/routes/webdav/entries/[id].get.ts
+ create mode 100644 apps/worker/server/routes/webdav/entries/index.post.ts
+ create mode 100644 db/init/caddy/conf/Caddyfile
+ create mode 100644 db/init/migrations/011_migration.sql
+ create mode 100644 db/init/webdav/config.yml
+ create mode 100644 packages/db/src/drizzle/0001_light_lethal_legion.sql
+ create mode 100644 packages/db/src/drizzle/0002_military_xavin.sql
+ create mode 100644 packages/db/src/drizzle/0003_smiling_power_pack.sql
+ create mode 100644 packages/db/src/drizzle/0004_useful_cerise.sql
+ create mode 100644 packages/db/src/drizzle/0005_exotic_nova.sql
+ create mode 100644 packages/providers/src/store/s3.ts
+ create mode 100644 packages/schema/src/types/drive.ts
 
 Array
 (
@@ -5369,7 +5482,13 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   82961b9..c92b3b1  main       -> origin/main
+Updating 82961b9..c92b3b1
+Fast-forward
+ unraid/kometa.xml      | 4 ++--
+ unraid/projectsend.xml | 5 ++++-
+ 2 files changed, 6 insertions(+), 3 deletions(-)
 
 Array
 (
@@ -18480,7 +18599,12 @@ Processing /tmp/GitHub/repositoryClone/nylonee/watchlistarr-unraid/watchlistarr.
 
 Downloading PeteAsking's Repository
 
-Already up to date.
+From https://github.com/pallebone/UnifiUnraidReborn
+   59d91aa..39e43c3  main       -> origin/main
+Updating 59d91aa..39e43c3
+Fast-forward
+ XMLSettings.xml | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -19605,6 +19729,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
+Tagged - Can't determine last update
+11notes/unifi
+11notes/unifi:10-unraid Downloads: 37471  Stars: 19  Base: unknown
+Pulling 11notes/unifi:10-unraid
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
