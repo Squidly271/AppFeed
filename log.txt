@@ -230,7 +230,30 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-Already up to date.
+From https://github.com/kurrier-org/kurrier
+   6d71c2f..f4c3643  main       -> origin/main
+ * [new tag]         v1.1.9     -> v1.1.9
+Updating 6d71c2f..f4c3643
+Fast-forward
+ .../@thread/(.)threads/[threadId]/page.tsx         |  15 ++-
+ .../[mailboxSlug]/threads/[threadId]/page.tsx      |  13 +-
+ .../components/mailbox/default/email-renderer.tsx  |  14 ++-
+ .../mailbox/default/mail-unsubscriber.tsx          |  68 ++++++++++
+ .../web/components/mailbox/default/thread-item.tsx |   7 +-
+ apps/web/lib/actions/mailbox.ts                    | 137 +++++++++++++++++++--
+ apps/worker/lib/message-payload-parser.ts          | 114 +++++++++++++++--
+ db/docker-compose.yml                              |   4 +-
+ db/init/migrations/016_migration.sql               |  25 ++++
+ .../db/src/drizzle/0012_glorious_firebrand.sql     |  25 ++++
+ packages/db/src/drizzle/drizzle-types.ts           |  42 ++++---
+ packages/db/src/drizzle/schema.ts                  |  97 ++++++++++++---
+ packages/repo-version/CHANGELOG.md                 |   6 +
+ packages/repo-version/package.json                 |   2 +-
+ packages/schema/src/types/mail.ts                  |   9 ++
+ 15 files changed, 506 insertions(+), 72 deletions(-)
+ create mode 100644 apps/web/components/mailbox/default/mail-unsubscriber.tsx
+ create mode 100644 db/init/migrations/016_migration.sql
+ create mode 100644 packages/db/src/drizzle/0012_glorious_firebrand.sql
 
 Array
 (
@@ -4478,12 +4501,7 @@ Removed from CA123
 
 Downloading LubricantJam's Repository
 
-From https://github.com/JamsRepos/Unraid-Templates
-   db48349..b87e5d9  main       -> origin/main
-Updating db48349..b87e5d9
-Fast-forward
- templates/streamystats.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -8178,30 +8196,32 @@ Processing /tmp/GitHub/repositoryClone/dersimn/docker-unraid-templates/dersimn/S
 Downloading fithwum's Repository
 
 From https://github.com/fithwum/files-for-dockers
-   1a69815..233daa7  master     -> origin/master
-Updating 1a69815..233daa7
+   233daa7..9bc6b4b  master     -> origin/master
+Updating 233daa7..9bc6b4b
 Fast-forward
- icons/neoforged.png | Bin 976 -> 0 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
- delete mode 100644 icons/neoforged.png
+ templates/minecraft_bukkit_server_unraid.xml | 110 +++++++++++++++++++++++++++
+ 1 file changed, 110 insertions(+)
+ create mode 100644 templates/minecraft_bukkit_server_unraid.xml
 
 Array
 (
     [https://github.com/fithwum/files-for-dockers] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/foundry-vtt_unraid.xml
-            [1] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml
-            [2] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/ca_profile.xml
-            [3] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/teamspeak_server_unraid.xml
-            [4] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_forge_server_unraid.xml
-            [5] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_neoforged_server_unraid.xml
-            [6] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_fabric_server_unraid.xml
+            [1] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_bukkit_server_unraid.xml
+            [2] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml
+            [3] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/ca_profile.xml
+            [4] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/teamspeak_server_unraid.xml
+            [5] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_forge_server_unraid.xml
+            [6] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_neoforged_server_unraid.xml
+            [7] => /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_fabric_server_unraid.xml
         )
 
 )
    Success!
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/foundry-vtt_unraid.xml...Success
+Processing /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_bukkit_server_unraid.xml...Success
 Processing /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml...Success
 Processing /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/fithwum/files-for-dockers/templates/teamspeak_server_unraid.xml...Success
@@ -19569,6 +19589,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:bukkit Downloads:   Stars:   Base: unknown
+Pulling gitea.fithwum.tech/fithwum/minecraft:bukkit
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -19646,9 +19671,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-gtstef/filebrowser
-gtstef/filebrowser:stable Downloads: 655844  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
