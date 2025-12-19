@@ -11,6 +11,31 @@ Downloading Featured apps Downloading https://raw.githubusercontent.com/Squidly2
 
 Downloading Repo Info
 
+Downloading schartrand77's Repository
+
+From https://github.com/schartrand77/mkw2
+   6f626ff..8951e49  main       -> origin/main
+Updating 6f626ff..8951e49
+Fast-forward
+ app/api/announcements/route.ts     | 6 ++++--
+ unraid/templates/makerworks-v2.xml | 5 +++--
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+
+Array
+(
+    [https://github.com/schartrand77/mkw2] => Array
+        (
+            [0] => /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2.xml
+        )
+
+)
+   Success!
+Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2.xml...Fatal: No valid Overview Or Description present - Application dropped from CA automatically - Possibly far too many formatting tags present
+
+Success
+
+
 Downloading snoopy86's Repository
 
 Already up to date.
@@ -363,70 +388,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/sparkison/m3u-editor
-   8d95fc1..b46ddb9  master     -> origin/master
-Updating 8d95fc1..b46ddb9
-Fast-forward
- .../instructions/project-details.instructions.md   |  14 -
- app/Filament/Pages/Preferences.php                 | 210 ++++++-
- app/Filament/Resources/Epgs/EpgResource.php        |   1 +
- .../PlaylistAliases/PlaylistAliasResource.php      | 202 ++-----
- .../Resources/Playlists/PlaylistResource.php       |   2 +-
- app/Filament/Resources/Series/Pages/ListSeries.php |  80 +++
- app/Filament/Resources/Series/SeriesResource.php   |  45 ++
- app/Filament/Resources/Vods/Pages/ListVod.php      |  72 +++
- app/Filament/Resources/Vods/VodResource.php        |  45 ++
- app/Http/Controllers/XtreamApiController.php       | 169 +++---
- app/Jobs/FetchTmdbIds.php                          | 381 +++++++++++++
- app/Jobs/ProcessM3uImport.php                      |  43 +-
- app/Jobs/ProcessM3uImportComplete.php              |  49 +-
- app/Jobs/ProcessM3uImportVod.php                   |   2 +-
- app/Jobs/SyncSeriesStrmFiles.php                   |  92 ++-
- app/Jobs/SyncVodStrmFiles.php                      | 121 +++-
- app/Models/Channel.php                             |   9 +
- app/Models/CustomPlaylist.php                      |   1 +
- app/Models/Episode.php                             |   9 +
- app/Models/Group.php                               |   1 -
- app/Models/PlaylistAlias.php                       |  50 +-
- app/Models/Series.php                              |   2 +-
- app/Models/StrmFileMapping.php                     | 434 ++++++++++++++
- app/Providers/AppServiceProvider.php               |   4 -
- app/Services/EpgCacheService.php                   |   3 +
- app/Services/ExternalIpService.php                 |   3 +
- app/Services/FfmpegCodecService.php                | 102 ----
- app/Services/GitInfoService.php                    |   3 +
- app/Services/LogoService.php                       |   3 +
- app/Services/PlaylistService.php                   |   7 +-
- app/Services/PlaylistUrlService.php                |   3 +
- app/Services/ProxyService.php                      |   3 +
- app/Services/SchedulesDirectService.php            |   3 +
- app/Services/SimilaritySearchService.php           |   3 +
- app/Services/TmdbService.php                       | 634 +++++++++++++++++++++
- app/Services/XtreamService.php                     |   3 +
- app/Settings/GeneralSettings.php                   |   8 +
- config/dev.php                                     |   4 +-
- database/factories/StrmFileMappingFactory.php      |  76 +++
- ...2_16_000001_create_strm_file_mappings_table.php |  37 ++
- ...0000_add_tmdb_fields_to_channels_and_series.php |  42 ++
- ...213335_add_source_group_id_to_source_groups.php |  29 +
- ..._12_18_000000_add_tmdb_integration_settings.php |  26 +
- tests/Feature/FetchTmdbIdsTest.php                 | 218 +++++++
- tests/Feature/StrmFileMappingTest.php              | 294 ++++++++++
- tests/Feature/TmdbServiceTest.php                  | 172 ++++++
- 46 files changed, 3218 insertions(+), 496 deletions(-)
- delete mode 100644 .github/instructions/project-details.instructions.md
- create mode 100644 app/Jobs/FetchTmdbIds.php
- create mode 100644 app/Models/StrmFileMapping.php
- delete mode 100644 app/Services/FfmpegCodecService.php
- create mode 100644 app/Services/TmdbService.php
- create mode 100644 database/factories/StrmFileMappingFactory.php
- create mode 100644 database/migrations/2024_12_16_000001_create_strm_file_mappings_table.php
- create mode 100644 database/migrations/2025_06_18_100000_add_tmdb_fields_to_channels_and_series.php
- create mode 100644 database/migrations/2025_12_16_213335_add_source_group_id_to_source_groups.php
- create mode 100644 database/settings/2025_12_18_000000_add_tmdb_integration_settings.php
- create mode 100644 tests/Feature/FetchTmdbIdsTest.php
- create mode 100644 tests/Feature/StrmFileMappingTest.php
- create mode 100644 tests/Feature/TmdbServiceTest.php
+Already up to date.
 
 Array
 (
@@ -4234,14 +4196,12 @@ Success
 Downloading waazaa's Repository
 
 From https://github.com/waazaa-fr/unraid-templates
-   e69d762..3cd8b51  main       -> origin/main
-Updating e69d762..3cd8b51
+   3cd8b51..0fbb28b  main       -> origin/main
+Updating 3cd8b51..0fbb28b
 Fast-forward
- my-garage-s3-simple.xml | 37 ++++++++++++++++++++++++++++++++++
- my-garage-s3-tailscale  | 53 +++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 90 insertions(+)
- create mode 100644 my-garage-s3-simple.xml
- create mode 100644 my-garage-s3-tailscale
+ my-garage-s3-webui.xml | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+ create mode 100644 my-garage-s3-webui.xml
 
 Array
 (
@@ -4252,22 +4212,23 @@ Array
             [2] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-kuvasz.xml
             [3] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-portracker.xml
             [4] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-dockpeek.xml
-            [5] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-berb.xml
-            [6] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-garage-s3-simple.xml
-            [7] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-ddns-myaddr-updater.xml
-            [8] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.2.xml
-            [9] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.3.xml
-            [10] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-proxy-wol-redirect.xml
-            [11] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-rdiff-backup-rdiffweb.xml
-            [12] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-m3u-to-strm.xml
-            [13] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-periphery.xml
-            [14] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-memos.xml
-            [15] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-cronicle-edge.xml
-            [16] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-turing-smart-screen.xml
-            [17] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-palmr.xml
-            [18] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-syncthing-daily-reports.xml
-            [19] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.4.xml
-            [20] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-release-feeds-to-discord.xml
+            [5] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-garage-s3-webui.xml
+            [6] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-berb.xml
+            [7] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-garage-s3-simple.xml
+            [8] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-ddns-myaddr-updater.xml
+            [9] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.2.xml
+            [10] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.3.xml
+            [11] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-proxy-wol-redirect.xml
+            [12] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-rdiff-backup-rdiffweb.xml
+            [13] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-m3u-to-strm.xml
+            [14] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-periphery.xml
+            [15] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-memos.xml
+            [16] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-cronicle-edge.xml
+            [17] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-turing-smart-screen.xml
+            [18] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-palmr.xml
+            [19] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-syncthing-daily-reports.xml
+            [20] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.4.xml
+            [21] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-release-feeds-to-discord.xml
         )
 
 )
@@ -4278,6 +4239,11 @@ Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-zendo.xml..
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-kuvasz.xml...Success
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-portracker.xml...Success
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-dockpeek.xml...Success
+Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-garage-s3-webui.xml...No category entry present
+
+Hardcoded port found in webUI entry.  Template automatically dropped from CA
+
+Removed from CA123
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-berb.xml...Success
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-garage-s3-simple.xml...Fatal: No valid Overview Or Description present - Application dropped from CA automatically - Possibly far too many formatting tags present
 
@@ -4997,7 +4963,12 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 
 Downloading Binhex's Repository
 
-Already up to date.
+From https://github.com/binhex/docker-templates
+   deef2cc..dfe20bb  master     -> origin/master
+Updating deef2cc..dfe20bb
+Fast-forward
+ binhex/bitmagnet.xml | 6 ++++++
+ 1 file changed, 6 insertions(+)
 
 Array
 (
@@ -19573,10 +19544,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-waazaafr/garage-s3-simple
-waazaafr/garage-s3-simple:latest Downloads: 56  Stars: 0  Base: unknown
-Pulling waazaafr/garage-s3-simple:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
