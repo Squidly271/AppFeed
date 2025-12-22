@@ -112,7 +112,13 @@ Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tr
 
 Downloading Indemnity83's Repository
 
-Already up to date.
+From https://github.com/Indemnity83/always-bring-a-gift
+   cfa71e8..be3335e  main       -> origin/main
+Updating cfa71e8..be3335e
+Fast-forward
+ package-lock.json | 232 +++++++++++++++++++++++++++---------------------------
+ package.json      |   4 +-
+ 2 files changed, 118 insertions(+), 118 deletions(-)
 
 Array
 (
@@ -238,7 +244,69 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-Already up to date.
+From https://github.com/kurrier-org/kurrier
+   f4c3643..534e321  main       -> origin/main
+ * [new tag]         v1.1.10    -> v1.1.10
+Updating f4c3643..534e321
+Fast-forward
+ .../[identityPublicId]/[mailboxSlug]/layout.tsx    |  21 +-
+ .../mail/[identityPublicId]/scheduled/layout.tsx   |  40 +--
+ .../[identityPublicId]/settings/danger/loading.tsx |   2 +
+ .../[identityPublicId]/settings/danger/page.tsx    |  27 ++
+ .../mail/[identityPublicId]/settings/layout.tsx    |  77 +++++
+ .../mail/[identityPublicId]/settings/page.tsx      |  43 +++
+ .../[identityPublicId]/settings/rules/loading.tsx  |   2 +
+ .../[identityPublicId]/settings/rules/page.tsx     |  53 +++
+ .../settings/subscriptions/loading.tsx             |   2 +
+ .../settings/subscriptions/page.tsx                |  18 +
+ .../mail/[identityPublicId]/snoozed/layout.tsx     |  31 +-
+ .../components/mailbox/mailbox-search-header.tsx   |  42 +++
+ .../mailbox/settings/identity-settings.tsx         |  17 +
+ .../mailbox/settings/rules/create-rule-form.tsx    | 382 +++++++++++++++++++++
+ .../mailbox/settings/rules/mail-rules-list.tsx     | 132 +++++++
+ .../mailbox/settings/settings-general.tsx          |  67 ++++
+ .../mailbox/settings/settings-section-card.tsx     |  40 +++
+ .../components/mailbox/settings/settings-tabs.tsx  |  60 ++++
+ apps/web/lib/actions/mail-rules.ts                 | 292 ++++++++++++++++
+ apps/worker/lib/message-payload-parser.ts          |  21 +-
+ apps/worker/lib/rules/rule-items/mark-flag.ts      |  93 +++++
+ apps/worker/lib/rules/rule-items/mark-read.ts      |  70 ++++
+ apps/worker/lib/rules/rule-items/move-to-trash.ts  |  45 +++
+ apps/worker/lib/rules/rules-processor.ts           | 283 +++++++++++++++
+ apps/worker/server/plugins/common-worker.ts        |  14 +-
+ db/init/migrations/017_migration.sql               |  47 +++
+ packages/db/src/drizzle/0013_large_triton.sql      |  44 +++
+ .../db/src/drizzle/0014_tranquil_wild_pack.sql     |   1 +
+ packages/db/src/drizzle/schema.ts                  | 107 +++++-
+ packages/repo-version/CHANGELOG.md                 |   6 +
+ packages/repo-version/package.json                 |   2 +-
+ packages/schema/src/index.ts                       |   1 +
+ packages/schema/src/types/mail-rules.ts            |  52 +++
+ 33 files changed, 2047 insertions(+), 87 deletions(-)
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/danger/loading.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/danger/page.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/layout.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/page.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/rules/loading.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/rules/page.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/subscriptions/loading.tsx
+ create mode 100644 apps/web/app/dashboard/(unified)/(mail)/mail/[identityPublicId]/settings/subscriptions/page.tsx
+ create mode 100644 apps/web/components/mailbox/mailbox-search-header.tsx
+ create mode 100644 apps/web/components/mailbox/settings/identity-settings.tsx
+ create mode 100644 apps/web/components/mailbox/settings/rules/create-rule-form.tsx
+ create mode 100644 apps/web/components/mailbox/settings/rules/mail-rules-list.tsx
+ create mode 100644 apps/web/components/mailbox/settings/settings-general.tsx
+ create mode 100644 apps/web/components/mailbox/settings/settings-section-card.tsx
+ create mode 100644 apps/web/components/mailbox/settings/settings-tabs.tsx
+ create mode 100644 apps/web/lib/actions/mail-rules.ts
+ create mode 100644 apps/worker/lib/rules/rule-items/mark-flag.ts
+ create mode 100644 apps/worker/lib/rules/rule-items/mark-read.ts
+ create mode 100644 apps/worker/lib/rules/rule-items/move-to-trash.ts
+ create mode 100644 apps/worker/lib/rules/rules-processor.ts
+ create mode 100644 db/init/migrations/017_migration.sql
+ create mode 100644 packages/db/src/drizzle/0013_large_triton.sql
+ create mode 100644 packages/db/src/drizzle/0014_tranquil_wild_pack.sql
+ create mode 100644 packages/schema/src/types/mail-rules.ts
 
 Array
 (
@@ -7195,45 +7263,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   c930fea..bbb1fb5  master     -> origin/master
-Updating c930fea..bbb1fb5
-Fast-forward
- jlesage/avidemux.xml               | 6 +++++-
- jlesage/chromium.xml               | 6 +++++-
- jlesage/cloudberry-backup.xml      | 6 +++++-
- jlesage/crashplan-enterprise.xml   | 6 +++++-
- jlesage/crashplan-pro.xml          | 6 +++++-
- jlesage/czkawka.xml                | 6 +++++-
- jlesage/dupeguru.xml               | 6 +++++-
- jlesage/file-centipede.xml         | 6 +++++-
- jlesage/filebot.xml                | 6 +++++-
- jlesage/filezilla.xml              | 6 +++++-
- jlesage/firefox-esr.xml            | 6 +++++-
- jlesage/firefox.xml                | 6 +++++-
- jlesage/freac.xml                  | 6 +++++-
- jlesage/freefilesync.xml           | 6 +++++-
- jlesage/handbrake.xml              | 6 +++++-
- jlesage/imgburn.xml                | 6 +++++-
- jlesage/jdownloader-2.xml          | 6 +++++-
- jlesage/jmkvpropedit.xml           | 6 +++++-
- jlesage/keepassxc.xml              | 6 +++++-
- jlesage/makemkv.xml                | 6 +++++-
- jlesage/mediainfo.xml              | 6 +++++-
- jlesage/mkv-muxing-batch-gui.xml   | 6 +++++-
- jlesage/mkvcleaver.xml             | 6 +++++-
- jlesage/mkvtoolnix.xml             | 6 +++++-
- jlesage/musicbrainz-picard.xml     | 6 +++++-
- jlesage/putty.xml                  | 6 +++++-
- jlesage/qdirstat.xml               | 6 +++++-
- jlesage/thunderbird.xml            | 6 +++++-
- jlesage/tixati.xml                 | 6 +++++-
- jlesage/tsmuxer.xml                | 6 +++++-
- jlesage/video-duplicate-finder.xml | 6 +++++-
- jlesage/vlc.xml                    | 6 +++++-
- jlesage/xfburn.xml                 | 6 +++++-
- jlesage/xnview-mp.xml              | 6 +++++-
- 34 files changed, 170 insertions(+), 34 deletions(-)
+Already up to date.
 
 Array
 (
@@ -15967,7 +15997,18 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   a193c43..831a3d5  main       -> origin/main
+Updating a193c43..831a3d5
+Fast-forward
+ ...e_validation.yml => main_branch_protection.yml} |   8 +-----
+ .github/workflows/pr_checks.yml                    |  30 +++++++++++++++++++++
+ images/ryot-icon.png                               | Bin 1067 -> 21319 bytes
+ templates/classifarr.xml                           |   2 +-
+ templates/ryot.xml                                 |   2 +-
+ 5 files changed, 33 insertions(+), 9 deletions(-)
+ rename .github/workflows/{template_validation.yml => main_branch_protection.yml} (89%)
+ create mode 100644 .github/workflows/pr_checks.yml
 
 Array
 (
@@ -16847,9 +16888,7 @@ Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/auth_
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/shoutrrr.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hrconvert2.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autopulse.xml...Success
-Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/classifarr.xml...Port referenced in webUI does not correspond with a container port defined.  Port Referenced does not exist in Config.  Template removed from CA.
-
-Removed from CA123
+Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/classifarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/anubis.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dawarich_sidekiq.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kometa_quickstart.xml...Success
@@ -19693,6 +19732,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+cloudbyday90/classifarr
+ghcr.io/cloudbyday90/classifarr:latest Downloads: 1093  Stars: 0  Base: unknown
+Pulling ghcr.io/cloudbyday90/classifarr:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
