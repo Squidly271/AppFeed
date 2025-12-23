@@ -151,153 +151,11 @@ Success
 Downloading NeXroll's Repository
 
 From https://github.com/JFLXCLOUD/NeXroll
-   ada100b..4041025  main       -> origin/main
- * [new tag]         v1.9.6     -> v1.9.6
-Updating ada100b..4041025
+   4041025..f1af6c1  main       -> origin/main
+Updating 4041025..f1af6c1
 Fast-forward
- .gitignore                                         |  127 +
- NeXroll/CHANGELOG.md                               |  323 ++
- NeXroll/RELEASE_NOTES_1.7.2.md                     |   14 -
- NeXroll/RELEASE_NOTES_v1.7.15.md                   |  132 -
- NeXroll/backend/holiday_api.py                     |  349 ++
- NeXroll/backend/main.py                            | 2722 ++++++++++++-
- NeXroll/backend/models.py                          |    7 +
- NeXroll/backend/scheduler.py                       |  688 +++-
- NeXroll/backend/static/NeXroll_Logo_BLK.png        |  Bin 17656 -> 0 bytes
- NeXroll/backend/static/NeXroll_Logo_WHT.png        |  Bin 18868 -> 0 bytes
- NeXroll/backend/static/asset-manifest.json         |   15 -
- NeXroll/backend/static/favicon.ico                 |  Bin 420 -> 0 bytes
- NeXroll/backend/static/index.html                  |    1 -
- NeXroll/backend/static/manifest.json               |   53 -
- NeXroll/backend/static/robots.txt                  |    3 -
- .../backend/static/static/css/main.225dce66.css    |    2 -
- .../static/static/css/main.225dce66.css.map        |    1 -
- .../backend/static/static/css/main.9d894f15.css    |    2 -
- .../static/static/css/main.9d894f15.css.map        |    1 -
- .../backend/static/static/css/main.b7d048d3.css    |    2 -
- .../static/static/css/main.b7d048d3.css.map        |    1 -
- .../backend/static/static/js/453.d7446e4a.chunk.js |    2 -
- .../static/static/js/453.d7446e4a.chunk.js.map     |    1 -
- .../static/static/js/main.0593d7a1.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.0593d7a1.js.map  |    1 -
- .../static/static/js/main.0c1c0c3a.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.0c1c0c3a.js.map  |    1 -
- .../static/static/js/main.17b0b941.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.17b0b941.js.map  |    1 -
- .../static/static/js/main.23c79bec.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.23c79bec.js.map  |    1 -
- .../static/static/js/main.345f3125.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.345f3125.js.map  |    1 -
- .../static/static/js/main.3f22f39c.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.3f22f39c.js.map  |    1 -
- .../static/static/js/main.452e3060.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.452e3060.js.map  |    1 -
- .../static/static/js/main.6aaa38eb.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.6aaa38eb.js.map  |    1 -
- .../static/static/js/main.6c6fda8a.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.6c6fda8a.js.map  |    1 -
- .../static/static/js/main.7eb239cc.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.7eb239cc.js.map  |    1 -
- .../static/static/js/main.87b0c0c0.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.87b0c0c0.js.map  |    1 -
- .../static/static/js/main.9705bf36.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.9705bf36.js.map  |    1 -
- .../static/static/js/main.d53de845.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.d53de845.js.map  |    1 -
- .../static/static/js/main.ee4036d3.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.ee4036d3.js.map  |    1 -
- NeXroll/backend/static/static/js/main.f5941a00.js  |    3 -
- .../static/static/js/main.f5941a00.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.f5941a00.js.map  |    1 -
- .../static/static/js/main.f906cfef.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.f906cfef.js.map  |    1 -
- .../static/static/js/main.fff9fbdc.js.LICENSE.txt  |   49 -
- .../backend/static/static/js/main.fff9fbdc.js.map  |    1 -
- NeXroll/backend/{static => }/sw.js                 |    0
- NeXroll/backend/version.py                         |    2 +-
- NeXroll/frontend/build/asset-manifest.json         |   12 +-
- NeXroll/frontend/build/index.html                  |    2 +-
- NeXroll/frontend/package-lock.json                 |   13 +-
- NeXroll/frontend/package.json                      |    3 +-
- NeXroll/frontend/src/App.js                        | 4223 ++++++++++++++------
- NeXroll/frontend/src/components/BlockEditor.js     |  473 ++-
- .../frontend/src/components/ImportPreviewModal.js  |  596 +++
- NeXroll/frontend/src/components/PatternExport.js   |  281 +-
- NeXroll/frontend/src/components/PatternImport.js   | 1597 +++++++-
- NeXroll/frontend/src/components/SequenceBlock.js   |  366 +-
- NeXroll/frontend/src/components/SequenceBuilder.js |  135 +-
- .../frontend/src/components/SequenceTimeline.js    |  430 +-
- NeXroll/frontend/src/index.css                     |  693 +++-
- NeXroll/version.py                                 |    2 +-
- NeXroll/version_info.txt                           |    8 +-
- README.md                                          |   77 +-
- docs/screenshots/Calendar_Year.png                 |  Bin 0 -> 37301 bytes
- docs/screenshots/Dashboard.png                     |  Bin 0 -> 30496 bytes
- docs/screenshots/community_prerolls.png            |  Bin 0 -> 28855 bytes
- docs/screenshots/prerolls.png                      |  Bin 0 -> 152310 bytes
- docs/screenshots/schedule.png                      |  Bin 0 -> 26127 bytes
- 81 files changed, 11061 insertions(+), 3151 deletions(-)
- create mode 100644 .gitignore
- delete mode 100644 NeXroll/RELEASE_NOTES_1.7.2.md
- delete mode 100644 NeXroll/RELEASE_NOTES_v1.7.15.md
- create mode 100644 NeXroll/backend/holiday_api.py
- delete mode 100644 NeXroll/backend/static/NeXroll_Logo_BLK.png
- delete mode 100644 NeXroll/backend/static/NeXroll_Logo_WHT.png
- delete mode 100644 NeXroll/backend/static/asset-manifest.json
- delete mode 100644 NeXroll/backend/static/favicon.ico
- delete mode 100644 NeXroll/backend/static/index.html
- delete mode 100644 NeXroll/backend/static/manifest.json
- delete mode 100644 NeXroll/backend/static/robots.txt
- delete mode 100644 NeXroll/backend/static/static/css/main.225dce66.css
- delete mode 100644 NeXroll/backend/static/static/css/main.225dce66.css.map
- delete mode 100644 NeXroll/backend/static/static/css/main.9d894f15.css
- delete mode 100644 NeXroll/backend/static/static/css/main.9d894f15.css.map
- delete mode 100644 NeXroll/backend/static/static/css/main.b7d048d3.css
- delete mode 100644 NeXroll/backend/static/static/css/main.b7d048d3.css.map
- delete mode 100644 NeXroll/backend/static/static/js/453.d7446e4a.chunk.js
- delete mode 100644 NeXroll/backend/static/static/js/453.d7446e4a.chunk.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.0593d7a1.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.0593d7a1.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.0c1c0c3a.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.0c1c0c3a.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.17b0b941.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.17b0b941.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.23c79bec.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.23c79bec.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.345f3125.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.345f3125.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.3f22f39c.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.3f22f39c.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.452e3060.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.452e3060.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.6aaa38eb.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.6aaa38eb.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.6c6fda8a.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.6c6fda8a.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.7eb239cc.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.7eb239cc.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.87b0c0c0.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.87b0c0c0.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.9705bf36.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.9705bf36.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.d53de845.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.d53de845.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.ee4036d3.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.ee4036d3.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.f5941a00.js
- delete mode 100644 NeXroll/backend/static/static/js/main.f5941a00.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.f5941a00.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.f906cfef.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.f906cfef.js.map
- delete mode 100644 NeXroll/backend/static/static/js/main.fff9fbdc.js.LICENSE.txt
- delete mode 100644 NeXroll/backend/static/static/js/main.fff9fbdc.js.map
- rename NeXroll/backend/{static => }/sw.js (100%)
- create mode 100644 NeXroll/frontend/src/components/ImportPreviewModal.js
- create mode 100644 docs/screenshots/Calendar_Year.png
- create mode 100644 docs/screenshots/Dashboard.png
- create mode 100644 docs/screenshots/community_prerolls.png
- create mode 100644 docs/screenshots/prerolls.png
- create mode 100644 docs/screenshots/schedule.png
+ .github/workflows/docker-build.yml | 48 +++++++++++++++++++++++---------------
+ 1 file changed, 29 insertions(+), 19 deletions(-)
 
 Array
 (
@@ -555,27 +413,16 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   765abc4..c634cc9  main           -> origin/main
- * [new tag]         v3.0.0-beta.13 -> v3.0.0-beta.13
-Updating 765abc4..c634cc9
+   c634cc9..be2ea1a  main       -> origin/main
+ * [new tag]         v3.0.0     -> v3.0.0
+Updating c634cc9..be2ea1a
 Fast-forward
- client/package-lock.json                           |   4 +-
- client/package.json                                |   2 +-
- client/src/components/ui/CardComponents.jsx        |   1 +
- docs/plans/2024-12-23-3.0-polish-design.md         |  58 ++++
- docs/plans/2024-12-23-3.0-polish-plan.md           | 332 +++++++++++++++++++++
- server/controllers/library/scenes.ts               |   6 +-
- server/controllers/library/tags.ts                 |   8 +-
- server/eslint.config.js                            |   9 +-
- server/package-lock.json                           |   4 +-
- server/package.json                                |   2 +-
- server/services/StashEntityService.ts              |  13 +-
- server/services/UserHiddenEntityService.ts         |   3 +-
- .../UserRestrictionService.integration.test.ts     |   3 +
- .../__tests__/UserRestrictionService.test.ts       |   3 +
- 14 files changed, 433 insertions(+), 15 deletions(-)
- create mode 100644 docs/plans/2024-12-23-3.0-polish-design.md
- create mode 100644 docs/plans/2024-12-23-3.0-polish-plan.md
+ client/package-lock.json                             | 4 ++--
+ client/package.json                                  | 2 +-
+ docs/plans/2025-12-15-v3.0.0-release-announcement.md | 8 +++++++-
+ server/package-lock.json                             | 4 ++--
+ server/package.json                                  | 2 +-
+ 5 files changed, 13 insertions(+), 7 deletions(-)
 
 Array
 (
@@ -5571,31 +5418,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   032e88b..f3fd843  main       -> origin/main
-Updating 032e88b..f3fd843
-Fast-forward
- unraid/azahar.xml             | 5 ++++-
- unraid/brave.xml              | 5 ++++-
- unraid/chrome.xml             | 5 ++++-
- unraid/citron.xml             | 5 ++++-
- unraid/dolphin.xml            | 5 ++++-
- unraid/duckstation.xml        | 5 ++++-
- unraid/firefox.xml            | 5 ++++-
- unraid/flycast.xml            | 5 ++++-
- unraid/mame.xml               | 5 ++++-
- unraid/melonds.xml            | 5 ++++-
- unraid/msedge.xml             | 5 ++++-
- unraid/mullvad-browser.xml    | 5 ++++-
- unraid/opera.xml              | 5 ++++-
- unraid/pcsx2.xml              | 5 ++++-
- unraid/retroarch.xml          | 5 ++++-
- unraid/rpcs3.xml              | 5 ++++-
- unraid/ungoogled-chromium.xml | 5 ++++-
- unraid/vivaldi.xml            | 5 ++++-
- unraid/xemu.xml               | 5 ++++-
- unraid/zen.xml                | 5 ++++-
- 20 files changed, 80 insertions(+), 20 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19682,6 +19505,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+varun-raj/immich-power-tools
+ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -19847,8 +19672,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-gitea.baerentsen.space/frederikbaerentsen/bricktracker
-gitea.baerentsen.space/frederikbaerentsen/bricktracker:latest Downloads:   Stars:   Base: unknown
+localai/localai
+localai/localai:latest Downloads: 1993915  Stars: 84  Base: unknown
+sdr-enthusiasts/docker-rtlsdrairband
+ghcr.io/sdr-enthusiasts/docker-rtlsdrairband:latest Downloads:   Stars:   Base: unknown
+tedder42/browser-screenshot-service
+tedder42/browser-screenshot-service:latest Downloads: 13275  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
