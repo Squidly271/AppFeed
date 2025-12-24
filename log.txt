@@ -407,7 +407,30 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   cd4897a..689dfba  main       -> origin/main
+Updating cd4897a..689dfba
+Fast-forward
+ client/src/components/pages/PerformerDetail.jsx    |  96 +----
+ client/src/components/pages/SceneDetails.jsx       |  19 +-
+ client/src/components/ui/SectionLink.jsx           |  49 +++
+ client/src/components/ui/index.js                  |   1 +
+ client/src/utils/siteInfo.js                       | 132 +++++++
+ docs/plans/2025-12-23-scene-urls-design.md         |  58 +++
+ docs/plans/2025-12-23-scene-urls-implementation.md | 421 +++++++++++++++++++++
+ server/package-lock.json                           |   8 +-
+ server/package.json                                |   2 +-
+ .../migration.sql                                  |   3 +
+ server/prisma/schema.prisma                        |   4 +-
+ server/services/SceneQueryBuilder.ts               |   6 +-
+ server/services/StashEntityService.ts              |   8 +
+ server/services/StashSyncService.ts                |   6 +-
+ 14 files changed, 710 insertions(+), 103 deletions(-)
+ create mode 100644 client/src/components/ui/SectionLink.jsx
+ create mode 100644 client/src/utils/siteInfo.js
+ create mode 100644 docs/plans/2025-12-23-scene-urls-design.md
+ create mode 100644 docs/plans/2025-12-23-scene-urls-implementation.md
+ create mode 100644 server/prisma/migrations/20251224000000_add_scene_urls_director/migration.sql
 
 Array
 (
@@ -4932,7 +4955,15 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 
 Downloading Binhex's Repository
 
-Already up to date.
+From https://github.com/binhex/docker-templates
+   dfe20bb..1be4904  master     -> origin/master
+Updating dfe20bb..1be4904
+Fast-forward
+ binhex/images/seerr-icon.png | Bin 0 -> 20674 bytes
+ binhex/seerr.xml             |  36 ++++++++++++++++++++++++++++++++++++
+ 2 files changed, 36 insertions(+)
+ create mode 100755 binhex/images/seerr-icon.png
+ create mode 100644 binhex/seerr.xml
 
 Array
 (
@@ -4989,18 +5020,19 @@ Array
             [48] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/nginx.xml
             [49] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/official-windows.xml
             [50] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/get-iplayer.xml
-            [51] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/webstorm.xml
-            [52] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/syncthing.xml
-            [53] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/fdroidserver.xml
-            [54] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/official-simple-cloudflare-solver.xml
-            [55] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/slskd.xml
-            [56] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/gonic.xml
-            [57] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/nzbhydra2.xml
-            [58] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/resilio-sync.xml
-            [59] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/minecraftbedrockserver.xml
-            [60] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/jellyfin.xml
-            [61] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/privoxyvpn.xml
-            [62] => /tmp/GitHub/repositoryClone/binhex/docker-templates/ca_profile.xml
+            [51] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/seerr.xml
+            [52] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/webstorm.xml
+            [53] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/syncthing.xml
+            [54] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/fdroidserver.xml
+            [55] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/official-simple-cloudflare-solver.xml
+            [56] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/slskd.xml
+            [57] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/gonic.xml
+            [58] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/nzbhydra2.xml
+            [59] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/resilio-sync.xml
+            [60] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/minecraftbedrockserver.xml
+            [61] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/jellyfin.xml
+            [62] => /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/privoxyvpn.xml
+            [63] => /tmp/GitHub/repositoryClone/binhex/docker-templates/ca_profile.xml
         )
 
 )
@@ -5065,6 +5097,7 @@ Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/official-q
 Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/nginx.xml...Success
 Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/official-windows.xml...Success
 Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/get-iplayer.xml...Success
+Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/seerr.xml...Success
 Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/webstorm.xml...Success
 Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/syncthing.xml...Success
 Processing /tmp/GitHub/repositoryClone/binhex/docker-templates/binhex/fdroidserver.xml...Removed from CA123
@@ -19514,9 +19547,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+waazaafr/turing-smart-screen
+waazaafr/turing-smart-screen:testing Downloads: 1589  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+binhex/arch-seerr
+ghcr.io/binhex/arch-seerr Downloads: 9  Stars: 0  Base: unknown
+Pulling ghcr.io/binhex/arch-seerr
+Error response from daemon: manifest unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -19533,6 +19573,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/pcsx2
+lscr.io/linuxserver/pcsx2 Downloads: 4436  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19652,11 +19694,29 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
+remvze/moodist
+ghcr.io/remvze/moodist:latest Downloads:   Stars:   Base: unknown
+funkwhale/all-in-one
+funkwhale/all-in-one:latest Downloads: 3064714  Stars: 20  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+Tagged - Can't determine last update
+homebridge/homebridge
+homebridge/homebridge:ubuntu Downloads: 8539209  Stars: 98  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+Tagged - Can't determine last update
+gollumwiki/gollum
+gollumwiki/gollum:master Downloads: 195861  Stars: 8  Base: unknown
+elstensoftware/bliss
+elstensoftware/bliss Downloads: 9584  Stars: 1  Base: unknown
+steel-dev/steel-browser
+ghcr.io/steel-dev/steel-browser:latest Downloads:   Stars:   Base: unknown
+charmcli/wishlist
+charmcli/wishlist:latest Downloads: 3800  Stars: 0  Base: unknown
+redimp/otterwiki
+redimp/otterwiki:latest Downloads: 364093  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19669,13 +19729,29 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+productiveops/dokemon-agent
+productiveops/dokemon-agent:latest Downloads: 52566  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+portainer/agent
+portainer/agent:latest Downloads: 1406470251  Stars: 288  Base: unknown
+portainer/portainer-ce
+portainer/portainer-ce:latest Downloads: 1363708008  Stars: 2612  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
+lowess/yasha
+lowess/yasha Downloads: 3964  Stars: 0  Base: unknown
+pomerium/verify
+pomerium/verify Downloads: 328066  Stars: 1  Base: unknown
+lowess/pomerium-proxy
+lowess/pomerium-proxy Downloads: 107  Stars: 0  Base: unknown
+lowess/internetarchive
+lowess/internetarchive Downloads: 194  Stars: 0  Base: unknown
+joeygennari/goatcounter
+joeygennari/goatcounter Downloads: 237  Stars: 0  Base: unknown
 Privileged: 125
 
 
