@@ -407,19 +407,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   a6ec1da..0089e3f  main          -> origin/main
- * [new tag]         v3.0.1-beta.2 -> v3.0.1-beta.2
-Updating a6ec1da..0089e3f
-Fast-forward
- client/package-lock.json                           |   4 +-
- client/package.json                                |   2 +-
- server/package-lock.json                           |   4 +-
- server/package.json                                |   2 +-
- server/services/StashEntityService.ts              |   7 +-
- server/services/StashSyncService.ts                |  22 +++-
- .../__tests__/StashSyncService.unit.test.ts        | 114 ++++++++++++++++++++-
- 7 files changed, 140 insertions(+), 15 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4349,13 +4337,7 @@ Processing /tmp/GitHub/repositoryClone/donkevlar/Unraid-Docker-Templates/Bookshe
 
 Downloading mandarons' Repository
 
-From https://github.com/mandarons/icloud-drive-docker
-   ed4a7e8..0297bd9  main       -> origin/main
-Updating ed4a7e8..0297bd9
-Fast-forward
- requirements-test.txt | 4 ++--
- requirements.txt      | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -8514,13 +8496,7 @@ Processing /tmp/GitHub/repositoryClone/FoxxMD/unraid-docker-templates/foxxmd/pin
 
 Downloading ich777's Repository
 
-From https://github.com/ich777/docker-templates
-   f813781..2bbd27e  master     -> origin/master
-Updating f813781..2bbd27e
-Fast-forward
- ich777/ARKSurvivalAscended.xml | 50 ------------------------------------------
- 1 file changed, 50 deletions(-)
- delete mode 100644 ich777/ARKSurvivalAscended.xml
+Already up to date.
 
 Array
 (
@@ -12289,7 +12265,642 @@ Processing /tmp/GitHub/repositoryClone/OFark/docker-templates/OFark/Compressarr.
 Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
-Already up to date.
+From https://gitlab.com/crafty-controller/crafty-4
+   221b808e..5e66a760  master     -> origin/master
+ * [new tag]           v4.7.0     -> v4.7.0
+Updating 221b808e..5e66a760
+Fast-forward
+ CHANGELOG.md                                       |     7 +
+ README.md                                          |     2 +-
+ app/classes/helpers/file_helpers.py                |   111 +-
+ app/classes/shared/import_helper.py                |     2 +-
+ app/classes/web/panel_handler.py                   |     2 +
+ app/classes/web/routes/api/api_handlers.py         |     8 +-
+ app/classes/web/routes/api/crafty/upload/index.py  |    40 +-
+ app/classes/web/routes/api/servers/server/files.py |   580 +-
+ app/config/version.json                            |     4 +-
+ .../assets/css/partial/crafty-context-menu.css     |    41 +
+ .../static/assets/css/partial/crafty-editor.css    |    38 +
+ .../static/assets/css/partial/crafty-files.css     |   330 +
+ .../assets/css/partial/crafty-notification.css     |     1 +
+ app/frontend/static/assets/css/themes/dark.css     |     2 +-
+ app/frontend/static/assets/css/themes/light.css    |     2 +-
+ app/frontend/static/assets/css/themes/ronald.css   |     2 +-
+ .../static/assets/js/shared/context-menu.js        |   119 +
+ app/frontend/static/assets/js/shared/editor.js     |   411 +
+ app/frontend/static/assets/js/shared/files.js      |   962 +
+ app/frontend/static/assets/js/shared/upload.js     |   105 +-
+ .../assets/vendors/ace-builds/src-min/ace.js       | 22040 ++++++-
+ .../vendors/ace-builds/src-min/ext-beautify.js     |   337 +-
+ .../vendors/ace-builds/src-min/ext-code_lens.js    |   204 +
+ .../vendors/ace-builds/src-min/ext-command_bar.js  |   469 +
+ .../assets/vendors/ace-builds/src-min/ext-diff.js  |  4265 ++
+ .../src-min/ext-elastic_tabstops_lite.js           |   232 +-
+ .../assets/vendors/ace-builds/src-min/ext-emmet.js |  1297 +-
+ .../vendors/ace-builds/src-min/ext-error_marker.js |     1 +
+ .../vendors/ace-builds/src-min/ext-hardwrap.js     |   127 +
+ .../ace-builds/src-min/ext-inline_autocomplete.js  |  3548 ++
+ .../ace-builds/src-min/ext-keybinding_menu.js      |   179 +-
+ .../ace-builds/src-min/ext-language_tools.js       |  2719 +-
+ .../vendors/ace-builds/src-min/ext-linking.js      |    60 +-
+ .../vendors/ace-builds/src-min/ext-modelist.js     |   270 +-
+ .../vendors/ace-builds/src-min/ext-options.js      |   853 +-
+ .../vendors/ace-builds/src-min/ext-prompt.js       |  3157 +-
+ .../assets/vendors/ace-builds/src-min/ext-rtl.js   |   140 +-
+ .../vendors/ace-builds/src-min/ext-searchbox.js    |   379 +-
+ .../ace-builds/src-min/ext-settings_menu.js        |   853 +-
+ .../ace-builds/src-min/ext-simple_tokenizer.js     |   137 +
+ .../vendors/ace-builds/src-min/ext-spellcheck.js   |    73 +-
+ .../assets/vendors/ace-builds/src-min/ext-split.js |   197 +-
+ .../ace-builds/src-min/ext-static_highlight.js     |   188 +-
+ .../vendors/ace-builds/src-min/ext-statusbar.js    |    57 +-
+ .../vendors/ace-builds/src-min/ext-textarea.js     |   403 +-
+ .../vendors/ace-builds/src-min/ext-themelist.js    |    74 +-
+ .../vendors/ace-builds/src-min/ext-whitespace.js   |   195 +-
+ .../vendors/ace-builds/src-min/keybinding-emacs.js |  1061 +-
+ .../ace-builds/src-min/keybinding-sublime.js       |   403 +-
+ .../vendors/ace-builds/src-min/keybinding-vim.js   |  7095 ++-
+ .../ace-builds/src-min/keybinding-vscode.js        |   255 +
+ .../assets/vendors/ace-builds/src-min/mode-abap.js |   194 +-
+ .../assets/vendors/ace-builds/src-min/mode-abc.js  |   237 +-
+ .../ace-builds/src-min/mode-actionscript.js        |   228 +-
+ .../assets/vendors/ace-builds/src-min/mode-ada.js  |   102 +-
+ .../assets/vendors/ace-builds/src-min/mode-alda.js |   279 +
+ .../vendors/ace-builds/src-min/mode-apache_conf.js |   312 +-
+ .../assets/vendors/ace-builds/src-min/mode-apex.js |   396 +-
+ .../vendors/ace-builds/src-min/mode-applescript.js |   226 +-
+ .../assets/vendors/ace-builds/src-min/mode-aql.js  |    86 +-
+ .../vendors/ace-builds/src-min/mode-asciidoc.js    |   305 +-
+ .../assets/vendors/ace-builds/src-min/mode-asl.js  |   351 +-
+ .../ace-builds/src-min/mode-assembly_arm32.js      |   185 +
+ .../ace-builds/src-min/mode-assembly_x86.js        |   164 +-
+ .../vendors/ace-builds/src-min/mode-astro.js       |  2474 +
+ .../vendors/ace-builds/src-min/mode-autohotkey.js  |   202 +-
+ .../vendors/ace-builds/src-min/mode-basic.js       |   201 +
+ .../vendors/ace-builds/src-min/mode-batchfile.js   |   193 +-
+ .../vendors/ace-builds/src-min/mode-bibtex.js      |   318 +
+ .../assets/vendors/ace-builds/src-min/mode-bro.js  |     8 -
+ .../vendors/ace-builds/src-min/mode-c9search.js    |   244 +-
+ .../vendors/ace-builds/src-min/mode-c_cpp.js       |   411 +-
+ .../vendors/ace-builds/src-min/mode-cirru.js       |   186 +-
+ .../vendors/ace-builds/src-min/mode-clojure.js     |   316 +-
+ .../assets/vendors/ace-builds/src-min/mode-clue.js |   361 +
+ .../vendors/ace-builds/src-min/mode-cobol.js       |    76 +-
+ .../vendors/ace-builds/src-min/mode-coffee.js      |   329 +-
+ .../vendors/ace-builds/src-min/mode-coldfusion.js  |  2403 +-
+ .../vendors/ace-builds/src-min/mode-crystal.js     |   580 +-
+ .../vendors/ace-builds/src-min/mode-csharp.js      |   407 +-
+ .../ace-builds/src-min/mode-csound_document.js     |  4066 +-
+ .../ace-builds/src-min/mode-csound_orchestra.js    |  2917 +-
+ .../ace-builds/src-min/mode-csound_score.js        |   403 +-
+ .../assets/vendors/ace-builds/src-min/mode-csp.js  |    53 +-
+ .../assets/vendors/ace-builds/src-min/mode-css.js  |   626 +-
+ .../assets/vendors/ace-builds/src-min/mode-csv.js  |    97 +
+ .../vendors/ace-builds/src-min/mode-curly.js       |  2375 +-
+ .../vendors/ace-builds/src-min/mode-cuttlefish.js  |    56 +
+ .../assets/vendors/ace-builds/src-min/mode-d.js    |   444 +-
+ .../assets/vendors/ace-builds/src-min/mode-dart.js |   612 +-
+ .../assets/vendors/ace-builds/src-min/mode-diff.js |   123 +-
+ .../vendors/ace-builds/src-min/mode-django.js      |  2410 +-
+ .../vendors/ace-builds/src-min/mode-dockerfile.js  |   421 +-
+ .../assets/vendors/ace-builds/src-min/mode-dot.js  |   342 +-
+ .../vendors/ace-builds/src-min/mode-drools.js      |   601 +-
+ .../vendors/ace-builds/src-min/mode-edifact.js     |   124 +-
+ .../vendors/ace-builds/src-min/mode-eiffel.js      |   114 +-
+ .../assets/vendors/ace-builds/src-min/mode-ejs.js  |  3271 +-
+ .../vendors/ace-builds/src-min/mode-elixir.js      |   437 +-
+ .../assets/vendors/ace-builds/src-min/mode-elm.js  |   268 +-
+ .../vendors/ace-builds/src-min/mode-erlang.js      |   830 +-
+ .../assets/vendors/ace-builds/src-min/mode-flix.js |   164 +
+ .../vendors/ace-builds/src-min/mode-forth.js       |   247 +-
+ .../vendors/ace-builds/src-min/mode-fortran.js     |   355 +-
+ .../vendors/ace-builds/src-min/mode-fsharp.js      |   271 +-
+ .../assets/vendors/ace-builds/src-min/mode-fsl.js  |   220 +-
+ .../assets/vendors/ace-builds/src-min/mode-ftl.js  |  1249 +-
+ .../vendors/ace-builds/src-min/mode-gcode.js       |    68 +-
+ .../vendors/ace-builds/src-min/mode-gherkin.js     |   148 +-
+ .../vendors/ace-builds/src-min/mode-gitignore.js   |    43 +-
+ .../assets/vendors/ace-builds/src-min/mode-glsl.js |   469 +-
+ .../vendors/ace-builds/src-min/mode-gobstones.js   |  1453 +-
+ .../vendors/ace-builds/src-min/mode-golang.js      |   335 +-
+ .../ace-builds/src-min/mode-graphqlschema.js       |   168 +-
+ .../vendors/ace-builds/src-min/mode-groovy.js      |  1395 +-
+ .../assets/vendors/ace-builds/src-min/mode-haml.js |  1900 +-
+ .../vendors/ace-builds/src-min/mode-handlebars.js  |  2432 +-
+ .../vendors/ace-builds/src-min/mode-haskell.js     |   318 +-
+ .../ace-builds/src-min/mode-haskell_cabal.js       |   129 +-
+ .../assets/vendors/ace-builds/src-min/mode-haxe.js |   307 +-
+ .../vendors/ace-builds/src-min/mode-hjson.js       |   312 +-
+ .../assets/vendors/ace-builds/src-min/mode-html.js |  2333 +-
+ .../vendors/ace-builds/src-min/mode-html_elixir.js |  2839 +-
+ .../vendors/ace-builds/src-min/mode-html_ruby.js   |  3288 +-
+ .../assets/vendors/ace-builds/src-min/mode-ini.js  |   132 +-
+ .../assets/vendors/ace-builds/src-min/mode-io.js   |   204 +-
+ .../assets/vendors/ace-builds/src-min/mode-ion.js  |   477 +
+ .../assets/vendors/ace-builds/src-min/mode-jack.js |   287 +-
+ .../assets/vendors/ace-builds/src-min/mode-jade.js |  2011 +-
+ .../assets/vendors/ace-builds/src-min/mode-java.js |  1559 +-
+ .../vendors/ace-builds/src-min/mode-javascript.js  |  1185 +-
+ .../assets/vendors/ace-builds/src-min/mode-jexl.js |   270 +
+ .../assets/vendors/ace-builds/src-min/mode-json.js |   269 +-
+ .../vendors/ace-builds/src-min/mode-json5.js       |   308 +
+ .../vendors/ace-builds/src-min/mode-jsoniq.js      |  2571 +-
+ .../assets/vendors/ace-builds/src-min/mode-jsp.js  |  1612 +-
+ .../assets/vendors/ace-builds/src-min/mode-jssm.js |   287 +-
+ .../assets/vendors/ace-builds/src-min/mode-jsx.js  |  1203 +-
+ .../vendors/ace-builds/src-min/mode-julia.js       |   248 +-
+ .../vendors/ace-builds/src-min/mode-kotlin.js      |   439 +-
+ .../vendors/ace-builds/src-min/mode-latex.js       |   246 +-
+ .../vendors/ace-builds/src-min/mode-latte.js       |  2522 +
+ .../assets/vendors/ace-builds/src-min/mode-less.js |   736 +-
+ .../vendors/ace-builds/src-min/mode-liquid.js      |  2735 +-
+ .../assets/vendors/ace-builds/src-min/mode-lisp.js |    98 +-
+ .../vendors/ace-builds/src-min/mode-livescript.js  |   266 +-
+ .../vendors/ace-builds/src-min/mode-logiql.js      |   266 +-
+ .../vendors/ace-builds/src-min/mode-logtalk.js     |   303 +-
+ .../assets/vendors/ace-builds/src-min/mode-lsl.js  |   281 +-
+ .../assets/vendors/ace-builds/src-min/mode-lua.js  |   387 +-
+ .../vendors/ace-builds/src-min/mode-luapage.js     |  2779 +-
+ .../vendors/ace-builds/src-min/mode-lucene.js      |   139 +-
+ .../vendors/ace-builds/src-min/mode-makefile.js    |   368 +-
+ .../vendors/ace-builds/src-min/mode-markdown.js    |  2929 +-
+ .../assets/vendors/ace-builds/src-min/mode-mask.js |  1751 +-
+ .../vendors/ace-builds/src-min/mode-matlab.js      |   233 +-
+ .../assets/vendors/ace-builds/src-min/mode-maze.js |   250 +-
+ .../vendors/ace-builds/src-min/mode-mediawiki.js   |   580 +
+ .../assets/vendors/ace-builds/src-min/mode-mel.js  |   207 +-
+ .../assets/vendors/ace-builds/src-min/mode-mips.js |   231 +
+ .../vendors/ace-builds/src-min/mode-mixal.js       |   104 +-
+ .../vendors/ace-builds/src-min/mode-mushcode.js    |   636 +-
+ .../vendors/ace-builds/src-min/mode-mysql.js       |   144 +-
+ .../vendors/ace-builds/src-min/mode-nasal.js       |   513 +
+ .../vendors/ace-builds/src-min/mode-nginx.js       |   256 +-
+ .../assets/vendors/ace-builds/src-min/mode-nim.js  |   319 +-
+ .../assets/vendors/ace-builds/src-min/mode-nix.js  |   549 +-
+ .../assets/vendors/ace-builds/src-min/mode-nsis.js |   273 +-
+ .../vendors/ace-builds/src-min/mode-nunjucks.js    |  2677 +
+ .../vendors/ace-builds/src-min/mode-objectivec.js  |   620 +-
+ .../vendors/ace-builds/src-min/mode-ocaml.js       |   372 +-
+ .../assets/vendors/ace-builds/src-min/mode-odin.js |   449 +
+ .../vendors/ace-builds/src-min/mode-partiql.js     |   750 +
+ .../vendors/ace-builds/src-min/mode-pascal.js      |   198 +-
+ .../assets/vendors/ace-builds/src-min/mode-perl.js |   312 +-
+ .../vendors/ace-builds/src-min/mode-perl6.js       |     8 -
+ .../vendors/ace-builds/src-min/mode-pgsql.js       |  1854 +-
+ .../assets/vendors/ace-builds/src-min/mode-php.js  | 14066 ++++-
+ .../ace-builds/src-min/mode-php_laravel_blade.js   | 14254 ++++-
+ .../assets/vendors/ace-builds/src-min/mode-pig.js  |   272 +-
+ .../vendors/ace-builds/src-min/mode-plain_text.js  |    21 +-
+ .../vendors/ace-builds/src-min/mode-plsql.js       |   268 +
+ .../vendors/ace-builds/src-min/mode-powershell.js  |   561 +-
+ .../vendors/ace-builds/src-min/mode-praat.js       |   406 +-
+ .../vendors/ace-builds/src-min/mode-prisma.js      |   457 +
+ .../vendors/ace-builds/src-min/mode-prolog.js      |   299 +-
+ .../vendors/ace-builds/src-min/mode-properties.js  |    63 +-
+ .../vendors/ace-builds/src-min/mode-protobuf.js    |   492 +-
+ .../assets/vendors/ace-builds/src-min/mode-prql.js |   323 +
+ .../vendors/ace-builds/src-min/mode-puppet.js      |   310 +-
+ .../vendors/ace-builds/src-min/mode-python.js      |   470 +-
+ .../assets/vendors/ace-builds/src-min/mode-qml.js  |   346 +
+ .../assets/vendors/ace-builds/src-min/mode-r.js    |   381 +-
+ .../assets/vendors/ace-builds/src-min/mode-raku.js |   516 +
+ .../vendors/ace-builds/src-min/mode-razor.js       |  2685 +-
+ .../assets/vendors/ace-builds/src-min/mode-rdoc.js |   280 +-
+ .../assets/vendors/ace-builds/src-min/mode-red.js  |   382 +-
+ .../vendors/ace-builds/src-min/mode-redshift.js    |   315 +-
+ .../vendors/ace-builds/src-min/mode-rhtml.js       |  2744 +-
+ .../vendors/ace-builds/src-min/mode-robot.js       |   168 +
+ .../assets/vendors/ace-builds/src-min/mode-rst.js  |   239 +-
+ .../assets/vendors/ace-builds/src-min/mode-ruby.js |   915 +-
+ .../assets/vendors/ace-builds/src-min/mode-rust.js |   387 +-
+ .../assets/vendors/ace-builds/src-min/mode-sac.js  |   349 +
+ .../assets/vendors/ace-builds/src-min/mode-sass.js |   474 +-
+ .../assets/vendors/ace-builds/src-min/mode-scad.js |   344 +-
+ .../vendors/ace-builds/src-min/mode-scala.js       |  1389 +-
+ .../vendors/ace-builds/src-min/mode-scheme.js      |   204 +-
+ .../vendors/ace-builds/src-min/mode-scrypt.js      |   317 +
+ .../assets/vendors/ace-builds/src-min/mode-scss.js |   762 +-
+ .../assets/vendors/ace-builds/src-min/mode-sh.js   |   381 +-
+ .../assets/vendors/ace-builds/src-min/mode-sjs.js  |  1387 +-
+ .../assets/vendors/ace-builds/src-min/mode-slim.js |  4764 +-
+ .../vendors/ace-builds/src-min/mode-smarty.js      |  2430 +-
+ .../vendors/ace-builds/src-min/mode-smithy.js      |   456 +
+ .../vendors/ace-builds/src-min/mode-snippets.js    |   177 +-
+ .../ace-builds/src-min/mode-soy_template.js        |  2605 +-
+ .../vendors/ace-builds/src-min/mode-space.js       |   145 +-
+ .../vendors/ace-builds/src-min/mode-sparql.js      |   282 +-
+ .../assets/vendors/ace-builds/src-min/mode-sql.js  |   215 +-
+ .../vendors/ace-builds/src-min/mode-sqlserver.js   |   385 +-
+ .../vendors/ace-builds/src-min/mode-stylus.js      |   437 +-
+ .../assets/vendors/ace-builds/src-min/mode-svg.js  |  1481 +-
+ .../vendors/ace-builds/src-min/mode-swift.js       |   336 +-
+ .../assets/vendors/ace-builds/src-min/mode-tcl.js  |   332 +-
+ .../vendors/ace-builds/src-min/mode-terraform.js   |   340 +-
+ .../assets/vendors/ace-builds/src-min/mode-tex.js  |   206 +-
+ .../assets/vendors/ace-builds/src-min/mode-text.js |     1 +
+ .../vendors/ace-builds/src-min/mode-textile.js     |   119 +-
+ .../assets/vendors/ace-builds/src-min/mode-toml.js |   123 +-
+ .../assets/vendors/ace-builds/src-min/mode-tsv.js  |   124 +
+ .../assets/vendors/ace-builds/src-min/mode-tsx.js  |  1270 +-
+ .../vendors/ace-builds/src-min/mode-turtle.js      |   258 +-
+ .../assets/vendors/ace-builds/src-min/mode-twig.js |  2496 +-
+ .../vendors/ace-builds/src-min/mode-typescript.js  |  1248 +-
+ .../assets/vendors/ace-builds/src-min/mode-vala.js |   548 +-
+ .../vendors/ace-builds/src-min/mode-vbscript.js    |   596 +-
+ .../vendors/ace-builds/src-min/mode-velocity.js    |  2574 +-
+ .../vendors/ace-builds/src-min/mode-verilog.js     |    92 +-
+ .../assets/vendors/ace-builds/src-min/mode-vhdl.js |    88 +-
+ .../vendors/ace-builds/src-min/mode-visualforce.js |  2448 +-
+ .../assets/vendors/ace-builds/src-min/mode-vue.js  |  3834 ++
+ .../vendors/ace-builds/src-min/mode-wollok.js      |  1323 +-
+ .../assets/vendors/ace-builds/src-min/mode-xml.js  |   471 +-
+ .../vendors/ace-builds/src-min/mode-xquery.js      |  2583 +-
+ .../assets/vendors/ace-builds/src-min/mode-yaml.js |   389 +-
+ .../assets/vendors/ace-builds/src-min/mode-zeek.js |   496 +-
+ .../assets/vendors/ace-builds/src-min/mode-zig.js  |   585 +
+ .../vendors/ace-builds/src-min/snippets/abap.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/abc.js     |    10 +-
+ .../ace-builds/src-min/snippets/actionscript.js    |    10 +-
+ .../vendors/ace-builds/src-min/snippets/ada.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/alda.js    |     9 +
+ .../ace-builds/src-min/snippets/apache_conf.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/apex.js    |     3 +-
+ .../ace-builds/src-min/snippets/applescript.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/aql.js     |     3 +-
+ .../ace-builds/src-min/snippets/asciidoc.js        |     3 +-
+ .../vendors/ace-builds/src-min/snippets/asl.js     |     3 +-
+ .../ace-builds/src-min/snippets/assembly_arm32.js  |     9 +
+ .../ace-builds/src-min/snippets/assembly_x86.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/astro.js   |     9 +
+ .../ace-builds/src-min/snippets/autohotkey.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/basic.js   |     9 +
+ .../ace-builds/src-min/snippets/batchfile.js       |     3 +-
+ .../vendors/ace-builds/src-min/snippets/bibtex.js  |     9 +
+ .../vendors/ace-builds/src-min/snippets/bro.js     |     8 -
+ .../ace-builds/src-min/snippets/c9search.js        |     3 +-
+ .../vendors/ace-builds/src-min/snippets/c_cpp.js   |    10 +-
+ .../vendors/ace-builds/src-min/snippets/cirru.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/clojure.js |    10 +-
+ .../vendors/ace-builds/src-min/snippets/clue.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/cobol.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/coffee.js  |    10 +-
+ .../ace-builds/src-min/snippets/coldfusion.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/crystal.js |     3 +-
+ .../vendors/ace-builds/src-min/snippets/csharp.js  |     3 +-
+ .../ace-builds/src-min/snippets/csound_document.js |    10 +-
+ .../src-min/snippets/csound_orchestra.js           |    10 +-
+ .../ace-builds/src-min/snippets/csound_score.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/csp.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/css.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/csv.js     |     9 +
+ .../vendors/ace-builds/src-min/snippets/curly.js   |     3 +-
+ .../ace-builds/src-min/snippets/cuttlefish.js      |     9 +
+ .../vendors/ace-builds/src-min/snippets/d.js       |     3 +-
+ .../vendors/ace-builds/src-min/snippets/dart.js    |    10 +-
+ .../vendors/ace-builds/src-min/snippets/diff.js    |    10 +-
+ .../vendors/ace-builds/src-min/snippets/django.js  |    10 +-
+ .../ace-builds/src-min/snippets/dockerfile.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/dot.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/drools.js  |    10 +-
+ .../vendors/ace-builds/src-min/snippets/edifact.js |    10 +-
+ .../vendors/ace-builds/src-min/snippets/eiffel.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/ejs.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/elixir.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/elm.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/erlang.js  |    10 +-
+ .../vendors/ace-builds/src-min/snippets/flix.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/forth.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/fortran.js |     3 +-
+ .../vendors/ace-builds/src-min/snippets/fsharp.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/fsl.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/ftl.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/gcode.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/gherkin.js |     3 +-
+ .../ace-builds/src-min/snippets/gitignore.js       |     3 +-
+ .../vendors/ace-builds/src-min/snippets/glsl.js    |     3 +-
+ .../ace-builds/src-min/snippets/gobstones.js       |    10 +-
+ .../vendors/ace-builds/src-min/snippets/golang.js  |     3 +-
+ .../ace-builds/src-min/snippets/graphqlschema.js   |    10 +-
+ .../vendors/ace-builds/src-min/snippets/groovy.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/haml.js    |    10 +-
+ .../ace-builds/src-min/snippets/handlebars.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/haskell.js |    10 +-
+ .../ace-builds/src-min/snippets/haskell_cabal.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/haxe.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/hjson.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/html.js    |    10 +-
+ .../ace-builds/src-min/snippets/html_elixir.js     |     3 +-
+ .../ace-builds/src-min/snippets/html_ruby.js       |     3 +-
+ .../vendors/ace-builds/src-min/snippets/ini.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/io.js      |    68 +-
+ .../vendors/ace-builds/src-min/snippets/ion.js     |     9 +
+ .../vendors/ace-builds/src-min/snippets/jack.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/jade.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/java.js    |    10 +-
+ .../ace-builds/src-min/snippets/javascript.js      |    10 +-
+ .../vendors/ace-builds/src-min/snippets/jexl.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/json.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/json5.js   |     9 +
+ .../vendors/ace-builds/src-min/snippets/jsoniq.js  |    72 +-
+ .../vendors/ace-builds/src-min/snippets/jsp.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/jssm.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/jsx.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/julia.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/kotlin.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/latex.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/latte.js   |     9 +
+ .../vendors/ace-builds/src-min/snippets/less.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/liquid.js  |    10 +-
+ .../vendors/ace-builds/src-min/snippets/lisp.js    |     3 +-
+ .../ace-builds/src-min/snippets/livescript.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/logiql.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/logtalk.js |     3 +-
+ .../vendors/ace-builds/src-min/snippets/lsl.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/lua.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/luapage.js |     3 +-
+ .../vendors/ace-builds/src-min/snippets/lucene.js  |     3 +-
+ .../ace-builds/src-min/snippets/makefile.js        |    10 +-
+ .../ace-builds/src-min/snippets/markdown.js        |    10 +-
+ .../vendors/ace-builds/src-min/snippets/mask.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/matlab.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/maze.js    |    10 +-
+ .../ace-builds/src-min/snippets/mediawiki.js       |     9 +
+ .../vendors/ace-builds/src-min/snippets/mel.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/mips.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/mixal.js   |     3 +-
+ .../ace-builds/src-min/snippets/mushcode.js        |     3 +-
+ .../vendors/ace-builds/src-min/snippets/mysql.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/nasal.js   |     9 +
+ .../vendors/ace-builds/src-min/snippets/nginx.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/nim.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/nix.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/nsis.js    |     3 +-
+ .../ace-builds/src-min/snippets/nunjucks.js        |     9 +
+ .../ace-builds/src-min/snippets/objectivec.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/ocaml.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/odin.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/partiql.js |     9 +
+ .../vendors/ace-builds/src-min/snippets/pascal.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/perl.js    |    10 +-
+ .../vendors/ace-builds/src-min/snippets/perl6.js   |     8 -
+ .../vendors/ace-builds/src-min/snippets/pgsql.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/php.js     |    10 +-
+ .../src-min/snippets/php_laravel_blade.js          |     3 +-
+ .../vendors/ace-builds/src-min/snippets/pig.js     |     3 +-
+ .../ace-builds/src-min/snippets/plain_text.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/plsql.js   |     9 +
+ .../ace-builds/src-min/snippets/powershell.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/praat.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/prisma.js  |     9 +
+ .../vendors/ace-builds/src-min/snippets/prolog.js  |     3 +-
+ .../ace-builds/src-min/snippets/properties.js      |     3 +-
+ .../ace-builds/src-min/snippets/protobuf.js        |     3 +-
+ .../vendors/ace-builds/src-min/snippets/prql.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/puppet.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/python.js  |    10 +-
+ .../vendors/ace-builds/src-min/snippets/qml.js     |     9 +
+ .../vendors/ace-builds/src-min/snippets/r.js       |    10 +-
+ .../vendors/ace-builds/src-min/snippets/raku.js    |     9 +
+ .../vendors/ace-builds/src-min/snippets/razor.js   |    10 +-
+ .../vendors/ace-builds/src-min/snippets/rdoc.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/red.js     |     3 +-
+ .../ace-builds/src-min/snippets/redshift.js        |     3 +-
+ .../vendors/ace-builds/src-min/snippets/rhtml.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/robot.js   |    16 +
+ .../vendors/ace-builds/src-min/snippets/rst.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/ruby.js    |    10 +-
+ .../vendors/ace-builds/src-min/snippets/rust.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/sac.js     |     9 +
+ .../vendors/ace-builds/src-min/snippets/sass.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/scad.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/scala.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/scheme.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/scrypt.js  |     9 +
+ .../vendors/ace-builds/src-min/snippets/scss.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/sh.js      |    10 +-
+ .../vendors/ace-builds/src-min/snippets/sjs.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/slim.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/smarty.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/smithy.js  |     9 +
+ .../ace-builds/src-min/snippets/snippets.js        |    10 +-
+ .../ace-builds/src-min/snippets/soy_template.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/space.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/sparql.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/sql.js     |    10 +-
+ .../ace-builds/src-min/snippets/sqlserver.js       |    10 +-
+ .../vendors/ace-builds/src-min/snippets/stylus.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/svg.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/swift.js   |     3 +-
+ .../vendors/ace-builds/src-min/snippets/tcl.js     |    10 +-
+ .../ace-builds/src-min/snippets/terraform.js       |     3 +-
+ .../vendors/ace-builds/src-min/snippets/tex.js     |    10 +-
+ .../vendors/ace-builds/src-min/snippets/text.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/textile.js |    10 +-
+ .../vendors/ace-builds/src-min/snippets/toml.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/tsv.js     |     9 +
+ .../vendors/ace-builds/src-min/snippets/tsx.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/turtle.js  |     3 +-
+ .../vendors/ace-builds/src-min/snippets/twig.js    |     3 +-
+ .../ace-builds/src-min/snippets/typescript.js      |     3 +-
+ .../vendors/ace-builds/src-min/snippets/vala.js    |   193 +-
+ .../ace-builds/src-min/snippets/vbscript.js        |     3 +-
+ .../ace-builds/src-min/snippets/velocity.js        |    11 +-
+ .../vendors/ace-builds/src-min/snippets/verilog.js |     3 +-
+ .../vendors/ace-builds/src-min/snippets/vhdl.js    |     3 +-
+ .../ace-builds/src-min/snippets/visualforce.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/vue.js     |     9 +
+ .../vendors/ace-builds/src-min/snippets/wollok.js  |    10 +-
+ .../vendors/ace-builds/src-min/snippets/xml.js     |     3 +-
+ .../vendors/ace-builds/src-min/snippets/xquery.js  |    72 +-
+ .../vendors/ace-builds/src-min/snippets/yaml.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/zeek.js    |     3 +-
+ .../vendors/ace-builds/src-min/snippets/zig.js     |     9 +
+ .../vendors/ace-builds/src-min/theme-ambiance.js   |    12 +-
+ .../vendors/ace-builds/src-min/theme-chaos.js      |    25 +-
+ .../vendors/ace-builds/src-min/theme-chrome.js     |    25 +-
+ .../vendors/ace-builds/src-min/theme-cloud9_day.js |    19 +
+ .../ace-builds/src-min/theme-cloud9_night.js       |    18 +
+ .../src-min/theme-cloud9_night_low_color.js        |    18 +
+ .../ace-builds/src-min/theme-cloud_editor.js       |    19 +
+ .../ace-builds/src-min/theme-cloud_editor_dark.js  |    19 +
+ .../vendors/ace-builds/src-min/theme-clouds.js     |    25 +-
+ .../ace-builds/src-min/theme-clouds_midnight.js    |    25 +-
+ .../vendors/ace-builds/src-min/theme-cobalt.js     |    25 +-
+ .../ace-builds/src-min/theme-crimson_editor.js     |    25 +-
+ .../vendors/ace-builds/src-min/theme-dawn.js       |    12 +-
+ .../vendors/ace-builds/src-min/theme-dracula.js    |    13 +-
+ .../ace-builds/src-min/theme-dreamweaver.js        |    25 +-
+ .../vendors/ace-builds/src-min/theme-eclipse.js    |    26 +-
+ .../vendors/ace-builds/src-min/theme-github.js     |    12 +-
+ .../ace-builds/src-min/theme-github_dark.js        |    18 +
+ .../src-min/theme-github_light_default.js          |    18 +
+ .../assets/vendors/ace-builds/src-min/theme-gob.js |    12 +-
+ .../vendors/ace-builds/src-min/theme-gruvbox.js    |    12 +-
+ .../ace-builds/src-min/theme-gruvbox_dark_hard.js  |    18 +
+ .../ace-builds/src-min/theme-gruvbox_light_hard.js |    18 +
+ .../ace-builds/src-min/theme-idle_fingers.js       |    25 +-
+ .../vendors/ace-builds/src-min/theme-iplastic.js   |    12 +-
+ .../ace-builds/src-min/theme-katzenmilch.js        |    12 +-
+ .../vendors/ace-builds/src-min/theme-kr_theme.js   |    12 +-
+ .../vendors/ace-builds/src-min/theme-kuroir.js     |    12 +-
+ .../vendors/ace-builds/src-min/theme-merbivore.js  |    25 +-
+ .../ace-builds/src-min/theme-merbivore_soft.js     |    25 +-
+ .../ace-builds/src-min/theme-mono_industrial.js    |    25 +-
+ .../vendors/ace-builds/src-min/theme-monokai.js    |    12 +-
+ .../vendors/ace-builds/src-min/theme-nord_dark.js  |    19 +
+ .../vendors/ace-builds/src-min/theme-one_dark.js   |    18 +
+ .../ace-builds/src-min/theme-pastel_on_dark.js     |    12 +-
+ .../ace-builds/src-min/theme-solarized_dark.js     |    12 +-
+ .../ace-builds/src-min/theme-solarized_light.js    |    12 +-
+ .../vendors/ace-builds/src-min/theme-sqlserver.js  |    25 +-
+ .../vendors/ace-builds/src-min/theme-terminal.js   |    12 +-
+ .../vendors/ace-builds/src-min/theme-textmate.js   |    23 +-
+ .../vendors/ace-builds/src-min/theme-tomorrow.js   |    25 +-
+ .../ace-builds/src-min/theme-tomorrow_night.js     |    12 +-
+ .../src-min/theme-tomorrow_night_blue.js           |    25 +-
+ .../src-min/theme-tomorrow_night_bright.js         |    12 +-
+ .../src-min/theme-tomorrow_night_eighties.js       |    12 +-
+ .../vendors/ace-builds/src-min/theme-twilight.js   |    12 +-
+ .../ace-builds/src-min/theme-vibrant_ink.js        |    25 +-
+ .../vendors/ace-builds/src-min/theme-xcode.js      |    25 +-
+ .../vendors/ace-builds/src-min/worker-base.js      |  1332 +
+ .../vendors/ace-builds/src-min/worker-coffee.js    |  1382 +-
+ .../vendors/ace-builds/src-min/worker-css.js       |  8914 ++-
+ .../vendors/ace-builds/src-min/worker-html.js      | 10844 +++-
+ .../ace-builds/src-min/worker-javascript.js        | 15354 ++++-
+ .../vendors/ace-builds/src-min/worker-json.js      |  1627 +-
+ .../vendors/ace-builds/src-min/worker-lua.js       |  3520 +-
+ .../vendors/ace-builds/src-min/worker-php.js       |  3789 +-
+ .../vendors/ace-builds/src-min/worker-xml.js       |  3123 +-
+ .../vendors/ace-builds/src-min/worker-xquery.js    | 57580 ++++++++++++++++++-
+ .../vendors/ace-builds/src-min/worker-yaml.js      |  5819 ++
+ app/frontend/templates/base.html                   |     2 +-
+ app/frontend/templates/blank_base.html             |    64 +-
+ app/frontend/templates/panel/loading.html          |    11 +-
+ .../templates/panel/parts/context_menu.html        |     7 +
+ app/frontend/templates/panel/server_file_edit.html |    57 +
+ app/frontend/templates/panel/server_files.html     |  1102 +-
+ app/translations/cs_CS.json                        |     1 -
+ app/translations/de_DE.json                        |     1 -
+ app/translations/en_EN.json                        |    28 +-
+ app/translations/es_ES.json                        |     1 -
+ app/translations/fi_FI.json                        |     1 -
+ app/translations/fr_FR.json                        |    32 +-
+ app/translations/fy_NL.json                        |     1 -
+ app/translations/he_IL.json                        |     1 -
+ app/translations/hr_HR.json                        |     1 -
+ app/translations/id_ID.json                        |     1 -
+ app/translations/it_IT.json                        |     1 -
+ app/translations/ja_JP.json                        |     1 -
+ app/translations/ko_KR.json                        |     1 -
+ app/translations/lol_EN.json                       |     1 -
+ app/translations/lv_LV.json                        |     1 -
+ app/translations/nl_BE.json                        |     1 -
+ app/translations/nl_NL.json                        |    32 +-
+ app/translations/pl_PL.json                        |     1 -
+ app/translations/pt_BR.json                        |     1 -
+ app/translations/ru_RU.json                        |     1 -
+ app/translations/th_TH.json                        |     1 -
+ app/translations/tr_TR.json                        |     1 -
+ app/translations/uk_UA.json                        |     1 -
+ app/translations/zh_CN.json                        |     3 +-
+ requirements.txt                                   |     2 +-
+ sonar-project.properties                           |     2 +-
+ 536 files changed, 345931 insertions(+), 1829 deletions(-)
+ create mode 100644 app/frontend/static/assets/css/partial/crafty-context-menu.css
+ create mode 100644 app/frontend/static/assets/css/partial/crafty-editor.css
+ create mode 100644 app/frontend/static/assets/css/partial/crafty-files.css
+ create mode 100644 app/frontend/static/assets/js/shared/context-menu.js
+ create mode 100644 app/frontend/static/assets/js/shared/editor.js
+ create mode 100644 app/frontend/static/assets/js/shared/files.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/ext-code_lens.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/ext-command_bar.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/ext-diff.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/ext-hardwrap.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/ext-inline_autocomplete.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/ext-simple_tokenizer.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/keybinding-vscode.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-alda.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-assembly_arm32.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-astro.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-basic.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-bibtex.js
+ delete mode 100755 app/frontend/static/assets/vendors/ace-builds/src-min/mode-bro.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-clue.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-csv.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-cuttlefish.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-flix.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-ion.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-jexl.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-json5.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-latte.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-mediawiki.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-mips.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-nasal.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-nunjucks.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-odin.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-partiql.js
+ delete mode 100755 app/frontend/static/assets/vendors/ace-builds/src-min/mode-perl6.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-plsql.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-prisma.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-prql.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-qml.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-raku.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-robot.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-sac.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-scrypt.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-smithy.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-tsv.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-vue.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/mode-zig.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/alda.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/assembly_arm32.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/astro.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/basic.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/bibtex.js
+ delete mode 100755 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/bro.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/clue.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/csv.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/cuttlefish.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/flix.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/ion.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/jexl.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/json5.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/latte.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/mediawiki.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/mips.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/nasal.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/nunjucks.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/odin.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/partiql.js
+ delete mode 100755 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/perl6.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/plsql.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/prisma.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/prql.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/qml.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/raku.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/robot.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/sac.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/scrypt.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/smithy.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/tsv.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/vue.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/snippets/zig.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-cloud9_day.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-cloud9_night.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-cloud9_night_low_color.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-cloud_editor.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-cloud_editor_dark.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-github_dark.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-github_light_default.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-gruvbox_dark_hard.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-gruvbox_light_hard.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-nord_dark.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/theme-one_dark.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/worker-base.js
+ create mode 100644 app/frontend/static/assets/vendors/ace-builds/src-min/worker-yaml.js
+ create mode 100644 app/frontend/templates/panel/parts/context_menu.html
+ create mode 100644 app/frontend/templates/panel/server_file_edit.html
 
 Array
 (
@@ -19503,6 +20114,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+cleao/guacamole
+cleao/guacamole:latest Downloads: 3798  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19528,6 +20141,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+jjdenhertog/spotify-to-plex
+jjdenhertog/spotify-to-plex:latest Downloads: 10965  Stars: 0  Base: unknown
+alangrainger/immich-public-proxy
+alangrainger/immich-public-proxy:latest Downloads: 308884  Stars: 2  Base: unknown
+yojoshb/jmusicbot
+yojoshb/jmusicbot:latest Downloads: 8178  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
@@ -19664,6 +20283,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/kata.runtime/master/plugins/kata.runtime.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
+bitnamisecure/redis
+bitnamisecure/redis:latest Downloads: 333635  Stars: 0  Base: unknown
+bitnamisecure/memcached
+bitnamisecure/memcached:latest Downloads: 24918  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
@@ -19689,6 +20312,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+collinwebdesigns/fastapi-dls
+collinwebdesigns/fastapi-dls:latest Downloads: 151289  Stars: 47  Base: unknown
+maildev/maildev
+maildev/maildev:latest Downloads: 46691575  Stars: 125  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
