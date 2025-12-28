@@ -408,16 +408,20 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   bc79a0e..1b6cbb1  main          -> origin/main
- * [new tag]         v3.0.2-beta.1 -> v3.0.2-beta.1
-Updating bc79a0e..1b6cbb1
+   1b6cbb1..b848dee  main          -> origin/main
+ * [new tag]         v3.0.2-beta.2 -> v3.0.2-beta.2
+Updating 1b6cbb1..b848dee
 Fast-forward
- client/package-lock.json            |   4 +-
- client/package.json                 |   2 +-
- server/package-lock.json            |   4 +-
- server/package.json                 |   2 +-
- server/services/StashSyncService.ts | 167 +++++++++++++++++++++++++++++++-----
- 5 files changed, 151 insertions(+), 28 deletions(-)
+ client/package-lock.json                           |  4 +-
+ client/package.json                                |  2 +-
+ server/package-lock.json                           |  4 +-
+ server/package.json                                |  2 +-
+ .../migration.sql                                  |  6 ++
+ server/prisma/schema.prisma                        |  8 ++
+ server/services/StashEntityService.ts              |  9 +-
+ server/services/StashSyncService.ts                | 95 +++++++++++++++++-----
+ 8 files changed, 101 insertions(+), 29 deletions(-)
+ create mode 100644 server/prisma/migrations/20251228000000_add_sync_display_timestamps/migration.sql
 
 Array
 (
@@ -5416,25 +5420,22 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 Downloading linuxserver's Repository
 
 From https://github.com/linuxserver/templates
-   85c70a2..548e80a  main       -> origin/main
-Updating 85c70a2..548e80a
+   548e80a..7c79528  main       -> origin/main
+Updating 548e80a..7c79528
 Fast-forward
- unraid/cura.xml            | 2 +-
- unraid/dogwalk.xml         | 5 ++++-
- unraid/dosbox-staging.xml  | 5 ++++-
- unraid/doublecommander.xml | 5 ++++-
- unraid/ferdium.xml         | 5 ++++-
- unraid/filezilla.xml       | 5 ++++-
- unraid/freecad.xml         | 5 ++++-
- unraid/gimp.xml            | 5 ++++-
- unraid/github-desktop.xml  | 5 ++++-
- unraid/gitqlient.xml       | 5 ++++-
- unraid/gzdoom.xml          | 5 ++++-
- unraid/handbrake.xml       | 5 ++++-
- unraid/inkscape.xml        | 5 ++++-
- unraid/intellij-idea.xml   | 5 ++++-
- unraid/joplin.xml          | 5 ++++-
- 15 files changed, 57 insertions(+), 15 deletions(-)
+ unraid/kali-linux.xml      | 5 ++++-
+ unraid/kdenlive.xml        | 5 ++++-
+ unraid/keepassxc.xml       | 5 ++++-
+ unraid/kicad.xml           | 5 ++++-
+ unraid/krita.xml           | 5 ++++-
+ unraid/librewolf.xml       | 8 +++++++-
+ unraid/lollypop.xml        | 5 ++++-
+ unraid/mediaelch.xml       | 5 ++++-
+ unraid/modrinth.xml        | 5 ++++-
+ unraid/mysql-workbench.xml | 5 ++++-
+ unraid/obsidian.xml        | 5 ++++-
+ unraid/onlyoffice.xml      | 5 ++++-
+ 12 files changed, 51 insertions(+), 12 deletions(-)
 
 Array
 (
