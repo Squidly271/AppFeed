@@ -371,7 +371,39 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   28fb60a..0dfb0b3  master     -> origin/master
+Updating 28fb60a..0dfb0b3
+Fast-forward
+ app/Http/Controllers/Api/EpgApiController.php      |   2 +-
+ app/Http/Controllers/EpgGenerateController.php     |  19 +-
+ .../Controllers/PlaylistGenerateController.php     | 262 +++++++++++----------
+ app/Http/Controllers/XtreamApiController.php       |  46 ++--
+ app/Http/Controllers/XtreamStreamController.php    |  19 +-
+ app/Jobs/GenerateEpgCache.php                      |   6 +
+ app/Jobs/ProcessM3uImport.php                      |   9 +-
+ app/Jobs/ProcessM3uImportChunk.php                 |   2 +-
+ app/Jobs/ProcessM3uVodImportChunk.php              |   2 +-
+ app/Jobs/SyncSeriesStrmFiles.php                   | 106 +++++++--
+ app/Jobs/SyncVodStrmFiles.php                      |  27 ++-
+ app/Models/Epg.php                                 |  93 ++++++++
+ app/Models/StrmFileMapping.php                     | 166 ++++++++++++-
+ app/Providers/Filament/AdminPanelProvider.php      |  15 ++
+ app/Services/EpgCacheService.php                   |  11 +-
+ app/Services/PlaylistService.php                   |   7 +-
+ config/dev.php                                     |   4 +-
+ ...5_12_21_211656_update_cover_field_on_series.php |  28 +++
+ docker-compose.embedded-redis.yml                  | 124 ++++++++++
+ docker-compose.external-all-caddy.yml              |   6 +-
+ docker-compose.external-all.yml                    |   6 +-
+ docker-compose.proxy-vpn.yml                       |   6 +-
+ docker-compose.proxy.yml                           |   6 +-
+ docker/8.4/nginx/laravel.conf                      |  19 +-
+ docker/8.4/redis.conf                              |   2 +-
+ start-container                                    |  23 +-
+ 26 files changed, 797 insertions(+), 219 deletions(-)
+ create mode 100644 database/migrations/2025_12_21_211656_update_cover_field_on_series.php
+ create mode 100644 docker-compose.embedded-redis.yml
 
 Array
 (
@@ -407,32 +439,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   96f5d8a..0a5e7f6  main       -> origin/main
-Updating 96f5d8a..0a5e7f6
-Fast-forward
- client/package-lock.json                           |  10 +
- client/package.json                                |   1 +
- client/src/components/cards/ImageCard.jsx          |  62 +-
- client/src/components/pages/Images.jsx             |  29 +-
- client/src/components/ui/CardComponents.jsx        |   8 +
- client/src/components/ui/Lightbox.jsx              | 379 +++++----
- client/src/components/ui/MetadataDrawer.jsx        | 279 +++++++
- client/src/components/ui/TooltipEntityGrid.jsx     |  14 +-
- client/src/hooks/useFullscreen.js                  |  65 ++
- client/src/utils/imageGalleryInheritance.js        | 255 +++++++
- .../2024-12-29-lightbox-enhancements-design.md     | 277 +++++++
- .../plans/2024-12-29-lightbox-enhancements-impl.md | 843 +++++++++++++++++++++
- .../migration.sql                                  |  24 +
- server/prisma/schema.prisma                        |   6 +-
- server/services/StashEntityService.ts              |  28 +-
- 15 files changed, 2082 insertions(+), 198 deletions(-)
- create mode 100644 client/src/components/ui/MetadataDrawer.jsx
- create mode 100644 client/src/hooks/useFullscreen.js
- create mode 100644 client/src/utils/imageGalleryInheritance.js
- create mode 100644 docs/plans/2024-12-29-lightbox-enhancements-design.md
- create mode 100644 docs/plans/2024-12-29-lightbox-enhancements-impl.md
- create mode 100644 server/prisma/migrations/20251230000000_add_studio_foreign_keys/migration.sql
+Already up to date.
 
 Array
 (
@@ -797,7 +804,12 @@ Processing /tmp/GitHub/repositoryClone/bergware/dynamix-plugins/ssdTrim.xml... D
 
 Downloading Emphyrio's Repository
 
-Already up to date.
+From https://github.com/rschuiling/unraid-templates
+   134ecb8..1dcae71  main       -> origin/main
+Updating 134ecb8..1dcae71
+Fast-forward
+ mail-archiver/mail-archiver.xml | 1 +
+ 1 file changed, 1 insertion(+)
 
 Array
 (
@@ -3773,15 +3785,14 @@ Processing /tmp/GitHub/repositoryClone/apfaffman/docker-templates/ca_profile.xml
 Downloading andaks' Repository
 
 From https://github.com/andaks/unraid-templates
-   510b6a8..f64c570  master     -> origin/master
-Updating 510b6a8..f64c570
+   f64c570..2e96702  master     -> origin/master
+Updating f64c570..2e96702
 Fast-forward
- listmonk/listmonk.xml                       |   2 +-
- technitium-dns-server/technitium-dns-server |  35 ++++++++++++++++++++++++++++
- technitium-dns-server/technitium-logo.png   | Bin 0 -> 744 bytes
- 3 files changed, 36 insertions(+), 1 deletion(-)
- create mode 100644 technitium-dns-server/technitium-dns-server
- create mode 100644 technitium-dns-server/technitium-logo.png
+ technitium-dns-server/technitium-dns-server |  35 ----------------------------
+ technitium-dns-server/technitium-logo.png   | Bin 744 -> 0 bytes
+ 2 files changed, 35 deletions(-)
+ delete mode 100644 technitium-dns-server/technitium-dns-server
+ delete mode 100644 technitium-dns-server/technitium-logo.png
 
 Array
 (
@@ -4049,7 +4060,12 @@ Processing /tmp/GitHub/repositoryClone/DavidWJR/unraid-templates/discord-tickets
 
 Downloading martial's Repository
 
-Already up to date.
+From https://github.com/mmartial/unraid-templates
+   e32717d..695ebca  main       -> origin/main
+Updating e32717d..695ebca
+Fast-forward
+ templates/ComfyUI-Nvidia-Docker.xml | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -8800,9 +8816,7 @@ Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DDNet.xml.
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/RustDeskServer-AiO.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Astroneer.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Soulmask.xml...Success
-Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Nvidia-Drivers.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-nvidia-driver/master/nvidia-driver.plg attempt 1...bool(false)
-out: int(56)
-error: failed.  Sleeping 5... Downloading https://raw.githubusercontent.com/ich777/unraid-nvidia-driver/master/nvidia-driver.plg attempt 2...Success
+Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Nvidia-Drivers.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-nvidia-driver/master/nvidia-driver.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/V-Rising.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/hpsahba.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-hpsahba/master/hpsahba.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Unreal-Tournament-99.xml...Success
@@ -19583,6 +19597,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+schaka/janitorr
+ghcr.io/schaka/janitorr:jvm-stable Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19722,13 +19739,13 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/GiorgioAresu/ZFS-companion-unraid/raw/main/ZFS-companion.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+Tagged - Can't determine last update
+revenz/fileflows
+revenz/fileflows:stable Downloads: 2011503  Stars: 12  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-viyh/whisper
-viyh/whisper:0.1.0-alpha Downloads: 111148  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19741,6 +19758,8 @@ viyh/whisper:0.1.0-alpha Downloads: 111148  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+zoraxydocker/zoraxy
+zoraxydocker/zoraxy Downloads: 637165  Stars: 14  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent22.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent20.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent21.plg attempt 1...
