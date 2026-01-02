@@ -14,11 +14,49 @@ Downloading Repo Info
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   8951e49..5414634  main       -> origin/main
-Updating 8951e49..5414634
+   5414634..a506e04  main       -> origin/main
+Updating 5414634..a506e04
 Fast-forward
- docker-compose.yml | 7 +++++++
- 1 file changed, 7 insertions(+)
+ .env.example                                       |  13 +-
+ .env.local.template                                |  31 --
+ .github/workflows/publish.yml                      |   2 +
+ README.md                                          |  11 +-
+ app/api/admin/orderworks/jobs/[id]/retry/route.ts  |  21 +-
+ app/api/admin/users/discount/route.ts              |   6 +-
+ app/api/checkout/route.ts                          |  63 +++-
+ app/api/models/[id]/route.ts                       |  13 +-
+ app/api/public-config/route.ts                     |   3 +-
+ app/api/stockworks/filament-colors/route.ts        | 191 +++++++++++
+ app/api/upload/route.ts                            |  15 +-
+ app/cart/page.tsx                                  | 372 +++++++++++++++++++--
+ app/globals.css                                    |  52 +++
+ app/layout.tsx                                     |   2 +-
+ app/setup/page.tsx                                 | 106 ------
+ components/HolidayEffects.tsx                      |   3 +-
+ components/admin/BackupControls.tsx                |  22 +-
+ components/admin/JobQueue.tsx                      |   9 +-
+ components/admin/UserDiscountControls.tsx          |   4 +-
+ docker-compose.yml                                 |   2 +
+ lib/backups.js                                     |  69 +++-
+ lib/discounts.ts                                   |   2 +-
+ lib/orders.ts                                      |   6 +-
+ lib/orderworks.ts                                  |  11 +-
+ lib/pricing.ts                                     |   8 +-
+ lib/setupStatus.ts                                 | 161 ---------
+ package.json                                       |   2 +-
+ .../0033_orderworks_jobs_view/migration.sql        |  16 +
+ proxy.ts                                           |   2 -
+ scripts/ensure-env-local.js                        |  23 --
+ scripts/ensure-env.js                              |  23 ++
+ unraid/templates/makerworks-v2.xml                 |   4 +-
+ 32 files changed, 837 insertions(+), 431 deletions(-)
+ delete mode 100644 .env.local.template
+ create mode 100644 app/api/stockworks/filament-colors/route.ts
+ delete mode 100644 app/setup/page.tsx
+ delete mode 100644 lib/setupStatus.ts
+ create mode 100644 prisma/migrations/0033_orderworks_jobs_view/migration.sql
+ delete mode 100644 scripts/ensure-env-local.js
+ create mode 100644 scripts/ensure-env.js
 
 Array
 (
@@ -5410,7 +5448,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   2138dff..d06b1c3  main       -> origin/main
+Updating 2138dff..d06b1c3
+Fast-forward
+ unraid/bitcoin-knots.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -14340,7 +14383,13 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-Already up to date.
+From https://github.com/JPDVM2014/unraid-templates
+   33a83b5..3a75419  main       -> origin/main
+Updating 33a83b5..3a75419
+Fast-forward
+ hypermind.xml | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+ create mode 100644 hypermind.xml
 
 Array
 (
@@ -14360,16 +14409,17 @@ Array
             [11] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/workout-tracker.xml
             [12] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ebookbuddy.xml
             [13] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/cabernet.xml
-            [14] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/reiverr.xml
-            [15] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/spotizerr.xml
-            [16] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/audiodeck.xml
-            [17] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/soularr.xml
-            [18] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/trailarr.xml
-            [19] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ephemera.xml
-            [20] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/lms.xml
-            [21] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ghostboard-server.xml
-            [22] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/listenarr.xml
-            [23] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/readeck.xml
+            [14] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/hypermind.xml
+            [15] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/reiverr.xml
+            [16] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/spotizerr.xml
+            [17] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/audiodeck.xml
+            [18] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/soularr.xml
+            [19] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/trailarr.xml
+            [20] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ephemera.xml
+            [21] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/lms.xml
+            [22] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ghostboard-server.xml
+            [23] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/listenarr.xml
+            [24] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/readeck.xml
         )
 
 )
@@ -14389,6 +14439,7 @@ Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/sonashow.xml..
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/workout-tracker.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ebookbuddy.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/cabernet.xml...Success
+Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/hypermind.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/reiverr.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/spotizerr.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/audiodeck.xml...Success
@@ -14922,7 +14973,15 @@ Processing /tmp/GitHub/repositoryClone/Polemus/Unraid/RabbitMQ/RabbitMQ.xml...Su
 
 Downloading Kilrah's Repository
 
-Already up to date.
+From https://github.com/kilrah/unraid-docker-templates
+   487c8a9..4b64b03  main       -> origin/main
+Updating 487c8a9..4b64b03
+Fast-forward
+ icons/hypermind.png     | Bin 0 -> 1687 bytes
+ templates/hypermind.xml |  32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 32 insertions(+)
+ create mode 100644 icons/hypermind.png
+ create mode 100644 templates/hypermind.xml
 
 Array
 (
@@ -14938,12 +14997,13 @@ Array
             [7] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/thingsboard-postgres.xml
             [8] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/freefilesync.xml
             [9] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/owntone.xml
-            [10] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/cloudflare-ddns-config.xml
-            [11] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/subversion.xml
-            [12] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/searxng.xml
-            [13] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/arduinoide2.xml
-            [14] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/pictshare.xml
-            [15] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/iperf3.xml
+            [10] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/hypermind.xml
+            [11] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/cloudflare-ddns-config.xml
+            [12] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/subversion.xml
+            [13] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/searxng.xml
+            [14] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/arduinoide2.xml
+            [15] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/pictshare.xml
+            [16] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/iperf3.xml
         )
 
 )
@@ -14959,6 +15019,7 @@ Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/thingsboard-postgres.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/freefilesync.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/owntone.xml...Success
+Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/hypermind.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/cloudflare-ddns-config.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/subversion.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/searxng.xml...Success
@@ -19446,24 +19507,8 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
-jbrns/nexroll
-jbrns/nexroll:latest Downloads: 5363  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
-learnedmachine/speakr
-learnedmachine/speakr Downloads: 53995  Stars: 1  Base: unknown
-sftpmalin/ffmpeg
-sftpmalin/ffmpeg:latest Downloads: 847  Stars: 1  Base: unknown
-monetr/monetr
-monetr/monetr Downloads: 4209  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
-tedcharles/galleria
-tedcharles/galleria:latest Downloads: 5003  Stars: 0  Base: unknown
-t4s3rf4c3/macreplay_v2
-ghcr.io/t4s3rf4c3/macreplay_v2:latest Downloads:   Stars:   Base: unknown
-carrotwaxr/peek-stash-browser
-carrotwaxr/peek-stash-browser:latest Downloads: 7204  Stars: 0  Base: unknown
-tailscale/tsidp
-ghcr.io/tailscale/tsidp:latest Downloads: 1455  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -19536,8 +19581,6 @@ ghcr.io/tailscale/tsidp:latest Downloads: 1455  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-listmonk/listmonk
-listmonk/listmonk:latest Downloads: 6901773  Stars: 31  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19555,8 +19598,6 @@ listmonk/listmonk:latest Downloads: 6901773  Stars: 31  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-sbondco/watcharr
-ghcr.io/sbondco/watcharr:latest Downloads: 20355  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -19673,12 +19714,8 @@ ghcr.io/sbondco/watcharr:latest Downloads: 20355  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/kata.runtime/master/plugins/kata.runtime.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
-public.ecr.aws/zinclabs/openobserve
-public.ecr.aws/zinclabs/openobserve:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-registry.phospher.com/brianmiller/mbbsemu
-registry.phospher.com/brianmiller/mbbsemu:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
@@ -19697,6 +19734,12 @@ registry.phospher.com/brianmiller/mbbsemu:latest Downloads:   Stars:   Base: unk
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+lklynet/hypermind
+ghcr.io/lklynet/hypermind:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/lklynet/hypermind:latest
+Killed
+lklynet/hypermind
+ghcr.io/lklynet/hypermind Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
