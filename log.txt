@@ -407,7 +407,58 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   063e340..867fcef  main       -> origin/main
+Updating 063e340..867fcef
+Fast-forward
+ .../2025-01-02-pre-computed-exclusions-design.md   |  371 +++-
+ ...01-02-pre-computed-exclusions-implementation.md | 2084 ++++++++++++++++++++
+ mkdocs.yml                                         |    2 +-
+ server/controllers/carousel.ts                     |   23 +-
+ server/controllers/library/galleries.ts            |   75 +-
+ server/controllers/library/groups.ts               |  102 +-
+ server/controllers/library/images.ts               |   17 +-
+ server/controllers/library/performers.ts           |  171 +-
+ server/controllers/library/scenes.ts               |   37 +-
+ server/controllers/library/studios.ts              |  169 +-
+ server/controllers/library/tags.ts                 |  287 +--
+ server/controllers/playlist.ts                     |   24 +-
+ server/controllers/ratings.ts                      |   15 -
+ server/controllers/user.ts                         |   11 +-
+ server/initializers/api.ts                         |    4 +
+ .../migration.sql                                  |   32 +
+ server/prisma/schema.prisma                        |   36 +
+ server/restore-watchhistory.mjs                    |    2 +-
+ server/routes/exclusions.ts                        |  116 ++
+ server/services/EmptyEntityFilterService.ts        |  663 -------
+ server/services/EntityExclusionHelper.ts           |   76 +
+ server/services/EntityImageCountService.ts         |   11 +-
+ server/services/ExclusionComputationService.ts     | 1023 ++++++++++
+ server/services/FilteredEntityCacheService.ts      |  310 ---
+ server/services/SceneQueryBuilder.ts               |   99 +-
+ server/services/StashCacheManager.ts               |   21 +-
+ server/services/StashSyncService.ts                |   16 +
+ server/services/UserHiddenEntityService.ts         |   22 +-
+ server/services/UserRestrictionService.ts          |  867 --------
+ .../__tests__/EmptyEntityFilterService.test.ts     |  611 ------
+ .../__tests__/ExclusionComputationService.test.ts  | 1385 +++++++++++++
+ .../__tests__/StashSyncService.unit.test.ts        |    8 +
+ .../UserRestrictionService.integration.test.ts     |  386 ----
+ .../__tests__/UserRestrictionService.test.ts       |  631 ------
+ .../services/SceneQueryBuilder.integration.test.ts |   41 +-
+ 35 files changed, 5292 insertions(+), 4456 deletions(-)
+ create mode 100644 docs/plans/2025-01-02-pre-computed-exclusions-implementation.md
+ create mode 100644 server/prisma/migrations/20260102100000_add_exclusion_tables/migration.sql
+ create mode 100644 server/routes/exclusions.ts
+ delete mode 100644 server/services/EmptyEntityFilterService.ts
+ create mode 100644 server/services/EntityExclusionHelper.ts
+ create mode 100644 server/services/ExclusionComputationService.ts
+ delete mode 100644 server/services/FilteredEntityCacheService.ts
+ delete mode 100644 server/services/UserRestrictionService.ts
+ delete mode 100644 server/services/__tests__/EmptyEntityFilterService.test.ts
+ create mode 100644 server/services/__tests__/ExclusionComputationService.test.ts
+ delete mode 100644 server/services/__tests__/UserRestrictionService.integration.test.ts
+ delete mode 100644 server/services/__tests__/UserRestrictionService.test.ts
 
 Array
 (
@@ -1802,15 +1853,7 @@ Processing /tmp/GitHub/repositoryClone/mediux-team/unraid-templates/aura/aura.xm
 
 Downloading Misterjtc's Repository
 
-From https://github.com/misterjtc/docker-templates
-   b7e78eb..b203837  main       -> origin/main
-Updating b7e78eb..b203837
-Fast-forward
- icons/invoiceninja.png | Bin 0 -> 3225 bytes
- invoiceninja.xml       |  33 +++++++++++++++++++++++++++++++++
- 2 files changed, 33 insertions(+)
- create mode 100644 icons/invoiceninja.png
- create mode 100644 invoiceninja.xml
+Already up to date.
 
 Array
 (
@@ -19509,6 +19552,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+drewzh/meshcore-web-docker
+ghcr.io/drewzh/meshcore-web-docker:latest Downloads:   Stars:   Base: unknown
+mitchellthompkins/tor-relay
+mitchellthompkins/tor-relay:latest Downloads: 296  Stars: 0  Base: unknown
+benjaminroberts01375/checkbag
+ghcr.io/benjaminroberts01375/checkbag:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19691,27 +19740,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-sagernet/sing-box
-ghcr.io/sagernet/sing-box Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-parrazam/radicale-with-infcloud
-parrazam/radicale-with-infcloud Downloads: 10482  Stars: 0  Base: unknown
-mqtt-tools/mqttwarn-full
-ghcr.io/mqtt-tools/mqttwarn-full:latest Downloads:   Stars:   Base: unknown
-alexta69/metube
-ghcr.io/alexta69/metube:latest Downloads: 24079650  Stars: 149  Base: unknown
-goss-org/goss
-ghcr.io/goss-org/goss:latest Downloads:   Stars:   Base: unknown
-alseambusher/crontab-ui
-alseambusher/crontab-ui:latest Downloads: 3372768  Stars: 48  Base: unknown
-runitor/runitor
-runitor/runitor:latest Downloads: 8380  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
+Tagged - Can't determine last update
+toeverything/affine-graphql
+ghcr.io/toeverything/affine-graphql:stable Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
