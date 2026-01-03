@@ -13,21 +13,7 @@ Downloading Repo Info
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   51253bd..7f9f039  main       -> origin/main
-Updating 51253bd..7f9f039
-Fast-forward
- app/api/upload/route.ts          |  38 ++--
- app/checkout/page.tsx            |   4 +-
- app/globals.css                  |  64 ++++---
- app/page.tsx                     |   7 +-
- components/Gallery.tsx           |  31 +++-
- components/ModelViewer.tsx       |  97 ++++++++--
- package.json                     |   3 +-
- scripts/backfill-3mf-previews.js | 375 +++++++++++++++++++++++++++++++++++++++
- tailwind.config.ts               |  42 ++---
- 9 files changed, 580 insertions(+), 81 deletions(-)
- create mode 100644 scripts/backfill-3mf-previews.js
+Already up to date.
 
 Array
 (
@@ -421,7 +407,23 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   3d55a7b..5c13f7a  main          -> origin/main
+ * [new tag]         v3.1.0-beta.9 -> v3.1.0-beta.9
+ * [new tag]         v3.1.0-beta.8 -> v3.1.0-beta.8
+Updating 3d55a7b..5c13f7a
+Fast-forward
+ client/package-lock.json                           |    4 +-
+ client/package.json                                |    2 +-
+ docs/plans/2026-01-02-image-query-builder.md       | 1574 ++++++++++++++++++++
+ server/middleware/auth.ts                          |    8 +-
+ server/package-lock.json                           |   12 +-
+ server/package.json                                |    4 +-
+ server/services/StashSyncService.ts                |  195 ++-
+ .../__tests__/StashSyncService.cleanup.test.ts     |  324 ++++
+ 8 files changed, 2106 insertions(+), 17 deletions(-)
+ create mode 100644 docs/plans/2026-01-02-image-query-builder.md
+ create mode 100644 server/services/__tests__/StashSyncService.cleanup.test.ts
 
 Array
 (
@@ -1307,14 +1309,14 @@ Processing /tmp/GitHub/repositoryClone/secretlycarl/onboarderr-unraid/templates/
 Downloading Tajniak81's Repository
 
 From https://github.com/tajniak81/unraid-docker-templates
-   86b19d4..2c4b19f  main       -> origin/main
-Updating 86b19d4..2c4b19f
+   2c4b19f..dfb870d  main       -> origin/main
+Updating 2c4b19f..dfb870d
 Fast-forward
- dockhand/dockhand.xml      |  38 ++++++++++++++++++++++++++++++++++++++
- dockhand/icon/dockhand.png | Bin 0 -> 4581 bytes
- 2 files changed, 38 insertions(+)
- create mode 100644 dockhand/dockhand.xml
- create mode 100644 dockhand/icon/dockhand.png
+ backapp/backapp.xml      |  36 ++++++++++++++++++++++++++++++++++++
+ backapp/icon/backapp.png | Bin 0 -> 19944 bytes
+ 2 files changed, 36 insertions(+)
+ create mode 100644 backapp/backapp.xml
+ create mode 100644 backapp/icon/backapp.png
 
 Array
 (
@@ -1325,7 +1327,8 @@ Array
             [2] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/dockhand/dockhand.xml
             [3] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml
             [4] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml
-            [5] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml
+            [5] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/backapp/backapp.xml
+            [6] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml
         )
 
 )
@@ -1336,6 +1339,7 @@ Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/netboot
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/dockhand/dockhand.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml...Success
+Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/backapp/backapp.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml...Success
 
 
@@ -19531,10 +19535,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-fnsys/dockhand
-fnsys/dockhand:latest Downloads: 28328  Stars: 3  Base: unknown
-Pulling fnsys/dockhand:latest
-Killed
+dennis960/backapp
+ghcr.io/dennis960/backapp:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/dennis960/backapp:latest
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19716,21 +19719,20 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-smeagolworms4/mqtt-explorer
-smeagolworms4/mqtt-explorer Downloads: 2048129  Stars: 7  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-jakec207/maintainerr-overlay
-jakec207/maintainerr-overlay:latest Downloads: 1908  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-home-operations/jbops
-ghcr.io/home-operations/jbops:rolling Downloads:   Stars:   Base: unknown
-pierredurrr/plex-randomizer
-pierredurrr/plex-randomizer:latest Downloads: 85  Stars: 0  Base: unknown
-opentofu/opentofu
-ghcr.io/opentofu/opentofu:latest Downloads:   Stars:   Base: unknown
+jcostom/rollerblades
+ghcr.io/jcostom/rollerblades:latest Downloads:   Stars:   Base: unknown
+rafhaanshah/container-mon
+ghcr.io/rafhaanshah/container-mon:latest Downloads:   Stars:   Base: unknown
+gsariev/maintainerr-overlay-helperr
+gsariev/maintainerr-overlay-helperr:latest Downloads: 8846  Stars: 0  Base: unknown
+vert-sh/vertd
+ghcr.io/vert-sh/vertd:latest Downloads:   Stars:   Base: unknown
+vert-sh/vert
+ghcr.io/vert-sh/vert:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
