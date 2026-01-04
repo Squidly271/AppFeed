@@ -13,7 +13,31 @@ Downloading Repo Info
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   7f9f039..20d03b5  main       -> origin/main
+Updating 7f9f039..20d03b5
+Fast-forward
+ .env.example                          |   4 +
+ app/admin/page.tsx                    |   2 +
+ app/admin/users/page.tsx              |   2 +
+ app/api/admin/users/invite/route.ts   |  55 ++++++++++++
+ app/api/discord/interactions/route.ts | 130 +++++++++++++++++++++++++++++
+ app/api/invite/accept/route.ts        |  24 ++++++
+ app/u/[slug]/page.tsx                 | 152 ++++++++++++++++++++++++----------
+ components/admin/InviteUserForm.tsx   |  98 ++++++++++++++++++++++
+ lib/auth.ts                           |  23 +++++
+ lib/discord.ts                        |  51 ++++++++++++
+ lib/invite.ts                         |  40 +++++++++
+ package-lock.json                     |   7 ++
+ package.json                          |   1 +
+ types/tweetnacl.d.ts                  |   1 +
+ 14 files changed, 544 insertions(+), 46 deletions(-)
+ create mode 100644 app/api/admin/users/invite/route.ts
+ create mode 100644 app/api/discord/interactions/route.ts
+ create mode 100644 app/api/invite/accept/route.ts
+ create mode 100644 components/admin/InviteUserForm.tsx
+ create mode 100644 lib/invite.ts
+ create mode 100644 types/tweetnacl.d.ts
 
 Array
 (
@@ -407,38 +431,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   33978d6..61bd757  main       -> origin/main
-Updating 33978d6..61bd757
-Fast-forward
- docs/plans/2026-01-03-api-types-design.md         | 408 +++++++++
- docs/plans/2026-01-03-api-types-implementation.md | 969 ++++++++++++++++++++++
- server/controllers/library/galleries.ts           |  45 +-
- server/controllers/library/groups.ts              |  33 +-
- server/controllers/library/images.ts              |  20 +-
- server/controllers/library/performers.ts          |  45 +-
- server/controllers/library/scenes.ts              |  47 +-
- server/controllers/library/studios.ts             |  46 +-
- server/controllers/library/tags.ts                |  47 +-
- server/tests/filters/galleryFilters.test.ts       |   8 +-
- server/tests/filters/groupFilters.test.ts         |   8 +-
- server/tests/filters/performerFilters.test.ts     |   8 +-
- server/tests/filters/studioFilters.test.ts        |   8 +-
- server/tests/filters/tagFilters.test.ts           |   8 +-
- server/types/api/common.ts                        |  43 +
- server/types/api/express.ts                       |  40 +
- server/types/api/index.ts                         |  84 ++
- server/types/api/library.ts                       | 442 ++++++++++
- server/types/entities.ts                          |  23 +
- server/types/index.ts                             |   1 +
- server/utils/routeHelpers.ts                      |  13 +-
- 21 files changed, 2245 insertions(+), 101 deletions(-)
- create mode 100644 docs/plans/2026-01-03-api-types-design.md
- create mode 100644 docs/plans/2026-01-03-api-types-implementation.md
- create mode 100644 server/types/api/common.ts
- create mode 100644 server/types/api/express.ts
- create mode 100644 server/types/api/index.ts
- create mode 100644 server/types/api/library.ts
+Already up to date.
 
 Array
 (
@@ -19342,7 +19335,9 @@ Processing /tmp/GitHub/repositoryClone/SasaKaranovic/unraid-templates/OpenFanTem
 
 Downloading Florian Dambrine's Repository
 
-Already up to date.
+From https://github.com/Lowess/docker-templates-unraid
+ + 1fd1516...aa794e9 main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
