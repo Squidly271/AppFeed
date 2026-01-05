@@ -408,17 +408,38 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   4ddff1f..eea6bcb  main       -> origin/main
-Updating 4ddff1f..eea6bcb
+   eea6bcb..6debf12  main           -> origin/main
+ * [new tag]         v3.1.0-beta.12 -> v3.1.0-beta.12
+ * [new tag]         v3.1.0-beta.11 -> v3.1.0-beta.11
+Updating eea6bcb..6debf12
 Fast-forward
- client/src/components/ui/Lightbox.jsx              |  43 +-
- .../api/pagination-edge-cases.integration.test.ts  | 468 +++++++++++++
- .../api/sort-options.integration.test.ts           | 767 +++++++++++++++++++++
- .../api/tag-filters.integration.test.ts            | 403 +++++++++++
- 4 files changed, 1666 insertions(+), 15 deletions(-)
- create mode 100644 server/integration/api/pagination-edge-cases.integration.test.ts
- create mode 100644 server/integration/api/sort-options.integration.test.ts
- create mode 100644 server/integration/api/tag-filters.integration.test.ts
+ client/package-lock.json                           |   4 +-
+ client/package.json                                |   2 +-
+ docs/releases/3.1.0-testing-checklist.md           | 410 +++++++++++++++++++++
+ docs/releases/v3.1.0.md                            | 203 ++++++++++
+ docs/user-guide/images.md                          | 223 +++++++++++
+ docs/user-guide/recommendations.md                 | 153 ++++++++
+ mkdocs.yml                                         |   4 +
+ server/controllers/setup.ts                        |  13 +-
+ .../services/SceneQueryBuilder.integration.test.ts |   0
+ server/package-lock.json                           |   4 +-
+ server/package.json                                |   2 +-
+ .../migration.sql                                  |   5 +
+ server/prisma/schema.prisma                        |   2 +
+ server/services/SceneTagInheritanceService.ts      |   7 +-
+ ...tion.test.ts => StashSyncService.stash.test.ts} |   0
+ server/tsconfig.json                               |   2 +-
+ server/types/api/index.ts                          |   1 +
+ server/types/api/setup.ts                          |   4 +
+ server/vitest.config.ts                            |  10 +-
+ 19 files changed, 1038 insertions(+), 11 deletions(-)
+ create mode 100644 docs/releases/3.1.0-testing-checklist.md
+ create mode 100644 docs/releases/v3.1.0.md
+ create mode 100644 docs/user-guide/images.md
+ create mode 100644 docs/user-guide/recommendations.md
+ rename server/{tests => integration}/services/SceneQueryBuilder.integration.test.ts (100%)
+ create mode 100644 server/prisma/migrations/20260104000000_add_image_junction_indexes/migration.sql
+ rename server/services/__tests__/{StashSyncService.integration.test.ts => StashSyncService.stash.test.ts} (100%)
 
 Array
 (
@@ -4598,36 +4619,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   852e922b..0bd6f1cb  main       -> origin/main
-Updating 852e922b..0bd6f1cb
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19576,12 +19568,18 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
+docker.io/swiss01/eas3-mqtt
+docker.io/swiss01/eas3-mqtt:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
-fosrl/newt
-fosrl/newt Downloads: 2215785  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
+mainfrezzer/pelican-panel
+ghcr.io/mainfrezzer/pelican-panel:latest Downloads: 2784  Stars: 0  Base: unknown
+mainfrezzer/adguardhome
+ghcr.io/mainfrezzer/adguardhome Downloads: 5662  Stars: 2  Base: unknown
+mainfrezzer/pelican-wing
+ghcr.io/mainfrezzer/pelican-wing:latest Downloads: 898  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
@@ -19741,8 +19739,6 @@ fosrl/newt Downloads: 2215785  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-bambanah/deemix
-ghcr.io/bambanah/deemix:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
