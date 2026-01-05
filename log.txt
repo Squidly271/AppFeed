@@ -11,9 +11,58 @@ Downloading Featured apps Downloading https://raw.githubusercontent.com/Squidly2
 
 Downloading Repo Info
 
+Downloading Yusseiin's Repository
+
+Cloning into 'unraid-templates'...
+
+Array
+(
+    [https://github.com/Yusseiin/unraid-templates] => Array
+        (
+            [0] => /tmp/GitHub/repositoryClone/Yusseiin/unraid-templates/templates/ca_profile.xml
+            [1] => /tmp/GitHub/repositoryClone/Yusseiin/unraid-templates/templates/UnMove.xml
+        )
+
+)
+   Success!
+Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/Yusseiin/unraid-templates/templates/ca_profile.xml...FOUND PROFILE
+Processing /tmp/GitHub/repositoryClone/Yusseiin/unraid-templates/templates/UnMove.xml...Success
+
+
+Downloading cabi24's Repository
+
+Cloning into 'notenregal'...
+
+Array
+(
+    [https://github.com/cabi24/notenregal] => Array
+        (
+            [0] => /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml
+        )
+
+)
+   Success!
+Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml...Success
+
+
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   35d954e..7cb6acf  main       -> origin/main
+Updating 35d954e..7cb6acf
+Fast-forward
+ app/api/admin/site-config/route.ts                 |   8 ++
+ app/api/public-config/route.ts                     |  44 ++++++++-
+ components/admin/SiteConfigForm.tsx                | 105 +++++++++++++--------
+ components/cart/CartProvider.tsx                   |  15 ++-
+ lib/cartPricing.ts                                 |  61 ++++++++++--
+ lib/pricing.ts                                     |  60 ++++++++----
+ .../0034_siteconfig_material_prices/migration.sql  |   9 ++
+ prisma/schema.prisma                               |   8 ++
+ 8 files changed, 241 insertions(+), 69 deletions(-)
+ create mode 100644 prisma/migrations/0034_siteconfig_material_prices/migration.sql
 
 Array
 (
@@ -408,31 +457,22 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   e3cff4a..9136bc2  main           -> origin/main
- * [new tag]         v3.1.0-beta.13 -> v3.1.0-beta.13
-Updating e3cff4a..9136bc2
+   9136bc2..9cd8c2f  main       -> origin/main
+ * [new tag]         v3.1.0     -> v3.1.0
+ * [new tag]         v3.1.0-beta.14 -> v3.1.0-beta.14
+Updating 9136bc2..9cd8c2f
 Fast-forward
- client/package-lock.json                        |   4 +-
- client/package.json                             |   2 +-
- client/src/components/cards/ImageCard.jsx       |  15 +--
- client/src/components/pages/GalleryDetail.jsx   |   4 +-
- client/src/components/pages/Images.jsx          |  92 ++++++++++----
- client/src/components/pages/PerformerDetail.jsx | 158 +++++------------------
- client/src/components/pages/StudioDetail.jsx    | 160 +++++-------------------
- client/src/components/pages/TagDetail.jsx       | 160 +++++-------------------
- client/src/components/ui/Lightbox.jsx           |  49 ++++----
- client/src/components/ui/MetadataDrawer.jsx     |  14 +--
- client/src/components/ui/PaginatedImageGrid.jsx | 122 ++++++++++++++++++
- client/src/components/ui/index.js               |   1 +
- client/src/hooks/useCancellableQuery.js         |   6 +-
- client/src/hooks/useImagesPagination.js         |  80 ++++++++++++
- client/src/hooks/usePaginatedLightbox.js        |  37 +++++-
- client/src/utils/imageGalleryInheritance.js     |  15 +++
- server/package-lock.json                        |   4 +-
- server/package.json                             |   2 +-
- 18 files changed, 460 insertions(+), 465 deletions(-)
- create mode 100644 client/src/components/ui/PaginatedImageGrid.jsx
- create mode 100644 client/src/hooks/useImagesPagination.js
+ client/package-lock.json                           |  4 +-
+ client/package.json                                |  2 +-
+ docs/releases/v3.1.0.md                            | 21 +---------
+ server/controllers/library/images.ts               |  6 +++
+ .../api/image-filters.integration.test.ts          | 23 +++++-----
+ server/integration/api/scenes.integration.test.ts  | 44 ++++++++++++-------
+ .../services/SceneQueryBuilder.integration.test.ts | 49 ++++++++++++++++++----
+ server/package-lock.json                           |  4 +-
+ server/package.json                                |  2 +-
+ server/services/SceneQueryBuilder.ts               | 10 +++--
+ 10 files changed, 97 insertions(+), 68 deletions(-)
 
 Array
 (
@@ -7581,39 +7621,59 @@ Success
 
 Downloading jj9987's Repository
 
-Already up to date.
+From https://github.com/juusujanar/unraid-templates
+   d5b7146..5e9a31d  master     -> origin/master
+Updating d5b7146..5e9a31d
+Fast-forward
+ Cloudflare-DDNS.xml | 73 -----------------------------------------------------
+ PortainerCE.xml     | 33 ------------------------
+ PostgreSQL10.xml    |  2 +-
+ PostgreSQL11.xml    |  2 +-
+ PostgreSQL12.xml    |  2 +-
+ PostgreSQL13.xml    |  2 +-
+ PostgreSQL14.xml    |  2 +-
+ PostgreSQL15.xml    |  2 +-
+ PostgreSQL16.xml    | 34 +++++++++++++++++++++++++
+ PostgreSQL17.xml    | 34 +++++++++++++++++++++++++
+ PostgreSQL18.xml    | 34 +++++++++++++++++++++++++
+ 11 files changed, 108 insertions(+), 112 deletions(-)
+ delete mode 100644 Cloudflare-DDNS.xml
+ delete mode 100644 PortainerCE.xml
+ create mode 100644 PostgreSQL16.xml
+ create mode 100644 PostgreSQL17.xml
+ create mode 100644 PostgreSQL18.xml
 
 Array
 (
     [https://github.com/juusujanar/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PortainerCE.xml
-            [1] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL11.xml
-            [2] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Cloudflare-DDNS.xml
-            [3] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry.xml
-            [4] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL14.xml
-            [5] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Redis.xml
-            [6] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL13.xml
-            [7] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/ca_profile.xml
+            [0] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL11.xml
+            [1] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry.xml
+            [2] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL16.xml
+            [3] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL14.xml
+            [4] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Redis.xml
+            [5] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL13.xml
+            [6] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/ca_profile.xml
+            [7] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL18.xml
             [8] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL10.xml
-            [9] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL15.xml
-            [10] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL12.xml
+            [9] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL17.xml
+            [10] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL15.xml
+            [11] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL12.xml
         )
 
 )
    Success!
 Repo Branch: master
-Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PortainerCE.xml...Removed from CA123
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL11.xml...Success
-Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Cloudflare-DDNS.xml...No Icon specified within the application template
-
-Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry.xml...Success
+Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL16.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL14.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Redis.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL13.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/ca_profile.xml...FOUND PROFILE
+Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL18.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL10.xml...Success
+Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL17.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL15.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL12.xml...Success
 
@@ -8973,7 +9033,12 @@ Processing /tmp/GitHub/repositoryClone/simse/docker-templates/simse/chronos.xml.
 
 Downloading Josh.5's Repository
 
-Already up to date.
+From https://github.com/Josh5/unraid-docker-templates
+   48032fa..a8282de  master     -> origin/master
+Updating 48032fa..a8282de
+Fast-forward
+ josh5/unmanic-central-datastore.xml | 2 ++
+ 1 file changed, 2 insertions(+)
 
 Array
 (
@@ -11326,7 +11391,13 @@ Processing /tmp/GitHub/repositoryClone/DanRegalia/UNRAID/apache-hopweb-dev-unrai
 
 Downloading Official Unraid Repository
 
-Already up to date.
+From https://github.com/unraid/language-templates
+   d62a6d8..fd668ea  master     -> origin/master
+Updating d62a6d8..fd668ea
+Fast-forward
+ limetech/lang-uk_UA.xml | 2 +-
+ limetech/lang-zh_CN.xml | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -19527,6 +19598,14 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
+yusseiin/unmove
+yusseiin/unmove:latest Downloads: 658  Stars: 0  Base: unknown
+Pulling yusseiin/unmove:latest
+Killed
+cabi24/notenregal
+cabi24/notenregal Downloads: 72  Stars: 0  Base: unknown
+Pulling cabi24/notenregal
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
@@ -19579,6 +19658,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
+meaning/mute-client
+meaning/mute-client:latest Downloads: 622  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -19754,8 +19835,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-rustmailer/bichon
-rustmailer/bichon:latest Downloads: 21265  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
