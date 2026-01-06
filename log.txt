@@ -13,7 +13,12 @@ Downloading Repo Info
 
 Downloading Yusseiin's Repository
 
-Already up to date.
+From https://github.com/Yusseiin/unraid-templates
+   b6c6d22..2dee75b  main       -> origin/main
+Updating b6c6d22..2dee75b
+Fast-forward
+ templates/UnMove.xml | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -372,20 +377,20 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 Downloading PanicMechanic00's Repository
 
 From https://github.com/ruaan-deysel/unraid-management-agent
-   f68c2dc..ea71e09  main       -> origin/main
-Updating f68c2dc..ea71e09
+   ea71e09..2f152fe  main       -> origin/main
+Updating ea71e09..2f152fe
 Fast-forward
- CHANGELOG.md                             |  52 ++++++
- daemon/dto/config.go                     |  17 ++
- daemon/services/api/handlers.go          |  56 +++++++
- daemon/services/api/server.go            |   3 +
- daemon/services/collectors/array.go      |  77 ++++++++-
- daemon/services/collectors/array_test.go | 224 +++++++++++++++++++++++++-
- daemon/services/collectors/disk.go       |  32 ++--
- daemon/services/orchestrator.go          | 265 ++++++++++++++++++++++---------
- main.go                                  | 109 +++++++++----
- meta/plugin/unraid-management-agent.page |  57 ++++++-
- 10 files changed, 769 insertions(+), 123 deletions(-)
+ CHANGELOG.md                      |  22 ++
+ daemon/constants/const.go         |   8 +
+ daemon/dto/nut.go                 | 137 ++++++++++++
+ daemon/services/api/handlers.go   |  17 ++
+ daemon/services/api/server.go     |   9 +
+ daemon/services/collectors/nut.go | 439 ++++++++++++++++++++++++++++++++++++++
+ daemon/services/collectors/ups.go |  13 +-
+ daemon/services/orchestrator.go   |  11 +
+ 8 files changed, 651 insertions(+), 5 deletions(-)
+ create mode 100644 daemon/dto/nut.go
+ create mode 100644 daemon/services/collectors/nut.go
 
 Array
 (
@@ -19785,12 +19790,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-ipdotsetaf/codechef
-ghcr.io/ipdotsetaf/codechef:latest Downloads:   Stars:   Base: unknown
-seanmorley15/adventurelog-frontend
-ghcr.io/seanmorley15/adventurelog-frontend:latest Downloads:   Stars:   Base: unknown
-seanmorley15/adventurelog-backend
-ghcr.io/seanmorley15/adventurelog-backend:latest Downloads:   Stars:   Base: unknown
+quenary/tugtainer
+quenary/tugtainer:latest Downloads: 193801  Stars: 2  Base: unknown
+hardcoreeng/collaborator
+hardcoreeng/collaborator:latest Downloads: 62027  Stars: 0  Base: unknown
+hardcoreeng/rekoni-service
+hardcoreeng/rekoni-service:latest Downloads: 147102  Stars: 0  Base: unknown
+hardcoreeng/workspace
+hardcoreeng/workspace:latest Downloads: 51182  Stars: 0  Base: unknown
+hardcoreeng/account
+hardcoreeng/account:latest Downloads: 86043  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
