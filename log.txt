@@ -407,67 +407,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/sparkison/m3u-editor
-   65629a7..303b9d8  master     -> origin/master
- * [new tag]         0.2.46     -> 0.2.46
-Updating 65629a7..303b9d8
-Fast-forward
- .github/copilot-instructions.md                    | 230 +++----
- GEMINI.md                                          | 511 ++++++++++++++++
- app/Console/Commands/PruneOldNotifications.php     |   4 +-
- app/Filament/Pages/Preferences.php                 |  18 +
- .../Resources/Channels/ChannelResource.php         |  27 +
- app/Filament/Resources/Epgs/EpgResource.php        |  27 +-
- app/Filament/Resources/Series/Pages/ListSeries.php |  93 +++
- app/Filament/Resources/Series/SeriesResource.php   | 274 +++++++--
- app/Filament/Resources/Vods/Pages/ListVod.php      |  93 +++
- app/Filament/Resources/Vods/VodResource.php        | 318 +++++++---
- app/Forms/Components/TmdbSearchResults.php         |  48 ++
- app/Http/Controllers/Api/EpgApiController.php      |   2 +-
- app/Http/Controllers/EpgGenerateController.php     | 122 ++--
- .../Controllers/PlaylistGenerateController.php     |  25 +-
- app/Http/Controllers/XtreamApiController.php       |   2 +-
- app/Jobs/CheckSeriesImportProgress.php             | 146 +++++
- app/Jobs/CheckSeriesStrmProgress.php               | 123 ++++
- app/Jobs/FetchTmdbIds.php                          |  26 +-
- app/Jobs/GenerateEpgCache.php                      |   3 +-
- app/Jobs/ProcessM3uImportSeries.php                |  57 +-
- app/Jobs/ProcessM3uImportSeriesEpisodes.php        | 220 +++++--
- app/Jobs/SyncSeriesStrmFiles.php                   | 297 ++++++---
- app/Jobs/SyncVodStrmFiles.php                      |  17 +
- app/Listeners/SyncListener.php                     |   6 +
- app/Livewire/TmdbSearch.php                        | 214 +++++++
- app/Models/Series.php                              |  15 +
- app/Models/StrmFileMapping.php                     |   9 -
- app/Providers/AppServiceProvider.php               | 123 ++--
- app/Services/EpgCacheService.php                   |   7 +
- app/Services/NfoService.php                        | 598 ++++++++++++++++++
- app/Services/SchedulesDirectService.php            |  34 +-
- app/Services/TmdbService.php                       | 676 +++++++++++++++++++--
- app/Settings/GeneralSettings.php                   |   6 +
- boost.json                                         |  12 +
- config/dev.php                                     |   2 +-
- .../0001_01_01_000002_create_jobs_table.php        |  63 +-
- ...6_072918_add_nfo_hash_to_strm_file_mappings.php |  32 +
- ...25_12_31_000000_add_nfo_generation_settings.php |  19 +
- .../forms/components/tmdb-search-results.blade.php |  84 +++
- resources/views/footer.blade.php                   |   5 +-
- .../forms/components/tmdb-search-results.blade.php |  83 +++
- resources/views/livewire/tmdb-search.blade.php     | 210 +++++++
- routes/console.php                                 |   2 +-
- 43 files changed, 4248 insertions(+), 635 deletions(-)
- create mode 100644 GEMINI.md
- create mode 100644 app/Forms/Components/TmdbSearchResults.php
- create mode 100644 app/Jobs/CheckSeriesImportProgress.php
- create mode 100644 app/Jobs/CheckSeriesStrmProgress.php
- create mode 100644 app/Livewire/TmdbSearch.php
- create mode 100644 app/Services/NfoService.php
- create mode 100644 boost.json
- create mode 100644 database/migrations/2026_01_06_072918_add_nfo_hash_to_strm_file_mappings.php
- create mode 100644 database/settings/2025_12_31_000000_add_nfo_generation_settings.php
- create mode 100644 resources/views/filament/forms/components/tmdb-search-results.blade.php
- create mode 100644 resources/views/forms/components/tmdb-search-results.blade.php
- create mode 100644 resources/views/livewire/tmdb-search.blade.php
+Already up to date.
 
 Array
 (
@@ -4685,17 +4625,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   fa2dacda..157f9ca5  main       -> origin/main
-Updating fa2dacda..157f9ca5
-Fast-forward
- .github/workflows/pr-test.yml               |    2 +-
- .github/workflows/pytest.yml                |    2 +-
- app/static/package-lock.json                |    8 +-
- app/static/package.json                     |    2 +-
- app/translations/it/LC_MESSAGES/messages.po | 2314 ++++++---------------------
- uv.lock                                     |   72 +-
- 6 files changed, 576 insertions(+), 1824 deletions(-)
+Already up to date.
 
 Array
 (
@@ -7325,45 +7255,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   5e697ff..021dd17  master     -> origin/master
-Updating 5e697ff..021dd17
-Fast-forward
- jlesage/avidemux.xml               | 2 +-
- jlesage/chromium.xml               | 2 +-
- jlesage/cloudberry-backup.xml      | 2 +-
- jlesage/crashplan-enterprise.xml   | 2 +-
- jlesage/crashplan-pro.xml          | 2 +-
- jlesage/czkawka.xml                | 2 +-
- jlesage/dupeguru.xml               | 2 +-
- jlesage/file-centipede.xml         | 2 +-
- jlesage/filebot.xml                | 2 +-
- jlesage/filezilla.xml              | 2 +-
- jlesage/firefox-esr.xml            | 2 +-
- jlesage/firefox.xml                | 2 +-
- jlesage/freac.xml                  | 2 +-
- jlesage/freefilesync.xml           | 2 +-
- jlesage/handbrake.xml              | 2 +-
- jlesage/imgburn.xml                | 2 +-
- jlesage/jdownloader-2.xml          | 2 +-
- jlesage/jmkvpropedit.xml           | 2 +-
- jlesage/keepassxc.xml              | 2 +-
- jlesage/makemkv.xml                | 2 +-
- jlesage/mediainfo.xml              | 2 +-
- jlesage/mkv-muxing-batch-gui.xml   | 2 +-
- jlesage/mkvcleaver.xml             | 2 +-
- jlesage/mkvtoolnix.xml             | 2 +-
- jlesage/musicbrainz-picard.xml     | 2 +-
- jlesage/putty.xml                  | 2 +-
- jlesage/qdirstat.xml               | 2 +-
- jlesage/thunderbird.xml            | 2 +-
- jlesage/tixati.xml                 | 2 +-
- jlesage/tsmuxer.xml                | 2 +-
- jlesage/video-duplicate-finder.xml | 2 +-
- jlesage/vlc.xml                    | 2 +-
- jlesage/xfburn.xml                 | 2 +-
- jlesage/xnview-mp.xml              | 2 +-
- 34 files changed, 34 insertions(+), 34 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19681,6 +19573,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+opencloudeu/opencloud-rolling
+opencloudeu/opencloud-rolling Downloads: 696352  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -19703,6 +19597,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+goodieshq/headscale-admin
+goodieshq/headscale-admin:latest Downloads: 393210  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19762,8 +19658,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/imgburn
-jlesage/imgburn Downloads: 1896  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -19843,10 +19737,15 @@ jlesage/imgburn Downloads: 1896  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+Tagged - Can't determine last update
+devzwf/pihole-dot-doh
+devzwf/pihole-dot-doh:2024.07.0 Downloads: 100957  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+fscorrupt/docker-arrs2discord
+ghcr.io/fscorrupt/docker-arrs2discord Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
