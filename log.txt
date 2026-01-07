@@ -371,69 +371,7 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-From https://github.com/ruaan-deysel/unraid-management-agent
-   f03debd..414afa3  main       -> origin/main
-Updating f03debd..414afa3
-Fast-forward
- .github/workflows/release.yml                     |    6 +
- CHANGELOG.md                                      |   65 +
- Makefile                                          |   17 +-
- daemon/docs/docs.go                               | 5276 +++++++++++++++++++++
- daemon/docs/swagger.go                            |   56 +
- daemon/docs/swagger.json                          | 5257 ++++++++++++++++++++
- daemon/docs/swagger.yaml                          | 3637 ++++++++++++++
- daemon/dto/array.go                               |   20 +-
- daemon/dto/config.go                              |   34 +-
- daemon/dto/disk.go                                |   64 +-
- daemon/dto/docker.go                              |   44 +-
- daemon/dto/gpu.go                                 |   34 +-
- daemon/dto/hardware.go                            |   58 +-
- daemon/dto/network.go                             |   50 +-
- daemon/dto/network_access.go                      |   27 +
- daemon/dto/notification.go                        |   24 +-
- daemon/dto/nut_test.go                            |   33 +
- daemon/dto/share.go                               |   24 +-
- daemon/dto/system.go                              |   54 +-
- daemon/dto/ups.go                                 |   16 +-
- daemon/dto/vm.go                                  |   34 +-
- daemon/dto/websocket.go                           |    8 +-
- daemon/dto/zfs.go                                 |  136 +-
- daemon/lib/ethtool_test.go                        |   48 +
- daemon/lib/sysfs_hardware.go                      |   71 +
- daemon/lib/sysfs_hardware_test.go                 |   88 +
- daemon/services/api/handlers.go                   |  954 +++-
- daemon/services/api/server.go                     |   57 +-
- daemon/services/api/websocket.go                  |   30 +
- daemon/services/collector_manager.go              |  445 ++
- daemon/services/collector_manager_test.go         |  538 +++
- daemon/services/collectors/disk_test.go           |    6 +
- daemon/services/collectors/docker.go              |  557 +--
- daemon/services/collectors/docker_test.go         |  297 +-
- daemon/services/collectors/hardware.go            |  107 +-
- daemon/services/collectors/network.go             |   26 +-
- daemon/services/collectors/network_access.go      |  460 ++
- daemon/services/collectors/network_access_test.go |  254 +
- daemon/services/collectors/nut_test.go            |    6 +
- daemon/services/collectors/unassigned_test.go     |    2 +-
- daemon/services/collectors/vm.go                  |  582 +--
- daemon/services/collectors/vm_test.go             |  245 +-
- daemon/services/orchestrator.go                   |  235 +-
- docs/api/API_REFERENCE.md                         |  283 ++
- go.mod                                            |   36 +-
- go.sum                                            |  116 +-
- main.go                                           |   11 +
- 47 files changed, 18800 insertions(+), 1628 deletions(-)
- create mode 100644 daemon/docs/docs.go
- create mode 100644 daemon/docs/swagger.go
- create mode 100644 daemon/docs/swagger.json
- create mode 100644 daemon/docs/swagger.yaml
- create mode 100644 daemon/dto/network_access.go
- create mode 100644 daemon/lib/sysfs_hardware.go
- create mode 100644 daemon/lib/sysfs_hardware_test.go
- create mode 100644 daemon/services/collector_manager.go
- create mode 100644 daemon/services/collector_manager_test.go
- create mode 100644 daemon/services/collectors/network_access.go
- create mode 100644 daemon/services/collectors/network_access_test.go
+Already up to date.
 
 Array
 (
@@ -505,49 +443,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   1e1ba06..2c6babc  main       -> origin/main
-Updating 1e1ba06..2c6babc
-Fast-forward
- .dockerignore                                      |  41 ++++++
- .gitignore                                         |   2 +-
- client/src/components/ui/ScenesLikeThis.jsx        |  89 +++++-------
- docs/design/scalability-audit-500k-scenes.md       | 142 +++++++++++-------
- server/controllers/library/scenes.ts               | 116 +++++----------
- server/controllers/library/tags.ts                 |  52 +------
- server/controllers/user.ts                         |  14 +-
- server/eslint.config.js                            |   3 +
- .../migration.sql                                  |   2 +
- server/prisma/schema.prisma                        |   3 +
- server/services/ExclusionComputationService.ts     |   1 -
- server/services/StashEntityService.ts              |  98 +++++++++++++
- server/services/StashSyncService.ts                | 160 +++++++++++++++------
- .../controllers}/watchHistory.test.ts              |   2 +-
- .../services}/EntityImageCountService.test.ts      |   6 +-
- .../services}/ExclusionComputationService.test.ts  |   4 +-
- .../ImageGalleryInheritanceService.test.ts         |   4 +-
- .../services}/ImageQueryBuilder.test.ts            |   4 +-
- .../services}/SceneTagInheritanceService.test.ts   |   4 +-
- .../services}/StashEntityService.scoring.test.ts   |   4 +-
- .../services}/StashEntityService.test.ts           |   6 +-
- .../services}/StashSyncService.cleanup.test.ts     |  68 +++++----
- .../services}/StashSyncService.stash.test.ts       |   0
- .../services}/StashSyncService.unit.test.ts        |  25 ++--
- server/types/entities.ts                           |   2 +
- 25 files changed, 521 insertions(+), 331 deletions(-)
- create mode 100644 .dockerignore
- create mode 100644 server/prisma/migrations/20260106000000_add_scene_count_via_performers/migration.sql
- rename server/{controllers/__tests__ => tests/controllers}/watchHistory.test.ts (99%)
- rename server/{services/__tests__ => tests/services}/EntityImageCountService.test.ts (91%)
- rename server/{services/__tests__ => tests/services}/ExclusionComputationService.test.ts (99%)
- rename server/{services/__tests__ => tests/services}/ImageGalleryInheritanceService.test.ts (98%)
- rename server/{services/__tests__ => tests/services}/ImageQueryBuilder.test.ts (98%)
- rename server/{services/__tests__ => tests/services}/SceneTagInheritanceService.test.ts (98%)
- rename server/{services/__tests__ => tests/services}/StashEntityService.scoring.test.ts (92%)
- rename server/{services/__tests__ => tests/services}/StashEntityService.test.ts (99%)
- rename server/{services/__tests__ => tests/services}/StashSyncService.cleanup.test.ts (82%)
- rename server/{services/__tests__ => tests/services}/StashSyncService.stash.test.ts (100%)
- rename server/{services/__tests__ => tests/services}/StashSyncService.unit.test.ts (91%)
+Already up to date.
 
 Array
 (
@@ -4729,36 +4625,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   d5b6d37e..fa2dacda  main       -> origin/main
-Updating d5b6d37e..fa2dacda
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19869,6 +19736,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
+spaceinvaderone/auto_slack_pack
+spaceinvaderone/auto_slack_pack:latest Downloads: 4095  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19904,10 +19773,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-fabriziosalmi/uglyfeed
-fabriziosalmi/uglyfeed:latest Downloads: 2049  Stars: 1  Base: unknown
-madeofpendletonwool/podpeople_db
-madeofpendletonwool/podpeople_db:latest Downloads: 303  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
