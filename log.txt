@@ -371,34 +371,7 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-From https://github.com/ruaan-deysel/unraid-management-agent
-   414afa3..a42d350  main       -> origin/main
-Updating 414afa3..a42d350
-Fast-forward
- CHANGELOG.md                               |   40 +
- README.md                                  |   52 +-
- daemon/dto/mcp.go                          |  131 +++
- daemon/services/api/server.go              |  317 ++++++
- daemon/services/controllers/docker.go      |  134 ++-
- daemon/services/controllers/docker_test.go |   34 +-
- daemon/services/controllers/vm.go          |  148 ++-
- daemon/services/controllers/vm_test.go     |   18 +-
- daemon/services/mcp/server.go              | 1567 ++++++++++++++++++++++++++++
- daemon/services/mcp/server_test.go         |  595 +++++++++++
- daemon/services/mcp/transport.go           |  704 +++++++++++++
- daemon/services/mcp/transport_test.go      |  697 +++++++++++++
- daemon/services/orchestrator.go            |   22 +
- docs/MCP_INTEGRATION.md                    |  382 +++++++
- go.mod                                     |   13 +-
- go.sum                                     |   57 +-
- scripts/validate-live.sh                   |  196 ++++
- 17 files changed, 5037 insertions(+), 70 deletions(-)
- create mode 100644 daemon/dto/mcp.go
- create mode 100644 daemon/services/mcp/server.go
- create mode 100644 daemon/services/mcp/server_test.go
- create mode 100644 daemon/services/mcp/transport.go
- create mode 100644 daemon/services/mcp/transport_test.go
- create mode 100644 docs/MCP_INTEGRATION.md
+Already up to date.
 
 Array
 (
@@ -470,7 +443,44 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   2c6babc..d5a0941  main          -> origin/main
+ * [new tag]         v3.1.2-beta.1 -> v3.1.2-beta.1
+Updating 2c6babc..d5a0941
+Fast-forward
+ client/package-lock.json                           |    4 +-
+ client/package.json                                |    2 +-
+ client/src/components/ui/FilterControls.jsx        |    2 +
+ client/src/components/ui/SearchableSelect.jsx      |   30 +-
+ client/src/utils/filterConfig.js                   |   16 +
+ docs/design/scalability-audit-500k-scenes.md       |   97 +-
+ docs/plans/2026-01-06-scalability-phase-2.md       |  281 ++++++
+ .../2026-01-07-minimal-endpoints-count-filter.md   |  166 ++++
+ server/controllers/library/galleries.ts            |  161 +--
+ server/controllers/library/groups.ts               |  164 +--
+ server/controllers/library/performers.ts           |  213 +---
+ server/controllers/library/studios.ts              |  201 ++--
+ server/controllers/library/tags.ts                 |  243 ++---
+ ...imal-endpoint-count-filters.integration.test.ts |  295 ++++++
+ server/package-lock.json                           |    4 +-
+ server/package.json                                |    2 +-
+ server/services/GalleryQueryBuilder.ts             |  792 +++++++++++++++
+ server/services/GroupQueryBuilder.ts               |  779 +++++++++++++++
+ server/services/PerformerQueryBuilder.ts           | 1051 ++++++++++++++++++++
+ server/services/StudioQueryBuilder.ts              |  642 ++++++++++++
+ server/services/TagQueryBuilder.ts                 |  776 +++++++++++++++
+ server/types/api/common.ts                         |   13 +
+ server/types/api/index.ts                          |    1 +
+ server/types/api/library.ts                        |    7 +-
+ 24 files changed, 5140 insertions(+), 802 deletions(-)
+ create mode 100644 docs/plans/2026-01-06-scalability-phase-2.md
+ create mode 100644 docs/plans/2026-01-07-minimal-endpoints-count-filter.md
+ create mode 100644 server/integration/api/minimal-endpoint-count-filters.integration.test.ts
+ create mode 100644 server/services/GalleryQueryBuilder.ts
+ create mode 100644 server/services/GroupQueryBuilder.ts
+ create mode 100644 server/services/PerformerQueryBuilder.ts
+ create mode 100644 server/services/StudioQueryBuilder.ts
+ create mode 100644 server/services/TagQueryBuilder.ts
 
 Array
 (
@@ -5014,11 +5024,11 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 Downloading Binhex's Repository
 
 From https://github.com/binhex/docker-templates
-   c66bd48..6b6de40  master     -> origin/master
-Updating c66bd48..6b6de40
+   6b6de40..87585be  master     -> origin/master
+Updating 6b6de40..87585be
 Fast-forward
- binhex/official-gluetun.xml | 11 ++++++++---
- 1 file changed, 8 insertions(+), 3 deletions(-)
+ binhex/official-gluetun.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -7218,12 +7228,7 @@ Processing /tmp/GitHub/repositoryClone/jason-bean/docker-templates/jasonbean-rep
 
 Downloading Official Plex Repository
 
-From https://github.com/plexinc/pms-docker
-   f617d1d..fde000d  master     -> origin/master
-Updating f617d1d..fde000d
-Fast-forward
- .github/CODEOWNERS | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -19730,6 +19735,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
+kilvoctu/aiyabot
+ghcr.io/kilvoctu/aiyabot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -19808,10 +19815,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-hardcoreeng/front
-hardcoreeng/front:latest Downloads: 72114  Stars: 0  Base: unknown
-domistyle/jellysearch
-domistyle/jellysearch:latest Downloads: 73763  Stars: 1  Base: unknown
+seanap/auto-m4b
+seanap/auto-m4b:latest Downloads: 148577  Stars: 4  Base: unknown
+fscorrupt/docker-plexstatus2discord
+ghcr.io/fscorrupt/docker-plexstatus2discord Downloads:   Stars:   Base: unknown
+fscorrupt/docker-tautulli2discord
+ghcr.io/fscorrupt/docker-tautulli2discord Downloads:   Stars:   Base: unknown
+invoke-ai/invokeai
+ghcr.io/invoke-ai/invokeai:latest Downloads:   Stars:   Base: unknown
+ajnart/subs
+ghcr.io/ajnart/subs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
