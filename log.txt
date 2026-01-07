@@ -407,7 +407,67 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   65629a7..303b9d8  master     -> origin/master
+ * [new tag]         0.2.46     -> 0.2.46
+Updating 65629a7..303b9d8
+Fast-forward
+ .github/copilot-instructions.md                    | 230 +++----
+ GEMINI.md                                          | 511 ++++++++++++++++
+ app/Console/Commands/PruneOldNotifications.php     |   4 +-
+ app/Filament/Pages/Preferences.php                 |  18 +
+ .../Resources/Channels/ChannelResource.php         |  27 +
+ app/Filament/Resources/Epgs/EpgResource.php        |  27 +-
+ app/Filament/Resources/Series/Pages/ListSeries.php |  93 +++
+ app/Filament/Resources/Series/SeriesResource.php   | 274 +++++++--
+ app/Filament/Resources/Vods/Pages/ListVod.php      |  93 +++
+ app/Filament/Resources/Vods/VodResource.php        | 318 +++++++---
+ app/Forms/Components/TmdbSearchResults.php         |  48 ++
+ app/Http/Controllers/Api/EpgApiController.php      |   2 +-
+ app/Http/Controllers/EpgGenerateController.php     | 122 ++--
+ .../Controllers/PlaylistGenerateController.php     |  25 +-
+ app/Http/Controllers/XtreamApiController.php       |   2 +-
+ app/Jobs/CheckSeriesImportProgress.php             | 146 +++++
+ app/Jobs/CheckSeriesStrmProgress.php               | 123 ++++
+ app/Jobs/FetchTmdbIds.php                          |  26 +-
+ app/Jobs/GenerateEpgCache.php                      |   3 +-
+ app/Jobs/ProcessM3uImportSeries.php                |  57 +-
+ app/Jobs/ProcessM3uImportSeriesEpisodes.php        | 220 +++++--
+ app/Jobs/SyncSeriesStrmFiles.php                   | 297 ++++++---
+ app/Jobs/SyncVodStrmFiles.php                      |  17 +
+ app/Listeners/SyncListener.php                     |   6 +
+ app/Livewire/TmdbSearch.php                        | 214 +++++++
+ app/Models/Series.php                              |  15 +
+ app/Models/StrmFileMapping.php                     |   9 -
+ app/Providers/AppServiceProvider.php               | 123 ++--
+ app/Services/EpgCacheService.php                   |   7 +
+ app/Services/NfoService.php                        | 598 ++++++++++++++++++
+ app/Services/SchedulesDirectService.php            |  34 +-
+ app/Services/TmdbService.php                       | 676 +++++++++++++++++++--
+ app/Settings/GeneralSettings.php                   |   6 +
+ boost.json                                         |  12 +
+ config/dev.php                                     |   2 +-
+ .../0001_01_01_000002_create_jobs_table.php        |  63 +-
+ ...6_072918_add_nfo_hash_to_strm_file_mappings.php |  32 +
+ ...25_12_31_000000_add_nfo_generation_settings.php |  19 +
+ .../forms/components/tmdb-search-results.blade.php |  84 +++
+ resources/views/footer.blade.php                   |   5 +-
+ .../forms/components/tmdb-search-results.blade.php |  83 +++
+ resources/views/livewire/tmdb-search.blade.php     | 210 +++++++
+ routes/console.php                                 |   2 +-
+ 43 files changed, 4248 insertions(+), 635 deletions(-)
+ create mode 100644 GEMINI.md
+ create mode 100644 app/Forms/Components/TmdbSearchResults.php
+ create mode 100644 app/Jobs/CheckSeriesImportProgress.php
+ create mode 100644 app/Jobs/CheckSeriesStrmProgress.php
+ create mode 100644 app/Livewire/TmdbSearch.php
+ create mode 100644 app/Services/NfoService.php
+ create mode 100644 boost.json
+ create mode 100644 database/migrations/2026_01_06_072918_add_nfo_hash_to_strm_file_mappings.php
+ create mode 100644 database/settings/2025_12_31_000000_add_nfo_generation_settings.php
+ create mode 100644 resources/views/filament/forms/components/tmdb-search-results.blade.php
+ create mode 100644 resources/views/forms/components/tmdb-search-results.blade.php
+ create mode 100644 resources/views/livewire/tmdb-search.blade.php
 
 Array
 (
@@ -443,44 +503,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   2c6babc..d5a0941  main          -> origin/main
- * [new tag]         v3.1.2-beta.1 -> v3.1.2-beta.1
-Updating 2c6babc..d5a0941
-Fast-forward
- client/package-lock.json                           |    4 +-
- client/package.json                                |    2 +-
- client/src/components/ui/FilterControls.jsx        |    2 +
- client/src/components/ui/SearchableSelect.jsx      |   30 +-
- client/src/utils/filterConfig.js                   |   16 +
- docs/design/scalability-audit-500k-scenes.md       |   97 +-
- docs/plans/2026-01-06-scalability-phase-2.md       |  281 ++++++
- .../2026-01-07-minimal-endpoints-count-filter.md   |  166 ++++
- server/controllers/library/galleries.ts            |  161 +--
- server/controllers/library/groups.ts               |  164 +--
- server/controllers/library/performers.ts           |  213 +---
- server/controllers/library/studios.ts              |  201 ++--
- server/controllers/library/tags.ts                 |  243 ++---
- ...imal-endpoint-count-filters.integration.test.ts |  295 ++++++
- server/package-lock.json                           |    4 +-
- server/package.json                                |    2 +-
- server/services/GalleryQueryBuilder.ts             |  792 +++++++++++++++
- server/services/GroupQueryBuilder.ts               |  779 +++++++++++++++
- server/services/PerformerQueryBuilder.ts           | 1051 ++++++++++++++++++++
- server/services/StudioQueryBuilder.ts              |  642 ++++++++++++
- server/services/TagQueryBuilder.ts                 |  776 +++++++++++++++
- server/types/api/common.ts                         |   13 +
- server/types/api/index.ts                          |    1 +
- server/types/api/library.ts                        |    7 +-
- 24 files changed, 5140 insertions(+), 802 deletions(-)
- create mode 100644 docs/plans/2026-01-06-scalability-phase-2.md
- create mode 100644 docs/plans/2026-01-07-minimal-endpoints-count-filter.md
- create mode 100644 server/integration/api/minimal-endpoint-count-filters.integration.test.ts
- create mode 100644 server/services/GalleryQueryBuilder.ts
- create mode 100644 server/services/GroupQueryBuilder.ts
- create mode 100644 server/services/PerformerQueryBuilder.ts
- create mode 100644 server/services/StudioQueryBuilder.ts
- create mode 100644 server/services/TagQueryBuilder.ts
+Already up to date.
 
 Array
 (
@@ -4662,7 +4685,17 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   fa2dacda..157f9ca5  main       -> origin/main
+Updating fa2dacda..157f9ca5
+Fast-forward
+ .github/workflows/pr-test.yml               |    2 +-
+ .github/workflows/pytest.yml                |    2 +-
+ app/static/package-lock.json                |    8 +-
+ app/static/package.json                     |    2 +-
+ app/translations/it/LC_MESSAGES/messages.po | 2314 ++++++---------------------
+ uv.lock                                     |   72 +-
+ 6 files changed, 576 insertions(+), 1824 deletions(-)
 
 Array
 (
@@ -5023,12 +5056,7 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 
 Downloading Binhex's Repository
 
-From https://github.com/binhex/docker-templates
-   6b6de40..87585be  master     -> origin/master
-Updating 6b6de40..87585be
-Fast-forward
- binhex/official-gluetun.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -7297,7 +7325,45 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   5e697ff..021dd17  master     -> origin/master
+Updating 5e697ff..021dd17
+Fast-forward
+ jlesage/avidemux.xml               | 2 +-
+ jlesage/chromium.xml               | 2 +-
+ jlesage/cloudberry-backup.xml      | 2 +-
+ jlesage/crashplan-enterprise.xml   | 2 +-
+ jlesage/crashplan-pro.xml          | 2 +-
+ jlesage/czkawka.xml                | 2 +-
+ jlesage/dupeguru.xml               | 2 +-
+ jlesage/file-centipede.xml         | 2 +-
+ jlesage/filebot.xml                | 2 +-
+ jlesage/filezilla.xml              | 2 +-
+ jlesage/firefox-esr.xml            | 2 +-
+ jlesage/firefox.xml                | 2 +-
+ jlesage/freac.xml                  | 2 +-
+ jlesage/freefilesync.xml           | 2 +-
+ jlesage/handbrake.xml              | 2 +-
+ jlesage/imgburn.xml                | 2 +-
+ jlesage/jdownloader-2.xml          | 2 +-
+ jlesage/jmkvpropedit.xml           | 2 +-
+ jlesage/keepassxc.xml              | 2 +-
+ jlesage/makemkv.xml                | 2 +-
+ jlesage/mediainfo.xml              | 2 +-
+ jlesage/mkv-muxing-batch-gui.xml   | 2 +-
+ jlesage/mkvcleaver.xml             | 2 +-
+ jlesage/mkvtoolnix.xml             | 2 +-
+ jlesage/musicbrainz-picard.xml     | 2 +-
+ jlesage/putty.xml                  | 2 +-
+ jlesage/qdirstat.xml               | 2 +-
+ jlesage/thunderbird.xml            | 2 +-
+ jlesage/tixati.xml                 | 2 +-
+ jlesage/tsmuxer.xml                | 2 +-
+ jlesage/video-duplicate-finder.xml | 2 +-
+ jlesage/vlc.xml                    | 2 +-
+ jlesage/xfburn.xml                 | 2 +-
+ jlesage/xnview-mp.xml              | 2 +-
+ 34 files changed, 34 insertions(+), 34 deletions(-)
 
 Array
 (
@@ -7345,77 +7411,43 @@ Array
 )
    Success!
 Repo Branch: master
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/xfburn.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/czkawka.xml...Failed
-Failed loading XML
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/xfburn.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/czkawka.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/sharry.xml...Success
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/dupeguru.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/crashplan-enterprise.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/freac.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mediainfo.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filezilla.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/qdirstat.xml...Failed
-Failed loading XML
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/dupeguru.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/crashplan-enterprise.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/freac.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mediainfo.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filezilla.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/qdirstat.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/nginx-proxy-manager.xml...Success
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/vlc.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/cloudberry-backup.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/avidemux.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/thunderbird.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/video-duplicate-finder.xml...Failed
-Failed loading XML
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/vlc.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/cloudberry-backup.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/avidemux.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/thunderbird.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/video-duplicate-finder.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/ca_profile.xml...FOUND PROFILE
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/putty.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/imgburn.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkv-muxing-batch-gui.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/freefilesync.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/makemkv.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/xnview-mp.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/handbrake.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/chromium.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/musicbrainz-picard.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tsmuxer.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tixati.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvtoolnix.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jmkvpropedit.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/keepassxc.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox-esr.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filebot.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jdownloader-2.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvcleaver.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/crashplan-pro.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-centipede.xml...Failed
-Failed loading XML
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/putty.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/imgburn.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkv-muxing-batch-gui.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/freefilesync.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/makemkv.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/xnview-mp.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/handbrake.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/chromium.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/musicbrainz-picard.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tsmuxer.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tixati.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvtoolnix.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jmkvpropedit.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/keepassxc.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox-esr.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filebot.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jdownloader-2.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvcleaver.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/crashplan-pro.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-centipede.xml...Success
 
 
 Downloading dlandon's Repository
@@ -19730,13 +19762,13 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+jlesage/imgburn
+jlesage/imgburn Downloads: 1896  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
-kilvoctu/aiyabot
-ghcr.io/kilvoctu/aiyabot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -19815,16 +19847,6 @@ ghcr.io/kilvoctu/aiyabot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-seanap/auto-m4b
-seanap/auto-m4b:latest Downloads: 148577  Stars: 4  Base: unknown
-fscorrupt/docker-plexstatus2discord
-ghcr.io/fscorrupt/docker-plexstatus2discord Downloads:   Stars:   Base: unknown
-fscorrupt/docker-tautulli2discord
-ghcr.io/fscorrupt/docker-tautulli2discord Downloads:   Stars:   Base: unknown
-invoke-ai/invokeai
-ghcr.io/invoke-ai/invokeai:latest Downloads:   Stars:   Base: unknown
-ajnart/subs
-ghcr.io/ajnart/subs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
