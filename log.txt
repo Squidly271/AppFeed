@@ -443,7 +443,57 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   d5a0941..7590d34  main       -> origin/main
+Updating d5a0941..7590d34
+Fast-forward
+ client/src/components/cards/GalleryCard.jsx        |   21 +-
+ client/src/components/cards/GroupCard.jsx          |  100 +-
+ client/src/components/cards/PerformerCard.jsx      |   74 +-
+ client/src/components/cards/StudioCard.jsx         |  124 +-
+ client/src/components/cards/TagCard.jsx            |  132 +-
+ .../cards/__tests__/GalleryCard.test.jsx           |    2 +-
+ client/src/components/pages/GalleryDetail.jsx      |  240 ++--
+ client/src/components/pages/Scene.jsx              |  138 ++-
+ client/src/components/pages/SceneDetails.jsx       |  178 +--
+ client/src/components/ui/CardCountIndicators.jsx   |   19 +-
+ client/src/components/ui/LazyThumbnail.jsx         |   29 +
+ client/src/components/ui/ScenesLikeThis.jsx        |   63 +-
+ client/src/components/ui/TooltipEntityGrid.jsx     |    2 +-
+ client/src/components/ui/index.js                  |    1 +
+ client/src/config/indicatorBehaviors.js            |   87 ++
+ client/src/utils/__tests__/filterConfig.test.js    |   26 +
+ client/src/utils/filterConfig.js                   |   16 +
+ .../2026-01-07-rich-tooltip-indicators-design.md   |  277 +++++
+ ...01-07-rich-tooltip-indicators-implementation.md | 1303 ++++++++++++++++++++
+ .../api/gallery-filters.integration.test.ts        |   32 +
+ .../api/group-filters.integration.test.ts          |   40 +
+ server/integration/api/groups.integration.test.ts  |   49 +-
+ .../api/performer-filters.integration.test.ts      |   33 +
+ .../integration/api/performers.integration.test.ts |   49 +-
+ server/integration/api/scenes.integration.test.ts  |   75 ++
+ server/integration/api/studios.integration.test.ts |   50 +-
+ server/integration/api/tags.integration.test.ts    |   50 +-
+ .../integration/fixtures/testEntities.example.ts   |   16 +-
+ server/integration/helpers/globalSetup.ts          |    4 +-
+ server/services/GalleryQueryBuilder.ts             |   62 +-
+ server/services/GroupQueryBuilder.ts               |  202 ++-
+ server/services/ImageQueryBuilder.ts               |    2 +-
+ server/services/PerformerQueryBuilder.ts           |  239 +++-
+ server/services/SceneQueryBuilder.ts               |   55 +-
+ server/services/StashEntityService.ts              |   22 +-
+ server/services/StudioQueryBuilder.ts              |  138 ++-
+ server/services/TagQueryBuilder.ts                 |  131 +-
+ server/types/entities.ts                           |    7 +-
+ server/types/peekFilters.ts                        |    5 +
+ server/utils/galleryUtils.ts                       |   22 +
+ server/utils/hierarchyUtils.ts                     |   32 +-
+ 41 files changed, 3584 insertions(+), 563 deletions(-)
+ create mode 100644 client/src/components/ui/LazyThumbnail.jsx
+ create mode 100644 client/src/config/indicatorBehaviors.js
+ create mode 100644 docs/plans/2026-01-07-rich-tooltip-indicators-design.md
+ create mode 100644 docs/plans/2026-01-07-rich-tooltip-indicators-implementation.md
+ create mode 100644 server/utils/galleryUtils.ts
 
 Array
 (
@@ -3934,13 +3984,7 @@ Processing /tmp/GitHub/repositoryClone/feederbox826/unraid-templates/feederbox82
 
 Downloading EDACerton's Repository
 
-From https://github.com/dkaser/unraid-plugins
-   d5b4913..db1674b  main       -> origin/main
-Updating d5b4913..db1674b
-Fast-forward
- header-fix.xml | 14 ++++++++++++++
- 1 file changed, 14 insertions(+)
- create mode 100644 header-fix.xml
+Already up to date.
 
 Array
 (
@@ -3976,7 +4020,7 @@ Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ddrescue.xml... Dow
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/sl.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/storcli.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-storcli/main/plugin/storcli.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/plugin-diagnostics.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-plugin-diagnostics/main/plugin/plugin-diagnostics.plg attempt 1...Success
-Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/header-fix.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/header-fix.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg attempt 1...Removed from CA123
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ncdu.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-ncdu/main/plugin/ncdu.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsidp.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-tsidp/main/plugin/tsidp.plg attempt 1...Success
@@ -4633,36 +4677,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   157f9ca5..c2e1741c  main       -> origin/main
-Updating 157f9ca5..c2e1741c
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      |   2 +-
- app/translations/cs/LC_MESSAGES/messages.po      |   2 +-
- app/translations/da/LC_MESSAGES/messages.po      |   2 +-
- app/translations/de/LC_MESSAGES/messages.po      |   2 +-
- app/translations/es/LC_MESSAGES/messages.po      |   2 +-
- app/translations/fa/LC_MESSAGES/messages.po      |   2 +-
- app/translations/fr/LC_MESSAGES/messages.po      |   2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     |   2 +-
- app/translations/he/LC_MESSAGES/messages.po      |   2 +-
- app/translations/hr/LC_MESSAGES/messages.po      |   2 +-
- app/translations/hu/LC_MESSAGES/messages.po      |   2 +-
- app/translations/is/LC_MESSAGES/messages.po      |   2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 437 +++++++++++++++++++----
- app/translations/lt/LC_MESSAGES/messages.po      |   2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   |   2 +-
- app/translations/nl/LC_MESSAGES/messages.po      |   2 +-
- app/translations/pl/LC_MESSAGES/messages.po      |   2 +-
- app/translations/pt/LC_MESSAGES/messages.po      |   2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   |   2 +-
- app/translations/ro/LC_MESSAGES/messages.po      |   2 +-
- app/translations/ru/LC_MESSAGES/messages.po      |   2 +-
- app/translations/sv/LC_MESSAGES/messages.po      |   2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po |   2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po |   2 +-
- messages.pot                                     |   2 +-
- 25 files changed, 392 insertions(+), 93 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19593,9 +19608,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
-Tagged - Can't determine last update
-gameyfin/gameyfin
-ghcr.io/gameyfin/gameyfin:2 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
@@ -19615,8 +19627,6 @@ ghcr.io/gameyfin/gameyfin:2 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/TTM-unRAID/main/plugin/dwttm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
-googleg/chrome-remote-desktop-vdi
-googleg/chrome-remote-desktop-vdi Downloads: 753  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
@@ -19632,7 +19642,6 @@ googleg/chrome-remote-desktop-vdi Downloads: 753  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-storcli/main/plugin/storcli.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-plugin-diagnostics/main/plugin/plugin-diagnostics.plg attempt 1...
- Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ncdu/main/plugin/ncdu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-tsidp/main/plugin/tsidp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-labelman/main/plugin/labelman.plg attempt 1...
@@ -19641,9 +19650,17 @@ googleg/chrome-remote-desktop-vdi Downloads: 753  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+waazaafr/webserver-apache-php8
+waazaafr/webserver-apache-php8:8.3 Downloads: 1773  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+waazaafr/webserver-apache-php8
+waazaafr/webserver-apache-php8:8.4 Downloads: 1773  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+alexta69/metube
+ghcr.io/alexta69/metube Downloads: 24355054  Stars: 149  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -19660,6 +19677,8 @@ googleg/chrome-remote-desktop-vdi Downloads: 753  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/vivaldi
+lscr.io/linuxserver/vivaldi Downloads: 10999  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19779,8 +19798,6 @@ googleg/chrome-remote-desktop-vdi Downloads: 753  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-chrizzo84/ollamaui
-ghcr.io/chrizzo84/ollamaui Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
