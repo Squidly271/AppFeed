@@ -3934,7 +3934,13 @@ Processing /tmp/GitHub/repositoryClone/feederbox826/unraid-templates/feederbox82
 
 Downloading EDACerton's Repository
 
-Already up to date.
+From https://github.com/dkaser/unraid-plugins
+   d5b4913..db1674b  main       -> origin/main
+Updating d5b4913..db1674b
+Fast-forward
+ header-fix.xml | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 header-fix.xml
 
 Array
 (
@@ -3948,14 +3954,15 @@ Array
             [5] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/sl.xml
             [6] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/storcli.xml
             [7] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/plugin-diagnostics.xml
-            [8] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ncdu.xml
-            [9] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ca_profile.xml
-            [10] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsidp.xml
-            [11] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsdproxy.xml
-            [12] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/labelman.xml
-            [13] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/open.files.xml
-            [14] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/enhanced.log.xml
-            [15] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/motd.xml
+            [8] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/header-fix.xml
+            [9] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ncdu.xml
+            [10] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ca_profile.xml
+            [11] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsidp.xml
+            [12] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsdproxy.xml
+            [13] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/labelman.xml
+            [14] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/open.files.xml
+            [15] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/enhanced.log.xml
+            [16] => /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/motd.xml
         )
 
 )
@@ -3969,6 +3976,7 @@ Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ddrescue.xml... Dow
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/sl.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/storcli.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-storcli/main/plugin/storcli.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/plugin-diagnostics.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-plugin-diagnostics/main/plugin/plugin-diagnostics.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/header-fix.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ncdu.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-ncdu/main/plugin/ncdu.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/dkaser/unraid-plugins/tsidp.xml... Downloading https://raw.githubusercontent.com/dkaser/unraid-tsidp/main/plugin/tsidp.plg attempt 1...Success
@@ -4625,7 +4633,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   157f9ca5..c2e1741c  main       -> origin/main
+Updating 157f9ca5..c2e1741c
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/da/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/de/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/es/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     |   2 +-
+ app/translations/he/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/is/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 437 +++++++++++++++++++----
+ app/translations/lt/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   |   2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   |   2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po |   2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po |   2 +-
+ messages.pot                                     |   2 +-
+ 25 files changed, 392 insertions(+), 93 deletions(-)
 
 Array
 (
@@ -7255,12 +7292,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   021dd17..5aa0c70  master     -> origin/master
-Updating 021dd17..5aa0c70
-Fast-forward
- jlesage/freefilesync.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -13218,12 +13250,7 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-From https://github.com/Goobaroo/unraid-templates
-   eb4c4db..98c35cf  main       -> origin/main
-Updating eb4c4db..98c35cf
-Fast-forward
- ftbdirewolf201.21_server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -19566,6 +19593,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
+Tagged - Can't determine last update
+gameyfin/gameyfin
+ghcr.io/gameyfin/gameyfin:2 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
@@ -19585,6 +19615,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/TTM-unRAID/main/plugin/dwttm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
+googleg/chrome-remote-desktop-vdi
+googleg/chrome-remote-desktop-vdi Downloads: 753  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
@@ -19600,6 +19632,7 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-sl/main/plugin/sl.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-storcli/main/plugin/storcli.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-plugin-diagnostics/main/plugin/plugin-diagnostics.plg attempt 1...
+ Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-header-fix/main/plugin/header-fix.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-ncdu/main/plugin/ncdu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-tsidp/main/plugin/tsidp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-labelman/main/plugin/labelman.plg attempt 1...
@@ -19746,8 +19779,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-swalabtech/journiv-app
-swalabtech/journiv-app:latest Downloads: 41676  Stars: 1  Base: unknown
+chrizzo84/ollamaui
+ghcr.io/chrizzo84/ollamaui Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
