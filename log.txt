@@ -443,7 +443,61 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   7590d34..4565308  main       -> origin/main
+Updating 7590d34..4565308
+Fast-forward
+ Dockerfile.production                              |   48 +-
+ client/Dockerfile.dev                              |    2 +-
+ client/package-lock.json                           |  148 +++
+ client/package.json                                |    1 +
+ client/src/components/cards/GalleryCard.jsx        |   14 -
+ client/src/components/cards/GroupCard.jsx          |   12 -
+ client/src/components/cards/PerformerCard.jsx      |    4 -
+ client/src/components/cards/StudioCard.jsx         |   16 -
+ client/src/components/cards/TagCard.jsx            |   16 -
+ client/src/components/ui/BaseCard.jsx              |   47 +-
+ client/src/components/ui/CardComponents.jsx        |  186 +--
+ client/src/components/ui/CardCountIndicators.jsx   |   14 +-
+ client/src/components/ui/ExpandableDescription.jsx |  134 ++
+ client/src/components/ui/SceneCard.jsx             |  168 +--
+ client/src/components/ui/Tooltip.jsx               |    4 +
+ .../src/components/ui/__tests__/BaseCard.test.jsx  |   43 +
+ .../ui/__tests__/CardComponents.test.jsx           |   68 +-
+ .../ui/__tests__/CardCountIndicators.test.jsx      |   25 +
+ .../ui/__tests__/ExpandableDescription.test.jsx    |   14 +
+ .../src/components/ui/__tests__/Tooltip.test.jsx   |   24 +
+ .../src/hooks/__tests__/useCardKeyboardNav.test.js |   94 ++
+ .../src/hooks/__tests__/useCardSelection.test.js   |  137 +++
+ .../hooks/__tests__/useTruncationDetection.test.js |   15 +
+ client/src/hooks/useCardKeyboardNav.js             |   49 +
+ client/src/hooks/useCardSelection.js               |  132 ++
+ client/src/hooks/useTruncationDetection.js         |   32 +
+ docs/getting-started/configuration.md              |    1 -
+ ...6-01-08-card-interaction-improvements-design.md |   84 ++
+ .../2026-01-08-card-interaction-improvements.md    |  599 +++++++++
+ docs/plans/2026-01-08-docker-build-optimization.md |  159 +++
+ .../plans/2026-01-08-scenecard-navigation-issue.md |  131 ++
+ .../2026-01-08-unified-card-architecture-design.md | 1280 ++++++++++++++++++++
+ server/Dockerfile.dev                              |    2 +-
+ server/initializers/database.ts                    |   10 +-
+ server/initializers/schemaCatchup.ts               |    2 +-
+ 35 files changed, 3375 insertions(+), 340 deletions(-)
+ create mode 100644 client/src/components/ui/ExpandableDescription.jsx
+ create mode 100644 client/src/components/ui/__tests__/CardCountIndicators.test.jsx
+ create mode 100644 client/src/components/ui/__tests__/ExpandableDescription.test.jsx
+ create mode 100644 client/src/components/ui/__tests__/Tooltip.test.jsx
+ create mode 100644 client/src/hooks/__tests__/useCardKeyboardNav.test.js
+ create mode 100644 client/src/hooks/__tests__/useCardSelection.test.js
+ create mode 100644 client/src/hooks/__tests__/useTruncationDetection.test.js
+ create mode 100644 client/src/hooks/useCardKeyboardNav.js
+ create mode 100644 client/src/hooks/useCardSelection.js
+ create mode 100644 client/src/hooks/useTruncationDetection.js
+ create mode 100644 docs/plans/2026-01-08-card-interaction-improvements-design.md
+ create mode 100644 docs/plans/2026-01-08-card-interaction-improvements.md
+ create mode 100644 docs/plans/2026-01-08-docker-build-optimization.md
+ create mode 100644 docs/plans/2026-01-08-scenecard-navigation-issue.md
+ create mode 100644 docs/plans/2026-01-08-unified-card-architecture-design.md
 
 Array
 (
@@ -3619,37 +3673,51 @@ Removed from CA123
 
 Downloading bmartino1's Repository
 
-Already up to date.
+From https://github.com/bmartino1/unraid-docker-templates
+   1c46146..7776c9b  main       -> origin/main
+Updating 1c46146..7776c9b
+Fast-forward
+ ckpool.xml => deprecated/ckpool.xml |  0
+ hamachi-vpn.xml                     | 34 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 34 insertions(+)
+ rename ckpool.xml => deprecated/ckpool.xml (100%)
+ create mode 100644 hamachi-vpn.xml
 
 Array
 (
     [https://github.com/bmartino1/unraid-docker-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
-            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/ckpool.xml
+            [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml
+            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
             [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml
             [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
-            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml
-            [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml
-            [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/icloudpd-web.xml
-            [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml
-            [8] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml
-            [9] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/sftp2.xml
-            [10] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/clamdscan.xml
-            [11] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-valkey.xml
-            [12] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoinknotsgui.xml
-            [13] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-postgress.xml
+            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/hamachi-vpn.xml
+            [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml
+            [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml
+            [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/icloudpd-web.xml
+            [8] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml
+            [9] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml
+            [10] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/sftp2.xml
+            [11] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/clamdscan.xml
+            [12] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-valkey.xml
+            [13] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoinknotsgui.xml
+            [14] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-postgress.xml
         )
 
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/ckpool.xml...No Support or Project Link Present.  Template automatically dropped from CA
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml... ***DEPRECATED BY REPO PATH*** No Support or Project Link Present.  Template automatically dropped from CA
 
 Removed from CA123
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml...Success
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/hamachi-vpn.xml...Privileged mode set.  This may not be necessary
+
+No Support or Project Link Present.  Template automatically dropped from CA
+
+Removed from CA123
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/icloudpd-web.xml...Success
@@ -5461,12 +5529,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   7a5b0b0..e476d24  main       -> origin/main
-Updating 7a5b0b0..e476d24
-Fast-forward
- unraid/sealskin.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -19518,8 +19581,6 @@ Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
-tedcharles/broadcaster
-tedcharles/broadcaster:latest Downloads: 2890  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -19585,18 +19646,18 @@ tedcharles/broadcaster:latest Downloads: 2890  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-aeharding/voyager
-ghcr.io/aeharding/voyager:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-godver3/cli_debrid
-godver3/cli_debrid:dev Downloads: 34705  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+registry.gitlab.com/storyteller-platform/storyteller
+registry.gitlab.com/storyteller-platform/storyteller:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+Tagged - Can't determine last update
+immich-app/postgres
+ghcr.io/immich-app/postgres:18-vectorchord0.5.3-pgvector0.8.1 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19615,6 +19676,8 @@ godver3/cli_debrid:dev Downloads: 34705  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+coolasice1999/tmm-cli-cronjob
+coolasice1999/tmm-cli-cronjob:latest Downloads: 42285  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -19671,11 +19734,23 @@ godver3/cli_debrid:dev Downloads: 34705  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+jlesage/filebot
+jlesage/filebot Downloads: 19473829  Stars: 62  Base: unknown
+fenglc/pgadmin4
+fenglc/pgadmin4 Downloads: 4742059  Stars: 47  Base: unknown
+analogic/poste.io
+analogic/poste.io Downloads: 25817708  Stars: 283  Base: unknown
+stjohnjohnson/smartthings-mqtt-bridge
+stjohnjohnson/smartthings-mqtt-bridge Downloads: 6476668  Stars: 29  Base: unknown
+teslamate/grafana
+teslamate/grafana Downloads: 20361927  Stars: 24  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
+olehj/docker-nsfmineroc
+olehj/docker-nsfmineroc:latest Downloads: 32955  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -19734,6 +19809,8 @@ godver3/cli_debrid:dev Downloads: 34705  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
+robmarkcole/deepstack-ui
+robmarkcole/deepstack-ui Downloads: 563939  Stars: 11  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_usb_net_addon/main/usb_manager_aqc111_addon.plg attempt 1...
@@ -19748,29 +19825,28 @@ godver3/cli_debrid:dev Downloads: 34705  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/tasmotapm-unraid/main/tasmotapm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
+graphprotocol/graph-node
+graphprotocol/graph-node Downloads: 6046037  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+mozilla/syncserver
+mozilla/syncserver:latest Downloads: 11487361  Stars: 32  Base: unknown
+lnxd/xmrig
+lnxd/xmrig:latest Downloads: 136979  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+andrijn/plex-ngrok
+andrijn/plex-ngrok Downloads: 1801  Stars: 0  Base: unknown
+sbs20/scanservjs
+sbs20/scanservjs Downloads: 559205  Stars: 4  Base: unknown
+shaneisrael/fireshare
+shaneisrael/fireshare Downloads: 313390  Stars: 5  Base: unknown
+charlocharlie/qbittorrent-port-forward-file
+charlocharlie/qbittorrent-port-forward-file Downloads: 88008  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-rclone/rclone
-rclone/rclone:latest Downloads: 115980309  Stars: 268  Base: unknown
-2franix/cron-docker
-ghcr.io/2franix/cron-docker:latest Downloads:   Stars:   Base: unknown
-registry.gitlab.com/fmd-foss/fmd-server
-registry.gitlab.com/fmd-foss/fmd-server:latest Downloads:   Stars:   Base: unknown
-willfarrell/crontab
-willfarrell/crontab:latest Downloads: 2374454  Stars: 68  Base: unknown
-Tagged - Can't determine last update
-tozd/cron
-tozd/cron:ubuntu-trusty Downloads: 31865  Stars: 0  Base: unknown
-skulltrail/imdbarr
-ghcr.io/skulltrail/imdbarr:latest Downloads:   Stars:   Base: unknown
-yusing/godoxy
-ghcr.io/yusing/godoxy:latest Downloads: 70  Stars: 0  Base: unknown
-debridmediamanager/zurg-testing
-ghcr.io/debridmediamanager/zurg-testing:latest Downloads: 1782  Stars: 2  Base: unknown
+ainullcode/borg-ui
+ainullcode/borg-ui:latest Downloads: 38638  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19785,11 +19861,11 @@ ghcr.io/debridmediamanager/zurg-testing:latest Downloads: 1782  Stars: 2  Base: 
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-nicolargo/glances
-nicolargo/glances:latest Downloads: 105029373  Stars: 207  Base: unknown
+amruthpillai/reactive-resume
+amruthpillai/reactive-resume:latest Downloads: 4176458  Stars: 59  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 126
+Privileged: 127
 
 
 Updating GitHub
