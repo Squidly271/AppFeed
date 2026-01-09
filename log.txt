@@ -49,7 +49,34 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   1414390..8a174d8  main       -> origin/main
+Updating 1414390..8a174d8
+Fast-forward
+ README.md                            | 143 +++++++----------------------------
+ public/screenshots/admin.png         | Bin 1027156 -> 0 bytes
+ public/screenshots/cart.png          | Bin 1070531 -> 0 bytes
+ public/screenshots/checkout.png      | Bin 1013157 -> 0 bytes
+ public/screenshots/featured.png      | Bin 2168065 -> 0 bytes
+ public/screenshots/modelviewer.png   | Bin 1128287 -> 0 bytes
+ public/screenshots/mwadmin.png       | Bin 0 -> 668275 bytes
+ public/screenshots/mwdiscover.png    | Bin 0 -> 656055 bytes
+ public/screenshots/mwhome.png        | Bin 0 -> 799080 bytes
+ public/screenshots/mwmodeldetail.png | Bin 0 -> 511686 bytes
+ public/screenshots/shop.png          | Bin 1954566 -> 0 bytes
+ public/screenshots/uploads.png       | Bin 923811 -> 0 bytes
+ 12 files changed, 27 insertions(+), 116 deletions(-)
+ delete mode 100644 public/screenshots/admin.png
+ delete mode 100644 public/screenshots/cart.png
+ delete mode 100644 public/screenshots/checkout.png
+ delete mode 100644 public/screenshots/featured.png
+ delete mode 100644 public/screenshots/modelviewer.png
+ create mode 100644 public/screenshots/mwadmin.png
+ create mode 100644 public/screenshots/mwdiscover.png
+ create mode 100644 public/screenshots/mwhome.png
+ create mode 100644 public/screenshots/mwmodeldetail.png
+ delete mode 100644 public/screenshots/shop.png
+ delete mode 100644 public/screenshots/uploads.png
 
 Array
 (
@@ -407,7 +434,558 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   20b7216..812c7ba  master     -> origin/master
+ * [new tag]         0.8.27     -> 0.8.27
+Updating 20b7216..812c7ba
+Fast-forward
+ .env.example                                       |   9 +
+ .github/dependabot.yml                             |  56 ++++
+ .github/workflows/ci.yml                           | 198 ++++++++++++
+ .github/workflows/publish_dev.yml                  | 120 +++++--
+ .github/workflows/publish_experimental.yml         | 120 +++++--
+ .github/workflows/publish_master.yml               | 139 +++++---
+ .gitignore                                         |   1 +
+ Dockerfile                                         | 303 ++++++++++--------
+ app/Jobs/ProcessM3uImport.php                      |  12 +
+ config/broadcasting.php                            |   6 +-
+ config/dev.php                                     |   6 +-
+ database/.gitignore                                |   0
+ database/factories/CategoryFactory.php             |   0
+ database/factories/ChannelFactory.php              |   0
+ database/factories/ChannelFailoverFactory.php      |   0
+ database/factories/CustomPlaylistFactory.php       |   0
+ database/factories/EpgChannelFactory.php           |   3 +-
+ database/factories/EpgFactory.php                  |   0
+ database/factories/EpgMapFactory.php               |   0
+ database/factories/EpisodeFactory.php              |   0
+ database/factories/GroupFactory.php                |   0
+ database/factories/MergedPlaylistFactory.php       |   0
+ database/factories/PlaylistAuthFactory.php         |   0
+ database/factories/PlaylistFactory.php             |   0
+ database/factories/PlaylistSyncStatusFactory.php   |   0
+ .../factories/PlaylistSyncStatusLogFactory.php     |   0
+ database/factories/PostProcessFactory.php          |   0
+ database/factories/SeasonFactory.php               |   0
+ database/factories/SeriesFactory.php               |   0
+ database/factories/StreamProfileFactory.php        |   0
+ database/factories/StrmFileMappingFactory.php      |   0
+ database/factories/UserFactory.php                 |   0
+ .../0001_01_01_000000_create_users_table.php       |   0
+ .../0001_01_01_000001_create_cache_table.php       |   0
+ .../0001_01_01_000002_create_jobs_table.php        |   0
+ .../2019_12_22_015115_create_short_urls_table.php  |   0
+ ..._12_22_015214_create_short_url_visits_table.php |   0
+ ...e_short_url_table_for_version_two_zero_zero.php |   0
+ ..._url_visits_table_for_version_two_zero_zero.php |   0
+ ...short_url_table_for_version_three_zero_zero.php |   0
+ ...rl_table_add_option_to_forward_query_params.php |   0
+ .../2022_12_14_083707_create_settings_table.php    |   0
+ ...2_16_000001_create_strm_file_mappings_table.php |   0
+ .../2024_12_17_203030_create_admin_user.php        |   0
+ ...024_12_18_233316_create_notifications_table.php |   0
+ .../2024_12_19_034846_create_imports_table.php     |   0
+ .../2024_12_19_034847_create_exports_table.php     |   0
+ ...2_19_034848_create_failed_import_rows_table.php |   0
+ .../2024_12_19_154247_create_playlists_table.php   |   0
+ .../2024_12_19_154248_create_groups_table.php      |   0
+ .../2024_12_19_154249_create_channels_table.php    |   0
+ ...1_06_161153_add_import_batch_no_to_channels.php |   0
+ ..._01_19_220431_add_import_batch_no_to_groups.php |   0
+ .../2025_01_21_164226_create_epgs_table.php        |   0
+ ...2025_01_21_164227_create_epg_channels_table.php |   0
+ ...2025_01_21_170519_add_synced_column_to_epgs.php |   0
+ ..._21_170900_add_import_batch_to_epg_channels.php |   0
+ .../2025_01_21_171508_add_status_to_epg.php        |   0
+ ...2025_01_21_171725_add_errors_columnd_to_epg.php |   0
+ ...2025_01_21_173519_add_uploads_column_to_epg.php |   0
+ ...25_01_21_174319_add_user_id_to_epg_channels.php |   0
+ .../2025_01_21_224113_add_icon_to_epg_channels.php |   0
+ ...25_01_22_200353_create_epg_programmes_table.php |   0
+ ...8_remove_programme_column_from_epg_channels.php |   0
+ ...025_01_23_204711_add_sync_time_to_playlists.php |   0
+ ..._01_28_152132_create_merged_playlists_table.php |   0
+ ...52133_create_merged_playlist_playlist_table.php |   0
+ ..._01_28_152137_create_custom_playlists_table.php |   0
+ ...152138_create_channel_custom_playlist_table.php |   0
+ .../2025_01_28_225053_add_sync_time_to_epgs.php    |   0
+ ...2025_01_28_225829_add_index_to_epg_channels.php |   0
+ ...90403_add_epg_channel_id_column_to_channels.php |   0
+ ...2025_02_01_151321_drop_epg_programmes_table.php |   0
+ .../2025_02_01_153803_add_uuid_column_to_epgs.php  |   0
+ ...06_161829_add_auto_sync_toggle_to_playlists.php |   0
+ ...5_02_06_161839_add_auto_sync_toggle_to_epgs.php |   0
+ .../2025_02_09_165446_add_avatar_url_to_users.php  |   0
+ ...9_195223_create_filament-jobs-monitor_table.php |   0
+ ..._09_215228_add_progress_column_to_playlists.php |   0
+ ..._09_215233_add_progress_column_to_playlists.php |   0
+ ..._13_171533_add_processing_flag_to_playlists.php |   0
+ ...25_02_13_171537_add_processing_flag_to_epgs.php |   0
+ .../2025_02_13_215803_create_jobs_table.php        |  21 +-
+ ...02_13_224233_add_sync_interval_to_playlists.php |   0
+ ...2025_02_13_224236_add_sync_interval_to_epgs.php |   0
+ ...d_playlist_import_prefs_column_to_playlists.php |   0
+ ...02_14_222330_add_groups_column_to_playlists.php |   0
+ ...150422_reset_playlist_interval_on_playlists.php |   0
+ ...2_15_150833_reset_playlist_interval_on_epgs.php |   0
+ .../2025_02_16_181719_create_epg_maps_table.php    |   0
+ .../2025_02_16_184838_add_counts_to_epg_maps.php   |   0
+ ...2_16_193535_add_override_column_to_epg_maps.php |   0
+ ...02_18_173424_add_enable_toggle_to_playlists.php |   0
+ ...18_185618_add_internal_group_name_to_groups.php |   0
+ ...02_19_152211_add_is_custom_column_to_groups.php |   0
+ ...2025_02_21_155914_drop_queue_monitors_table.php |   0
+ ...2_21_205916_add_uploads_column_to_playlists.php |   0
+ ...2_26_200928_add_xtream_columns_to_playlists.php |   0
+ ...21823_add_user_agent_ssl_prefs_to_playlists.php |   0
+ ..._27_221833_add_user_agent_ssl_prefs_to_epgs.php |   0
+ ...dd_default_user_agent_to_playlists_and_epgs.php |   0
+ ..._140444_add_editable_attributes_to_channels.php |   0
+ ...5644_add_icon_preference_toggle_to_channels.php |   0
+ ..._05_142409_add_recurring_toggle_to_epg_maps.php |   0
+ ...5_145318_add_playlist_id_column_to_epg_maps.php |   0
+ ..._05_165633_add_mapped_at_column_to_epg_maps.php |   0
+ ...06_155450_add_custom_id_and_url_to_channels.php |   0
+ ...25_03_07_153936_add_sort_column_to_channels.php |   0
+ ...add_auto_channel_output_option_to_playlists.php |   0
+ ...03_09_161832_add_xtream_status_to_playlists.php |   0
+ ..._10_205435_add_extvlcopt_column_to_channels.php |   0
+ ..._215809_create_personal_access_tokens_table.php |   0
+ ...5_03_12_220659_create_breezy_sessions_table.php |   0
+ ..._18_132548_add_auto_sort_order_to_playlists.php |   0
+ ..._03_19_161419_add_enable_proxy_to_playlists.php |   0
+ ...161433_add_enable_proxy_to_custom_playlists.php |   0
+ ...161447_add_enable_proxy_to_merged_playlists.php |   0
+ ...5_03_20_131924_add_hdhr_tuners_to_playlists.php |   0
+ ..._20_174644_add_kodi_drop_column_to_channels.php |   0
+ ...30059_add_channel_id_selection_to_playlists.php |   0
+ ...025_03_25_204141_add_preferred_local_to_epg.php |   0
+ ...25_03_31_212827_create_playlist_auths_table.php |   0
+ .../2025_03_31_221549_add_authable_pivot_table.php |   0
+ ...03_140401_add_dummy_epg_config_to_playlists.php |   0
+ ...5_212653_add_short_url_columns_to_playlists.php |   0
+ .../2025_04_19_175837_create_tag_tables.php        |   0
+ ...25_04_21_203422_create_post_processes_table.php |   0
+ ...2025_04_21_203508_create_processables_table.php |   0
+ ..._21_213721_crate_post_processing_logs_table.php |   0
+ ...025_04_24_205934_add_new_column_to_channels.php |   0
+ .../2025_04_24_205937_add_new_column_to_groups.php |   0
+ ..._212113_create_playlist_sync_statuses_table.php |   0
+ ...4454_add_stats_meta_to_playlist_sync_status.php |   0
+ ..._124521_add_dummy_epg_category_to_playlists.php |   0
+ ...0814_create_playlist_sync_status_logs_table.php |   0
+ ..._remove_and_move_sync_status_to_log_entries.php |   0
+ ...8_add_user_agent_to_custom_merged_playlists.php |   0
+ .../2025_05_05_180136_add_catchup_to_channels.php  |   0
+ .../2025_05_07_202251_remove_batch_job_tables.php  |   0
+ ...09_145446_alter_notifications_data_to_jsonb.php |   0
+ ...5_09_220958_update_epg_channel_title_column.php |   0
+ .../2025_05_20_135723_convert_json_to_jsonb.php    |   0
+ .../2025_05_21_185308_create_categories_table.php  |   0
+ .../2025_05_21_185309_create_series_table.php      |   0
+ .../2025_05_21_185310_create_seasons_table.php     |   0
+ .../2025_05_21_185311_create_episodes_table.php    |   0
+ ..._21_185917_add_series_progress_to_playlists.php |   0
+ ...05_21_192755_add_source_series_id_to_series.php |   0
+ .../2025_05_21_213847_update_date_time_column.php  |   0
+ .../2025_05_22_114818_add_sort_order_to_series.php |   0
+ ...25_05_22_201214_add_sync_location_to_series.php |   0
+ ..._24_124551_add_playlist_source_groups_table.php |   0
+ .../2025_05_25_135318_live_enabled_by_default.php  |   0
+ ...05_27_205110_add_proxy_options_to_playlists.php |   0
+ ...05_30_131848_create_channel_failovers_table.php |   0
+ ...0_152649_add_available_streams_to_playlists.php |   0
+ ...06_01_020531_add_sort_order_to_groups_table.php |   0
+ ...035_add_addtl_display_names_to_epg_channels.php |   0
+ ...12659_add_additional_attributes_to_channels.php |   0
+ ...e_playlist_id_column_allow_null_on_channels.php |   0
+ ...1_add_custom_playlist_id_column_to_channels.php |   0
+ ...3_add_available_streams_to_custom_playlists.php |   0
+ ...4_add_prefix_suffix_ignore_tags_to_epg_maps.php |   0
+ ...date_channel_name_to_allow_null_on_channels.php |   0
+ ...2025_06_12_165152_add_tvg_shift_to_channels.php |   0
+ ...6_12_200107_update_shift_column_on_channels.php |   0
+ ...025_06_13_135855_add_vod_column_on_channels.php |   0
+ ...25_06_17_135730_create_shared_streams_table.php |   0
+ ...7_add_error_message_to_shared_streams_table.php |   0
+ ...0000_add_tmdb_fields_to_channels_and_series.php |   0
+ ...02_add_additional_count_columns_to_epg_maps.php |   0
+ ..._add_container_extension_column_to_channels.php |   0
+ ..._24_145609_add_info_meta_column_to_episodes.php |   0
+ ..._24_223917_add_source_id_column_to_channels.php |   0
+ ...unique_constraint_to_authenticatables_table.php |   0
+ ..._161208_update_source_id_column_on_channels.php |   0
+ ..._14_153343_change_playlist_uuid_column_type.php |   0
+ ...nge_custom_merged_playlist_uuid_column_type.php |   0
+ ...5_07_16_070133_update_playlist_column_types.php |   0
+ ..._161107_create_series_custom_playlist_table.php |   0
+ ..._add_backup_before_sync_column_to_playlists.php |   0
+ .../2025_07_22_074848_add_indexes_to_channels.php  |   0
+ ...5_07_25_082930_add_is_cached_column_to_epgs.php |   0
+ ...0_add_schedules_direct_fields_to_epgs_table.php |   0
+ ...5_08_02_062327_add_sd_config_column_to_epgs.php |   0
+ ..._03_172048_add_conditions_to_post_processes.php |   0
+ ..._08_06_072847_add_cache_meta_column_to_epgs.php |   0
+ ...5_08_08_070415_add_sync_toggle_to_playlists.php |   0
+ ...8_12_154638_add_cache_progress_to_epg_table.php |   0
+ ..._16_150208_add_server_timezone_to_playlists.php |   0
+ ...4822_add_new_sync_index_columns_to_channels.php |   0
+ ...25_08_21_100430_add_programme_count_to_epgs.php |   0
+ ..._08_21_142446_add_logo_internal_to_channels.php |   0
+ .../2025_08_22_210003_add_mfa_column_to_users.php  |   0
+ ...2025_09_01_150234_update_shared_stream_type.php |   0
+ ...200144_add_enable_toggle_column_to_episodes.php |   0
+ ...03_072145_add_include_series_toggle_for_m3u.php |   0
+ ...080022_add_series_metadata_autofetch_toggle.php |   0
+ ...4_064050_add_stream_file_fields_to_channels.php |   0
+ ..._add_last_metadata_fetch_column_to_channels.php |   0
+ ..._09_13_093721_create_playlist_aliases_table.php |   0
+ ...4_101901_add_short_urls_to_playlist_aliases.php |   0
+ ..._070541_add_proxy_field_to_playlist_aliases.php |   0
+ ...08_update_schedule_intervals_to_cron_values.php |   0
+ ...09_18_151019_add_sd_metadata_column_to_epgs.php |   0
+ ...2025_09_22_081912_change_series_name_column.php |   0
+ ...2_110254_add_logo_proxy_toggle_to_playlists.php |   0
+ ...3_add_logo_proxy_toggle_to_playlisy_aliases.php |   0
+ ...9_26_115419_add_custom_icon_to_epg_channels.php |   0
+ ...094734_add_auto_merge_settings_to_playlists.php |   0
+ ...0_01_074107_add_sync_vod_files_to_playlists.php |   0
+ ...add_enable_toggles_to_groups_and_categories.php |   0
+ ...5_10_01_150410_update_m3u_channel_source_id.php |   0
+ ...0_02_083138_add_channels_column_to_epg_maps.php |   0
+ ...10_05_085522_add_metadata_to_series_seasons.php |   0
+ ...14_add_missing_metadata_columns_to_channels.php |   0
+ ...025_10_11_000002_add_plot_cover_to_episodes.php |   0
+ ...5_10_11_140000_add_source_type_to_playlists.php |   0
+ ...5_10_16_111539_create_stream_profiles_table.php |   0
+ ...0_16_120000_add_stream_profile_to_playlists.php |   0
+ ...5_10_17_000000_add_emby_config_to_playlists.php |   0
+ ..._22_084343_add_ custom_headers_to_playlists.php |   0
+ ..._170508_add_vod_stream_profile_to_playlists.php |   0
+ ..._10_26_111922_add_format_to_stream_profiles.php |   0
+ ..._10_31_154628_drop_emby_integration_columns.php |   0
+ ..._add_include_vod_in_m3u_toggle_to_playlists.php |   0
+ ...31420_add_processing_tracking_to_epgs_table.php |   0
+ ...144146_add_strict_ts_mode_flag_to_playlists.php |   0
+ ...11_16_000001_update_default_profiles_to_cbr.php |   0
+ ...025_12_01_144108_add_batch_no_to_categories.php |   0
+ ...12_01_152218_create_source_categories_table.php |   0
+ ...2_08_230327_add_vod_sync_status_to_playlist.php |   0
+ .../2025_12_08_230346_add_type_to_groups.php       |   0
+ ...08_231053_update_playlist_processing_column.php |   0
+ ...2025_12_09_151708_update_default_group_type.php |   0
+ .../2025_12_09_172010_add_vod_groups_from_live.php |   0
+ ...62617_add_preprocssing_options_to_playlists.php |   0
+ ...213335_add_source_group_id_to_source_groups.php |   0
+ ...5_12_21_211656_update_cover_field_on_series.php |   0
+ ...vailable_streams_column_to_merged_playlists.php |   0
+ ...6_072918_add_nfo_hash_to_strm_file_mappings.php |   0
+ database/seeders/DatabaseSeeder.php                |   0
+ .../2025_04_21_140953_create_general_settings.php  |   0
+ ...2025_05_01_160604_add_mfp_user_agent_fields.php |   0
+ .../2025_05_16_070340_add_ffmpeg_codec_fields.php  |   0
+ ..._05_19_130544_add_ffmpeg_path_select_option.php |   0
+ ..._05_29_152250_add_hw_accell_ffmpeg_settings.php |   0
+ ...add_ffmpeg_custom_command_template_settings.php |   0
+ .../2025_06_03_190045_add_ffmpeg_hls_settings.php  |   0
+ ...07_22_000000_add_ffprobe_path_select_option.php |   0
+ .../2025_08_03_181426_add_smtp_settings_fields.php |   0
+ ...5_08_07_140326_add_stream_file_sync_options.php |   0
+ ...08_16_110411_add_video_player_proxy_options.php |   0
+ .../2025_08_20_100536_add_sync_abort_options.php   |   0
+ ...09_04_064323_add_vod_sync_location_settings.php |   0
+ ...9_05_082037_add_backup_schedule_to_settings.php |   0
+ ...93017_add_stream_file_sync_include_category.php |   0
+ .../2025_09_30_160741_add_wan_output_toggle.php    |   0
+ ...9_074924_add_additional_stream_file_options.php |   0
+ .../2025_10_11_000000_add_emby_settings.php        |   0
+ ..._000000_add_emby_groups_categories_settings.php |   0
+ ...25_10_16_113626_add_stream_profile_to_proxy.php |   0
+ ...0_23_170528_add_vod_stream_profile_to_proxy.php |   0
+ ..._10_31_154759_drop_emby_integration_columns.php |   0
+ ...00000_add_m3u_proxy_public_url_auto_resolve.php |   0
+ ...ration_add_proxy_failover_resolver_settings.php |   0
+ ...51_add_proxy_override_variables_to_settings.php |   0
+ ..._000000_add_provider_request_delay_settings.php |   0
+ ...0000_add_name_filter_options_to_stream_sync.php |   0
+ ...000000_add_proxy_stop_oldest_stream_setting.php |   0
+ ..._12_18_000000_add_tmdb_integration_settings.php |   0
+ ...25_12_31_000000_add_nfo_generation_settings.php |   0
+ docker/8.4/supervisord.conf                        |   2 +-
+ storage/logs/.gitignore                            |   2 -
+ tests/Feature/EpgApiControllerTest.php             |  46 ++-
+ tests/Feature/GuestDashboardAuthTest.php           |  20 +-
+ .../{Unit => Feature}/ProviderRequestDelayTest.php |  14 +-
+ tests/Feature/StrmFileMappingTest.php              |  15 +-
+ tests/Feature/XtreamApiControllerTest.php          | 352 ++++++++-------------
+ tests/Pest.php                                     |   2 +-
+ tests/Unit/MergeChannelsTest.php                   |  25 +-
+ 281 files changed, 958 insertions(+), 514 deletions(-)
+ create mode 100644 .github/dependabot.yml
+ create mode 100644 .github/workflows/ci.yml
+ mode change 100644 => 100755 database/.gitignore
+ mode change 100644 => 100755 database/factories/CategoryFactory.php
+ mode change 100644 => 100755 database/factories/ChannelFactory.php
+ mode change 100644 => 100755 database/factories/ChannelFailoverFactory.php
+ mode change 100644 => 100755 database/factories/CustomPlaylistFactory.php
+ mode change 100644 => 100755 database/factories/EpgChannelFactory.php
+ mode change 100644 => 100755 database/factories/EpgFactory.php
+ mode change 100644 => 100755 database/factories/EpgMapFactory.php
+ mode change 100644 => 100755 database/factories/EpisodeFactory.php
+ mode change 100644 => 100755 database/factories/GroupFactory.php
+ mode change 100644 => 100755 database/factories/MergedPlaylistFactory.php
+ mode change 100644 => 100755 database/factories/PlaylistAuthFactory.php
+ mode change 100644 => 100755 database/factories/PlaylistFactory.php
+ mode change 100644 => 100755 database/factories/PlaylistSyncStatusFactory.php
+ mode change 100644 => 100755 database/factories/PlaylistSyncStatusLogFactory.php
+ mode change 100644 => 100755 database/factories/PostProcessFactory.php
+ mode change 100644 => 100755 database/factories/SeasonFactory.php
+ mode change 100644 => 100755 database/factories/SeriesFactory.php
+ mode change 100644 => 100755 database/factories/StreamProfileFactory.php
+ mode change 100644 => 100755 database/factories/StrmFileMappingFactory.php
+ mode change 100644 => 100755 database/factories/UserFactory.php
+ mode change 100644 => 100755 database/migrations/0001_01_01_000000_create_users_table.php
+ mode change 100644 => 100755 database/migrations/0001_01_01_000001_create_cache_table.php
+ mode change 100644 => 100755 database/migrations/0001_01_01_000002_create_jobs_table.php
+ mode change 100644 => 100755 database/migrations/2019_12_22_015115_create_short_urls_table.php
+ mode change 100644 => 100755 database/migrations/2019_12_22_015214_create_short_url_visits_table.php
+ mode change 100644 => 100755 database/migrations/2020_02_11_224848_update_short_url_table_for_version_two_zero_zero.php
+ mode change 100644 => 100755 database/migrations/2020_02_12_008432_update_short_url_visits_table_for_version_two_zero_zero.php
+ mode change 100644 => 100755 database/migrations/2020_04_10_224546_update_short_url_table_for_version_three_zero_zero.php
+ mode change 100644 => 100755 database/migrations/2020_04_20_009283_update_short_url_table_add_option_to_forward_query_params.php
+ mode change 100644 => 100755 database/migrations/2022_12_14_083707_create_settings_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_16_000001_create_strm_file_mappings_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_17_203030_create_admin_user.php
+ mode change 100644 => 100755 database/migrations/2024_12_18_233316_create_notifications_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_19_034846_create_imports_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_19_034847_create_exports_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_19_034848_create_failed_import_rows_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_19_154247_create_playlists_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_19_154248_create_groups_table.php
+ mode change 100644 => 100755 database/migrations/2024_12_19_154249_create_channels_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_06_161153_add_import_batch_no_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_01_19_220431_add_import_batch_no_to_groups.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_164226_create_epgs_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_164227_create_epg_channels_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_170519_add_synced_column_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_170900_add_import_batch_to_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_171508_add_status_to_epg.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_171725_add_errors_columnd_to_epg.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_173519_add_uploads_column_to_epg.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_174319_add_user_id_to_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_01_21_224113_add_icon_to_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_01_22_200353_create_epg_programmes_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_22_200738_remove_programme_column_from_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_01_23_204711_add_sync_time_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_01_28_152132_create_merged_playlists_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_28_152133_create_merged_playlist_playlist_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_28_152137_create_custom_playlists_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_28_152138_create_channel_custom_playlist_table.php
+ mode change 100644 => 100755 database/migrations/2025_01_28_225053_add_sync_time_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_01_28_225829_add_index_to_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_01_29_190403_add_epg_channel_id_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_02_01_151321_drop_epg_programmes_table.php
+ mode change 100644 => 100755 database/migrations/2025_02_01_153803_add_uuid_column_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_02_06_161829_add_auto_sync_toggle_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_06_161839_add_auto_sync_toggle_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_02_09_165446_add_avatar_url_to_users.php
+ mode change 100644 => 100755 database/migrations/2025_02_09_195223_create_filament-jobs-monitor_table.php
+ mode change 100644 => 100755 database/migrations/2025_02_09_215228_add_progress_column_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_09_215233_add_progress_column_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_13_171533_add_processing_flag_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_13_171537_add_processing_flag_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_02_13_215803_create_jobs_table.php
+ mode change 100644 => 100755 database/migrations/2025_02_13_224233_add_sync_interval_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_13_224236_add_sync_interval_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_02_14_214426_add_playlist_import_prefs_column_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_14_222330_add_groups_column_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_15_150422_reset_playlist_interval_on_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_15_150833_reset_playlist_interval_on_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_02_16_181719_create_epg_maps_table.php
+ mode change 100644 => 100755 database/migrations/2025_02_16_184838_add_counts_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_02_16_193535_add_override_column_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_02_18_173424_add_enable_toggle_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_18_185618_add_internal_group_name_to_groups.php
+ mode change 100644 => 100755 database/migrations/2025_02_19_152211_add_is_custom_column_to_groups.php
+ mode change 100644 => 100755 database/migrations/2025_02_21_155914_drop_queue_monitors_table.php
+ mode change 100644 => 100755 database/migrations/2025_02_21_205916_add_uploads_column_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_26_200928_add_xtream_columns_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_27_221823_add_user_agent_ssl_prefs_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_02_27_221833_add_user_agent_ssl_prefs_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_02_27_224518_add_default_user_agent_to_playlists_and_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_03_04_140444_add_editable_attributes_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_03_04_145644_add_icon_preference_toggle_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_03_05_142409_add_recurring_toggle_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_03_05_145318_add_playlist_id_column_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_03_05_165633_add_mapped_at_column_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_03_06_155450_add_custom_id_and_url_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_03_07_153936_add_sort_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_03_07_190744_add_auto_channel_output_option_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_09_161832_add_xtream_status_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_10_205435_add_extvlcopt_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_03_12_215809_create_personal_access_tokens_table.php
+ mode change 100644 => 100755 database/migrations/2025_03_12_220659_create_breezy_sessions_table.php
+ mode change 100644 => 100755 database/migrations/2025_03_18_132548_add_auto_sort_order_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_19_161419_add_enable_proxy_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_19_161433_add_enable_proxy_to_custom_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_19_161447_add_enable_proxy_to_merged_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_20_131924_add_hdhr_tuners_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_20_174644_add_kodi_drop_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_03_20_230059_add_channel_id_selection_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_03_25_204141_add_preferred_local_to_epg.php
+ mode change 100644 => 100755 database/migrations/2025_03_31_212827_create_playlist_auths_table.php
+ mode change 100644 => 100755 database/migrations/2025_03_31_221549_add_authable_pivot_table.php
+ mode change 100644 => 100755 database/migrations/2025_04_03_140401_add_dummy_epg_config_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_04_15_212653_add_short_url_columns_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_04_19_175837_create_tag_tables.php
+ mode change 100644 => 100755 database/migrations/2025_04_21_203422_create_post_processes_table.php
+ mode change 100644 => 100755 database/migrations/2025_04_21_203508_create_processables_table.php
+ mode change 100644 => 100755 database/migrations/2025_04_21_213721_crate_post_processing_logs_table.php
+ mode change 100644 => 100755 database/migrations/2025_04_24_205934_add_new_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_04_24_205937_add_new_column_to_groups.php
+ mode change 100644 => 100755 database/migrations/2025_04_24_212113_create_playlist_sync_statuses_table.php
+ mode change 100644 => 100755 database/migrations/2025_04_24_214454_add_stats_meta_to_playlist_sync_status.php
+ mode change 100644 => 100755 database/migrations/2025_04_26_124521_add_dummy_epg_category_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_04_28_170814_create_playlist_sync_status_logs_table.php
+ mode change 100644 => 100755 database/migrations/2025_04_28_170938_remove_and_move_sync_status_to_log_entries.php
+ mode change 100644 => 100755 database/migrations/2025_05_03_172748_add_user_agent_to_custom_merged_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_05_05_180136_add_catchup_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_05_07_202251_remove_batch_job_tables.php
+ mode change 100644 => 100755 database/migrations/2025_05_09_145446_alter_notifications_data_to_jsonb.php
+ mode change 100644 => 100755 database/migrations/2025_05_09_220958_update_epg_channel_title_column.php
+ mode change 100644 => 100755 database/migrations/2025_05_20_135723_convert_json_to_jsonb.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_185308_create_categories_table.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_185309_create_series_table.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_185310_create_seasons_table.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_185311_create_episodes_table.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_185917_add_series_progress_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_192755_add_source_series_id_to_series.php
+ mode change 100644 => 100755 database/migrations/2025_05_21_213847_update_date_time_column.php
+ mode change 100644 => 100755 database/migrations/2025_05_22_114818_add_sort_order_to_series.php
+ mode change 100644 => 100755 database/migrations/2025_05_22_201214_add_sync_location_to_series.php
+ mode change 100644 => 100755 database/migrations/2025_05_24_124551_add_playlist_source_groups_table.php
+ mode change 100644 => 100755 database/migrations/2025_05_25_135318_live_enabled_by_default.php
+ mode change 100644 => 100755 database/migrations/2025_05_27_205110_add_proxy_options_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_05_30_131848_create_channel_failovers_table.php
+ mode change 100644 => 100755 database/migrations/2025_05_30_152649_add_available_streams_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_06_01_020531_add_sort_order_to_groups_table.php
+ mode change 100644 => 100755 database/migrations/2025_06_09_133035_add_addtl_display_names_to_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_10_212659_add_additional_attributes_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_10_215740_update_playlist_id_column_allow_null_on_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_10_220321_add_custom_playlist_id_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_11_150943_add_available_streams_to_custom_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_06_11_190844_add_prefix_suffix_ignore_tags_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_06_11_205559_update_channel_name_to_allow_null_on_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_12_165152_add_tvg_shift_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_12_200107_update_shift_column_on_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_13_135855_add_vod_column_on_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_17_135730_create_shared_streams_table.php
+ mode change 100644 => 100755 database/migrations/2025_06_17_222347_add_error_message_to_shared_streams_table.php
+ mode change 100644 => 100755 database/migrations/2025_06_18_100000_add_tmdb_fields_to_channels_and_series.php
+ mode change 100644 => 100755 database/migrations/2025_06_23_164102_add_additional_count_columns_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_06_23_205558_add_container_extension_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_24_145609_add_info_meta_column_to_episodes.php
+ mode change 100644 => 100755 database/migrations/2025_06_24_223917_add_source_id_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_06_27_191925_add_unique_constraint_to_authenticatables_table.php
+ mode change 100644 => 100755 database/migrations/2025_06_30_161208_update_source_id_column_on_channels.php
+ mode change 100644 => 100755 database/migrations/2025_07_14_153343_change_playlist_uuid_column_type.php
+ mode change 100644 => 100755 database/migrations/2025_07_15_130656_change_custom_merged_playlist_uuid_column_type.php
+ mode change 100644 => 100755 database/migrations/2025_07_16_070133_update_playlist_column_types.php
+ mode change 100644 => 100755 database/migrations/2025_07_16_161107_create_series_custom_playlist_table.php
+ mode change 100644 => 100755 database/migrations/2025_07_21_082745_add_backup_before_sync_column_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_07_22_074848_add_indexes_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_07_25_082930_add_is_cached_column_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_07_31_175630_add_schedules_direct_fields_to_epgs_table.php
+ mode change 100644 => 100755 database/migrations/2025_08_02_062327_add_sd_config_column_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_08_03_172048_add_conditions_to_post_processes.php
+ mode change 100644 => 100755 database/migrations/2025_08_06_072847_add_cache_meta_column_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_08_08_070415_add_sync_toggle_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_08_12_154638_add_cache_progress_to_epg_table.php
+ mode change 100644 => 100755 database/migrations/2025_08_16_150208_add_server_timezone_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_08_20_134822_add_new_sync_index_columns_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_08_21_100430_add_programme_count_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_08_21_142446_add_logo_internal_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_08_22_210003_add_mfa_column_to_users.php
+ mode change 100644 => 100755 database/migrations/2025_09_01_150234_update_shared_stream_type.php
+ mode change 100644 => 100755 database/migrations/2025_09_02_200144_add_enable_toggle_column_to_episodes.php
+ mode change 100644 => 100755 database/migrations/2025_09_03_072145_add_include_series_toggle_for_m3u.php
+ mode change 100644 => 100755 database/migrations/2025_09_03_080022_add_series_metadata_autofetch_toggle.php
+ mode change 100644 => 100755 database/migrations/2025_09_04_064050_add_stream_file_fields_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_09_04_081310_add_last_metadata_fetch_column_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_09_13_093721_create_playlist_aliases_table.php
+ mode change 100644 => 100755 database/migrations/2025_09_14_101901_add_short_urls_to_playlist_aliases.php
+ mode change 100644 => 100755 database/migrations/2025_09_17_070541_add_proxy_field_to_playlist_aliases.php
+ mode change 100644 => 100755 database/migrations/2025_09_17_102508_update_schedule_intervals_to_cron_values.php
+ mode change 100644 => 100755 database/migrations/2025_09_18_151019_add_sd_metadata_column_to_epgs.php
+ mode change 100644 => 100755 database/migrations/2025_09_22_081912_change_series_name_column.php
+ mode change 100644 => 100755 database/migrations/2025_09_22_110254_add_logo_proxy_toggle_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_09_22_111113_add_logo_proxy_toggle_to_playlisy_aliases.php
+ mode change 100644 => 100755 database/migrations/2025_09_26_115419_add_custom_icon_to_epg_channels.php
+ mode change 100644 => 100755 database/migrations/2025_09_30_094734_add_auto_merge_settings_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_01_074107_add_sync_vod_files_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_01_081952_add_enable_toggles_to_groups_and_categories.php
+ mode change 100644 => 100755 database/migrations/2025_10_01_150410_update_m3u_channel_source_id.php
+ mode change 100644 => 100755 database/migrations/2025_10_02_083138_add_channels_column_to_epg_maps.php
+ mode change 100644 => 100755 database/migrations/2025_10_05_085522_add_metadata_to_series_seasons.php
+ mode change 100644 => 100755 database/migrations/2025_10_10_074714_add_missing_metadata_columns_to_channels.php
+ mode change 100644 => 100755 database/migrations/2025_10_11_000002_add_plot_cover_to_episodes.php
+ mode change 100644 => 100755 database/migrations/2025_10_11_140000_add_source_type_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_16_111539_create_stream_profiles_table.php
+ mode change 100644 => 100755 database/migrations/2025_10_16_120000_add_stream_profile_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_17_000000_add_emby_config_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_22_084343_add_ custom_headers_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_23_170508_add_vod_stream_profile_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_10_26_111922_add_format_to_stream_profiles.php
+ mode change 100644 => 100755 database/migrations/2025_10_31_154628_drop_emby_integration_columns.php
+ mode change 100644 => 100755 database/migrations/2025_11_06_160248_add_include_vod_in_m3u_toggle_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_11_06_231420_add_processing_tracking_to_epgs_table.php
+ mode change 100644 => 100755 database/migrations/2025_11_13_144146_add_strict_ts_mode_flag_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_11_16_000001_update_default_profiles_to_cbr.php
+ mode change 100644 => 100755 database/migrations/2025_12_01_144108_add_batch_no_to_categories.php
+ mode change 100644 => 100755 database/migrations/2025_12_01_152218_create_source_categories_table.php
+ mode change 100644 => 100755 database/migrations/2025_12_08_230327_add_vod_sync_status_to_playlist.php
+ mode change 100644 => 100755 database/migrations/2025_12_08_230346_add_type_to_groups.php
+ mode change 100644 => 100755 database/migrations/2025_12_08_231053_update_playlist_processing_column.php
+ mode change 100644 => 100755 database/migrations/2025_12_09_151708_update_default_group_type.php
+ mode change 100644 => 100755 database/migrations/2025_12_09_172010_add_vod_groups_from_live.php
+ mode change 100644 => 100755 database/migrations/2025_12_10_162617_add_preprocssing_options_to_playlists.php
+ mode change 100644 => 100755 database/migrations/2025_12_16_213335_add_source_group_id_to_source_groups.php
+ mode change 100644 => 100755 database/migrations/2025_12_21_211656_update_cover_field_on_series.php
+ mode change 100644 => 100755 database/migrations/2026_01_01_180012_add_available_streams_column_to_merged_playlists.php
+ mode change 100644 => 100755 database/migrations/2026_01_06_072918_add_nfo_hash_to_strm_file_mappings.php
+ mode change 100644 => 100755 database/seeders/DatabaseSeeder.php
+ mode change 100644 => 100755 database/settings/2025_04_21_140953_create_general_settings.php
+ mode change 100644 => 100755 database/settings/2025_05_01_160604_add_mfp_user_agent_fields.php
+ mode change 100644 => 100755 database/settings/2025_05_16_070340_add_ffmpeg_codec_fields.php
+ mode change 100644 => 100755 database/settings/2025_05_19_130544_add_ffmpeg_path_select_option.php
+ mode change 100644 => 100755 database/settings/2025_05_29_152250_add_hw_accell_ffmpeg_settings.php
+ mode change 100644 => 100755 database/settings/2025_05_29_180906_add_ffmpeg_custom_command_template_settings.php
+ mode change 100644 => 100755 database/settings/2025_06_03_190045_add_ffmpeg_hls_settings.php
+ mode change 100644 => 100755 database/settings/2025_07_22_000000_add_ffprobe_path_select_option.php
+ mode change 100644 => 100755 database/settings/2025_08_03_181426_add_smtp_settings_fields.php
+ mode change 100644 => 100755 database/settings/2025_08_07_140326_add_stream_file_sync_options.php
+ mode change 100644 => 100755 database/settings/2025_08_16_110411_add_video_player_proxy_options.php
+ mode change 100644 => 100755 database/settings/2025_08_20_100536_add_sync_abort_options.php
+ mode change 100644 => 100755 database/settings/2025_09_04_064323_add_vod_sync_location_settings.php
+ mode change 100644 => 100755 database/settings/2025_09_05_082037_add_backup_schedule_to_settings.php
+ mode change 100644 => 100755 database/settings/2025_09_17_093017_add_stream_file_sync_include_category.php
+ mode change 100644 => 100755 database/settings/2025_09_30_160741_add_wan_output_toggle.php
+ mode change 100644 => 100755 database/settings/2025_10_09_074924_add_additional_stream_file_options.php
+ mode change 100644 => 100755 database/settings/2025_10_11_000000_add_emby_settings.php
+ mode change 100644 => 100755 database/settings/2025_10_16_000000_add_emby_groups_categories_settings.php
+ mode change 100644 => 100755 database/settings/2025_10_16_113626_add_stream_profile_to_proxy.php
+ mode change 100644 => 100755 database/settings/2025_10_23_170528_add_vod_stream_profile_to_proxy.php
+ mode change 100644 => 100755 database/settings/2025_10_31_154759_drop_emby_integration_columns.php
+ mode change 100644 => 100755 database/settings/2025_11_30_000000_add_m3u_proxy_public_url_auto_resolve.php
+ mode change 100644 => 100755 database/settings/2025_12_06_204505_migration_add_proxy_failover_resolver_settings.php
+ mode change 100644 => 100755 database/settings/2025_12_10_215851_add_proxy_override_variables_to_settings.php
+ mode change 100644 => 100755 database/settings/2025_12_14_000000_add_provider_request_delay_settings.php
+ mode change 100644 => 100755 database/settings/2025_12_15_000000_add_name_filter_options_to_stream_sync.php
+ mode change 100644 => 100755 database/settings/2025_12_16_000000_add_proxy_stop_oldest_stream_setting.php
+ mode change 100644 => 100755 database/settings/2025_12_18_000000_add_tmdb_integration_settings.php
+ mode change 100644 => 100755 database/settings/2025_12_31_000000_add_nfo_generation_settings.php
+ delete mode 100644 storage/logs/.gitignore
+ rename tests/{Unit => Feature}/ProviderRequestDelayTest.php (90%)
 
 Array
 (
@@ -443,7 +1021,70 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   12161e6..8228d17  main       -> origin/main
+Updating 12161e6..8228d17
+Fast-forward
+ client/src/components/cards/GalleryCard.jsx        |   4 +-
+ client/src/components/cards/GroupCard.jsx          |   4 +-
+ client/src/components/cards/ImageCard.jsx          |   4 +-
+ client/src/components/cards/PerformerCard.jsx      |   4 +-
+ client/src/components/cards/StudioCard.jsx         |   4 +-
+ client/src/components/cards/TagCard.jsx            |   4 +-
+ .../cards/__tests__/GalleryCard.test.jsx           |   8 +-
+ .../components/cards/__tests__/GroupCard.test.jsx  |   8 +-
+ .../components/cards/__tests__/ImageCard.test.jsx  |   8 +-
+ .../cards/__tests__/PerformerCard.test.jsx         |   8 +-
+ .../components/cards/__tests__/StudioCard.test.jsx |   8 +-
+ .../components/cards/__tests__/TagCard.test.jsx    |   8 +-
+ client/src/components/guards/RouteGuards.jsx       |   9 +-
+ client/src/components/pages/Galleries.jsx          |  10 +-
+ client/src/components/pages/GalleryDetail.jsx      |  18 +-
+ client/src/components/pages/GroupDetail.jsx        |  18 +-
+ client/src/components/pages/Groups.jsx             |  10 +-
+ client/src/components/pages/HiddenItemsPage.jsx    |  12 +-
+ client/src/components/pages/Home.jsx               |   3 +-
+ client/src/components/pages/Images.jsx             |   5 +-
+ client/src/components/pages/Login.jsx              |  10 +-
+ client/src/components/pages/PerformerDetail.jsx    |  20 +-
+ client/src/components/pages/Performers.jsx         |   7 +-
+ client/src/components/pages/PlaylistDetail.jsx     |  10 +-
+ client/src/components/pages/Scene.jsx              |  20 +-
+ client/src/components/pages/Scenes.jsx             |   1 +
+ client/src/components/pages/StudioDetail.jsx       |  18 +-
+ client/src/components/pages/Studios.jsx            |  10 +-
+ client/src/components/pages/TagDetail.jsx          |  24 +-
+ client/src/components/pages/Tags.jsx               |  10 +-
+ client/src/components/scene-search/SceneGrid.jsx   |   2 +
+ client/src/components/scene-search/SceneSearch.jsx |  14 +-
+ client/src/components/ui/BaseCard.jsx              |   6 +-
+ client/src/components/ui/CardComponents.jsx        |  14 +-
+ .../src/components/ui/ContinueWatchingCarousel.jsx |   8 +-
+ client/src/components/ui/RecommendedSidebar.jsx    |   2 +-
+ client/src/components/ui/SceneCard.jsx             |   3 +-
+ .../src/components/ui/__tests__/BaseCard.test.jsx  |   6 +-
+ .../src/components/ui/__tests__/SceneCard.test.jsx |  67 ++
+ .../hooks/__tests__/useNavigationState.test.jsx    |  79 ++
+ client/src/hooks/useNavigationState.js             |  39 +
+ client/src/services/api.js                         |  25 +
+ .../2026-01-09-auth-session-improvements-design.md | 114 +++
+ ...2026-01-09-contextual-back-navigation-design.md | 225 ++++++
+ ...09-contextual-back-navigation-implementation.md | 857 +++++++++++++++++++++
+ fix_cards.sh                                       |  26 +
+ server/middleware/auth.ts                          |  34 +-
+ server/routes/auth.ts                              |   7 +-
+ server/tests/middleware/auth.test.ts               | 142 ++++
+ update_cards.sh                                    |  26 +
+ 50 files changed, 1818 insertions(+), 165 deletions(-)
+ create mode 100644 client/src/components/ui/__tests__/SceneCard.test.jsx
+ create mode 100644 client/src/hooks/__tests__/useNavigationState.test.jsx
+ create mode 100644 client/src/hooks/useNavigationState.js
+ create mode 100644 docs/plans/2026-01-09-auth-session-improvements-design.md
+ create mode 100644 docs/plans/2026-01-09-contextual-back-navigation-design.md
+ create mode 100644 docs/plans/2026-01-09-contextual-back-navigation-implementation.md
+ create mode 100644 fix_cards.sh
+ create mode 100644 server/tests/middleware/auth.test.ts
+ create mode 100644 update_cards.sh
 
 Array
 (
@@ -14403,7 +15044,14 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-Already up to date.
+From https://github.com/JPDVM2014/unraid-templates
+   435ff89..b7f7fb1  main       -> origin/main
+Updating 435ff89..b7f7fb1
+Fast-forward
+ ephemera.xml  | 2 ++
+ listenarr.xml | 1 +
+ shelfarr.xml  | 2 +-
+ 3 files changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
