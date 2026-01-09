@@ -407,7 +407,375 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   303b9d8..cb87dac  master     -> origin/master
+Updating 303b9d8..cb87dac
+Fast-forward
+ app/Console/Commands/FixEmbySeriesLibraryId.php    |  28 +-
+ app/Console/Commands/FixStreamProfileTemplate.php  |  20 +-
+ app/Console/Commands/GenerateEpgCache.php          |   2 +-
+ app/Console/Commands/M3uProxyStatus.php            |  11 +-
+ app/Console/Commands/PruneOldNotifications.php     |   2 +-
+ app/Console/Commands/RefreshEpg.php                |   5 +-
+ app/Console/Commands/RefreshPlaylist.php           |   2 +-
+ app/Console/Commands/RegisterM3uProxyWebhook.php   |  23 +-
+ app/Console/Commands/ResetSyncProcess.php          |  15 +-
+ app/Console/Commands/UpdateM3uProxy.php            |   4 +-
+ app/Enums/PlaylistSourceType.php                   |   2 +-
+ app/Enums/Status.php                               |   2 +-
+ app/Events/CustomPlaylistCreated.php               |   2 -
+ app/Events/EpgCreated.php                          |   2 -
+ app/Events/EpgDeleted.php                          |   2 -
+ app/Events/EpgUpdated.php                          |   2 -
+ app/Events/MergedPlaylistCreated.php               |   2 -
+ app/Events/PlaylistCreated.php                     |   2 -
+ app/Events/PlaylistDeleted.php                     |   2 -
+ app/Events/PlaylistUpdated.php                     |   2 -
+ app/Events/StreamingStarted.php                    |   8 +-
+ app/Events/StreamingStopped.php                    |   8 +-
+ app/Events/SyncCompleted.php                       |   6 +-
+ app/Exceptions/AllPlaylistsExhaustedException.php  |   6 +-
+ app/Facades/GitInfo.php                            |   2 +-
+ app/Filament/Auth/EditProfile.php                  |   6 +-
+ app/Filament/Auth/Login.php                        |  13 +-
+ app/Filament/Exports/ChannelExporter.php           |   6 +-
+ .../GuestPanel/Pages/Concerns/HasGuestAuth.php     |  20 +-
+ .../GuestPanel/Pages/Concerns/HasPlaylist.php      |   3 +-
+ app/Filament/GuestPanel/Pages/GuestDashboard.php   |  11 +-
+ .../Resources/Series/Pages/ListSeries.php          |   3 +-
+ .../Resources/Series/Pages/ViewSeries.php          |   3 +-
+ .../RelationManagers/EpisodesRelationManager.php   |  37 +-
+ .../GuestPanel/Resources/Series/SeriesResource.php |  21 +-
+ .../GuestPanel/Resources/Vods/Pages/ListVod.php    |   3 +-
+ .../GuestPanel/Resources/Vods/Pages/ViewVod.php    |   1 -
+ .../GuestPanel/Resources/Vods/VodResource.php      |  41 +-
+ app/Filament/Imports/ChannelImporter.php           |   7 +-
+ app/Filament/Pages/Backups.php                     |  17 +-
+ app/Filament/Pages/CustomDashboard.php             |   5 +-
+ app/Filament/Pages/M3uProxyStreamMonitor.php       |  13 +-
+ app/Filament/Pages/Preferences.php                 | 162 +++---
+ .../Resources/Categories/CategoryResource.php      |  78 ++-
+ .../Resources/Categories/Pages/CreateCategory.php  |   1 -
+ .../Resources/Categories/Pages/EditCategory.php    |   3 +-
+ .../Resources/Categories/Pages/ListCategories.php  |   7 +-
+ .../Resources/Categories/Pages/ViewCategory.php    |  25 +-
+ .../RelationManagers/SeriesRelationManager.php     |   9 +-
+ .../Resources/Channels/ChannelResource.php         | 283 ++++++-----
+ .../Resources/Channels/Pages/CreateChannel.php     |   1 -
+ .../Resources/Channels/Pages/EditChannel.php       |   3 +-
+ .../Resources/Channels/Pages/ListChannels.php      |  67 ++-
+ .../Resources/Channels/Pages/ViewChannel.php       |   4 +-
+ .../CustomPlaylists/CustomPlaylistResource.php     | 136 +++--
+ .../CustomPlaylists/Pages/CreateCustomPlaylist.php |   1 -
+ .../CustomPlaylists/Pages/EditCustomPlaylist.php   |   5 +-
+ .../CustomPlaylists/Pages/ListCustomPlaylists.php  |   6 +-
+ .../CustomPlaylists/Pages/ViewCustomPlaylist.php   |   3 -
+ .../RelationManagers/CategoriesRelationManager.php |  21 +-
+ .../RelationManagers/ChannelsRelationManager.php   |  31 +-
+ .../RelationManagers/GroupsRelationManager.php     |  17 +-
+ .../RelationManagers/SeriesRelationManager.php     |  60 ++-
+ .../RelationManagers/VodRelationManager.php        |  63 ++-
+ .../Resources/EpgChannels/EpgChannelResource.php   |  61 ++-
+ .../EpgChannels/Pages/CreateEpgChannel.php         |   1 -
+ .../Resources/EpgChannels/Pages/EditEpgChannel.php |   3 +-
+ .../EpgChannels/Pages/ListEpgChannels.php          |  15 +-
+ app/Filament/Resources/EpgMaps/EpgMapResource.php  |  67 ++-
+ .../Resources/EpgMaps/Pages/CreateEpgMap.php       |   1 -
+ .../Resources/EpgMaps/Pages/EditEpgMap.php         |   3 +-
+ .../Resources/EpgMaps/Pages/ListEpgMaps.php        |  11 +-
+ app/Filament/Resources/Epgs/EpgResource.php        | 136 +++--
+ app/Filament/Resources/Epgs/Pages/CreateEpg.php    |   1 -
+ app/Filament/Resources/Epgs/Pages/EditEpg.php      |   3 +-
+ app/Filament/Resources/Epgs/Pages/ListEpgs.php     |   3 +-
+ app/Filament/Resources/Epgs/Pages/ViewEpg.php      |  48 +-
+ .../Resources/Epgs/Widgets/ImportProgress.php      |   1 +
+ app/Filament/Resources/Groups/GroupResource.php    |  95 ++--
+ .../Resources/Groups/Pages/CreateGroup.php         |   1 -
+ app/Filament/Resources/Groups/Pages/EditGroup.php  |   3 +-
+ app/Filament/Resources/Groups/Pages/ListGroups.php |  12 +-
+ app/Filament/Resources/Groups/Pages/ViewGroup.php  |  28 +-
+ .../RelationManagers/ChannelsRelationManager.php   |  12 +-
+ .../Groups/RelationManagers/VodRelationManager.php |  12 +-
+ .../MergedPlaylists/MergedPlaylistResource.php     | 119 ++---
+ .../MergedPlaylists/Pages/CreateMergedPlaylist.php |   1 -
+ .../MergedPlaylists/Pages/EditMergedPlaylist.php   |   5 +-
+ .../MergedPlaylists/Pages/ListMergedPlaylists.php  |   6 +-
+ .../RelationManagers/PlaylistsRelationManager.php  |  15 +-
+ .../Pages/ListPersonalAccessTokens.php             |   2 +-
+ .../PersonalAccessTokenResource.php                |  12 +-
+ .../PlaylistAliases/PlaylistAliasResource.php      |  94 ++--
+ .../PlaylistAuths/Pages/CreatePlaylistAuth.php     |   2 +-
+ .../PlaylistAuths/Pages/EditPlaylistAuth.php       |   3 +-
+ .../PlaylistAuths/Pages/ListPlaylistAuths.php      |   4 +-
+ .../PlaylistAuths/PlaylistAuthResource.php         |  71 +--
+ .../RelationManagers/PlaylistsRelationManager.php  |  38 +-
+ .../Resources/Playlists/Pages/CreatePlaylist.php   |  11 +-
+ .../Resources/Playlists/Pages/EditPlaylist.php     |  12 +-
+ .../Resources/Playlists/Pages/ListPlaylists.php    |   3 +-
+ .../Resources/Playlists/Pages/ViewPlaylist.php     |  15 +-
+ .../Resources/Playlists/PlaylistResource.php       | 184 ++++---
+ .../Pages/ListPlaylistSyncStatuses.php             |   1 +
+ .../PlaylistSyncStatusResource.php                 |  11 +-
+ .../RelationManagers/LogsRelationManager.php       |  32 +-
+ .../Resources/Playlists/Widgets/ImportProgress.php |   1 +
+ .../PostProcesses/Pages/CreatePostProcess.php      |   2 +-
+ .../PostProcesses/Pages/EditPostProcess.php        |   3 +-
+ .../PostProcesses/Pages/ListPostProcesses.php      |   6 +-
+ .../PostProcesses/PostProcessResource.php          |  83 ++--
+ .../RelationManagers/LogsRelationManager.php       |  14 +-
+ .../RelationManagers/ProcessesRelationManager.php  |  28 +-
+ .../Resources/Series/Pages/CreateSeries.php        |   3 +-
+ app/Filament/Resources/Series/Pages/EditSeries.php |   9 +-
+ app/Filament/Resources/Series/Pages/ListSeries.php |  37 +-
+ .../RelationManagers/EpisodesRelationManager.php   |  42 +-
+ app/Filament/Resources/Series/SeriesResource.php   |   1 -
+ .../StreamProfiles/StreamProfileResource.php       |  10 +-
+ app/Filament/Resources/Users/UserResource.php      |   6 +-
+ .../Resources/VodGroups/Pages/CreateVodGroup.php   |   1 -
+ .../Resources/VodGroups/Pages/EditVodGroup.php     |   3 +-
+ .../Resources/VodGroups/Pages/ListVodGroups.php    |  14 +-
+ .../Resources/VodGroups/Pages/ViewVodGroup.php     |  27 +-
+ .../RelationManagers/ChannelsRelationManager.php   |  12 +-
+ .../RelationManagers/VodRelationManager.php        |  12 +-
+ .../Resources/VodGroups/VodGroupResource.php       |  99 ++--
+ app/Filament/Resources/Vods/Pages/ListVod.php      |  80 ++-
+ app/Filament/Resources/Vods/VodResource.php        |   1 -
+ app/Filament/Tables/SourceCategoriesTable.php      |   3 +-
+ app/Filament/Tables/SourceGroupsTable.php          |   3 +-
+ app/Filament/Widgets/KoFiWidget.php                |   2 +-
+ app/Filament/Widgets/PayPalDonateWidget.php        |   2 +-
+ app/Filament/Widgets/StatsOverview.php             |   7 +-
+ app/Forms/Components/PlaylistInfo.php              |  24 +-
+ app/Forms/Components/TmdbSearchResults.php         |   6 +-
+ app/Http/Controllers/Api/EpgApiController.php      |  37 +-
+ app/Http/Controllers/Api/M3uProxyApiController.php |  47 +-
+ app/Http/Controllers/Api/SystemInfoController.php  |   6 +-
+ app/Http/Controllers/ChannelController.php         |   2 +-
+ app/Http/Controllers/EpgController.php             |   5 +-
+ app/Http/Controllers/EpgFileController.php         |  12 +-
+ app/Http/Controllers/EpgGenerateController.php     | 172 +++----
+ app/Http/Controllers/LogoProxyController.php       |  10 +-
+ app/Http/Controllers/PlaylistController.php        |  11 +-
+ .../Controllers/PlaylistGenerateController.php     |  71 ++-
+ .../SchedulesDirectImageProxyController.php        |  14 +-
+ app/Http/Controllers/UserController.php            |   6 +-
+ app/Http/Controllers/WebhookTestController.php     |   3 +-
+ app/Http/Controllers/XtreamApiController.php       | 260 +++++-----
+ app/Http/Controllers/XtreamStreamController.php    |  93 ++--
+ app/Http/Middleware/AutoLoginMiddleware.php        |   4 +-
+ app/Http/Middleware/DashboardMiddleware.php        |   2 +
+ app/Http/Middleware/GuestPlaylistAuth.php          |  26 +-
+ app/Http/Middleware/ProxyRateLimitMiddleware.php   |  14 +-
+ app/Jobs/ChannelFindAndReplace.php                 |  42 +-
+ app/Jobs/ChannelFindAndReplaceReset.php            |  14 +-
+ app/Jobs/CheckSeriesImportProgress.php             |   4 +-
+ app/Jobs/CopyAttributesToPlaylist.php              |   6 +-
+ app/Jobs/CopyPlaylist.php                          |  15 +-
+ app/Jobs/CreateBackup.php                          |  16 +-
+ app/Jobs/DuplicatePlaylist.php                     |   6 +-
+ app/Jobs/EpgChannelFindAndReplace.php              |  24 +-
+ app/Jobs/EpgChannelFindAndReplaceReset.php         |  14 +-
+ app/Jobs/FetchTmdbIds.php                          |  60 ++-
+ app/Jobs/GenerateEpgCache.php                      |   9 +-
+ app/Jobs/MapEpgToChannels.php                      |   2 +-
+ app/Jobs/MapEpgToChannelsBatch.php                 |   5 +-
+ app/Jobs/MapEpgToChannelsComplete.php              |   3 +-
+ app/Jobs/MapPlaylistChannelsToEpg.php              |  31 +-
+ app/Jobs/MapPlaylistChannelsToEpgChunk.php         |  33 +-
+ app/Jobs/ProcessEpgImport.php                      |  57 +--
+ app/Jobs/ProcessEpgImportChunk.php                 |   2 +-
+ app/Jobs/ProcessEpgImportComplete.php              |   4 +-
+ app/Jobs/ProcessEpgSDImport.php                    |   7 +-
+ app/Jobs/ProcessM3uImport.php                      | 219 ++++----
+ app/Jobs/ProcessM3uImportChunk.php                 |   4 +-
+ app/Jobs/ProcessM3uImportComplete.php              |  38 +-
+ app/Jobs/ProcessM3uImportSeries.php                |  19 +-
+ app/Jobs/ProcessM3uImportSeriesChunk.php           |  18 +-
+ app/Jobs/ProcessM3uImportSeriesComplete.php        |   2 +-
+ app/Jobs/ProcessM3uImportSeriesEpisodes.php        |   1 +
+ app/Jobs/ProcessM3uVodImportChunk.php              |   4 +-
+ app/Jobs/ProcessVodChannels.php                    |  22 +-
+ app/Jobs/ProcessVodChannelsChunk.php               |  14 +-
+ app/Jobs/ProcessVodChannelsComplete.php            |   2 +-
+ app/Jobs/RestartQueue.php                          |   4 +-
+ app/Jobs/RestoreBackup.php                         |  10 +-
+ app/Jobs/RunPostProcess.php                        |  51 +-
+ app/Jobs/SeriesFindAndReplace.php                  |  22 +-
+ app/Jobs/SyncSeriesStrmFiles.php                   |  19 +-
+ app/Jobs/SyncVodStrmFiles.php                      |  12 +-
+ app/Jobs/SyncXtreamSeries.php                      |  12 +-
+ app/Jobs/UnmergeChannels.php                       |   3 +-
+ app/Listeners/BackupFailed.php                     |   6 +-
+ app/Listeners/CustomPlaylistListener.php           |   2 -
+ app/Listeners/EpgListener.php                      |   2 -
+ app/Listeners/GroupListener.php                    |   2 -
+ app/Listeners/MergedPlaylistListener.php           |   2 -
+ app/Listeners/PlaylistListener.php                 |   2 -
+ app/Listeners/StreamingStartListener.php           |   4 +-
+ app/Listeners/StreamingStopListener.php            |   4 +-
+ app/Listeners/SyncListener.php                     |  12 +-
+ app/Livewire/BackupDestinationListRecords.php      |  25 +-
+ app/Livewire/EpgViewer.php                         |  26 +-
+ app/Livewire/MediaFlowProxyUrl.php                 |   2 +-
+ app/Livewire/PlaylistEpgUrl.php                    |   5 +-
+ app/Livewire/PlaylistInfo.php                      |  20 +-
+ app/Livewire/PlaylistM3uUrl.php                    |   2 +-
+ app/Livewire/StreamPlayer.php                      |  19 +-
+ app/Livewire/XtreamApiInfo.php                     |   2 +-
+ app/Mail/PostProcessMail.php                       |   3 +-
+ app/Models/Channel.php                             |  10 +-
+ app/Models/CustomPlaylist.php                      |  11 +-
+ app/Models/Epg.php                                 |  19 +-
+ app/Models/EpgChannel.php                          |   1 -
+ app/Models/Episode.php                             |  10 +-
+ app/Models/MergedPlaylist.php                      |   3 +-
+ app/Models/PersonalAccessToken.php                 |   1 -
+ app/Models/Playlist.php                            |   9 +-
+ app/Models/PlaylistAlias.php                       |  65 ++-
+ app/Models/PlaylistAuth.php                        |   9 +-
+ app/Models/PostProcess.php                         |   2 +-
+ app/Models/Series.php                              |  34 +-
+ app/Models/SourceCategory.php                      |   3 +-
+ app/Models/SourceGroup.php                         |   2 +-
+ app/Models/StreamProfile.php                       |   8 +-
+ app/Models/StrmFileMapping.php                     |   6 +-
+ app/Models/User.php                                |   3 +-
+ app/Pivots/PlaylistAuthPivot.php                   |   9 +-
+ app/Policies/CustomPlaylistPolicy.php              |   1 -
+ app/Policies/EpgPolicy.php                         |   1 -
+ app/Policies/MergedPlaylistPolicy.php              |   1 -
+ app/Policies/PlaylistPolicy.php                    |   1 -
+ app/Providers/Filament/AdminPanelProvider.php      |  19 +-
+ app/Providers/Filament/GuestPanelPanelProvider.php |  20 +-
+ app/Providers/HorizonServiceProvider.php           |   4 +-
+ app/Providers/LogoServiceProvider.php              |   2 +-
+ app/Providers/VersionServiceProvider.php           |  10 +-
+ app/Rules/CheckIfUrlOrLocalPath.php                |  16 +-
+ app/Rules/Cron.php                                 |   6 +-
+ app/Services/EpgCacheService.php                   | 169 ++++---
+ app/Services/ExternalIpService.php                 |   2 +-
+ app/Services/GitInfoService.php                    |   8 +-
+ app/Services/LogoService.php                       |  16 +-
+ app/Services/M3uProxyService.php                   | 262 +++++-----
+ app/Services/NfoService.php                        | 548 +++++++++++----------
+ app/Services/PlaylistService.php                   | 101 ++--
+ app/Services/PlaylistUrlService.php                |  33 +-
+ app/Services/ProxyService.php                      |  23 +-
+ app/Services/SchedulesDirectService.php            | 104 ++--
+ app/Services/SimilaritySearchService.php           |   7 +-
+ app/Services/XtreamService.php                     |  54 +-
+ app/Settings/GeneralSettings.php                   |  73 ++-
+ app/Traits/HasParentResource.php                   |  10 +-
+ app/Traits/HasUserFiltering.php                    |   4 +-
+ app/Traits/ProviderRequestDelay.php                |  26 +-
+ app/Traits/Schedulable.php                         |   3 +-
+ app/Traits/ShortUrlTrait.php                       |   6 +-
+ bootstrap/app.php                                  |   8 +-
+ config/backup.php                                  |   4 +-
+ config/broadcasting.php                            |   2 +-
+ config/database.php                                |   2 -
+ config/dev.php                                     |   6 +-
+ config/filament-log-viewer.php                     |   2 +-
+ config/horizon.php                                 |   2 +-
+ config/logging.php                                 |   2 +-
+ config/proxy.php                                   |   2 +-
+ config/scramble.php                                |   3 +-
+ config/settings.php                                |   2 +-
+ database/factories/CategoryFactory.php             |   3 +-
+ database/factories/ChannelFactory.php              |   3 +-
+ database/factories/ChannelFailoverFactory.php      |   3 +-
+ database/factories/CustomPlaylistFactory.php       |   3 +-
+ database/factories/EpgChannelFactory.php           |   3 +-
+ database/factories/EpgFactory.php                  |   3 +-
+ database/factories/EpgMapFactory.php               |   5 +-
+ database/factories/EpisodeFactory.php              |   3 +-
+ database/factories/GroupFactory.php                |   3 +-
+ database/factories/MergedPlaylistFactory.php       |   3 +-
+ database/factories/PlaylistAuthFactory.php         |   3 +-
+ database/factories/PlaylistFactory.php             |   5 +-
+ database/factories/PlaylistSyncStatusFactory.php   |   3 +-
+ .../factories/PlaylistSyncStatusLogFactory.php     |   7 +-
+ database/factories/PostProcessFactory.php          |   3 +-
+ database/factories/SeasonFactory.php               |   3 +-
+ database/factories/SeriesFactory.php               |   3 +-
+ database/factories/StreamProfileFactory.php        |   3 +-
+ database/factories/StrmFileMappingFactory.php      |   2 +-
+ .../0001_01_01_000002_create_jobs_table.php        |   2 +-
+ .../2024_12_17_203030_create_admin_user.php        |   6 +-
+ .../2024_12_19_154247_create_playlists_table.php   |   2 +-
+ ...2025_01_21_170519_add_synced_column_to_epgs.php |   2 +-
+ .../2025_01_21_171508_add_status_to_epg.php        |   2 -
+ ...2025_02_01_151321_drop_epg_programmes_table.php |   1 -
+ ...150422_reset_playlist_interval_on_playlists.php |   2 -
+ ...2_15_150833_reset_playlist_interval_on_epgs.php |   2 -
+ .../2025_02_16_181719_create_epg_maps_table.php    |   2 +-
+ ...2025_02_21_155914_drop_queue_monitors_table.php |   1 -
+ ...5_145318_add_playlist_id_column_to_epg_maps.php |   3 +-
+ ...add_auto_channel_output_option_to_playlists.php |   3 +-
+ ...30059_add_channel_id_selection_to_playlists.php |   2 +-
+ ...2025_04_21_203508_create_processables_table.php |   2 +-
+ ...0814_create_playlist_sync_status_logs_table.php |   4 +-
+ ..._remove_and_move_sync_status_to_log_entries.php |   5 +-
+ .../2025_05_07_202251_remove_batch_job_tables.php  |   2 -
+ ...09_145446_alter_notifications_data_to_jsonb.php |   6 +-
+ .../2025_05_21_213847_update_date_time_column.php  |   2 +-
+ ...25_05_22_201214_add_sync_location_to_series.php |   3 +-
+ ..._24_124551_add_playlist_source_groups_table.php |   2 +-
+ .../2025_05_25_135318_live_enabled_by_default.php  |   4 +-
+ ...e_playlist_id_column_allow_null_on_channels.php |   8 +-
+ ...25_06_17_135730_create_shared_streams_table.php |  20 +-
+ ..._24_223917_add_source_id_column_to_channels.php |   2 +-
+ ...unique_constraint_to_authenticatables_table.php |   4 +-
+ ...5_07_16_070133_update_playlist_column_types.php |   1 -
+ ...0_add_schedules_direct_fields_to_epgs_table.php |   2 +-
+ ...4822_add_new_sync_index_columns_to_channels.php |   2 +-
+ ...2025_09_01_150234_update_shared_stream_type.php |   4 +-
+ ..._09_13_093721_create_playlist_aliases_table.php |   2 +-
+ ...08_update_schedule_intervals_to_cron_values.php |   2 -
+ ...5_10_01_150410_update_m3u_channel_source_id.php |   8 +-
+ ...14_add_missing_metadata_columns_to_channels.php |   4 +-
+ ...025_10_11_000002_add_plot_cover_to_episodes.php |   2 +-
+ ...5_10_16_111539_create_stream_profiles_table.php |   2 -
+ ...0_16_120000_add_stream_profile_to_playlists.php |   2 +-
+ ...11_16_000001_update_default_profiles_to_cbr.php |   5 +-
+ ...08_231053_update_playlist_processing_column.php |   2 -
+ ...2025_12_09_151708_update_default_group_type.php |   2 -
+ .../2025_12_09_172010_add_vod_groups_from_live.php |   2 -
+ ...213335_add_source_group_id_to_source_groups.php |   1 -
+ .../2025_04_21_140953_create_general_settings.php  |  24 +-
+ ...2025_05_01_160604_add_mfp_user_agent_fields.php |   4 +-
+ .../2025_05_16_070340_add_ffmpeg_codec_fields.php  |   8 +-
+ ..._05_19_130544_add_ffmpeg_path_select_option.php |   2 +-
+ ..._05_29_152250_add_hw_accell_ffmpeg_settings.php |   2 +-
+ ...07_22_000000_add_ffprobe_path_select_option.php |   2 +-
+ .../2025_08_03_181426_add_smtp_settings_fields.php |  12 +-
+ ...5_08_07_140326_add_stream_file_sync_options.php |   8 +-
+ ...08_16_110411_add_video_player_proxy_options.php |   2 +-
+ .../2025_08_20_100536_add_sync_abort_options.php   |   4 +-
+ ...09_04_064323_add_vod_sync_location_settings.php |   8 +-
+ ...9_05_082037_add_backup_schedule_to_settings.php |   6 +-
+ ...93017_add_stream_file_sync_include_category.php |   2 +-
+ .../2025_09_30_160741_add_wan_output_toggle.php    |   2 +-
+ ...9_074924_add_additional_stream_file_options.php |  40 +-
+ .../2025_10_11_000000_add_emby_settings.php        |   6 +-
+ ..._000000_add_emby_groups_categories_settings.php |   8 +-
+ ...25_10_16_113626_add_stream_profile_to_proxy.php |   4 +-
+ ...0_23_170528_add_vod_stream_profile_to_proxy.php |   2 +-
+ ..._000000_add_provider_request_delay_settings.php |   6 +-
+ ...0000_add_name_filter_options_to_stream_sync.php |   8 +-
+ ...000000_add_proxy_stop_oldest_stream_setting.php |   2 +-
+ ..._12_18_000000_add_tmdb_integration_settings.php |  12 +-
+ pint.json                                          |   3 +
+ routes/api.php                                     |   2 +-
+ routes/web.php                                     |  14 +-
+ tests/Feature/FetchTmdbIdsTest.php                 |   2 +-
+ tests/Feature/GuestDashboardAuthTest.php           |   3 +-
+ tests/Feature/StrmFileMappingTest.php              |  57 ++-
+ tests/Feature/TmdbServiceTest.php                  |   6 +-
+ tests/Feature/XtreamApiControllerTest.php          |  99 ++--
+ tests/Unit/ProviderRequestDelayTest.php            |   3 +-
+ 363 files changed, 3532 insertions(+), 3624 deletions(-)
+ create mode 100644 pint.json
 
 Array
 (
@@ -444,60 +812,12 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   7590d34..4565308  main       -> origin/main
-Updating 7590d34..4565308
+   4565308..0cb9677  main       -> origin/main
+Updating 4565308..0cb9677
 Fast-forward
- Dockerfile.production                              |   48 +-
- client/Dockerfile.dev                              |    2 +-
- client/package-lock.json                           |  148 +++
- client/package.json                                |    1 +
- client/src/components/cards/GalleryCard.jsx        |   14 -
- client/src/components/cards/GroupCard.jsx          |   12 -
- client/src/components/cards/PerformerCard.jsx      |    4 -
- client/src/components/cards/StudioCard.jsx         |   16 -
- client/src/components/cards/TagCard.jsx            |   16 -
- client/src/components/ui/BaseCard.jsx              |   47 +-
- client/src/components/ui/CardComponents.jsx        |  186 +--
- client/src/components/ui/CardCountIndicators.jsx   |   14 +-
- client/src/components/ui/ExpandableDescription.jsx |  134 ++
- client/src/components/ui/SceneCard.jsx             |  168 +--
- client/src/components/ui/Tooltip.jsx               |    4 +
- .../src/components/ui/__tests__/BaseCard.test.jsx  |   43 +
- .../ui/__tests__/CardComponents.test.jsx           |   68 +-
- .../ui/__tests__/CardCountIndicators.test.jsx      |   25 +
- .../ui/__tests__/ExpandableDescription.test.jsx    |   14 +
- .../src/components/ui/__tests__/Tooltip.test.jsx   |   24 +
- .../src/hooks/__tests__/useCardKeyboardNav.test.js |   94 ++
- .../src/hooks/__tests__/useCardSelection.test.js   |  137 +++
- .../hooks/__tests__/useTruncationDetection.test.js |   15 +
- client/src/hooks/useCardKeyboardNav.js             |   49 +
- client/src/hooks/useCardSelection.js               |  132 ++
- client/src/hooks/useTruncationDetection.js         |   32 +
- docs/getting-started/configuration.md              |    1 -
- ...6-01-08-card-interaction-improvements-design.md |   84 ++
- .../2026-01-08-card-interaction-improvements.md    |  599 +++++++++
- docs/plans/2026-01-08-docker-build-optimization.md |  159 +++
- .../plans/2026-01-08-scenecard-navigation-issue.md |  131 ++
- .../2026-01-08-unified-card-architecture-design.md | 1280 ++++++++++++++++++++
- server/Dockerfile.dev                              |    2 +-
- server/initializers/database.ts                    |   10 +-
- server/initializers/schemaCatchup.ts               |    2 +-
- 35 files changed, 3375 insertions(+), 340 deletions(-)
- create mode 100644 client/src/components/ui/ExpandableDescription.jsx
- create mode 100644 client/src/components/ui/__tests__/CardCountIndicators.test.jsx
- create mode 100644 client/src/components/ui/__tests__/ExpandableDescription.test.jsx
- create mode 100644 client/src/components/ui/__tests__/Tooltip.test.jsx
- create mode 100644 client/src/hooks/__tests__/useCardKeyboardNav.test.js
- create mode 100644 client/src/hooks/__tests__/useCardSelection.test.js
- create mode 100644 client/src/hooks/__tests__/useTruncationDetection.test.js
- create mode 100644 client/src/hooks/useCardKeyboardNav.js
- create mode 100644 client/src/hooks/useCardSelection.js
- create mode 100644 client/src/hooks/useTruncationDetection.js
- create mode 100644 docs/plans/2026-01-08-card-interaction-improvements-design.md
- create mode 100644 docs/plans/2026-01-08-card-interaction-improvements.md
- create mode 100644 docs/plans/2026-01-08-docker-build-optimization.md
- create mode 100644 docs/plans/2026-01-08-scenecard-navigation-issue.md
- create mode 100644 docs/plans/2026-01-08-unified-card-architecture-design.md
+ server/initializers/database.ts      | 6 ++++--
+ server/initializers/schemaCatchup.ts | 6 ++++--
+ 2 files changed, 8 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -3674,24 +3994,22 @@ Removed from CA123
 Downloading bmartino1's Repository
 
 From https://github.com/bmartino1/unraid-docker-templates
-   1c46146..7776c9b  main       -> origin/main
-Updating 1c46146..7776c9b
+   7776c9b..341ec00  main       -> origin/main
+Updating 7776c9b..341ec00
 Fast-forward
- ckpool.xml => deprecated/ckpool.xml |  0
- hamachi-vpn.xml                     | 34 ++++++++++++++++++++++++++++++++++
- 2 files changed, 34 insertions(+)
- rename ckpool.xml => deprecated/ckpool.xml (100%)
- create mode 100644 hamachi-vpn.xml
+ hamachi-vpn.xml => deprecated/hamachi-vpn.xml | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename hamachi-vpn.xml => deprecated/hamachi-vpn.xml (100%)
 
 Array
 (
     [https://github.com/bmartino1/unraid-docker-templates] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml
-            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
-            [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml
-            [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
-            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/hamachi-vpn.xml
+            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml
+            [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
+            [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml
+            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
             [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml
             [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml
             [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/icloudpd-web.xml
@@ -3710,14 +4028,14 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml... ***DEPRECATED BY REPO PATH*** No Support or Project Link Present.  Template automatically dropped from CA
 
 Removed from CA123
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml...Success
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml...Success
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/hamachi-vpn.xml...Privileged mode set.  This may not be necessary
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml... ***DEPRECATED BY REPO PATH*** Privileged mode set.  This may not be necessary
 
 No Support or Project Link Present.  Template automatically dropped from CA
 
 Removed from CA123
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml...Success
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/icloudpd-web.xml...Success
@@ -19650,14 +19968,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
-registry.gitlab.com/storyteller-platform/storyteller
-registry.gitlab.com/storyteller-platform/storyteller:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-Tagged - Can't determine last update
-immich-app/postgres
-ghcr.io/immich-app/postgres:18-vectorchord0.5.3-pgvector0.8.1 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19676,8 +19989,6 @@ ghcr.io/immich-app/postgres:18-vectorchord0.5.3-pgvector0.8.1 Downloads:   Stars
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
-coolasice1999/tmm-cli-cronjob
-coolasice1999/tmm-cli-cronjob:latest Downloads: 42285  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -19734,23 +20045,11 @@ coolasice1999/tmm-cli-cronjob:latest Downloads: 42285  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/filebot
-jlesage/filebot Downloads: 19473829  Stars: 62  Base: unknown
-fenglc/pgadmin4
-fenglc/pgadmin4 Downloads: 4742059  Stars: 47  Base: unknown
-analogic/poste.io
-analogic/poste.io Downloads: 25817708  Stars: 283  Base: unknown
-stjohnjohnson/smartthings-mqtt-bridge
-stjohnjohnson/smartthings-mqtt-bridge Downloads: 6476668  Stars: 29  Base: unknown
-teslamate/grafana
-teslamate/grafana Downloads: 20361927  Stars: 24  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
-olehj/docker-nsfmineroc
-olehj/docker-nsfmineroc:latest Downloads: 32955  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -19809,8 +20108,6 @@ olehj/docker-nsfmineroc:latest Downloads: 32955  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
-robmarkcole/deepstack-ui
-robmarkcole/deepstack-ui Downloads: 563939  Stars: 11  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_usb_net_addon/main/usb_manager_aqc111_addon.plg attempt 1...
@@ -19825,28 +20122,12 @@ robmarkcole/deepstack-ui Downloads: 563939  Stars: 11  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/tasmotapm-unraid/main/tasmotapm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
-graphprotocol/graph-node
-graphprotocol/graph-node Downloads: 6046037  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
-mozilla/syncserver
-mozilla/syncserver:latest Downloads: 11487361  Stars: 32  Base: unknown
-lnxd/xmrig
-lnxd/xmrig:latest Downloads: 136979  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-andrijn/plex-ngrok
-andrijn/plex-ngrok Downloads: 1801  Stars: 0  Base: unknown
-sbs20/scanservjs
-sbs20/scanservjs Downloads: 559205  Stars: 4  Base: unknown
-shaneisrael/fireshare
-shaneisrael/fireshare Downloads: 313390  Stars: 5  Base: unknown
-charlocharlie/qbittorrent-port-forward-file
-charlocharlie/qbittorrent-port-forward-file Downloads: 88008  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-ainullcode/borg-ui
-ainullcode/borg-ui:latest Downloads: 38638  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19861,8 +20142,6 @@ ainullcode/borg-ui:latest Downloads: 38638  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-amruthpillai/reactive-resume
-amruthpillai/reactive-resume:latest Downloads: 4176458  Stars: 59  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 127
