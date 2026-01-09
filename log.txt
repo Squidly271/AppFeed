@@ -49,14 +49,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   221109d..1414390  main       -> origin/main
-Updating 221109d..1414390
-Fast-forward
- app/api/admin/users/invite/route.ts   | 6 ++++--
- app/api/discord/interactions/route.ts | 5 ++++-
- lib/invite.ts                         | 5 +++--
- 3 files changed, 11 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -451,13 +444,23 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   0cb9677..d728474  main       -> origin/main
-Updating 0cb9677..d728474
+   d728474..a7e87d5  main       -> origin/main
+Updating d728474..a7e87d5
 Fast-forward
- client/src/components/cards/GalleryCard.jsx | 37 ++++++++-----
- client/src/components/cards/ImageCard.jsx   |  9 ++--
- client/src/components/ui/SceneCard.jsx      | 80 ++++++++++++++++-------------
- 3 files changed, 73 insertions(+), 53 deletions(-)
+ client/src/components/ui/SearchControls.jsx        |  326 ++---
+ client/src/hooks/__tests__/useFilterState.test.jsx |  373 ++++++
+ client/src/hooks/__tests__/useUrlState.test.jsx    |  156 +++
+ client/src/hooks/useFilterState.js                 |  302 +++++
+ client/src/hooks/useUrlState.js                    |   90 ++
+ .../2026-01-08-url-state-management-design.md      |  236 ++++
+ ...26-01-08-url-state-management-implementation.md | 1287 ++++++++++++++++++++
+ 7 files changed, 2536 insertions(+), 234 deletions(-)
+ create mode 100644 client/src/hooks/__tests__/useFilterState.test.jsx
+ create mode 100644 client/src/hooks/__tests__/useUrlState.test.jsx
+ create mode 100644 client/src/hooks/useFilterState.js
+ create mode 100644 client/src/hooks/useUrlState.js
+ create mode 100644 docs/plans/2026-01-08-url-state-management-design.md
+ create mode 100644 docs/plans/2026-01-08-url-state-management-implementation.md
 
 Array
 (
@@ -3634,27 +3637,25 @@ Removed from CA123
 Downloading bmartino1's Repository
 
 From https://github.com/bmartino1/unraid-docker-templates
-   341ec00..0f71acf  main       -> origin/main
-Updating 341ec00..0f71acf
+   0f71acf..60950f2  main       -> origin/main
+Updating 0f71acf..60950f2
 Fast-forward
- CHANGELOG.MD                                    | 13 +++-
- README.md                                       | 80 ++++++++++++++++---------
- csunifibouncer.xml                              | 45 ++++++++++++++
- icloudpd-web.xml => deprecated/icloudpd-web.xml |  0
- 4 files changed, 107 insertions(+), 31 deletions(-)
- create mode 100644 csunifibouncer.xml
- rename icloudpd-web.xml => deprecated/icloudpd-web.xml (100%)
+ deprecated/hamachi-vpn.xml => hamachi-vpn.xml |  2 +-
+ plexrepair                                    | 37 +++++++++++++++++++++++++++
+ 2 files changed, 38 insertions(+), 1 deletion(-)
+ rename deprecated/hamachi-vpn.xml => hamachi-vpn.xml (86%)
+ create mode 100644 plexrepair
 
 Array
 (
     [https://github.com/bmartino1/unraid-docker-templates] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml
-            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml
-            [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/icloudpd-web.xml
-            [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
-            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml
-            [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
+            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/icloudpd-web.xml
+            [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
+            [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml
+            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
+            [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/hamachi-vpn.xml
             [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml
             [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/csunifibouncer.xml
             [8] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml
@@ -3673,15 +3674,15 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml... ***DEPRECATED BY REPO PATH*** No Support or Project Link Present.  Template automatically dropped from CA
 
 Removed from CA123
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml... ***DEPRECATED BY REPO PATH*** Privileged mode set.  This may not be necessary
-
-No Support or Project Link Present.  Template automatically dropped from CA
-
-Removed from CA123
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/icloudpd-web.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml...Success
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/hamachi-vpn.xml...Privileged mode set.  This may not be necessary
+
+No Support or Project Link Present.  Template automatically dropped from CA
+
+Removed from CA123
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/csunifibouncer.xml...Port referenced in webUI does not correspond with a container port defined.  Port Referenced does not exist in Config.  Template removed from CA.
 
@@ -4661,7 +4662,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   c2e1741c..e885a983  main       -> origin/main
+Updating c2e1741c..e885a983
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 4 ++--
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 26 insertions(+), 26 deletions(-)
 
 Array
 (
@@ -19634,8 +19664,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-waazaafr/release-feeds-to-discord
-waazaafr/release-feeds-to-discord:latest Downloads: 832  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19787,8 +19815,6 @@ waazaafr/release-feeds-to-discord:latest Downloads: 832  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
-vlx42/backdrop-generator
-vlx42/backdrop-generator Downloads: 436  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
