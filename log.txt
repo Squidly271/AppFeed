@@ -13,15 +13,7 @@ Downloading Repo Info
 
 Downloading Yusseiin's Repository
 
-From https://github.com/Yusseiin/unraid-templates
-   49fed38..9d94186  main       -> origin/main
-Updating 49fed38..9d94186
-Fast-forward
- img/weighttracker.png        | Bin 0 -> 661007 bytes
- templates/Weight_Tracker.xml |  37 +++++++++++++++++++++++++++++++++++++
- 2 files changed, 37 insertions(+)
- create mode 100644 img/weighttracker.png
- create mode 100644 templates/Weight_Tracker.xml
+Already up to date.
 
 Array
 (
@@ -59,13 +51,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   839c80b..06d61a0  main       -> origin/main
-Updating 839c80b..06d61a0
-Fast-forward
- app/api/admin/users/invite/route.ts |  4 +++-
- app/api/invite/accept/route.ts      | 20 +++++++++++++++-----
- 2 files changed, 18 insertions(+), 6 deletions(-)
+Already up to date.
 
 Array
 (
@@ -459,7 +445,120 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   d7984e7..dbb5322  main       -> origin/main
+Updating d7984e7..dbb5322
+Fast-forward
+ .../plans/2026-01-10-remove-stashapp-api-design.md |  267 +
+ ...026-01-10-remove-stashapp-api-implementation.md |  966 +++
+ docs/plans/2026-01-10-zod-api-schemas-design.md    |  533 ++
+ server/.gitignore                                  |    2 +
+ server/codegen.yml                                 |   24 +
+ server/controllers/playlist.ts                     |    2 +-
+ server/controllers/setup.ts                        |    6 +-
+ server/graphql/StashClient.ts                      |  121 +
+ server/graphql/generated/.gitkeep                  |    0
+ server/graphql/generated/graphql.ts                | 7122 ++++++++++++++++++++
+ server/graphql/operations/configuration.graphql    |   11 +
+ server/graphql/operations/findGalleries.graphql    |  102 +
+ server/graphql/operations/findGallery.graphql      |   92 +
+ server/graphql/operations/findGalleryIDs.graphql   |   11 +
+ server/graphql/operations/findGroup.graphql        |   43 +
+ server/graphql/operations/findGroupIDs.graphql     |   11 +
+ server/graphql/operations/findGroups.graphql       |   35 +
+ server/graphql/operations/findImageIDs.graphql     |   11 +
+ server/graphql/operations/findImages.graphql       |   56 +
+ server/graphql/operations/findPerformerIDs.graphql |   11 +
+ server/graphql/operations/findPerformers.graphql   |   60 +
+ server/graphql/operations/findSceneIDs.graphql     |   11 +
+ server/graphql/operations/findScenes.graphql       |  141 +
+ .../graphql/operations/findScenesCompact.graphql   |  107 +
+ server/graphql/operations/findStudioIDs.graphql    |   11 +
+ server/graphql/operations/findStudios.graphql      |   51 +
+ server/graphql/operations/findTagIDs.graphql       |   11 +
+ server/graphql/operations/findTags.graphql         |   37 +
+ server/graphql/operations/galleryUpdate.graphql    |   31 +
+ server/graphql/operations/groupUpdate.graphql      |   25 +
+ server/graphql/operations/imageUpdate.graphql      |   32 +
+ server/graphql/operations/metadataScan.graphql     |    3 +
+ server/graphql/operations/performerDestroy.graphql |    3 +
+ server/graphql/operations/performerUpdate.graphql  |   49 +
+ .../graphql/operations/performersDestroy.graphql   |    3 +
+ server/graphql/operations/sceneAddPlay.graphql     |    6 +
+ server/graphql/operations/sceneDecrementO.graphql  |    3 +
+ server/graphql/operations/sceneDestroy.graphql     |    3 +
+ server/graphql/operations/sceneIncrementO.graphql  |    3 +
+ .../graphql/operations/sceneSaveActivity.graphql   |    3 +
+ server/graphql/operations/sceneUpdate.graphql      |  117 +
+ server/graphql/operations/scenesUpdate.graphql     |  117 +
+ server/graphql/operations/studioDestroy.graphql    |    3 +
+ server/graphql/operations/studioUpdate.graphql     |   59 +
+ server/graphql/operations/studiosDestroy.graphql   |    3 +
+ server/graphql/operations/tagCreate.graphql        |   26 +
+ server/graphql/operations/tagDestroy.graphql       |    3 +
+ server/graphql/operations/tagUpdate.graphql        |   26 +
+ server/graphql/operations/tagsDestroy.graphql      |    3 +
+ server/graphql/types.ts                            |   51 +
+ server/package-lock.json                           | 6060 +++++++++++++++--
+ server/package.json                                |   13 +-
+ server/services/StashInstanceManager.ts            |   12 +-
+ server/services/StashSyncService.ts                |    2 +-
+ .../tests/services/StashSyncService.stash.test.ts  |    6 +-
+ server/types/api/playlist.ts                       |    2 +-
+ server/types/entities.ts                           |    6 +-
+ server/types/filters.ts                            |    6 +-
+ server/types/index.ts                              |    6 +-
+ server/types/peekFilters.ts                        |    4 +-
+ server/utils/stashUrlProxy.ts                      |    2 +-
+ 61 files changed, 15954 insertions(+), 592 deletions(-)
+ create mode 100644 docs/plans/2026-01-10-remove-stashapp-api-design.md
+ create mode 100644 docs/plans/2026-01-10-remove-stashapp-api-implementation.md
+ create mode 100644 docs/plans/2026-01-10-zod-api-schemas-design.md
+ create mode 100644 server/.gitignore
+ create mode 100644 server/codegen.yml
+ create mode 100644 server/graphql/StashClient.ts
+ create mode 100644 server/graphql/generated/.gitkeep
+ create mode 100644 server/graphql/generated/graphql.ts
+ create mode 100644 server/graphql/operations/configuration.graphql
+ create mode 100644 server/graphql/operations/findGalleries.graphql
+ create mode 100644 server/graphql/operations/findGallery.graphql
+ create mode 100644 server/graphql/operations/findGalleryIDs.graphql
+ create mode 100644 server/graphql/operations/findGroup.graphql
+ create mode 100644 server/graphql/operations/findGroupIDs.graphql
+ create mode 100644 server/graphql/operations/findGroups.graphql
+ create mode 100644 server/graphql/operations/findImageIDs.graphql
+ create mode 100644 server/graphql/operations/findImages.graphql
+ create mode 100644 server/graphql/operations/findPerformerIDs.graphql
+ create mode 100644 server/graphql/operations/findPerformers.graphql
+ create mode 100644 server/graphql/operations/findSceneIDs.graphql
+ create mode 100644 server/graphql/operations/findScenes.graphql
+ create mode 100644 server/graphql/operations/findScenesCompact.graphql
+ create mode 100644 server/graphql/operations/findStudioIDs.graphql
+ create mode 100644 server/graphql/operations/findStudios.graphql
+ create mode 100644 server/graphql/operations/findTagIDs.graphql
+ create mode 100644 server/graphql/operations/findTags.graphql
+ create mode 100644 server/graphql/operations/galleryUpdate.graphql
+ create mode 100644 server/graphql/operations/groupUpdate.graphql
+ create mode 100644 server/graphql/operations/imageUpdate.graphql
+ create mode 100644 server/graphql/operations/metadataScan.graphql
+ create mode 100644 server/graphql/operations/performerDestroy.graphql
+ create mode 100644 server/graphql/operations/performerUpdate.graphql
+ create mode 100644 server/graphql/operations/performersDestroy.graphql
+ create mode 100644 server/graphql/operations/sceneAddPlay.graphql
+ create mode 100644 server/graphql/operations/sceneDecrementO.graphql
+ create mode 100644 server/graphql/operations/sceneDestroy.graphql
+ create mode 100644 server/graphql/operations/sceneIncrementO.graphql
+ create mode 100644 server/graphql/operations/sceneSaveActivity.graphql
+ create mode 100644 server/graphql/operations/sceneUpdate.graphql
+ create mode 100644 server/graphql/operations/scenesUpdate.graphql
+ create mode 100644 server/graphql/operations/studioDestroy.graphql
+ create mode 100644 server/graphql/operations/studioUpdate.graphql
+ create mode 100644 server/graphql/operations/studiosDestroy.graphql
+ create mode 100644 server/graphql/operations/tagCreate.graphql
+ create mode 100644 server/graphql/operations/tagDestroy.graphql
+ create mode 100644 server/graphql/operations/tagUpdate.graphql
+ create mode 100644 server/graphql/operations/tagsDestroy.graphql
+ create mode 100644 server/graphql/types.ts
 
 Array
 (
@@ -2536,13 +2635,7 @@ Processing /tmp/GitHub/repositoryClone/NicolasHaas/unraid-xml-templates/golang-k
 
 Downloading guniv's Repository
 
-From https://github.com/guniv/unraid-ca-apps
-   0c823e5..8b93978  main       -> origin/main
-Updating 0c823e5..8b93978
-Fast-forward
- .last_release_coolercontrol |  2 +-
- CoolerControl.xml           | 14 +++++++++++++-
- 2 files changed, 14 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4582,7 +4675,15 @@ Removed from CA123
 
 Downloading LubricantJam's Repository
 
-Already up to date.
+From https://github.com/JamsRepos/Unraid-Templates
+   b87e5d9..2c1f7c6  main       -> origin/main
+Updating b87e5d9..2c1f7c6
+Fast-forward
+ logos/pelagica.png     | Bin 0 -> 2624 bytes
+ templates/pelagica.xml |  28 ++++++++++++++++++++++++++++
+ 2 files changed, 28 insertions(+)
+ create mode 100644 logos/pelagica.png
+ create mode 100644 templates/pelagica.xml
 
 Array
 (
@@ -4596,13 +4697,14 @@ Array
             [5] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyfin-auto-collections.xml
             [6] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/capture.xml
             [7] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/suggestarr.xml
-            [8] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/isaiah.xml
-            [9] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel-agent.xml
-            [10] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/materialious.xml
-            [11] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/checkcle-monitoring-agent.xml
-            [12] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamyfin-optimised-versions.xml
-            [13] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellysweep.xml
-            [14] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamystats.xml
+            [8] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/pelagica.xml
+            [9] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/isaiah.xml
+            [10] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel-agent.xml
+            [11] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/materialious.xml
+            [12] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/checkcle-monitoring-agent.xml
+            [13] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamyfin-optimised-versions.xml
+            [14] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellysweep.xml
+            [15] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamystats.xml
         )
 
 )
@@ -4616,6 +4718,7 @@ Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/gith
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyfin-auto-collections.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/capture.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/suggestarr.xml...Success
+Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/pelagica.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/isaiah.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel-agent.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/materialious.xml...Success
@@ -8128,11 +8231,11 @@ Processing /tmp/GitHub/repositoryClone/dorgan/unraid-templates/unraid-networksta
 Downloading rix's Repository
 
 From https://github.com/rix1337/docker-templates
-   ff46e9a..6cab78a  main       -> origin/main
-Updating ff46e9a..6cab78a
+   6cab78a..988948e  main       -> origin/main
+Updating 6cab78a..988948e
 Fast-forward
- rix1337/quasarr.xml | 28 +++++++++++++++++++---------
- 1 file changed, 19 insertions(+), 9 deletions(-)
+ rix1337/quasarr.xml | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
 Array
 (
@@ -19556,10 +19659,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
-yusseiin/weighttracker
-yusseiin/weighttracker:latest Downloads: 54  Stars: 0  Base: unknown
-Pulling yusseiin/weighttracker:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
@@ -19652,6 +19751,11 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+ciuse99/suggestarr
+ciuse99/suggestarr:latest Downloads: 496365  Stars: 1  Base: unknown
+kartoffelchipss/pelagica
+kartoffelchipss/pelagica:latest Downloads: 396  Stars: 0  Base: unknown
+Pulling kartoffelchipss/pelagica:latest
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -19751,6 +19855,8 @@ Killed
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+brainic/tado-assistant
+brainic/tado-assistant:latest Downloads: 26661  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -19806,6 +19912,9 @@ Killed
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+Tagged - Can't determine last update
+nadeko-bot/nadekobot
+ghcr.io/nadeko-bot/nadekobot:v6 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 127
