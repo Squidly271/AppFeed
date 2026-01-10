@@ -444,104 +444,24 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   8228d17..abf2537  main       -> origin/main
-Updating 8228d17..abf2537
+   abf2537..95296ea  main       -> origin/main
+Updating abf2537..95296ea
 Fast-forward
- client/package-lock.json                           | 106 ++++-
- client/package.json                                |   2 +
- .../src/components/playlist/PlaylistStatusCard.jsx |   5 +-
- client/src/components/ui/RecommendedSidebar.jsx    |   5 +-
- .../src/components/video-player/useVideoPlayer.js  |   3 +-
- .../components/cards}/GalleryCard.test.jsx         |   2 +-
- .../components/cards}/GroupCard.test.jsx           |   2 +-
- .../components/cards}/ImageCard.test.jsx           |   2 +-
- .../components/cards}/PerformerCard.test.jsx       |   2 +-
- .../components/cards}/StudioCard.test.jsx          |   2 +-
- .../components/cards}/TagCard.test.jsx             |   2 +-
- .../components/grids}/GalleryGrid.test.jsx         |   2 +-
- .../components/grids}/GroupGrid.test.jsx           |   2 +-
- .../components/grids}/ImageGrid.test.jsx           |   2 +-
- .../components/grids}/PerformerGrid.test.jsx       |   2 +-
- .../components/grids}/StudioGrid.test.jsx          |   2 +-
- .../components/grids}/TagGrid.test.jsx             |   2 +-
- .../components/ui}/BaseCard.test.jsx               |   2 +-
- .../components/ui}/BaseGrid.test.jsx               |   2 +-
- .../components/ui}/CardComponents.test.jsx         |   2 +-
- .../components/ui}/CardCountIndicators.test.jsx    |   4 +-
- .../components/ui}/ExpandableDescription.test.jsx  |   2 +-
- client/tests/components/ui/FilterPresets.test.jsx  | 506 +++++++++++++++++++++
- .../components/ui}/Lightbox.test.jsx               |   2 +-
- client/tests/components/ui/Pagination.test.jsx     | 302 ++++++++++++
- .../components/ui}/SceneCard.test.jsx              |   2 +-
- client/tests/components/ui/SearchControls.test.jsx | 483 ++++++++++++++++++++
- .../components/ui}/SearchableGrid.test.jsx         |   2 +-
- client/tests/components/ui/TabNavigation.test.jsx  | 282 ++++++++++++
- .../components/ui}/Tooltip.test.jsx                |   2 +-
- .../video-player}/track-activity.test.js           |   2 +-
- .../hooks}/useCardKeyboardNav.test.js              |   2 +-
- .../hooks}/useCardSelection.test.js                |   2 +-
- .../hooks}/useFilterState.test.jsx                 |   8 +-
- .../hooks}/useImagesPagination.test.jsx            |   2 +-
- .../hooks}/useNavigationState.test.jsx             |   2 +-
- .../hooks}/usePaginatedLightbox.test.jsx           |   2 +-
- .../hooks}/useTruncationDetection.test.js          |   2 +-
- .../__tests__ => tests/hooks}/useUrlState.test.jsx |   2 +-
- client/tests/mockData.js                           | 495 ++++++++++++++++++++
- client/tests/setup.js                              |  50 ++
- client/tests/testUtils.jsx                         | 207 +++++++++
- .../__tests__ => tests/utils}/filterConfig.test.js |   2 +-
- .../utils}/galleryFilterConfig.test.js             |   2 +-
- .../utils}/groupFilterConfig.test.js               |   2 +-
- .../utils}/performerFilterConfig.test.js           |   2 +-
- .../utils}/studioFilterConfig.test.js              |   2 +-
- .../utils}/tagFilterConfig.test.js                 |   2 +-
- .../utils}/unitConversions.test.js                 |   2 +-
- client/vitest.config.js                            |  17 +-
- 50 files changed, 2493 insertions(+), 52 deletions(-)
- rename client/{src/components/cards/__tests__ => tests/components/cards}/GalleryCard.test.jsx (96%)
- rename client/{src/components/cards/__tests__ => tests/components/cards}/GroupCard.test.jsx (96%)
- rename client/{src/components/cards/__tests__ => tests/components/cards}/ImageCard.test.jsx (96%)
- rename client/{src/components/cards/__tests__ => tests/components/cards}/PerformerCard.test.jsx (96%)
- rename client/{src/components/cards/__tests__ => tests/components/cards}/StudioCard.test.jsx (96%)
- rename client/{src/components/cards/__tests__ => tests/components/cards}/TagCard.test.jsx (96%)
- rename client/{src/components/grids/__tests__ => tests/components/grids}/GalleryGrid.test.jsx (95%)
- rename client/{src/components/grids/__tests__ => tests/components/grids}/GroupGrid.test.jsx (95%)
- rename client/{src/components/grids/__tests__ => tests/components/grids}/ImageGrid.test.jsx (95%)
- rename client/{src/components/grids/__tests__ => tests/components/grids}/PerformerGrid.test.jsx (95%)
- rename client/{src/components/grids/__tests__ => tests/components/grids}/StudioGrid.test.jsx (95%)
- rename client/{src/components/grids/__tests__ => tests/components/grids}/TagGrid.test.jsx (95%)
- rename client/{src/components/ui/__tests__ => tests/components/ui}/BaseCard.test.jsx (98%)
- rename client/{src/components/ui/__tests__ => tests/components/ui}/BaseGrid.test.jsx (96%)
- rename client/{src/components/ui/__tests__ => tests/components/ui}/CardComponents.test.jsx (98%)
- rename client/{src/components/ui/__tests__ => tests/components/ui}/CardCountIndicators.test.jsx (81%)
- rename client/{src/components/ui/__tests__ => tests/components/ui}/ExpandableDescription.test.jsx (82%)
- create mode 100644 client/tests/components/ui/FilterPresets.test.jsx
- rename client/{src/components/ui/__tests__ => tests/components/ui}/Lightbox.test.jsx (99%)
- create mode 100644 client/tests/components/ui/Pagination.test.jsx
- rename client/{src/components/ui/__tests__ => tests/components/ui}/SceneCard.test.jsx (96%)
- create mode 100644 client/tests/components/ui/SearchControls.test.jsx
- rename client/{src/components/ui/__tests__ => tests/components/ui}/SearchableGrid.test.jsx (82%)
- create mode 100644 client/tests/components/ui/TabNavigation.test.jsx
- rename client/{src/components/ui/__tests__ => tests/components/ui}/Tooltip.test.jsx (93%)
- rename client/{src/components/video-player/plugins/__tests__ => tests/components/video-player}/track-activity.test.js (99%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useCardKeyboardNav.test.js (96%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useCardSelection.test.js (97%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useFilterState.test.jsx (98%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useImagesPagination.test.jsx (98%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useNavigationState.test.jsx (97%)
- rename client/{src/hooks/__tests__ => tests/hooks}/usePaginatedLightbox.test.jsx (99%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useTruncationDetection.test.js (84%)
- rename client/{src/hooks/__tests__ => tests/hooks}/useUrlState.test.jsx (98%)
- create mode 100644 client/tests/mockData.js
- create mode 100644 client/tests/setup.js
- create mode 100644 client/tests/testUtils.jsx
- rename client/{src/utils/__tests__ => tests/utils}/filterConfig.test.js (99%)
- rename client/{src/utils/__tests__ => tests/utils}/galleryFilterConfig.test.js (99%)
- rename client/{src/utils/__tests__ => tests/utils}/groupFilterConfig.test.js (99%)
- rename client/{src/utils/__tests__ => tests/utils}/performerFilterConfig.test.js (99%)
- rename client/{src/utils/__tests__ => tests/utils}/studioFilterConfig.test.js (99%)
- rename client/{src/utils/__tests__ => tests/utils}/tagFilterConfig.test.js (99%)
- rename client/{src/utils/__tests__ => tests/utils}/unitConversions.test.js (98%)
+ .../plans/2026-01-09-server-side-title-fallback.md | 351 +++++++++++++++++++++
+ server/services/GalleryQueryBuilder.ts             |  14 +-
+ server/services/GroupQueryBuilder.ts               |   2 +-
+ server/services/ImageQueryBuilder.ts               |   8 +-
+ server/services/PerformerQueryBuilder.ts           |   2 +-
+ server/services/SceneQueryBuilder.ts               |  10 +-
+ server/services/StashEntityService.ts              |   9 +-
+ server/services/StudioQueryBuilder.ts              |   2 +-
+ server/services/TagQueryBuilder.ts                 |   2 +-
+ server/utils/galleryUtils.ts                       |  22 --
+ server/utils/titleUtils.ts                         |  76 +++++
+ 11 files changed, 460 insertions(+), 38 deletions(-)
+ create mode 100644 docs/plans/2026-01-09-server-side-title-fallback.md
+ delete mode 100644 server/utils/galleryUtils.ts
+ create mode 100644 server/utils/titleUtils.ts
 
 Array
 (
@@ -7365,7 +7285,12 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   5aa0c70..6a0bc70  master     -> origin/master
+Updating 5aa0c70..6a0bc70
+Fast-forward
+ jlesage/mkvtoolnix.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
