@@ -52,121 +52,13 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   f8d5442..1080ee0  main       -> origin/main
-Updating f8d5442..1080ee0
+   1080ee0..67e8d02  main       -> origin/main
+Updating 1080ee0..67e8d02
 Fast-forward
- .env.example                                       |  18 +
- app/admin/production/page.tsx                      |  30 ++
- app/api/admin/image-processing/run/route.ts        |  14 +
- app/api/admin/models/[id]/images/route.ts          |  22 +-
- .../models/[id]/revisions/[revisionId]/route.ts    |  31 ++
- app/api/admin/models/[id]/route.ts                 |  24 +
- .../orders/[orderId]/approval-requests/route.ts    |  40 ++
- app/api/admin/orders/[orderId]/messages/route.ts   |  41 ++
- app/api/admin/preview-processing/run/route.ts      |  14 +
- app/api/admin/printers/[id]/route.ts               |  46 ++
- app/api/admin/printers/route.ts                    |  37 ++
- app/api/admin/production/route.ts                  |  17 +
- app/api/admin/site-config/route.ts                 |  24 +
- app/api/checkout/route.ts                          |  79 ++-
- app/api/collections/[slug]/route.ts                |  14 +
- app/api/collections/route.ts                       |   9 +
- .../[requestId]/response/route.ts                  |  56 +++
- .../customer/orders/[orderId]/messages/route.ts    |  42 ++
- app/api/models/[id]/comments/route.ts              |  21 +-
- app/api/models/[id]/download.zip/route.ts          |  65 ++-
- app/api/models/[id]/images/route.ts                |  17 +-
- app/api/models/[id]/quote/route.ts                 | 118 +++++
- app/api/models/[id]/revisions/route.ts             | 278 +++++++++++
- app/api/models/[id]/route.ts                       |  58 ++-
- app/api/models/route.ts                            | 100 +---
- app/api/profile/route.ts                           |  15 +-
- app/api/public-config/route.ts                     |  38 ++
- app/api/stockworks/material-warnings/route.ts      | 141 ++++++
- app/api/upload/route.ts                            | 417 ++++------------
- app/cart/page.tsx                                  |  17 +-
- app/checkout/page.tsx                              |  72 ++-
- app/collections/[slug]/page.tsx                    |  60 +++
- app/collections/page.tsx                           |  57 +++
- app/customer/orders/[orderId]/page.tsx             | 181 ++++++-
- app/discover/page.tsx                              |  32 ++
- app/files/[...path]/route.ts                       |   7 +-
- app/models/[id]/edit/page.tsx                      |   2 +
- app/models/[id]/page.tsx                           |  31 ++
- components/InstantQuoteConfigurator.tsx            | 335 +++++++++++++
- components/ModelRevisionsManager.tsx               | 103 ++++
- components/admin/ProductionDashboard.tsx           | 413 ++++++++++++++++
- components/cart/AddToCartButtons.tsx               |   2 +-
- components/cart/CartProvider.tsx                   |  18 +-
- components/checkout/OrderSummary.tsx               |   3 +-
- components/orders/ApprovalRequests.tsx             |  97 ++++
- components/orders/OrderMessageComposer.tsx         |  47 ++
- components/orders/OrderStatusBadge.tsx             |   3 +-
- lib/cartPricing.ts                                 | 135 +++++-
- lib/collections.ts                                 | 151 ++++++
- lib/comments.ts                                    |   2 +
- lib/image-queue.ts                                 | 246 ++++++++++
- lib/model-images.ts                                |   4 +-
- lib/model-preview-queue.ts                         | 482 +++++++++++++++++++
- lib/order-status.ts                                |  11 +
- lib/orders.ts                                      |  28 +-
- lib/orderworks.ts                                  |  10 +-
- lib/pricing-cache.ts                               |  55 +++
- lib/pricing.ts                                     |  63 ++-
- lib/production.ts                                  | 254 ++++++++++
- lib/public-path.ts                                 |   8 +
- lib/storage.ts                                     |  10 +-
- package-lock.json                                  | 527 +++++++++++++++++++--
- package.json                                       |   2 +
- .../0037_effective_price_cache/migration.sql       |  10 +
- prisma/migrations/0038_model_indexes/migration.sql |   7 +
- .../0039_image_processing_queue/migration.sql      |  24 +
- .../migrations/0040_model_revisions/migration.sql  |  42 ++
- prisma/migrations/0041_printers/migration.sql      |  14 +
- prisma/migrations/0042_collections/migration.sql   |  37 ++
- .../0043_order_approvals_messages/migration.sql    |  44 ++
- .../0044_model_preview_queue/migration.sql         |  25 +
- prisma/schema.prisma                               | 175 +++++++
- types/checkout.ts                                  |  11 +
- types/discover.ts                                  |   5 +-
- 74 files changed, 5111 insertions(+), 577 deletions(-)
- create mode 100644 app/admin/production/page.tsx
- create mode 100644 app/api/admin/image-processing/run/route.ts
- create mode 100644 app/api/admin/models/[id]/revisions/[revisionId]/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/approval-requests/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/messages/route.ts
- create mode 100644 app/api/admin/preview-processing/run/route.ts
- create mode 100644 app/api/admin/printers/[id]/route.ts
- create mode 100644 app/api/admin/printers/route.ts
- create mode 100644 app/api/admin/production/route.ts
- create mode 100644 app/api/collections/[slug]/route.ts
- create mode 100644 app/api/collections/route.ts
- create mode 100644 app/api/customer/orders/[orderId]/approval-requests/[requestId]/response/route.ts
- create mode 100644 app/api/customer/orders/[orderId]/messages/route.ts
- create mode 100644 app/api/models/[id]/quote/route.ts
- create mode 100644 app/api/models/[id]/revisions/route.ts
- create mode 100644 app/api/stockworks/material-warnings/route.ts
- create mode 100644 app/collections/[slug]/page.tsx
- create mode 100644 app/collections/page.tsx
- create mode 100644 components/InstantQuoteConfigurator.tsx
- create mode 100644 components/ModelRevisionsManager.tsx
- create mode 100644 components/admin/ProductionDashboard.tsx
- create mode 100644 components/orders/ApprovalRequests.tsx
- create mode 100644 components/orders/OrderMessageComposer.tsx
- create mode 100644 lib/collections.ts
- create mode 100644 lib/image-queue.ts
- create mode 100644 lib/model-preview-queue.ts
- create mode 100644 lib/order-status.ts
- create mode 100644 lib/pricing-cache.ts
- create mode 100644 lib/production.ts
- create mode 100644 prisma/migrations/0037_effective_price_cache/migration.sql
- create mode 100644 prisma/migrations/0038_model_indexes/migration.sql
- create mode 100644 prisma/migrations/0039_image_processing_queue/migration.sql
- create mode 100644 prisma/migrations/0040_model_revisions/migration.sql
- create mode 100644 prisma/migrations/0041_printers/migration.sql
- create mode 100644 prisma/migrations/0042_collections/migration.sql
- create mode 100644 prisma/migrations/0043_order_approvals_messages/migration.sql
- create mode 100644 prisma/migrations/0044_model_preview_queue/migration.sql
+ app/api/public-config/route.ts | 10 +++++++---
+ app/checkout/page.tsx          |  2 +-
+ docker-compose.yml             |  4 ++--
+ 3 files changed, 10 insertions(+), 6 deletions(-)
 
 Array
 (
@@ -3753,19 +3645,7 @@ Removed from CA123
 
 Downloading bmartino1's Repository
 
-From https://github.com/bmartino1/unraid-docker-templates
-   60950f2..5bee6bc  main       -> origin/main
-Updating 60950f2..5bee6bc
-Fast-forward
- CHANGELOG.MD                                       |  4 +++
- README.md                                          | 36 +++++++++++++++------
- .../csunifibouncer.xml                             |  0
- plexrepair                                         | 37 ----------------------
- plexrepair.xml                                     | 37 ++++++++++++++++++++++
- 5 files changed, 67 insertions(+), 47 deletions(-)
- rename csunifibouncer.xml => deprecated/csunifibouncer.xml (100%)
- delete mode 100644 plexrepair
- create mode 100644 plexrepair.xml
+Already up to date.
 
 Array
 (
@@ -19749,9 +19629,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-bmmbmm01/plex-dbrepair
-bmmbmm01/plex-dbrepair:latest Downloads: 15  Stars: 0  Base: unknown
-Pulling bmmbmm01/plex-dbrepair:latest
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19768,6 +19645,9 @@ Pulling bmmbmm01/plex-dbrepair:latest
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+rishikanthc/zendo
+ghcr.io/rishikanthc/zendo:v0.2.0 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19910,8 +19790,15 @@ Pulling bmmbmm01/plex-dbrepair:latest
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-donutware/fladder
-ghcr.io/donutware/fladder:latest Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+speaches-ai/speaches
+ghcr.io/speaches-ai/speaches:latest-cpu Downloads:   Stars:   Base: unknown
+wardy784/erugo
+wardy784/erugo:latest Downloads: 371288  Stars: 8  Base: unknown
+hhftechnology/pangolin-cloudflare-tunnel
+hhftechnology/pangolin-cloudflare-tunnel:latest Downloads: 3820  Stars: 0  Base: unknown
+deceptifeed/server
+deceptifeed/server:latest Downloads: 5175  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
