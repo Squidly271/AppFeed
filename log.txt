@@ -52,21 +52,15 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   364bb7d..3b37490  main       -> origin/main
-Updating 364bb7d..3b37490
+   3b37490..95a62d4  main       -> origin/main
+Updating 3b37490..95a62d4
 Fast-forward
- app/api/models/[id]/download.zip/route.ts |   9 +-
- app/api/models/[id]/quote/route.ts        |  16 +-
- app/api/upload/route.ts                   | 413 +++++++++++++++++++++++-------
- components/InstantQuoteConfigurator.tsx   |   6 +-
- lib/image-processing.ts                   |   7 +-
- lib/image-queue.ts                        |  49 +++-
- lib/model-preview-queue.ts                |  23 +-
- package-lock.json                         | 112 ++++++++
- package.json                              |   4 +
- types/unzipper-parse.d.ts                 |   1 +
- 10 files changed, 523 insertions(+), 117 deletions(-)
- create mode 100644 types/unzipper-parse.d.ts
+ app/models/[id]/page.tsx               | 27 ++++++++++++
+ components/ModelProcessingNotifier.tsx | 81 ++++++++++++++++++++++++++++++++++
+ lib/image-queue.ts                     |  2 +-
+ lib/model-preview-queue.ts             |  1 +
+ 4 files changed, 110 insertions(+), 1 deletion(-)
+ create mode 100644 components/ModelProcessingNotifier.tsx
 
 Array
 (
@@ -146,12 +140,7 @@ Processing /tmp/GitHub/repositoryClone/jandrop/file_core_api_unraid/file-manager
 
 Downloading Gallapagos' Repository
 
-From https://github.com/connorgallopo/tracearr-unraid-template
-   4cc129a..c88651a  main       -> origin/main
-Updating 4cc129a..c88651a
-Fast-forward
- tracearr-supervised/tracearr-supervised.xml | 2 ++
- 1 file changed, 2 insertions(+)
+Already up to date.
 
 Array
 (
@@ -429,7 +418,16 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   e1bc2d9..3c35347  master     -> origin/master
+Updating e1bc2d9..3c35347
+Fast-forward
+ app/Filament/Pages/Preferences.php                 | 22 +++++++++++++++++++---
+ app/Http/Controllers/XtreamApiController.php       |  6 ++++--
+ app/Settings/GeneralSettings.php                   |  2 ++
+ .../2026_01_12_075221_add_xtream_api_details.php   | 15 +++++++++++++++
+ 4 files changed, 40 insertions(+), 5 deletions(-)
+ create mode 100644 database/settings/2026_01_12_075221_add_xtream_api_details.php
 
 Array
 (
@@ -4283,12 +4281,7 @@ Success
 
 Downloading waazaa's Repository
 
-From https://github.com/waazaa-fr/unraid-templates
-   55db9b9..3949c99  main       -> origin/main
-Updating 55db9b9..3949c99
-Fast-forward
- my-palmr.xml | 1 +
- 1 file changed, 1 insertion(+)
+Already up to date.
 
 Array
 (
@@ -14457,12 +14450,7 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-From https://github.com/JPDVM2014/unraid-templates
-   b7f7fb1..9647a78  main       -> origin/main
-Updating b7f7fb1..9647a78
-Fast-forward
- journiv.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -19632,6 +19620,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
+mediux-team/aura
+ghcr.io/mediux-team/aura Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -19771,8 +19761,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-everythingsmarthome/everything-presence-mmwave-configurator
-everythingsmarthome/everything-presence-mmwave-configurator Downloads: 84237  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -19810,22 +19798,14 @@ everythingsmarthome/everything-presence-mmwave-configurator Downloads: 84237  St
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-swalabtech/journiv-app
-swalabtech/journiv-app:0.1.0-beta.10 Downloads: 47600  Stars: 1  Base: unknown
-Pulling swalabtech/journiv-app:0.1.0-beta.10
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-13hannes11/ics-proxy
-ghcr.io/13hannes11/ics-proxy:latest Downloads: 98  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-linotp/linotp
-linotp/linotp:3.4.4 Downloads: 485  Stars: 0  Base: unknown
-quay.io/mudler/localrecall
-quay.io/mudler/localrecall:latest Downloads:   Stars:   Base: unknown
+muety/wakapi
+ghcr.io/muety/wakapi:latest Downloads:   Stars:   Base: unknown
+mintplexlabs/anythingllm
+mintplexlabs/anythingllm:latest Downloads: 2373186  Stars: 143  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19838,6 +19818,9 @@ quay.io/mudler/localrecall:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+Tagged - Can't determine last update
+open-webui/open-webui
+ghcr.io/open-webui/open-webui:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
