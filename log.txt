@@ -373,7 +373,19 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-Already up to date.
+From https://github.com/ruaan-deysel/unraid-management-agent
+   d284660..974ae52  main       -> origin/main
+ * [new tag]         v2026.01.01 -> v2026.01.01
+Updating d284660..974ae52
+Fast-forward
+ CHANGELOG.md                              |  12 ++
+ VERSION                                   |   2 +-
+ daemon/services/collectors/parity.go      | 226 ++++++++++-----------
+ daemon/services/collectors/parity_test.go | 326 ++++++++++++++++++++++++------
+ meta/template/unraid-management-agent.plg |   6 +-
+ unraid-management-agent.plg               |   6 +-
+ unraid-management-agent.xml               |   2 +-
+ 7 files changed, 393 insertions(+), 187 deletions(-)
 
 Array
 (
@@ -4660,36 +4672,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   d6d6831d..ab215a10  main       -> origin/main
-Updating d6d6831d..ab215a10
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -14211,7 +14194,14 @@ Processing /tmp/GitHub/repositoryClone/avpnusr/unraid-ca-templates/ca_profile.xm
 
 Downloading xavierh's Repository
 
-Already up to date.
+From https://github.com/xavier-hernandez/unraid-templates
+   774af29..cf725f1  master     -> origin/master
+Updating 774af29..cf725f1
+Fast-forward
+ README.md                                          |  2 ++
+ .../lissy93-networking-toolbox.xml                 | 27 ++++++++++++++++++++++
+ 2 files changed, 29 insertions(+)
+ create mode 100644 lissy93-networking-toolbox/lissy93-networking-toolbox.xml
 
 Array
 (
@@ -14219,9 +14209,10 @@ Array
         (
             [0] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/actual-server/actualserver.xml
             [1] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/noisedash/noisedash.xml
-            [2] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/infinite-mario/infinite-mario.xml
-            [3] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/external-ip/external-ip.xml
-            [4] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/goaccess-for-nginxproxymanager/goan.xml
+            [2] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/lissy93-networking-toolbox/lissy93-networking-toolbox.xml
+            [3] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/infinite-mario/infinite-mario.xml
+            [4] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/external-ip/external-ip.xml
+            [5] => /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/goaccess-for-nginxproxymanager/goan.xml
         )
 
 )
@@ -14229,6 +14220,7 @@ Array
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/actual-server/actualserver.xml...Removed from CA123
 Processing /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/noisedash/noisedash.xml...Success
+Processing /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/lissy93-networking-toolbox/lissy93-networking-toolbox.xml...Success
 Processing /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/infinite-mario/infinite-mario.xml...Success
 Processing /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/external-ip/external-ip.xml...Success
 Processing /tmp/GitHub/repositoryClone/xavier-hernandez/unraid-templates/goaccess-for-nginxproxymanager/goan.xml...Removed from CA123
@@ -19248,19 +19240,7 @@ Success
 
 Downloading Nodiaque's Repository
 
-From https://github.com/nodiaque/unraid_template
-   b5c57fd..46cfcaf  master     -> origin/master
-Updating b5c57fd..46cfcaf
-Fast-forward
- nodiaque/calibre-web-automated-book-downloader-official.xml  | 5 ++---
- nodiaque/{old => deprecated}/cloudflarebypassforscraping.xml | 0
- nodiaque/enshrouded.xml                                      | 1 -
- nodiaque/enshrouded_proton.xml                               | 1 -
- nodiaque/evcc.xml                                            | 2 +-
- nodiaque/ocpp2mqtt-official.xml                              | 4 ++--
- nodiaque/shelfmark-official.xml                              | 2 +-
- 7 files changed, 6 insertions(+), 9 deletions(-)
- rename nodiaque/{old => deprecated}/cloudflarebypassforscraping.xml (100%)
+Already up to date.
 
 Array
 (
@@ -19831,15 +19811,14 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-svenstaro/miniserve
-svenstaro/miniserve:alpine Downloads: 1133172  Stars: 25  Base: unknown
+lissy93/networking-toolbox
+lissy93/networking-toolbox Downloads: 108532  Stars: 0  Base: unknown
+Pulling lissy93/networking-toolbox
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-ggerganov/llama
-ghcr.io/ggerganov/llama.cpp:server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19851,9 +19830,6 @@ ghcr.io/ggerganov/llama.cpp:server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
-Tagged - Can't determine last update
-seafileltd/seafile-mc
-seafileltd/seafile-mc:13.0-latest Downloads: 17873989  Stars: 121  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
