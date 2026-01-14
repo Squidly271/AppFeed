@@ -52,12 +52,14 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   8fd5d2f..c90e2e3  main       -> origin/main
-Updating 8fd5d2f..c90e2e3
+   c90e2e3..5c5d8c5  main       -> origin/main
+Updating c90e2e3..5c5d8c5
 Fast-forward
- app/api/admin/site-config/route.ts | 18 ++++++++++++++++--
- app/layout.tsx                     | 15 +++++++++++++--
- 2 files changed, 29 insertions(+), 4 deletions(-)
+ app/u/[slug]/page.tsx                    | 38 ++++++++++++++++---
+ components/admin/UsersAndBadgesPanel.tsx | 38 ++++++++++++++++---
+ scripts/backfill-achievement-icons.ts    | 63 ++++++++++++++++++++++++++++++++
+ 3 files changed, 127 insertions(+), 12 deletions(-)
+ create mode 100644 scripts/backfill-achievement-icons.ts
 
 Array
 (
@@ -451,7 +453,59 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   8ead35a..182eb48  main          -> origin/main
+ * [new tag]         v3.2.0-beta.1 -> v3.2.0-beta.1
+Updating 8ead35a..182eb48
+Fast-forward
+ client/package-lock.json                           |    4 +-
+ client/package.json                                |    2 +-
+ client/src/components/pages/Galleries.jsx          |   79 +-
+ client/src/components/pages/Groups.jsx             |   85 +-
+ client/src/components/pages/Images.jsx             |   79 +-
+ client/src/components/pages/Performers.jsx         |   85 +-
+ client/src/components/pages/Studios.jsx            |   85 +-
+ client/src/components/pages/Tags.jsx               |   48 +-
+ client/src/components/scene-search/SceneSearch.jsx |   45 +-
+ .../components/settings/TableColumnSettings.jsx    |  266 ++
+ .../components/settings/tabs/CustomizationTab.jsx  |   31 +
+ .../src/components/table/ColumnConfigPopover.jsx   |  235 ++
+ client/src/components/table/MultiValueCell.jsx     |  189 ++
+ client/src/components/table/TableHeader.jsx        |  112 +
+ client/src/components/table/TableView.jsx          |  180 ++
+ client/src/components/table/cellRenderers.jsx      |  537 ++++
+ client/src/components/table/formatters.js          |   93 +
+ client/src/components/table/index.js               |    6 +
+ client/src/components/ui/FilterPresets.jsx         |    6 +-
+ client/src/components/ui/SearchControls.jsx        |   11 +-
+ client/src/components/ui/ViewModeToggle.jsx        |    3 +-
+ client/src/config/tableColumns.js                  |  628 +++++
+ client/src/hooks/useFilterState.js                 |    9 +
+ client/src/hooks/useTableColumns.js                |  239 ++
+ client/tests/components/ui/FilterPresets.test.jsx  |    9 +
+ docs/plans/2025-01-13-table-list-view-design.md    |  276 ++
+ .../2025-01-13-table-list-view-implementation.md   | 2663 ++++++++++++++++++++
+ .../2026-01-14-table-view-improvements-design.md   |  206 ++
+ server/controllers/user.ts                         |   69 +
+ server/package-lock.json                           |    4 +-
+ server/package.json                                |    4 +-
+ .../migration.sql                                  |    2 +
+ server/prisma/schema.prisma                        |    1 +
+ 33 files changed, 6201 insertions(+), 90 deletions(-)
+ create mode 100644 client/src/components/settings/TableColumnSettings.jsx
+ create mode 100644 client/src/components/table/ColumnConfigPopover.jsx
+ create mode 100644 client/src/components/table/MultiValueCell.jsx
+ create mode 100644 client/src/components/table/TableHeader.jsx
+ create mode 100644 client/src/components/table/TableView.jsx
+ create mode 100644 client/src/components/table/cellRenderers.jsx
+ create mode 100644 client/src/components/table/formatters.js
+ create mode 100644 client/src/components/table/index.js
+ create mode 100644 client/src/config/tableColumns.js
+ create mode 100644 client/src/hooks/useTableColumns.js
+ create mode 100644 docs/plans/2025-01-13-table-list-view-design.md
+ create mode 100644 docs/plans/2025-01-13-table-list-view-implementation.md
+ create mode 100644 docs/plans/2026-01-14-table-view-improvements-design.md
+ create mode 100644 server/prisma/migrations/20260113000000_add_table_column_defaults/migration.sql
 
 Array
 (
@@ -5027,13 +5081,7 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 
 Downloading Binhex's Repository
 
-From https://github.com/binhex/docker-templates
-   bc41d80..494166a  master     -> origin/master
-Updating bc41d80..494166a
-Fast-forward
- binhex/slskd.xml   | 1 +
- binhex/soularr.xml | 2 ++
- 2 files changed, 3 insertions(+)
+Already up to date.
 
 Array
 (
@@ -19235,15 +19283,7 @@ Success
 
 Downloading Nodiaque's Repository
 
-From https://github.com/nodiaque/unraid_template
-   46cfcaf..55c3856  master     -> origin/master
-Updating 46cfcaf..55c3856
-Fast-forward
- nodiaque/images/immich_postgres.png | Bin 0 -> 29354 bytes
- nodiaque/images/valkey.png          | Bin 0 -> 3569 bytes
- 2 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 nodiaque/images/immich_postgres.png
- create mode 100644 nodiaque/images/valkey.png
+Already up to date.
 
 Array
 (
@@ -19600,7 +19640,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.day.night.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.factory.reset.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.info.plg attempt 1...
- Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.local.master.plg attempt 1...
+ Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.local.master.plg attempt 1...bool(false)
+out: int(28)
+error: failed.  Sleeping 5... Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.local.master.plg attempt 2...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.file.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.file.integrity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.scsi.devices.plg attempt 1...
@@ -19632,6 +19674,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+s1t5/mailarchiver
+s1t5/mailarchiver Downloads: 189133  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -19676,6 +19720,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+hacdias/webdav
+hacdias/webdav:latest Downloads: 157842  Stars: 35  Base: unknown
+iib0011/omni-tools
+iib0011/omni-tools Downloads: 1847100  Stars: 7  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -19813,14 +19861,13 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+booklore-app/booklore
+ghcr.io/booklore-app/booklore:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-aculix/bitplay
-ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19835,6 +19882,8 @@ ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+t0bst4r/home-assistant-matter-hub
+ghcr.io/t0bst4r/home-assistant-matter-hub:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 127
