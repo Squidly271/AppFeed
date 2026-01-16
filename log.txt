@@ -445,7 +445,58 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   41df516..0a85bfd  main       -> origin/main
+Updating 41df516..0a85bfd
+Fast-forward
+ .claude/skills/self-review.md                      |  136 +++
+ client/src/App.jsx                                 |   23 +-
+ client/src/components/cards/GalleryCard.jsx        |   10 +-
+ client/src/components/cards/GroupCard.jsx          |   10 +-
+ client/src/components/cards/ImageCard.jsx          |   11 +-
+ client/src/components/cards/PerformerCard.jsx      |   12 +-
+ client/src/components/cards/StudioCard.jsx         |   10 +-
+ client/src/components/cards/TagCard.jsx            |   10 +-
+ client/src/components/pages/GalleryDetail.jsx      |   35 +-
+ client/src/components/pages/GroupDetail.jsx        |   41 +-
+ client/src/components/pages/PerformerDetail.jsx    |   50 +-
+ client/src/components/pages/SceneDetails.jsx       |    5 +-
+ client/src/components/pages/StudioDetail.jsx       |   49 +-
+ client/src/components/pages/TagDetail.jsx          |   41 +-
+ .../components/settings/CardDisplaySettings.jsx    |  140 +++
+ .../components/settings/tabs/CustomizationTab.jsx  |   12 +
+ client/src/components/ui/CardComponents.jsx        |   52 +-
+ client/src/components/ui/ContextSettings.jsx       |   99 +-
+ client/src/components/ui/SceneCard.jsx             |   16 +-
+ client/src/components/ui/SearchControls.jsx        |    1 +
+ client/src/components/ui/SkeletonSceneCard.jsx     |  226 ++--
+ .../components/video-player/PlaybackControls.jsx   |  145 ++-
+ client/src/contexts/CardDisplaySettingsContext.jsx |   98 ++
+ .../settings/CardDisplaySettings.test.jsx          |  281 +++++
+ .../tests/components/ui/SceneCardSettings.test.jsx |  251 ++++
+ client/tests/components/ui/SearchControls.test.jsx |   15 +
+ .../tests/components/ui/SkeletonSceneCard.test.jsx |  247 ++++
+ client/tests/hooks/useCardDisplaySettings.test.jsx |  318 +++++
+ client/tests/mocks/CardDisplaySettingsContext.jsx  |   75 ++
+ ...2026-01-15-card-display-customization-design.md |  364 ++++++
+ ...15-card-display-customization-implementation.md | 1240 ++++++++++++++++++++
+ server/controllers/user.ts                         |   15 +
+ .../api/user-settings.integration.test.ts          |  238 ++++
+ .../migration.sql                                  |    2 +
+ server/prisma/schema.prisma                        |    1 +
+ 35 files changed, 3948 insertions(+), 331 deletions(-)
+ create mode 100644 .claude/skills/self-review.md
+ create mode 100644 client/src/components/settings/CardDisplaySettings.jsx
+ create mode 100644 client/src/contexts/CardDisplaySettingsContext.jsx
+ create mode 100644 client/tests/components/settings/CardDisplaySettings.test.jsx
+ create mode 100644 client/tests/components/ui/SceneCardSettings.test.jsx
+ create mode 100644 client/tests/components/ui/SkeletonSceneCard.test.jsx
+ create mode 100644 client/tests/hooks/useCardDisplaySettings.test.jsx
+ create mode 100644 client/tests/mocks/CardDisplaySettingsContext.jsx
+ create mode 100644 docs/plans/2026-01-15-card-display-customization-design.md
+ create mode 100644 docs/plans/2026-01-15-card-display-customization-implementation.md
+ create mode 100644 server/integration/api/user-settings.integration.test.ts
+ create mode 100644 server/prisma/migrations/20260115000000_add_card_display_settings/migration.sql
 
 Array
 (
@@ -4407,12 +4458,7 @@ Processing /tmp/GitHub/repositoryClone/R3yn4ld/unraid-plugins/ca.mover.tuning.xm
 
 Downloading DonKevlar's Repository
 
-From https://github.com/donkevlar/Unraid-Docker-Templates
-   b9cb98a..dc365ba  master     -> origin/master
-Updating b9cb98a..dc365ba
-Fast-forward
- Hytale-Server.xml | 26 ++++++++------------------
- 1 file changed, 8 insertions(+), 18 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4671,36 +4717,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   a78c2efa..0d8e15c6  main       -> origin/main
-Updating a78c2efa..0d8e15c6
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19711,8 +19728,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-indifferentbroccoli/hytale-server-docker
-indifferentbroccoli/hytale-server-docker Downloads: 2595  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
