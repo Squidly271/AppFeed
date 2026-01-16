@@ -410,12 +410,12 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/sparkison/m3u-editor
-   34ffff5..a1ab020  master     -> origin/master
-Updating 34ffff5..a1ab020
+   a1ab020..b2108bd  master     -> origin/master
+Updating a1ab020..b2108bd
 Fast-forward
- app/Filament/Resources/Series/SeriesResource.php | 13 ++++----
- app/Filament/Resources/Vods/VodResource.php      | 41 ++++++++++++++++++------
- 2 files changed, 37 insertions(+), 17 deletions(-)
+ .../MediaServerIntegrationResource.php             | 28 +++++++++++-----
+ .../Resources/Playlists/PlaylistResource.php       | 37 ++++++++++++++++------
+ 2 files changed, 47 insertions(+), 18 deletions(-)
 
 Array
 (
@@ -451,7 +451,60 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   4824e42..d34145f  main          -> origin/main
+ * [new tag]         v3.2.0-beta.4 -> v3.2.0-beta.4
+Updating 4824e42..d34145f
+Fast-forward
+ .../{pre-release.md => pre-release/SKILL.md}       |    0
+ .../{self-review.md => self-review/SKILL.md}       |    0
+ client/package.json                                |    2 +-
+ client/src/App.jsx                                 |   11 +
+ .../src/components/pages/UserStats/UserStats.jsx   |  186 +++
+ .../UserStats/components/EngagementTotals.jsx      |   60 +
+ .../pages/UserStats/components/HighlightCard.jsx   |  103 ++
+ .../pages/UserStats/components/LibraryOverview.jsx |   33 +
+ .../pages/UserStats/components/StatCard.jsx        |   32 +
+ .../pages/UserStats/components/TopList.jsx         |  126 ++
+ .../components/pages/UserStats/components/index.js |    7 +
+ client/src/components/pages/UserStats/index.js     |    1 +
+ client/src/components/ui/Sidebar.jsx               |    8 +
+ client/src/components/ui/UserMenu.jsx              |   17 +
+ client/src/hooks/useUserStats.js                   |   41 +
+ client/src/utils/format.js                         |   46 +
+ client/tests/utils/format.test.js                  |  227 +++
+ docs/plans/2026-01-16-user-stats-implementation.md | 1498 ++++++++++++++++++++
+ docs/plans/2026-01-16-user-stats-page-design.md    |  414 ++++++
+ server/controllers/userStats.ts                    |   34 +
+ server/initializers/api.ts                         |    4 +
+ .../integration/api/user-stats.integration.test.ts |  220 +++
+ server/package.json                                |    2 +-
+ server/routes/userStats.ts                         |   14 +
+ server/services/UserStatsAggregationService.ts     |  589 ++++++++
+ .../services/UserStatsAggregationService.test.ts   |  105 ++
+ server/types/api/index.ts                          |   14 +
+ server/types/api/userStats.ts                      |  148 ++
+ 28 files changed, 3940 insertions(+), 2 deletions(-)
+ rename .claude/skills/{pre-release.md => pre-release/SKILL.md} (100%)
+ rename .claude/skills/{self-review.md => self-review/SKILL.md} (100%)
+ create mode 100644 client/src/components/pages/UserStats/UserStats.jsx
+ create mode 100644 client/src/components/pages/UserStats/components/EngagementTotals.jsx
+ create mode 100644 client/src/components/pages/UserStats/components/HighlightCard.jsx
+ create mode 100644 client/src/components/pages/UserStats/components/LibraryOverview.jsx
+ create mode 100644 client/src/components/pages/UserStats/components/StatCard.jsx
+ create mode 100644 client/src/components/pages/UserStats/components/TopList.jsx
+ create mode 100644 client/src/components/pages/UserStats/components/index.js
+ create mode 100644 client/src/components/pages/UserStats/index.js
+ create mode 100644 client/src/hooks/useUserStats.js
+ create mode 100644 client/tests/utils/format.test.js
+ create mode 100644 docs/plans/2026-01-16-user-stats-implementation.md
+ create mode 100644 docs/plans/2026-01-16-user-stats-page-design.md
+ create mode 100644 server/controllers/userStats.ts
+ create mode 100644 server/integration/api/user-stats.integration.test.ts
+ create mode 100644 server/routes/userStats.ts
+ create mode 100644 server/services/UserStatsAggregationService.ts
+ create mode 100644 server/tests/services/UserStatsAggregationService.test.ts
+ create mode 100644 server/types/api/userStats.ts
 
 Array
 (
@@ -5508,15 +5561,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   510fd99..3ae93d1  main       -> origin/main
-Updating 510fd99..3ae93d1
-Fast-forward
- unraid/lidarr.xml   | 5 ++++-
- unraid/prowlarr.xml | 5 ++++-
- unraid/radarr.xml   | 5 ++++-
- unraid/tautulli.xml | 5 ++++-
- 4 files changed, 16 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -8615,7 +8660,13 @@ Processing /tmp/GitHub/repositoryClone/FoxxMD/unraid-docker-templates/foxxmd/pin
 
 Downloading ich777's Repository
 
-Already up to date.
+From https://github.com/ich777/docker-templates
+   477d513..b7b9ee5  master     -> origin/master
+Updating 477d513..b7b9ee5
+Fast-forward
+ ich777/images/align-vertical-distribute.png | Bin 2400 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 ich777/images/align-vertical-distribute.png
 
 Array
 (
@@ -19846,8 +19897,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-athombv/homey-shs
-ghcr.io/athombv/homey-shs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 127
