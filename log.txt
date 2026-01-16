@@ -51,13 +51,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   8112fe0..2b3e3ec  main       -> origin/main
-Updating 8112fe0..2b3e3ec
-Fast-forward
- app/gear/page.tsx | 17 +++++++++++++++++
- app/globals.css   |  6 ++++--
- 2 files changed, 21 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -415,7 +409,122 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   49e799e..34ffff5  master     -> origin/master
+Updating 49e799e..34ffff5
+Fast-forward
+ .github/copilot-instructions.md                    |  38 +
+ .github/workflows/ci.yml                           |  16 +-
+ .github/workflows/publish_dev.yml                  |   6 +-
+ .github/workflows/publish_experimental.yml         |   6 +-
+ .github/workflows/publish_master.yml               |   6 +-
+ .gitignore                                         |   4 +-
+ .../Commands/CleanupDuplicateMediaServerSeries.php | 164 ++++
+ .../Commands/ReconcileProfileConnections.php       | 113 +++
+ .../Commands/RefreshMediaServerIntegrations.php    |  81 ++
+ app/Enums/PlaylistChannelId.php                    |   5 +-
+ app/Enums/PlaylistSourceType.php                   |   2 +
+ app/Exceptions/MediaServerException.php            |  10 +
+ .../RelationManagers/EpisodesRelationManager.php   |   6 +-
+ .../Resources/Channels/ChannelResource.php         |  27 -
+ .../Resources/Channels/Pages/ListChannels.php      |   5 +
+ .../CustomPlaylists/CustomPlaylistResource.php     |   3 +-
+ .../MediaServerIntegrationResource.php             | 534 +++++++++++++
+ .../Pages/CreateMediaServerIntegration.php         |  25 +
+ .../Pages/EditMediaServerIntegration.php           | 107 +++
+ .../Pages/ListMediaServerIntegrations.php          |  22 +
+ .../MergedPlaylists/MergedPlaylistResource.php     |   5 +-
+ .../Resources/Playlists/PlaylistResource.php       | 492 +++++++++++-
+ .../RelationManagers/EpisodesRelationManager.php   |   6 +-
+ app/Filament/Resources/Vods/Pages/ListVod.php      |   5 +
+ app/Http/Controllers/Api/EpgApiController.php      |   9 +-
+ app/Http/Controllers/Api/M3uProxyApiController.php |  14 +-
+ app/Http/Controllers/ChannelController.php         | 852 ++++++++++++++++++++-
+ app/Http/Controllers/EpgGenerateController.php     |   9 +-
+ app/Http/Controllers/GroupController.php           | 209 +++++
+ .../Controllers/MediaServerProxyController.php     | 268 +++++++
+ app/Http/Controllers/PlaylistController.php        | 136 ++++
+ .../Controllers/PlaylistGenerateController.php     |  30 +-
+ app/Http/Controllers/ProxyController.php           | 349 +++++++++
+ app/Http/Controllers/UserController.php            | 101 ++-
+ app/Http/Controllers/XtreamApiController.php       |  64 +-
+ app/Http/Controllers/XtreamStreamController.php    |  11 +
+ app/Jobs/MergeChannels.php                         |  19 +-
+ app/Jobs/ProcessM3uImport.php                      |  33 +
+ app/Jobs/RefreshPlaylistProfiles.php               | 173 +++++
+ app/Jobs/SyncMediaServer.php                       | 601 +++++++++++++++
+ app/Listeners/PlaylistListener.php                 |  43 +-
+ app/Listeners/SyncListener.php                     |   4 +-
+ app/Livewire/PlaylistInfo.php                      |  46 ++
+ app/Models/MediaServerIntegration.php              | 124 +++
+ app/Models/Playlist.php                            |  16 +
+ app/Models/PlaylistProfile.php                     | 339 ++++++++
+ app/Providers/AppServiceProvider.php               |  18 +
+ app/Providers/Filament/AdminPanelProvider.php      |   2 +
+ app/Services/M3uProxyService.php                   | 109 ++-
+ app/Services/MediaServerService.php                | 353 +++++++++
+ app/Services/PlaylistUrlService.php                |  19 +-
+ app/Services/ProfileService.php                    | 606 +++++++++++++++
+ app/Services/ProxyService.php                      |   7 +-
+ composer.json                                      |   2 +-
+ composer.lock                                      | 114 +--
+ config/database.php                                |  20 +-
+ config/dev.php                                     |   2 +-
+ database/factories/PlaylistProfileFactory.php      | 105 +++
+ .../2025_05_07_202251_remove_batch_job_tables.php  |   9 +-
+ ...0000_create_media_server_integrations_table.php |  47 ++
+ ...dd_sync_fields_to_media_server_integrations.php |  33 +
+ ...25_12_15_000001_change_source_ids_to_bigint.php |  62 ++
+ ...12_17_000001_create_playlist_profiles_table.php |  49 ++
+ ...7_000002_add_profiles_enabled_to_playlists.php} |   4 +-
+ ..._181027_add_url_to_playlist_profiles_table.php} |   9 +-
+ ...ess_and_status_to_media_server_integrations.php |  47 ++
+ .../2025_10_11_000000_add_emby_settings.php        |  24 -
+ ..._000000_add_emby_groups_categories_settings.php |  26 -
+ ..._10_31_154759_drop_emby_integration_columns.php |  22 -
+ docs/pooled providers.md                           | 667 ++++++++++++++++
+ phpunit.xml                                        |   4 +-
+ routes/console.php                                 |  15 +
+ routes/web.php                                     |  48 +-
+ start-container                                    |   6 +-
+ tests/Feature/EpgApiControllerTest.php             |  13 +
+ tests/Feature/MediaServerIntegrationTest.php       | 275 +++++++
+ tests/Feature/SyncMediaServerTest.php              |  81 ++
+ tests/Feature/XtreamApiControllerTest.php          |   5 +-
+ tools/xtream-api-load-test.sh                      | 235 ++++++
+ 79 files changed, 7842 insertions(+), 334 deletions(-)
+ create mode 100644 app/Console/Commands/CleanupDuplicateMediaServerSeries.php
+ create mode 100644 app/Console/Commands/ReconcileProfileConnections.php
+ create mode 100644 app/Console/Commands/RefreshMediaServerIntegrations.php
+ create mode 100644 app/Exceptions/MediaServerException.php
+ create mode 100644 app/Filament/Resources/MediaServerIntegrations/MediaServerIntegrationResource.php
+ create mode 100644 app/Filament/Resources/MediaServerIntegrations/Pages/CreateMediaServerIntegration.php
+ create mode 100644 app/Filament/Resources/MediaServerIntegrations/Pages/EditMediaServerIntegration.php
+ create mode 100644 app/Filament/Resources/MediaServerIntegrations/Pages/ListMediaServerIntegrations.php
+ create mode 100644 app/Http/Controllers/GroupController.php
+ create mode 100644 app/Http/Controllers/MediaServerProxyController.php
+ create mode 100644 app/Http/Controllers/ProxyController.php
+ create mode 100644 app/Jobs/RefreshPlaylistProfiles.php
+ create mode 100644 app/Jobs/SyncMediaServer.php
+ create mode 100644 app/Models/MediaServerIntegration.php
+ create mode 100644 app/Models/PlaylistProfile.php
+ create mode 100644 app/Services/MediaServerService.php
+ create mode 100644 app/Services/ProfileService.php
+ create mode 100644 database/factories/PlaylistProfileFactory.php
+ create mode 100644 database/migrations/2025_12_13_000000_create_media_server_integrations_table.php
+ create mode 100644 database/migrations/2025_12_14_000001_add_sync_fields_to_media_server_integrations.php
+ create mode 100644 database/migrations/2025_12_15_000001_change_source_ids_to_bigint.php
+ create mode 100644 database/migrations/2025_12_17_000001_create_playlist_profiles_table.php
+ rename database/migrations/{2025_10_17_000000_add_emby_config_to_playlists.php => 2025_12_17_000002_add_profiles_enabled_to_playlists.php} (78%)
+ rename database/migrations/{2025_10_31_154628_drop_emby_integration_columns.php => 2026_01_03_181027_add_url_to_playlist_profiles_table.php} (52%)
+ create mode 100644 database/migrations/2026_01_14_091205_add_progress_and_status_to_media_server_integrations.php
+ delete mode 100755 database/settings/2025_10_11_000000_add_emby_settings.php
+ delete mode 100755 database/settings/2025_10_16_000000_add_emby_groups_categories_settings.php
+ delete mode 100755 database/settings/2025_10_31_154759_drop_emby_integration_columns.php
+ create mode 100644 docs/pooled providers.md
+ create mode 100644 tests/Feature/MediaServerIntegrationTest.php
+ create mode 100644 tests/Feature/SyncMediaServerTest.php
+ create mode 100755 tools/xtream-api-load-test.sh
 
 Array
 (
@@ -451,24 +560,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   7b7df8d..4824e42  main       -> origin/main
-Updating 7b7df8d..4824e42
-Fast-forward
- client/src/components/pages/SettingsPage.jsx       |   7 +-
- client/src/components/settings/SectionSelector.jsx |   4 +-
- .../components/settings/tabs/CustomizationTab.jsx  | 143 +++++----------------
- .../src/components/settings/tabs/NavigationTab.jsx | 117 +++++++++++++++++
- client/src/components/ui/Lightbox.jsx              |   9 +-
- client/src/hooks/useFullscreen.js                  | 123 +++++++++++++-----
- .../2026-01-16-settings-reorganization-design.md   |  67 ++++++++++
- fix_cards.sh                                       |  26 ----
- update_cards.sh                                    |  26 ----
- 9 files changed, 318 insertions(+), 204 deletions(-)
- create mode 100644 client/src/components/settings/tabs/NavigationTab.jsx
- create mode 100644 docs/plans/2026-01-16-settings-reorganization-design.md
- delete mode 100644 fix_cards.sh
- delete mode 100644 update_cards.sh
+Already up to date.
 
 Array
 (
@@ -5525,7 +5617,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   be21550..510fd99  main       -> origin/main
+Updating be21550..510fd99
+Fast-forward
+ unraid/sonarr.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -19266,7 +19363,12 @@ Success
 
 Downloading Nodiaque's Repository
 
-Already up to date.
+From https://github.com/nodiaque/unraid_template
+   55c3856..8a3bfae  master     -> origin/master
+Updating 55c3856..8a3bfae
+Fast-forward
+ nodiaque/shelfmark-official.xml | 3 +++
+ 1 file changed, 3 insertions(+)
 
 Array
 (
