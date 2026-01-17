@@ -51,29 +51,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   2b3e3ec..ba778f6  main       -> origin/main
-Updating 2b3e3ec..ba778f6
-Fast-forward
- .env.example                                     |  11 +-
- README.md                                        |   5 +
- app/api/account/email/verify/route.ts            |  13 +-
- app/api/admin/users/invite/route.ts              |   9 +-
- app/api/discord/interactions/route.ts            |   9 +-
- app/api/login/route.ts                           |  32 +++-
- app/api/register/resend/route.ts                 |  40 +++--
- app/api/register/route.ts                        |  34 ++++-
- app/register/page.tsx                            |   4 +-
- app/upload/UploadForm.tsx                        |   1 -
- components/admin/InviteUserForm.tsx              |   9 +-
- lib/emailVerification.ts                         |   9 +-
- lib/invite.ts                                    |   6 +-
- lib/rate-limit.ts                                | 178 +++++++++++++++++++++++
- prisma/migrations/0046_rate_limits/migration.sql |  16 ++
- prisma/schema.prisma                             |  12 ++
- 16 files changed, 332 insertions(+), 56 deletions(-)
- create mode 100644 lib/rate-limit.ts
- create mode 100644 prisma/migrations/0046_rate_limits/migration.sql
+Already up to date.
 
 Array
 (
@@ -467,7 +445,57 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   35e47dd..5fff9d5  main       -> origin/main
+Updating 35e47dd..5fff9d5
+Fast-forward
+ client/src/components/cards/GalleryCard.jsx        |   29 +-
+ client/src/components/cards/GroupCard.jsx          |   26 +-
+ client/src/components/cards/ImageCard.jsx          |   27 +-
+ client/src/components/cards/PerformerCard.jsx      |    6 +-
+ client/src/components/cards/StudioCard.jsx         |    7 +-
+ client/src/components/cards/TagCard.jsx            |    7 +-
+ .../components/settings/CardDisplaySettings.jsx    |  159 +-
+ client/src/components/table/cellRenderers.jsx      |    2 +-
+ client/src/components/ui/BaseCard.jsx              |   65 +-
+ client/src/components/ui/BulkActionBar.jsx         |  175 ++-
+ client/src/components/ui/CardComponents.jsx        |  220 ++-
+ client/src/components/ui/ContextSettings.jsx       |  111 +-
+ client/src/components/ui/Lightbox.jsx              |   21 +-
+ client/src/components/ui/MarqueeText.jsx           |  150 ++
+ client/src/components/ui/SceneCard.jsx             |   26 +-
+ client/src/components/ui/SearchControls.jsx        |    7 +
+ client/src/components/ui/ViewModeToggle.jsx        |   22 +-
+ client/src/config/entityDisplayConfig.js           |  271 ++++
+ client/src/contexts/CardDisplaySettingsContext.jsx |   24 +-
+ client/src/hooks/useFilterState.js                 |   11 +-
+ client/src/hooks/useHiddenEntities.js              |   43 +
+ client/src/index.css                               |   19 +
+ .../settings/CardDisplaySettings.test.jsx          |   95 +-
+ .../tests/components/table/cellRenderers.test.jsx  |   45 +
+ client/tests/components/ui/BaseCard.test.jsx       |   55 +
+ client/tests/components/ui/BulkActionBar.test.jsx  |  196 +++
+ .../components/ui/CardComponents.density.test.jsx  |   77 +
+ client/tests/components/ui/Lightbox.test.jsx       |   28 +
+ client/tests/components/ui/MarqueeText.test.jsx    |  193 +++
+ .../tests/components/ui/SceneCardSettings.test.jsx |   15 +
+ client/tests/components/ui/ViewModeToggle.test.jsx |   68 +
+ client/tests/hooks/useCardDisplaySettings.test.jsx |   21 +-
+ ...7-issue-221-density-and-styling-fixes-design.md |  337 +++++
+ docs/plans/2026-01-17-issue-221-implementation.md  | 1534 ++++++++++++++++++++
+ server/controllers/user.ts                         |   81 ++
+ .../api/hidden-entities-bulk.integration.test.ts   |  181 +++
+ server/routes/user.ts                              |    2 +
+ 37 files changed, 3992 insertions(+), 364 deletions(-)
+ create mode 100644 client/src/components/ui/MarqueeText.jsx
+ create mode 100644 client/src/config/entityDisplayConfig.js
+ create mode 100644 client/tests/components/table/cellRenderers.test.jsx
+ create mode 100644 client/tests/components/ui/BulkActionBar.test.jsx
+ create mode 100644 client/tests/components/ui/CardComponents.density.test.jsx
+ create mode 100644 client/tests/components/ui/MarqueeText.test.jsx
+ create mode 100644 docs/plans/2026-01-17-issue-221-density-and-styling-fixes-design.md
+ create mode 100644 docs/plans/2026-01-17-issue-221-implementation.md
+ create mode 100644 server/integration/api/hidden-entities-bulk.integration.test.ts
 
 Array
 (
@@ -15636,12 +15664,7 @@ Processing /tmp/GitHub/repositoryClone/daredoes/unraid-templates/daredoes/mopidy
 
 Downloading Masterwishx's Repository
 
-From https://github.com/masterwishx/unraid-templates
-   795cea9..35ca51d  main       -> origin/main
-Updating 795cea9..35ca51d
-Fast-forward
- NetAlertX.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
