@@ -51,13 +51,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   ba778f6..4d67374  main       -> origin/main
-Updating ba778f6..4d67374
-Fast-forward
- app/api/stockworks/filament-colors/route.ts |  32 ++++-
- app/cart/page.tsx                           | 173 ++++++++++++++++------------
- 2 files changed, 127 insertions(+), 78 deletions(-)
+Already up to date.
 
 Array
 (
@@ -416,15 +410,13 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/sparkison/m3u-editor
-   4fdc571..adaa591  master     -> origin/master
-Updating 4fdc571..adaa591
+   adaa591..851b983  master     -> origin/master
+Updating adaa591..851b983
 Fast-forward
- app/Filament/Resources/Epgs/EpgResource.php        |   3 +-
- .../Resources/Playlists/PlaylistResource.php       |   1 +
- app/Providers/AppServiceProvider.php               |   2 +-
- app/Services/M3uProxyService.php                   | 178 ++++++++++++++++++---
- docs/stream-pooling.md                             |  87 +++++++---
- 5 files changed, 224 insertions(+), 47 deletions(-)
+ app/Http/Controllers/Api/EpgApiController.php   | 18 +++++++++++-------
+ app/Http/Controllers/XtreamStreamController.php | 25 +++++++++++++++++++++++++
+ app/Jobs/ProcessM3uImport.php                   |  4 ++--
+ 3 files changed, 38 insertions(+), 9 deletions(-)
 
 Array
 (
@@ -461,71 +453,13 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   5fff9d5..074d02d  main       -> origin/main
- * [new tag]         v3.2.1-beta.1 -> v3.2.1-beta.1
-Updating 5fff9d5..074d02d
+   074d02d..8b87d6b  main       -> origin/main
+ * [new tag]         v3.2.1     -> v3.2.1
+Updating 074d02d..8b87d6b
 Fast-forward
- .github/workflows/docs.yml                         |    1 +
- client/package.json                                |    2 +-
- client/src/components/table/TableView.jsx          |   53 +-
- client/tests/components/ui/MarqueeText.test.jsx    |   12 +-
- client/vite.config.js                              |    2 +-
- docs/CHANGES_SINCE_3.1.1.md                        |   46 -
- docs/audits/2026-01-04-frontend-api-usage-audit.md |  265 -----
- ...-01-04-security-audit-unauthenticated-routes.md |  144 ---
- docs/audits/2026-01-17-documentation-audit.md      |  383 ++++++
- docs/design/cache-scalability-brainstorm.md        |  417 -------
- docs/design/cache-scalability-plan.md              | 1250 --------------------
- docs/design/json-blob-elimination-plan.md          |  803 -------------
- docs/design/scalability-audit-500k-scenes.md       |  376 ------
- docs/design/sqlite-cache-schema.md                 |  574 ---------
- docs/development/regression-testing.md             |    2 +-
- docs/development/sync-architecture.md              |    1 +
- docs/development/technical-overview.md             |  243 +---
- docs/getting-started/configuration.md              |    5 +-
- docs/{reference => getting-started}/faq.md         |   29 +-
- docs/getting-started/installation.md               |    9 +-
- docs/getting-started/quick-start.md                |    4 +-
- .../troubleshooting.md                             |    0
- docs/index.md                                      |    2 +-
- docs/plans/2026-01-06-scalability-500k-fixes.md    |    2 -
- docs/plans/2026-01-06-scalability-phase-2.md       |    2 -
- docs/{development => reference}/api-reference.md   |    0
- .../docker-basics.md                               |    0
- docs/reference/entity-relationships.md             |  206 ++++
- docs/releases/3.1.0-testing-checklist.md           |  410 -------
- docs/user-guide/browse-and-display.md              |  191 +++
- docs/user-guide/content-restrictions.md            |  237 ++++
- docs/user-guide/hidden-items.md                    |   17 +-
- docs/user-guide/images.md                          |    7 +-
- docs/user-guide/keyboard-navigation.md             |   41 +-
- docs/user-guide/playlists.md                       |    4 +-
- docs/user-guide/recommendations.md                 |   14 +-
- docs/user-guide/user-management.md                 |  221 ++++
- docs/user-guide/watch-history.md                   |    6 +-
- mkdocs.yml                                         |   30 +-
- package.json                                       |    3 +-
- server/package.json                                |    2 +-
- server/tests/services/ImageQueryBuilder.test.ts    |   14 +
- 42 files changed, 1474 insertions(+), 4556 deletions(-)
- delete mode 100644 docs/CHANGES_SINCE_3.1.1.md
- delete mode 100644 docs/audits/2026-01-04-frontend-api-usage-audit.md
- delete mode 100644 docs/audits/2026-01-04-security-audit-unauthenticated-routes.md
- create mode 100644 docs/audits/2026-01-17-documentation-audit.md
- delete mode 100644 docs/design/cache-scalability-brainstorm.md
- delete mode 100644 docs/design/cache-scalability-plan.md
- delete mode 100644 docs/design/json-blob-elimination-plan.md
- delete mode 100644 docs/design/scalability-audit-500k-scenes.md
- delete mode 100644 docs/design/sqlite-cache-schema.md
- rename docs/{reference => getting-started}/faq.md (78%)
- rename docs/{reference => getting-started}/troubleshooting.md (100%)
- rename docs/{development => reference}/api-reference.md (100%)
- rename docs/{getting-started => reference}/docker-basics.md (100%)
- create mode 100644 docs/reference/entity-relationships.md
- delete mode 100644 docs/releases/3.1.0-testing-checklist.md
- create mode 100644 docs/user-guide/browse-and-display.md
- create mode 100644 docs/user-guide/content-restrictions.md
- create mode 100644 docs/user-guide/user-management.md
+ client/package.json | 2 +-
+ server/package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -8216,12 +8150,7 @@ Processing /tmp/GitHub/repositoryClone/dorgan/unraid-templates/unraid-networksta
 
 Downloading rix's Repository
 
-From https://github.com/rix1337/docker-templates
-   a32c227..3dd4a0f  main       -> origin/main
-Updating a32c227..3dd4a0f
-Fast-forward
- rix1337/quasarr.xml | 13 ++++++++-----
- 1 file changed, 8 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -10037,7 +9966,12 @@ Processing /tmp/GitHub/repositoryClone/JTok/unraid-plugins/vmbackup.xml... Downl
 
 Downloading hotio's Repository
 
-Already up to date.
+From https://github.com/hotio/unraid-templates
+   b6ff052..6b82091  master     -> origin/master
+Updating b6ff052..6b82091
+Fast-forward
+ hotio/whisparr.xml | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -16126,7 +16060,12 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   ca4f057..56d8c04  main       -> origin/main
+Updating ca4f057..56d8c04
+Fast-forward
+ templates/linotp.xml | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 Array
 (
