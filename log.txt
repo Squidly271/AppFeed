@@ -409,12 +409,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/sparkison/m3u-editor
-   851b983..c490aed  master     -> origin/master
-Updating 851b983..c490aed
-Fast-forward
- app/Services/M3uProxyService.php | 66 +++++++++++++++++++++++-----------------
- 1 file changed, 38 insertions(+), 28 deletions(-)
+Already up to date.
 
 Array
 (
@@ -451,36 +446,45 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   c34b2ba..bb20f44  main       -> origin/main
-Updating c34b2ba..bb20f44
+   bb20f44..f5a4dcb  main          -> origin/main
+ * [new tag]         v3.2.2-beta.2 -> v3.2.2-beta.2
+Updating bb20f44..f5a4dcb
 Fast-forward
- client/src/App.jsx                                 |   7 +-
- client/src/components/branding/PeekLogo.jsx        |  29 +-
- client/src/components/guards/RouteGuards.jsx       |   6 +-
- client/src/components/pages/Login.jsx              |   9 +-
- .../components/settings/LandingPageSettings.jsx    | 160 +++++
- .../src/components/settings/tabs/NavigationTab.jsx |  33 +
- client/src/components/ui/Switch.jsx                |  52 ++
- client/src/components/ui/index.js                  |   1 +
- client/src/constants/navigation.js                 |  65 ++
- client/src/contexts/AuthContext.jsx                |   2 +-
- .../2026-01-17-post-login-landing-page-design.md   | 198 ++++++
- .../2026-01-17-post-login-landing-page-plan.md     | 664 +++++++++++++++++++++
- docs/user-guide/personalization.md                 | 132 ++++
- mkdocs.yml                                         |   1 +
- server/controllers/user.ts                         |  49 ++
- server/integration/helpers/globalSetup.ts          |   4 +-
- server/middleware/auth.ts                          |   3 +
- .../migration.sql                                  |   2 +
- server/prisma/schema.prisma                        |   1 +
- server/routes/auth.ts                              |   8 +
- 20 files changed, 1401 insertions(+), 25 deletions(-)
- create mode 100644 client/src/components/settings/LandingPageSettings.jsx
- create mode 100644 client/src/components/ui/Switch.jsx
- create mode 100644 docs/plans/2026-01-17-post-login-landing-page-design.md
- create mode 100644 docs/plans/2026-01-17-post-login-landing-page-plan.md
- create mode 100644 docs/user-guide/personalization.md
- create mode 100644 server/prisma/migrations/20260118000000_add_landing_page_preference/migration.sql
+ client/package.json                                |   2 +-
+ client/src/components/grids/GalleryGrid.jsx        |   4 +-
+ client/src/components/grids/GroupGrid.jsx          |   4 +-
+ client/src/components/grids/ImageGrid.jsx          |   4 +-
+ client/src/components/grids/PerformerGrid.jsx      |   4 +-
+ client/src/components/grids/StudioGrid.jsx         |   4 +-
+ client/src/components/grids/TagGrid.jsx            |   4 +-
+ client/src/components/pages/Galleries.jsx          |   8 +-
+ client/src/components/pages/Groups.jsx             |   8 +-
+ client/src/components/pages/Images.jsx             |   8 +-
+ client/src/components/pages/Performers.jsx         |   8 +-
+ client/src/components/pages/Studios.jsx            |   8 +-
+ client/src/components/pages/Tags.jsx               |   8 +-
+ client/src/components/scene-search/SceneGrid.jsx   |   8 +-
+ client/src/components/scene-search/SceneSearch.jsx |   3 +-
+ .../components/settings/CardDisplaySettings.jsx    |  27 +-
+ client/src/components/ui/BaseGrid.jsx              |   9 +-
+ client/src/components/ui/ContextSettings.jsx       |  27 +-
+ client/src/components/ui/FilterPresets.jsx         |   6 +-
+ client/src/components/ui/LayoutRenderer.jsx        |   3 +
+ client/src/components/ui/SearchControls.jsx        |  22 +-
+ client/src/components/ui/SearchResults.jsx         |   4 +
+ client/src/components/ui/SearchableGrid.jsx        |   3 +
+ client/src/components/ui/layouts/GridLayout.jsx    |   9 +-
+ client/src/config/entityDisplayConfig.js           |  30 +
+ client/src/constants/grids.js                      |  42 +-
+ client/src/hooks/useFilterState.js                 |  69 ++-
+ client/src/utils/urlParams.js                      |   3 +
+ .../2026-01-18-grid-density-controls-design.md     |  81 +++
+ docs/plans/2026-01-18-grid-density-controls.md     | 688 +++++++++++++++++++++
+ docs/user-guide/browse-and-display.md              |  25 +-
+ server/package.json                                |   2 +-
+ 32 files changed, 1046 insertions(+), 89 deletions(-)
+ create mode 100644 docs/plans/2026-01-18-grid-density-controls-design.md
+ create mode 100644 docs/plans/2026-01-18-grid-density-controls.md
 
 Array
 (
@@ -7339,7 +7343,13 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   85278cc..1ecd3ef  master     -> origin/master
+Updating 85278cc..1ecd3ef
+Fast-forward
+ jlesage/images/krusader-icon.png | Bin 0 -> 44714 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 jlesage/images/krusader-icon.png
 
 Array
 (
@@ -9987,13 +9997,7 @@ Processing /tmp/GitHub/repositoryClone/JTok/unraid-plugins/vmbackup.xml... Downl
 
 Downloading hotio's Repository
 
-From https://github.com/hotio/unraid-templates
-   6b82091..9c597b0  master     -> origin/master
-Updating 6b82091..9c597b0
-Fast-forward
- hotio/autoscan.xml | 2 +-
- hotio/base.xml     | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -14025,12 +14029,7 @@ Processing /tmp/GitHub/repositoryClone/crazyqin/unraid-templates/pt_helper/pt_he
 
 Downloading pbear's Repository
 
-From https://github.com/imTHAI/unraid-templates
-   f6dfc56..03ee994  main       -> origin/main
-Updating f6dfc56..03ee994
-Fast-forward
- qbittorrent-filebot/qbittorrent-filebot.xml | 9 +++++++++
- 1 file changed, 9 insertions(+)
+Already up to date.
 
 Array
 (
@@ -19786,6 +19785,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:bukkit Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -19862,9 +19864,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-gtstef/filebrowser
-gtstef/filebrowser:stable Downloads: 963081  Stars: 10  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
