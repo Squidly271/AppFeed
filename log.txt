@@ -445,7 +445,99 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   f5a4dcb..9464a86  main       -> origin/main
+Updating f5a4dcb..9464a86
+Fast-forward
+ .gitignore                                         |    3 +
+ client/src/components/pages/Galleries.jsx          |   95 +-
+ client/src/components/pages/Images.jsx             |   98 +-
+ client/src/components/scene-search/SceneSearch.jsx |   43 +-
+ client/src/components/timeline/TimelineBar.jsx     |   85 +
+ .../src/components/timeline/TimelineControls.jsx   |   46 +
+ client/src/components/timeline/TimelineEdgeNav.jsx |   80 +
+ .../components/timeline/TimelineMobileSheet.jsx    |   97 +
+ client/src/components/timeline/TimelineStrip.jsx   |  526 +++++
+ client/src/components/timeline/TimelineView.jsx    |  205 ++
+ client/src/components/timeline/index.js            |    7 +
+ client/src/components/timeline/useTimelineState.js |  186 ++
+ client/src/components/ui/SearchControls.jsx        |   53 +-
+ client/src/components/ui/ViewModeToggle.jsx        |    3 +-
+ client/src/config/entityDisplayConfig.js           |    3 +
+ client/src/hooks/useFilterState.js                 |   69 +-
+ client/src/hooks/useMediaQuery.js                  |   52 +
+ client/src/utils/date.js                           |   50 +-
+ client/src/utils/filterConfig.js                   |   16 +
+ client/src/utils/urlParams.js                      |    3 +
+ client/tests/components/grids/GalleryGrid.test.jsx |    1 -
+ client/tests/components/grids/GroupGrid.test.jsx   |    1 -
+ client/tests/components/grids/ImageGrid.test.jsx   |    1 -
+ .../tests/components/grids/PerformerGrid.test.jsx  |    1 -
+ client/tests/components/grids/StudioGrid.test.jsx  |    1 -
+ client/tests/components/grids/TagGrid.test.jsx     |    1 -
+ .../settings/CardDisplaySettings.test.jsx          |   18 +-
+ .../tests/components/timeline/TimelineBar.test.jsx |  262 +++
+ .../components/timeline/TimelineControls.test.jsx  |  109 +
+ .../timeline/TimelineMobileSheet.test.jsx          |  232 +++
+ .../components/timeline/TimelineStrip.test.jsx     |  507 +++++
+ .../components/timeline/TimelineView.test.jsx      |  760 +++++++
+ client/tests/components/ui/FilterPresets.test.jsx  |    3 +
+ client/tests/components/ui/SearchControls.test.jsx |   76 +
+ client/tests/config/entityDisplayConfig.test.js    |   44 +
+ client/tests/hooks/useMediaQuery.test.js           |  127 ++
+ client/tests/hooks/useTimelineState.test.jsx       |  164 ++
+ .../timelineDateFilter.integration.test.jsx        |  163 ++
+ client/tests/utils/filterConfig.test.js            |  194 ++
+ .../2026-01-18-timeline-ui-improvements-design.md  |  101 +
+ .../2026-01-18-timeline-ui-improvements-plan.md    |  279 +++
+ docs/plans/2026-01-18-timeline-view-design.md      |  229 +++
+ .../2026-01-18-timeline-view-implementation.md     | 2142 ++++++++++++++++++++
+ server/controllers/library/images.ts               |   25 +
+ server/controllers/timelineController.ts           |   42 +
+ server/initializers/api.ts                         |    4 +
+ .../api/gallery-date-filters.integration.test.ts   |  315 +++
+ .../api/image-date-filters.integration.test.ts     |  315 +++
+ .../api/scene-date-filters.integration.test.ts     |   53 +
+ .../integration/api/timeline.integration.test.ts   |   75 +
+ server/routes/timeline.ts                          |   14 +
+ server/services/GalleryQueryBuilder.ts             |   27 +-
+ server/services/ImageQueryBuilder.ts               |   74 +
+ server/services/SceneQueryBuilder.ts               |   19 +-
+ server/services/TimelineService.ts                 |   86 +
+ .../tests/controllers/timelineController.test.ts   |  133 ++
+ server/tests/services/TimelineService.test.ts      |   78 +
+ server/types/api/library.ts                        |    4 +
+ 58 files changed, 8276 insertions(+), 124 deletions(-)
+ create mode 100644 client/src/components/timeline/TimelineBar.jsx
+ create mode 100644 client/src/components/timeline/TimelineControls.jsx
+ create mode 100644 client/src/components/timeline/TimelineEdgeNav.jsx
+ create mode 100644 client/src/components/timeline/TimelineMobileSheet.jsx
+ create mode 100644 client/src/components/timeline/TimelineStrip.jsx
+ create mode 100644 client/src/components/timeline/TimelineView.jsx
+ create mode 100644 client/src/components/timeline/index.js
+ create mode 100644 client/src/components/timeline/useTimelineState.js
+ create mode 100644 client/src/hooks/useMediaQuery.js
+ create mode 100644 client/tests/components/timeline/TimelineBar.test.jsx
+ create mode 100644 client/tests/components/timeline/TimelineControls.test.jsx
+ create mode 100644 client/tests/components/timeline/TimelineMobileSheet.test.jsx
+ create mode 100644 client/tests/components/timeline/TimelineStrip.test.jsx
+ create mode 100644 client/tests/components/timeline/TimelineView.test.jsx
+ create mode 100644 client/tests/config/entityDisplayConfig.test.js
+ create mode 100644 client/tests/hooks/useMediaQuery.test.js
+ create mode 100644 client/tests/hooks/useTimelineState.test.jsx
+ create mode 100644 client/tests/integration/timelineDateFilter.integration.test.jsx
+ create mode 100644 docs/plans/2026-01-18-timeline-ui-improvements-design.md
+ create mode 100644 docs/plans/2026-01-18-timeline-ui-improvements-plan.md
+ create mode 100644 docs/plans/2026-01-18-timeline-view-design.md
+ create mode 100644 docs/plans/2026-01-18-timeline-view-implementation.md
+ create mode 100644 server/controllers/timelineController.ts
+ create mode 100644 server/integration/api/gallery-date-filters.integration.test.ts
+ create mode 100644 server/integration/api/image-date-filters.integration.test.ts
+ create mode 100644 server/integration/api/timeline.integration.test.ts
+ create mode 100644 server/routes/timeline.ts
+ create mode 100644 server/services/TimelineService.ts
+ create mode 100644 server/tests/controllers/timelineController.test.ts
+ create mode 100644 server/tests/services/TimelineService.test.ts
 
 Array
 (
@@ -4349,12 +4441,7 @@ Processing /tmp/GitHub/repositoryClone/bpivk/unraid-templates/keila/keila.xml...
 
 Downloading LVRT's Repository
 
-From https://github.com/l4rm4nd/unraid-templates
-   53c76f0..883b5b4  main       -> origin/main
-Updating 53c76f0..883b5b4
-Fast-forward
- memelord/memelord.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -13271,12 +13358,7 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-From https://github.com/Goobaroo/unraid-templates
-   98c35cf..fd1018c  main       -> origin/main
-Updating 98c35cf..fd1018c
-Fast-forward
- roguelikeadventuresanddungeons2_server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -19705,8 +19787,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-scanopy/daemon
-ghcr.io/scanopy/scanopy/daemon:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -19732,6 +19812,8 @@ ghcr.io/scanopy/scanopy/daemon:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+a1ex4/ownfoil
+a1ex4/ownfoil Downloads: 405376  Stars: 7  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -19867,13 +19949,13 @@ ghcr.io/scanopy/scanopy/daemon:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
-nodedogconsulting/cups-canon
-nodedogconsulting/cups-canon Downloads: 2090  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+bytemark/webdav
+bytemark/webdav:latest Downloads: 14337053  Stars: 172  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19884,12 +19966,16 @@ nodedogconsulting/cups-canon Downloads: 2090  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
+hashicorp/vault
+hashicorp/vault Downloads: 203459003  Stars: 208  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
+nebn/unraid-simple-monitoring-api
+ghcr.io/nebn/unraid-simple-monitoring-api:latest Downloads: 13227  Stars: 1  Base: unknown
 Privileged: 127
 
 
