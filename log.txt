@@ -140,7 +140,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   b54162a..d2ea675  main       -> origin/main
+Updating b54162a..d2ea675
+Fast-forward
+ app/api/upload/route.ts | 87 +++++++++++++++++++------------------------------
+ 1 file changed, 33 insertions(+), 54 deletions(-)
 
 Array
 (
@@ -535,26 +540,36 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   8add443..bc2bdf1  main       -> origin/main
-Updating 8add443..bc2bdf1
+   bc2bdf1..3d6ac22  main          -> origin/main
+ * [new tag]         v3.2.2-beta.7 -> v3.2.2-beta.7
+Updating bc2bdf1..3d6ac22
 Fast-forward
- client/src/components/folder/FolderView.jsx        |   1 +
- client/src/components/scene-search/SceneSearch.jsx |  32 +-
- client/src/components/timeline/TimelineView.jsx    |   3 +-
- client/src/components/timeline/useTimelineState.js |  19 +-
- client/src/hooks/useFolderViewTags.js              |  54 +-
- .../components/timeline/TimelineView.test.jsx      |   2 +
- ...-01-20-filtered-timeline-folder-views-design.md | 117 +++
- .../2026-01-20-filtered-timeline-folder-views.md   | 833 +++++++++++++++++++++
- server/controllers/library/tags.ts                 | 118 +++
- server/controllers/timelineController.ts           |  12 +-
- server/routes/library/tags.ts                      |   4 +
- server/services/TimelineService.ts                 |  77 +-
- .../tests/controllers/timelineController.test.ts   |   4 +-
- server/tests/services/TimelineService.test.ts      |   2 +-
- 14 files changed, 1249 insertions(+), 29 deletions(-)
- create mode 100644 docs/plans/2026-01-20-filtered-timeline-folder-views-design.md
- create mode 100644 docs/plans/2026-01-20-filtered-timeline-folder-views.md
+ client/package.json                                |   2 +-
+ client/src/components/pages/StudioDetail.jsx       |  20 +-
+ .../pages/UserStats/components/TopList.jsx         |  11 +-
+ ...2026-01-20-user-stats-ranking-formula-design.md | 163 +++++++++++
+ server/controllers/library/scenes.ts               |  27 +-
+ server/controllers/library/studios.ts              |  14 +-
+ server/controllers/watchHistory.ts                 |   6 +-
+ .../api/hidden-entities-bulk.integration.test.ts   |  13 +-
+ server/integration/api/scenes.integration.test.ts  |   9 +-
+ server/package.json                                |   2 +-
+ .../migration.sql                                  |  24 ++
+ server/prisma/schema.prisma                        |  26 ++
+ server/routes/auth.ts                              |   6 +
+ server/scripts/compute-rankings.ts                 |  51 ++++
+ server/services/RankingComputeService.ts           | 324 +++++++++++++++++++++
+ server/services/RecommendationScoringService.ts    | 117 ++++++++
+ server/services/StashEntityService.ts              |  18 +-
+ server/services/UserStatsAggregationService.ts     | 255 ++++++----------
+ server/tests/controllers/watchHistory.test.ts      |   8 +
+ server/types/api/userStats.ts                      |   8 +
+ server/types/api/watchHistory.ts                   |   1 +
+ 21 files changed, 899 insertions(+), 206 deletions(-)
+ create mode 100644 docs/plans/2026-01-20-user-stats-ranking-formula-design.md
+ create mode 100644 server/prisma/migrations/20260120000000_add_user_entity_ranking/migration.sql
+ create mode 100644 server/scripts/compute-rankings.ts
+ create mode 100644 server/services/RankingComputeService.ts
 
 Array
 (
@@ -19972,8 +19987,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-zedeus/nitter
-zedeus/nitter:latest Downloads: 7552854  Stars: 15  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
