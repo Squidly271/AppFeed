@@ -140,12 +140,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   b54162a..d2ea675  main       -> origin/main
-Updating b54162a..d2ea675
-Fast-forward
- app/api/upload/route.ts | 87 +++++++++++++++++++------------------------------
- 1 file changed, 33 insertions(+), 54 deletions(-)
+Already up to date.
 
 Array
 (
@@ -540,36 +535,39 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   bc2bdf1..3d6ac22  main          -> origin/main
- * [new tag]         v3.2.2-beta.7 -> v3.2.2-beta.7
-Updating bc2bdf1..3d6ac22
+   3d6ac22..dee23d7  main       -> origin/main
+ * [new tag]         v3.2.2     -> v3.2.2
+ * [new tag]         v3.2.2-beta.8 -> v3.2.2-beta.8
+Updating 3d6ac22..dee23d7
 Fast-forward
- client/package.json                                |   2 +-
- client/src/components/pages/StudioDetail.jsx       |  20 +-
- .../pages/UserStats/components/TopList.jsx         |  11 +-
- ...2026-01-20-user-stats-ranking-formula-design.md | 163 +++++++++++
- server/controllers/library/scenes.ts               |  27 +-
- server/controllers/library/studios.ts              |  14 +-
- server/controllers/watchHistory.ts                 |   6 +-
- .../api/hidden-entities-bulk.integration.test.ts   |  13 +-
- server/integration/api/scenes.integration.test.ts  |   9 +-
- server/package.json                                |   2 +-
- .../migration.sql                                  |  24 ++
- server/prisma/schema.prisma                        |  26 ++
- server/routes/auth.ts                              |   6 +
- server/scripts/compute-rankings.ts                 |  51 ++++
- server/services/RankingComputeService.ts           | 324 +++++++++++++++++++++
- server/services/RecommendationScoringService.ts    | 117 ++++++++
- server/services/StashEntityService.ts              |  18 +-
- server/services/UserStatsAggregationService.ts     | 255 ++++++----------
- server/tests/controllers/watchHistory.test.ts      |   8 +
- server/types/api/userStats.ts                      |   8 +
- server/types/api/watchHistory.ts                   |   1 +
- 21 files changed, 899 insertions(+), 206 deletions(-)
- create mode 100644 docs/plans/2026-01-20-user-stats-ranking-formula-design.md
- create mode 100644 server/prisma/migrations/20260120000000_add_user_entity_ranking/migration.sql
- create mode 100644 server/scripts/compute-rankings.ts
- create mode 100644 server/services/RankingComputeService.ts
+ .claude/skills/release-alpha/SKILL.md              |   63 ++
+ .gitignore                                         |    3 +
+ client/package.json                                |    2 +-
+ client/src/components/folder/FolderCard.jsx        |    9 +-
+ client/src/components/pages/PerformerDetail.jsx    |    2 +-
+ client/src/components/pages/StudioDetail.jsx       |    2 +-
+ client/src/components/pages/TagDetail.jsx          |    2 +-
+ .../UserStats/components/EngagementTotals.jsx      |   10 +-
+ .../pages/UserStats/components/LibraryOverview.jsx |   21 +-
+ client/src/components/table/cellRenderers.jsx      |   31 +-
+ client/src/components/tags/TagTreeNode.jsx         |   28 +-
+ client/src/components/ui/CardCountIndicators.jsx   |   35 +-
+ client/src/components/ui/FilterPresets.jsx         |    8 +-
+ client/src/components/ui/GenderIcon.jsx            |   12 +-
+ client/src/components/ui/icons/TransgenderIcon.jsx |   33 -
+ client/src/constants/appIcons.js                   |  302 ++++++
+ client/src/constants/carousels.js                  |   14 +-
+ client/src/constants/entityIcons.js                |  112 +++
+ client/src/constants/navigation.js                 |   18 +-
+ client/src/themes/icons/iconSets.js                |   85 +-
+ docs/icon-inventory.html                           | 1005 ++++++++++++++++++++
+ server/package.json                                |    2 +-
+ 22 files changed, 1623 insertions(+), 176 deletions(-)
+ create mode 100644 .claude/skills/release-alpha/SKILL.md
+ delete mode 100644 client/src/components/ui/icons/TransgenderIcon.jsx
+ create mode 100644 client/src/constants/appIcons.js
+ create mode 100644 client/src/constants/entityIcons.js
+ create mode 100644 docs/icon-inventory.html
 
 Array
 (
