@@ -14,17 +14,28 @@ Downloading Repo Info
 Downloading Nebula's Repository
 
 From https://github.com/nebula-codes/hytale_server_manager
-   1d206b8..28b1ed4  main       -> origin/main
- * [new tag]         v0.2.86    -> v0.2.86
- * [new tag]         v0.2.84    -> v0.2.84
- * [new tag]         v0.2.85    -> v0.2.85
-Updating 1d206b8..28b1ed4
+   28b1ed4..72ba9d1  main       -> origin/main
+ * [new tag]         v0.2.90    -> v0.2.90
+ * [new tag]         v0.2.87    -> v0.2.87
+ * [new tag]         v0.2.88    -> v0.2.88
+ * [new tag]         v0.2.89    -> v0.2.89
+Updating 28b1ed4..72ba9d1
 Fast-forward
- docker-compose.yml                            |  6 ++++++
- packages/server/src/services/ServerService.ts | 12 +++++++-----
- packages/website/.astro/astro/content.d.ts    |  2 +-
- unraid/hytale-server-manager.xml              |  2 ++
- 4 files changed, 16 insertions(+), 6 deletions(-)
+ docker-compose.yml                                 |  4 +-
+ packages/frontend/index.html                       |  2 +-
+ .../features/HytaleServerDownloadSection.tsx       | 41 +++++++++++++-
+ packages/frontend/src/hooks/api/useServers.ts      |  1 +
+ .../src/pages/servers/ServerDetailPage.tsx         | 16 +++---
+ .../src/pages/servers/ServerSettingsPage.tsx       | 62 ++++++++++++++++++++++
+ packages/frontend/src/services/api.ts              |  1 +
+ .../20260121221452_add_server_args/migration.sql   |  2 +
+ packages/server/prisma/schema.prisma               |  1 +
+ packages/server/src/adapters/JavaServerAdapter.ts  |  5 +-
+ packages/server/src/routes/servers.ts              |  2 +
+ packages/server/src/services/ServerService.ts      | 11 ++++
+ unraid/hytale-server-manager.xml                   |  1 +
+ 13 files changed, 135 insertions(+), 14 deletions(-)
+ create mode 100644 packages/server/prisma/migrations/20260121221452_add_server_args/migration.sql
 
 Array
 (
@@ -7709,29 +7720,37 @@ Success
 
 Downloading jj9987's Repository
 
-Already up to date.
+From https://github.com/juusujanar/unraid-templates
+   5e9a31d..75021c0  master     -> origin/master
+Updating 5e9a31d..75021c0
+Fast-forward
+ DockerRegistry3.xml | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+ create mode 100644 DockerRegistry3.xml
 
 Array
 (
     [https://github.com/juusujanar/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL11.xml
-            [1] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry.xml
-            [2] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL16.xml
-            [3] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL14.xml
-            [4] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Redis.xml
-            [5] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL13.xml
-            [6] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/ca_profile.xml
-            [7] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL18.xml
-            [8] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL10.xml
-            [9] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL17.xml
-            [10] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL15.xml
-            [11] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL12.xml
+            [0] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry3.xml
+            [1] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL11.xml
+            [2] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry.xml
+            [3] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL16.xml
+            [4] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL14.xml
+            [5] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/Redis.xml
+            [6] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL13.xml
+            [7] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/ca_profile.xml
+            [8] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL18.xml
+            [9] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL10.xml
+            [10] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL17.xml
+            [11] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL15.xml
+            [12] => /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL12.xml
         )
 
 )
    Success!
 Repo Branch: master
+Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry3.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL11.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/DockerRegistry.xml...Success
 Processing /tmp/GitHub/repositoryClone/juusujanar/unraid-templates/PostgreSQL16.xml...Success
@@ -15477,16 +15496,11 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 Downloading ZappyZap's Repository
 
 From https://github.com/devzwf/unraid-docker-templates
-   a95d61a..119c331  main       -> origin/main
-Updating a95d61a..119c331
+   119c331..cc5a622  main       -> origin/main
+Updating 119c331..cc5a622
 Fast-forward
- CHANGELOG.MD               |   4 ++++
- README.md                  |  15 +++++++++++++++
- bambybuddy.xml             |  31 +++++++++++++++++++++++++++++++
- images/bambubuddy-logo.png | Bin 0 -> 40787 bytes
- 4 files changed, 50 insertions(+)
- create mode 100644 bambybuddy.xml
- create mode 100644 images/bambubuddy-logo.png
+ bambybuddy.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -19753,8 +19767,12 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
+anym001/docker-bitcoind
+ghcr.io/anym001/docker-bitcoind:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
+matiasdesuu/thinkdashboard
+ghcr.io/matiasdesuu/thinkdashboard:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -19902,9 +19920,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+Tagged - Can't determine last update
+registry
+registry:3 Downloads: 1730426120  Stars: 4174  Base: unknown
+Pulling registry:3
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:quilt Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -19981,16 +20006,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-maziggy/bambuddy
-ghcr.io/maziggy/bambuddy:latest Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/maziggy/bambuddy:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-cloudbyday90/classifarr
-ghcr.io/cloudbyday90/classifarr:latest Downloads: 6065  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
