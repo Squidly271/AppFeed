@@ -534,49 +534,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   d7f7df5..4501c41  main       -> origin/main
-Updating d7f7df5..4501c41
-Fast-forward
- client/src/App.jsx                                 |  11 +
- client/src/components/pages/Downloads.jsx          | 412 ++++++++++++
- client/src/components/pages/PlaylistDetail.jsx     |  51 ++
- client/src/components/ui/AddToPlaylistButton.jsx   |  11 +-
- client/src/components/ui/Sidebar.jsx               |   1 +
- client/src/components/ui/UserMenu.jsx              |  17 +
- .../components/video-player/PlaybackControls.jsx   |  92 ++-
- docs/user-guide/downloads.md                       | 175 +++++
- docs/user-guide/playlists.md                       |  14 +
- docs/user-guide/user-management.md                 | 166 ++++-
- mkdocs.yml                                         |   1 +
- server/controllers/download.ts                     | 523 +++++++++++++++
- server/index.ts                                    |   4 +
- server/initializers/api.ts                         |   4 +
- server/jobs/downloadCleanup.ts                     | 110 +++
- server/package-lock.json                           | 596 +++++++++++++++--
- server/package.json                                |   2 +
- .../20260122000000_add_downloads/migration.sql     |  28 +
- server/prisma/schema.prisma                        |  48 ++
- server/routes/download.ts                          |  44 ++
- server/services/DownloadService.ts                 | 275 ++++++++
- server/services/PlaylistZipService.ts              | 298 +++++++++
- server/tests/controllers/download.test.ts          | 737 +++++++++++++++++++++
- server/tests/services/DownloadService.test.ts      | 415 ++++++++++++
- server/tests/utils/nfoGenerator.test.ts            |  94 +++
- server/utils/nfoGenerator.ts                       |  74 +++
- 26 files changed, 4127 insertions(+), 76 deletions(-)
- create mode 100644 client/src/components/pages/Downloads.jsx
- create mode 100644 docs/user-guide/downloads.md
- create mode 100644 server/controllers/download.ts
- create mode 100644 server/jobs/downloadCleanup.ts
- create mode 100644 server/prisma/migrations/20260122000000_add_downloads/migration.sql
- create mode 100644 server/routes/download.ts
- create mode 100644 server/services/DownloadService.ts
- create mode 100644 server/services/PlaylistZipService.ts
- create mode 100644 server/tests/controllers/download.test.ts
- create mode 100644 server/tests/services/DownloadService.test.ts
- create mode 100644 server/tests/utils/nfoGenerator.test.ts
- create mode 100644 server/utils/nfoGenerator.ts
+Already up to date.
 
 Array
 (
@@ -9132,28 +9090,44 @@ Processing /tmp/GitHub/repositoryClone/simse/docker-templates/simse/chronos.xml.
 
 Downloading Josh.5's Repository
 
-Already up to date.
+From https://github.com/Josh5/unraid-docker-templates
+   a8282de..86359a7  master     -> origin/master
+Updating a8282de..86359a7
+Fast-forward
+ josh5/dind-swarm-worker.xml | 94 +++++++++++++++++++++++++++++++++++++++++++++
+ josh5/dind.xml              | 80 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 174 insertions(+)
+ create mode 100644 josh5/dind-swarm-worker.xml
+ create mode 100644 josh5/dind.xml
 
 Array
 (
     [https://github.com/Josh5/unraid-docker-templates] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/steam-headless-secondary.xml
-            [1] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/tvh-iptv-config.xml
-            [2] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/lancache-bundle.xml
-            [3] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/teamcity-agent.xml
-            [4] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/steam-headless.xml
-            [5] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/unmanic.xml
-            [6] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/teamcity-server.xml
-            [7] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/unmanic-central-datastore.xml
-            [8] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/tvh-iptv.xml
-            [9] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/ca_profile.xml
+            [1] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/dind.xml
+            [2] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/dind-swarm-worker.xml
+            [3] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/tvh-iptv-config.xml
+            [4] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/lancache-bundle.xml
+            [5] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/teamcity-agent.xml
+            [6] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/steam-headless.xml
+            [7] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/unmanic.xml
+            [8] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/teamcity-server.xml
+            [9] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/unmanic-central-datastore.xml
+            [10] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/tvh-iptv.xml
+            [11] => /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/ca_profile.xml
         )
 
 )
    Success!
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/steam-headless-secondary.xml...Success
+Processing /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/dind.xml...Privileged mode set.  This may not be necessary
+
+Success
+Processing /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/dind-swarm-worker.xml...Privileged mode set.  This may not be necessary
+
+Success
 Processing /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/tvh-iptv-config.xml...Success
 Processing /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/lancache-bundle.xml...Success
 Processing /tmp/GitHub/repositoryClone/Josh5/unraid-docker-templates/josh5/teamcity-agent.xml...Privileged mode set.  This may not be necessary
@@ -16173,11 +16147,11 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 Downloading grtgbln's Repository
 
 From https://github.com/nwithan8/unraid_templates
-   ebf14ea..77cbea5  main       -> origin/main
-Updating ebf14ea..77cbea5
+   77cbea5..0c9ead7  main       -> origin/main
+Updating 77cbea5..0c9ead7
 Fast-forward
- templates/facet.xml | 6 ++----
- 1 file changed, 2 insertions(+), 4 deletions(-)
+ automation/change_monitoring/data.json | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
 
 Array
 (
@@ -19959,6 +19933,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
+josh5/ubuntu-dind
+ghcr.io/josh5/ubuntu-dind:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/josh5/ubuntu-dind:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
@@ -20017,7 +19995,7 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 127
+Privileged: 129
 
 
 Updating GitHub
