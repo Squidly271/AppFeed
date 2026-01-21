@@ -13,15 +13,7 @@ Downloading Repo Info
 
 Downloading Nebula's Repository
 
-From https://github.com/nebula-codes/hytale_server_manager
-   62dd54d..1d206b8  main       -> origin/main
- * [new tag]         v0.2.83    -> v0.2.83
-Updating 62dd54d..1d206b8
-Fast-forward
- docker-compose.yml               | 3 +++
- packages/server/src/config.ts    | 2 ++
- unraid/hytale-server-manager.xml | 2 ++
- 3 files changed, 7 insertions(+)
+Already up to date.
 
 Array
 (
@@ -542,7 +534,49 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   d7f7df5..4501c41  main       -> origin/main
+Updating d7f7df5..4501c41
+Fast-forward
+ client/src/App.jsx                                 |  11 +
+ client/src/components/pages/Downloads.jsx          | 412 ++++++++++++
+ client/src/components/pages/PlaylistDetail.jsx     |  51 ++
+ client/src/components/ui/AddToPlaylistButton.jsx   |  11 +-
+ client/src/components/ui/Sidebar.jsx               |   1 +
+ client/src/components/ui/UserMenu.jsx              |  17 +
+ .../components/video-player/PlaybackControls.jsx   |  92 ++-
+ docs/user-guide/downloads.md                       | 175 +++++
+ docs/user-guide/playlists.md                       |  14 +
+ docs/user-guide/user-management.md                 | 166 ++++-
+ mkdocs.yml                                         |   1 +
+ server/controllers/download.ts                     | 523 +++++++++++++++
+ server/index.ts                                    |   4 +
+ server/initializers/api.ts                         |   4 +
+ server/jobs/downloadCleanup.ts                     | 110 +++
+ server/package-lock.json                           | 596 +++++++++++++++--
+ server/package.json                                |   2 +
+ .../20260122000000_add_downloads/migration.sql     |  28 +
+ server/prisma/schema.prisma                        |  48 ++
+ server/routes/download.ts                          |  44 ++
+ server/services/DownloadService.ts                 | 275 ++++++++
+ server/services/PlaylistZipService.ts              | 298 +++++++++
+ server/tests/controllers/download.test.ts          | 737 +++++++++++++++++++++
+ server/tests/services/DownloadService.test.ts      | 415 ++++++++++++
+ server/tests/utils/nfoGenerator.test.ts            |  94 +++
+ server/utils/nfoGenerator.ts                       |  74 +++
+ 26 files changed, 4127 insertions(+), 76 deletions(-)
+ create mode 100644 client/src/components/pages/Downloads.jsx
+ create mode 100644 docs/user-guide/downloads.md
+ create mode 100644 server/controllers/download.ts
+ create mode 100644 server/jobs/downloadCleanup.ts
+ create mode 100644 server/prisma/migrations/20260122000000_add_downloads/migration.sql
+ create mode 100644 server/routes/download.ts
+ create mode 100644 server/services/DownloadService.ts
+ create mode 100644 server/services/PlaylistZipService.ts
+ create mode 100644 server/tests/controllers/download.test.ts
+ create mode 100644 server/tests/services/DownloadService.test.ts
+ create mode 100644 server/tests/utils/nfoGenerator.test.ts
+ create mode 100644 server/utils/nfoGenerator.ts
 
 Array
 (
@@ -4761,36 +4795,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   9e433600..8f282c1b  main       -> origin/main
-Updating 9e433600..8f282c1b
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -16167,7 +16172,12 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   ebf14ea..77cbea5  main       -> origin/main
+Updating ebf14ea..77cbea5
+Fast-forward
+ templates/facet.xml | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
 
 Array
 (
