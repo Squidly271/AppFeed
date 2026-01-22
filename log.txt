@@ -13,29 +13,7 @@ Downloading Repo Info
 
 Downloading Nebula's Repository
 
-From https://github.com/nebula-codes/hytale_server_manager
-   28b1ed4..72ba9d1  main       -> origin/main
- * [new tag]         v0.2.90    -> v0.2.90
- * [new tag]         v0.2.87    -> v0.2.87
- * [new tag]         v0.2.88    -> v0.2.88
- * [new tag]         v0.2.89    -> v0.2.89
-Updating 28b1ed4..72ba9d1
-Fast-forward
- docker-compose.yml                                 |  4 +-
- packages/frontend/index.html                       |  2 +-
- .../features/HytaleServerDownloadSection.tsx       | 41 +++++++++++++-
- packages/frontend/src/hooks/api/useServers.ts      |  1 +
- .../src/pages/servers/ServerDetailPage.tsx         | 16 +++---
- .../src/pages/servers/ServerSettingsPage.tsx       | 62 ++++++++++++++++++++++
- packages/frontend/src/services/api.ts              |  1 +
- .../20260121221452_add_server_args/migration.sql   |  2 +
- packages/server/prisma/schema.prisma               |  1 +
- packages/server/src/adapters/JavaServerAdapter.ts  |  5 +-
- packages/server/src/routes/servers.ts              |  2 +
- packages/server/src/services/ServerService.ts      | 11 ++++
- unraid/hytale-server-manager.xml                   |  1 +
- 13 files changed, 135 insertions(+), 14 deletions(-)
- create mode 100644 packages/server/prisma/migrations/20260121221452_add_server_args/migration.sql
+Already up to date.
 
 Array
 (
@@ -69,7 +47,41 @@ Processing /tmp/GitHub/repositoryClone/CaptainPimpJr/Unraid-Community-Applicatio
 
 Downloading Maikboarder's Repository
 
-Already up to date.
+From https://github.com/Maikboarder/Playerr
+   7a0af8f..3756b6f  master     -> origin/master
+ * [new tag]         v0.4.5     -> v0.4.5
+Updating 7a0af8f..3756b6f
+Fast-forward
+ .gitignore                                       |   1 +
+ Dockerfile                                       |  35 +-
+ README.es.md                                     |   2 +-
+ README.md                                        |   2 +-
+ RELEASE_NOTES.md                                 |  13 +
+ build_all.sh                                     |   2 +-
+ build_mac_only.sh                                |  20 +
+ create_mac_app.sh                                |   2 +-
+ frontend/src/components/SwitchInstallerModal.tsx | 195 +++++++++
+ frontend/src/i18n/translations.ts                |   3 +-
+ frontend/src/pages/About.tsx                     |   5 +-
+ frontend/src/pages/GameDetails.tsx               | 480 +++++++++++++----------
+ package-lock.json                                |   4 +-
+ package.json                                     |   2 +-
+ src/Directory.Build.props                        |  16 +-
+ src/Playerr.Api.V3/Switch/SwitchController.cs    |  89 +++++
+ src/Playerr.Core/Switch/SwitchUsbHelper.py       | 255 ++++++++++++
+ src/Playerr.Core/Switch/SwitchUsbService.cs      | 301 ++++++++++++++
+ src/Playerr.Host/Playerr.Host.csproj             |   4 +-
+ src/Playerr.Host/Program.cs                      |  40 +-
+ src/Playerr.UsbHelper/Playerr.UsbHelper.csproj   |  15 +
+ src/Playerr.UsbHelper/Program.cs                 | 371 ++++++++++++++++++
+ src/Playerr.sln                                  |  22 +-
+ 23 files changed, 1619 insertions(+), 260 deletions(-)
+ create mode 100644 frontend/src/components/SwitchInstallerModal.tsx
+ create mode 100644 src/Playerr.Api.V3/Switch/SwitchController.cs
+ create mode 100644 src/Playerr.Core/Switch/SwitchUsbHelper.py
+ create mode 100644 src/Playerr.Core/Switch/SwitchUsbService.cs
+ create mode 100644 src/Playerr.UsbHelper/Playerr.UsbHelper.csproj
+ create mode 100644 src/Playerr.UsbHelper/Program.cs
 
 Array
 (
@@ -7720,13 +7732,7 @@ Success
 
 Downloading jj9987's Repository
 
-From https://github.com/juusujanar/unraid-templates
-   5e9a31d..75021c0  master     -> origin/master
-Updating 5e9a31d..75021c0
-Fast-forward
- DockerRegistry3.xml | 28 ++++++++++++++++++++++++++++
- 1 file changed, 28 insertions(+)
- create mode 100644 DockerRegistry3.xml
+Already up to date.
 
 Array
 (
@@ -15496,11 +15502,16 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 Downloading ZappyZap's Repository
 
 From https://github.com/devzwf/unraid-docker-templates
-   119c331..cc5a622  main       -> origin/main
-Updating 119c331..cc5a622
+   cc5a622..8ee060d  main       -> origin/main
+Updating cc5a622..8ee060d
 Fast-forward
- bambybuddy.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ CHANGELOG.MD                                      |   2 +-
+ README.md                                         |   8 ++++----
+ bambybuddy.xml => bambuddy.xml                    |  12 ++++++------
+ images/{bambubuddy-logo.png => bambuddy-logo.png} | Bin
+ 4 files changed, 11 insertions(+), 11 deletions(-)
+ rename bambybuddy.xml => bambuddy.xml (85%)
+ rename images/{bambubuddy-logo.png => bambuddy-logo.png} (100%)
 
 Array
 (
@@ -15511,22 +15522,22 @@ Array
             [2] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-sync-receiver.xml
             [3] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/lubelogger.xml
             [4] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbPad.xml
-            [5] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambybuddy.xml
-            [6] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbdo.xml
-            [7] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh.xml
-            [8] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbKan.xml
-            [9] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbDrop.xml
-            [10] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/termix.xml
-            [11] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml
-            [12] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml
-            [13] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml
-            [14] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml
-            [15] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/iventoy.xml
-            [16] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/myspeed.xml
-            [17] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.xml
-            [18] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml
-            [19] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml
-            [20] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml
+            [5] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbdo.xml
+            [6] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh.xml
+            [7] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbKan.xml
+            [8] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbDrop.xml
+            [9] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/termix.xml
+            [10] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml
+            [11] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml
+            [12] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml
+            [13] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml
+            [14] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/iventoy.xml
+            [15] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/myspeed.xml
+            [16] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.xml
+            [17] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml
+            [18] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml
+            [19] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml
+            [20] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambuddy.xml
             [21] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/ca_profile.xml
             [22] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bichon.xml
             [23] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pulse.xml
@@ -15561,7 +15572,6 @@ Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/databaseme
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-sync-receiver.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/lubelogger.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbPad.xml...Success
-Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambybuddy.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbdo.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbKan.xml...Success
@@ -15579,6 +15589,7 @@ Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.x
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml...Success
+Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambuddy.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bichon.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pulse.xml...Success
@@ -19767,12 +19778,8 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
-anym001/docker-bitcoind
-ghcr.io/anym001/docker-bitcoind:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
-matiasdesuu/thinkdashboard
-ghcr.io/matiasdesuu/thinkdashboard:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -19920,16 +19927,9 @@ ghcr.io/matiasdesuu/thinkdashboard:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-Tagged - Can't determine last update
-registry
-registry:3 Downloads: 1730426120  Stars: 4174  Base: unknown
-Pulling registry:3
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
-Tagged - Can't determine last update
-gitea.fithwum.tech/fithwum/minecraft
-gitea.fithwum.tech/fithwum/minecraft:quilt Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -20024,6 +20024,8 @@ gitea.fithwum.tech/fithwum/minecraft:quilt Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+ds-sebastian/pricecious
+ghcr.io/ds-sebastian/pricecious:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 129
