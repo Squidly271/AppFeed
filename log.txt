@@ -48,12 +48,8 @@ Processing /tmp/GitHub/repositoryClone/CaptainPimpJr/Unraid-Community-Applicatio
 Downloading Maikboarder's Repository
 
 From https://github.com/Maikboarder/Playerr
-   fe2e444..2f39204  master     -> origin/master
-Updating fe2e444..2f39204
-Fast-forward
- Dockerfile                | 13 ++++++++-----
- src/Directory.Build.props |  3 ++-
- 2 files changed, 10 insertions(+), 6 deletions(-)
+ * [new tag]         v0.4.5b    -> v0.4.5b
+Already up to date.
 
 Array
 (
@@ -12464,7 +12460,81 @@ Processing /tmp/GitHub/repositoryClone/OFark/docker-templates/OFark/Compressarr.
 Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
-Already up to date.
+From https://gitlab.com/crafty-controller/crafty-4
+   5e66a760..1a7bb702  master     -> origin/master
+ * [new tag]           v4.8.0     -> v4.8.0
+Updating 5e66a760..1a7bb702
+Fast-forward
+ .pylintrc                                          |   1 +
+ CHANGELOG.md                                       |  19 +
+ README.md                                          |   2 +-
+ app/classes/controllers/passkey_controller.py      | 295 ++++++++++++++++
+ app/classes/controllers/users_controller.py        |   7 +
+ app/classes/helpers/file_helpers.py                | 208 +++++++----
+ app/classes/helpers/helpers.py                     |   9 +-
+ app/classes/minecraft/bigbucket.py                 |   6 +-
+ app/classes/models/management.py                   |   2 +
+ app/classes/models/passkey.py                      | 135 +++++++
+ app/classes/models/users.py                        |   1 +
+ app/classes/shared/backup_mgr.py                   | 203 +++++++++--
+ app/classes/shared/import_helper.py                | 210 +++--------
+ app/classes/shared/main_controller.py              |  95 ++---
+ app/classes/shared/server.py                       |  65 +++-
+ app/classes/shared/tasks.py                        |  20 +-
+ app/classes/shared/websocket_manager.py            |   2 +-
+ app/classes/web/panel_handler.py                   |  49 ++-
+ app/classes/web/routes/api/api_handlers.py         |  51 ++-
+ app/classes/web/routes/api/auth/login.py           |  23 ++
+ app/classes/web/routes/api/auth/passkey.py         | 195 ++++++++++
+ app/classes/web/routes/api/crafty/config/index.py  |  15 +-
+ app/classes/web/routes/api/crafty/imports/index.py | 150 ++++----
+ app/classes/web/routes/api/crafty/upload/index.py  |  11 +-
+ app/classes/web/routes/api/servers/index.py        | 230 +++---------
+ app/classes/web/routes/api/servers/server/files.py |  70 ++--
+ app/classes/web/routes/api/users/user/passkey.py   | 257 ++++++++++++++
+ app/config/version.json                            |   2 +-
+ .../static/assets/css/partial/crafty-sidebar.css   |  31 ++
+ app/frontend/static/assets/js/shared/editor.js     |   2 +-
+ app/frontend/static/assets/js/shared/files.js      |  26 +-
+ app/frontend/static/assets/js/shared/passkey.js    |  23 ++
+ app/frontend/static/assets/js/shared/root-dir.js   | 312 ++++++++++------
+ app/frontend/static/assets/js/shared/upload.js     |   1 +
+ app/frontend/templates/base.html                   |  23 +-
+ app/frontend/templates/blank_base.html             |   1 -
+ app/frontend/templates/notify.html                 |  33 +-
+ app/frontend/templates/panel/panel_edit_user.html  |  11 +-
+ .../templates/panel/panel_edit_user_apikeys.html   |  10 +-
+ .../templates/panel/panel_edit_user_otp.html       |  10 +-
+ .../templates/panel/panel_edit_user_passkey.html   | 386 ++++++++++++++++++++
+ app/frontend/templates/panel/server_file_edit.html |   8 +-
+ app/frontend/templates/panel/server_files.html     |   7 +-
+ app/frontend/templates/public/login.html           | 115 +++++-
+ app/frontend/templates/server/bedrock_wizard.html  | 317 +++--------------
+ app/frontend/templates/server/wizard.html          | 392 +--------------------
+ app/migrations/20260113_disable_password_auth.py   |  12 +
+ app/migrations/20260113_passkey.py                 |  51 +++
+ app/translations/en_EN.json                        |  56 ++-
+ app/translations/ru_RU.json                        |  35 +-
+ app/translations/tr_TR.json                        |  41 ++-
+ app/translations/uk_UA.json                        |  42 ++-
+ app/translations/zh_CN.json                        |  31 +-
+ requirements.txt                                   |   1 +
+ sonar-project.properties                           |   2 +-
+ tests/classes/helpers/test_traversal.py            |  98 ++++++
+ tests/classes/shared/test_backup_mgr.py            | 119 +++++++
+ tests/classes/web/api/test_get_zip_structure.py    |  54 +++
+ 58 files changed, 3099 insertions(+), 1484 deletions(-)
+ create mode 100644 app/classes/controllers/passkey_controller.py
+ create mode 100644 app/classes/models/passkey.py
+ create mode 100644 app/classes/web/routes/api/auth/passkey.py
+ create mode 100644 app/classes/web/routes/api/users/user/passkey.py
+ create mode 100644 app/frontend/static/assets/js/shared/passkey.js
+ create mode 100644 app/frontend/templates/panel/panel_edit_user_passkey.html
+ create mode 100644 app/migrations/20260113_disable_password_auth.py
+ create mode 100644 app/migrations/20260113_passkey.py
+ create mode 100644 tests/classes/helpers/test_traversal.py
+ create mode 100644 tests/classes/shared/test_backup_mgr.py
+ create mode 100644 tests/classes/web/api/test_get_zip_structure.py
 
 Array
 (
@@ -19807,8 +19877,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-varun-raj/immich-power-tools
-ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
+civilblur/mazanoke
+ghcr.io/civilblur/mazanoke:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -19834,6 +19904,10 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+msdeluise/plant-it-server
+msdeluise/plant-it-server:latest Downloads: 237760  Stars: 1  Base: unknown
+androidseb25/igotify-notification-assist
+ghcr.io/androidseb25/igotify-notification-assist:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -19851,6 +19925,8 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/shotcut
+lscr.io/linuxserver/shotcut Downloads: 16576  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19932,6 +20008,10 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
+josh5/tvh-iptv-config
+ghcr.io/josh5/tvh-iptv-config:latest Downloads: 24706  Stars: 0  Base: unknown
+josh5/tvh-iptv
+ghcr.io/josh5/tvh-iptv:latest Downloads: 15170  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
@@ -19974,12 +20054,6 @@ ghcr.io/varun-raj/immich-power-tools Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-localai/localai
-localai/localai:latest Downloads: 2146868  Stars: 84  Base: unknown
-sdr-enthusiasts/docker-rtlsdrairband
-ghcr.io/sdr-enthusiasts/docker-rtlsdrairband:latest Downloads:   Stars:   Base: unknown
-tedder42/browser-screenshot-service
-tedder42/browser-screenshot-service:latest Downloads: 13297  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -19992,6 +20066,8 @@ tedder42/browser-screenshot-service:latest Downloads: 13297  Stars: 1  Base: unk
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+productiveops/dokemon
+productiveops/dokemon:latest Downloads: 231450  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
