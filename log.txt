@@ -102,7 +102,16 @@ Processing /tmp/GitHub/repositoryClone/MattyStacks/docker-templates/MattyStacks/
 
 Downloading Yusseiin's Repository
 
-Already up to date.
+From https://github.com/Yusseiin/unraid-templates
+   9739904..c006d74  main       -> origin/main
+Updating 9739904..c006d74
+Fast-forward
+ LICENSE.md                   | 42 ++++++++++++------------
+ README.md                    |  6 ++--
+ templates/UnMove.xml         | 78 +++++++++++++++++++++++---------------------
+ templates/Weight_Tracker.xml | 76 +++++++++++++++++++++---------------------
+ templates/ca_profile.xml     | 16 ++++-----
+ 5 files changed, 110 insertions(+), 108 deletions(-)
 
 Array
 (
@@ -3866,125 +3875,7 @@ Success
 
 Downloading ciuse99's Repository
 
-From https://github.com/giuseppe99barchetta/SuggestArr
-   2a1920b..1db09e5  main       -> origin/main
- * [new tag]         v2.0.0     -> v2.0.0
-Updating 2a1920b..1db09e5
-Fast-forward
- .github/workflows/docker_hub_build.yml             |    34 +-
- .github/workflows/stale.yml                        |    20 -
- .gitignore                                         |   358 +
- README.md                                          |     2 +-
- TMDB_API_ENDPOINTS.md                              |   306 +
- api_service/app.py                                 |     2 +
- api_service/automate_process.py                    |    32 +-
- api_service/blueprints/automation/routes.py        |    39 +-
- api_service/blueprints/config/routes.py            |   213 +-
- api_service/blueprints/jellyfin/routes.py          |   100 +-
- api_service/blueprints/plex/routes.py              |   111 +-
- api_service/blueprints/seer/routes.py              |   118 +
- api_service/blueprints/tmdb/__init__.py            |     0
- api_service/blueprints/tmdb/routes.py              |   202 +
- api_service/config/config.py                       |   131 +-
- api_service/config/logger_manager.py               |    82 +-
- api_service/db/adapter_factory.py                  |    83 +
- api_service/db/adapters/base_adapter.py            |    60 +
- api_service/db/adapters/mysql_adapter.py           |   164 +
- api_service/db/adapters/postgresql_adapter.py      |   175 +
- api_service/db/adapters/sqlite_adapter.py          |   156 +
- api_service/db/connection_pool.py                  |   397 +
- api_service/db/database_manager.py                 |   665 +-
- api_service/exceptions/api_exceptions.py           |    62 +
- api_service/exceptions/database_exceptions.py      |     4 +-
- api_service/handler/plex_handler.py                |    40 +-
- api_service/services/plex/base_client.py           |    87 +
- api_service/services/plex/library_service.py       |   109 +
- api_service/services/plex/plex_client.py           |    25 +-
- api_service/services/plex/user_service.py          |    92 +
- api_service/services/tmdb/tmdb_client.py           |     2 +-
- api_service/test/test_config.py                    |    12 +
- api_service/test/test_connection_pool.py           |   113 +
- api_service/utils/error_handling.py                |   229 +
- client/package-lock.json                           | 12117 -------------------
- client/package.json                                |     4 +-
- client/public/manifest.json                        |    28 +
- client/src/assets/styles/advancedFilterConfig.css  |    56 +-
- client/src/assets/styles/logs.css                  |   372 +
- client/src/assets/styles/requestsPage.css          |  1224 ++
- client/src/assets/styles/theme.css                 |   285 +
- client/src/assets/styles/toast-custom.css          |   142 +
- client/src/assets/styles/wizard.css                |   353 +-
- client/src/components/AppFooter.vue                |   275 +-
- client/src/components/ConfigSummary.vue            |   264 -
- client/src/components/ConfigWizard.vue             |   650 +-
- client/src/components/DashboardPage.vue            |  1193 ++
- client/src/components/LogsComponent.vue            |   484 +-
- client/src/components/RequestsPage.vue             |   840 +-
- client/src/components/common/BaseDropdown.vue      |   661 +
- client/src/components/configWizard/DbConfig.vue    |    25 +-
- .../src/components/configWizard/JellyfinConfig.vue |   356 +-
- .../configWizard/MediaServiceSelection.vue         |   176 +-
- client/src/components/configWizard/PlexConfig.vue  |   307 +-
- client/src/components/configWizard/SeerConfig.vue  |   393 +-
- client/src/components/configWizard/TmdbConfig.vue  |   102 +-
- .../src/components/settings/SettingsAdvanced.vue   |   974 ++
- .../components/settings/SettingsContentFilters.vue |   665 +
- .../src/components/settings/SettingsDatabase.vue   |   718 ++
- client/src/components/settings/SettingsGeneral.vue |   502 +
- .../src/components/settings/SettingsRequests.vue   |   659 +
- .../src/components/settings/SettingsServices.vue   |   902 ++
- client/src/components/wizard/WizardCompletion.vue  |   170 +
- client/src/components/wizard/WizardWelcome.vue     |   256 +
- client/src/composables/useBackgroundImage.js       |    51 +
- client/src/composables/useConfigImport.js          |    41 +
- client/src/composables/useConfigManager.js         |    79 +
- client/src/env.d.ts                                |     7 +
- client/src/main.js                                 |    14 +-
- client/src/router/index.js                         |    86 +-
- client/src/utils/dateUtils.js                      |    31 +
- client/tsconfig.json                               |    22 +
- client/vue.config.js                               |    23 +-
- 73 files changed, 15740 insertions(+), 13992 deletions(-)
- delete mode 100644 .github/workflows/stale.yml
- create mode 100644 .gitignore
- create mode 100644 TMDB_API_ENDPOINTS.md
- create mode 100644 api_service/blueprints/tmdb/__init__.py
- create mode 100644 api_service/blueprints/tmdb/routes.py
- create mode 100644 api_service/db/adapter_factory.py
- create mode 100644 api_service/db/adapters/base_adapter.py
- create mode 100644 api_service/db/adapters/mysql_adapter.py
- create mode 100644 api_service/db/adapters/postgresql_adapter.py
- create mode 100644 api_service/db/adapters/sqlite_adapter.py
- create mode 100644 api_service/db/connection_pool.py
- create mode 100644 api_service/exceptions/api_exceptions.py
- create mode 100644 api_service/services/plex/base_client.py
- create mode 100644 api_service/services/plex/library_service.py
- create mode 100644 api_service/services/plex/user_service.py
- create mode 100644 api_service/test/test_connection_pool.py
- create mode 100644 api_service/utils/error_handling.py
- delete mode 100644 client/package-lock.json
- create mode 100644 client/public/manifest.json
- create mode 100644 client/src/assets/styles/logs.css
- create mode 100644 client/src/assets/styles/requestsPage.css
- create mode 100644 client/src/assets/styles/theme.css
- create mode 100644 client/src/assets/styles/toast-custom.css
- delete mode 100644 client/src/components/ConfigSummary.vue
- create mode 100644 client/src/components/DashboardPage.vue
- create mode 100644 client/src/components/common/BaseDropdown.vue
- create mode 100644 client/src/components/settings/SettingsAdvanced.vue
- create mode 100644 client/src/components/settings/SettingsContentFilters.vue
- create mode 100644 client/src/components/settings/SettingsDatabase.vue
- create mode 100644 client/src/components/settings/SettingsGeneral.vue
- create mode 100644 client/src/components/settings/SettingsRequests.vue
- create mode 100644 client/src/components/settings/SettingsServices.vue
- create mode 100644 client/src/components/wizard/WizardCompletion.vue
- create mode 100644 client/src/components/wizard/WizardWelcome.vue
- create mode 100644 client/src/composables/useBackgroundImage.js
- create mode 100644 client/src/composables/useConfigImport.js
- create mode 100644 client/src/composables/useConfigManager.js
- create mode 100644 client/src/env.d.ts
- create mode 100644 client/src/utils/dateUtils.js
- create mode 100644 client/tsconfig.json
+Already up to date.
 
 Array
 (
@@ -9781,9 +9672,7 @@ Array
    Success!
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/StevenDTX/unraid-plugin-repository/ca_profile.xml...FOUND PROFILE
-Processing /tmp/GitHub/repositoryClone/StevenDTX/unraid-plugin-repository/openVMTools-compiled.xml... Downloading https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...bool(false)
-out: int(56)
-error: failed.  Sleeping 5... Downloading https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 2...Success
+Processing /tmp/GitHub/repositoryClone/StevenDTX/unraid-plugin-repository/openVMTools-compiled.xml... Downloading https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...Success
 
 
 Downloading Mihai's Repository
