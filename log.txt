@@ -534,7 +534,66 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   3a3d513..31b3d45  main       -> origin/main
+Updating 3a3d513..31b3d45
+Fast-forward
+ .../components/settings/StashInstanceSection.jsx   | 491 +++++++++++++++++----
+ .../settings/StashInstanceSection.test.jsx         | 294 ++++++++++++
+ docs/plans/MULTI_INSTANCE_STASH.md                 | 136 ++++--
+ server/controllers/imageViewHistory.ts             |  28 +-
+ server/controllers/library/galleries.ts            |   5 +
+ server/controllers/library/groups.ts               |   5 +
+ server/controllers/library/images.ts               |   5 +
+ server/controllers/library/performers.ts           |   5 +
+ server/controllers/library/scenes.ts               |  15 +-
+ server/controllers/library/studios.ts              |   5 +
+ server/controllers/library/tags.ts                 |   5 +
+ server/controllers/playlist.ts                     |  24 +-
+ server/controllers/proxy.ts                        |  89 ++--
+ server/controllers/ratings.ts                      | 113 +++--
+ server/controllers/setup.ts                        | 321 ++++++++++++++
+ server/controllers/user.ts                         | 150 ++++++-
+ server/controllers/video.ts                        |  74 +++-
+ server/controllers/watchHistory.ts                 |  63 ++-
+ server/graphql/generated/graphql.ts                |  18 +-
+ server/graphql/operations/findPerformers.graphql   |   4 +
+ server/graphql/operations/findStudios.graphql      |   4 +
+ server/graphql/operations/findTags.graphql         |   4 +
+ .../migration.sql                                  |  11 +
+ .../migration.sql                                  | 125 ++++++
+ server/prisma/schema.prisma                        | 180 +++++---
+ server/routes/setup.ts                             |  13 +-
+ server/routes/user.ts                              |   6 +
+ server/services/DeduplicationService.ts            | 291 ++++++++++++
+ server/services/GalleryQueryBuilder.ts             |  23 +-
+ server/services/GroupQueryBuilder.ts               |  23 +-
+ server/services/ImageQueryBuilder.ts               |  23 +-
+ server/services/MergeReconciliationService.ts      |  25 +-
+ server/services/PerformerQueryBuilder.ts           |  23 +-
+ server/services/SceneQueryBuilder.ts               |  30 +-
+ server/services/StashEntityService.ts              |   3 +
+ server/services/StashInstanceManager.ts            |  47 +-
+ server/services/StashSyncService.ts                |  92 +++-
+ server/services/StudioQueryBuilder.ts              |  23 +-
+ server/services/TagQueryBuilder.ts                 |  24 +-
+ server/services/UserInstanceService.ts             |  92 ++++
+ server/tests/controllers/watchHistory.test.ts      |   3 +-
+ server/types/api/imageViewHistory.ts               |   2 +
+ server/types/api/index.ts                          |  14 +
+ server/types/api/playlist.ts                       |   5 +
+ server/types/api/ratings.ts                        |   2 +
+ server/types/api/setup.ts                          | 112 +++++
+ server/types/api/watchHistory.ts                   |   5 +
+ server/types/entities.ts                           |  17 +
+ server/utils/entityInstanceId.ts                   | 167 +++++++
+ 49 files changed, 2877 insertions(+), 362 deletions(-)
+ create mode 100644 client/tests/components/settings/StashInstanceSection.test.jsx
+ create mode 100644 server/prisma/migrations/20260122223400_add_stash_ids_for_dedup/migration.sql
+ create mode 100644 server/prisma/migrations/20260122400000_multi_instance_schema/migration.sql
+ create mode 100644 server/services/DeduplicationService.ts
+ create mode 100644 server/services/UserInstanceService.ts
+ create mode 100644 server/utils/entityInstanceId.ts
 
 Array
 (
@@ -16142,12 +16201,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   bfe2366..860dec9  main       -> origin/main
-Updating bfe2366..860dec9
-Fast-forward
- templates/tunarr.xml | 8 ++++++--
- 1 file changed, 6 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
