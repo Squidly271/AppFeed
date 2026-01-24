@@ -13,7 +13,17 @@ Downloading Repo Info
 
 Downloading Nebula's Repository
 
-Already up to date.
+From https://github.com/nebula-codes/hytale_server_manager
+   caab21f..d5c3b83  main       -> origin/main
+ * [new tag]         v0.2.98    -> v0.2.98
+ * [new tag]         v0.2.97    -> v0.2.97
+Updating caab21f..d5c3b83
+Fast-forward
+ .../src/components/modals/CreateServerModal.tsx    |  8 +--
+ .../src/pages/servers/ServerSettingsPage.tsx       | 12 ++---
+ packages/server/src/adapters/JavaServerAdapter.ts  | 31 ++++++++++--
+ .../server/src/services/ServerUpdateService.ts     | 57 +++++++++++++++++++++-
+ 4 files changed, 94 insertions(+), 14 deletions(-)
 
 Array
 (
@@ -12018,25 +12028,36 @@ Success
 Downloading JohnnyP's Repository
 
 From https://github.com/tenasi/unraid-templates
-   ec7edb3..33e59b9  main       -> origin/main
-Updating ec7edb3..33e59b9
+   33e59b9..7cfed29  main       -> origin/main
+Updating 33e59b9..7cfed29
 Fast-forward
- cloudflaressl/icon.png | Bin 0 -> 7443 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 cloudflaressl/icon.png
+ avatar.jpg                      | Bin 33469 -> 0 bytes
+ avatar.png                      | Bin 0 -> 386779 bytes
+ ca_profile.xml                  |   2 +-
+ cloudflaressl/cloudflaressl.xml |  68 ++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 69 insertions(+), 1 deletion(-)
+ delete mode 100644 avatar.jpg
+ create mode 100644 avatar.png
+ create mode 100644 cloudflaressl/cloudflaressl.xml
 
 Array
 (
     [https://github.com/tenasi/unraid-templates] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/tenasi/unraid-templates/plexannouncer/plexannouncer.xml
-            [1] => /tmp/GitHub/repositoryClone/tenasi/unraid-templates/ca_profile.xml
+            [1] => /tmp/GitHub/repositoryClone/tenasi/unraid-templates/cloudflaressl/cloudflaressl.xml
+            [2] => /tmp/GitHub/repositoryClone/tenasi/unraid-templates/ca_profile.xml
         )
 
 )
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/tenasi/unraid-templates/plexannouncer/plexannouncer.xml...Success
+Processing /tmp/GitHub/repositoryClone/tenasi/unraid-templates/cloudflaressl/cloudflaressl.xml.../usr/local/emhttp/plugins/dynamix.docker.manager/scripts/docker create --name='CloudflareSSL' --net='none' 30m /test.bat -e TZ="does not matter" -e HOST_OS="Unraid" -e 'CLOUDFLARE_API_TOKEN'='' -e 'CERTBOT_EMAIL'='' -e 'CERTBOT_DOMAINS'='' -e 'CERTBOT_KEY_TYPE'='ecdsa' -e 'RENEWAL_INTERVAL'='43200' -l net.unraid.docker.managed=dockerman -l net.unraid.docker.icon='https://raw.githubusercontent.com/tenasi/unraid-templates/refs/heads/main/cloudflaressl/icon.png' -v '/mnt/user/appdata/cloudflaressl/':'/etc/letsencrypt':'rw' -v '/boot/config/ssl/certs':'/etc/unraidssl':'rw' -e HOST_HOSTNAME=`hostname` 'tenasi/cloudflaressl:latest' 
+Possible environment variable within extra parameters.  This should be handled via a config element (type=variable)
+
+/usr/local/emhttp/plugins/dynamix.docker.manager/scripts/docker create --name='CloudflareSSL' --net='none' 30m /test.bat -e TZ="does not matter" -e HOST_OS="Unraid" -e 'CLOUDFLARE_API_TOKEN'='' -e 'CERTBOT_EMAIL'='' -e 'CERTBOT_DOMAINS'='' -e 'CERTBOT_KEY_TYPE'='ecdsa' -e 'RENEWAL_INTERVAL'='43200' -l net.unraid.docker.managed=dockerman -l net.unraid.docker.icon='https://raw.githubusercontent.com/tenasi/unraid-templates/refs/heads/main/cloudflaressl/icon.png' -v '/mnt/user/appdata/cloudflaressl/':'/etc/letsencrypt':'rw' -v '/boot/config/ssl/certs':'/etc/unraidssl':'rw' -e HOST_HOSTNAME=`hostname` 'tenasi/cloudflaressl:latest' 
+Success
 Processing /tmp/GitHub/repositoryClone/tenasi/unraid-templates/ca_profile.xml...FOUND PROFILE
 
 
@@ -19983,11 +20004,28 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+tenasi/cloudflaressl
+tenasi/cloudflaressl:latest Downloads: 35  Stars: 0  Base: unknown
+Pulling tenasi/cloudflaressl:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+voidauth/voidauth
+voidauth/voidauth:latest Downloads: 49793  Stars: 1  Base: unknown
+quay.io/vouch/vouch-proxy
+quay.io/vouch/vouch-proxy:latest Downloads:   Stars:   Base: unknown
+sebadob/rauthy
+ghcr.io/sebadob/rauthy:latest Downloads:   Stars:   Base: unknown
+akarys42/cloudflare-ddns-docker
+ghcr.io/akarys42/cloudflare-ddns-docker:latest Downloads:   Stars:   Base: unknown
+containrrr/shoutrrr
+containrrr/shoutrrr:latest Downloads: 161514  Stars: 10  Base: unknown
+Tagged - Can't determine last update
+nzbdav/nzbdav
+nzbdav/nzbdav:alpha Downloads: 34001  Stars: 7  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
