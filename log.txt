@@ -141,29 +141,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   2121705..a319f0c  main       -> origin/main
-Updating 2121705..a319f0c
+   a319f0c..64170d9  main       -> origin/main
+Updating a319f0c..64170d9
 Fast-forward
- .env.example                                       |   3 +
- app/api/admin/models/[id]/route.ts                 |   2 +
- app/api/checkout/route.ts                          |   8 +
- app/api/models/[id]/quote/route.ts                 |  42 +-
- app/api/models/[id]/revisions/route.ts             |  34 +-
- app/api/models/[id]/route.ts                       |  34 +-
- app/api/upload/route.ts                            |  34 +-
- app/cart/page.tsx                                  |  57 ++-
- components/InstantQuoteConfigurator.tsx            | 461 +++++++++++++++++++--
- docker-compose.yml                                 |   3 +
- lib/model-dimensions.ts                            |   2 +
- lib/model-preview-queue.ts                         |   1 +
- lib/model-pricing.ts                               |  33 +-
- lib/pricing-cache.ts                               |   2 +
- lib/pricing.ts                                     |  61 ++-
- lib/stl.ts                                         |  54 ++-
- .../0047_add_support_ratio/migration.sql           |   3 +
- prisma/schema.prisma                               |   2 +
- 18 files changed, 790 insertions(+), 46 deletions(-)
- create mode 100644 prisma/migrations/0047_add_support_ratio/migration.sql
+ app/layout.tsx        |   8 ++--
+ components/NavBar.tsx | 115 ++++++++++++++++++++++++++++++++++++++++++++------
+ 2 files changed, 106 insertions(+), 17 deletions(-)
 
 Array
 (
@@ -7416,7 +7399,13 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   e8c2e34..3f52540  master     -> origin/master
+Updating e8c2e34..3f52540
+Fast-forward
+ jlesage/krusader.xml | 205 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 205 insertions(+)
+ create mode 100644 jlesage/krusader.xml
 
 Array
 (
@@ -7433,32 +7422,33 @@ Array
             [8] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/qdirstat.xml
             [9] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/nginx-proxy-manager.xml
             [10] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/vlc.xml
-            [11] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/cloudberry-backup.xml
-            [12] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/avidemux.xml
-            [13] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/thunderbird.xml
-            [14] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/video-duplicate-finder.xml
-            [15] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/ca_profile.xml
-            [16] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/putty.xml
-            [17] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/imgburn.xml
-            [18] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkv-muxing-batch-gui.xml
-            [19] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/freefilesync.xml
-            [20] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/makemkv.xml
-            [21] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/xnview-mp.xml
-            [22] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/handbrake.xml
-            [23] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/chromium.xml
-            [24] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/musicbrainz-picard.xml
-            [25] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tsmuxer.xml
-            [26] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tixati.xml
-            [27] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvtoolnix.xml
-            [28] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jmkvpropedit.xml
-            [29] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/keepassxc.xml
-            [30] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox-esr.xml
-            [31] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filebot.xml
-            [32] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jdownloader-2.xml
-            [33] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox.xml
-            [34] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvcleaver.xml
-            [35] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/crashplan-pro.xml
-            [36] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-centipede.xml
+            [11] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/krusader.xml
+            [12] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/cloudberry-backup.xml
+            [13] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/avidemux.xml
+            [14] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/thunderbird.xml
+            [15] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/video-duplicate-finder.xml
+            [16] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/ca_profile.xml
+            [17] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/putty.xml
+            [18] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/imgburn.xml
+            [19] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkv-muxing-batch-gui.xml
+            [20] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/freefilesync.xml
+            [21] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/makemkv.xml
+            [22] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/xnview-mp.xml
+            [23] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/handbrake.xml
+            [24] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/chromium.xml
+            [25] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/musicbrainz-picard.xml
+            [26] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tsmuxer.xml
+            [27] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/tixati.xml
+            [28] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvtoolnix.xml
+            [29] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jmkvpropedit.xml
+            [30] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/keepassxc.xml
+            [31] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox-esr.xml
+            [32] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filebot.xml
+            [33] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/jdownloader-2.xml
+            [34] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/firefox.xml
+            [35] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/mkvcleaver.xml
+            [36] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/crashplan-pro.xml
+            [37] => /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-centipede.xml
         )
 
 )
@@ -7475,6 +7465,7 @@ Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/filezill
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/qdirstat.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/nginx-proxy-manager.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/vlc.xml...Success
+Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/krusader.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/cloudberry-backup.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/avidemux.xml...Success
 Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/thunderbird.xml...Success
@@ -19871,8 +19862,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-ghomashudson/jellyfin-auto-collections
-ghcr.io/ghomashudson/jellyfin-auto-collections:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -19930,6 +19919,10 @@ ghcr.io/ghomashudson/jellyfin-auto-collections:latest Downloads:   Stars:   Base
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+jlesage/krusader
+jlesage/krusader Downloads: 35  Stars: 0  Base: unknown
+Pulling jlesage/krusader
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
