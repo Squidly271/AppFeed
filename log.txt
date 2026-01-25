@@ -3866,7 +3866,39 @@ Success
 
 Downloading ciuse99's Repository
 
-Already up to date.
+From https://github.com/giuseppe99barchetta/SuggestArr
+   411c6be..b555fe0  main       -> origin/main
+ * [new tag]         v2.1.2     -> v2.1.2
+ * [new tag]         v2.1.0     -> v2.1.0
+ * [new tag]         v2.1.1     -> v2.1.1
+Updating 411c6be..b555fe0
+Fast-forward
+ .github/workflows/docker_hub_build.yml         |   2 +
+ .github/workflows/docker_hub_build_nightly.yml |   7 +-
+ README.md                                      |   2 +-
+ api_service/app.py                             |   2 +-
+ api_service/blueprints/config/routes.py        | 178 ++++-
+ api_service/config/cron_jobs.py                |   2 +-
+ api_service/db/connection_pool.py              |  84 ++-
+ api_service/db/database_manager.py             | 109 +--
+ api_service/services/tmdb/tmdb_client.py       |   5 +-
+ api_service/test/test_connection_pool.py       |  56 +-
+ client/package.json                            |   2 +-
+ client/src/api/backgroundManager.js            |  42 --
+ client/src/api/tmdbApi.js                      |  63 +-
+ client/src/assets/styles/dashboardPage.css     | 832 +++++++++++++++++++++++
+ client/src/assets/styles/requestsPage.css      |  42 +-
+ client/src/components/AppFooter.vue            |  38 ++
+ client/src/components/DashboardPage.vue        | 896 ++++++-------------------
+ client/src/components/RequestsPage.vue         |  83 ++-
+ client/src/composables/useBackgroundImage.js   |  72 +-
+ client/src/composables/useVersionCheck.js      | 140 ++++
+ client/src/router/index.js                     |   1 +
+ client/vue.config.js                           |  16 +-
+ 22 files changed, 1782 insertions(+), 892 deletions(-)
+ delete mode 100644 client/src/api/backgroundManager.js
+ create mode 100644 client/src/assets/styles/dashboardPage.css
+ create mode 100644 client/src/composables/useVersionCheck.js
 
 Array
 (
@@ -19800,9 +19832,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-Tagged - Can't determine last update
-goauthentik/server
-ghcr.io/goauthentik/server:2025.8.1 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
