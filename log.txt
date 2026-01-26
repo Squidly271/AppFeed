@@ -14,26 +14,17 @@ Downloading Repo Info
 Downloading Nebula's Repository
 
 From https://github.com/nebula-codes/hytale_server_manager
-   e6d97da..3768d0e  main       -> origin/main
- * [new tag]         v0.3.07    -> v0.3.07
- * [new tag]         v0.3.05    -> v0.3.05
- * [new tag]         v0.3.06    -> v0.3.06
-Updating e6d97da..3768d0e
+   3768d0e..fcfa0ff  main       -> origin/main
+ * [new tag]         v0.3.10    -> v0.3.10
+ * [new tag]         v0.3.08    -> v0.3.08
+ * [new tag]         v0.3.09    -> v0.3.09
+Updating 3768d0e..fcfa0ff
 Fast-forward
- docker-compose.yml                                 |  2 +
- .../migration.sql                                  |  9 +++
- packages/server/prisma/schema.prisma               |  4 +-
- packages/server/src/adapters/JavaServerAdapter.ts  |  2 +-
- packages/server/src/app.ts                         |  1 +
- packages/server/src/config.ts                      |  3 +-
- packages/server/src/index.ts                       |  6 ++
- packages/server/src/services/AlertsService.ts      |  9 ++-
- packages/server/src/services/BackupService.ts      | 35 ++++++++-
- packages/server/src/services/ConsoleService.ts     | 86 ++++++++++++++++++++--
- packages/server/src/services/ServerService.ts      | 29 +++++++-
- unraid/hytale-server-manager.xml                   |  7 +-
- 12 files changed, 173 insertions(+), 20 deletions(-)
- create mode 100644 packages/server/prisma/migrations/20260126000000_increase_filesize_to_bigint/migration.sql
+ docker-entrypoint.sh                               |  2 +-
+ .../src/pages/servers/ServerDetailPage.tsx         | 20 +++++++++++++----
+ packages/server/src/app.ts                         | 26 ++++++++++++++++++++++
+ packages/server/src/config.ts                      |  2 +-
+ 4 files changed, 44 insertions(+), 6 deletions(-)
 
 Array
 (
@@ -518,24 +509,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/sparkison/m3u-editor
-   1335ffc..4f9c7b8  master     -> origin/master
-Updating 1335ffc..4f9c7b8
-Fast-forward
- .../Commands/ReconcileProfileConnections.php       |  14 ++
- app/Console/Commands/RegisterM3uProxyWebhook.php   |   8 +-
- app/Filament/Resources/Epgs/EpgResource.php        |  19 ++-
- app/Http/Controllers/XtreamApiController.php       |  12 +-
- app/Jobs/RefreshPlaylistProfiles.php               |   6 +-
- app/Models/Epg.php                                 |   1 +
- app/Services/M3uProxyService.php                   |  78 +++++++---
- app/Services/ProfileService.php                    |   6 +-
- app/Services/SchedulesDirectService.php            | 173 ++++++++++++++++++---
- app/Services/XtreamService.php                     |  11 +-
- .../2026_01_26_071539_add_sd_debug_to_epgs.php     |  28 ++++
- routes/console.php                                 |   2 +-
- 12 files changed, 284 insertions(+), 74 deletions(-)
- create mode 100644 database/migrations/2026_01_26_071539_add_sd_debug_to_epgs.php
+Already up to date.
 
 Array
 (
@@ -3905,7 +3879,16 @@ Success
 
 Downloading ciuse99's Repository
 
-Already up to date.
+From https://github.com/giuseppe99barchetta/SuggestArr
+   b555fe0..ebe09b0  main       -> origin/main
+ * [new tag]         v2.1.3     -> v2.1.3
+Updating b555fe0..ebe09b0
+Fast-forward
+ api_service/blueprints/config/routes.py  | 31 -----------------------------
+ api_service/services/plex/plex_client.py | 34 +++++++++++++++++++++++++-------
+ client/package.json                      |  2 +-
+ client/src/components/RequestsPage.vue   |  5 -----
+ 4 files changed, 28 insertions(+), 44 deletions(-)
 
 Array
 (
@@ -19869,8 +19852,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-ikoyhn/clean-cast
-ikoyhn/clean-cast Downloads: 863  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19906,6 +19887,8 @@ ikoyhn/clean-cast Downloads: 863  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/vscodium-web
+lscr.io/linuxserver/vscodium-web Downloads: 1211  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20025,6 +20008,8 @@ ikoyhn/clean-cast Downloads: 863  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+codeberg.org/readeck/readeck
+codeberg.org/readeck/readeck:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
@@ -20043,6 +20028,9 @@ ikoyhn/clean-cast Downloads: 863  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+Tagged - Can't determine last update
+nodiaque/steamcmd
+nodiaque/steamcmd:enshrouded_proton Downloads: 13931  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 129
