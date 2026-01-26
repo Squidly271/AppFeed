@@ -13,7 +13,23 @@ Downloading Repo Info
 
 Downloading Nebula's Repository
 
-Already up to date.
+From https://github.com/nebula-codes/hytale_server_manager
+   fcfa0ff..987c4d4  main       -> origin/main
+ * [new tag]         v0.3.13    -> v0.3.13
+ * [new tag]         v0.3.11    -> v0.3.11
+ * [new tag]         v0.3.12    -> v0.3.12
+Updating fcfa0ff..987c4d4
+Fast-forward
+ docker-compose.yml                            |   4 +-
+ package.json                                  |   3 +-
+ packages/server/package.json                  |   6 +-
+ packages/server/src/config.ts                 |   2 +-
+ packages/server/src/services/BackupService.ts | 110 ++++++++++++++++++--------
+ pnpm-lock.yaml                                | 105 ++++++++++++++++--------
+ unraid/Hytale_Icon.png                        | Bin 0 -> 50699 bytes
+ unraid/hytale-server-manager.xml              |   4 +-
+ 8 files changed, 157 insertions(+), 77 deletions(-)
+ create mode 100644 unraid/Hytale_Icon.png
 
 Array
 (
@@ -239,7 +255,13 @@ Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tr
 
 Downloading Indemnity83's Repository
 
-Already up to date.
+From https://github.com/Indemnity83/always-bring-a-gift
+   884cee2..0cbf177  main       -> origin/main
+Updating 884cee2..0cbf177
+Fast-forward
+ composer.json |   2 +-
+ composer.lock | 232 +++++++++++++++++++++++++++++-----------------------------
+ 2 files changed, 117 insertions(+), 117 deletions(-)
 
 Array
 (
@@ -535,67 +557,16 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   8ed69cb..9bc4233  main       -> origin/main
-Updating 8ed69cb..9bc4233
+   9bc4233..7d8bfe8  main          -> origin/main
+ * [new tag]         v3.3.0-beta.3 -> v3.3.0-beta.3
+Updating 9bc4233..7d8bfe8
 Fast-forward
- CLAUDE.md                                          |  33 +
- client/src/components/settings/tabs/ContentTab.jsx |   7 +-
- server/controllers/library/performers.ts           |   9 +-
- server/controllers/library/studios.ts              |  18 +-
- server/controllers/library/tags.ts                 |  16 +-
- server/controllers/proxy.ts                        |  36 +-
- server/controllers/setup.ts                        |  13 +-
- server/controllers/watchHistory.ts                 |   3 +-
- server/graphql/StashClient.ts                      |   4 +
- server/graphql/generated/graphql.ts                |  17 +
- server/graphql/operations/version.graphql          |   7 +
- .../integration/api/galleries.integration.test.ts  |   4 +-
- .../api/gallery-filters.integration.test.ts        |  17 +-
- server/integration/api/groups.integration.test.ts  |   4 +-
- .../api/image-filters.integration.test.ts          |   4 +-
- .../api/multi-instance.integration.test.ts         | 667 ++++++++++++++++
- .../api/pagination-edge-cases.integration.test.ts  |   4 +-
- .../integration/api/performers.integration.test.ts |   4 +-
- server/integration/api/scenes.integration.test.ts  |   4 +-
- .../api/studio-filters.integration.test.ts         |  13 +-
- server/integration/api/studios.integration.test.ts |  13 +-
- server/integration/api/tags.integration.test.ts    |  34 +-
- server/integration/helpers/globalSetup.ts          |  15 +-
- server/integration/helpers/testClient.ts           |  52 ++
- .../migration.sql                                  | 852 +++++++++++++++++++++
- .../migration.sql                                  |  11 +
- server/prisma/schema.prisma                        | 300 ++++----
- server/scripts/compute-rankings.ts                 |   3 +-
- server/services/ClipService.ts                     |  25 +-
- server/services/DownloadService.ts                 |   6 +-
- server/services/GalleryQueryBuilder.ts             |  59 +-
- server/services/GroupQueryBuilder.ts               |  44 +-
- server/services/ImageQueryBuilder.ts               |  68 +-
- server/services/MergeReconciliationService.ts      |   3 +-
- server/services/PerformerQueryBuilder.ts           |  40 +-
- server/services/PlaylistZipService.ts              |   6 +-
- server/services/SceneQueryBuilder.ts               | 120 ++-
- server/services/StashEntityService.ts              | 114 +--
- server/services/StashInstanceManager.ts            |  11 +
- server/services/StashSyncService.ts                | 513 ++++++-------
- server/services/StudioQueryBuilder.ts              |  37 +-
- server/services/TagQueryBuilder.ts                 |  41 +-
- server/services/TimelineService.ts                 |  14 +-
- server/services/UserStatsAggregationService.ts     |  73 +-
- server/tests/services/DownloadService.test.ts      |  12 +-
- .../ImageGalleryInheritanceService.test.ts         |   8 +-
- server/tests/services/ImageQueryBuilder.test.ts    |  43 +-
- .../services/MergeReconciliationService.test.ts    |   6 +-
- .../services/SceneTagInheritanceService.test.ts    |  14 +-
- .../services/StashSyncService.cleanup.test.ts      |   6 +-
- server/types/api/setup.ts                          |   1 +
- server/utils/entityInstanceId.ts                   | 100 ++-
- server/utils/queryBuilders.ts                      |  48 +-
- 53 files changed, 2806 insertions(+), 770 deletions(-)
- create mode 100644 server/graphql/operations/version.graphql
- create mode 100644 server/integration/api/multi-instance.integration.test.ts
- create mode 100644 server/prisma/migrations/20260126000000_composite_entity_keys/migration.sql
- create mode 100644 server/prisma/migrations/20260126010000_add_studio_instance_id_to_images/migration.sql
+ client/package.json                                |   2 +-
+ server/package.json                                |   2 +-
+ .../migration.sql                                  |   3 +
+ .../migration.sql                                  | 141 ++++++++++++++++++++-
+ server/services/ImageGalleryInheritanceService.ts  |  70 +++++-----
+ 5 files changed, 175 insertions(+), 43 deletions(-)
 
 Array
 (
@@ -16211,17 +16182,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   be5f078..3160bff  main       -> origin/main
-Updating be5f078..3160bff
-Fast-forward
- automation/change_monitoring/data.json | 14 ++++++++++-
- templates/huntorr.xml                  | 43 ++++++++++++++++++++++++++++++++++
- templates/radicale.xml                 | 37 +++++++++++++++++++++++++++++
- templates/radicle.xml                  |  2 +-
- 4 files changed, 94 insertions(+), 2 deletions(-)
- create mode 100644 templates/huntorr.xml
- create mode 100644 templates/radicale.xml
+Already up to date.
 
 Array
 (
@@ -19902,16 +19863,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-mpgirro/docker-pihole-unbound
-mpgirro/docker-pihole-unbound Downloads: 44328  Stars: 4  Base: unknown
-ghcr.io/wg-easy
-ghcr.io/wg-easy Downloads:   Stars:   Base: unknown
-riddix/lidarr-deemix
-ghcr.io/riddix/lidarr-deemix:latest Downloads:   Stars:   Base: unknown
-nicolashaas/golang-kanban
-ghcr.io/nicolashaas/golang-kanban:latest Downloads:   Stars:   Base: unknown
-plantuml/plantuml-server
-plantuml/plantuml-server:latest Downloads: 49294804  Stars: 204  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -20077,20 +20028,6 @@ plantuml/plantuml-server:latest Downloads: 49294804  Stars: 204  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-kozea/radicale
-ghcr.io/kozea/radicale:stable Downloads: 77  Stars: 0  Base: unknown
-Pulling ghcr.io/kozea/radicale:stable
-localstack/localstack-pro
-localstack/localstack-pro:latest Downloads: 3206774  Stars: 43  Base: unknown
-galexjunk/emoncms
-galexjunk/emoncms:latest Downloads:   Stars:   Base: unknown
-localstack/localstack
-localstack/localstack:latest Downloads: 408636685  Stars: 341  Base: unknown
-thewicklowwolf/huntorr
-thewicklowwolf/huntorr:latest Downloads: 853  Stars: 0  Base: unknown
-Pulling thewicklowwolf/huntorr:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
