@@ -47,7 +47,14 @@ Processing /tmp/GitHub/repositoryClone/CaptainPimpJr/Unraid-Community-Applicatio
 
 Downloading Maikboarder's Repository
 
-Already up to date.
+From https://github.com/Maikboarder/Playerr
+   e4edca6..fcff80e  master     -> origin/master
+ * [new tag]         v0.4.6     -> v0.4.6
+Updating e4edca6..fcff80e
+Fast-forward
+ RELEASE_NOTES.md                  | 67 ++-------------------------------------
+ frontend/src/i18n/translations.ts | 49 ++++++++++++++++++++--------
+ 2 files changed, 37 insertions(+), 79 deletions(-)
 
 Array
 (
@@ -462,99 +469,7 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-From https://github.com/ruaan-deysel/unraid-management-agent
-   974ae52..9144612  main       -> origin/main
- * [new tag]         v2026.01.02 -> v2026.01.02
-Updating 974ae52..9144612
-Fast-forward
- .devcontainer/Dockerfile                           |   11 +-
- .devcontainer/README.md                            |  263 ++++
- .devcontainer/docker-compose.yml                   |   43 +-
- .devcontainer/mosquitto.conf                       |   32 +
- .github/copilot-instructions.md                    |  109 +-
- .golangci.yml                                      |   82 +-
- .pre-commit-config.yaml                            |   15 +-
- CHANGELOG.md                                       |  216 +--
- CLAUDE.md                                          |   44 +-
- CONTRIBUTING.md                                    |   15 +-
- GEMINI.md                                          |  160 +++
- README.md                                          |  158 ++-
- SECURITY.md                                        |    2 -
- SECURITY_FIX_PATH_TRAVERSAL.md                     |  226 ---
- VERSION                                            |    2 +-
- daemon/constants/const.go                          |   24 +
- daemon/docs/docs.go                                |  985 ++++++++++++-
- daemon/docs/swagger.go                             |    4 +
- daemon/docs/swagger.json                           |  985 ++++++++++++-
- daemon/docs/swagger.yaml                           |  677 +++++++++
- daemon/domain/config.go                            |   81 ++
- daemon/domain/context.go                           |    5 +-
- daemon/dto/disk.go                                 |    5 +
- daemon/dto/mqtt.go                                 |  142 ++
- daemon/dto/mqtt_test.go                            |  644 +++++++++
- daemon/dto/settings.go                             |  187 +++
- daemon/dto/share.go                                |    5 +
- daemon/services/api/handlers.go                    |  359 +++++
- daemon/services/api/metrics.go                     |  562 ++++++++
- daemon/services/api/metrics_test.go                |  263 ++++
- daemon/services/api/server.go                      |   34 +
- daemon/services/collectors/disk.go                 |   15 +
- daemon/services/collectors/docker.go               |    3 +-
- daemon/services/collectors/nut.go                  |    2 +-
- daemon/services/collectors/settings.go             | 1090 +++++++++++++++
- daemon/services/collectors/settings_test.go        |  815 +++++++++++
- daemon/services/collectors/share.go                |   44 +-
- daemon/services/collectors/vm.go                   |    4 +-
- daemon/services/collectors/zfs.go                  |    2 +-
- daemon/services/controllers/docker.go              |    3 +-
- daemon/services/controllers/vm.go                  |   14 +-
- daemon/services/mcp/server.go                      |    8 +-
- daemon/services/mcp/transport.go                   |    4 +-
- daemon/services/mqtt/client.go                     |  534 +++++++
- daemon/services/mqtt/client_test.go                |  580 ++++++++
- daemon/services/orchestrator.go                    |  152 +-
- docs/DIAGNOSTIC_COMMANDS.md                        |  380 -----
- docs/QUICK_REFERENCE_DEPENDENCIES.md               |  228 ---
- docs/README.md                                     |  294 ----
- docs/SYSTEM_REQUIREMENTS_AND_DEPENDENCIES.md       |  249 ----
- docs/api/API_REFERENCE.md                          |  446 +++++-
- docs/integrations/GRAFANA.md                       |  922 ------------
- docs/integrations/README.md                        |   66 -
- .../unraid-system-monitor-dashboard.json           | 1464 --------------------
- docs/{ => mcp}/MCP_INTEGRATION.md                  |    0
- go.mod                                             |   68 +-
- go.sum                                             |  190 +--
- main.go                                            |   31 +
- meta/template/unraid-management-agent.plg          |   24 +-
- scripts/cleanup-backups.sh                         |  104 --
- scripts/mqtt-test.sh                               |   97 ++
- scripts/validate-live.sh                           |   21 +-
- unraid-management-agent.plg                        |   24 +-
- unraid-management-agent.xml                        |    2 +-
- 64 files changed, 9877 insertions(+), 4343 deletions(-)
- create mode 100644 .devcontainer/README.md
- create mode 100644 .devcontainer/mosquitto.conf
- create mode 100644 GEMINI.md
- delete mode 100644 SECURITY_FIX_PATH_TRAVERSAL.md
- create mode 100644 daemon/dto/mqtt.go
- create mode 100644 daemon/dto/mqtt_test.go
- create mode 100644 daemon/dto/settings.go
- create mode 100644 daemon/services/api/metrics.go
- create mode 100644 daemon/services/api/metrics_test.go
- create mode 100644 daemon/services/collectors/settings.go
- create mode 100644 daemon/services/collectors/settings_test.go
- create mode 100644 daemon/services/mqtt/client.go
- create mode 100644 daemon/services/mqtt/client_test.go
- delete mode 100644 docs/DIAGNOSTIC_COMMANDS.md
- delete mode 100644 docs/QUICK_REFERENCE_DEPENDENCIES.md
- delete mode 100644 docs/README.md
- delete mode 100644 docs/SYSTEM_REQUIREMENTS_AND_DEPENDENCIES.md
- delete mode 100644 docs/integrations/GRAFANA.md
- delete mode 100644 docs/integrations/README.md
- delete mode 100644 docs/integrations/unraid-system-monitor-dashboard.json
- rename docs/{ => mcp}/MCP_INTEGRATION.md (100%)
- delete mode 100755 scripts/cleanup-backups.sh
- create mode 100755 scripts/mqtt-test.sh
+Already up to date.
 
 Array
 (
@@ -2077,12 +1992,7 @@ Processing /tmp/GitHub/repositoryClone/alexycodes/unraid-docker-templates/ca_pro
 
 Downloading Rysz's Repository
 
-From https://github.com/desertwitch/unraid-plugins
-   917d38f..052760e  main       -> origin/main
-Updating 917d38f..052760e
-Fast-forward
- dwpar2cron.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -4668,7 +4578,9 @@ Array
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/Peuuuur-Noel/unraid-templates/ca_profile.xml...FOUND PROFILE
-Processing /tmp/GitHub/repositoryClone/Peuuuur-Noel/unraid-templates/web-push-notification.xml... Downloading https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/Peuuuur-Noel/unraid-templates/web-push-notification.xml... Downloading https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...bool(false)
+out: int(56)
+error: failed.  Sleeping 5... Downloading https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 2...Success
 
 
 Downloading J000K3R's Repository
@@ -7909,139 +7821,7 @@ Processing /tmp/GitHub/repositoryClone/Tautulli/Tautulli-Unraid-Template/tautull
 
 Downloading JBartlett's Repository
 
-From https://github.com/jbartlett777/DiskSpeed
-   4e1c4bd..1b25e99  master     -> origin/master
-Updating 4e1c4bd..1b25e99
-Fast-forward
- diskspeed_injest/Application.cfm           |  13 +
- diskspeed_injest/CheckHDDB.cfm             |  36 ++
- diskspeed_injest/CheckHDDB_Benchmarks.cfm  |  30 ++
- diskspeed_injest/CustomFunctions.cfm       |  46 ++
- diskspeed_injest/FetchDriveImages1.cfm     |  95 ++++
- diskspeed_injest/FetchDriveImages2.cfm     | 119 +++++
- diskspeed_injest/FetchDriveImages2.cfm.bak | 116 +++++
- diskspeed_injest/FetchDriveImages2_mod.cfm | 129 +++++
- diskspeed_injest/GetBenchmarks.cfm         |  79 +++
- diskspeed_injest/GetPlatterInfo.cfm        |  85 ++++
- diskspeed_injest/HardDrive.png             | Bin 0 -> 3742 bytes
- diskspeed_injest/ListModels.cfm            |  15 +
- diskspeed_injest/NoDriveFound.png          | Bin 0 -> 42703 bytes
- diskspeed_injest/SubmitDrive.cfm           |  55 +++
- diskspeed_injest/SubmitDriveCleanup.cfm    | 137 ++++++
- diskspeed_injest/SubmitDriveData.cfm       | 142 ++++++
- diskspeed_injest/SubmitDriveData2.cfm      | 129 +++++
- diskspeed_injest/SubmitDriveData3.cfm      | 120 +++++
- diskspeed_injest/VendorList.cfm            |  16 +
- diskspeed_injest/import.cfm                |  26 +
- diskspeed_injest/index.cfm                 | 155 ++++++
- diskspeed_injest/index2.cfm                |   3 +
- diskspeed_injest/pluginimg.cfm             |   2 +
- diskspeed_injest/smart.cfm                 |  32 ++
- diskspeed_injest/smart_parse.cfm           | 257 ++++++++++
- hddb/Application.cfm                       |  11 +
- hddb/BrandImages.cfm                       |  31 ++
- hddb/BrandImages/BrandImages.cfm           | 156 ++++++
- hddb/BrandImages2.cfm                      | 134 ++++++
- hddb/CustomFunctions.cfm                   |  57 +++
- hddb/Drives/DispModelInfo.cfm              | 347 ++++++++++++++
- hddb/Drives/DispModelInfoGraph.cfm         |  90 ++++
- hddb/Drives/DispModelInfoHeatmap.cfm       |  88 ++++
- hddb/Drives/DispModelInfoParallel.cfm      | 100 ++++
- hddb/Drives/Drives.cfm                     | 108 +++++
- hddb/Footers/Footer.cfm                    |   4 +
- hddb/GlobalHTMLFix.cfm                     |  12 +
- hddb/Headers/Header.cfm                    | 117 +++++
- hddb/Home/Home.cfm                         | 204 ++++++++
- hddb/ModelDatabase.cfm                     |  45 ++
- hddb/ModelDatabase2.cfm                    |  84 ++++
- hddb/Templates/404.css                     |  35 ++
- hddb/Templates/404.html                    |  73 +++
- hddb/Templates/back-blaze-data.css         |  13 +
- hddb/Templates/back-blaze-data.html        |  64 +++
- hddb/Templates/brand-images-2.css          |  30 ++
- hddb/Templates/brand-images-2.html         |  82 ++++
- hddb/Templates/brand-images.css            | 173 +++++++
- hddb/Templates/brand-images.html           |  99 ++++
- hddb/Templates/index.css                   | 406 ++++++++++++++++
- hddb/Templates/index.html                  | 228 +++++++++
- hddb/Templates/model-database-2.css        |  75 +++
- hddb/Templates/model-database-2.html       |  91 ++++
- hddb/Templates/model-database.css          | 166 +++++++
- hddb/Templates/model-database.html         | 102 ++++
- hddb/Templates/package.json                |  10 +
- hddb/Templates/style.css                   | 745 +++++++++++++++++++++++++++++
- hddb/environment.cfm                       |  10 +
- hddb/images/OGPreview.png                  | Bin 0 -> 309604 bytes
- hddb/images/hddb_banner.png                | Bin 0 -> 1203917 bytes
- hddb/includes/highcharts-3d.js             |  96 ++++
- hddb/includes/highcharts-more.js           | 170 +++++++
- hddb/includes/highcharts.js                | 536 +++++++++++++++++++++
- hddb/index.cfm                             | 132 +++++
- 64 files changed, 6761 insertions(+)
- create mode 100644 diskspeed_injest/Application.cfm
- create mode 100644 diskspeed_injest/CheckHDDB.cfm
- create mode 100644 diskspeed_injest/CheckHDDB_Benchmarks.cfm
- create mode 100644 diskspeed_injest/CustomFunctions.cfm
- create mode 100644 diskspeed_injest/FetchDriveImages1.cfm
- create mode 100644 diskspeed_injest/FetchDriveImages2.cfm
- create mode 100644 diskspeed_injest/FetchDriveImages2.cfm.bak
- create mode 100644 diskspeed_injest/FetchDriveImages2_mod.cfm
- create mode 100644 diskspeed_injest/GetBenchmarks.cfm
- create mode 100644 diskspeed_injest/GetPlatterInfo.cfm
- create mode 100644 diskspeed_injest/HardDrive.png
- create mode 100644 diskspeed_injest/ListModels.cfm
- create mode 100644 diskspeed_injest/NoDriveFound.png
- create mode 100644 diskspeed_injest/SubmitDrive.cfm
- create mode 100644 diskspeed_injest/SubmitDriveCleanup.cfm
- create mode 100644 diskspeed_injest/SubmitDriveData.cfm
- create mode 100644 diskspeed_injest/SubmitDriveData2.cfm
- create mode 100644 diskspeed_injest/SubmitDriveData3.cfm
- create mode 100644 diskspeed_injest/VendorList.cfm
- create mode 100644 diskspeed_injest/import.cfm
- create mode 100644 diskspeed_injest/index.cfm
- create mode 100644 diskspeed_injest/index2.cfm
- create mode 100644 diskspeed_injest/pluginimg.cfm
- create mode 100644 diskspeed_injest/smart.cfm
- create mode 100644 diskspeed_injest/smart_parse.cfm
- create mode 100644 hddb/Application.cfm
- create mode 100644 hddb/BrandImages.cfm
- create mode 100644 hddb/BrandImages/BrandImages.cfm
- create mode 100644 hddb/BrandImages2.cfm
- create mode 100644 hddb/CustomFunctions.cfm
- create mode 100644 hddb/Drives/DispModelInfo.cfm
- create mode 100644 hddb/Drives/DispModelInfoGraph.cfm
- create mode 100644 hddb/Drives/DispModelInfoHeatmap.cfm
- create mode 100644 hddb/Drives/DispModelInfoParallel.cfm
- create mode 100644 hddb/Drives/Drives.cfm
- create mode 100644 hddb/Footers/Footer.cfm
- create mode 100644 hddb/GlobalHTMLFix.cfm
- create mode 100644 hddb/Headers/Header.cfm
- create mode 100644 hddb/Home/Home.cfm
- create mode 100644 hddb/ModelDatabase.cfm
- create mode 100644 hddb/ModelDatabase2.cfm
- create mode 100644 hddb/Templates/404.css
- create mode 100644 hddb/Templates/404.html
- create mode 100644 hddb/Templates/back-blaze-data.css
- create mode 100644 hddb/Templates/back-blaze-data.html
- create mode 100644 hddb/Templates/brand-images-2.css
- create mode 100644 hddb/Templates/brand-images-2.html
- create mode 100644 hddb/Templates/brand-images.css
- create mode 100644 hddb/Templates/brand-images.html
- create mode 100644 hddb/Templates/index.css
- create mode 100644 hddb/Templates/index.html
- create mode 100644 hddb/Templates/model-database-2.css
- create mode 100644 hddb/Templates/model-database-2.html
- create mode 100644 hddb/Templates/model-database.css
- create mode 100644 hddb/Templates/model-database.html
- create mode 100644 hddb/Templates/package.json
- create mode 100644 hddb/Templates/style.css
- create mode 100644 hddb/environment.cfm
- create mode 100644 hddb/images/OGPreview.png
- create mode 100644 hddb/images/hddb_banner.png
- create mode 100644 hddb/includes/highcharts-3d.js
- create mode 100644 hddb/includes/highcharts-more.js
- create mode 100644 hddb/includes/highcharts.js
- create mode 100644 hddb/index.cfm
+Already up to date.
 
 Array
 (
@@ -16379,7 +16159,12 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   3160bff..a8144f7  main       -> origin/main
+Updating 3160bff..a8144f7
+Fast-forward
+ automation/change_monitoring/data.json | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
 
 Array
 (
@@ -20087,8 +19872,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
-steveharsant/purgarr
-ghcr.io/steveharsant/purgarr Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -20187,8 +19970,6 @@ ghcr.io/steveharsant/purgarr Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-agent0ai/agent-zero
-agent0ai/agent-zero:latest Downloads: 73641  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20230,24 +20011,6 @@ agent0ai/agent-zero:latest Downloads: 73641  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-dockerswarmvisualizer/dockerswarmvisualizer
-dockerswarmvisualizer/dockerswarmvisualizer:latest Downloads: 420  Stars: 0  Base: unknown
-switchbota/switchbota-server
-ghcr.io/kendallgoto/switchbota/switchbota-server:latest Downloads:   Stars:   Base: unknown
-containeroo/syncflaer
-ghcr.io/containeroo/syncflaer:latest Downloads: 48763  Stars: 1  Base: unknown
-tamland/airsonic-refix
-tamland/airsonic-refix:latest Downloads: 309534  Stars: 0  Base: unknown
-codewithcj/sparkyfitness
-codewithcj/sparkyfitness:latest Downloads: 190940  Stars: 0  Base: unknown
-codewithcj/sparkyfitness_server
-codewithcj/sparkyfitness_server:latest Downloads: 192555  Stars: 0  Base: unknown
-m-rots/a-train
-ghcr.io/m-rots/a-train:latest Downloads:   Stars:   Base: unknown
-asalimonov/authelia-admin
-ghcr.io/asalimonov/authelia-admin:latest Downloads:   Stars:   Base: unknown
-cloudb0x/autoscan
-cloudb0x/autoscan:latest Downloads: 2562725  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
