@@ -140,7 +140,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   f5e57ee..ba4b29d  main       -> origin/main
+Updating f5e57ee..ba4b29d
+Fast-forward
+ components/ModelViewer.tsx | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -498,45 +503,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/sparkison/m3u-editor
-   4f9c7b8..09068ea  master     -> origin/master
-Updating 4f9c7b8..09068ea
-Fast-forward
- .../Commands/RefreshEpgSchedulesDirectData.php     |   8 +-
- .../Commands/TestSchedulesDirectCommand.php        |  10 +-
- app/Enums/EpgSourceType.php                        |   2 +-
- .../Resources/Channels/ChannelResource.php         | 112 +++++++---
- .../Resources/Channels/Pages/ListChannels.php      |  28 ++-
- app/Filament/Resources/EpgMaps/EpgMapResource.php  |   7 +
- .../Resources/EpgMaps/Pages/ListEpgMaps.php        |  29 +++
- app/Filament/Resources/Epgs/EpgResource.php        |  24 +--
- .../Resources/Playlists/PlaylistResource.php       |   9 +-
- app/Http/Controllers/EpgFileController.php         |   2 +-
- .../SchedulesDirectImageProxyController.php        |  16 +-
- app/Jobs/MapPlaylistChannelsToEpg.php              |  10 +-
- app/Jobs/MapPlaylistChannelsToEpgChunk.php         |   7 +
- app/Jobs/ProcessEpgImport.php                      |  12 +-
- app/Jobs/ProcessEpgSDImport.php                    |  14 +-
- app/Jobs/ProcessM3uImport.php                      |   3 +-
- app/Jobs/ProcessVodChannels.php                    |   5 +-
- app/Jobs/ProcessVodChannelsChunk.php               |   5 +-
- app/Models/Channel.php                             |   1 +
- app/Models/Playlist.php                            |   2 +
- app/Models/Series.php                              |   4 +-
- app/Models/StrmFileMapping.php                     |  30 +++
- app/Providers/AppServiceProvider.php               |   2 +-
- app/Services/PlaylistService.php                   |  28 +--
- app/Services/SchedulesDirectService.php            |  50 ++---
- composer.lock                                      | 104 +++++-----
- ...00001_add_enable_series_toggle_to_playlists.php |  24 +++
- ...01_26_085249_add_epg_map_bypass_to_channels.php |  28 +++
- package-lock.json                                  | 230 +++++++++++++--------
- package.json                                       |   2 +-
- tests/Feature/FetchTmdbIdsTest.php                 |  18 +-
- tests/Feature/ProviderRequestDelayTest.php         |  62 +++---
- 32 files changed, 587 insertions(+), 301 deletions(-)
- create mode 100644 database/migrations/2026_01_25_000001_add_enable_series_toggle_to_playlists.php
- create mode 100644 database/migrations/2026_01_26_085249_add_epg_map_bypass_to_channels.php
+Already up to date.
 
 Array
 (
@@ -573,17 +540,15 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   7d8bfe8..aa05e96  main          -> origin/main
- * [new tag]         v3.3.0-beta.4 -> v3.3.0-beta.4
-Updating 7d8bfe8..aa05e96
+   aa05e96..6c5b8bc  main          -> origin/main
+ * [new tag]         v3.3.0-beta.5 -> v3.3.0-beta.5
+Updating aa05e96..6c5b8bc
 Fast-forward
- client/package.json                 |   2 +-
- server/controllers/proxy.ts         |   3 +-
- server/package.json                 |   2 +-
- server/services/ClipQueryBuilder.ts | 518 ++++++++++++++++++++++++++++++++++++
- server/services/ClipService.ts      | 211 ++-------------
- 5 files changed, 543 insertions(+), 193 deletions(-)
- create mode 100644 server/services/ClipQueryBuilder.ts
+ client/package.json                  |   2 +-
+ server/controllers/library/scenes.ts |   7 +-
+ server/package.json                  |   2 +-
+ server/services/SceneQueryBuilder.ts | 236 ++++++++++++++++++++++++++---------
+ 4 files changed, 186 insertions(+), 61 deletions(-)
 
 Array
 (
@@ -3917,7 +3882,25 @@ Success
 
 Downloading ciuse99's Repository
 
-Already up to date.
+From https://github.com/giuseppe99barchetta/SuggestArr
+   ebe09b0..158b3d3  main       -> origin/main
+ * [new tag]         v2.1.4     -> v2.1.4
+Updating ebe09b0..158b3d3
+Fast-forward
+ api_service/blueprints/plex/routes.py              |   34 +-
+ api_service/db/database_manager.py                 |   41 +-
+ api_service/handler/jellyfin_handler.py            |   66 +-
+ api_service/services/jellyfin/jellyfin_client.py   |  113 +-
+ client/package.json                                |    2 +-
+ client/src/assets/styles/dashboardPage.css         |  307 +++++-
+ client/src/components/ConfigWizard.vue             |  402 ++-----
+ .../src/components/configWizard/JellyfinConfig.vue | 1093 ++++++++++++++++----
+ client/src/components/configWizard/PlexConfig.vue  |   10 +-
+ client/src/components/configWizard/SeerConfig.vue  |   47 +-
+ client/src/components/configWizard/TmdbConfig.vue  |  485 ++++++---
+ .../src/components/settings/SettingsServices.vue   |    8 +-
+ client/src/components/wizard/WizardCompletion.vue  |  109 +-
+ 13 files changed, 1901 insertions(+), 816 deletions(-)
 
 Array
 (
