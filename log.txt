@@ -140,12 +140,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   f5e57ee..ba4b29d  main       -> origin/main
-Updating f5e57ee..ba4b29d
-Fast-forward
- components/ModelViewer.tsx | 16 +++++++++++++++-
- 1 file changed, 15 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -225,20 +220,31 @@ Processing /tmp/GitHub/repositoryClone/jandrop/file_core_api_unraid/file-manager
 
 Downloading Gallapagos' Repository
 
-Already up to date.
+From https://github.com/connorgallopo/tracearr-unraid-template
+   599e032..d5f6301  main       -> origin/main
+Updating 599e032..d5f6301
+Fast-forward
+ README.md                                   | 2 ++
+ ca_profile.xml                              | 9 +++++++++
+ tracearr-supervised/tracearr-supervised.xml | 8 ++++++--
+ tracearr/tracearr.xml                       | 9 +++++++--
+ 4 files changed, 24 insertions(+), 4 deletions(-)
+ create mode 100644 ca_profile.xml
 
 Array
 (
     [https://github.com/connorgallopo/tracearr-unraid-template] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tracearr/tracearr.xml
-            [1] => /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tracearr-supervised/tracearr-supervised.xml
+            [1] => /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/ca_profile.xml
+            [2] => /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tracearr-supervised/tracearr-supervised.xml
         )
 
 )
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tracearr/tracearr.xml...Success
+Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tracearr-supervised/tracearr-supervised.xml...Success
 
 
@@ -540,15 +546,25 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   aa05e96..6c5b8bc  main          -> origin/main
- * [new tag]         v3.3.0-beta.5 -> v3.3.0-beta.5
-Updating aa05e96..6c5b8bc
+   6c5b8bc..daed6f0  main       -> origin/main
+Updating 6c5b8bc..daed6f0
 Fast-forward
- client/package.json                  |   2 +-
- server/controllers/library/scenes.ts |   7 +-
- server/package.json                  |   2 +-
- server/services/SceneQueryBuilder.ts | 236 ++++++++++++++++++++++++++---------
- 4 files changed, 186 insertions(+), 61 deletions(-)
+ server/controllers/playlist.ts                     |   2 +-
+ server/controllers/video.ts                        |   2 +-
+ server/controllers/watchHistory.ts                 |   7 +-
+ server/integration/api/scenes.integration.test.ts  |  22 +-
+ .../migration.sql                                  | 385 +++++++++++++++++++++
+ server/prisma/schema.prisma                        | 157 +++++----
+ server/services/ImageQueryBuilder.ts               |  90 +++--
+ server/services/SceneQueryBuilder.ts               |  32 +-
+ server/services/StashSyncService.ts                | 214 ++++++++----
+ server/tests/controllers/watchHistory.test.ts      |  11 +-
+ .../services/MergeReconciliationService.test.ts    |  15 +
+ .../services/StashSyncService.cleanup.test.ts      |  21 +-
+ .../tests/services/StashSyncService.unit.test.ts   |  24 +-
+ server/utils/entityInstanceId.ts                   | 153 ++++++--
+ 14 files changed, 895 insertions(+), 240 deletions(-)
+ create mode 100644 server/prisma/migrations/20260127000000_remove_default_instance_fallbacks/migration.sql
 
 Array
 (
@@ -3883,24 +3899,14 @@ Success
 Downloading ciuse99's Repository
 
 From https://github.com/giuseppe99barchetta/SuggestArr
-   ebe09b0..158b3d3  main       -> origin/main
- * [new tag]         v2.1.4     -> v2.1.4
-Updating ebe09b0..158b3d3
+   158b3d3..55684df  main       -> origin/main
+ * [new tag]         v2.1.5     -> v2.1.5
+Updating 158b3d3..55684df
 Fast-forward
- api_service/blueprints/plex/routes.py              |   34 +-
- api_service/db/database_manager.py                 |   41 +-
- api_service/handler/jellyfin_handler.py            |   66 +-
- api_service/services/jellyfin/jellyfin_client.py   |  113 +-
- client/package.json                                |    2 +-
- client/src/assets/styles/dashboardPage.css         |  307 +++++-
- client/src/components/ConfigWizard.vue             |  402 ++-----
- .../src/components/configWizard/JellyfinConfig.vue | 1093 ++++++++++++++++----
- client/src/components/configWizard/PlexConfig.vue  |   10 +-
- client/src/components/configWizard/SeerConfig.vue  |   47 +-
- client/src/components/configWizard/TmdbConfig.vue  |  485 ++++++---
- .../src/components/settings/SettingsServices.vue   |    8 +-
- client/src/components/wizard/WizardCompletion.vue  |  109 +-
- 13 files changed, 1901 insertions(+), 816 deletions(-)
+ api_service/services/jellyfin/jellyfin_client.py | 11 ++++++--
+ api_service/services/plex/plex_client.py         | 35 ++++++++++++++++++------
+ client/package.json                              |  2 +-
+ 3 files changed, 36 insertions(+), 12 deletions(-)
 
 Array
 (
