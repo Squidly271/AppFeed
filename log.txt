@@ -158,14 +158,11 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   95aa490..a8108a5  main       -> origin/main
-Updating 95aa490..a8108a5
+   a8108a5..2152c78  main       -> origin/main
+Updating a8108a5..2152c78
 Fast-forward
- .env.example                                       |  2 +-
- docker-compose.yml                                 |  2 +
- .../migration.sql                                  | 82 ++++++++++++++++++++++
- 3 files changed, 85 insertions(+), 1 deletion(-)
- create mode 100644 prisma/migrations/20260128151129_add_default_colors/migration.sql
+ .../migration.sql                                  | 129 ++++++++++++---------
+ 1 file changed, 72 insertions(+), 57 deletions(-)
 
 Array
 (
@@ -361,7 +358,17 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   a55207d..627a7ba  main       -> origin/main
+ * [new tag]         v1.0       -> v1.0
+Updating a55207d..627a7ba
+Fast-forward
+ public/shared/admin.css             | 45 +++++++++++++++++++++
+ public/shared/scripts.js            | 80 +++++++++++++++++++++++++++----------
+ public/shared/styles.css            | 45 ++++++++++++++++-----
+ unraid/unraid-cv-manager-admin.xml  |  2 +-
+ unraid/unraid-cv-manager-public.xml |  2 +-
+ 5 files changed, 143 insertions(+), 31 deletions(-)
 
 Array
 (
@@ -375,16 +382,8 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/unraid/unraid-cv-manager-public.xml...Fatal: Name is not a string (or multiple names present)
-
-Success
-Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/unraid/unraid-cv-manager-admin.xml...Fatal: Name is not a string (or multiple names present)
-
-Duplicated Name  Fatal: Duplicated Template name - Removed from lists
-
-Fatal: Duplicated Template name - Removed from lists
-
-Removed from CA123
+Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/unraid/unraid-cv-manager-public.xml...Success
+Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/unraid/unraid-cv-manager-admin.xml...Success
 Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/sitemap.xml...Not a valid application xml
 
 
@@ -559,7 +558,18 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   6cc289f..8c56728  main           -> origin/main
+ * [new tag]         v3.3.0-beta.11 -> v3.3.0-beta.11
+Updating 6cc289f..8c56728
+Fast-forward
+ client/package.json                                |   2 +-
+ server/package.json                                |   2 +-
+ .../migration.sql                                  |  22 ++++
+ server/prisma/schema.prisma                        |  11 ++
+ server/services/StashSyncService.ts                | 114 +++++++++++++--------
+ 5 files changed, 108 insertions(+), 43 deletions(-)
+ create mode 100644 server/prisma/migrations/20260128000000_add_junction_sync_indexes/migration.sql
 
 Array
 (
@@ -3387,7 +3397,12 @@ Processing /tmp/GitHub/repositoryClone/tatseo/unraid-templates/minecraft-server/
 
 Downloading Mainfrezzer's Repository
 
-Already up to date.
+From https://github.com/Mainfrezzer/UnRaid-Templates
+   6fa3be8..64fca2c  main       -> origin/main
+Updating 6fa3be8..64fca2c
+Fast-forward
+ Pelican-Panel.xml | 1 +
+ 1 file changed, 1 insertion(+)
 
 Array
 (
@@ -19789,6 +19804,10 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
+vincentmakes/cv-manager
+vincentmakes/cv-manager:latest Downloads: 47  Stars: 0  Base: unknown
+Pulling vincentmakes/cv-manager:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
@@ -19864,6 +19883,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+rejetto/hfs
+rejetto/hfs:latest Downloads: 28743  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19880,9 +19901,27 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+pergolafabio/hikvision-doorbell
+pergolafabio/hikvision-doorbell Downloads: 24419  Stars: 2  Base: unknown
+mikejmcguire/hass-actronque-amd64
+mikejmcguire/hass-actronque-amd64 Downloads: 13753  Stars: 0  Base: unknown
+dgongut/wakebot
+dgongut/wakebot Downloads: 3519  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+mikenye/fr24feed
+mikenye/fr24feed Downloads: 2220264  Stars: 20  Base: unknown
+mikenye/adsbexchange
+mikenye/adsbexchange Downloads: 2173421  Stars: 10  Base: unknown
+mikenye/piaware
+mikenye/piaware Downloads: 2581598  Stars: 20  Base: unknown
+mikenye/readsb-protobuf
+mikenye/readsb-protobuf Downloads: 543949  Stars: 14  Base: unknown
+silverwind/droppy
+silverwind/droppy Downloads: 14383220  Stars: 30  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+binhex/arch-healarr
+ghcr.io/binhex/arch-healarr Downloads: 1046  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -19899,6 +19938,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/obsidian
+lscr.io/linuxserver/obsidian Downloads: 218659  Stars: 55  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -19981,6 +20022,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+thomst08/requestrr
+thomst08/requestrr:latest Downloads: 938252  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20018,10 +20061,18 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+epoupon/lms
+epoupon/lms:latest Downloads: 724480  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+fancybits/channels-dvr
+fancybits/channels-dvr:latest Downloads: 3275300  Stars: 18  Base: unknown
+chrisbenincasa/tunarr
+ghcr.io/chrisbenincasa/tunarr:latest Downloads: 367387  Stars: 6  Base: unknown
+digrouz/joal
+digrouz/joal Downloads: 206783  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
