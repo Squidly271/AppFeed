@@ -471,7 +471,51 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-Already up to date.
+From https://github.com/ruaan-deysel/unraid-management-agent
+   9144612..5c1b507  main       -> origin/main
+ * [new tag]         v2026.02.00 -> v2026.02.00
+Updating 9144612..5c1b507
+Fast-forward
+ CHANGELOG.md                                       |  19 +
+ README.md                                          |  48 +-
+ VERSION                                            |   2 +-
+ daemon/docs/swagger.json                           |   2 +-
+ daemon/services/collectors/disk.go                 |  83 +++
+ daemon/services/collectors/disk_test.go            | 147 +++++
+ docs/README.md                                     |  95 +++
+ docs/api/prometheus.md                             | 277 +++++++++
+ docs/api/{API_REFERENCE.md => rest-api.md}         |   0
+ .../websocket-events.md}                           |   0
+ .../websocket-structure.md}                        |   0
+ docs/development/code-quality.md                   | 439 ++++++++++++++
+ docs/guides/configuration.md                       | 397 +++++++++++++
+ docs/guides/installation.md                        | 261 +++++++++
+ docs/guides/quick-start.md                         | 232 ++++++++
+ docs/guides/system-requirements.md                 | 181 ++++++
+ docs/integrations/grafana.md                       | 368 ++++++++++++
+ docs/integrations/home-assistant.md                | 650 +++++++++++++++++++++
+ .../MCP_INTEGRATION.md => integrations/mcp.md}     |   0
+ docs/integrations/mqtt.md                          | 447 ++++++++++++++
+ docs/troubleshooting/diagnostics.md                | 407 +++++++++++++
+ meta/template/unraid-management-agent.plg          |   7 +-
+ unraid-management-agent.plg                        |   7 +-
+ unraid-management-agent.xml                        |   2 +-
+ 24 files changed, 4058 insertions(+), 13 deletions(-)
+ create mode 100644 docs/README.md
+ create mode 100644 docs/api/prometheus.md
+ rename docs/api/{API_REFERENCE.md => rest-api.md} (100%)
+ rename docs/{websocket/WEBSOCKET_EVENTS_DOCUMENTATION.md => api/websocket-events.md} (100%)
+ rename docs/{websocket/WEBSOCKET_EVENT_STRUCTURE.md => api/websocket-structure.md} (100%)
+ create mode 100644 docs/development/code-quality.md
+ create mode 100644 docs/guides/configuration.md
+ create mode 100644 docs/guides/installation.md
+ create mode 100644 docs/guides/quick-start.md
+ create mode 100644 docs/guides/system-requirements.md
+ create mode 100644 docs/integrations/grafana.md
+ create mode 100644 docs/integrations/home-assistant.md
+ rename docs/{mcp/MCP_INTEGRATION.md => integrations/mcp.md} (100%)
+ create mode 100644 docs/integrations/mqtt.md
+ create mode 100644 docs/troubleshooting/diagnostics.md
 
 Array
 (
@@ -4764,36 +4808,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   8aa1681..5fb4a70  main       -> origin/main
-Updating 8aa1681..5fb4a70
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -19883,6 +19898,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+Tagged - Can't determine last update
+getmeili/meilisearch
+getmeili/meilisearch:v1.12 Downloads: 29755411  Stars: 118  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20019,26 +20037,29 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+nicotsx/zerobyte
+ghcr.io/nicotsx/zerobyte:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-frenchgithubuser/dasharr
-ghcr.io/frenchgithubuser/dasharr:latest Downloads:   Stars:   Base: unknown
-mrrobotjs/mum
-ghcr.io/mrrobotjs/mum:latest Downloads:   Stars:   Base: unknown
-modomofn/ldap-sync
-modomofn/ldap-sync:latest Downloads: 323  Stars: 1  Base: unknown
-codewithcj/sparkyfitness_garmin
-codewithcj/sparkyfitness_garmin:latest Downloads: 20764  Stars: 0  Base: unknown
-dmunozv04/isponsorblocktv
-ghcr.io/dmunozv04/isponsorblocktv:latest Downloads: 36639  Stars: 6  Base: unknown
-kosdk/rtl-tcp
-kosdk/rtl-tcp:latest Downloads: 63566  Stars: 4  Base: unknown
-netplexflix/umtk
-netplexflix/umtk:latest Downloads: 15225  Stars: 0  Base: unknown
-kosdk/soxplayer
-kosdk/soxplayer:latest Downloads: 360  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+smashingtags/container-port-manager
+ghcr.io/smashingtags/container-port-manager:nightly Downloads:   Stars:   Base: unknown
+skanehira/go-starwars
+skanehira/go-starwars:latest Downloads: 539  Stars: 0  Base: unknown
+skanehira/docker.vim
+skanehira/docker.vim:latest Downloads: 3514  Stars: 0  Base: unknown
+kosdk/mqtt-camera-ai-monitor
+kosdk/mqtt-camera-ai-monitor:latest Downloads: 198  Stars: 0  Base: unknown
+rohan/ascii-telnet-server
+rohan/ascii-telnet-server:latest Downloads: 307747  Stars: 4  Base: unknown
+smashingtags/homelabarr-frontend
+smashingtags/homelabarr-frontend:latest Downloads: 342  Stars: 0  Base: unknown
+kosdk/onvif2mqtt
+kosdk/onvif2mqtt:latest Downloads: 108  Stars: 0  Base: unknown
+smashingtags/homelabarr-backend
+smashingtags/homelabarr-backend:latest Downloads: 303  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20053,8 +20074,6 @@ kosdk/soxplayer:latest Downloads: 360  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-danny-avila/librechat
-ghcr.io/danny-avila/librechat:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 129
