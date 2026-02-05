@@ -31,101 +31,29 @@ Processing /tmp/GitHub/repositoryClone/jessielw/unraid-templates/Mp4Forge/mp4for
 Downloading Nebula's Repository
 
 From https://github.com/nebula-codes/hytale_server_manager
-   f86109b..c29158a  main       -> origin/main
- * [new tag]         v0.3.24    -> v0.3.24
- * [new tag]         v0.3.18    -> v0.3.18
- * [new tag]         v0.3.19    -> v0.3.19
- * [new tag]         v0.3.20    -> v0.3.20
- * [new tag]         v0.3.21    -> v0.3.21
-Updating f86109b..c29158a
+   c29158a..55a9ede  main       -> origin/main
+ * [new tag]         v0.3.25    -> v0.3.25
+Updating c29158a..55a9ede
 Fast-forward
- packages/frontend/package.json                     |    6 +-
- packages/frontend/src/App.tsx                      |   29 +-
- .../src/components/auth/RequirePermission.tsx      |   10 +-
- .../src/components/error/ErrorBoundary.tsx         |   28 +-
- .../components/features/HytaleDownloadProgress.tsx |   24 +-
- .../features/HytaleServerDownloadSection.tsx       |   72 +-
- .../src/components/features/InventoryGrid.tsx      |    6 +-
- packages/frontend/src/components/layout/Header.tsx |   90 +-
- .../src/components/layout/MobileHeader.tsx         |    6 +-
- .../frontend/src/components/layout/Sidebar.tsx     |  168 +-
- .../src/components/modals/CreateNetworkModal.tsx   |   54 +-
- .../src/components/modals/CreateServerModal.tsx    |   70 +-
- .../src/components/modals/HytaleOAuthModal.tsx     |   40 +-
- .../components/modals/HytaleWorldConfigModal.tsx   |  130 +-
- .../modals/ManageNetworkServersModal.tsx           |   32 +-
- .../src/components/modals/ServerSelectionModal.tsx |   61 +-
- .../src/components/modals/WorldSettingsModal.tsx   |   74 +-
- .../src/components/mods/ProviderSelector.tsx       |   23 +-
- .../src/components/networks/NetworkCard.tsx        |   46 +-
- .../src/components/networks/NetworkServerRow.tsx   |   34 +-
- .../settings/HytaleDownloaderSettingsCard.tsx      |  105 +-
- .../src/components/settings/UpdateSettingsCard.tsx |  286 +--
- .../frontend/src/components/ui/CommandPalette.tsx  |   57 +-
- .../frontend/src/components/ui/ConfirmDialog.tsx   |   10 +-
- packages/frontend/src/components/ui/DataTable.tsx  |   41 +-
- packages/frontend/src/components/ui/Modal.tsx      |    4 +-
- .../src/components/ui/SearchableSelect.tsx         |   22 +-
- .../frontend/src/components/ui/StatusIndicator.tsx |   18 +-
- packages/frontend/src/components/ui/Toast.tsx      |    4 +-
- .../src/components/ui/TokenExpiryBadge.tsx         |    4 +-
- .../src/components/update/ServerUpdateBadge.tsx    |   10 +-
- .../src/components/update/ServerUpdateModal.tsx    |   65 +-
- .../frontend/src/components/update/UpdateBadge.tsx |    8 +-
- .../src/components/update/UpdateHistoryModal.tsx   |   26 +-
- .../components/widgets/InstallationQueueWidget.tsx |   10 +-
- packages/frontend/src/i18n.ts                      |   32 +
- packages/frontend/src/locales/en.json              | 2381 ++++++++++++++++++++
- packages/frontend/src/locales/es.json              | 2381 ++++++++++++++++++++
- packages/frontend/src/main.tsx                     |    1 +
- .../src/pages/activity/ActivityLogPage.tsx         |  150 +-
- packages/frontend/src/pages/alerts/AlertsPage.tsx  |  122 +-
- .../frontend/src/pages/analytics/AnalyticsPage.tsx |   11 +-
- packages/frontend/src/pages/auth/LoginPage.tsx     |   52 +-
- .../src/pages/automation/AutomationPage.tsx        |  222 +-
- .../src/pages/automation/CreateTaskModal.tsx       |  122 +-
- .../src/pages/automation/TaskGroupModal.tsx        |  113 +-
- .../frontend/src/pages/backups/BackupsPage.tsx     |  126 +-
- .../src/pages/backups/CreateBackupModal.tsx        |   30 +-
- packages/frontend/src/pages/bridge/BridgePage.tsx  |   76 +-
- .../frontend/src/pages/console/ConsolePage.tsx     |   43 +-
- .../frontend/src/pages/dashboard/DashboardPage.tsx |   44 +-
- .../dashboard/components/ActivityFeedWidget.tsx    |   12 +-
- .../dashboard/components/AlertsSummaryWidget.tsx   |   20 +-
- .../pages/dashboard/components/CpuMemoryChart.tsx  |   10 +-
- .../dashboard/components/PlayerCountChart.tsx      |   13 +-
- .../dashboard/components/QuickActionsPanel.tsx     |   41 +-
- .../dashboard/components/ServerHealthCards.tsx     |   14 +-
- .../dashboard/components/ServerStatusChart.tsx     |   37 +-
- .../frontend/src/pages/economy/EconomyPage.tsx     |   90 +-
- .../frontend/src/pages/files/CreateItemModal.tsx   |   32 +-
- .../frontend/src/pages/files/FileEditorModal.tsx   |   24 +-
- .../frontend/src/pages/files/FileManagerPage.tsx   |   57 +-
- .../frontend/src/pages/files/UploadFileModal.tsx   |  113 +-
- .../frontend/src/pages/hsm-logs/HSMLogsPage.tsx    |  220 ++
- .../frontend/src/pages/modpacks/ModpacksPage.tsx   |  238 +-
- packages/frontend/src/pages/mods/ModsPage.tsx      |  144 +-
- .../src/pages/permissions/PermissionsPage.tsx      |  122 +-
- .../src/pages/players/PlayerDetailPage.tsx         |   16 +-
- .../frontend/src/pages/players/PlayersPage.tsx     |   11 +-
- .../src/pages/servers/ServerDetailPage.tsx         |  120 +-
- .../src/pages/servers/ServerSettingsPage.tsx       |  179 +-
- .../src/pages/servers/ServerWorldsPage.tsx         |   40 +-
- .../frontend/src/pages/servers/ServersPage.tsx     |  175 +-
- .../frontend/src/pages/settings/SettingsPage.tsx   |  150 +-
- packages/frontend/src/pages/users/UsersPage.tsx    |   83 +-
- packages/frontend/src/pages/worlds/WorldsPage.tsx  |   34 +-
- packages/frontend/src/types/index.ts               |   14 +
- packages/server/src/config.ts                      |    2 +-
- packages/server/src/middleware/requestLogger.ts    |   11 +
- packages/server/src/routes/system.ts               |   59 +-
- packages/server/src/services/AlertsService.ts      |   41 +-
- pnpm-lock.yaml                                     |  134 ++
- 82 files changed, 7724 insertions(+), 2111 deletions(-)
- create mode 100644 packages/frontend/src/i18n.ts
- create mode 100644 packages/frontend/src/locales/en.json
- create mode 100644 packages/frontend/src/locales/es.json
- create mode 100644 packages/frontend/src/pages/hsm-logs/HSMLogsPage.tsx
+ packages/server/src/config.ts                      |   2 +-
+ packages/website/astro.config.mjs                  |   4 +-
+ packages/website/public/robots.txt                 |   4 +
+ .../website/src/components/home/CTASection.astro   |  14 +-
+ .../website/src/components/home/FeatureGrid.astro  |   6 -
+ packages/website/src/components/home/Hero.astro    |  14 +-
+ .../website/src/components/layout/Footer.astro     |  41 +----
+ .../website/src/components/layout/Header.astro     |  10 +-
+ packages/website/src/components/ui/Button.astro    |   8 +-
+ packages/website/src/layouts/BaseLayout.astro      |  46 +++++-
+ packages/website/src/pages/docs/[...slug].astro    |  23 ---
+ packages/website/src/pages/docs/index.astro        | 107 -------------
+ packages/website/src/pages/features.astro          | 165 ---------------------
+ packages/website/src/pages/index.astro             |   6 +-
+ 14 files changed, 79 insertions(+), 371 deletions(-)
+ create mode 100644 packages/website/public/robots.txt
+ delete mode 100644 packages/website/src/pages/docs/[...slug].astro
+ delete mode 100644 packages/website/src/pages/docs/index.astro
+ delete mode 100644 packages/website/src/pages/features.astro
 
 Array
 (
@@ -4861,7 +4789,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   f882969..6db1f8a  main       -> origin/main
+Updating f882969..6db1f8a
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 25 insertions(+), 25 deletions(-)
 
 Array
 (
@@ -7501,12 +7458,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   19a70a2..5aed6ba  master     -> origin/master
-Updating 19a70a2..5aed6ba
-Fast-forward
- jlesage/mediainfo.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -10899,7 +10851,12 @@ Processing /tmp/GitHub/repositoryClone/OctoPrint/Unraid-Template/OctoPrint/OctoP
 
 Downloading IBRACORP's Repository
 
-Already up to date.
+From https://github.com/ibracorp/unraid-templates
+   f35dac3..d80a5d8  master     -> origin/master
+Updating f35dac3..d80a5d8
+Fast-forward
+ ca_profile.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
