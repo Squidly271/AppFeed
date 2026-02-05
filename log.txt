@@ -31,12 +31,101 @@ Processing /tmp/GitHub/repositoryClone/jessielw/unraid-templates/Mp4Forge/mp4for
 Downloading Nebula's Repository
 
 From https://github.com/nebula-codes/hytale_server_manager
-   6f74535..f86109b  main       -> origin/main
-Updating 6f74535..f86109b
+   f86109b..c29158a  main       -> origin/main
+ * [new tag]         v0.3.24    -> v0.3.24
+ * [new tag]         v0.3.18    -> v0.3.18
+ * [new tag]         v0.3.19    -> v0.3.19
+ * [new tag]         v0.3.20    -> v0.3.20
+ * [new tag]         v0.3.21    -> v0.3.21
+Updating f86109b..c29158a
 Fast-forward
- packages/server/prisma/schema.prisma | 3 ++-
- packages/server/src/index.ts         | 4 ++--
- 2 files changed, 4 insertions(+), 3 deletions(-)
+ packages/frontend/package.json                     |    6 +-
+ packages/frontend/src/App.tsx                      |   29 +-
+ .../src/components/auth/RequirePermission.tsx      |   10 +-
+ .../src/components/error/ErrorBoundary.tsx         |   28 +-
+ .../components/features/HytaleDownloadProgress.tsx |   24 +-
+ .../features/HytaleServerDownloadSection.tsx       |   72 +-
+ .../src/components/features/InventoryGrid.tsx      |    6 +-
+ packages/frontend/src/components/layout/Header.tsx |   90 +-
+ .../src/components/layout/MobileHeader.tsx         |    6 +-
+ .../frontend/src/components/layout/Sidebar.tsx     |  168 +-
+ .../src/components/modals/CreateNetworkModal.tsx   |   54 +-
+ .../src/components/modals/CreateServerModal.tsx    |   70 +-
+ .../src/components/modals/HytaleOAuthModal.tsx     |   40 +-
+ .../components/modals/HytaleWorldConfigModal.tsx   |  130 +-
+ .../modals/ManageNetworkServersModal.tsx           |   32 +-
+ .../src/components/modals/ServerSelectionModal.tsx |   61 +-
+ .../src/components/modals/WorldSettingsModal.tsx   |   74 +-
+ .../src/components/mods/ProviderSelector.tsx       |   23 +-
+ .../src/components/networks/NetworkCard.tsx        |   46 +-
+ .../src/components/networks/NetworkServerRow.tsx   |   34 +-
+ .../settings/HytaleDownloaderSettingsCard.tsx      |  105 +-
+ .../src/components/settings/UpdateSettingsCard.tsx |  286 +--
+ .../frontend/src/components/ui/CommandPalette.tsx  |   57 +-
+ .../frontend/src/components/ui/ConfirmDialog.tsx   |   10 +-
+ packages/frontend/src/components/ui/DataTable.tsx  |   41 +-
+ packages/frontend/src/components/ui/Modal.tsx      |    4 +-
+ .../src/components/ui/SearchableSelect.tsx         |   22 +-
+ .../frontend/src/components/ui/StatusIndicator.tsx |   18 +-
+ packages/frontend/src/components/ui/Toast.tsx      |    4 +-
+ .../src/components/ui/TokenExpiryBadge.tsx         |    4 +-
+ .../src/components/update/ServerUpdateBadge.tsx    |   10 +-
+ .../src/components/update/ServerUpdateModal.tsx    |   65 +-
+ .../frontend/src/components/update/UpdateBadge.tsx |    8 +-
+ .../src/components/update/UpdateHistoryModal.tsx   |   26 +-
+ .../components/widgets/InstallationQueueWidget.tsx |   10 +-
+ packages/frontend/src/i18n.ts                      |   32 +
+ packages/frontend/src/locales/en.json              | 2381 ++++++++++++++++++++
+ packages/frontend/src/locales/es.json              | 2381 ++++++++++++++++++++
+ packages/frontend/src/main.tsx                     |    1 +
+ .../src/pages/activity/ActivityLogPage.tsx         |  150 +-
+ packages/frontend/src/pages/alerts/AlertsPage.tsx  |  122 +-
+ .../frontend/src/pages/analytics/AnalyticsPage.tsx |   11 +-
+ packages/frontend/src/pages/auth/LoginPage.tsx     |   52 +-
+ .../src/pages/automation/AutomationPage.tsx        |  222 +-
+ .../src/pages/automation/CreateTaskModal.tsx       |  122 +-
+ .../src/pages/automation/TaskGroupModal.tsx        |  113 +-
+ .../frontend/src/pages/backups/BackupsPage.tsx     |  126 +-
+ .../src/pages/backups/CreateBackupModal.tsx        |   30 +-
+ packages/frontend/src/pages/bridge/BridgePage.tsx  |   76 +-
+ .../frontend/src/pages/console/ConsolePage.tsx     |   43 +-
+ .../frontend/src/pages/dashboard/DashboardPage.tsx |   44 +-
+ .../dashboard/components/ActivityFeedWidget.tsx    |   12 +-
+ .../dashboard/components/AlertsSummaryWidget.tsx   |   20 +-
+ .../pages/dashboard/components/CpuMemoryChart.tsx  |   10 +-
+ .../dashboard/components/PlayerCountChart.tsx      |   13 +-
+ .../dashboard/components/QuickActionsPanel.tsx     |   41 +-
+ .../dashboard/components/ServerHealthCards.tsx     |   14 +-
+ .../dashboard/components/ServerStatusChart.tsx     |   37 +-
+ .../frontend/src/pages/economy/EconomyPage.tsx     |   90 +-
+ .../frontend/src/pages/files/CreateItemModal.tsx   |   32 +-
+ .../frontend/src/pages/files/FileEditorModal.tsx   |   24 +-
+ .../frontend/src/pages/files/FileManagerPage.tsx   |   57 +-
+ .../frontend/src/pages/files/UploadFileModal.tsx   |  113 +-
+ .../frontend/src/pages/hsm-logs/HSMLogsPage.tsx    |  220 ++
+ .../frontend/src/pages/modpacks/ModpacksPage.tsx   |  238 +-
+ packages/frontend/src/pages/mods/ModsPage.tsx      |  144 +-
+ .../src/pages/permissions/PermissionsPage.tsx      |  122 +-
+ .../src/pages/players/PlayerDetailPage.tsx         |   16 +-
+ .../frontend/src/pages/players/PlayersPage.tsx     |   11 +-
+ .../src/pages/servers/ServerDetailPage.tsx         |  120 +-
+ .../src/pages/servers/ServerSettingsPage.tsx       |  179 +-
+ .../src/pages/servers/ServerWorldsPage.tsx         |   40 +-
+ .../frontend/src/pages/servers/ServersPage.tsx     |  175 +-
+ .../frontend/src/pages/settings/SettingsPage.tsx   |  150 +-
+ packages/frontend/src/pages/users/UsersPage.tsx    |   83 +-
+ packages/frontend/src/pages/worlds/WorldsPage.tsx  |   34 +-
+ packages/frontend/src/types/index.ts               |   14 +
+ packages/server/src/config.ts                      |    2 +-
+ packages/server/src/middleware/requestLogger.ts    |   11 +
+ packages/server/src/routes/system.ts               |   59 +-
+ packages/server/src/services/AlertsService.ts      |   41 +-
+ pnpm-lock.yaml                                     |  134 ++
+ 82 files changed, 7724 insertions(+), 2111 deletions(-)
+ create mode 100644 packages/frontend/src/i18n.ts
+ create mode 100644 packages/frontend/src/locales/en.json
+ create mode 100644 packages/frontend/src/locales/es.json
+ create mode 100644 packages/frontend/src/pages/hsm-logs/HSMLogsPage.tsx
 
 Array
 (
@@ -7412,7 +7501,12 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   19a70a2..5aed6ba  master     -> origin/master
+Updating 19a70a2..5aed6ba
+Fast-forward
+ jlesage/mediainfo.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -19785,8 +19879,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
-anym001/docker-electrs
-ghcr.io/anym001/docker-electrs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
@@ -19880,10 +19972,6 @@ ghcr.io/anym001/docker-electrs:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-petersem/monocker
-petersem/monocker Downloads: 527804  Stars: 7  Base: unknown
-petersem/exportarr
-petersem/exportarr Downloads: 7643  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -19941,8 +20029,6 @@ petersem/exportarr Downloads: 7643  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-b2un0/silabs-multipan-docker
-b2un0/silabs-multipan-docker Downloads: 59287  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -19985,9 +20071,6 @@ b2un0/silabs-multipan-docker Downloads: 59287  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-Tagged - Can't determine last update
-jwolvers/imgburn-wine-container
-ghcr.io/jwolvers/imgburn-wine-container:main-ubuntu22 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20007,8 +20090,6 @@ ghcr.io/jwolvers/imgburn-wine-container:main-ubuntu22 Downloads:   Stars:   Base
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-registry.phospher.com/brianmiller/doorway
-registry.phospher.com/brianmiller/doorway:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
@@ -20027,14 +20108,10 @@ registry.phospher.com/brianmiller/doorway:latest Downloads:   Stars:   Base: unk
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-imthai/iqbit
-imthai/iqbit Downloads: 5234  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-ozencb/couchtube
-ghcr.io/ozencb/couchtube:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
