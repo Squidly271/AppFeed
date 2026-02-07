@@ -13,31 +13,7 @@ Downloading Repo Info
 
 Downloading tenletter's Repository
 
-From https://github.com/softerfish/seekandwatch
-   e6cb629..0bf4abf  main       -> origin/main
- * [new tag]         v1.5.10    -> v1.5.10
-Updating e6cb629..0bf4abf
-Fast-forward
- README.md                        |  38 ++++--
- api/routes_main.py               |   8 +-
- app.py                           |  24 +++-
- cloud_worker.py                  | 157 ++++++++++++++++++----
- seekandwatch.xml                 |   1 +
- static/style.css                 | 275 ++++++++++++++++++++++++++++++++++-----
- templates/base.html              |  14 +-
- templates/blocklist.html         |   4 +-
- templates/calendar.html          |   4 +-
- templates/dashboard.html         |   4 +-
- templates/kometa.html            |  20 +--
- templates/logs.html              |   4 +-
- templates/media.html             |   4 +-
- templates/playlists.html         | 188 +++++++++++++-------------
- templates/requests_settings.html |  45 ++++++-
- templates/results.html           |   2 +-
- templates/settings.html          | 124 +++++++++---------
- templates/support.html           |   6 +-
- utils.py                         |   8 +-
- 19 files changed, 652 insertions(+), 278 deletions(-)
+Already up to date.
 
 Array
 (
@@ -216,70 +192,63 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   4fa439c..40d8449  main       -> origin/main
-Updating 4fa439c..40d8449
+   40d8449..99b6366  main       -> origin/main
+Updating 40d8449..99b6366
 Fast-forward
  .env.example                                       |   4 +
- ROADMAP.md                                         |  26 +-
- app/admin/inventory/page.tsx                       |  32 ++
- app/admin/jobs/page.tsx                            |   5 +-
- app/admin/models/[id]/images/page.tsx              |   5 +-
- app/admin/page.tsx                                 |  43 ++-
- app/admin/production/page.tsx                      |   5 +-
- app/admin/users/[userId]/orders/[orderId]/page.tsx |  17 +-
- .../[userId]/orders/[orderId]/ticket/page.tsx      |   5 +-
- app/admin/users/[userId]/orders/page.tsx           |   5 +-
- app/admin/users/page.tsx                           |   5 +-
- app/api/admin/_utils.ts                            |   7 +-
- app/api/admin/config-audit/route.ts                |  17 +
- app/api/admin/env-check/route.ts                   |  59 +++
- .../admin/orders/[orderId]/slicer-profile/route.ts |  71 ++++
- app/api/admin/orders/[orderId]/status/route.ts     |   2 +
- app/api/admin/pricing-profiles/[id]/route.ts       | 106 ++++++
- app/api/admin/pricing-profiles/route.ts            |  99 +++++
- app/api/admin/site-config/route.ts                 |  40 ++-
- app/api/admin/users/[id]/route.ts                  |  43 ++-
- .../inventory/[itemId]/movements/route.ts          |  26 ++
- app/api/stockworks/inventory/route.ts              |  19 +
- app/api/stockworks/movements/route.ts              |  53 +++
- app/layout.tsx                                     |  13 +-
- components/admin/ConfigAuditLog.tsx                |  68 ++++
- components/admin/EnvCheckCard.tsx                  |  83 +++++
- components/admin/SiteConfigForm.tsx                | 399 ++++++++++++++++++++-
- components/admin/SlicerProfileUploader.tsx         |  73 ++++
- components/admin/StockworksInventoryPanel.tsx      | 276 ++++++++++++++
- components/admin/StockworksLowStockCard.tsx        |  97 +++++
- components/admin/UserAdminActions.tsx              |  36 +-
- components/admin/UsersAndBadgesPanel.tsx           |   3 +-
- lib/admin/queries.ts                               |   1 +
- lib/orderworks-sync.ts                             |   5 +-
- lib/orderworks.ts                                  |  18 +
- lib/pricing.ts                                     |  26 +-
- lib/push.ts                                        |  10 +-
- lib/stockworks-client.ts                           |  62 ++++
- lib/stockworks-consumption.ts                      | 205 +++++++++++
- .../20260207160000_pricing_profiles/migration.sql  |  14 +
- .../20260207170000_admin_safety/migration.sql      |  25 ++
- prisma/schema.prisma                               |  33 ++
- 42 files changed, 2084 insertions(+), 57 deletions(-)
- create mode 100644 app/admin/inventory/page.tsx
- create mode 100644 app/api/admin/config-audit/route.ts
- create mode 100644 app/api/admin/env-check/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/slicer-profile/route.ts
- create mode 100644 app/api/admin/pricing-profiles/[id]/route.ts
- create mode 100644 app/api/admin/pricing-profiles/route.ts
- create mode 100644 app/api/stockworks/inventory/[itemId]/movements/route.ts
- create mode 100644 app/api/stockworks/inventory/route.ts
- create mode 100644 app/api/stockworks/movements/route.ts
- create mode 100644 components/admin/ConfigAuditLog.tsx
- create mode 100644 components/admin/EnvCheckCard.tsx
- create mode 100644 components/admin/SlicerProfileUploader.tsx
- create mode 100644 components/admin/StockworksInventoryPanel.tsx
- create mode 100644 components/admin/StockworksLowStockCard.tsx
- create mode 100644 lib/stockworks-client.ts
- create mode 100644 lib/stockworks-consumption.ts
- create mode 100644 prisma/migrations/20260207160000_pricing_profiles/migration.sql
- create mode 100644 prisma/migrations/20260207170000_admin_safety/migration.sql
+ ROADMAP.md                                         |  26 ++--
+ app/admin/production/page.tsx                      |   1 +
+ app/admin/users/[userId]/orders/[orderId]/page.tsx |  48 +++++-
+ app/api/admin/bambu-view/job/route.ts              |  24 +++
+ app/api/admin/bambu-view/route.ts                  |  25 ++++
+ app/api/admin/bambu-view/spools/route.ts           |  19 +++
+ .../admin/orders/[orderId]/assign-printer/route.ts |  50 +++++++
+ .../orders/[orderId]/packing-checklist/route.ts    | 113 ++++++++++++++
+ app/api/admin/orders/[orderId]/shipping/route.ts   |  70 +++++++++
+ .../admin/orders/[orderId]/slicer-stats/route.ts   |  64 ++++++++
+ app/api/admin/orders/[orderId]/status/route.ts     |   9 +-
+ app/api/admin/printers/[id]/route.ts               |   9 ++
+ app/api/admin/printers/auto-queue/route.ts         |  52 +++++++
+ app/api/admin/printers/route.ts                    |   4 +
+ app/api/admin/printers/status/route.ts             |  29 ++++
+ app/api/admin/printers/sync-bambu-view/route.ts    |  40 +++++
+ app/api/admin/production/route.ts                  |   1 +
+ app/api/jobs/[paymentIntentId]/route.ts            |  14 ++
+ app/api/makerworks/jobs/route.ts                   |  14 ++
+ app/api/stockworks/predictions/route.ts            |  63 ++++++++
+ components/admin/OrderStatusControl.tsx            | 106 +++++++++----
+ components/admin/PackingChecklist.tsx              | 148 ++++++++++++++++++
+ components/admin/PrinterAssignmentPanel.tsx        | 165 +++++++++++++++++++++
+ components/admin/ProductionDashboard.tsx           | 128 +++++++++++++++-
+ components/admin/ShippingTrackingForm.tsx          | 131 ++++++++++++++++
+ components/admin/SlicerStatsForm.tsx               | 147 ++++++++++++++++++
+ components/admin/StockworksLowStockCard.tsx        |  23 ++-
+ components/orders/OrderStatusBadge.tsx             |   1 +
+ lib/bambu-view.ts                                  |  77 ++++++++++
+ lib/order-status.ts                                |   3 +-
+ lib/orders.ts                                      |  57 +++++++
+ lib/production.ts                                  |  22 ++-
+ lib/stockworks-consumption.ts                      | 121 +++++++++++----
+ .../migration.sql                                  |  25 ++++
+ prisma/schema.prisma                               |  12 ++
+ 36 files changed, 1762 insertions(+), 83 deletions(-)
+ create mode 100644 app/api/admin/bambu-view/job/route.ts
+ create mode 100644 app/api/admin/bambu-view/route.ts
+ create mode 100644 app/api/admin/bambu-view/spools/route.ts
+ create mode 100644 app/api/admin/orders/[orderId]/assign-printer/route.ts
+ create mode 100644 app/api/admin/orders/[orderId]/packing-checklist/route.ts
+ create mode 100644 app/api/admin/orders/[orderId]/shipping/route.ts
+ create mode 100644 app/api/admin/orders/[orderId]/slicer-stats/route.ts
+ create mode 100644 app/api/admin/printers/auto-queue/route.ts
+ create mode 100644 app/api/admin/printers/status/route.ts
+ create mode 100644 app/api/admin/printers/sync-bambu-view/route.ts
+ create mode 100644 app/api/stockworks/predictions/route.ts
+ create mode 100644 components/admin/PackingChecklist.tsx
+ create mode 100644 components/admin/PrinterAssignmentPanel.tsx
+ create mode 100644 components/admin/ShippingTrackingForm.tsx
+ create mode 100644 components/admin/SlicerStatsForm.tsx
+ create mode 100644 lib/bambu-view.ts
+ create mode 100644 prisma/migrations/20260207173000_printer_integration/migration.sql
 
 Array
 (
@@ -476,12 +445,17 @@ Success
 Downloading vincentmakes' Repository
 
 From https://github.com/vincentmakes/cv-manager
-   3fd08ca..64617f9  main       -> origin/main
-Updating 3fd08ca..64617f9
+   64617f9..90210b6  main       -> origin/main
+Updating 64617f9..90210b6
 Fast-forward
- public/shared/admin.js   | 23 +++++++++++++++++------
- public/shared/scripts.js | 27 ++++++++++++++++++---------
- 2 files changed, 35 insertions(+), 15 deletions(-)
+ public-readonly/index.html | 15 ++++++++++++++-
+ public/index.html          | 22 +++++++++++++++++++++-
+ public/shared/admin.css    | 21 +++++++++++++++++++++
+ public/shared/admin.js     | 47 +++++++++++++++++++++++++++++++++++++++++-----
+ public/shared/scripts.js   | 19 +++++++++++++++++++
+ public/shared/styles.css   | 18 ++++++++++++++++++
+ src/server.js              | 28 +++++++++++++++++++++------
+ 7 files changed, 157 insertions(+), 13 deletions(-)
 
 Array
 (
@@ -19911,6 +19885,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
+tedcharles/broadcaster
+tedcharles/broadcaster:latest Downloads: 2951  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -19977,6 +19953,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+aeharding/voyager
+ghcr.io/aeharding/voyager:latest Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+godver3/cli_debrid
+godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -19984,8 +19965,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-keycloak/keycloak
-keycloak/keycloak:latest Downloads: 10085319  Stars: 149  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20144,6 +20123,23 @@ keycloak/keycloak:latest Downloads: 10085319  Stars: 149  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+rclone/rclone
+rclone/rclone:latest Downloads: 116756770  Stars: 269  Base: unknown
+2franix/cron-docker
+ghcr.io/2franix/cron-docker:latest Downloads:   Stars:   Base: unknown
+registry.gitlab.com/fmd-foss/fmd-server
+registry.gitlab.com/fmd-foss/fmd-server:latest Downloads:   Stars:   Base: unknown
+willfarrell/crontab
+willfarrell/crontab:latest Downloads: 2377208  Stars: 68  Base: unknown
+Tagged - Can't determine last update
+tozd/cron
+tozd/cron:ubuntu-trusty Downloads: 34142  Stars: 0  Base: unknown
+skulltrail/imdbarr
+ghcr.io/skulltrail/imdbarr:latest Downloads:   Stars:   Base: unknown
+yusing/godoxy
+ghcr.io/yusing/godoxy:latest Downloads: 72  Stars: 0  Base: unknown
+debridmediamanager/zurg-testing
+ghcr.io/debridmediamanager/zurg-testing:latest Downloads: 1872  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20158,6 +20154,8 @@ keycloak/keycloak:latest Downloads: 10085319  Stars: 149  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+nicolargo/glances
+nicolargo/glances:latest Downloads: 107064563  Stars: 207  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 129
