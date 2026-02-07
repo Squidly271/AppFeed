@@ -13,7 +13,31 @@ Downloading Repo Info
 
 Downloading tenletter's Repository
 
-Already up to date.
+From https://github.com/softerfish/seekandwatch
+   e6cb629..0bf4abf  main       -> origin/main
+ * [new tag]         v1.5.10    -> v1.5.10
+Updating e6cb629..0bf4abf
+Fast-forward
+ README.md                        |  38 ++++--
+ api/routes_main.py               |   8 +-
+ app.py                           |  24 +++-
+ cloud_worker.py                  | 157 ++++++++++++++++++----
+ seekandwatch.xml                 |   1 +
+ static/style.css                 | 275 ++++++++++++++++++++++++++++++++++-----
+ templates/base.html              |  14 +-
+ templates/blocklist.html         |   4 +-
+ templates/calendar.html          |   4 +-
+ templates/dashboard.html         |   4 +-
+ templates/kometa.html            |  20 +--
+ templates/logs.html              |   4 +-
+ templates/media.html             |   4 +-
+ templates/playlists.html         | 188 +++++++++++++-------------
+ templates/requests_settings.html |  45 ++++++-
+ templates/results.html           |   2 +-
+ templates/settings.html          | 124 +++++++++---------
+ templates/support.html           |   6 +-
+ utils.py                         |   8 +-
+ 19 files changed, 652 insertions(+), 278 deletions(-)
 
 Array
 (
@@ -192,16 +216,70 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   592537c..4fa439c  main       -> origin/main
-Updating 592537c..4fa439c
+   4fa439c..40d8449  main       -> origin/main
+Updating 4fa439c..40d8449
 Fast-forward
- app/api/admin/orders/[orderId]/status/route.ts | 19 ++++++++++++++++---
- app/api/jobs/[paymentIntentId]/route.ts        |  4 ++++
- app/api/makerworks/jobs/route.ts               |  4 ++++
- lib/order-status.ts                            | 20 +++++++++++++++++++-
- lib/orderworks-sync.ts                         | 25 +++++++++++++++++++++++++
- 5 files changed, 68 insertions(+), 4 deletions(-)
- create mode 100644 lib/orderworks-sync.ts
+ .env.example                                       |   4 +
+ ROADMAP.md                                         |  26 +-
+ app/admin/inventory/page.tsx                       |  32 ++
+ app/admin/jobs/page.tsx                            |   5 +-
+ app/admin/models/[id]/images/page.tsx              |   5 +-
+ app/admin/page.tsx                                 |  43 ++-
+ app/admin/production/page.tsx                      |   5 +-
+ app/admin/users/[userId]/orders/[orderId]/page.tsx |  17 +-
+ .../[userId]/orders/[orderId]/ticket/page.tsx      |   5 +-
+ app/admin/users/[userId]/orders/page.tsx           |   5 +-
+ app/admin/users/page.tsx                           |   5 +-
+ app/api/admin/_utils.ts                            |   7 +-
+ app/api/admin/config-audit/route.ts                |  17 +
+ app/api/admin/env-check/route.ts                   |  59 +++
+ .../admin/orders/[orderId]/slicer-profile/route.ts |  71 ++++
+ app/api/admin/orders/[orderId]/status/route.ts     |   2 +
+ app/api/admin/pricing-profiles/[id]/route.ts       | 106 ++++++
+ app/api/admin/pricing-profiles/route.ts            |  99 +++++
+ app/api/admin/site-config/route.ts                 |  40 ++-
+ app/api/admin/users/[id]/route.ts                  |  43 ++-
+ .../inventory/[itemId]/movements/route.ts          |  26 ++
+ app/api/stockworks/inventory/route.ts              |  19 +
+ app/api/stockworks/movements/route.ts              |  53 +++
+ app/layout.tsx                                     |  13 +-
+ components/admin/ConfigAuditLog.tsx                |  68 ++++
+ components/admin/EnvCheckCard.tsx                  |  83 +++++
+ components/admin/SiteConfigForm.tsx                | 399 ++++++++++++++++++++-
+ components/admin/SlicerProfileUploader.tsx         |  73 ++++
+ components/admin/StockworksInventoryPanel.tsx      | 276 ++++++++++++++
+ components/admin/StockworksLowStockCard.tsx        |  97 +++++
+ components/admin/UserAdminActions.tsx              |  36 +-
+ components/admin/UsersAndBadgesPanel.tsx           |   3 +-
+ lib/admin/queries.ts                               |   1 +
+ lib/orderworks-sync.ts                             |   5 +-
+ lib/orderworks.ts                                  |  18 +
+ lib/pricing.ts                                     |  26 +-
+ lib/push.ts                                        |  10 +-
+ lib/stockworks-client.ts                           |  62 ++++
+ lib/stockworks-consumption.ts                      | 205 +++++++++++
+ .../20260207160000_pricing_profiles/migration.sql  |  14 +
+ .../20260207170000_admin_safety/migration.sql      |  25 ++
+ prisma/schema.prisma                               |  33 ++
+ 42 files changed, 2084 insertions(+), 57 deletions(-)
+ create mode 100644 app/admin/inventory/page.tsx
+ create mode 100644 app/api/admin/config-audit/route.ts
+ create mode 100644 app/api/admin/env-check/route.ts
+ create mode 100644 app/api/admin/orders/[orderId]/slicer-profile/route.ts
+ create mode 100644 app/api/admin/pricing-profiles/[id]/route.ts
+ create mode 100644 app/api/admin/pricing-profiles/route.ts
+ create mode 100644 app/api/stockworks/inventory/[itemId]/movements/route.ts
+ create mode 100644 app/api/stockworks/inventory/route.ts
+ create mode 100644 app/api/stockworks/movements/route.ts
+ create mode 100644 components/admin/ConfigAuditLog.tsx
+ create mode 100644 components/admin/EnvCheckCard.tsx
+ create mode 100644 components/admin/SlicerProfileUploader.tsx
+ create mode 100644 components/admin/StockworksInventoryPanel.tsx
+ create mode 100644 components/admin/StockworksLowStockCard.tsx
+ create mode 100644 lib/stockworks-client.ts
+ create mode 100644 lib/stockworks-consumption.ts
+ create mode 100644 prisma/migrations/20260207160000_pricing_profiles/migration.sql
+ create mode 100644 prisma/migrations/20260207170000_admin_safety/migration.sql
 
 Array
 (
@@ -397,7 +475,13 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   3fd08ca..64617f9  main       -> origin/main
+Updating 3fd08ca..64617f9
+Fast-forward
+ public/shared/admin.js   | 23 +++++++++++++++++------
+ public/shared/scripts.js | 27 ++++++++++++++++++---------
+ 2 files changed, 35 insertions(+), 15 deletions(-)
 
 Array
 (
@@ -19900,6 +19984,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+keycloak/keycloak
+keycloak/keycloak:latest Downloads: 10085319  Stars: 149  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
