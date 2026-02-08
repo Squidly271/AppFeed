@@ -191,64 +191,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   40d8449..99b6366  main       -> origin/main
-Updating 40d8449..99b6366
-Fast-forward
- .env.example                                       |   4 +
- ROADMAP.md                                         |  26 ++--
- app/admin/production/page.tsx                      |   1 +
- app/admin/users/[userId]/orders/[orderId]/page.tsx |  48 +++++-
- app/api/admin/bambu-view/job/route.ts              |  24 +++
- app/api/admin/bambu-view/route.ts                  |  25 ++++
- app/api/admin/bambu-view/spools/route.ts           |  19 +++
- .../admin/orders/[orderId]/assign-printer/route.ts |  50 +++++++
- .../orders/[orderId]/packing-checklist/route.ts    | 113 ++++++++++++++
- app/api/admin/orders/[orderId]/shipping/route.ts   |  70 +++++++++
- .../admin/orders/[orderId]/slicer-stats/route.ts   |  64 ++++++++
- app/api/admin/orders/[orderId]/status/route.ts     |   9 +-
- app/api/admin/printers/[id]/route.ts               |   9 ++
- app/api/admin/printers/auto-queue/route.ts         |  52 +++++++
- app/api/admin/printers/route.ts                    |   4 +
- app/api/admin/printers/status/route.ts             |  29 ++++
- app/api/admin/printers/sync-bambu-view/route.ts    |  40 +++++
- app/api/admin/production/route.ts                  |   1 +
- app/api/jobs/[paymentIntentId]/route.ts            |  14 ++
- app/api/makerworks/jobs/route.ts                   |  14 ++
- app/api/stockworks/predictions/route.ts            |  63 ++++++++
- components/admin/OrderStatusControl.tsx            | 106 +++++++++----
- components/admin/PackingChecklist.tsx              | 148 ++++++++++++++++++
- components/admin/PrinterAssignmentPanel.tsx        | 165 +++++++++++++++++++++
- components/admin/ProductionDashboard.tsx           | 128 +++++++++++++++-
- components/admin/ShippingTrackingForm.tsx          | 131 ++++++++++++++++
- components/admin/SlicerStatsForm.tsx               | 147 ++++++++++++++++++
- components/admin/StockworksLowStockCard.tsx        |  23 ++-
- components/orders/OrderStatusBadge.tsx             |   1 +
- lib/bambu-view.ts                                  |  77 ++++++++++
- lib/order-status.ts                                |   3 +-
- lib/orders.ts                                      |  57 +++++++
- lib/production.ts                                  |  22 ++-
- lib/stockworks-consumption.ts                      | 121 +++++++++++----
- .../migration.sql                                  |  25 ++++
- prisma/schema.prisma                               |  12 ++
- 36 files changed, 1762 insertions(+), 83 deletions(-)
- create mode 100644 app/api/admin/bambu-view/job/route.ts
- create mode 100644 app/api/admin/bambu-view/route.ts
- create mode 100644 app/api/admin/bambu-view/spools/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/assign-printer/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/packing-checklist/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/shipping/route.ts
- create mode 100644 app/api/admin/orders/[orderId]/slicer-stats/route.ts
- create mode 100644 app/api/admin/printers/auto-queue/route.ts
- create mode 100644 app/api/admin/printers/status/route.ts
- create mode 100644 app/api/admin/printers/sync-bambu-view/route.ts
- create mode 100644 app/api/stockworks/predictions/route.ts
- create mode 100644 components/admin/PackingChecklist.tsx
- create mode 100644 components/admin/PrinterAssignmentPanel.tsx
- create mode 100644 components/admin/ShippingTrackingForm.tsx
- create mode 100644 components/admin/SlicerStatsForm.tsx
- create mode 100644 lib/bambu-view.ts
- create mode 100644 prisma/migrations/20260207173000_printer_integration/migration.sql
+Already up to date.
 
 Array
 (
@@ -445,17 +388,14 @@ Success
 Downloading vincentmakes' Repository
 
 From https://github.com/vincentmakes/cv-manager
-   64617f9..90210b6  main       -> origin/main
-Updating 64617f9..90210b6
+   90210b6..8d26d39  main       -> origin/main
+Updating 90210b6..8d26d39
 Fast-forward
- public-readonly/index.html | 15 ++++++++++++++-
- public/index.html          | 22 +++++++++++++++++++++-
- public/shared/admin.css    | 21 +++++++++++++++++++++
- public/shared/admin.js     | 47 +++++++++++++++++++++++++++++++++++++++++-----
- public/shared/scripts.js   | 19 +++++++++++++++++++
- public/shared/styles.css   | 18 ++++++++++++++++++
- src/server.js              | 28 +++++++++++++++++++++------
- 7 files changed, 157 insertions(+), 13 deletions(-)
+ public/shared/admin.css  |  4 ++--
+ public/shared/scripts.js |  6 +++---
+ public/shared/styles.css | 16 ++++++++++++----
+ src/server.js            |  4 ++--
+ 4 files changed, 19 insertions(+), 11 deletions(-)
 
 Array
 (
@@ -9404,7 +9344,13 @@ Processing /tmp/GitHub/repositoryClone/jbreed/docker-templates/nessus/nessus.xml
 
 Downloading Selfhosters Unraid Discord Repository
 
-Already up to date.
+From https://github.com/selfhosters/unRAID-CA-templates
+   8943257..21409bb  master     -> origin/master
+Updating 8943257..21409bb
+Fast-forward
+ templates/zeitlaeufer/sdnext.xml | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+ create mode 100644 templates/zeitlaeufer/sdnext.xml
 
 Array
 (
@@ -9520,19 +9466,20 @@ Array
             [107] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tiddlywiki.xml
             [108] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/idrac-fan-controller.xml
             [109] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prometheus.xml
-            [110] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/vaultwarden.xml
-            [111] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/everything-presence-mmwave-configurator.xml
-            [112] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mealiev1.xml
-            [113] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airbridge.xml
-            [114] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dizquetv.xml
-            [115] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-web.xml
-            [116] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/planka.xml
-            [117] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tdarr.xml
-            [118] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unpackerr.xml
-            [119] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shrinkray.xml
-            [120] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tvapp2.xml
-            [121] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ddns-ipv64.xml
-            [122] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airconnect.xml
+            [110] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zeitlaeufer/sdnext.xml
+            [111] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/vaultwarden.xml
+            [112] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/everything-presence-mmwave-configurator.xml
+            [113] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mealiev1.xml
+            [114] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airbridge.xml
+            [115] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/dizquetv.xml
+            [116] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/monitorss-web.xml
+            [117] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/planka.xml
+            [118] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tdarr.xml
+            [119] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/unpackerr.xml
+            [120] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/shrinkray.xml
+            [121] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/tvapp2.xml
+            [122] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/ddns-ipv64.xml
+            [123] => /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/airconnect.xml
         )
 
 )
@@ -9708,6 +9655,7 @@ No Icon specified within the application template
 
 Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/prometheus.xml...Success
+Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/zeitlaeufer/sdnext.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/vaultwarden.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/everything-presence-mmwave-configurator.xml...Success
 Processing /tmp/GitHub/repositoryClone/selfhosters/unRAID-CA-templates/templates/mealiev1.xml...Success
@@ -19885,8 +19833,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
-tedcharles/broadcaster
-tedcharles/broadcaster:latest Downloads: 2951  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -19953,18 +19899,18 @@ tedcharles/broadcaster:latest Downloads: 2951  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-aeharding/voyager
-ghcr.io/aeharding/voyager:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-godver3/cli_debrid
-godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+registry.gitlab.com/storyteller-platform/storyteller
+registry.gitlab.com/storyteller-platform/storyteller:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+Tagged - Can't determine last update
+immich-app/postgres
+ghcr.io/immich-app/postgres:18-vectorchord0.5.3-pgvector0.8.1 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -19984,6 +19930,8 @@ godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+coolasice1999/tmm-cli-cronjob
+coolasice1999/tmm-cli-cronjob:latest Downloads: 42325  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -20040,11 +19988,23 @@ godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+jlesage/filebot
+jlesage/filebot Downloads: 19550118  Stars: 63  Base: unknown
+fenglc/pgadmin4
+fenglc/pgadmin4 Downloads: 4743613  Stars: 47  Base: unknown
+analogic/poste.io
+analogic/poste.io Downloads: 25839985  Stars: 285  Base: unknown
+stjohnjohnson/smartthings-mqtt-bridge
+stjohnjohnson/smartthings-mqtt-bridge Downloads: 6477982  Stars: 29  Base: unknown
+teslamate/grafana
+teslamate/grafana Downloads: 20700686  Stars: 24  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
+olehj/docker-nsfmineroc
+olehj/docker-nsfmineroc:latest Downloads: 32983  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -20082,6 +20042,11 @@ godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+zeitlaeufer/sdnext
+zeitlaeufer/sdnext:latest Downloads: 30  Stars: 0  Base: unknown
+Pulling zeitlaeufer/sdnext:latest
+Killed
+failed to register layer: write /root/.cache/pip/http-v2/2/1/9/5/e/2195e86dadf689b32b54e3aa26801d1bef1cac5a6f829d72dbae30e8.body: no space left on device
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20103,6 +20068,8 @@ godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
+robmarkcole/deepstack-ui
+robmarkcole/deepstack-ui Downloads: 568375  Stars: 11  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_usb_net_addon/main/usb_manager_aqc111_addon.plg attempt 1...
@@ -20117,29 +20084,28 @@ godver3/cli_debrid:dev Downloads: 39056  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/tasmotapm-unraid/main/tasmotapm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
+graphprotocol/graph-node
+graphprotocol/graph-node Downloads: 6141965  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+mozilla/syncserver
+mozilla/syncserver:latest Downloads: 11492343  Stars: 32  Base: unknown
+lnxd/xmrig
+lnxd/xmrig:latest Downloads: 137068  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+andrijn/plex-ngrok
+andrijn/plex-ngrok Downloads: 1818  Stars: 0  Base: unknown
+sbs20/scanservjs
+sbs20/scanservjs Downloads: 580553  Stars: 4  Base: unknown
+shaneisrael/fireshare
+shaneisrael/fireshare Downloads: 334406  Stars: 5  Base: unknown
+charlocharlie/qbittorrent-port-forward-file
+charlocharlie/qbittorrent-port-forward-file Downloads: 97762  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-rclone/rclone
-rclone/rclone:latest Downloads: 116756770  Stars: 269  Base: unknown
-2franix/cron-docker
-ghcr.io/2franix/cron-docker:latest Downloads:   Stars:   Base: unknown
-registry.gitlab.com/fmd-foss/fmd-server
-registry.gitlab.com/fmd-foss/fmd-server:latest Downloads:   Stars:   Base: unknown
-willfarrell/crontab
-willfarrell/crontab:latest Downloads: 2377208  Stars: 68  Base: unknown
-Tagged - Can't determine last update
-tozd/cron
-tozd/cron:ubuntu-trusty Downloads: 34142  Stars: 0  Base: unknown
-skulltrail/imdbarr
-ghcr.io/skulltrail/imdbarr:latest Downloads:   Stars:   Base: unknown
-yusing/godoxy
-ghcr.io/yusing/godoxy:latest Downloads: 72  Stars: 0  Base: unknown
-debridmediamanager/zurg-testing
-ghcr.io/debridmediamanager/zurg-testing:latest Downloads: 1872  Stars: 2  Base: unknown
+ainullcode/borg-ui
+ainullcode/borg-ui:latest Downloads: 74650  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20154,8 +20120,8 @@ ghcr.io/debridmediamanager/zurg-testing:latest Downloads: 1872  Stars: 2  Base: 
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-nicolargo/glances
-nicolargo/glances:latest Downloads: 107064563  Stars: 207  Base: unknown
+amruthpillai/reactive-resume
+amruthpillai/reactive-resume:latest Downloads: 4294087  Stars: 60  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 129
