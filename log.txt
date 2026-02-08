@@ -191,7 +191,81 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   99b6366..6e2adc4  main       -> origin/main
+Updating 99b6366..6e2adc4
+Fast-forward
+ README.md                                          | 214 +++++++++--
+ ROADMAP.md                                         |  58 +--
+ app/admin/analytics/page.tsx                       |  25 ++
+ app/admin/page.tsx                                 |  24 ++
+ app/admin/products/page.tsx                        |  46 +++
+ app/api/admin/analytics/route.ts                   |  12 +
+ app/api/admin/products/[id]/route.ts               |  72 ++++
+ app/api/admin/products/route.ts                    |  56 +++
+ app/api/admin/site-config/route.ts                 |  13 +
+ app/api/checkout/route.ts                          |  59 ++-
+ app/api/estimate/gcode/route.ts                    |  97 +++++
+ app/api/models/[id]/quote/route.ts                 |  29 +-
+ app/api/models/[id]/revisions/route.ts             |  20 +
+ app/api/models/[id]/route.ts                       |  28 ++
+ app/api/presets/[id]/route.ts                      |  56 +++
+ app/api/presets/route.ts                           |  44 +++
+ app/api/products/[id]/route.ts                     |  31 ++
+ app/api/products/route.ts                          |  27 ++
+ app/api/public-config/route.ts                     |  12 +
+ app/api/upload/route.ts                            |  20 +
+ app/cart/page.tsx                                  | 219 ++++++++++-
+ app/checkout/page.tsx                              | 239 ++++++++++--
+ app/customer/portal/page.tsx                       |  84 ++++
+ app/models/[id]/page.tsx                           |  18 +
+ app/products/[id]/page.tsx                         |  76 ++++
+ app/products/page.tsx                              |  72 ++++
+ components/InstantQuoteConfigurator.tsx            | 103 ++++-
+ components/NavBar.tsx                              |   3 +
+ components/admin/AnalyticsDashboard.tsx            | 259 +++++++++++++
+ components/admin/ProductBuilder.tsx                | 424 +++++++++++++++++++++
+ components/admin/SiteConfigForm.tsx                | 187 +++++++++
+ components/cart/CartProvider.tsx                   |  48 ++-
+ components/customer/CustomerPresetsPanel.tsx       |  88 +++++
+ components/products/ProductConfigurator.tsx        | 209 ++++++++++
+ lib/admin/analytics.ts                             | 304 +++++++++++++++
+ lib/estimate-adjustments.ts                        | 118 ++++++
+ lib/gcode.ts                                       | 117 ++++++
+ lib/model-intelligence.ts                          |  71 ++++
+ lib/orders.ts                                      |  26 +-
+ .../migration.sql                                  |   6 +
+ .../migration.sql                                  |   4 +
+ .../20260208133000_product_templates/migration.sql |  21 +
+ .../migration.sql                                  |  20 +
+ prisma/schema.prisma                               |  44 +++
+ types/checkout.ts                                  |   8 +-
+ 45 files changed, 3587 insertions(+), 124 deletions(-)
+ create mode 100644 app/admin/analytics/page.tsx
+ create mode 100644 app/admin/products/page.tsx
+ create mode 100644 app/api/admin/analytics/route.ts
+ create mode 100644 app/api/admin/products/[id]/route.ts
+ create mode 100644 app/api/admin/products/route.ts
+ create mode 100644 app/api/estimate/gcode/route.ts
+ create mode 100644 app/api/presets/[id]/route.ts
+ create mode 100644 app/api/presets/route.ts
+ create mode 100644 app/api/products/[id]/route.ts
+ create mode 100644 app/api/products/route.ts
+ create mode 100644 app/customer/portal/page.tsx
+ create mode 100644 app/products/[id]/page.tsx
+ create mode 100644 app/products/page.tsx
+ create mode 100644 components/admin/AnalyticsDashboard.tsx
+ create mode 100644 components/admin/ProductBuilder.tsx
+ create mode 100644 components/customer/CustomerPresetsPanel.tsx
+ create mode 100644 components/products/ProductConfigurator.tsx
+ create mode 100644 lib/admin/analytics.ts
+ create mode 100644 lib/estimate-adjustments.ts
+ create mode 100644 lib/gcode.ts
+ create mode 100644 lib/model-intelligence.ts
+ create mode 100644 prisma/migrations/20260208120000_model_intelligence/migration.sql
+ create mode 100644 prisma/migrations/20260208124500_pricing_adjustments/migration.sql
+ create mode 100644 prisma/migrations/20260208133000_product_templates/migration.sql
+ create mode 100644 prisma/migrations/20260208174500_customer_presets_and_min_order/migration.sql
 
 Array
 (
@@ -387,16 +461,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   8d26d39..2972bcd  main       -> origin/main
-Updating 8d26d39..2972bcd
-Fast-forward
- public-readonly/index.html |  2 +-
- public/index.html          | 13 +++++++++++++
- public/shared/admin.js     | 12 ++++++++++++
- public/shared/scripts.js   | 22 ++++++++++++++++++----
- src/server.js              | 26 +++++++++++++++++++++++++-
- 5 files changed, 69 insertions(+), 6 deletions(-)
+Already up to date.
 
 Array
 (
@@ -571,7 +636,14 @@ Processing /tmp/GitHub/repositoryClone/sparkison/m3u-editor/ca_profile.xml...FOU
 
 Downloading T4s3rF4c3's Repository
 
-Already up to date.
+From https://github.com/T4s3rF4c3/macreplay_v2
+   7ec7901..b8d2485  main       -> origin/main
+Updating 7ec7901..b8d2485
+Fast-forward
+ .github/workflows/ghcr.yml | 44 ++++++++++++++++++++++++++++
+ templates/portals.html     | 73 ++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 117 insertions(+)
+ create mode 100644 .github/workflows/ghcr.yml
 
 Array
 (
@@ -5647,7 +5719,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   ecbc9d7..67a801c  main       -> origin/main
+Updating ecbc9d7..67a801c
+Fast-forward
+ unraid/cops.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -9345,7 +9422,12 @@ Processing /tmp/GitHub/repositoryClone/jbreed/docker-templates/nessus/nessus.xml
 
 Downloading Selfhosters Unraid Discord Repository
 
-Already up to date.
+From https://github.com/selfhosters/unRAID-CA-templates
+   21409bb..3131151  master     -> origin/master
+Updating 21409bb..3131151
+Fast-forward
+ templates/zeitlaeufer/sdnext.xml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 
 Array
 (
@@ -19826,22 +19908,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
-Tagged - Can't determine last update
-orangecoding/fredy
-ghcr.io/orangecoding/fredy:master Downloads:   Stars:   Base: unknown
-jandrop/file-manager-api
-jandrop/file-manager-api:latest Downloads: 4240  Stars: 0  Base: unknown
-jandrop/file-manager-ui
-jandrop/file-manager-ui:latest Downloads: 4153  Stars: 0  Base: unknown
-connorgallopo/tracearr
-ghcr.io/connorgallopo/tracearr:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-connorgallopo/tracearr
-ghcr.io/connorgallopo/tracearr:supervised Downloads:   Stars:   Base: unknown
-indemnity83/always-bring-a-gift
-ghcr.io/indemnity83/always-bring-a-gift:latest Downloads:   Stars:   Base: unknown
-keenaanee/cinemastatus
-keenaanee/cinemastatus:latest Downloads: 147  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
