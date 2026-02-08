@@ -192,11 +192,25 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   b0a0fa2..3745130  main       -> origin/main
-Updating b0a0fa2..3745130
+   3745130..792951d  main       -> origin/main
+Updating 3745130..792951d
 Fast-forward
- components/NavBar.tsx | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ .dockerignore                                     |   3 +-
+ .env.example                                      |   2 +-
+ app/admin/jobs/page.tsx                           |   3 +-
+ app/admin/page.tsx                                |   6 +-
+ app/api/admin/env-check/route.ts                  |   2 -
+ app/api/admin/orderworks/jobs/[id]/retry/route.ts |  48 -----
+ app/api/admin/orderworks/jobs/_helpers.ts         |   3 -
+ app/api/admin/orderworks/jobs/route.ts            |   1 -
+ app/api/admin/orderworks/retry/route.ts           |  26 ---
+ app/api/makerworks/jobs/route.ts                  |   2 +-
+ components/admin/BackupControls.tsx               |   2 +-
+ components/admin/JobQueue.tsx                     |  59 ++----
+ lib/orderworks.ts                                 | 215 ----------------------
+ 13 files changed, 20 insertions(+), 352 deletions(-)
+ delete mode 100644 app/api/admin/orderworks/jobs/[id]/retry/route.ts
+ delete mode 100644 app/api/admin/orderworks/retry/route.ts
 
 Array
 (
@@ -392,7 +406,17 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   3988bae..5ed3a3a  main       -> origin/main
+Updating 3988bae..5ed3a3a
+Fast-forward
+ public-readonly/index.html | 12 +++++++++---
+ public/index.html          |  4 ++++
+ public/shared/admin.css    |  3 ++-
+ public/shared/admin.js     | 21 ++++++++++++++++++---
+ public/shared/scripts.js   | 15 +++++++++++----
+ src/server.js              | 16 ++++++++--------
+ 6 files changed, 52 insertions(+), 19 deletions(-)
 
 Array
 (
@@ -20051,8 +20075,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-wow-signal-dev/metadata-remote
-ghcr.io/wow-signal-dev/metadata-remote:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
