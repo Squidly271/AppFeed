@@ -15538,7 +15538,17 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 
 Downloading ZappyZap's Repository
 
-Already up to date.
+From https://github.com/devzwf/unraid-docker-templates
+   67ac829..f1322a9  main       -> origin/main
+Updating 67ac829..f1322a9
+Fast-forward
+ CHANGELOG.MD                     |  3 ++
+ README.md                        | 17 +++--------
+ deprecated/pihole-dot-doh-v5.xml | 61 ++++++++++++++++++++++++++++++++++++++++
+ pihole-dot-doh-v6.xml            | 35 +++++++++++------------
+ pihole-dot-doh.xml               | 51 ++++++++++++++-------------------
+ 5 files changed, 106 insertions(+), 61 deletions(-)
+ create mode 100644 deprecated/pihole-dot-doh-v5.xml
 
 Array
 (
@@ -15555,41 +15565,42 @@ Array
             [8] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbDrop.xml
             [9] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/termix.xml
             [10] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml
-            [11] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml
-            [12] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml
-            [13] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml
-            [14] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/iventoy.xml
-            [15] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/myspeed.xml
-            [16] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.xml
-            [17] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml
-            [18] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml
-            [19] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml
-            [20] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambuddy.xml
-            [21] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/ca_profile.xml
-            [22] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bichon.xml
-            [23] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pulse.xml
-            [24] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/binner.xml
-            [25] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/zerobyte.xml
-            [26] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/glance.xml
-            [27] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/silverbullet.xml
-            [28] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh-v6.xml
-            [29] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/hydroqc2mqtt.xml
-            [30] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/lightnvr.xml
-            [31] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/birdnet-go.xml
-            [32] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/wallos.xml
-            [33] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/docmost.xml
-            [34] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbterm.xml
-            [35] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbassets.xml
-            [36] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/mimosa.xml
-            [37] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbwhois.xml
-            [38] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/proxmox-datacenter-manager.xml
-            [39] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/nebula-sync.xml
-            [40] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/juicepass2mqtt.xml
-            [41] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/proxmox-backup-server.xml
-            [42] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-sync-sender.xml
-            [43] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/postfixrelay.xml
-            [44] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/hawser.xml
-            [45] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/onedev.xml
+            [11] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v5.xml
+            [12] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml
+            [13] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml
+            [14] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml
+            [15] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/iventoy.xml
+            [16] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/myspeed.xml
+            [17] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.xml
+            [18] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml
+            [19] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml
+            [20] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml
+            [21] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambuddy.xml
+            [22] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/ca_profile.xml
+            [23] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bichon.xml
+            [24] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pulse.xml
+            [25] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/binner.xml
+            [26] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/zerobyte.xml
+            [27] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/glance.xml
+            [28] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/silverbullet.xml
+            [29] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh-v6.xml
+            [30] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/hydroqc2mqtt.xml
+            [31] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/lightnvr.xml
+            [32] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/birdnet-go.xml
+            [33] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/wallos.xml
+            [34] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/docmost.xml
+            [35] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbterm.xml
+            [36] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbassets.xml
+            [37] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/mimosa.xml
+            [38] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbwhois.xml
+            [39] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/proxmox-datacenter-manager.xml
+            [40] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/nebula-sync.xml
+            [41] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/juicepass2mqtt.xml
+            [42] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/proxmox-backup-server.xml
+            [43] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-sync-sender.xml
+            [44] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/postfixrelay.xml
+            [45] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/hawser.xml
+            [46] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/onedev.xml
         )
 
 )
@@ -15606,6 +15617,7 @@ Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbKan.xm
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbDrop.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/termix.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml... ***DEPRECATED BY REPO PATH*** Success
+Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v5.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml... ***DEPRECATED BY REPO PATH*** Removed from CA123
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml...Success
@@ -16215,7 +16227,12 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   520c69e..8191eaf  main       -> origin/main
+Updating 520c69e..8191eaf
+Fast-forward
+ templates/sync_in.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
