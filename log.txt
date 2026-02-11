@@ -298,41 +298,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   bf968df..6ebe333  main       -> origin/main
-Updating bf968df..6ebe333
-Fast-forward
- app/api/admin/models/[id]/route.ts                 |  8 ++++++
- app/api/admin/models/route.ts                      |  2 ++
- app/api/admin/site-config/route.ts                 |  1 -
- app/api/checkout/route.ts                          | 28 ++++++++++----------
- app/api/discount/route.ts                          | 30 +++++++---------------
- app/api/models/[id]/quote/route.ts                 |  6 +++--
- app/api/models/route.ts                            |  2 ++
- app/api/products/[id]/route.ts                     |  1 +
- app/api/products/route.ts                          |  1 +
- app/cart/page.tsx                                  |  2 +-
- app/models/[id]/page.tsx                           |  2 ++
- app/products/[id]/page.tsx                         |  1 +
- app/products/page.tsx                              |  1 +
- components/InstantQuoteConfigurator.tsx            |  6 ++++-
- components/ModelPartsList.tsx                      |  6 ++++-
- components/admin/ModelManager.tsx                  | 28 ++++++++++++++++++++
- components/admin/SiteConfigForm.tsx                | 17 ------------
- components/cart/AddToCartButtons.tsx               |  8 +++++-
- components/cart/CartProvider.tsx                   |  2 ++
- components/discover/DiscoverModelList.tsx          |  2 ++
- components/products/ProductConfigurator.tsx        |  4 ++-
- lib/discounts.ts                                   | 16 +-----------
- .../migration.sql                                  |  2 ++
- .../migration.sql                                  |  2 ++
- .../migration.sql                                  |  2 ++
- prisma/schema.prisma                               |  3 ++-
- types/discover.ts                                  |  2 ++
- 27 files changed, 110 insertions(+), 75 deletions(-)
- create mode 100644 prisma/migrations/20260211113000_model_disable_customer_discounts/migration.sql
- create mode 100644 prisma/migrations/20260211114000_drop_siteconfig_disable_customer_discounts/migration.sql
- create mode 100644 prisma/migrations/20260211130000_model_flat_rate_pricing/migration.sql
+Already up to date.
 
 Array
 (
@@ -528,7 +494,18 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   a4ae3a7..8b8d85a  main       -> origin/main
+Updating a4ae3a7..8b8d85a
+Fast-forward
+ .gitignore               |  3 ++-
+ CHANGELOG.md             |  5 +++++
+ package.json             |  2 +-
+ public/shared/admin.js   | 15 ++++++++++++++-
+ public/shared/scripts.js | 16 +++++++++++-----
+ src/server.js            | 18 ++++++++++++++----
+ version.json             |  2 +-
+ 7 files changed, 48 insertions(+), 13 deletions(-)
 
 Array
 (
@@ -685,18 +662,23 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/sparkison/m3u-editor
-   e06dc60f..8ed2705d  master     -> origin/master
- * [new tag]           0.8.37     -> 0.8.37
-Updating e06dc60f..8ed2705d
+   8ed2705d..49e5da69  master     -> origin/master
+ * [new tag]           0.8.38     -> 0.8.38
+Updating 8ed2705d..49e5da69
 Fast-forward
- .../Resources/Channels/Pages/ListChannels.php      |  9 +++-
- app/Filament/Resources/Groups/GroupResource.php    |  9 +++-
- app/Filament/Resources/Groups/Pages/ViewGroup.php  |  9 +++-
- app/Filament/Resources/Vods/Pages/ListVod.php      |  9 +++-
- app/Jobs/UnmergeChannels.php                       | 56 +++++++++++++++++++++-
- app/Services/PlaylistService.php                   |  5 ++
- config/dev.php                                     |  2 +-
- 7 files changed, 90 insertions(+), 9 deletions(-)
+ .../CustomPlaylists/CustomPlaylistResource.php     | 49 ++++++++++++--------
+ .../MergedPlaylists/MergedPlaylistResource.php     | 50 ++++++++++++--------
+ .../PlaylistAliases/PlaylistAliasResource.php      | 50 ++++++++++++--------
+ .../Resources/Playlists/PlaylistResource.php       | 50 ++++++++++++--------
+ app/Models/CustomPlaylist.php                      |  1 +
+ app/Models/MergedPlaylist.php                      |  1 +
+ app/Models/Playlist.php                            |  1 +
+ app/Models/PlaylistAlias.php                       |  1 +
+ app/Services/M3uProxyService.php                   | 28 ++++++++++-
+ config/dev.php                                     |  4 +-
+ ..._000001_add_use_sticky_session_to_playlists.php | 54 ++++++++++++++++++++++
+ 11 files changed, 205 insertions(+), 84 deletions(-)
+ create mode 100644 database/migrations/2026_02_11_000001_add_use_sticky_session_to_playlists.php
 
 Array
 (
@@ -15699,7 +15681,12 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 
 Downloading ZappyZap's Repository
 
-Already up to date.
+From https://github.com/devzwf/unraid-docker-templates
+   a00c491..d35439e  main       -> origin/main
+Updating a00c491..d35439e
+Fast-forward
+ nutify.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -15789,9 +15776,7 @@ Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/binner.xml
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/zerobyte.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/nutify.xml...Privileged mode set.  This may not be necessary
 
-Port referenced in webUI does not correspond with a container port defined.  Port Referenced does not exist in Config.  Template removed from CA.
-
-Removed from CA123
+Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/glance.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/silverbullet.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh-v6.xml...Success
@@ -20183,6 +20168,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+everythingsmarthome/everything-presence-mmwave-configurator
+everythingsmarthome/everything-presence-mmwave-configurator Downloads: 102804  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20220,10 +20207,22 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+Tagged - Can't determine last update
+dartsteven/nutify
+dartsteven/nutify:amd64-latest Downloads: 65689  Stars: 4  Base: unknown
+Pulling dartsteven/nutify:amd64-latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+13hannes11/ics-proxy
+ghcr.io/13hannes11/ics-proxy:latest Downloads: 107  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+linotp/linotp
+linotp/linotp:3.4.4 Downloads: 543  Stars: 0  Base: unknown
+quay.io/mudler/localrecall
+quay.io/mudler/localrecall:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
