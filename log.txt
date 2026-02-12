@@ -136,55 +136,20 @@ Removed from CA123
 Downloading ReadMeABook's Repository
 
 From https://github.com/kikootwo/ReadMeABook
-   eca24e4..89422fc  main       -> origin/main
-Updating eca24e4..89422fc
+   89422fc..98a2cc2  main       -> origin/main
+ * [new tag]         v1.0.8     -> v1.0.8
+Updating 89422fc..98a2cc2
 Fast-forward
- documentation/backend/services/notifications.md    |  34 ++--
- src/app/api/admin/notifications/test/route.ts      |   1 +
- src/app/api/audiobooks/[asin]/route.ts             |   1 +
- src/app/api/authors/[asin]/books/route.ts          |  74 +++++++++
- src/app/api/authors/[asin]/route.ts                |  94 +++++++++++
- src/app/api/authors/search/route.ts                |  91 +++++++++++
- src/app/authors/[asin]/page.tsx                    | 121 ++++++++++++++
- src/app/authors/page.tsx                           | 176 +++++++++++++++++++++
- .../audiobooks/AudiobookDetailsModal.tsx           |  20 ++-
- src/components/authors/AuthorCard.tsx              |  87 ++++++++++
- src/components/authors/AuthorDetailCard.tsx        | 135 ++++++++++++++++
- src/components/authors/AuthorGrid.tsx              | 100 ++++++++++++
- src/components/authors/SimilarAuthorsRow.tsx       | 168 ++++++++++++++++++++
- src/components/layout/Header.tsx                   |  13 ++
- src/lib/constants/notification-events.ts           |  33 +++-
- src/lib/hooks/useAudiobooks.ts                     |   2 +
- src/lib/hooks/useAuthors.ts                        |  88 +++++++++++
- src/lib/integrations/audible.service.ts            | 159 ++++++++++++++++++-
- src/lib/integrations/audnexus-authors.ts           | 104 ++++++++++++
- src/lib/processors/organize-files.processor.ts     |   4 +-
- .../processors/plex-recently-added.processor.ts    |   4 +-
- src/lib/processors/scan-plex.processor.ts          |   4 +-
- src/lib/processors/send-notification.processor.ts  |   3 +-
- src/lib/services/goodreads-sync.service.ts         |  22 ++-
- src/lib/services/job-queue.service.ts              |   5 +-
- .../services/notification/INotificationProvider.ts |   1 +
- .../notification/providers/apprise.provider.ts     |   7 +-
- .../notification/providers/discord.provider.ts     |   7 +-
- .../notification/providers/ntfy.provider.ts        |   7 +-
- .../notification/providers/pushover.provider.ts    |   9 +-
- tests/api/admin-notifications-test.routes.test.ts  |   1 +
- .../processors/send-notification.processor.test.ts |  27 ++++
- tests/services/apprise.provider.test.ts            |   1 +
- tests/services/notification.service.test.ts        |  88 +++++++++++
- 34 files changed, 1646 insertions(+), 45 deletions(-)
- create mode 100644 src/app/api/authors/[asin]/books/route.ts
- create mode 100644 src/app/api/authors/[asin]/route.ts
- create mode 100644 src/app/api/authors/search/route.ts
- create mode 100644 src/app/authors/[asin]/page.tsx
- create mode 100644 src/app/authors/page.tsx
- create mode 100644 src/components/authors/AuthorCard.tsx
- create mode 100644 src/components/authors/AuthorDetailCard.tsx
- create mode 100644 src/components/authors/AuthorGrid.tsx
- create mode 100644 src/components/authors/SimilarAuthorsRow.tsx
- create mode 100644 src/lib/hooks/useAuthors.ts
- create mode 100644 src/lib/integrations/audnexus-authors.ts
+ docker-compose.yml                         |  18 ++
+ docker/unified/entrypoint.sh               | 272 ++++++++++++++++++-----------
+ docker/unified/postgres-start.sh           |  21 +++
+ docker/unified/redis-start.sh              |  11 +-
+ docker/unified/supervisord.conf            |   2 +-
+ dockerfile.unified                         |   5 +
+ package.json                               |   2 +-
+ tests/api/audiobooks-browse.routes.test.ts |   1 +
+ 8 files changed, 229 insertions(+), 103 deletions(-)
+ create mode 100644 docker/unified/postgres-start.sh
 
 Array
 (
@@ -540,11 +505,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   dc64a7b..05be7b5  main       -> origin/main
-Updating dc64a7b..05be7b5
+   05be7b5..26565e2  main       -> origin/main
+Updating 05be7b5..26565e2
 Fast-forward
- app/layout.tsx | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ lib/orderworks-link.ts |  2 ++
+ lib/production.ts      | 81 +++++++++++++++++++++++++++++++++++++-------------
+ 2 files changed, 63 insertions(+), 20 deletions(-)
 
 Array
 (
@@ -20237,8 +20203,18 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+roundcube/roundcubemail
+roundcube/roundcubemail:latest Downloads: 18892390  Stars: 191  Base: unknown
+archivebox/archivebox
+ghcr.io/archivebox/archivebox:latest Downloads: 9211698  Stars: 96  Base: unknown
+mitmproxy/mitmproxy
+mitmproxy/mitmproxy Downloads: 26272943  Stars: 185  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
+pelican-dev/wings
+ghcr.io/pelican-dev/wings:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
+pelican-dev/panel
+ghcr.io/pelican-dev/panel:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
@@ -20318,6 +20294,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+jamesits/ripe-atlas
+jamesits/ripe-atlas:latest Downloads: 1680958  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -20357,6 +20335,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+toniebox-reverse-engineering/teddycloud
+ghcr.io/toniebox-reverse-engineering/teddycloud:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20394,10 +20374,14 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+docmost/docmost
+docmost/docmost:latest Downloads: 2420716  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+homarr-labs/homarr
+ghcr.io/homarr-labs/homarr:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20406,6 +20390,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
+greycubesgav/cryptomator-webdav
+greycubesgav/cryptomator-webdav Downloads: 1399  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
