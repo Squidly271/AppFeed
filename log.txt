@@ -13,7 +13,26 @@ Downloading Repo Info
 
 Downloading gibz104's Repository
 
-Already up to date.
+From https://github.com/gibz104/SpoolmanSync
+   976df0f..38100f1  main       -> origin/main
+Updating 976df0f..38100f1
+Fast-forward
+ README.md                                |  11 +
+ app/package-lock.json                    |  10 +
+ app/package.json                         |   1 +
+ app/src/app/globals.css                  |  95 +++++++
+ app/src/app/scan/page.tsx                | 256 +++++++-----------
+ app/src/app/scan/spool/[id]/page.tsx     | 262 +++++++++++++++++++
+ app/src/components/nfc-writer.tsx        | 401 +++++++++++++++++++++++++++++
+ app/src/components/qr-code-generator.tsx | 429 +++++++++++++++++++++++++++++++
+ app/src/lib/entity-patterns.test.ts      | 341 ++++++++++++++++++++++++
+ app/src/lib/entity-patterns.ts           |  74 +++++-
+ llms.txt                                 |   3 +
+ 11 files changed, 1708 insertions(+), 175 deletions(-)
+ create mode 100644 app/src/app/scan/spool/[id]/page.tsx
+ create mode 100644 app/src/components/nfc-writer.tsx
+ create mode 100644 app/src/components/qr-code-generator.tsx
+ create mode 100644 app/src/lib/entity-patterns.test.ts
 
 Array
 (
@@ -490,7 +509,15 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   6ebe333..dc64a7b  main       -> origin/main
+Updating 6ebe333..dc64a7b
+Fast-forward
+ .../admin/orders/[orderId]/items/[itemId]/route.ts |   4 +-
+ app/api/admin/orders/[orderId]/route.ts            |  11 +-
+ lib/orderworks-link.ts                             |  23 +++
+ lib/orderworks-sync.ts                             | 163 +++++++++++++++++++--
+ 4 files changed, 189 insertions(+), 12 deletions(-)
 
 Array
 (
@@ -5919,12 +5946,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   67a801c..8150e3a  main       -> origin/main
-Updating 67a801c..8150e3a
-Fast-forward
- unraid/sealskin.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -20162,9 +20184,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-Tagged - Can't determine last update
-postgres
-postgres:18 Downloads: 10243424877  Stars: 14785  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -20194,8 +20213,6 @@ postgres:18 Downloads: 10243424877  Stars: 14785  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-bmmbmm01/bitcoin-core-gui
-bmmbmm01/bitcoin-core-gui Downloads: 734  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20313,8 +20330,6 @@ bmmbmm01/bitcoin-core-gui Downloads: 734  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-woahai321/list-sync
-ghcr.io/woahai321/list-sync:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20370,6 +20385,9 @@ ghcr.io/woahai321/list-sync:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+Tagged - Can't determine last update
+odoo
+odoo:18 Downloads: 47964547  Stars: 1494  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 130
