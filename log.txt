@@ -135,7 +135,56 @@ Removed from CA123
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   eca24e4..89422fc  main       -> origin/main
+Updating eca24e4..89422fc
+Fast-forward
+ documentation/backend/services/notifications.md    |  34 ++--
+ src/app/api/admin/notifications/test/route.ts      |   1 +
+ src/app/api/audiobooks/[asin]/route.ts             |   1 +
+ src/app/api/authors/[asin]/books/route.ts          |  74 +++++++++
+ src/app/api/authors/[asin]/route.ts                |  94 +++++++++++
+ src/app/api/authors/search/route.ts                |  91 +++++++++++
+ src/app/authors/[asin]/page.tsx                    | 121 ++++++++++++++
+ src/app/authors/page.tsx                           | 176 +++++++++++++++++++++
+ .../audiobooks/AudiobookDetailsModal.tsx           |  20 ++-
+ src/components/authors/AuthorCard.tsx              |  87 ++++++++++
+ src/components/authors/AuthorDetailCard.tsx        | 135 ++++++++++++++++
+ src/components/authors/AuthorGrid.tsx              | 100 ++++++++++++
+ src/components/authors/SimilarAuthorsRow.tsx       | 168 ++++++++++++++++++++
+ src/components/layout/Header.tsx                   |  13 ++
+ src/lib/constants/notification-events.ts           |  33 +++-
+ src/lib/hooks/useAudiobooks.ts                     |   2 +
+ src/lib/hooks/useAuthors.ts                        |  88 +++++++++++
+ src/lib/integrations/audible.service.ts            | 159 ++++++++++++++++++-
+ src/lib/integrations/audnexus-authors.ts           | 104 ++++++++++++
+ src/lib/processors/organize-files.processor.ts     |   4 +-
+ .../processors/plex-recently-added.processor.ts    |   4 +-
+ src/lib/processors/scan-plex.processor.ts          |   4 +-
+ src/lib/processors/send-notification.processor.ts  |   3 +-
+ src/lib/services/goodreads-sync.service.ts         |  22 ++-
+ src/lib/services/job-queue.service.ts              |   5 +-
+ .../services/notification/INotificationProvider.ts |   1 +
+ .../notification/providers/apprise.provider.ts     |   7 +-
+ .../notification/providers/discord.provider.ts     |   7 +-
+ .../notification/providers/ntfy.provider.ts        |   7 +-
+ .../notification/providers/pushover.provider.ts    |   9 +-
+ tests/api/admin-notifications-test.routes.test.ts  |   1 +
+ .../processors/send-notification.processor.test.ts |  27 ++++
+ tests/services/apprise.provider.test.ts            |   1 +
+ tests/services/notification.service.test.ts        |  88 +++++++++++
+ 34 files changed, 1646 insertions(+), 45 deletions(-)
+ create mode 100644 src/app/api/authors/[asin]/books/route.ts
+ create mode 100644 src/app/api/authors/[asin]/route.ts
+ create mode 100644 src/app/api/authors/search/route.ts
+ create mode 100644 src/app/authors/[asin]/page.tsx
+ create mode 100644 src/app/authors/page.tsx
+ create mode 100644 src/components/authors/AuthorCard.tsx
+ create mode 100644 src/components/authors/AuthorDetailCard.tsx
+ create mode 100644 src/components/authors/AuthorGrid.tsx
+ create mode 100644 src/components/authors/SimilarAuthorsRow.tsx
+ create mode 100644 src/lib/hooks/useAuthors.ts
+ create mode 100644 src/lib/integrations/audnexus-authors.ts
 
 Array
 (
@@ -490,7 +539,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   dc64a7b..05be7b5  main       -> origin/main
+Updating dc64a7b..05be7b5
+Fast-forward
+ app/layout.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
