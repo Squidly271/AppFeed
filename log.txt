@@ -687,70 +687,26 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   b75757a..64f40db  main       -> origin/main
-Updating b75757a..64f40db
+   64f40db..55bf0ab  main          -> origin/main
+ * [new tag]         v3.3.2-beta.1 -> v3.3.2-beta.1
+Updating 64f40db..55bf0ab
 Fast-forward
- client/knip.json                                   |   18 +-
- client/src/components/carousel-builder/index.js    |    6 -
- client/src/components/settings/UserGroupsModal.jsx |  148 ---
- client/src/components/timeline/index.js            |    7 -
- client/src/components/ui/TopBar.jsx                |    2 +-
- .../components/video-player/PlaybackControls.jsx   |    2 +-
- client/src/components/wall/index.js                |    5 -
- client/src/hooks/useGlobalNavigation.js            |    2 -
- client/src/hooks/useHiddenEntities.js              |    2 -
- client/src/hooks/useImagesPagination.js            |    2 -
- client/src/hooks/useKeyboardShortcuts.js           |    2 -
- client/src/hooks/usePaginatedLightbox.js           |    2 -
- client/src/hooks/useRatingHotkeys.js               |    2 -
- client/src/hooks/useScrollToCurrentItem.js         |    2 -
- client/src/services/api.js                         |    7 -
- client/src/utils/toast.jsx                         |    4 +-
- server/controllers/library/index.ts                |   25 -
- server/controllers/library/performers.ts           |    9 +-
- server/controllers/library/scenes.ts               |    8 +-
- server/controllers/library/studios.ts              |    9 +-
- server/controllers/library/tags.ts                 |    9 +-
- server/controllers/ratings.ts                      |  174 +--
- server/controllers/user.ts                         | 1110 ++++++++++----------
- server/controllers/watchHistory.ts                 |  128 ++-
- server/knip.json                                   |   16 +-
- server/package-lock.json                           |   12 +-
- server/package.json                                |    1 -
- .../migration.sql                                  |   57 +
- server/prisma/schema.prisma                        |   28 +-
- server/schemas/base.ts                             |    5 -
- server/scripts/benchmark-performance.ts            |  294 ------
- server/scripts/check-peek-db.ts                    |   40 -
- server/scripts/compute-rankings.ts                 |   52 -
- server/scripts/investigate-sync.ts                 |  154 ---
- server/services/DataMigrationService.ts            |   32 +
- server/services/DeduplicationService.ts            |  291 -----
- server/services/RankingComputeService.ts           |    7 +
- server/services/StashEntityService.ts              |   20 +-
- server/services/StashInstanceManager.ts            |   13 +
- server/services/UserInstanceService.ts             |    4 -
- server/services/UserStatsService.ts                |  122 ++-
- server/types/nested.ts                             |   32 -
- server/utils/carouselDefaults.ts                   |   29 -
- server/utils/entityInstanceId.ts                   |  145 ++-
- server/utils/queryBuilders.ts                      |  465 --------
- server/utils/stashUrlProxy.ts                      |   94 --
- 46 files changed, 1115 insertions(+), 2483 deletions(-)
- delete mode 100644 client/src/components/carousel-builder/index.js
- delete mode 100644 client/src/components/settings/UserGroupsModal.jsx
- delete mode 100644 client/src/components/timeline/index.js
- delete mode 100644 client/src/components/wall/index.js
- delete mode 100644 server/controllers/library/index.ts
- create mode 100644 server/prisma/migrations/20260211000000_add_instance_id_to_stats/migration.sql
- delete mode 100644 server/scripts/benchmark-performance.ts
- delete mode 100644 server/scripts/check-peek-db.ts
- delete mode 100644 server/scripts/compute-rankings.ts
- delete mode 100644 server/scripts/investigate-sync.ts
- delete mode 100644 server/services/DeduplicationService.ts
- delete mode 100644 server/types/nested.ts
- delete mode 100644 server/utils/carouselDefaults.ts
- delete mode 100644 server/utils/queryBuilders.ts
+ client/package.json                               |   2 +-
+ client/src/App.jsx                                |   2 +-
+ client/src/components/pages/GroupDetail.jsx       |  10 +-
+ client/src/components/pages/Home.jsx              |  58 +++++++-
+ client/src/components/pages/PerformerDetail.jsx   |   4 +-
+ client/src/components/pages/PlaylistDetail.jsx    | 125 ++++++++++++++++
+ client/src/components/pages/StudioDetail.jsx      |   4 +-
+ client/src/components/pages/TagDetail.jsx         |   4 +-
+ client/src/components/scene-search/SceneGrid.jsx  |  59 +++++++-
+ client/src/components/ui/BulkActionBar.jsx        | 169 +++++-----------------
+ client/src/components/ui/SceneListItem.jsx        | 113 +++++++++++----
+ client/src/hooks/useHideBulkAction.js             |  65 +++++++++
+ client/tests/components/ui/BulkActionBar.test.jsx | 120 +++------------
+ server/package.json                               |   2 +-
+ 14 files changed, 452 insertions(+), 285 deletions(-)
+ create mode 100644 client/src/hooks/useHideBulkAction.js
 
 Array
 (
@@ -14793,7 +14749,13 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-Already up to date.
+From https://github.com/JPDVM2014/unraid-templates
+   b1556d4..1ab6c8a  main       -> origin/main
+Updating b1556d4..1ab6c8a
+Fast-forward
+ leafwiki.xml | 34 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+ create mode 100644 leafwiki.xml
 
 Array
 (
@@ -14814,18 +14776,19 @@ Array
             [12] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/workout-tracker.xml
             [13] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ebookbuddy.xml
             [14] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/cabernet.xml
-            [15] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/hypermind.xml
-            [16] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/shelfarr.xml
-            [17] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/reiverr.xml
-            [18] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/spotizerr.xml
-            [19] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/audiodeck.xml
-            [20] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/soularr.xml
-            [21] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/trailarr.xml
-            [22] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/lms.xml
-            [23] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ghostboard-server.xml
-            [24] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/listenarr.xml
-            [25] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/readeck.xml
-            [26] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/metadata-remote.xml
+            [15] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/leafwiki.xml
+            [16] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/hypermind.xml
+            [17] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/shelfarr.xml
+            [18] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/reiverr.xml
+            [19] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/spotizerr.xml
+            [20] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/audiodeck.xml
+            [21] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/soularr.xml
+            [22] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/trailarr.xml
+            [23] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/lms.xml
+            [24] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ghostboard-server.xml
+            [25] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/listenarr.xml
+            [26] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/readeck.xml
+            [27] => /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/metadata-remote.xml
         )
 
 )
@@ -14846,6 +14809,7 @@ Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/sonobarr.xml..
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/workout-tracker.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/ebookbuddy.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/cabernet.xml...Success
+Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/leafwiki.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/hypermind.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/shelfarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/JPDVM2014/unraid-templates/reiverr.xml...Success
@@ -20098,12 +20062,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-operacle/checkcle
-operacle/checkcle:latest Downloads: 118158  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-iamspido/github-release-monitor
-ghcr.io/iamspido/github-release-monitor:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20203,8 +20163,6 @@ ghcr.io/iamspido/github-release-monitor:latest Downloads:   Stars:   Base: unkno
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-deucebucket/library-manager
-ghcr.io/deucebucket/library-manager:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20224,8 +20182,6 @@ ghcr.io/deucebucket/library-manager:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-casbin/casdoor
-casbin/casdoor:latest Downloads: 983640  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-newenckey/master/unraid-newenckey.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
@@ -20244,20 +20200,13 @@ casbin/casdoor:latest Downloads: 983640  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-shaneisrael/snapsmaps
-shaneisrael/snapsmaps:latest Downloads: 1819  Stars: 0  Base: unknown
+perber/leafwiki
+ghcr.io/perber/leafwiki:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/perber/leafwiki:latest
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-zggis/plex-tvtime
-zggis/plex-tvtime Downloads: 22120  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-matrixconduit/matrix-conduit
-matrixconduit/matrix-conduit:latest Downloads: 483639  Stars: 11  Base: unknown
-enricoros/big-agi
-ghcr.io/enricoros/big-agi:latest Downloads:   Stars:   Base: unknown
-imagegenius/jenkins
-ghcr.io/imagegenius/jenkins Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
