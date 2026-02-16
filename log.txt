@@ -14,27 +14,13 @@ Downloading Repo Info
 Downloading gibz104's Repository
 
 From https://github.com/gibz104/SpoolmanSync
-   4278265..eb89848  main       -> origin/main
- * [new tag]         v1.1.2     -> v1.1.2
-Updating 4278265..eb89848
+   eb89848..25a1723  main       -> origin/main
+Updating eb89848..25a1723
 Fast-forward
- CHANGELOG.md                                |   9 +
- app/package.json                            |   2 +-
- app/src/app/api/printers/route.ts           |  10 +-
- app/src/app/globals.css                     |  94 ++----
- app/src/app/scan/page.tsx                   |   4 +-
- app/src/components/label-cell.tsx           | 157 +++++++++
- app/src/components/label-sheet-preview.tsx  | 254 +++++++++++++++
- app/src/components/label-sheet-settings.tsx | 253 +++++++++++++++
- app/src/components/qr-code-generator.tsx    | 477 ++++++++++------------------
- app/src/lib/ha-config-generator.ts          |   2 +-
- app/src/lib/label-sheet-config.ts           | 191 +++++++++++
- spoolmansync-ha-addon/config.yaml           |   2 +-
- 12 files changed, 1060 insertions(+), 395 deletions(-)
- create mode 100644 app/src/components/label-cell.tsx
- create mode 100644 app/src/components/label-sheet-preview.tsx
- create mode 100644 app/src/components/label-sheet-settings.tsx
- create mode 100644 app/src/lib/label-sheet-config.ts
+ app/src/lib/api/homeassistant.ts    |  2 +-
+ app/src/lib/entity-patterns.test.ts | 85 ++++++++++++++++++++++++++++++++++---
+ app/src/lib/entity-patterns.ts      | 65 ++++++++++++++++------------
+ 3 files changed, 119 insertions(+), 33 deletions(-)
 
 Array
 (
@@ -505,21 +491,17 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   8ea151f..4c733c2  main       -> origin/main
-Updating 8ea151f..4c733c2
+   4c733c2..c9ead90  main       -> origin/main
+Updating 4c733c2..c9ead90
 Fast-forward
- app/admin/products/page.tsx          |   2 +
- app/api/admin/products/[id]/route.ts |  21 +++-
- app/api/admin/products/route.ts      |   3 +-
- app/api/products/[id]/route.ts       |   2 +
- app/api/products/route.ts            |   2 +
- app/globals.css                      |  22 ++++
- app/products/[id]/page.tsx           |   2 +
- app/products/page.tsx                |   2 +
- components/admin/AdminSidebar.tsx    |  14 +--
- components/admin/ProductBuilder.tsx  |   4 +
- lib/stockworks-products.ts           | 195 +++++++++++++++++++++++++++++++++--
- 11 files changed, 253 insertions(+), 16 deletions(-)
+ README.md                            |  2 +-
+ ROADMAP.md                           |  3 +-
+ app/api/admin/products/[id]/route.ts | 58 ++++++++++++++++++++++--------------
+ app/api/admin/products/route.ts      | 23 ++++++++------
+ app/cart/page.tsx                    | 14 +++++++--
+ components/ModelViewer.tsx           | 41 ++++++++++++++++++++++---
+ components/admin/ProductBuilder.tsx  |  4 +--
+ 7 files changed, 101 insertions(+), 44 deletions(-)
 
 Array
 (
@@ -907,21 +889,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   c07fb1a..711da37  main          -> origin/main
- * [new tag]         v3.3.3-beta.5 -> v3.3.3-beta.5
-Updating c07fb1a..711da37
-Fast-forward
- client/package.json                                |   2 +-
- .../src/components/settings/ServerStatsSection.jsx | 148 ++-------------------
- .../components/settings/SyncSettingsSection.jsx    | 102 ++++++++++++++
- .../src/components/settings/VersionInfoSection.jsx |  25 ++--
- .../src/components/settings/tabs/PlaybackTab.jsx   |   5 +-
- .../components/settings/tabs/ServerConfigTab.jsx   |   4 +
- server/package.json                                |   2 +-
- server/routes/sync.ts                              |   4 +-
- 8 files changed, 141 insertions(+), 151 deletions(-)
- create mode 100644 client/src/components/settings/SyncSettingsSection.jsx
+Already up to date.
 
 Array
 (
@@ -5969,7 +5937,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   2be609c..5c22a2e  main       -> origin/main
+Updating 2be609c..5c22a2e
+Fast-forward
+ unraid/changedetection.io.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -9474,15 +9447,7 @@ Processing /tmp/GitHub/repositoryClone/simse/docker-templates/simse/chronos.xml.
 
 Downloading Josh.5's Repository
 
-From https://github.com/Josh5/unraid-docker-templates
-   86359a7..c5c9dca  master     -> origin/master
-Updating 86359a7..c5c9dca
-Fast-forward
- josh5/headendarr.xml | 105 +++++++++++++++++++++++++++++++++++++++++++++++++++
- josh5/tvh-iptv.xml   |  91 --------------------------------------------
- 2 files changed, 105 insertions(+), 91 deletions(-)
- create mode 100644 josh5/headendarr.xml
- delete mode 100644 josh5/tvh-iptv.xml
+Already up to date.
 
 Array
 (
@@ -13517,20 +13482,7 @@ Processing /tmp/GitHub/repositoryClone/pairofcrocs/unraid-templates/ArchiveTeam-
 
 Downloading Unmax's Repository
 
-From https://github.com/PlexRipper/PlexRipper-Unraid-CA-Templates
-   b04ab2f..887d812  master     -> origin/master
-Updating b04ab2f..887d812
-Fast-forward
- screenshots/demo-1-login-screen.avif                   | Bin 0 -> 75039 bytes
- screenshots/demo-3-movies-library-1-poster-table.avif  | Bin 0 -> 644059 bytes
- ...demo-4-tv-show-library-1-download-confirmation.avif | Bin 0 -> 202618 bytes
- screenshots/demo-7-download-screen.avif                | Bin 0 -> 71234 bytes
- template/filename.xml                                  |   6 +++++-
- 5 files changed, 5 insertions(+), 1 deletion(-)
- create mode 100644 screenshots/demo-1-login-screen.avif
- create mode 100644 screenshots/demo-3-movies-library-1-poster-table.avif
- create mode 100644 screenshots/demo-4-tv-show-library-1-download-confirmation.avif
- create mode 100644 screenshots/demo-7-download-screen.avif
+Already up to date.
 
 Array
 (
@@ -20242,6 +20194,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+spicadust/icloudpd-web
+spicadust/icloudpd-web:latest Downloads: 6823  Stars: 2  Base: unknown
+arianrhodsandlot/retroassembly
+arianrhodsandlot/retroassembly Downloads: 173005  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20358,10 +20314,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
-josh5/headendarr
-josh5/headendarr:latest Downloads: 292  Stars: 0  Base: unknown
-Pulling josh5/headendarr:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
@@ -20404,6 +20356,13 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+dgruhin-hrizn/aperture
+ghcr.io/dgruhin-hrizn/aperture:latest Downloads:   Stars:   Base: unknown
+ohmzii/immaculaterr
+ohmzii/immaculaterr:latest Downloads: 4036  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+syncin/server
+syncin/server:1 Downloads: 39061  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
