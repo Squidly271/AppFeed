@@ -13,12 +13,7 @@ Downloading Repo Info
 
 Downloading gibz104's Repository
 
-From https://github.com/gibz104/SpoolmanSync
-   9af6466..c85aade  main       -> origin/main
-Updating 9af6466..c85aade
-Fast-forward
- README.md | 1 +
- 1 file changed, 1 insertion(+)
+Already up to date.
 
 Array
 (
@@ -286,8 +281,7 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/dervish666/unraid-templates/dervish/unraidmonitorbot.xml...Failed
-Failed loading XML
+Processing /tmp/GitHub/repositoryClone/dervish666/unraid-templates/dervish/unraidmonitorbot.xml...Success
 
 
 Downloading drm's Repository
@@ -489,12 +483,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   225f376..4a99d39  main       -> origin/main
-Updating 225f376..4a99d39
-Fast-forward
- components/admin/ProductBuilder.tsx | 322 +++++++++++++++++++++---------------
- 1 file changed, 193 insertions(+), 129 deletions(-)
+Already up to date.
 
 Array
 (
@@ -595,7 +584,12 @@ Processing /tmp/GitHub/repositoryClone/connorgallopo/tracearr-unraid-template/tr
 
 Downloading Indemnity83's Repository
 
-Already up to date.
+From https://github.com/Indemnity83/always-bring-a-gift
+   1ce57e9..0a19712  main       -> origin/main
+Updating 1ce57e9..0a19712
+Fast-forward
+ composer.lock | 238 +++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 120 insertions(+), 118 deletions(-)
 
 Array
 (
@@ -883,56 +877,23 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   572ed95..c09acf5  main          -> origin/main
- * [new tag]         v3.3.3-beta.1 -> v3.3.3-beta.1
-Updating 572ed95..c09acf5
+   2e46fda..c07fb1a  main          -> origin/main
+ * [new tag]         v3.3.3-beta.4 -> v3.3.3-beta.4
+Updating 2e46fda..c07fb1a
 Fast-forward
- .claude/skills/pre-release/SKILL.md                |  23 +-
- .claude/skills/release-workflow/SKILL.md           | 104 +++++++++
- .claude/skills/self-review/SKILL.md                |  29 ++-
- .claude/skills/updating-docs/SKILL.md              | 191 +++++++++++++++
- .claude/skills/visual-style/SKILL.md               | 239 +++++++++++++++++++
- .claude/skills/writing-tests/SKILL.md              | 258 +++++++++++++++++++++
- CLAUDE.md                                          | 107 ++++++---
- client/package.json                                |   2 +-
- client/src/components/cards/GalleryCard.jsx        |  10 +-
- client/src/components/cards/GroupCard.jsx          |   8 +-
- client/src/components/cards/PerformerCard.jsx      |   8 +-
- client/src/components/cards/StudioCard.jsx         |   8 +-
- client/src/components/cards/TagCard.jsx            |   8 +-
- client/src/components/pages/GalleryDetail.jsx      |   1 +
- client/src/components/pages/Images.jsx             |   1 +
- client/src/components/pages/Recommended.jsx        |  49 +++-
- .../src/components/pages/UserStats/UserStats.jsx   | 168 ++++++++++----
- client/src/components/ui/Lightbox.jsx              |  13 +-
- client/src/components/ui/MetadataDrawer.jsx        |  51 +++-
- client/src/components/ui/PaginatedImageGrid.jsx    |   1 +
- client/src/components/ui/SceneCard.jsx             |  12 +-
- client/src/hooks/usePaginatedLightbox.js           |   7 +
- client/src/utils/entityLinks.js                    |  17 ++
- client/tests/components/ui/Lightbox.test.jsx       |   6 +-
- server/controllers/library/performers.ts           |   7 +-
- server/controllers/library/studios.ts              |   7 +-
- server/controllers/library/tags.ts                 |   7 +-
- server/controllers/userStats.ts                    |  28 +++
- server/middleware/auth.ts                          |   9 +-
- server/package.json                                |   2 +-
- server/services/PerformerQueryBuilder.ts           |  49 ++--
- server/services/StudioQueryBuilder.ts              |   2 +-
- server/services/TagQueryBuilder.ts                 |   2 +-
- server/services/UserStatsService.ts                |  11 +-
- .../tests/services/PerformerQueryBuilder.test.ts   |  91 ++++++++
- server/tests/services/StudioQueryBuilder.test.ts   |  90 +++++++
- server/tests/services/TagQueryBuilder.test.ts      |  91 ++++++++
- server/tests/services/UserStatsService.test.ts     |  59 ++++-
- 38 files changed, 1601 insertions(+), 175 deletions(-)
- create mode 100644 .claude/skills/release-workflow/SKILL.md
- create mode 100644 .claude/skills/updating-docs/SKILL.md
- create mode 100644 .claude/skills/visual-style/SKILL.md
- create mode 100644 .claude/skills/writing-tests/SKILL.md
- create mode 100644 server/tests/services/PerformerQueryBuilder.test.ts
- create mode 100644 server/tests/services/StudioQueryBuilder.test.ts
- create mode 100644 server/tests/services/TagQueryBuilder.test.ts
+ client/package.json                                |  2 +-
+ client/src/components/pages/PlaylistDetail.jsx     |  1 -
+ .../components/settings/tabs/CustomizationTab.jsx  |  1 +
+ client/src/components/ui/AddToPlaylistButton.jsx   | 16 +++++++++-
+ client/src/components/ui/Lightbox.jsx              | 16 ++++++++--
+ client/src/components/ui/SceneListItem.jsx         | 36 ++++++++++------------
+ client/src/utils/filterConfig.js                   | 12 ++++++++
+ server/controllers/user.ts                         |  4 +--
+ server/package.json                                |  2 +-
+ server/prisma/schema.prisma                        |  2 +-
+ server/services/GalleryQueryBuilder.ts             | 34 +++++++++++++++++++-
+ server/types/peekFilters.ts                        |  1 +
+ 12 files changed, 98 insertions(+), 29 deletions(-)
 
 Array
 (
@@ -2163,6 +2124,7 @@ Array
             [0] => /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/automover.xml
             [1] => /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/ca_profile.xml
             [2] => /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/zip_manager.xml
+            [3] => /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/vm_backup_and_restore.xml
         )
 
 )
@@ -2171,6 +2133,8 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/automover.xml... Downloading https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/zip_manager.xml... Downloading https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/jcofer555/unraid-plugins/vm_backup_and_restore.xml...Failed
+Failed loading XML
 
 
 Downloading ck9393's Repository
@@ -3064,7 +3028,8 @@ Array
             [1] => /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/cross-seed-cleanup/cross-seed-cleanup.xml
             [2] => /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/ca_profile.xml
             [3] => /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/reddit-post-notifier/reddit-post-notifier.xml
-            [4] => /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/opencloud/opencloud.xml
+            [4] => /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/teamspeak6-server/teamspeak6-server.xml
+            [5] => /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/opencloud/opencloud.xml
         )
 
 )
@@ -3075,6 +3040,7 @@ Processing /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/ca_profile.xm
 Processing /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/reddit-post-notifier/reddit-post-notifier.xml...Unknown category Utilities:
 
 Success
+Processing /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/teamspeak6-server/teamspeak6-server.xml...Success
 Processing /tmp/GitHub/repositoryClone/mcreekmore/unraid-templates/opencloud/opencloud.xml...Success
 
 
@@ -4122,13 +4088,13 @@ Array
     [https://github.com/bmartino1/unraid-docker-templates] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml
-            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml
-            [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/csunifibouncer.xml
-            [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/icloudpd-web.xml
-            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
-            [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml
-            [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
-            [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml
+            [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/rocketchataio.xml
+            [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml
+            [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/immich-redis.xml
+            [4] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/csunifibouncer.xml
+            [5] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/icloudpd-web.xml
+            [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
+            [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
             [8] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml
             [9] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml
             [10] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml
@@ -4146,19 +4112,19 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/ckpool.xml... ***DEPRECATED BY REPO PATH*** No Support or Project Link Present.  Template automatically dropped from CA
 
 Removed from CA123
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/rocketchataio.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/hamachi-vpn.xml... ***DEPRECATED BY REPO PATH*** Privileged mode set.  This may not be necessary
 
 No Support or Project Link Present.  Template automatically dropped from CA
 
 Removed from CA123
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/immich-redis.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/csunifibouncer.xml... ***DEPRECATED BY REPO PATH*** Port referenced in webUI does not correspond with a container port defined.  Port Referenced does not exist in Config.  Template removed from CA.
 
 Removed from CA123
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/deprecated/icloudpd-web.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rocketchataio.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml...Success
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-redis.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml...Success
@@ -6035,97 +6001,97 @@ Array
             [51] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/minetest.xml
             [52] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/daapd.xml
             [53] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/netbootxyz.xml
-            [54] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/domoticz.xml
-            [55] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/kanzi.xml
-            [56] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/snapdrop.xml
-            [57] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/booksonic-air.xml
-            [58] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/snipe-it.xml
-            [59] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/photoshow.xml
-            [60] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/scrutiny.xml
-            [61] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/nntp2nntp.xml
-            [62] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/emulatorjs.xml
-            [63] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/unifi-controller.xml
-            [64] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/muximux.xml
-            [65] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/wireguard.xml
-            [66] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/ffmpeg.xml
-            [67] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/chevereto.xml
-            [68] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/pylon.xml
-            [69] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/quassel-core.xml
-            [70] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/papermerge.xml
-            [71] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ngircd.xml
-            [72] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/transmission.xml
-            [73] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rdesktop.xml
-            [74] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/telegram.xml
-            [75] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ungoogled-chromium.xml
-            [76] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/apprise-api.xml
-            [77] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mylar3.xml
-            [78] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/habridge.xml
-            [79] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mastodon.xml
-            [80] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sonarr.xml
-            [81] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calligra.xml
-            [82] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/filezilla.xml
-            [83] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vivaldi.xml
-            [84] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/limnoria.xml
-            [85] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bookstack.xml
-            [86] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qdirstat.xml
-            [87] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/melonds.xml
-            [88] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vlc.xml
-            [89] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/msedge.xml
-            [90] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thelounge.xml
-            [91] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/homeassistant.xml
-            [92] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grav.xml
-            [93] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/tvheadend.xml
-            [94] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/emby.xml
-            [95] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duplicati.xml
-            [96] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/krita.xml
-            [97] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/manyfold.xml
-            [98] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/modrinth.xml
-            [99] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbget.xml
-            [100] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sealskin.xml
-            [101] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dokuwiki.xml
-            [102] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckdns.xml
-            [103] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/librewolf.xml
-            [104] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pyload-ng.xml
-            [105] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/onlyoffice.xml
-            [106] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/faster-whisper.xml
-            [107] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/netbox.xml
-            [108] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thunderbird.xml
-            [109] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/unifi-network-application.xml
-            [110] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syslog-ng.xml
-            [111] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/smokeping.xml
-            [112] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dogwalk.xml
-            [113] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kometa.xml
-            [114] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/signal.xml
-            [115] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
-            [116] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
-            [117] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
-            [118] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
-            [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
-            [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
-            [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
-            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
-            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
-            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
-            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
-            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
-            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
-            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
-            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
-            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
-            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
-            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
-            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
-            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
-            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
-            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/steam.xml
-            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
-            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
-            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
-            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
-            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
-            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
-            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
-            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/overseerr.xml
+            [54] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/overseerr.xml
+            [55] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/domoticz.xml
+            [56] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/kanzi.xml
+            [57] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/snapdrop.xml
+            [58] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/booksonic-air.xml
+            [59] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/snipe-it.xml
+            [60] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/photoshow.xml
+            [61] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/scrutiny.xml
+            [62] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/nntp2nntp.xml
+            [63] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/emulatorjs.xml
+            [64] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/unifi-controller.xml
+            [65] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/muximux.xml
+            [66] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/wireguard.xml
+            [67] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/ffmpeg.xml
+            [68] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/chevereto.xml
+            [69] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/pylon.xml
+            [70] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/quassel-core.xml
+            [71] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/papermerge.xml
+            [72] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ngircd.xml
+            [73] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/transmission.xml
+            [74] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rdesktop.xml
+            [75] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/telegram.xml
+            [76] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ungoogled-chromium.xml
+            [77] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/apprise-api.xml
+            [78] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mylar3.xml
+            [79] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/habridge.xml
+            [80] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mastodon.xml
+            [81] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sonarr.xml
+            [82] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calligra.xml
+            [83] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/filezilla.xml
+            [84] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vivaldi.xml
+            [85] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/limnoria.xml
+            [86] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bookstack.xml
+            [87] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qdirstat.xml
+            [88] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/melonds.xml
+            [89] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vlc.xml
+            [90] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/msedge.xml
+            [91] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thelounge.xml
+            [92] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/homeassistant.xml
+            [93] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grav.xml
+            [94] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/tvheadend.xml
+            [95] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/emby.xml
+            [96] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duplicati.xml
+            [97] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/krita.xml
+            [98] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/manyfold.xml
+            [99] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/modrinth.xml
+            [100] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbget.xml
+            [101] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sealskin.xml
+            [102] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dokuwiki.xml
+            [103] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckdns.xml
+            [104] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/librewolf.xml
+            [105] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pyload-ng.xml
+            [106] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/onlyoffice.xml
+            [107] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/faster-whisper.xml
+            [108] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/netbox.xml
+            [109] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thunderbird.xml
+            [110] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/unifi-network-application.xml
+            [111] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syslog-ng.xml
+            [112] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/smokeping.xml
+            [113] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dogwalk.xml
+            [114] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kometa.xml
+            [115] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/signal.xml
+            [116] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
+            [117] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
+            [118] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
+            [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
+            [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
+            [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
+            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
+            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
+            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
+            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
+            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
+            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
+            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
+            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
+            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
+            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
+            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
+            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
+            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
+            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
+            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
+            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/steam.xml
+            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
+            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
+            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
+            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
+            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
+            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
+            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
             [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
             [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
             [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
@@ -6385,6 +6351,9 @@ Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/d
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/netbootxyz.xml... ***DEPRECATED BY REPO PATH*** No category entry present - using a guessed category
+
+Success
+Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/overseerr.xml... ***DEPRECATED BY REPO PATH*** No category entry present - using a guessed category
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/domoticz.xml... ***DEPRECATED BY REPO PATH*** No category entry present
@@ -6655,9 +6624,6 @@ Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xm
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml...No category entry present - using a guessed category
-
-Success
-Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/overseerr.xml...No category entry present - using a guessed category
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml...No category entry present - using a guessed category
@@ -13896,23 +13862,6 @@ Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/TrophyBuck/unraid-templates/redisInsight/redisInsight.xml...Success
 
 
-Downloading jabajames' Repository
-
-Already up to date.
-
-Array
-(
-    [https://github.com/Tech-Weasel/Unraid_Templates] => Array
-        (
-            [0] => /tmp/GitHub/repositoryClone/Tech-Weasel/Unraid_Templates/SIYuan/SIYuan.xml
-        )
-
-)
-   Success!
-Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/Tech-Weasel/Unraid_Templates/SIYuan/SIYuan.xml...Success
-
-
 Downloading da do ron's Repository
 
 Already up to date.
@@ -15541,7 +15490,15 @@ Processing /tmp/GitHub/repositoryClone/Polemus/Unraid/RabbitMQ/RabbitMQ.xml...Su
 
 Downloading Kilrah's Repository
 
-Already up to date.
+From https://github.com/kilrah/unraid-docker-templates
+   13f58c7..a4ad108  main       -> origin/main
+Updating 13f58c7..a4ad108
+Fast-forward
+ icons/{dji-logbook.png => drone-logbook.png}     | Bin
+ templates/{dji-logbook.xml => drone-logbook.xml} |  10 +++++-----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+ rename icons/{dji-logbook.png => drone-logbook.png} (100%)
+ rename templates/{dji-logbook.xml => drone-logbook.xml} (64%)
 
 Array
 (
@@ -15558,12 +15515,12 @@ Array
             [8] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/freefilesync.xml
             [9] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/owntone.xml
             [10] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/hypermind.xml
-            [11] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/cloudflare-ddns-config.xml
-            [12] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/subversion.xml
-            [13] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/searxng.xml
-            [14] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/arduinoide2.xml
-            [15] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/pictshare.xml
-            [16] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/dji-logbook.xml
+            [11] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/drone-logbook.xml
+            [12] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/cloudflare-ddns-config.xml
+            [13] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/subversion.xml
+            [14] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/searxng.xml
+            [15] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/arduinoide2.xml
+            [16] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/pictshare.xml
             [17] => /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/iperf3.xml
         )
 
@@ -15581,12 +15538,12 @@ Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/freefilesync.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/owntone.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/hypermind.xml...Success
+Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/drone-logbook.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/cloudflare-ddns-config.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/subversion.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/searxng.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/arduinoide2.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/pictshare.xml...Success
-Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/dji-logbook.xml...Success
 Processing /tmp/GitHub/repositoryClone/kilrah/unraid-docker-templates/templates/iperf3.xml...Success
 
 
@@ -16560,7 +16517,18 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   d7c7432..0b3b469  main       -> origin/main
+Updating d7c7432..0b3b469
+Fast-forward
+ automation/change_monitoring/data.json |  30 ++++++++++++++-------
+ images/taggarr-icon.png                | Bin 0 -> 665744 bytes
+ templates/seerr.xml                    |  12 +++++++--
+ templates/swiparr.xml                  |   2 +-
+ templates/taggarr.xml                  |  47 +++++++++++++++++++++++++++++++++
+ 5 files changed, 79 insertions(+), 12 deletions(-)
+ create mode 100644 images/taggarr-icon.png
+ create mode 100644 templates/taggarr.xml
 
 Array
 (
@@ -16890,202 +16858,203 @@ Array
             [321] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plauna.xml
             [322] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pgvector18.xml
             [323] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kaizoku.xml
-            [324] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plex_randomizer.xml
-            [325] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/speech_to_phrase.xml
-            [326] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/beaver_habits.xml
-            [327] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pangolin_cloudflare_tunnel.xml
-            [328] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dynamix.xml
-            [329] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/github_runner.xml
-            [330] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/starr_proxy.xml
-            [331] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parkpow_container_recognizer_stream.xml
-            [332] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gift_manager.xml
-            [333] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/imdbarr.xml
-            [334] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/managarr.xml
-            [335] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sosse.xml
-            [336] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/superstreamer_app.xml
-            [337] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gluetun.xml
-            [338] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whodb.xml
-            [339] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mailcatcher.xml
-            [340] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/rtl_tcp.xml
-            [341] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/onvif2mqtt.xml
-            [342] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/norish.xml
-            [343] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/scraperr_api.xml
-            [344] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/yaade.xml
-            [345] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/crawl4ai.xml
-            [346] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/peergos.xml
-            [347] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/koinsight.xml
-            [348] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/adsb_browser_screenshot.xml
-            [349] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pgvector17.xml
-            [350] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/woli_webgui.xml
-            [351] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pgvector16.xml
-            [352] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hoppscotch.xml
-            [353] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/homelabarr_backend.xml
-            [354] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/defguard_core.xml
-            [355] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/malla_capture.xml
-            [356] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/slink.xml
-            [357] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/episodes.xml
-            [358] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/maildev.xml
-            [359] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/streamdock.xml
-            [360] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/immich_kiosk.xml
-            [361] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/obsidian_livesync_couchdb.xml
-            [362] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/flixor.xml
-            [363] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pod_people_db.xml
-            [364] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/anything_llm.xml
-            [365] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/doods.xml
-            [366] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/facet.xml
-            [367] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/willow_application_server.xml
-            [368] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parkpow_usdot_recognizer_snapshot.xml
-            [369] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sparky_fitness_backend.xml
-            [370] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/linotp.xml
-            [371] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/openbooks.xml
-            [372] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/deceptifeed.xml
-            [373] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/crontab_ui.xml
-            [374] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gpu_hot.xml
-            [375] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/aqtion_server_dm.xml
-            [376] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mediamtx.xml
-            [377] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/supertokens_mysql.xml
-            [378] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/qbitwebui.xml
-            [379] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/overr_syncerr.xml
-            [380] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/orpheusbetter.xml
-            [381] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/legit.xml
-            [382] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/retrom.xml
-            [383] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/streamsphere.xml
-            [384] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/powershell.xml
-            [385] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dawarich.xml
-            [386] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mydia.xml
-            [387] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hound.xml
-            [388] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/seerr.xml
-            [389] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ntfy_on_start.xml
-            [390] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/potato_mesh_web_armv7.xml
-            [391] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sunshine.xml
-            [392] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ganymede.xml
-            [393] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dd_bot.xml
-            [394] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/speedrr.xml
-            [395] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/reubah.xml
-            [396] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/webhook_site_backend.xml
-            [397] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kiwix_server.xml
-            [398] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/otterwiki.xml
-            [399] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/go_doxy.xml
-            [400] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/webdav.xml
-            [401] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/cloudflare_ddns.xml
-            [402] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chaptertool.xml
-            [403] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whisper_api_server.xml
-            [404] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/auth_portal.xml
-            [405] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/shoutrrr.xml
-            [406] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hrconvert2.xml
-            [407] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autopulse.xml
-            [408] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tater.xml
-            [409] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/classifarr.xml
-            [410] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/anubis.xml
-            [411] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dawarich_sidekiq.xml
-            [412] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kometa_quickstart.xml
-            [413] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/traefik_shaper.xml
-            [414] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/fass.xml
-            [415] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/trakt_tools.xml
-            [416] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/epicgames_freegames.xml
-            [417] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gramps_web.xml
-            [418] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_collaborator.xml
-            [419] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/briefkasten.xml
-            [420] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/bragibooks.xml
-            [421] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/zurg.xml
-            [422] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tunarr.xml
-            [423] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/defguard_proxy.xml
-            [424] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/weatherstar.xml
-            [425] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/medassist.xml
-            [426] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/maintainerr_overlay_helperr.xml
-            [427] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/iptvnator_backend.xml
-            [428] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ofelia.xml
-            [429] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/runitor.xml
-            [430] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/azuracast_relay.xml
-            [431] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/scratch_map.xml
-            [432] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/imgproxy.xml
-            [433] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/music_downloader.xml
-            [434] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parkpow_plate_recognizer_stream.xml
-            [435] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/vertd.xml
-            [436] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plex_prerolls.xml
-            [437] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/postfix_relay.xml
-            [438] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/lazywarden.xml
-            [439] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/libation.xml
-            [440] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/torrents_manager.xml
-            [441] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tillywork.xml
-            [442] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kafka.xml
-            [443] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/recipe_buddy.xml
-            [444] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chartdb.xml
-            [445] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ryot.xml
-            [446] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/potato_mesh_web_arm64.xml
-            [447] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/watchma.xml
-            [448] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/a_train.xml
-            [449] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whisper.xml
-            [450] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tara_assistant.xml
-            [451] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/haptic.xml
-            [452] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/emboxd.xml
-            [453] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/arrs2discord.xml
-            [454] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pingvin_share_x.xml
-            [455] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/authelia_admin.xml
-            [456] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/wol.xml
-            [457] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/aqtion_server_tp.xml
-            [458] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huntorr.xml
-            [459] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parade_db.xml
-            [460] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/unifi_voucher_site.xml
-            [461] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/streamystats_backend.xml
-            [462] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whisper_cpp_server.xml
-            [463] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_rekoni.xml
-            [464] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autoscan.xml
-            [465] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/nitter.xml
-            [466] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/adventure_log_backend.xml
-            [467] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/txtify.xml
-            [468] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_workspace.xml
-            [469] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/aqtion_server_3team.xml
-            [470] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/immich_upload_optimizer.xml
-            [471] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/make_a_wrapped.xml
-            [472] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/umtk.xml
-            [473] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/bitwarden_portal.xml
-            [474] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/neko_chrome.xml
-            [475] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/opentofu.xml
-            [476] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/octo_fiesta.xml
-            [477] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/loggifly.xml
-            [478] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/surfsense_frontend.xml
-            [479] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/nodecast_tv.xml
-            [480] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sox_player.xml
-            [481] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/release_bot.xml
-            [482] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chevereto.xml
-            [483] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/keyoxide_proxy.xml
-            [484] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/superstreamer_stitcher.xml
-            [485] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/zimit.xml
-            [486] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/malla.xml
-            [487] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/invoke_ai.xml
-            [488] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dockwatch.xml
-            [489] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/cloudreve.xml
-            [490] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/valhalla.xml
-            [491] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mdblistarr.xml
-            [492] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/subs.xml
-            [493] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_account.xml
-            [494] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/syncplay.xml
-            [495] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/diun.xml
-            [496] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/nzb_dav.xml
-            [497] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/peanut.xml
-            [498] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/shoko_server.xml
-            [499] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ngrok.xml
-            [500] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/davical.xml
-            [501] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/charm.xml
-            [502] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chibisafe_server.xml
-            [503] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mesh_ai.xml
-            [504] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/local_recall.xml
-            [505] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/coming_soon.xml
-            [506] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/reclaimarr.xml
-            [507] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/brick_tracker.xml
-            [508] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/copyparty.xml
-            [509] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/bitplay.xml
-            [510] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/meshview.xml
-            [511] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/paperless_ai.xml
-            [512] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autokuma.xml
-            [513] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/terrateam_setup.xml
-            [514] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/redis_stack.xml
-            [515] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/puter.xml
-            [516] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/prefetcharr.xml
-            [517] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tweetcapture.xml
-            [518] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/vert.xml
-            [519] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/newsletterr.xml
+            [324] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/taggarr.xml
+            [325] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plex_randomizer.xml
+            [326] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/speech_to_phrase.xml
+            [327] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/beaver_habits.xml
+            [328] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pangolin_cloudflare_tunnel.xml
+            [329] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dynamix.xml
+            [330] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/github_runner.xml
+            [331] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/starr_proxy.xml
+            [332] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parkpow_container_recognizer_stream.xml
+            [333] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gift_manager.xml
+            [334] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/imdbarr.xml
+            [335] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/managarr.xml
+            [336] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sosse.xml
+            [337] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/superstreamer_app.xml
+            [338] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gluetun.xml
+            [339] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whodb.xml
+            [340] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mailcatcher.xml
+            [341] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/rtl_tcp.xml
+            [342] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/onvif2mqtt.xml
+            [343] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/norish.xml
+            [344] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/scraperr_api.xml
+            [345] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/yaade.xml
+            [346] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/crawl4ai.xml
+            [347] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/peergos.xml
+            [348] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/koinsight.xml
+            [349] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/adsb_browser_screenshot.xml
+            [350] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pgvector17.xml
+            [351] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/woli_webgui.xml
+            [352] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pgvector16.xml
+            [353] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hoppscotch.xml
+            [354] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/homelabarr_backend.xml
+            [355] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/defguard_core.xml
+            [356] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/malla_capture.xml
+            [357] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/slink.xml
+            [358] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/episodes.xml
+            [359] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/maildev.xml
+            [360] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/streamdock.xml
+            [361] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/immich_kiosk.xml
+            [362] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/obsidian_livesync_couchdb.xml
+            [363] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/flixor.xml
+            [364] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pod_people_db.xml
+            [365] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/anything_llm.xml
+            [366] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/doods.xml
+            [367] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/facet.xml
+            [368] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/willow_application_server.xml
+            [369] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parkpow_usdot_recognizer_snapshot.xml
+            [370] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sparky_fitness_backend.xml
+            [371] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/linotp.xml
+            [372] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/openbooks.xml
+            [373] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/deceptifeed.xml
+            [374] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/crontab_ui.xml
+            [375] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gpu_hot.xml
+            [376] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/aqtion_server_dm.xml
+            [377] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mediamtx.xml
+            [378] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/supertokens_mysql.xml
+            [379] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/qbitwebui.xml
+            [380] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/overr_syncerr.xml
+            [381] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/orpheusbetter.xml
+            [382] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/legit.xml
+            [383] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/retrom.xml
+            [384] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/streamsphere.xml
+            [385] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/powershell.xml
+            [386] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dawarich.xml
+            [387] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mydia.xml
+            [388] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hound.xml
+            [389] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/seerr.xml
+            [390] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ntfy_on_start.xml
+            [391] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/potato_mesh_web_armv7.xml
+            [392] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sunshine.xml
+            [393] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ganymede.xml
+            [394] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dd_bot.xml
+            [395] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/speedrr.xml
+            [396] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/reubah.xml
+            [397] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/webhook_site_backend.xml
+            [398] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kiwix_server.xml
+            [399] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/otterwiki.xml
+            [400] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/go_doxy.xml
+            [401] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/webdav.xml
+            [402] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/cloudflare_ddns.xml
+            [403] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chaptertool.xml
+            [404] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whisper_api_server.xml
+            [405] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/auth_portal.xml
+            [406] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/shoutrrr.xml
+            [407] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/hrconvert2.xml
+            [408] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autopulse.xml
+            [409] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tater.xml
+            [410] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/classifarr.xml
+            [411] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/anubis.xml
+            [412] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dawarich_sidekiq.xml
+            [413] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kometa_quickstart.xml
+            [414] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/traefik_shaper.xml
+            [415] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/fass.xml
+            [416] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/trakt_tools.xml
+            [417] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/epicgames_freegames.xml
+            [418] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/gramps_web.xml
+            [419] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_collaborator.xml
+            [420] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/briefkasten.xml
+            [421] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/bragibooks.xml
+            [422] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/zurg.xml
+            [423] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tunarr.xml
+            [424] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/defguard_proxy.xml
+            [425] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/weatherstar.xml
+            [426] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/medassist.xml
+            [427] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/maintainerr_overlay_helperr.xml
+            [428] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/iptvnator_backend.xml
+            [429] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ofelia.xml
+            [430] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/runitor.xml
+            [431] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/azuracast_relay.xml
+            [432] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/scratch_map.xml
+            [433] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/imgproxy.xml
+            [434] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/music_downloader.xml
+            [435] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parkpow_plate_recognizer_stream.xml
+            [436] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/vertd.xml
+            [437] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plex_prerolls.xml
+            [438] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/postfix_relay.xml
+            [439] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/lazywarden.xml
+            [440] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/libation.xml
+            [441] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/torrents_manager.xml
+            [442] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tillywork.xml
+            [443] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kafka.xml
+            [444] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/recipe_buddy.xml
+            [445] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chartdb.xml
+            [446] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ryot.xml
+            [447] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/potato_mesh_web_arm64.xml
+            [448] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/watchma.xml
+            [449] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/a_train.xml
+            [450] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whisper.xml
+            [451] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tara_assistant.xml
+            [452] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/haptic.xml
+            [453] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/emboxd.xml
+            [454] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/arrs2discord.xml
+            [455] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pingvin_share_x.xml
+            [456] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/authelia_admin.xml
+            [457] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/wol.xml
+            [458] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/aqtion_server_tp.xml
+            [459] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huntorr.xml
+            [460] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/parade_db.xml
+            [461] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/unifi_voucher_site.xml
+            [462] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/streamystats_backend.xml
+            [463] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/whisper_cpp_server.xml
+            [464] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_rekoni.xml
+            [465] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autoscan.xml
+            [466] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/nitter.xml
+            [467] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/adventure_log_backend.xml
+            [468] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/txtify.xml
+            [469] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_workspace.xml
+            [470] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/aqtion_server_3team.xml
+            [471] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/immich_upload_optimizer.xml
+            [472] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/make_a_wrapped.xml
+            [473] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/umtk.xml
+            [474] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/bitwarden_portal.xml
+            [475] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/neko_chrome.xml
+            [476] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/opentofu.xml
+            [477] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/octo_fiesta.xml
+            [478] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/loggifly.xml
+            [479] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/surfsense_frontend.xml
+            [480] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/nodecast_tv.xml
+            [481] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/sox_player.xml
+            [482] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/release_bot.xml
+            [483] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chevereto.xml
+            [484] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/keyoxide_proxy.xml
+            [485] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/superstreamer_stitcher.xml
+            [486] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/zimit.xml
+            [487] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/malla.xml
+            [488] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/invoke_ai.xml
+            [489] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/dockwatch.xml
+            [490] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/cloudreve.xml
+            [491] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/valhalla.xml
+            [492] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mdblistarr.xml
+            [493] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/subs.xml
+            [494] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/huly_account.xml
+            [495] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/syncplay.xml
+            [496] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/diun.xml
+            [497] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/nzb_dav.xml
+            [498] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/peanut.xml
+            [499] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/shoko_server.xml
+            [500] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/ngrok.xml
+            [501] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/davical.xml
+            [502] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/charm.xml
+            [503] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/chibisafe_server.xml
+            [504] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/mesh_ai.xml
+            [505] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/local_recall.xml
+            [506] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/coming_soon.xml
+            [507] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/reclaimarr.xml
+            [508] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/brick_tracker.xml
+            [509] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/copyparty.xml
+            [510] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/bitplay.xml
+            [511] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/meshview.xml
+            [512] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/paperless_ai.xml
+            [513] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/autokuma.xml
+            [514] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/terrateam_setup.xml
+            [515] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/redis_stack.xml
+            [516] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/puter.xml
+            [517] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/prefetcharr.xml
+            [518] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/tweetcapture.xml
+            [519] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/vert.xml
+            [520] => /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/newsletterr.xml
         )
 
 )
@@ -17444,6 +17413,7 @@ Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/reitt
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plauna.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/pgvector18.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/kaizoku.xml...Success
+Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/taggarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/plex_randomizer.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/speech_to_phrase.xml...Success
 Processing /tmp/GitHub/repositoryClone/nwithan8/unraid_templates/templates/beaver_habits.xml...Success
@@ -20169,6 +20139,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
+pansalut/koffan
+ghcr.io/pansalut/koffan:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -20213,12 +20185,22 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+s1t5/mailarchiver
+s1t5/mailarchiver Downloads: 276314  Stars: 0  Base: unknown
+jjermany/plex-notifier
+jjermany/plex-notifier:latest Downloads:   Stars:   Base: unknown
+stalwartlabs/stalwart
+stalwartlabs/stalwart:latest Downloads: 309197  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
+cirx08/wedding_share
+cirx08/wedding_share:latest Downloads: 78065  Stars: 1  Base: unknown
+yannisalexiou/appstore-webhook-proxy
+yannisalexiou/appstore-webhook-proxy Downloads: 266  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -20235,13 +20217,20 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+teamspeaksystems/teamspeak6-server
+teamspeaksystems/teamspeak6-server:latest Downloads: 199280  Stars: 11  Base: unknown
+Pulling teamspeaksystems/teamspeak6-server:latest
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+mainfrezzer/bashupload
+ghcr.io/mainfrezzer/bashupload:latest Downloads: 374  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+bmmbmm01/sftp2
+bmmbmm01/sftp2:latest Downloads: 681  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20258,9 +20247,22 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+iampuid0/dmb
+iampuid0/dmb:FastAPI Downloads: 94675  Stars: 6  Base: unknown
+hacdias/webdav
+hacdias/webdav:latest Downloads: 175330  Stars: 36  Base: unknown
+iib0011/omni-tools
+iib0011/omni-tools Downloads: 2223079  Stars: 7  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
+indifferentbroccoli/hytale-server-docker
+indifferentbroccoli/hytale-server-docker Downloads: 27521  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+llukas22/jellyswarrm
+ghcr.io/llukas22/jellyswarrm:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+binhex/arch-qbittorrent
+ghcr.io/binhex/arch-qbittorrent Downloads: 10934  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -20277,6 +20279,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/sealskin
+lscr.io/linuxserver/sealskin Downloads: 15119  Stars: 0  Base: unknown
+linuxserver/dolphin
+lscr.io/linuxserver/dolphin Downloads: 17284  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20320,6 +20326,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:neoforged Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:fabric Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -20359,12 +20371,22 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+sportarr/sportarr
+sportarr/sportarr:latest Downloads: 53019  Stars: 0  Base: unknown
+steveharsant/purgarr
+ghcr.io/steveharsant/purgarr:latest Downloads:   Stars:   Base: unknown
+henrywhitaker3/adguard-exporter
+ghcr.io/henrywhitaker3/adguard-exporter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
+spaceinvaderone/pia-wg-config-generator
+spaceinvaderone/pia-wg-config-generator:latest Downloads: 2079  Stars: 1  Base: unknown
+spaceinvaderone/jellemplex-dedupe
+spaceinvaderone/jellemplex-dedupe:latest Downloads: 4532  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20395,18 +20417,69 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+booklore-app/booklore
+ghcr.io/booklore-app/booklore:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+turtletank99/adbtuner
+turtletank99/adbtuner Downloads: 21633  Stars: 2  Base: unknown
+librespeed/speedtest
+ghcr.io/librespeed/speedtest Downloads:   Stars:   Base: unknown
+arpanghosh8453/drone-logbook
+ghcr.io/arpanghosh8453/drone-logbook:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/arpanghosh8453/drone-logbook:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+eitchtee/wygiwyh
+eitchtee/wygiwyh:latest Downloads: 63795  Stars: 0  Base: unknown
+registry.supertokens.io/supertokens/supertokens-postgresql
+registry.supertokens.io/supertokens/supertokens-postgresql:latest Downloads:   Stars:   Base: unknown
 Tagged - Can't determine last update
-aculix/bitplay
-ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
+dutchcoders/transfer.sh
+dutchcoders/transfer.sh:edge Downloads: 9196526  Stars: 42  Base: unknown
+thealhu/tc2-bbs-mesh
+thealhu/tc2-bbs-mesh:latest Downloads: 11688  Stars: 4  Base: unknown
+Tagged - Can't determine last update
+spudgunman/meshing-around
+ghcr.io/spudgunman/meshing-around:main Downloads:   Stars:   Base: unknown
+m3sserstudi0s/swiparr
+ghcr.io/m3sserstudi0s/swiparr:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/m3sserstudi0s/swiparr:latest
+Killed
+jeffvli/feishin
+ghcr.io/jeffvli/feishin:latest Downloads:   Stars:   Base: unknown
+basshous3/taggarr
+basshous3/taggarr:latest Downloads: 9441  Stars: 2  Base: unknown
+Pulling basshous3/taggarr:latest
+Killed
+clharrel/dynamix
+clharrel/dynamix:latest Downloads: 7851  Stars: 1  Base: unknown
+zenitram/malla
+ghcr.io/zenitram/malla:latest Downloads:   Stars:   Base: unknown
+registry.supertokens.io/supertokens/supertokens-mysql
+registry.supertokens.io/supertokens/supertokens-mysql:latest Downloads:   Stars:   Base: unknown
+seerr-team/seerr
+ghcr.io/seerr-team/seerr:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/seerr-team/seerr:latest
+Killed
+querylab/lazywarden
+querylab/lazywarden:latest Downloads: 1672  Stars: 0  Base: unknown
+pablorevilla-meshtastic/meshview
+ghcr.io/pablorevilla-meshtastic/meshview:latest Downloads:   Stars:   Base: unknown
+terrateamio/terrateam-setup
+ghcr.io/terrateamio/terrateam-setup:latest Downloads:   Stars:   Base: unknown
+hghugo/freeboxos-ultra-dashboard
+ghcr.io/hghugo/freeboxos-ultra-dashboard:latest Downloads:   Stars:   Base: unknown
+brockbreacher/accept-bot
+ghcr.io/brockbreacher/accept-bot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
+thewicklowwolf/lidify
+thewicklowwolf/lidify Downloads: 207023  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
@@ -20414,9 +20487,16 @@ ghcr.io/aculix/bitplay:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
+Tagged - Can't determine last update
+11notes/unifi
+11notes/unifi:10-unraid Downloads: 41066  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+athombv/homey-shs
+ghcr.io/athombv/homey-shs:latest Downloads:   Stars:   Base: unknown
+ownbee/hass-otbr-docker
+ghcr.io/ownbee/hass-otbr-docker:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 130
