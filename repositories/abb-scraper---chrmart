@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AudiobookBay-Scraper</Name>
+  <Repository>staticshadow/abb-scraper:latest</Repository>
+  <Registry>https://hub.docker.com/r/staticshadow/abb-scraper</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/chrmart/abb-scraper/issues</Support>
+  <Project>https://github.com/chrmart/abb-scraper</Project>
+  <Overview>Automated AudiobookBay scraper with keyword filtering, scheduled scraping, and web UI. Discover and download audiobook torrents based on your preferences.</Overview>
+  <Category>Downloaders: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/chrmart/abb-scraper/main/unraid-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/chrmart/abb-scraper/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>AudiobookBay account (free) - https://audiobookbay.lu/member/register.php</Requires>
+  <Config Name="WebUI Port" Target="5000" Default="5000" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
+  <Config Name="Data Directory" Target="/app/data" Default="/mnt/user/appdata/audiobook-scraper/data" Mode="rw" Description="Storage for keywords, settings, history, and cookies" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/audiobook-scraper/data</Config>
+  <Config Name="Torrents Directory" Target="/app/torrents" Default="/mnt/user/appdata/audiobook-scraper/torrents" Mode="rw" Description="Storage for downloaded .torrent files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/audiobook-scraper/torrents</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/New_York" Mode="" Description="Timezone for scheduling (e.g., America/New_York, Europe/London)" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID (default: 99 for nobody)" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID (default: 100 for users)" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>
