@@ -13,23 +13,7 @@ Downloading Repo Info
 
 Downloading gibz104's Repository
 
-From https://github.com/gibz104/SpoolmanSync
-   25a1723..e2516ae  main       -> origin/main
- * [new tag]         v1.2.0     -> v1.2.0
-Updating 25a1723..e2516ae
-Fast-forward
- CHANGELOG.md                                      |  15 ++
- app/package.json                                  |   2 +-
- app/src/app/api/automations/route.ts              |  55 +++--
- app/src/app/logs/page.tsx                         |   5 +-
- app/src/app/scan/spool/[id]/page.tsx              |   2 +-
- app/src/components/dashboard/spool-filter-bar.tsx |  68 +++---
- app/src/components/dashboard/tray-slot.tsx        |  69 +++++-
- app/src/components/nfc-writer.tsx                 |  63 +++++-
- app/src/components/qr-code-generator.tsx          | 199 +++++++++++++++++-
- app/src/lib/ha-config-generator.ts                | 243 ++++++++++++----------
- spoolmansync-ha-addon/config.yaml                 |   2 +-
- 11 files changed, 536 insertions(+), 187 deletions(-)
+Already up to date.
 
 Array
 (
@@ -716,17 +700,7 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 
 Downloading debuggy12's Repository
 
-From https://github.com/kurrier-org/kurrier
-   73b9aac..b49a695  main       -> origin/main
- * [new tag]         v1.1.12    -> v1.1.12
-Updating 73b9aac..b49a695
-Fast-forward
- apps/worker/CHANGELOG.md            |  6 ++++++
- apps/worker/lib/imap/imap-client.ts | 20 ++++++++++++++++----
- apps/worker/package.json            |  2 +-
- packages/repo-version/CHANGELOG.md  |  6 ++++++
- packages/repo-version/package.json  |  2 +-
- 5 files changed, 30 insertions(+), 6 deletions(-)
+Already up to date.
 
 Array
 (
@@ -897,7 +871,48 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   711da37..3ce2cc8  main       -> origin/main
+Updating 711da37..3ce2cc8
+Fast-forward
+ client/src/components/pages/SceneDetails.jsx       |   2 +-
+ client/src/components/ui/Lightbox.jsx              |   4 +-
+ client/src/components/video-player/VideoPlayer.jsx |   2 +-
+ client/src/hooks/useFilterState.js                 |   2 +-
+ client/src/services/api.js                         |  18 +-
+ server/controllers/clips.ts                        |   7 +-
+ server/controllers/imageViewHistory.ts             |  17 +-
+ server/controllers/library/galleries.ts            |  18 +-
+ server/controllers/library/groups.ts               |   2 +-
+ server/controllers/library/images.ts               |   3 +-
+ server/controllers/library/performers.ts           |   4 +-
+ server/controllers/library/scenes.ts               |  39 +-
+ server/controllers/library/studios.ts              |   2 +-
+ server/controllers/library/tags.ts                 |   2 +-
+ server/controllers/user.ts                         |  33 +-
+ .../migration.sql                                  |  68 +++
+ server/prisma/schema.prisma                        |  15 +-
+ server/services/ClipService.ts                     |   6 +-
+ server/services/ExclusionComputationService.ts     | 584 +++++++++++++--------
+ server/services/GalleryQueryBuilder.ts             |   8 +-
+ server/services/GroupQueryBuilder.ts               |  11 +-
+ server/services/MergeReconciliationService.ts      |   7 +-
+ server/services/RecommendationScoringService.ts    |  46 +-
+ server/services/StashEntityService.ts              | 144 +++--
+ server/services/StudioQueryBuilder.ts              |   4 +-
+ server/services/TagQueryBuilder.ts                 |   6 +-
+ server/services/UserHiddenEntityService.ts         |  35 +-
+ server/services/UserStatsService.ts                |   5 +-
+ .../recommendations/recommendationScoring.test.ts  |  20 +-
+ .../services/ExclusionComputationService.test.ts   |  70 +--
+ .../tests/services/MultiInstanceIsolation.test.ts  | 529 +++++++++++++++++++
+ server/tests/services/UserStatsService.test.ts     |  10 +
+ server/types/entities.ts                           |   3 +
+ server/types/index.ts                              |   1 +
+ server/utils/entityInstanceId.ts                   |  18 +-
+ 35 files changed, 1346 insertions(+), 399 deletions(-)
+ create mode 100644 server/prisma/migrations/20260216000000_add_instanceid_to_multi_instance_tables/migration.sql
+ create mode 100644 server/tests/services/MultiInstanceIsolation.test.ts
 
 Array
 (
@@ -16513,7 +16528,12 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   a1380c9..7538043  main       -> origin/main
+Updating a1380c9..7538043
+Fast-forward
+ automation/change_monitoring/data.json | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
 
 Array
 (
@@ -20122,6 +20142,16 @@ Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
+snoopy86/emoncms-docker
+snoopy86/emoncms-docker Downloads: 31228  Stars: 1  Base: unknown
+snoopy86/ffmpeg
+snoopy86/ffmpeg Downloads: 57002  Stars: 2  Base: unknown
+snoopy86/nodeodm
+snoopy86/nodeodm Downloads: 1909  Stars: 0  Base: unknown
+snoopy86/desktop-dockers
+snoopy86/desktop-dockers Downloads: 195150  Stars: 2  Base: unknown
+snoopy86/logitechmediaserver
+snoopy86/logitechmediaserver Downloads: 588704  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
@@ -20215,6 +20245,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+fredrikburmester/streamystats-v2-aio
+fredrikburmester/streamystats-v2-aio:latest Downloads: 24568  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20275,6 +20307,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:forge Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -20351,10 +20386,16 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+downloads.unstructured.io/unstructured-io/unstructured-api
+downloads.unstructured.io/unstructured-io/unstructured-api:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+georgegebbett/recipe-buddy
+ghcr.io/georgegebbett/recipe-buddy:latest Downloads:   Stars:   Base: unknown
+okhr/reclaimarr
+ghcr.io/okhr/reclaimarr:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20367,6 +20408,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
+zoeyvid/npmplus
+zoeyvid/npmplus Downloads: 828596  Stars: 28  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
