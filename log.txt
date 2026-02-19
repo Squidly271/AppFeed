@@ -306,14 +306,8 @@ Success
 Downloading tenletter's Repository
 
 From https://github.com/softerfish/seekandwatch
-   bec8e16..cba0afd  main       -> origin/main
-Updating bec8e16..cba0afd
-Fast-forward
- .gitignore | 29 -----------------------------
- README.md  | 10 ++++++++--
- app.py     |  9 ++++++++-
- 3 files changed, 16 insertions(+), 32 deletions(-)
- delete mode 100644 .gitignore
+ * [new tag]         v1.5.14    -> v1.5.14
+Already up to date.
 
 Array
 (
@@ -492,117 +486,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   ce398da..2f99d8e  main       -> origin/main
-Updating ce398da..2f99d8e
+   2f99d8e..91da7a4  main       -> origin/main
+Updating 2f99d8e..91da7a4
 Fast-forward
- .env.example                                       |    12 +
- .github/BRANCH_PROTECTION.md                       |    10 +
- .github/workflows/ci.yml                           |   122 +
- app/admin/layout.tsx                               |     7 +-
- app/admin/page.tsx                                 |     3 +-
- app/admin/processing-queues/page.tsx               |    30 +
- app/api/account/password/route.ts                  |    11 +-
- app/api/account/privacy/delete/route.ts            |    38 +
- app/api/account/privacy/export/route.ts            |    12 +
- app/api/account/sessions/logout-all/route.ts       |    28 +
- app/api/admin/_utils.ts                            |    12 +-
- app/api/admin/audit-events/route.ts                |    20 +
- app/api/admin/data-retention/route.ts              |    43 +
- app/api/admin/featured/route.ts                    |    25 +-
- app/api/admin/home-comments/[id]/route.ts          |    11 +-
- app/api/admin/image-processing/run/route.ts        |     6 +-
- app/api/admin/models/[id]/images/route.ts          |    10 +-
- app/api/admin/models/[id]/route.ts                 |    55 +-
- app/api/admin/orders/[orderId]/status/route.ts     |    16 +-
- app/api/admin/preview-processing/run/route.ts      |     6 +-
- .../admin/processing-queues/requeue-stuck/route.ts |    32 +
- app/api/admin/processing-queues/retry/route.ts     |    35 +
- app/api/admin/processing-queues/route.ts           |    61 +
- app/api/admin/products/[id]/route.ts               |    33 +-
- app/api/admin/site-config/route.ts                 |    13 +
- app/api/admin/users/[id]/route.ts                  |    41 +-
- app/api/featured/route.ts                          |     1 -
- app/api/logout/route.ts                            |     4 +
- app/api/models/[id]/comments/[commentId]/route.ts  |     8 +-
- app/api/models/[id]/comments/route.ts              |     8 +-
- app/api/models/[id]/download.zip/route.ts          |     5 +
- app/api/models/[id]/images/route.ts                |    10 +-
- app/api/models/[id]/like/route.ts                  |    17 +-
- app/api/models/[id]/revisions/route.ts             |     9 +-
- app/api/models/[id]/route.ts                       |    19 +-
- app/api/models/route.ts                            |     3 -
- app/api/upload/route.ts                            |    18 +-
- app/discover/page.tsx                              |     8 +-
- app/globals.css                                    |   246 +-
- app/layout.tsx                                     |   113 +-
- app/models/[id]/page.tsx                           |    15 +-
- app/page.tsx                                       |    18 +-
- app/settings/account/page.tsx                      |    10 +
- components/AppSidebar.tsx                          |   285 +
- components/Gallery.tsx                             |    23 +-
- components/NavBar.tsx                              |   183 -
- components/admin/AdminShell.tsx                    |    82 -
- components/admin/AdminSidebar.tsx                  |    76 -
- components/admin/ProcessingQueuesPanel.tsx         |   187 +
- docker-compose.yml                                 |    10 +
- eslint.config.mjs                                  |    15 +
- lib/admin-audit.ts                                 |   108 +
- lib/admin/navigation.ts                            |    51 -
- lib/auth.ts                                        |    16 +-
- lib/cache-policy.ts                                |    25 +
- lib/collections.ts                                 |    35 +-
- lib/csrf.ts                                        |    21 +
- lib/data-retention.ts                              |   177 +
- lib/privacy.ts                                     |    89 +
- lib/processing-broker.ts                           |    24 +
- lib/processing-jobs.ts                             |   230 +
- lighthouserc.json                                  |    44 +
- package-lock.json                                  | 10162 ++++++++++++++++---
- package.json                                       |    18 +-
- playwright.config.ts                               |    30 +
- .../migration.sql                                  |    39 +
- prisma/schema.prisma                               |    25 +
- proxy.ts                                           |    26 +-
- scripts/data-retention.ts                          |    12 +
- scripts/processing-worker.ts                       |    95 +
- tests/api-integration-flows.test.ts                |   119 +
- tests/e2e/buyer-journey.spec.ts                    |    27 +
- tests/integration-contracts.test.ts                |   166 +
- types/discover.ts                                  |     2 -
- 74 files changed, 11726 insertions(+), 1880 deletions(-)
- create mode 100644 .github/BRANCH_PROTECTION.md
- create mode 100644 .github/workflows/ci.yml
- create mode 100644 app/admin/processing-queues/page.tsx
- create mode 100644 app/api/account/privacy/delete/route.ts
- create mode 100644 app/api/account/privacy/export/route.ts
- create mode 100644 app/api/account/sessions/logout-all/route.ts
- create mode 100644 app/api/admin/audit-events/route.ts
- create mode 100644 app/api/admin/data-retention/route.ts
- create mode 100644 app/api/admin/processing-queues/requeue-stuck/route.ts
- create mode 100644 app/api/admin/processing-queues/retry/route.ts
- create mode 100644 app/api/admin/processing-queues/route.ts
- create mode 100644 components/AppSidebar.tsx
- delete mode 100644 components/NavBar.tsx
- delete mode 100644 components/admin/AdminShell.tsx
- delete mode 100644 components/admin/AdminSidebar.tsx
- create mode 100644 components/admin/ProcessingQueuesPanel.tsx
- create mode 100644 eslint.config.mjs
- create mode 100644 lib/admin-audit.ts
- delete mode 100644 lib/admin/navigation.ts
- create mode 100644 lib/cache-policy.ts
- create mode 100644 lib/csrf.ts
- create mode 100644 lib/data-retention.ts
- create mode 100644 lib/privacy.ts
- create mode 100644 lib/processing-broker.ts
- create mode 100644 lib/processing-jobs.ts
- create mode 100644 lighthouserc.json
- create mode 100644 playwright.config.ts
- create mode 100644 prisma/migrations/20260219173000_admin_audit_events/migration.sql
- create mode 100644 scripts/data-retention.ts
- create mode 100644 scripts/processing-worker.ts
- create mode 100644 tests/api-integration-flows.test.ts
- create mode 100644 tests/e2e/buyer-journey.spec.ts
- create mode 100644 tests/integration-contracts.test.ts
+ app/globals.css           | 57 ++++++++++++++++++++++++++---------------------
+ components/AppSidebar.tsx | 56 +++++++++++++++++++++++++++++++++++-----------
+ 2 files changed, 74 insertions(+), 39 deletions(-)
 
 Array
 (
@@ -820,18 +709,11 @@ Processing /tmp/GitHub/repositoryClone/vincentmakes/cv-manager/public-readonly/s
 Downloading debuggy12's Repository
 
 From https://github.com/kurrier-org/kurrier
-   b49a695..7e3da0c  main       -> origin/main
- * [new tag]         v1.1.13    -> v1.1.13
-Updating b49a695..7e3da0c
+   7e3da0c..584708e  main       -> origin/main
+Updating 7e3da0c..584708e
 Fast-forward
- apps/web/app/auth/login/page.tsx        | 15 ++++++++++++++-
- apps/web/app/auth/signup/page.tsx       |  8 ++++++++
- apps/web/components/auth/login-form.tsx | 22 +++++++++++++---------
- apps/web/lib/actions/auth.ts            | 11 ++++++++++-
- packages/repo-version/CHANGELOG.md      |  6 ++++++
- packages/repo-version/package.json      |  2 +-
- packages/schema/src/types/config.ts     |  1 +
- 7 files changed, 53 insertions(+), 12 deletions(-)
+ db/docker-compose.yml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -1003,26 +885,14 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   74a47e2..282ddd2  main       -> origin/main
-Updating 74a47e2..282ddd2
+   282ddd2..40b4a28  main          -> origin/main
+ * [new tag]         v3.3.3-beta.9 -> v3.3.3-beta.9
+Updating 282ddd2..40b4a28
 Fast-forward
- .../src/components/video-player/useVideoPlayer.js  |   2 +-
- .../components/video-player/videoPlayerUtils.js    |   4 +-
- docker/nginx.conf                                  |  17 ++++
- server/controllers/proxy.ts                        |   5 +
- server/controllers/video.ts                        |  15 +--
- server/services/ClipQueryBuilder.ts                |   2 +-
- server/services/ExclusionComputationService.ts     |  30 +++++-
- server/services/GalleryQueryBuilder.ts             |   4 +-
- server/services/GroupQueryBuilder.ts               |   4 +-
- server/services/ImageQueryBuilder.ts               |   4 +-
- server/services/PerformerQueryBuilder.ts           | 110 +++++++++++++--------
- server/services/RankingComputeService.ts           |   4 +
- server/services/SceneQueryBuilder.ts               |   4 +-
- server/services/StudioQueryBuilder.ts              |   4 +-
- server/services/TagQueryBuilder.ts                 |   4 +-
- server/services/TimelineService.ts                 |   2 +-
- 16 files changed, 147 insertions(+), 68 deletions(-)
+ client/package.json                            |   2 +-
+ server/package.json                            |   2 +-
+ server/services/ExclusionComputationService.ts | 214 ++++++++++---------------
+ 3 files changed, 87 insertions(+), 131 deletions(-)
 
 Array
 (
@@ -15972,16 +15842,11 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 Downloading ZappyZap's Repository
 
 From https://github.com/devzwf/unraid-docker-templates
-   be95708..c334c32  main       -> origin/main
-Updating be95708..c334c32
+   c334c32..70e1545  main       -> origin/main
+Updating c334c32..70e1545
 Fast-forward
- CHANGELOG.MD              |   3 +++
- README.md                 |  13 +++++++++++++
- images/crosstalk-logo.png | Bin 0 -> 21389 bytes
- unifi-toolkit.xml         |  37 +++++++++++++++++++++++++++++++++++++
- 4 files changed, 53 insertions(+)
- create mode 100644 images/crosstalk-logo.png
- create mode 100644 unifi-toolkit.xml
+ unifi-toolkit.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -20367,8 +20232,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-khairul169/garage-webui
-khairul169/garage-webui:latest Downloads: 260393  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -20507,10 +20370,6 @@ khairul169/garage-webui:latest Downloads: 260393  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-crosstalk-solutions/unifi-toolkit
-ghcr.io/crosstalk-solutions/unifi-toolkit:latest Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/crosstalk-solutions/unifi-toolkit:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
