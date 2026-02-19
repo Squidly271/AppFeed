@@ -483,7 +483,53 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   0d9cfea..ce398da  main       -> origin/main
+Updating 0d9cfea..ce398da
+Fast-forward
+ .env.example                                       |   3 +
+ app/api/admin/analytics/route.ts                   |   5 +-
+ app/api/admin/env-check/route.ts                   |   5 +-
+ app/api/admin/merch/[id]/route.ts                  |  51 +++-
+ app/api/admin/merch/route.ts                       |  36 ++-
+ app/api/admin/metrics/route.ts                     |  28 ++
+ app/api/checkout/route.ts                          |  15 +-
+ app/api/client-errors/route.ts                     |  32 +++
+ app/api/health/ready/route.ts                      |  12 +
+ app/api/health/route.ts                            |  10 +
+ app/api/jobs/[paymentIntentId]/route.ts            |   9 +-
+ app/api/makerworks/jobs/route.ts                   |  11 +-
+ app/api/merch/route.ts                             |   7 +-
+ app/globals.css                                    |   6 +-
+ app/layout.tsx                                     |   2 +
+ app/products/[id]/page.tsx                         |   2 +
+ components/ClientErrorReporter.tsx                 |  62 +++++
+ components/FeaturedMarquee.tsx                     |  85 ++++++-
+ components/admin/CatalogManager.tsx                |  49 +++-
+ components/products/MerchConfigurator.tsx          |  12 +-
+ docs/professional-app-audit.md                     | 153 +++++++++++
+ lib/error-tracking.ts                              |  49 ++++
+ lib/observability-health.ts                        | 154 +++++++++++
+ lib/observability-logger.ts                        |  56 ++++
+ lib/observability-metrics.ts                       |  91 +++++++
+ lib/request-observability.ts                       |  66 +++++
+ lib/stockworks-merch.ts                            | 282 +++++++++++++++++++++
+ .../migration.sql                                  |   8 +
+ prisma/schema.prisma                               |   6 +
+ 29 files changed, 1283 insertions(+), 24 deletions(-)
+ create mode 100644 app/api/admin/metrics/route.ts
+ create mode 100644 app/api/client-errors/route.ts
+ create mode 100644 app/api/health/ready/route.ts
+ create mode 100644 app/api/health/route.ts
+ create mode 100644 components/ClientErrorReporter.tsx
+ create mode 100644 docs/professional-app-audit.md
+ create mode 100644 lib/error-tracking.ts
+ create mode 100644 lib/observability-health.ts
+ create mode 100644 lib/observability-logger.ts
+ create mode 100644 lib/observability-metrics.ts
+ create mode 100644 lib/request-observability.ts
+ create mode 100644 lib/stockworks-merch.ts
+ create mode 100644 prisma/migrations/20260218123500_merch_stockworks_variants/migration.sql
 
 Array
 (
@@ -20346,8 +20392,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-zedeus/nitter
-zedeus/nitter:latest Downloads: 7575041  Stars: 16  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
