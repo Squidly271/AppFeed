@@ -484,24 +484,13 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   a1f98a2..63be481  main       -> origin/main
-Updating a1f98a2..63be481
+   63be481..fb010c2  main       -> origin/main
+Updating 63be481..fb010c2
 Fast-forward
- .env.example                        |  19 +++
- Dockerfile                          |   4 +-
- README.md                           |   8 +
- app/api/admin/backup/route.ts       |  67 +++++++-
- app/api/admin/restore/route.ts      |  14 +-
- components/admin/BackupControls.tsx |  82 ++++++++-
- docker-compose.yml                  |  37 ++++
- docs/user-manual.md                 |  20 ++-
- lib/backups.js                      | 330 +++++++++++++++++++++++++++++++++---
- package.json                        |   1 +
- scripts/backup-scheduler.js         |  87 ++++++++++
- tests/backup.test.ts                |  75 +++++++-
- unraid/templates/makerworks-v2.xml  |  14 +-
- 13 files changed, 717 insertions(+), 41 deletions(-)
- create mode 100644 scripts/backup-scheduler.js
+ app/globals.css           | 16 +++++++++-------
+ app/models/[id]/page.tsx  | 12 ++++++------
+ components/AppSidebar.tsx |  5 +++--
+ 3 files changed, 18 insertions(+), 15 deletions(-)
 
 Array
 (
@@ -641,20 +630,14 @@ Success
 Downloading NeXroll's Repository
 
 From https://github.com/JFLXCLOUD/NeXroll
-   aa61bca..29d59de  main       -> origin/main
-Updating aa61bca..29d59de
+   29d59de..2f11f9f  main       -> origin/main
+ * [new tag]         v1.11.0-beta.2 -> v1.11.0-beta.2
+Updating 29d59de..2f11f9f
 Fast-forward
- NeXroll/backend/main.py                            | 42 ++++++++++++++++++++++
- NeXroll/frontend/build/asset-manifest.json         |  6 ++--
- NeXroll/frontend/build/index.html                  |  2 +-
- .../js/{main.599f66ed.js => main.1b537c36.js}      |  6 ++--
- ...js.LICENSE.txt => main.1b537c36.js.LICENSE.txt} |  0
- .../{main.599f66ed.js.map => main.1b537c36.js.map} |  2 +-
- NeXroll/frontend/src/App.js                        |  2 +-
- 7 files changed, 51 insertions(+), 9 deletions(-)
- rename NeXroll/frontend/build/static/js/{main.599f66ed.js => main.1b537c36.js} (79%)
- rename NeXroll/frontend/build/static/js/{main.599f66ed.js.LICENSE.txt => main.1b537c36.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.599f66ed.js.map => main.1b537c36.js.map} (90%)
+ NeXroll/backend/dynamic_preroll.py | 57 ++++++++++++++++++++++++++++----------
+ NeXroll/frontend/package.json      |  2 +-
+ NeXroll/version.py                 |  2 +-
+ 3 files changed, 45 insertions(+), 16 deletions(-)
 
 Array
 (
@@ -903,7 +886,31 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   f1df545..9fa0e33  main       -> origin/main
+ * [new tag]         v3.3.3     -> v3.3.3
+ * [new tag]         v3.3.3-beta.12 -> v3.3.3-beta.12
+Updating f1df545..9fa0e33
+Fast-forward
+ client/package.json                                |  2 +-
+ server/controllers/library/galleries.ts            | 22 ++++++
+ server/controllers/library/groups.ts               | 27 ++++++-
+ server/controllers/library/studios.ts              | 22 ++++++
+ server/controllers/library/tags.ts                 | 23 ++++++
+ server/package.json                                |  2 +-
+ server/services/GalleryQueryBuilder.ts             | 24 +++++-
+ server/services/GroupQueryBuilder.ts               | 24 +++++-
+ server/services/StudioQueryBuilder.ts              | 24 +++++-
+ server/services/TagQueryBuilder.ts                 | 25 +++++-
+ server/tests/services/GalleryQueryBuilder.test.ts  | 88 +++++++++++++++++++++
+ server/tests/services/GroupQueryBuilder.test.ts    | 91 ++++++++++++++++++++++
+ .../tests/services/PerformerQueryBuilder.test.ts   | 37 +++++++++
+ server/tests/services/StudioQueryBuilder.test.ts   | 37 +++++++++
+ server/tests/services/TagQueryBuilder.test.ts      | 38 +++++++++
+ server/types/peekFilters.ts                        |  4 +
+ 16 files changed, 482 insertions(+), 8 deletions(-)
+ create mode 100644 server/tests/services/GalleryQueryBuilder.test.ts
+ create mode 100644 server/tests/services/GroupQueryBuilder.test.ts
 
 Array
 (
@@ -16537,28 +16544,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   d39e64f..50aecdc  main       -> origin/main
-Updating d39e64f..50aecdc
-Fast-forward
- templates/aura_2.xml                               | 35 ++++++++++++++++++++++
- templates/{ => deprecated}/aura.xml                |  0
- .../potato_mesh_ingestor_arm64.xml                 |  0
- .../potato_mesh_ingestor_armv7.xml                 |  0
- .../{ => deprecated}/potato_mesh_web_arm64.xml     |  0
- .../{ => deprecated}/potato_mesh_web_armv7.xml     |  0
- templates/mesh_ai.xml                              | 10 +++++--
- templates/meshcore_mqtt_bridge.xml                 |  8 +++--
- templates/microwakeword_trainer.xml                |  1 -
- templates/radicle.xml                              |  2 +-
- templates/tater.xml                                |  1 -
- 11 files changed, 50 insertions(+), 7 deletions(-)
- create mode 100644 templates/aura_2.xml
- rename templates/{ => deprecated}/aura.xml (100%)
- rename templates/{ => deprecated}/potato_mesh_ingestor_arm64.xml (100%)
- rename templates/{ => deprecated}/potato_mesh_ingestor_armv7.xml (100%)
- rename templates/{ => deprecated}/potato_mesh_web_arm64.xml (100%)
- rename templates/{ => deprecated}/potato_mesh_web_armv7.xml (100%)
+Already up to date.
 
 Array
 (
@@ -20393,15 +20379,14 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+maziggy/bambuddy
+ghcr.io/maziggy/bambuddy:latest Downloads: 630  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-jinglemansweep/meshcore-mqtt
-ghcr.io/jinglemansweep/meshcore-mqtt:latest Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/jinglemansweep/meshcore-mqtt:latest
-mrtbot/mesh-ai
-mrtbot/mesh-ai:latest Downloads: 483  Stars: 1  Base: unknown
+cloudbyday90/classifarr
+ghcr.io/cloudbyday90/classifarr:latest Downloads: 11620  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
