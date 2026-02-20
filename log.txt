@@ -129,80 +129,7 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-From https://github.com/kikootwo/ReadMeABook
-   3f8180a..04dbb05  main       -> origin/main
- * [new tag]         v1.0.9     -> v1.0.9
-Updating 3f8180a..04dbb05
-Fast-forward
- package.json                                       |   2 +-
- prisma/schema.prisma                               |   1 +
- src/app/admin/settings/page.tsx                    |   1 +
- .../settings/tabs/IndexersTab/IndexersTab.tsx      |  32 +-
- .../tabs/IndexersTab/useIndexersSettings.ts        |  81 +++-
- .../tabs/LibraryTab/AudiobookshelfSection.tsx      |   4 +-
- .../admin/settings/tabs/LibraryTab/PlexSection.tsx |   4 +-
- src/app/api/admin/settings/prowlarr/route.ts       |   4 +
- .../[asin]/interactive-search-ebook/route.ts       |  23 +-
- src/app/api/audiobooks/search-torrents/route.ts    |  10 +-
- .../[id]/interactive-search-ebook/route.ts         |  23 +-
- .../api/requests/[id]/interactive-search/route.ts  |  10 +-
- src/app/api/series/[asin]/route.ts                 |  72 +++
- src/app/api/series/search/route.ts                 |  57 +++
- src/app/series/[asin]/page.tsx                     | 117 +++++
- src/app/series/page.tsx                            | 179 +++++++
- src/app/setup/steps/BackendSelectionStep.tsx       |   4 +-
- .../download-clients/DownloadClientManagement.tsx  |  33 +-
- .../admin/download-clients/DownloadClientModal.tsx |   4 +-
- .../audiobooks/AudiobookDetailsModal.tsx           |  18 +
- src/components/layout/Header.tsx                   |  13 +
- src/components/series/SeriesCard.tsx               | 153 ++++++
- src/components/series/SeriesDetailCard.tsx         | 164 +++++++
- src/components/series/SeriesGrid.tsx               |  98 ++++
- src/components/series/SimilarSeriesRow.tsx         | 169 +++++++
- src/lib/constants/language-config.ts               | 257 ++++++++++
- src/lib/db.ts                                      |  28 ++
- src/lib/hooks/useAudiobooks.ts                     |   3 +
- src/lib/hooks/useSeries.ts                         |  75 +++
- src/lib/integrations/audible-series.ts             | 515 +++++++++++++++++++++
- src/lib/integrations/audible.service.ts            | 173 ++++---
- src/lib/integrations/prowlarr.service.ts           |  12 +
- src/lib/integrations/qbittorrent.service.ts        |  38 +-
- src/lib/integrations/rdtclient.service.ts          | 105 +++++
- src/lib/interfaces/download-client.interface.ts    |   4 +-
- src/lib/processors/direct-download.processor.ts    |   9 +-
- src/lib/processors/monitor-download.processor.ts   |  40 +-
- src/lib/processors/monitor-rss-feeds.processor.ts  |   3 +
- src/lib/processors/organize-files.processor.ts     |   9 +-
- .../processors/retry-failed-imports.processor.ts   |   3 +
- .../processors/retry-missing-torrents.processor.ts |   4 +
- src/lib/processors/search-ebook.processor.ts       |  17 +-
- src/lib/processors/search-indexers.processor.ts    |  10 +-
- .../services/download-client-manager.service.ts    |  26 ++
- src/lib/services/ebook-scraper.ts                  |  23 +-
- src/lib/services/job-queue.service.ts              |  22 +-
- src/lib/services/request-creator.service.ts        |   4 +
- src/lib/services/scheduler.service.ts              |   3 +
- src/lib/types/audible.ts                           |  18 +-
- src/lib/utils/audiobook-matcher.ts                 |  15 +-
- src/lib/utils/ranking-algorithm.ts                 |  68 ++-
- tests/api/audiobooks-search.routes.test.ts         |   2 +
- tests/api/requests-actions.routes.test.ts          |   3 +-
- .../processors/monitor-download.processor.test.ts  |   4 +-
- tests/processors/search-ebook.processor.test.ts    |  11 +-
- tests/processors/search-indexers.processor.test.ts |   3 +-
- 56 files changed, 2610 insertions(+), 173 deletions(-)
- create mode 100644 src/app/api/series/[asin]/route.ts
- create mode 100644 src/app/api/series/search/route.ts
- create mode 100644 src/app/series/[asin]/page.tsx
- create mode 100644 src/app/series/page.tsx
- create mode 100644 src/components/series/SeriesCard.tsx
- create mode 100644 src/components/series/SeriesDetailCard.tsx
- create mode 100644 src/components/series/SeriesGrid.tsx
- create mode 100644 src/components/series/SimilarSeriesRow.tsx
- create mode 100644 src/lib/constants/language-config.ts
- create mode 100644 src/lib/hooks/useSeries.ts
- create mode 100644 src/lib/integrations/audible-series.ts
- create mode 100644 src/lib/integrations/rdtclient.service.ts
+Already up to date.
 
 Array
 (
@@ -557,210 +484,20 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   0e8a8c3..3bb211f  main       -> origin/main
-Updating 0e8a8c3..3bb211f
+   3bb211f..a1f98a2  main       -> origin/main
+Updating 3bb211f..a1f98a2
 Fast-forward
- .../v24.11.0-x64-ef5a0af0/0311a297                 | Bin 0 -> 2348 bytes
- .../v24.11.0-x64-ef5a0af0/048cf699                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/057972bf                 | Bin 0 -> 1428 bytes
- .../v24.11.0-x64-ef5a0af0/06aaebe9                 | Bin 0 -> 1164 bytes
- .../v24.11.0-x64-ef5a0af0/097057e4                 | Bin 0 -> 884 bytes
- .../v24.11.0-x64-ef5a0af0/0b47e7bd                 | Bin 0 -> 7452 bytes
- .../v24.11.0-x64-ef5a0af0/0c1534a9                 | Bin 0 -> 1140 bytes
- .../v24.11.0-x64-ef5a0af0/0e8c5f35                 | Bin 0 -> 73948 bytes
- .../v24.11.0-x64-ef5a0af0/138f505c                 | Bin 0 -> 964 bytes
- .../v24.11.0-x64-ef5a0af0/13f6212e                 | Bin 0 -> 1556 bytes
- .../v24.11.0-x64-ef5a0af0/1418a414                 | Bin 0 -> 2572 bytes
- .../v24.11.0-x64-ef5a0af0/1510145d                 | Bin 0 -> 1076 bytes
- .../v24.11.0-x64-ef5a0af0/1527e364                 | Bin 0 -> 1244 bytes
- .../v24.11.0-x64-ef5a0af0/1ac863ab                 | Bin 0 -> 2508 bytes
- .../v24.11.0-x64-ef5a0af0/1c3cacf0                 | Bin 0 -> 1004 bytes
- .../v24.11.0-x64-ef5a0af0/22851b10                 | Bin 0 -> 1124 bytes
- .../v24.11.0-x64-ef5a0af0/267082d3                 | Bin 0 -> 1548 bytes
- .../v24.11.0-x64-ef5a0af0/26a2c23f                 | Bin 0 -> 1020 bytes
- .../v24.11.0-x64-ef5a0af0/2aee51c1                 | Bin 0 -> 4420 bytes
- .../v24.11.0-x64-ef5a0af0/2c63ed18                 | Bin 0 -> 2300 bytes
- .../v24.11.0-x64-ef5a0af0/325f3b25                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/35423e47                 | Bin 0 -> 5740 bytes
- .../v24.11.0-x64-ef5a0af0/38265c00                 | Bin 0 -> 4676 bytes
- .../v24.11.0-x64-ef5a0af0/499255cb                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/5008ff23                 | Bin 0 -> 1116 bytes
- .../v24.11.0-x64-ef5a0af0/54c4d7a0                 | Bin 0 -> 1332 bytes
- .../v24.11.0-x64-ef5a0af0/5898cbe6                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/645fec05                 | Bin 0 -> 964 bytes
- .../v24.11.0-x64-ef5a0af0/64a5b119                 | Bin 0 -> 1044 bytes
- .../v24.11.0-x64-ef5a0af0/64bc5526                 | Bin 0 -> 964 bytes
- .../v24.11.0-x64-ef5a0af0/6981a81a                 | Bin 0 -> 3092 bytes
- .../v24.11.0-x64-ef5a0af0/6f44ff43                 | Bin 0 -> 924 bytes
- .../v24.11.0-x64-ef5a0af0/723306b1                 | Bin 0 -> 8764 bytes
- .../v24.11.0-x64-ef5a0af0/735cc788                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/7439839c                 | Bin 0 -> 900 bytes
- .../v24.11.0-x64-ef5a0af0/743e6352                 | Bin 0 -> 1076 bytes
- .../v24.11.0-x64-ef5a0af0/74f72699                 | Bin 0 -> 1404 bytes
- .../v24.11.0-x64-ef5a0af0/779784bb                 | Bin 0 -> 3532 bytes
- .../v24.11.0-x64-ef5a0af0/7bf06e7b                 | Bin 0 -> 2332 bytes
- .../v24.11.0-x64-ef5a0af0/82af2755                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/83988400                 | Bin 0 -> 9508 bytes
- .../v24.11.0-x64-ef5a0af0/84024ba8                 | Bin 0 -> 1836 bytes
- .../v24.11.0-x64-ef5a0af0/86dd772b                 | Bin 0 -> 2004 bytes
- .../v24.11.0-x64-ef5a0af0/88c21881                 | Bin 0 -> 2612 bytes
- .../v24.11.0-x64-ef5a0af0/8a791342                 | Bin 0 -> 1004 bytes
- .../v24.11.0-x64-ef5a0af0/8e9f6d29                 | Bin 0 -> 1092 bytes
- .../v24.11.0-x64-ef5a0af0/8f7fc70c                 | Bin 0 -> 1236 bytes
- .../v24.11.0-x64-ef5a0af0/905d29e2                 | Bin 0 -> 900 bytes
- .../v24.11.0-x64-ef5a0af0/94492efb                 | Bin 0 -> 2204 bytes
- .../v24.11.0-x64-ef5a0af0/97ab1417                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/9808deac                 | Bin 0 -> 7180 bytes
- .../v24.11.0-x64-ef5a0af0/99c3bb7a                 | Bin 0 -> 1436 bytes
- .../v24.11.0-x64-ef5a0af0/9ac2aff3                 | Bin 0 -> 1276 bytes
- .../v24.11.0-x64-ef5a0af0/9d420a44                 | Bin 0 -> 4812 bytes
- .../v24.11.0-x64-ef5a0af0/a18a22f1                 | Bin 0 -> 1036 bytes
- .../v24.11.0-x64-ef5a0af0/a1b4955b                 | Bin 0 -> 1724 bytes
- .../v24.11.0-x64-ef5a0af0/a227e331                 | Bin 0 -> 1004 bytes
- .../v24.11.0-x64-ef5a0af0/a33bd136                 | Bin 0 -> 1500 bytes
- .../v24.11.0-x64-ef5a0af0/a3f92b6d                 | Bin 0 -> 1284 bytes
- .../v24.11.0-x64-ef5a0af0/a4fde9c2                 | Bin 0 -> 1692 bytes
- .../v24.11.0-x64-ef5a0af0/a7f6dd1a                 | Bin 0 -> 5732 bytes
- .../v24.11.0-x64-ef5a0af0/aa0c9ed3                 | Bin 0 -> 2292 bytes
- .../v24.11.0-x64-ef5a0af0/afe183b7                 | Bin 0 -> 932 bytes
- .../v24.11.0-x64-ef5a0af0/b532bec9                 | Bin 0 -> 1524 bytes
- .../v24.11.0-x64-ef5a0af0/b77a4234                 | Bin 0 -> 3492 bytes
- .../v24.11.0-x64-ef5a0af0/b7bedb6e                 | Bin 0 -> 2852 bytes
- .../v24.11.0-x64-ef5a0af0/b8dc7086                 | Bin 0 -> 8356 bytes
- .../v24.11.0-x64-ef5a0af0/ba39f2b0                 | Bin 0 -> 1540 bytes
- .../v24.11.0-x64-ef5a0af0/ba75c855                 | Bin 0 -> 1140 bytes
- .../v24.11.0-x64-ef5a0af0/bd64774d                 | Bin 0 -> 900 bytes
- .../v24.11.0-x64-ef5a0af0/c6efa50a                 | Bin 0 -> 900 bytes
- .../v24.11.0-x64-ef5a0af0/c96268fa                 | Bin 0 -> 2324 bytes
- .../v24.11.0-x64-ef5a0af0/cca7e87f                 | Bin 0 -> 2588 bytes
- .../v24.11.0-x64-ef5a0af0/cdb6c468                 | Bin 0 -> 1348 bytes
- .../v24.11.0-x64-ef5a0af0/ce34efde                 | Bin 0 -> 900 bytes
- .../v24.11.0-x64-ef5a0af0/d38179f0                 | Bin 0 -> 948 bytes
- .../v24.11.0-x64-ef5a0af0/d5758664                 | Bin 0 -> 2844 bytes
- .../v24.11.0-x64-ef5a0af0/d6688022                 | Bin 0 -> 2916 bytes
- .../v24.11.0-x64-ef5a0af0/d71ac7ef                 | Bin 0 -> 3788 bytes
- .../v24.11.0-x64-ef5a0af0/d7ffb036                 | Bin 0 -> 3540 bytes
- .../v24.11.0-x64-ef5a0af0/de03f6d3                 | Bin 0 -> 4324 bytes
- .../v24.11.0-x64-ef5a0af0/dfd8fa20                 | Bin 0 -> 1100 bytes
- .../v24.11.0-x64-ef5a0af0/e4a322bb                 | Bin 0 -> 1236 bytes
- .../v24.11.0-x64-ef5a0af0/e4b27ca9                 | Bin 0 -> 1124 bytes
- .../v24.11.0-x64-ef5a0af0/e7b4b950                 | Bin 0 -> 1404 bytes
- .../v24.11.0-x64-ef5a0af0/ea216aa1                 | Bin 0 -> 2692 bytes
- .../v24.11.0-x64-ef5a0af0/ec0b80f2                 | Bin 0 -> 13020 bytes
- .../v24.11.0-x64-ef5a0af0/edaa85f9                 | Bin 0 -> 1068 bytes
- .../v24.11.0-x64-ef5a0af0/edcc6df5                 | Bin 0 -> 2932 bytes
- .../v24.11.0-x64-ef5a0af0/ee188791                 | Bin 0 -> 1308 bytes
- .../v24.11.0-x64-ef5a0af0/eff0a57f                 | Bin 0 -> 948 bytes
- .../v24.11.0-x64-ef5a0af0/f36c9363                 | Bin 0 -> 1500 bytes
- .../v24.11.0-x64-ef5a0af0/f7cdedd0                 | Bin 0 -> 2404 bytes
- .../v24.11.0-x64-ef5a0af0/faac91a8                 | Bin 0 -> 1972 bytes
- .../v24.11.0-x64-ef5a0af0/fc542bc8                 | Bin 0 -> 1524 bytes
- README.md                                          |   7 ---
- app/admin/layout.tsx                               |  11 ++---
- app/api/admin/site-config/route.ts                 |   6 ++-
- components/discover/DiscoverFilters.tsx            |  43 ++-----------------
- lib/backups.js                                     |   4 +-
- lighthouserc.json                                  |   8 +++-
- package.json                                       |   2 +-
- prisma/schema.prisma                               |  10 +++--
- scripts/perf-ci.js                                 |  47 +++++++++++++++++++++
- 104 files changed, 77 insertions(+), 61 deletions(-)
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/0311a297
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/048cf699
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/057972bf
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/06aaebe9
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/097057e4
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/0b47e7bd
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/0c1534a9
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/0e8c5f35
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/138f505c
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/13f6212e
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/1418a414
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/1510145d
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/1527e364
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/1ac863ab
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/1c3cacf0
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/22851b10
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/267082d3
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/26a2c23f
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/2aee51c1
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/2c63ed18
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/325f3b25
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/35423e47
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/38265c00
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/499255cb
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/5008ff23
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/54c4d7a0
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/5898cbe6
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/645fec05
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/64a5b119
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/64bc5526
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/6981a81a
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/6f44ff43
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/723306b1
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/735cc788
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/7439839c
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/743e6352
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/74f72699
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/779784bb
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/7bf06e7b
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/82af2755
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/83988400
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/84024ba8
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/86dd772b
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/88c21881
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/8a791342
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/8e9f6d29
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/8f7fc70c
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/905d29e2
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/94492efb
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/97ab1417
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/9808deac
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/99c3bb7a
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/9ac2aff3
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/9d420a44
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a18a22f1
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a1b4955b
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a227e331
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a33bd136
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a3f92b6d
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a4fde9c2
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/a7f6dd1a
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/aa0c9ed3
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/afe183b7
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/b532bec9
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/b77a4234
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/b7bedb6e
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/b8dc7086
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/ba39f2b0
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/ba75c855
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/bd64774d
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/c6efa50a
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/c96268fa
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/cca7e87f
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/cdb6c468
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/ce34efde
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/d38179f0
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/d5758664
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/d6688022
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/d71ac7ef
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/d7ffb036
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/de03f6d3
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/dfd8fa20
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/e4a322bb
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/e4b27ca9
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/e7b4b950
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/ea216aa1
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/ec0b80f2
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/edaa85f9
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/edcc6df5
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/ee188791
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/eff0a57f
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/f36c9363
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/f7cdedd0
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/faac91a8
- create mode 100644 .tmp/lhci/node-compile-cache/v24.11.0-x64-ef5a0af0/fc542bc8
- create mode 100644 scripts/perf-ci.js
+ README.md                                 |   4 +
+ app/api/models/route.ts                   | 193 +++++++++++-
+ app/discover/page.tsx                     |  18 +-
+ app/globals.css                           | 103 ++++++-
+ components/AppSidebar.tsx                 | 139 +++++++--
+ components/discover/DiscoverFilters.tsx   |   8 +-
+ components/discover/DiscoverModelList.tsx | 108 ++++---
+ docs/user-manual.md                       | 474 ++++++++++++++++++++++++++++++
+ types/discover.ts                         |   8 +
+ 9 files changed, 952 insertions(+), 103 deletions(-)
+ create mode 100644 docs/user-manual.md
 
 Array
 (
@@ -900,11 +637,19 @@ Success
 Downloading NeXroll's Repository
 
 From https://github.com/JFLXCLOUD/NeXroll
-   dde09f6..ff155cd  main       -> origin/main
-Updating dde09f6..ff155cd
+   ff155cd..aa61bca  main       -> origin/main
+Updating ff155cd..aa61bca
 Fast-forward
- NeXroll/backend/main.py | 19 ++++++++++++++++---
- 1 file changed, 16 insertions(+), 3 deletions(-)
+ NeXroll/frontend/build/asset-manifest.json         |   6 +-
+ NeXroll/frontend/build/index.html                  |   2 +-
+ .../js/{main.9e5f2516.js => main.599f66ed.js}      |   6 +-
+ ...js.LICENSE.txt => main.599f66ed.js.LICENSE.txt} |   0
+ .../{main.9e5f2516.js.map => main.599f66ed.js.map} |   2 +-
+ NeXroll/frontend/src/App.js                        | 609 ++++++++++++++-------
+ 6 files changed, 410 insertions(+), 215 deletions(-)
+ rename NeXroll/frontend/build/static/js/{main.9e5f2516.js => main.599f66ed.js} (51%)
+ rename NeXroll/frontend/build/static/js/{main.9e5f2516.js.LICENSE.txt => main.599f66ed.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.9e5f2516.js.map => main.599f66ed.js.map} (51%)
 
 Array
 (
@@ -6204,13 +5949,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   e351dad..98ba006  main       -> origin/main
-Updating e351dad..98ba006
-Fast-forward
- unraid/minisatip.xml |  5 ++++-
- unraid/mylar3.xml    | 11 +++++++----
- 2 files changed, 11 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -8018,7 +7757,12 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   61b4541..b334ce9  master     -> origin/master
+Updating 61b4541..b334ce9
+Fast-forward
+ jlesage/video-duplicate-finder.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -11348,12 +11092,7 @@ Processing /tmp/GitHub/repositoryClone/GlassedSilver/unRAID-CAs/FMD2-wine/fmd2-w
 
 Downloading TheBrian's Repository
 
-From https://github.com/brianmiller/docker-templates
-   cf45282..194a49e  master     -> origin/master
-Updating cf45282..194a49e
-Fast-forward
- phvalheim-server/phvalheim-server.xml | 67 -----------------------------------
- 1 file changed, 67 deletions(-)
+Already up to date.
 
 Array
 (
@@ -16113,12 +15852,7 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 
 Downloading ZappyZap's Repository
 
-From https://github.com/devzwf/unraid-docker-templates
-   099d663..a51ac31  main       -> origin/main
-Updating 099d663..a51ac31
-Fast-forward
- unifi-toolkit.xml | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
