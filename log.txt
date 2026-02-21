@@ -129,38 +129,7 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-From https://github.com/kikootwo/ReadMeABook
-   04dbb05..7a1a8ff  main       -> origin/main
- * [new tag]         v1.0.10    -> v1.0.10
-Updating 04dbb05..7a1a8ff
-Fast-forward
- documentation/phase3/qbittorrent.md                |   2 +-
- package.json                                       |   2 +-
- src/app/admin/jobs/page.tsx                        | 332 ++++++-----
- src/app/admin/logs/page.tsx                        | 384 ++++++++-----
- src/app/admin/users/page.tsx                       | 611 ++++++++++++---------
- .../admin/download-clients/DownloadClientCard.tsx  |   1 +
- .../download-clients/DownloadClientManagement.tsx  |  12 +-
- .../admin/download-clients/DownloadClientModal.tsx |  15 +-
- src/lib/integrations/audible-series.ts             |   8 +-
- src/lib/integrations/deluge.service.ts             | 385 +++++++++++++
- src/lib/integrations/qbittorrent.service.ts        |  18 +-
- src/lib/integrations/rdtclient.service.ts          | 105 ----
- src/lib/interfaces/download-client.interface.ts    |   6 +-
- src/lib/processors/organize-files.processor.ts     |   5 +-
- .../services/download-client-manager.service.ts    |  14 +-
- tests/api/admin-settings-core.routes.test.ts       |   4 +-
- tests/api/setup-tests.routes.test.ts               |   2 +-
- tests/app/admin-jobs.page.test.tsx                 |   6 +-
- tests/app/admin-logs.page.test.tsx                 |  14 +-
- tests/app/admin-users.page.test.tsx                |  18 +-
- tests/integrations/deluge.service.test.ts          | 440 +++++++++++++++
- tests/integrations/qbittorrent.service.test.ts     |  35 +-
- .../processors/monitor-download.processor.test.ts  |   4 +-
- 23 files changed, 1743 insertions(+), 680 deletions(-)
- create mode 100644 src/lib/integrations/deluge.service.ts
- delete mode 100644 src/lib/integrations/rdtclient.service.ts
- create mode 100644 tests/integrations/deluge.service.test.ts
+Already up to date.
 
 Array
 (
@@ -388,27 +357,25 @@ Processing /tmp/GitHub/repositoryClone/jessielw/unraid-templates/Mp4Forge/mp4for
 Downloading Nebula's Repository
 
 From https://github.com/nebula-codes/hytale_server_manager
-   f5b0e9c..1d0f72b  main       -> origin/main
- * [new tag]         v0.3.28    -> v0.3.28
- * [new tag]         v0.3.27    -> v0.3.27
-Updating f5b0e9c..1d0f72b
+   1d0f72b..25b9998  main       -> origin/main
+ * [new tag]         v0.3.30    -> v0.3.30
+ * [new tag]         v0.3.29    -> v0.3.29
+Updating 1d0f72b..25b9998
 Fast-forward
- packages/frontend/src/components/layout/Header.tsx |   2 +-
- packages/frontend/src/i18n.ts                      |   4 +
- packages/frontend/src/locales/en.json              |  13 +
- packages/frontend/src/locales/es.json              |  13 +
- packages/frontend/src/locales/pt-br.json           | 613 +++++++++++++++++++++
- .../src/pages/servers/ServerDetailPage.tsx         |  34 +-
- packages/frontend/src/types/index.ts               |   1 +
- packages/server/src/adapters/JavaServerAdapter.ts  |  14 +-
- packages/server/src/config.ts                      |   8 +-
- .../server/src/providers/mod/CurseForgeProvider.ts |  16 +-
- packages/server/src/routes/servers.ts              |   7 +-
- .../src/services/DiscordNotificationService.ts     |   7 +-
- packages/server/src/services/SettingsService.ts    |   2 +-
- packages/website/.astro/settings.json              |   2 +-
- 14 files changed, 719 insertions(+), 17 deletions(-)
- create mode 100644 packages/frontend/src/locales/pt-br.json
+ packages/frontend/src/locales/en.json              |  40 ++-
+ packages/frontend/src/locales/es.json              |  40 ++-
+ .../frontend/src/pages/backups/BackupsPage.tsx     |  16 +-
+ .../frontend/src/pages/files/UploadFileModal.tsx   |  29 +-
+ .../src/pages/servers/ServerDetailPage.tsx         | 133 +++++++-
+ packages/frontend/src/services/api.ts              |  29 ++
+ packages/server/src/app.ts                         |  19 +-
+ packages/server/src/config.ts                      |   2 +-
+ packages/server/src/routes/servers.ts              | 337 +++++++++++++++++++++
+ packages/server/src/services/AlertsService.ts      |  12 +-
+ .../server/src/services/AutomationRulesService.ts  |  41 ++-
+ packages/server/src/services/ModService.ts         |  57 ++++
+ packages/server/src/services/ServerService.ts      |  41 +++
+ 13 files changed, 772 insertions(+), 24 deletions(-)
 
 Array
 (
@@ -674,14 +641,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   2f11f9f..ea3fb2e  main       -> origin/main
-Updating 2f11f9f..ea3fb2e
-Fast-forward
- .github/workflows/docker-build.yml | 53 +++++++++++++++++++++++++++++++-------
- NeXroll/backend/main.py            | 21 ++++++++++++---
- NeXroll/backend/models.py          |  2 ++
- 3 files changed, 64 insertions(+), 12 deletions(-)
+Already up to date.
 
 Array
 (
@@ -858,13 +818,7 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-From https://github.com/ruaan-deysel/unraid-management-agent
-   5b8da95..7a1ae2d  main       -> origin/main
-Updating 5b8da95..7a1ae2d
-Fast-forward
- CHANGELOG.md                      |  7 +++++++
- daemon/services/controllers/vm.go | 32 ++++++++++++++++++++++++++++++++
- 2 files changed, 39 insertions(+)
+Already up to date.
 
 Array
 (
@@ -5149,7 +5103,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   35dfe2eb..197bbb9d  main       -> origin/main
+Updating 35dfe2eb..197bbb9d
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 25 insertions(+), 25 deletions(-)
 
 Array
 (
@@ -20423,8 +20406,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-ds-sebastian/pricecious
-ghcr.io/ds-sebastian/pricecious:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 130
