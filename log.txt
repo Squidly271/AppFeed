@@ -483,12 +483,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   453a86b..f1eb403  main       -> origin/main
-Updating 453a86b..f1eb403
-Fast-forward
- app/globals.css | 14 ++++++++++++++
- 1 file changed, 14 insertions(+)
+Already up to date.
 
 Array
 (
@@ -4202,7 +4197,77 @@ Success
 
 Downloading ciuse99's Repository
 
-Already up to date.
+From https://github.com/giuseppe99barchetta/SuggestArr
+   657fbd5..a08a811  main       -> origin/main
+ * [new tag]         v2.2.0     -> v2.2.0
+Updating 657fbd5..a08a811
+Fast-forward
+ .gitignore                                         |   21 +
+ CLAUDE.md                                          |   23 +-
+ README.md                                          |   67 +
+ api_service/app.py                                 |   40 +
+ api_service/automate_process.py                    |   31 +-
+ api_service/blueprints/automation/routes.py        |   51 +-
+ api_service/blueprints/jobs/__init__.py            |    3 +
+ api_service/blueprints/jobs/routes.py              |  611 ++++++++
+ api_service/blueprints/seer/routes.py              |   50 +-
+ api_service/config/config.py                       |   17 +-
+ api_service/config/cron_jobs.py                    |   11 +-
+ api_service/db/database_manager.py                 |  155 +-
+ api_service/db/job_repository.py                   |  618 ++++++++
+ api_service/handler/jellyfin_handler.py            |  168 ++-
+ api_service/handler/plex_handler.py                |  142 +-
+ api_service/jobs/__init__.py                       |    3 +
+ api_service/jobs/discover_automation.py            |  291 ++++
+ api_service/jobs/job_manager.py                    |  286 ++++
+ api_service/jobs/recommendation_automation.py      |  420 ++++++
+ api_service/jobs/system_job_sync.py                |  231 +++
+ api_service/requirements.txt                       |  Bin 2350 -> 1195 bytes
+ api_service/services/jellyfin/jellyfin_client.py   |    7 +-
+ api_service/services/jellyseer/seer_client.py      |   69 +-
+ api_service/services/llm/llm_service.py            |  218 +++
+ api_service/services/tmdb/tmdb_client.py           |   54 +
+ api_service/services/tmdb/tmdb_discover.py         |  317 +++++
+ api_service/test/test_config.py                    |    1 +
+ client/package.json                                |    2 +-
+ client/src/api/api.js                              |   36 +-
+ client/src/api/jobsApi.js                          |  140 ++
+ client/src/api/plexApi.js                          |   51 +-
+ client/src/components/DashboardPage.vue            |   33 +-
+ client/src/components/RequestsPage.vue             |   12 +
+ .../components/configWizard/AdditionalSettings.vue |    7 +
+ .../src/components/configWizard/JellyfinConfig.vue |  100 +-
+ client/src/components/configWizard/PlexConfig.vue  |   48 +-
+ client/src/components/configWizard/SeerConfig.vue  |  437 +++++-
+ .../src/components/settings/SettingsAdvanced.vue   |  418 +++++-
+ .../components/settings/SettingsContentFilters.vue |  665 ---------
+ client/src/components/settings/SettingsGeneral.vue |    7 +
+ client/src/components/settings/SettingsJobs.vue    | 1027 ++++++++++++++
+ .../src/components/settings/SettingsServices.vue   | 1493 +++++++++++++-------
+ client/src/components/settings/jobs/JobFilters.vue |  537 +++++++
+ .../components/settings/jobs/JobHistoryModal.vue   |  652 +++++++++
+ client/src/components/settings/jobs/JobModal.vue   |  756 ++++++++++
+ .../settings/jobs/RecommendationFilters.vue        |  600 ++++++++
+ .../components/settings/jobs/SchedulePicker.vue    |  466 ++++++
+ 47 files changed, 10090 insertions(+), 1302 deletions(-)
+ create mode 100644 api_service/blueprints/jobs/__init__.py
+ create mode 100644 api_service/blueprints/jobs/routes.py
+ create mode 100644 api_service/db/job_repository.py
+ create mode 100644 api_service/jobs/__init__.py
+ create mode 100644 api_service/jobs/discover_automation.py
+ create mode 100644 api_service/jobs/job_manager.py
+ create mode 100644 api_service/jobs/recommendation_automation.py
+ create mode 100644 api_service/jobs/system_job_sync.py
+ create mode 100644 api_service/services/llm/llm_service.py
+ create mode 100644 api_service/services/tmdb/tmdb_discover.py
+ create mode 100644 client/src/api/jobsApi.js
+ delete mode 100644 client/src/components/settings/SettingsContentFilters.vue
+ create mode 100644 client/src/components/settings/SettingsJobs.vue
+ create mode 100644 client/src/components/settings/jobs/JobFilters.vue
+ create mode 100644 client/src/components/settings/jobs/JobHistoryModal.vue
+ create mode 100644 client/src/components/settings/jobs/JobModal.vue
+ create mode 100644 client/src/components/settings/jobs/RecommendationFilters.vue
+ create mode 100644 client/src/components/settings/jobs/SchedulePicker.vue
 
 Array
 (
@@ -20162,16 +20227,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-thedinz/kam
-ghcr.io/thedinz/kam:latest Downloads:   Stars:   Base: unknown
-surajverma/homehub
-ghcr.io/surajverma/homehub:latest Downloads:   Stars:   Base: unknown
-surajverma/pi-dash
-ghcr.io/surajverma/pi-dash:latest Downloads:   Stars:   Base: unknown
-papra-hq/papra
-ghcr.io/papra-hq/papra:latest Downloads:   Stars:   Base: unknown
-robro92/fanbridge
-ghcr.io/robro92/fanbridge:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
