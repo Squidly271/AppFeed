@@ -129,7 +129,38 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   04dbb05..7a1a8ff  main       -> origin/main
+ * [new tag]         v1.0.10    -> v1.0.10
+Updating 04dbb05..7a1a8ff
+Fast-forward
+ documentation/phase3/qbittorrent.md                |   2 +-
+ package.json                                       |   2 +-
+ src/app/admin/jobs/page.tsx                        | 332 ++++++-----
+ src/app/admin/logs/page.tsx                        | 384 ++++++++-----
+ src/app/admin/users/page.tsx                       | 611 ++++++++++++---------
+ .../admin/download-clients/DownloadClientCard.tsx  |   1 +
+ .../download-clients/DownloadClientManagement.tsx  |  12 +-
+ .../admin/download-clients/DownloadClientModal.tsx |  15 +-
+ src/lib/integrations/audible-series.ts             |   8 +-
+ src/lib/integrations/deluge.service.ts             | 385 +++++++++++++
+ src/lib/integrations/qbittorrent.service.ts        |  18 +-
+ src/lib/integrations/rdtclient.service.ts          | 105 ----
+ src/lib/interfaces/download-client.interface.ts    |   6 +-
+ src/lib/processors/organize-files.processor.ts     |   5 +-
+ .../services/download-client-manager.service.ts    |  14 +-
+ tests/api/admin-settings-core.routes.test.ts       |   4 +-
+ tests/api/setup-tests.routes.test.ts               |   2 +-
+ tests/app/admin-jobs.page.test.tsx                 |   6 +-
+ tests/app/admin-logs.page.test.tsx                 |  14 +-
+ tests/app/admin-users.page.test.tsx                |  18 +-
+ tests/integrations/deluge.service.test.ts          | 440 +++++++++++++++
+ tests/integrations/qbittorrent.service.test.ts     |  35 +-
+ .../processors/monitor-download.processor.test.ts  |   4 +-
+ 23 files changed, 1743 insertions(+), 680 deletions(-)
+ create mode 100644 src/lib/integrations/deluge.service.ts
+ delete mode 100644 src/lib/integrations/rdtclient.service.ts
+ create mode 100644 tests/integrations/deluge.service.test.ts
 
 Array
 (
@@ -356,7 +387,28 @@ Processing /tmp/GitHub/repositoryClone/jessielw/unraid-templates/Mp4Forge/mp4for
 
 Downloading Nebula's Repository
 
-Already up to date.
+From https://github.com/nebula-codes/hytale_server_manager
+   f5b0e9c..1d0f72b  main       -> origin/main
+ * [new tag]         v0.3.28    -> v0.3.28
+ * [new tag]         v0.3.27    -> v0.3.27
+Updating f5b0e9c..1d0f72b
+Fast-forward
+ packages/frontend/src/components/layout/Header.tsx |   2 +-
+ packages/frontend/src/i18n.ts                      |   4 +
+ packages/frontend/src/locales/en.json              |  13 +
+ packages/frontend/src/locales/es.json              |  13 +
+ packages/frontend/src/locales/pt-br.json           | 613 +++++++++++++++++++++
+ .../src/pages/servers/ServerDetailPage.tsx         |  34 +-
+ packages/frontend/src/types/index.ts               |   1 +
+ packages/server/src/adapters/JavaServerAdapter.ts  |  14 +-
+ packages/server/src/config.ts                      |   8 +-
+ .../server/src/providers/mod/CurseForgeProvider.ts |  16 +-
+ packages/server/src/routes/servers.ts              |   7 +-
+ .../src/services/DiscordNotificationService.ts     |   7 +-
+ packages/server/src/services/SettingsService.ts    |   2 +-
+ packages/website/.astro/settings.json              |   2 +-
+ 14 files changed, 719 insertions(+), 17 deletions(-)
+ create mode 100644 packages/frontend/src/locales/pt-br.json
 
 Array
 (
@@ -483,13 +535,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   fb010c2..453a86b  main       -> origin/main
-Updating fb010c2..453a86b
-Fast-forward
- app/globals.css           |  48 ++++++++++++--
- components/AppSidebar.tsx | 166 ++++++++++++++++++++++++++++++----------------
- 2 files changed, 153 insertions(+), 61 deletions(-)
+Already up to date.
 
 Array
 (
@@ -628,7 +674,14 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   2f11f9f..ea3fb2e  main       -> origin/main
+Updating 2f11f9f..ea3fb2e
+Fast-forward
+ .github/workflows/docker-build.yml | 53 +++++++++++++++++++++++++++++++-------
+ NeXroll/backend/main.py            | 21 ++++++++++++---
+ NeXroll/backend/models.py          |  2 ++
+ 3 files changed, 64 insertions(+), 12 deletions(-)
 
 Array
 (
@@ -805,7 +858,13 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-Already up to date.
+From https://github.com/ruaan-deysel/unraid-management-agent
+   5b8da95..7a1ae2d  main       -> origin/main
+Updating 5b8da95..7a1ae2d
+Fast-forward
+ CHANGELOG.md                      |  7 +++++++
+ daemon/services/controllers/vm.go | 32 ++++++++++++++++++++++++++++++++
+ 2 files changed, 39 insertions(+)
 
 Array
 (
@@ -877,15 +936,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   9fa0e33..5535aab  main       -> origin/main
-Updating 9fa0e33..5535aab
-Fast-forward
- server/controllers/library/galleries.ts | 3 ++-
- server/controllers/library/groups.ts    | 3 ++-
- server/controllers/library/studios.ts   | 3 ++-
- server/controllers/library/tags.ts      | 3 ++-
- 4 files changed, 8 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -20125,12 +20176,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
-anym001/docker-bitcoind
-ghcr.io/anym001/docker-bitcoind:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
-matiasdesuu/thinkdashboard
-ghcr.io/matiasdesuu/thinkdashboard:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -20279,15 +20326,9 @@ ghcr.io/matiasdesuu/thinkdashboard:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-Tagged - Can't determine last update
-registry
-registry:3 Downloads: 1734623230  Stars: 4177  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
-Tagged - Can't determine last update
-gitea.fithwum.tech/fithwum/minecraft
-gitea.fithwum.tech/fithwum/minecraft:quilt Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -20382,6 +20423,8 @@ gitea.fithwum.tech/fithwum/minecraft:quilt Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+ds-sebastian/pricecious
+ghcr.io/ds-sebastian/pricecious:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 130
