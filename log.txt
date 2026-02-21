@@ -30,7 +30,18 @@ Processing /tmp/GitHub/repositoryClone/gibz104/SpoolmanSync/unraid/spoolmansync.
 
 Downloading ghzgod11's Repository
 
-Already up to date.
+From https://github.com/ghzgod/signal-notification-unraid
+   5bbbe04..fe96096  main       -> origin/main
+Updating 5bbbe04..fe96096
+Fast-forward
+ README.md                                          |  18 +-
+ build.sh                                           |   8 +-
+ release/signal-notification.txz                    | Bin 10640 -> 13872 bytes
+ signal-notification.plg                            |   4 +-
+ .../local/emhttp/plugins/dynamix/agents/Signal.xml |  49 ++-
+ .../signal-notification/include/SignalGroupAPI.php | 363 ++++++++++++++++++---
+ .../signal-notification/include/signal-enhance.js  | 124 +++++--
+ 7 files changed, 484 insertions(+), 82 deletions(-)
 
 Array
 (
@@ -871,7 +882,16 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   5535aab..5236bf5  main          -> origin/main
+ * [new tag]         v3.3.4-beta.1 -> v3.3.4-beta.1
+Updating 5535aab..5236bf5
+Fast-forward
+ client/package.json                                  | 2 +-
+ client/src/components/video-player/VideoPlayer.jsx   | 7 +++++--
+ client/src/components/video-player/useVideoPlayer.js | 5 +++--
+ server/package.json                                  | 2 +-
+ 4 files changed, 10 insertions(+), 6 deletions(-)
 
 Array
 (
@@ -4197,77 +4217,7 @@ Success
 
 Downloading ciuse99's Repository
 
-From https://github.com/giuseppe99barchetta/SuggestArr
-   657fbd5..a08a811  main       -> origin/main
- * [new tag]         v2.2.0     -> v2.2.0
-Updating 657fbd5..a08a811
-Fast-forward
- .gitignore                                         |   21 +
- CLAUDE.md                                          |   23 +-
- README.md                                          |   67 +
- api_service/app.py                                 |   40 +
- api_service/automate_process.py                    |   31 +-
- api_service/blueprints/automation/routes.py        |   51 +-
- api_service/blueprints/jobs/__init__.py            |    3 +
- api_service/blueprints/jobs/routes.py              |  611 ++++++++
- api_service/blueprints/seer/routes.py              |   50 +-
- api_service/config/config.py                       |   17 +-
- api_service/config/cron_jobs.py                    |   11 +-
- api_service/db/database_manager.py                 |  155 +-
- api_service/db/job_repository.py                   |  618 ++++++++
- api_service/handler/jellyfin_handler.py            |  168 ++-
- api_service/handler/plex_handler.py                |  142 +-
- api_service/jobs/__init__.py                       |    3 +
- api_service/jobs/discover_automation.py            |  291 ++++
- api_service/jobs/job_manager.py                    |  286 ++++
- api_service/jobs/recommendation_automation.py      |  420 ++++++
- api_service/jobs/system_job_sync.py                |  231 +++
- api_service/requirements.txt                       |  Bin 2350 -> 1195 bytes
- api_service/services/jellyfin/jellyfin_client.py   |    7 +-
- api_service/services/jellyseer/seer_client.py      |   69 +-
- api_service/services/llm/llm_service.py            |  218 +++
- api_service/services/tmdb/tmdb_client.py           |   54 +
- api_service/services/tmdb/tmdb_discover.py         |  317 +++++
- api_service/test/test_config.py                    |    1 +
- client/package.json                                |    2 +-
- client/src/api/api.js                              |   36 +-
- client/src/api/jobsApi.js                          |  140 ++
- client/src/api/plexApi.js                          |   51 +-
- client/src/components/DashboardPage.vue            |   33 +-
- client/src/components/RequestsPage.vue             |   12 +
- .../components/configWizard/AdditionalSettings.vue |    7 +
- .../src/components/configWizard/JellyfinConfig.vue |  100 +-
- client/src/components/configWizard/PlexConfig.vue  |   48 +-
- client/src/components/configWizard/SeerConfig.vue  |  437 +++++-
- .../src/components/settings/SettingsAdvanced.vue   |  418 +++++-
- .../components/settings/SettingsContentFilters.vue |  665 ---------
- client/src/components/settings/SettingsGeneral.vue |    7 +
- client/src/components/settings/SettingsJobs.vue    | 1027 ++++++++++++++
- .../src/components/settings/SettingsServices.vue   | 1493 +++++++++++++-------
- client/src/components/settings/jobs/JobFilters.vue |  537 +++++++
- .../components/settings/jobs/JobHistoryModal.vue   |  652 +++++++++
- client/src/components/settings/jobs/JobModal.vue   |  756 ++++++++++
- .../settings/jobs/RecommendationFilters.vue        |  600 ++++++++
- .../components/settings/jobs/SchedulePicker.vue    |  466 ++++++
- 47 files changed, 10090 insertions(+), 1302 deletions(-)
- create mode 100644 api_service/blueprints/jobs/__init__.py
- create mode 100644 api_service/blueprints/jobs/routes.py
- create mode 100644 api_service/db/job_repository.py
- create mode 100644 api_service/jobs/__init__.py
- create mode 100644 api_service/jobs/discover_automation.py
- create mode 100644 api_service/jobs/job_manager.py
- create mode 100644 api_service/jobs/recommendation_automation.py
- create mode 100644 api_service/jobs/system_job_sync.py
- create mode 100644 api_service/services/llm/llm_service.py
- create mode 100644 api_service/services/tmdb/tmdb_discover.py
- create mode 100644 client/src/api/jobsApi.js
- delete mode 100644 client/src/components/settings/SettingsContentFilters.vue
- create mode 100644 client/src/components/settings/SettingsJobs.vue
- create mode 100644 client/src/components/settings/jobs/JobFilters.vue
- create mode 100644 client/src/components/settings/jobs/JobHistoryModal.vue
- create mode 100644 client/src/components/settings/jobs/JobModal.vue
- create mode 100644 client/src/components/settings/jobs/RecommendationFilters.vue
- create mode 100644 client/src/components/settings/jobs/SchedulePicker.vue
+Already up to date.
 
 Array
 (
@@ -20227,6 +20177,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+we-promise/sure
+ghcr.io/we-promise/sure:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -20291,6 +20243,14 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/flycast
+lscr.io/linuxserver/flycast Downloads: 5394  Stars: 0  Base: unknown
+linuxserver/duckstation
+lscr.io/linuxserver/duckstation Downloads: 19083  Stars: 1  Base: unknown
+linuxserver/xemu
+lscr.io/linuxserver/xemu Downloads: 30822  Stars: 0  Base: unknown
+linuxserver/rpcs3
+lscr.io/linuxserver/rpcs3 Downloads: 114532  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
