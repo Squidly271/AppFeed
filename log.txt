@@ -680,26 +680,43 @@ Success
 Downloading vincentmakes' Repository
 
 From https://github.com/vincentmakes/cv-manager
-   55184b5..be41254  main       -> origin/main
-Updating 55184b5..be41254
+   be41254..84a8595  main       -> origin/main
+Updating be41254..84a8595
 Fast-forward
- .github/workflows/ci.yml |   64 +++
- CHANGELOG.md             |    5 +
- Dockerfile               |    2 +-
- README.md                |    4 +-
- package-lock.json        | 1430 ++++++++++++++++++++++++++++++++++++++++++++++
- package.json             |    7 +-
- public/shared/admin.js   |    4 +-
- public/shared/scripts.js |    4 +-
- src/server.js            |    8 +-
- tests/backend.test.js    |  207 +++++++
- tests/frontend.test.js   |  104 ++++
- version.json             |    2 +-
- 12 files changed, 1828 insertions(+), 13 deletions(-)
- create mode 100644 .github/workflows/ci.yml
- create mode 100644 package-lock.json
- create mode 100644 tests/backend.test.js
- create mode 100644 tests/frontend.test.js
+ CHANGELOG.md               |   9 +
+ CLAUDE.md                  | 247 ++++++++++++++++++++++++++
+ PLAN.md                    | 282 ++++++++++++++++++++++++++++++
+ TRANSLATING.md             | 151 ++++++++++++++++
+ package.json               |   2 +-
+ public-readonly/index.html |  28 +--
+ public/index.html          | 227 ++++++++++++------------
+ public/shared/admin.css    |  37 ++++
+ public/shared/admin.js     | 419 ++++++++++++++++++++++++---------------------
+ public/shared/i18n.js      | 114 ++++++++++++
+ public/shared/i18n/de.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/en.json | 302 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/es.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/fr.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/it.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/nl.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/pt.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/i18n/zh.json | 303 ++++++++++++++++++++++++++++++++
+ public/shared/scripts.js   |  37 ++--
+ tests/frontend.test.js     |  91 ++++++++++
+ version.json               |   2 +-
+ 21 files changed, 3742 insertions(+), 327 deletions(-)
+ create mode 100644 CLAUDE.md
+ create mode 100644 PLAN.md
+ create mode 100644 TRANSLATING.md
+ create mode 100644 public/shared/i18n.js
+ create mode 100644 public/shared/i18n/de.json
+ create mode 100644 public/shared/i18n/en.json
+ create mode 100644 public/shared/i18n/es.json
+ create mode 100644 public/shared/i18n/fr.json
+ create mode 100644 public/shared/i18n/it.json
+ create mode 100644 public/shared/i18n/nl.json
+ create mode 100644 public/shared/i18n/pt.json
+ create mode 100644 public/shared/i18n/zh.json
 
 Array
 (
@@ -855,7 +872,370 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   2797e6ec..9f47e6ce  master     -> origin/master
+Updating 2797e6ec..9f47e6ce
+Fast-forward
+ .env.example                                       |   44 +-
+ .gemini/settings.json                              |   11 +
+ .github/agents/test.agent.md                       |    6 +
+ .github/copilot-instructions.md                    |   10 +
+ .github/workflows/ci.yml                           |    1 +
+ .github/workflows/publish_master.yml               |    4 +-
+ .gitignore                                         |    1 +
+ .mcp.json                                          |   11 +
+ app/Console/Commands/CleanupNetworkSegments.php    |   34 +
+ app/Console/Commands/CompareVersion.php            |    7 +-
+ app/Console/Commands/LogoCacheCleanup.php          |   22 +-
+ app/Console/Commands/NetworkBroadcastEnsure.php    |   68 ++
+ app/Console/Commands/NetworkBroadcastHeal.php      |   51 +
+ app/Console/Commands/NetworkBroadcastWorker.php    |  187 ++++
+ app/Console/Commands/RefreshPlaylist.php           |   20 +
+ .../Commands/RegenerateNetworkSchedulesCommand.php |  109 +++
+ app/Enums/PlaylistSourceType.php                   |    1 +
+ app/Enums/TranscodeMode.php                        |   10 +
+ app/Filament/Actions/ModalActionGroup.php          |  106 +++
+ .../Resources/Series/Pages/ViewSeries.php          |   42 +-
+ .../RelationManagers/EpisodesRelationManager.php   |  283 ------
+ .../GuestPanel/Resources/Series/SeriesResource.php |    3 +-
+ .../GuestPanel/Resources/Vods/Pages/ViewVod.php    |   65 +-
+ .../GuestPanel/Resources/Vods/VodResource.php      |   12 +-
+ app/Filament/Pages/M3uProxyStreamMonitor.php       |  269 +++---
+ app/Filament/Pages/Preferences.php                 |  633 +++++-------
+ app/Filament/Resources/Assets/AssetResource.php    |  164 ++++
+ app/Filament/Resources/Assets/Pages/ListAssets.php |  115 +++
+ .../Resources/Categories/CategoryResource.php      |  179 +---
+ .../Resources/Categories/Pages/EditCategory.php    |  124 ++-
+ .../Resources/Categories/Pages/ViewCategory.php    |  190 ----
+ .../Resources/Channels/ChannelResource.php         |  111 +--
+ .../Resources/Channels/Pages/ListChannels.php      |  134 +--
+ .../CustomPlaylists/CustomPlaylistResource.php     |   58 +-
+ .../RelationManagers/ChannelsRelationManager.php   |   15 +-
+ .../RelationManagers/SeriesRelationManager.php     |    2 +-
+ .../RelationManagers/VodRelationManager.php        |   17 +-
+ app/Filament/Resources/EpgMaps/EpgMapResource.php  |    5 +-
+ app/Filament/Resources/Epgs/EpgResource.php        |   24 +-
+ app/Filament/Resources/Epgs/Pages/ListEpgs.php     |    2 +
+ app/Filament/Resources/Groups/GroupResource.php    |  306 +-----
+ app/Filament/Resources/Groups/Pages/EditGroup.php  |  182 +++-
+ app/Filament/Resources/Groups/Pages/ViewGroup.php  |  364 -------
+ .../MediaServerIntegrationResource.php             |  505 +++++++++-
+ .../Pages/CreateMediaServerIntegration.php         |    8 +
+ .../Pages/EditMediaServerIntegration.php           |    5 +-
+ .../Resources/MergedEpgs/MergedEpgResource.php     |  360 +++++++
+ .../Resources/MergedEpgs/Pages/EditMergedEpg.php   |   19 +
+ .../Resources/MergedEpgs/Pages/ListMergedEpgs.php  |   27 +
+ .../MergedPlaylists/MergedPlaylistResource.php     |   11 +
+ .../Resources/Networks/NetworkResource.php         | 1005 ++++++++++++++++++++
+ .../Resources/Networks/Pages/CreateNetwork.php     |   32 +
+ .../Resources/Networks/Pages/EditNetwork.php       |  140 +++
+ .../Resources/Networks/Pages/ListNetworks.php      |   22 +
+ .../NetworkContentRelationManager.php              |  312 ++++++
+ .../PersonalAccessTokenResource.php                |    9 +
+ .../PlaylistAliases/PlaylistAliasResource.php      |   10 +
+ .../Resources/Playlists/Pages/EditPlaylist.php     |   25 +
+ .../Resources/Playlists/PlaylistResource.php       |  676 ++++++-------
+ .../PostProcesses/PostProcessResource.php          |    9 +
+ app/Filament/Resources/Series/Pages/EditSeries.php |    4 +
+ app/Filament/Resources/Series/Pages/ViewSeries.php |   72 ++
+ .../RelationManagers/EpisodesRelationManager.php   |  183 ++--
+ app/Filament/Resources/Series/SeriesResource.php   |  329 ++-----
+ .../Pages/ListStreamFileSettings.php               |   33 +
+ .../StreamFileSettingResource.php                  |  487 ++++++++++
+ .../StreamProfiles/StreamProfileResource.php       |    9 +
+ app/Filament/Resources/Users/UserResource.php      |   22 +
+ .../Resources/VodGroups/Pages/EditVodGroup.php     |  221 ++++-
+ .../Resources/VodGroups/Pages/ViewVodGroup.php     |  226 -----
+ .../Resources/VodGroups/VodGroupResource.php       |  301 +++---
+ app/Filament/Resources/Vods/Pages/ListVod.php      |  135 +--
+ app/Filament/Resources/Vods/Pages/ViewVod.php      |   83 ++
+ app/Filament/Resources/Vods/VodResource.php        |  371 +++-----
+ app/Filament/Tables/NetworkEpisodesTable.php       |  126 +++
+ app/Filament/Tables/NetworkMoviesTable.php         |   96 ++
+ app/Filament/Widgets/UpdateNoticeWidget.php        |   43 +
+ app/Http/Controllers/Api/EpgApiController.php      |  172 ++++
+ app/Http/Controllers/Api/M3uProxyApiController.php |  175 +++-
+ app/Http/Controllers/AssetPreviewController.php    |   29 +
+ app/Http/Controllers/EpgGenerateController.php     |   81 ++
+ app/Http/Controllers/LogoProxyController.php       |   65 +-
+ app/Http/Controllers/LogoRepositoryController.php  |   47 +
+ .../Controllers/MediaServerProxyController.php     |   30 +-
+ app/Http/Controllers/NetworkEpgController.php      |   84 ++
+ app/Http/Controllers/NetworkHlsController.php      |   91 ++
+ app/Http/Controllers/NetworkPlaylistController.php |  215 +++++
+ app/Http/Controllers/NetworkStreamController.php   |  305 ++++++
+ app/Http/Controllers/PlayerController.php          |   47 +
+ .../Controllers/PlaylistGenerateController.php     |   67 ++
+ app/Http/Controllers/ShortURLController.php        |   47 +
+ app/Http/Controllers/XtreamApiController.php       |  396 +++++++-
+ app/Http/Controllers/XtreamStreamController.php    |   30 +
+ app/Interfaces/MediaServer.php                     |   53 ++
+ app/Jobs/CheckVodStrmProgress.php                  |  116 +++
+ app/Jobs/GenerateEpgCache.php                      |   14 +
+ app/Jobs/MergeChannels.php                         |   51 +-
+ app/Jobs/ProcessEpgImport.php                      |  181 +++-
+ app/Jobs/ProcessM3uImport.php                      |   99 +-
+ app/Jobs/ProcessM3uImportComplete.php              |    5 +-
+ app/Jobs/ProcessM3uImportSeriesComplete.php        |    2 +
+ app/Jobs/RefreshMediaServerLibraryJob.php          |   84 ++
+ app/Jobs/SyncMediaServer.php                       |  194 +++-
+ app/Jobs/SyncSeriesStrmFiles.php                   |  227 ++++-
+ app/Jobs/SyncVodStrmFiles.php                      |  896 ++++++++++++-----
+ app/Listeners/EpgListener.php                      |    4 +
+ app/Listeners/PlaylistListener.php                 |   17 +
+ app/Livewire/PlaylistInfo.php                      |   31 +
+ app/Models/Asset.php                               |   38 +
+ app/Models/Category.php                            |    5 +
+ app/Models/Channel.php                             |   23 +
+ app/Models/CustomPlaylist.php                      |   47 +
+ app/Models/Epg.php                                 |   18 +
+ app/Models/Episode.php                             |    1 +
+ app/Models/Group.php                               |    5 +
+ app/Models/MediaServerIntegration.php              |   84 ++
+ app/Models/MergedPlaylist.php                      |   18 +
+ app/Models/Network.php                             |  247 +++++
+ app/Models/NetworkContent.php                      |  207 ++++
+ app/Models/NetworkProgramme.php                    |   86 ++
+ app/Models/Playlist.php                            |   66 ++
+ app/Models/PlaylistAlias.php                       |   16 +
+ app/Models/Series.php                              |    5 +
+ app/Models/StreamFileSetting.php                   |   91 ++
+ app/Models/User.php                                |   62 ++
+ app/Providers/AppServiceProvider.php               |   55 +-
+ app/Providers/Filament/AdminPanelProvider.php      |    4 +-
+ app/Providers/VersionServiceProvider.php           |   83 ++
+ app/Services/AssetInventoryService.php             |  217 +++++
+ app/Services/EmbyJellyfinService.php               |  601 ++++++++++++
+ app/Services/LogoCacheService.php                  |  197 ++++
+ app/Services/LogoRepositoryService.php             |  142 +++
+ app/Services/LogoService.php                       |   14 +-
+ app/Services/M3uProxyService.php                   |  323 ++++++-
+ app/Services/MediaServerService.php                |  350 +------
+ app/Services/NetworkBroadcastService.php           |  756 +++++++++++++++
+ app/Services/NetworkChannelSyncService.php         |  141 +++
+ app/Services/NetworkEpgService.php                 |  330 +++++++
+ app/Services/NetworkScheduleService.php            |  514 ++++++++++
+ app/Services/PlaylistService.php                   |  537 ++++++++++-
+ app/Services/PlexService.php                       |  755 +++++++++++++++
+ app/Settings/GeneralSettings.php                   |   28 +
+ config/app.php                                     |   11 +
+ config/broadcasting.php                            |    4 +-
+ config/database.php                                |    6 +-
+ config/dev.php                                     |   10 +-
+ config/logging.php                                 |   15 +-
+ config/reverb.php                                  |    2 +-
+ database/factories/AssetFactory.php                |   29 +
+ database/factories/CustomPlaylistFactory.php       |    1 +
+ .../factories/MediaServerIntegrationFactory.php    |   34 +
+ database/factories/MergedPlaylistFactory.php       |    1 +
+ database/factories/NetworkFactory.php              |   67 ++
+ database/factories/NetworkProgrammeFactory.php     |   36 +
+ database/factories/PlaylistFactory.php             |    1 +
+ ..._add_xtream_api_message_to_general_settings.php |    4 +-
+ .../2026_01_12_000001_create_networks_table.php    |   37 +
+ ...02_add_broadcast_settings_to_networks_table.php |   75 ++
+ ...6_01_12_000002_create_network_content_table.php |   34 +
+ ...1_12_000003_create_network_programmes_table.php |   38 +
+ ...026_01_12_000004_add_uuid_to_networks_table.php |   34 +
+ ..._150000_add_include_networks_toggle_for_m3u.php |   43 +
+ ...026_01_12_160000_add_network_id_to_channels.php |   31 +
+ ...6_01_13_000001_add_network_playlist_support.php |   33 +
+ ...0_add_broadcast_reference_to_networks_table.php |   44 +
+ ..._ensure_broadcast_reference_columns_present.php |   40 +
+ ...st_initial_offset_seconds_to_networks_table.php |   26 +
+ ...1_add_broadcast_requested_to_networks_table.php |   38 +
+ ...22403_add_scheduled_start_to_networks_table.php |   29 +
+ ...24939_add_broadcast_error_to_networks_table.php |   28 +
+ ..._add_schedule_window_days_to_networks_table.php |   33 +
+ ...add_hls_sequence_tracking_to_networks_table.php |   38 +
+ ...000002_add_transcode_mode_to_networks_table.php |   48 +
+ ...0001_add_transcode_fields_to_networks_table.php |   25 +
+ ...27_100000_create_stream_file_settings_table.php |   38 +
+ ...100001_add_stream_file_setting_id_to_tables.php |   66 ++
+ ...27_100002_migrate_stream_file_settings_data.php |   97 ++
+ ...rary_selection_to_media_server_integrations.php |   38 +
+ ...erver_refresh_to_stream_file_settings_table.php |   32 +
+ ...02_11_161020_add_permissions_to_users_table.php |   28 +
+ ...26_02_16_120000_add_is_merged_to_epgs_table.php |   28 +
+ ...26_02_16_120001_create_merged_epg_epg_table.php |   33 +
+ .../2026_02_16_140000_create_assets_table.php      |   33 +
+ ...0000_add_sort_order_to_merged_epg_epg_table.php |   28 +
+ ...b_id_apply_to_to_stream_file_settings_table.php |   24 +
+ ...00000_add_auto_retry_503_to_playlists_table.php |   23 +
+ .../2026_01_12_000001_add_broadcast_settings.php   |   19 +
+ ...26_01_27_100000_add_stream_file_setting_ids.php |   19 +
+ .../2026_02_16_000000_add_logo_asset_settings.php  |   38 +
+ ..._150000_add_logo_repository_enabled_setting.php |   18 +
+ ...00000_add_failover_fail_conditions_settings.php |   19 +
+ docker-compose.aio.yml                             |   17 +-
+ docker-compose.embedded-redis.yml                  |   23 +-
+ docker/8.4/supervisord.conf                        |   16 +
+ docs/hls-storage-config.md                         |   65 ++
+ docs/network-integration.md                        |  250 +++++
+ public/vod-series-poster-placeholder.png           |  Bin 0 -> 95449 bytes
+ resources/css/app.css                              |    3 +
+ resources/css/components/logs.css                  |   24 +
+ resources/css/globals/global.scss                  |    8 +
+ resources/js/vendor/epg-viewer.js                  |   18 +
+ resources/js/vendor/multi-stream-manager.js        |   52 +-
+ resources/js/vendor/stream-viewer.js               |    5 +
+ .../views/components/copy-to-clipboard.blade.php   |   27 +-
+ .../components/floating-stream-players.blade.php   |    9 +
+ .../views/components/qr-code-display.blade.php     |    8 +
+ resources/views/filament/assets/preview.blade.php  |   51 +
+ .../pages/m3u-proxy-stream-monitor.blade.php       |   15 +-
+ .../resources/series/pages/view-series.blade.php   |  347 +++++++
+ .../resources/vods/pages/view-vod.blade.php        |  301 ++++++
+ .../widgets/update-notice-widget.blade.php         |   74 +-
+ .../filament/networks/episode-picker.blade.php     |  116 +++
+ .../filament/networks/vod-picker.blade.php         |  205 ++++
+ resources/views/livewire/playlist-info.blade.php   |  105 +-
+ resources/views/player/popout.blade.php            |  109 +++
+ routes/api.php                                     |    7 +
+ routes/console.php                                 |    7 +
+ routes/web.php                                     |  129 ++-
+ start-container                                    |    5 +
+ .../Feature/CustomPlaylistProviderProfileTest.php  |  258 +++++
+ tests/Feature/EpgApiControllerTest.php             |   33 +-
+ tests/Feature/LogoCacheCleanupCommandTest.php      |   35 +
+ tests/Feature/LogoRepositoryTest.php               |   58 ++
+ tests/Feature/MediaServerIntegrationTest.php       |  270 ++++++
+ tests/Feature/MergeChannelOrderingTest.php         |  190 ++++
+ tests/Feature/NetworkBroadcastEnsureTest.php       |   46 +
+ tests/Feature/NetworkBroadcastHealTest.php         |   45 +
+ tests/Feature/NetworkBroadcastRequestedTest.php    |   85 ++
+ tests/Feature/NetworkCleanupTest.php               |  130 +++
+ tests/Feature/NetworkEpgServiceTest.php            |  125 +++
+ tests/Feature/NetworkReconnectAfterStopTest.php    |   95 ++
+ tests/Feature/NetworkScheduleRegenerationTest.php  |  330 +++++++
+ tests/Feature/NetworkStreamControllerTest.php      |   42 +
+ tests/Feature/PlayerPopoutRouteTest.php            |   45 +
+ tests/Feature/XtreamApiControllerTest.php          |    8 +-
+ tests/Pest.php                                     |    2 +-
+ tests/Unit/AssetInventoryServiceTest.php           |   78 ++
+ tests/Unit/NetworkContentTest.php                  |   18 +
+ tests/Unit/NetworkPersistedSeekTest.php            |   29 +
+ 239 files changed, 20908 insertions(+), 4325 deletions(-)
+ create mode 100644 .gemini/settings.json
+ create mode 100644 .github/agents/test.agent.md
+ create mode 100644 .mcp.json
+ create mode 100644 app/Console/Commands/CleanupNetworkSegments.php
+ create mode 100644 app/Console/Commands/NetworkBroadcastEnsure.php
+ create mode 100644 app/Console/Commands/NetworkBroadcastHeal.php
+ create mode 100644 app/Console/Commands/NetworkBroadcastWorker.php
+ create mode 100644 app/Console/Commands/RegenerateNetworkSchedulesCommand.php
+ create mode 100644 app/Enums/TranscodeMode.php
+ create mode 100644 app/Filament/Actions/ModalActionGroup.php
+ delete mode 100644 app/Filament/GuestPanel/Resources/Series/RelationManagers/EpisodesRelationManager.php
+ create mode 100644 app/Filament/Resources/Assets/AssetResource.php
+ create mode 100644 app/Filament/Resources/Assets/Pages/ListAssets.php
+ delete mode 100644 app/Filament/Resources/Categories/Pages/ViewCategory.php
+ delete mode 100644 app/Filament/Resources/Groups/Pages/ViewGroup.php
+ create mode 100644 app/Filament/Resources/MergedEpgs/MergedEpgResource.php
+ create mode 100644 app/Filament/Resources/MergedEpgs/Pages/EditMergedEpg.php
+ create mode 100644 app/Filament/Resources/MergedEpgs/Pages/ListMergedEpgs.php
+ create mode 100644 app/Filament/Resources/Networks/NetworkResource.php
+ create mode 100644 app/Filament/Resources/Networks/Pages/CreateNetwork.php
+ create mode 100644 app/Filament/Resources/Networks/Pages/EditNetwork.php
+ create mode 100644 app/Filament/Resources/Networks/Pages/ListNetworks.php
+ create mode 100644 app/Filament/Resources/Networks/RelationManagers/NetworkContentRelationManager.php
+ create mode 100644 app/Filament/Resources/Series/Pages/ViewSeries.php
+ create mode 100644 app/Filament/Resources/StreamFileSettings/Pages/ListStreamFileSettings.php
+ create mode 100644 app/Filament/Resources/StreamFileSettings/StreamFileSettingResource.php
+ delete mode 100644 app/Filament/Resources/VodGroups/Pages/ViewVodGroup.php
+ create mode 100644 app/Filament/Resources/Vods/Pages/ViewVod.php
+ create mode 100644 app/Filament/Tables/NetworkEpisodesTable.php
+ create mode 100644 app/Filament/Tables/NetworkMoviesTable.php
+ create mode 100644 app/Http/Controllers/AssetPreviewController.php
+ create mode 100644 app/Http/Controllers/LogoRepositoryController.php
+ create mode 100644 app/Http/Controllers/NetworkEpgController.php
+ create mode 100644 app/Http/Controllers/NetworkHlsController.php
+ create mode 100644 app/Http/Controllers/NetworkPlaylistController.php
+ create mode 100644 app/Http/Controllers/NetworkStreamController.php
+ create mode 100644 app/Http/Controllers/PlayerController.php
+ create mode 100644 app/Http/Controllers/ShortURLController.php
+ create mode 100644 app/Interfaces/MediaServer.php
+ create mode 100644 app/Jobs/CheckVodStrmProgress.php
+ create mode 100644 app/Jobs/RefreshMediaServerLibraryJob.php
+ create mode 100644 app/Models/Asset.php
+ create mode 100644 app/Models/Network.php
+ create mode 100644 app/Models/NetworkContent.php
+ create mode 100644 app/Models/NetworkProgramme.php
+ create mode 100644 app/Models/StreamFileSetting.php
+ create mode 100644 app/Services/AssetInventoryService.php
+ create mode 100644 app/Services/EmbyJellyfinService.php
+ create mode 100644 app/Services/LogoCacheService.php
+ create mode 100644 app/Services/LogoRepositoryService.php
+ create mode 100644 app/Services/NetworkBroadcastService.php
+ create mode 100644 app/Services/NetworkChannelSyncService.php
+ create mode 100644 app/Services/NetworkEpgService.php
+ create mode 100644 app/Services/NetworkScheduleService.php
+ create mode 100644 app/Services/PlexService.php
+ create mode 100644 database/factories/AssetFactory.php
+ create mode 100644 database/factories/MediaServerIntegrationFactory.php
+ create mode 100644 database/factories/NetworkFactory.php
+ create mode 100644 database/factories/NetworkProgrammeFactory.php
+ create mode 100644 database/migrations/2026_01_12_000001_create_networks_table.php
+ create mode 100644 database/migrations/2026_01_12_000002_add_broadcast_settings_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_12_000002_create_network_content_table.php
+ create mode 100644 database/migrations/2026_01_12_000003_create_network_programmes_table.php
+ create mode 100644 database/migrations/2026_01_12_000004_add_uuid_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_12_150000_add_include_networks_toggle_for_m3u.php
+ create mode 100644 database/migrations/2026_01_12_160000_add_network_id_to_channels.php
+ create mode 100644 database/migrations/2026_01_13_000001_add_network_playlist_support.php
+ create mode 100644 database/migrations/2026_01_14_213500_add_broadcast_reference_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_14_214227_ensure_broadcast_reference_columns_present.php
+ create mode 100644 database/migrations/2026_01_14_214257_add_broadcast_initial_offset_seconds_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_15_000001_add_broadcast_requested_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_19_122403_add_scheduled_start_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_19_124939_add_broadcast_error_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_20_000001_add_schedule_window_days_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_22_000001_add_hls_sequence_tracking_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_22_000002_add_transcode_mode_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_24_000001_add_transcode_fields_to_networks_table.php
+ create mode 100644 database/migrations/2026_01_27_100000_create_stream_file_settings_table.php
+ create mode 100644 database/migrations/2026_01_27_100001_add_stream_file_setting_id_to_tables.php
+ create mode 100644 database/migrations/2026_01_27_100002_migrate_stream_file_settings_data.php
+ create mode 100644 database/migrations/2026_01_31_000000_add_library_selection_to_media_server_integrations.php
+ create mode 100644 database/migrations/2026_01_31_103436_add_media_server_refresh_to_stream_file_settings_table.php
+ create mode 100644 database/migrations/2026_02_11_161020_add_permissions_to_users_table.php
+ create mode 100644 database/migrations/2026_02_16_120000_add_is_merged_to_epgs_table.php
+ create mode 100644 database/migrations/2026_02_16_120001_create_merged_epg_epg_table.php
+ create mode 100644 database/migrations/2026_02_16_140000_create_assets_table.php
+ create mode 100644 database/migrations/2026_02_16_170000_add_sort_order_to_merged_epg_epg_table.php
+ create mode 100644 database/migrations/2026_02_17_110000_add_tmdb_id_apply_to_to_stream_file_settings_table.php
+ create mode 100644 database/migrations/2026_02_19_000000_add_auto_retry_503_to_playlists_table.php
+ create mode 100644 database/settings/2026_01_12_000001_add_broadcast_settings.php
+ create mode 100644 database/settings/2026_01_27_100000_add_stream_file_setting_ids.php
+ create mode 100644 database/settings/2026_02_16_000000_add_logo_asset_settings.php
+ create mode 100644 database/settings/2026_02_16_150000_add_logo_repository_enabled_setting.php
+ create mode 100644 database/settings/2026_02_19_000000_add_failover_fail_conditions_settings.php
+ create mode 100644 docs/network-integration.md
+ create mode 100644 public/vod-series-poster-placeholder.png
+ create mode 100644 resources/css/components/logs.css
+ create mode 100644 resources/views/components/qr-code-display.blade.php
+ create mode 100644 resources/views/filament/assets/preview.blade.php
+ create mode 100644 resources/views/filament/resources/series/pages/view-series.blade.php
+ create mode 100644 resources/views/filament/resources/vods/pages/view-vod.blade.php
+ create mode 100644 resources/views/livewire/filament/networks/episode-picker.blade.php
+ create mode 100644 resources/views/livewire/filament/networks/vod-picker.blade.php
+ create mode 100644 resources/views/player/popout.blade.php
+ create mode 100644 tests/Feature/CustomPlaylistProviderProfileTest.php
+ create mode 100644 tests/Feature/LogoCacheCleanupCommandTest.php
+ create mode 100644 tests/Feature/LogoRepositoryTest.php
+ create mode 100644 tests/Feature/MergeChannelOrderingTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastEnsureTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastHealTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastRequestedTest.php
+ create mode 100644 tests/Feature/NetworkCleanupTest.php
+ create mode 100644 tests/Feature/NetworkEpgServiceTest.php
+ create mode 100644 tests/Feature/NetworkReconnectAfterStopTest.php
+ create mode 100644 tests/Feature/NetworkScheduleRegenerationTest.php
+ create mode 100644 tests/Feature/NetworkStreamControllerTest.php
+ create mode 100644 tests/Feature/PlayerPopoutRouteTest.php
+ create mode 100644 tests/Unit/AssetInventoryServiceTest.php
+ create mode 100644 tests/Unit/NetworkContentTest.php
+ create mode 100644 tests/Unit/NetworkPersistedSeekTest.php
 
 Array
 (
@@ -4705,7 +5085,13 @@ Success
 
 Downloading waazaa's Repository
 
-Already up to date.
+From https://github.com/waazaa-fr/unraid-templates
+   a859912..b17d163  main       -> origin/main
+Updating a859912..b17d163
+Fast-forward
+ my-sonarr-metadata-localizer.xml | 55 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+ create mode 100644 my-sonarr-metadata-localizer.xml
 
 Array
 (
@@ -4734,6 +5120,7 @@ Array
             [20] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-syncthing-daily-reports.xml
             [21] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.4.xml
             [22] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-release-feeds-to-discord.xml
+            [23] => /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-sonarr-metadata-localizer.xml
         )
 
 )
@@ -4762,6 +5149,7 @@ Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-palmr.xml..
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-syncthing-daily-reports.xml...Success
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-webserver-php8.4.xml...Success
 Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-release-feeds-to-discord.xml...Success
+Processing /tmp/GitHub/repositoryClone/waazaa-fr/unraid-templates/my-sonarr-metadata-localizer.xml...Success
 
 
 Downloading gxs' Repository
@@ -11690,12 +12078,12 @@ Processing /tmp/GitHub/repositoryClone/yayitazale/unraid-templates/yayitazale/gr
 Downloading brycelarge's Repository
 
 From https://github.com/brycelarge/unraid-templates
-   cd33a1f..520eb85  main       -> origin/main
-Updating cd33a1f..520eb85
+   520eb85..c4118a2  main       -> origin/main
+Updating 520eb85..c4118a2
 Fast-forward
- M3u4Prox.xml     | 79 +++++++++++++++++++++++++++-----------------------------
- tuliprox-vpn.xml |  2 +-
- 2 files changed, 39 insertions(+), 42 deletions(-)
+ M3u4Prox.xml | 60 ------------------------------------------------------------
+ 1 file changed, 60 deletions(-)
+ delete mode 100644 M3u4Prox.xml
 
 Array
 (
@@ -11703,7 +12091,6 @@ Array
         (
             [0] => /tmp/GitHub/repositoryClone/brycelarge/unraid-templates/tuliprox-vpn.xml
             [1] => /tmp/GitHub/repositoryClone/brycelarge/unraid-templates/xteve-vpn.xml
-            [2] => /tmp/GitHub/repositoryClone/brycelarge/unraid-templates/M3u4Prox.xml
         )
 
 )
@@ -11711,9 +12098,6 @@ Array
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/brycelarge/unraid-templates/tuliprox-vpn.xml...Success
 Processing /tmp/GitHub/repositoryClone/brycelarge/unraid-templates/xteve-vpn.xml...Success
-Processing /tmp/GitHub/repositoryClone/brycelarge/unraid-templates/M3u4Prox.xml...Port referenced in webUI does not correspond with a container port defined.  Entry changed to http://[IP]:[PORT:PORT]/
-
-Success
 
 
 Downloading jassycliq's Repository
@@ -13507,12 +13891,7 @@ Processing /tmp/GitHub/repositoryClone/pairofcrocs/unraid-templates/ArchiveTeam-
 
 Downloading Unmax's Repository
 
-From https://github.com/PlexRipper/PlexRipper-Unraid-CA-Templates
-   887d812..babfb5f  master     -> origin/master
-Updating 887d812..babfb5f
-Fast-forward
- template/filename.xml | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -20242,6 +20621,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+waazaafr/sonarr-metadata-localizer
+waazaafr/sonarr-metadata-localizer:latest Downloads: 21  Stars: 0  Base: unknown
+Pulling waazaafr/sonarr-metadata-localizer:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -20384,8 +20767,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-tmmrtn/mousehole
-tmmrtn/mousehole:latest Downloads: 69569  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
