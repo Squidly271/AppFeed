@@ -306,57 +306,25 @@ Success
 Downloading tenletter's Repository
 
 From https://github.com/softerfish/seekandwatch
-   89fd5e3..da0331b  main       -> origin/main
-Updating 89fd5e3..da0331b
+   da0331b..baa5b5c  main       -> origin/main
+Updating da0331b..baa5b5c
 Fast-forward
- README.md                        |   32 +-
- api/__init__.py                  |    2 +-
- api/helpers.py                   |   37 +-
- api/routes_main.py               |  596 +++-----------
- api/routes_pair.py               |  111 +++
- api/routes_tunnel.py             |  456 +++++++++++
- api/routes_webhook.py            |  258 +++---
- app.py                           |  635 ++++++++-------
- cloud_worker.py                  |  561 -------------
- models.py                        |   22 +-
- presets.py                       |  427 +++++-----
- requirements.txt                 |    4 +-
- services/CloudService.py         |  256 ++++++
- services/CollectionService.py    |  415 ++++++++++
- services/IntegrationsService.py  |  387 +++++++++
- static/style.css                 |  207 +----
- templates/base.html              |   81 +-
- templates/login.html             |  172 ++--
- templates/media.html             |   17 +-
- templates/playlists.html         |  302 +------
- templates/requests_settings.html |  524 ++++++++++--
- templates/welcome_codes.html     |   64 +-
- tunnel/__init__.py               |   30 +
- tunnel/binary.py                 |  275 +++++++
- tunnel/config.py                 |   34 +
- tunnel/error_messages.py         |  114 +++
- tunnel/exceptions.py             |   33 +
- tunnel/health.py                 |  304 +++++++
- tunnel/manager.py                | 1659 ++++++++++++++++++++++++++++++++++++++
- tunnel/registrar.py              |  213 +++++
- tunnel/security.py               |  156 ++++
- utils.py                         | 1371 +------------------------------
- 32 files changed, 6008 insertions(+), 3747 deletions(-)
- create mode 100644 api/routes_pair.py
- create mode 100644 api/routes_tunnel.py
- delete mode 100644 cloud_worker.py
- create mode 100644 services/CloudService.py
- create mode 100644 services/CollectionService.py
- create mode 100644 services/IntegrationsService.py
- create mode 100644 tunnel/__init__.py
- create mode 100644 tunnel/binary.py
- create mode 100644 tunnel/config.py
- create mode 100644 tunnel/error_messages.py
- create mode 100644 tunnel/exceptions.py
- create mode 100644 tunnel/health.py
- create mode 100644 tunnel/manager.py
- create mode 100644 tunnel/registrar.py
- create mode 100644 tunnel/security.py
+ README.md                       |  10 +--
+ api/helpers.py                  |   8 +--
+ api/routes_main.py              |  47 ++++++++++----
+ api/routes_pair.py              |   8 +--
+ api/routes_tunnel.py            |  36 +++++------
+ api/routes_webhook.py           |   7 +--
+ app.py                          |  43 ++++++-------
+ services/CloudService.py        |  10 +--
+ services/CollectionService.py   |   6 +-
+ services/IntegrationsService.py |  22 +++----
+ tunnel/binary.py                |  22 +++----
+ tunnel/health.py                |  26 ++++----
+ tunnel/manager.py               | 133 ++++++++++++++++++++--------------------
+ tunnel/registrar.py             |  16 ++---
+ utils.py                        |  42 ++++++-------
+ 15 files changed, 224 insertions(+), 212 deletions(-)
 
 Array
 (
@@ -535,23 +503,15 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   46bb1a7..e46cf56  main       -> origin/main
-Updating 46bb1a7..e46cf56
+   e46cf56..027eb31  main       -> origin/main
+Updating e46cf56..027eb31
 Fast-forward
- README.md                         |   13 +
- app/api/admin/env-check/route.ts  |   19 +-
- docs/professional-app-audit.md    |  202 ----
- docs/security-audit-2026-02-23.md |  144 ---
- lib/auth.ts                       |   29 +-
- lib/security-config.ts            |   70 ++
- package-lock.json                 | 2206 ++++++++++++++-----------------------
- package.json                      |    7 +
- proxy.ts                          |    6 +-
- scripts/bootstrap-admin.js        |   36 +
- 10 files changed, 1006 insertions(+), 1726 deletions(-)
- delete mode 100644 docs/professional-app-audit.md
- delete mode 100644 docs/security-audit-2026-02-23.md
- create mode 100644 lib/security-config.ts
+ app/api/account/email/request/route.ts |  2 ++
+ app/api/account/email/route.ts         |  2 ++
+ app/api/profile/route.ts               |  2 ++
+ app/globals.css                        | 10 +++++++++-
+ components/AppSidebar.tsx              |  7 +++----
+ 5 files changed, 18 insertions(+), 5 deletions(-)
 
 Array
 (
@@ -691,35 +651,12 @@ Success
 Downloading NeXroll's Repository
 
 From https://github.com/JFLXCLOUD/NeXroll
-   3066966..e63a05c  main       -> origin/main
-Updating 3066966..e63a05c
+   e63a05c..e27635f  main           -> origin/main
+ * [new tag]         v1.11.0-beta.5 -> v1.11.0-beta.5
+Updating e63a05c..e27635f
 Fast-forward
- Dockerfile                                         |   3 +
- NeXroll/backend/dynamic_preroll.py                 | 200 +++++++++++++++------
- NeXroll/backend/main.py                            |  13 +-
- NeXroll/frontend/build/asset-manifest.json         |  12 +-
- NeXroll/frontend/build/index.html                  |   2 +-
- .../frontend/build/static/css/main.b5c08e19.css    |   2 -
- .../build/static/css/main.b5c08e19.css.map         |   1 -
- .../frontend/build/static/css/main.f30d6ffe.css    |   2 +
- .../build/static/css/main.f30d6ffe.css.map         |   1 +
- .../js/{main.740ba145.js => main.e9bfa099.js}      |   6 +-
- ...js.LICENSE.txt => main.e9bfa099.js.LICENSE.txt} |   0
- .../{main.740ba145.js.map => main.e9bfa099.js.map} |   2 +-
- NeXroll/frontend/package.json                      |   2 +-
- NeXroll/frontend/src/App.js                        | 120 +++++++++----
- NeXroll/frontend/src/index.css                     |  10 ++
- NeXroll/version.py                                 |   2 +-
- ...fty-blue-wednesday-main-version-36162-02-38.mp3 | Bin 0 -> 6551645 bytes
- 17 files changed, 265 insertions(+), 113 deletions(-)
- delete mode 100644 NeXroll/frontend/build/static/css/main.b5c08e19.css
- delete mode 100644 NeXroll/frontend/build/static/css/main.b5c08e19.css.map
- create mode 100644 NeXroll/frontend/build/static/css/main.f30d6ffe.css
- create mode 100644 NeXroll/frontend/build/static/css/main.f30d6ffe.css.map
- rename NeXroll/frontend/build/static/js/{main.740ba145.js => main.e9bfa099.js} (52%)
- rename NeXroll/frontend/build/static/js/{main.740ba145.js.LICENSE.txt => main.e9bfa099.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.740ba145.js.map => main.e9bfa099.js.map} (52%)
- create mode 100644 docs/lefty-blue-wednesday-main-version-36162-02-38.mp3
+ README.md | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -20347,8 +20284,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/krusader
-jlesage/krusader Downloads: 2248  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
