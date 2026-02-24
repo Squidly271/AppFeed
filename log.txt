@@ -129,7 +129,29 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   7a1a8ff..b15a472  main       -> origin/main
+ * [new tag]         v1.0.11    -> v1.0.11
+Updating 7a1a8ff..b15a472
+Fast-forward
+ documentation/integrations/audible.md        |   1 +
+ documentation/settings-pages.md              |   2 +-
+ package.json                                 |   2 +-
+ src/app/api/config/[category]/route.ts       |  38 ----------
+ src/app/api/config/route.ts                  |  84 ----------------------
+ src/lib/constants/download-timeouts.ts       |  10 +++
+ src/lib/constants/language-config.ts         |  36 +++++++++-
+ src/lib/integrations/deluge.service.ts       |   7 +-
+ src/lib/integrations/prowlarr.service.ts     |   5 +-
+ src/lib/integrations/qbittorrent.service.ts  |   7 +-
+ src/lib/integrations/transmission.service.ts |   7 +-
+ src/lib/types/audible.ts                     |   9 ++-
+ tests/api/config.routes.test.ts              | 104 ---------------------------
+ 13 files changed, 71 insertions(+), 241 deletions(-)
+ delete mode 100644 src/app/api/config/[category]/route.ts
+ delete mode 100644 src/app/api/config/route.ts
+ create mode 100644 src/lib/constants/download-timeouts.ts
+ delete mode 100644 tests/api/config.routes.test.ts
 
 Array
 (
@@ -305,25 +327,7 @@ Success
 
 Downloading tenletter's Repository
 
-From https://github.com/softerfish/seekandwatch
-   3a0f2d2..42777bf  main       -> origin/main
- * [new tag]         v1.6.1     -> v1.6.1
-Updating 3a0f2d2..42777bf
-Fast-forward
- api/routes_main.py               |  47 +++++++++++++-----
- api/routes_pair.py               |   9 +++-
- api/routes_tunnel.py             |  19 +++++--
- api/routes_webhook.py            |  13 +++--
- app.py                           |  15 ++++--
- services/CloudService.py         |  11 ++--
- services/IntegrationsService.py  |  47 +++++++++++++++---
- templates/requests_settings.html |  17 +++++++
- templates/settings.html          | 105 ++++++++++++++++++++++++++++++++-------
- tunnel/health.py                 |  16 ++++--
- tunnel/manager.py                |  12 ++---
- tunnel/registrar.py              |   6 +++
- utils.py                         |   4 +-
- 13 files changed, 256 insertions(+), 65 deletions(-)
+Already up to date.
 
 Array
 (
@@ -641,11 +645,20 @@ Success
 Downloading NeXroll's Repository
 
 From https://github.com/JFLXCLOUD/NeXroll
-   553d1b7..12b517e  main       -> origin/main
-Updating 553d1b7..12b517e
+   12b517e..34e870d  main       -> origin/main
+Updating 12b517e..34e870d
 Fast-forward
- NeXroll/backend/main.py | 78 ++++++++++++++++++++++++++++++++-----------------
- 1 file changed, 52 insertions(+), 26 deletions(-)
+ NeXroll/backend/main.py                            | 105 ++++---
+ NeXroll/frontend/build/asset-manifest.json         |   6 +-
+ NeXroll/frontend/build/index.html                  |   2 +-
+ .../js/{main.e9bfa099.js => main.202c1dad.js}      |   6 +-
+ ...js.LICENSE.txt => main.202c1dad.js.LICENSE.txt} |   0
+ .../{main.e9bfa099.js.map => main.202c1dad.js.map} |   2 +-
+ NeXroll/frontend/src/App.js                        | 347 +++++++++++----------
+ 7 files changed, 246 insertions(+), 222 deletions(-)
+ rename NeXroll/frontend/build/static/js/{main.e9bfa099.js => main.202c1dad.js} (65%)
+ rename NeXroll/frontend/build/static/js/{main.e9bfa099.js.LICENSE.txt => main.202c1dad.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.e9bfa099.js.map => main.202c1dad.js.map} (55%)
 
 Array
 (
@@ -702,6 +715,8 @@ Success
 
 Downloading vincentmakes' Repository
 
+From https://github.com/vincentmakes/cv-manager
+ * [new tag]         v1.6.8     -> v1.6.8
 Already up to date.
 
 Array
@@ -894,37 +909,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   415d151..13a6cc9  main          -> origin/main
- * [new tag]         v3.3.5-beta.2 -> v3.3.5-beta.2
-Updating 415d151..13a6cc9
-Fast-forward
- client/package.json                        |   2 +-
- server/controllers/library/performers.ts   |   6 +-
- server/controllers/library/scenes.ts       |  14 +-
- server/controllers/library/studios.ts      |   6 +-
- server/controllers/library/tags.ts         |   6 +-
- server/controllers/playlist.ts             |  10 +-
- server/package.json                        |   2 +-
- server/services/GalleryQueryBuilder.ts     |   9 +-
- server/services/GroupQueryBuilder.ts       |  17 +-
- server/services/PerformerQueryBuilder.ts   |   8 +-
- server/services/SceneQueryBuilder.ts       |  19 +-
- server/services/StashEntityService.ts      |  55 +--
- server/services/StudioQueryBuilder.ts      |  13 +-
- server/services/TagQueryBuilder.ts         |  11 +-
- server/services/UserHiddenEntityService.ts |   5 +-
- server/tests/filters/sceneFilters.test.ts  |   6 +
- server/tests/helpers/mockDataGenerators.ts |  94 +++--
- server/types/api/playlist.ts               |   2 +-
- server/types/entities.ts                   | 533 ++++++++++++++++++-----------
- server/types/index.ts                      |   5 +-
- server/utils/stashUrlProxy.ts              | 108 +++---
- shared/types/entities.ts                   | 399 +++++++++++++++++++++
- shared/types/index.ts                      |  19 +
- 23 files changed, 928 insertions(+), 421 deletions(-)
- create mode 100644 shared/types/entities.ts
- create mode 100644 shared/types/index.ts
+Already up to date.
 
 Array
 (
@@ -5121,36 +5106,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   e6f83739..47caf4dc  main       -> origin/main
-Updating e6f83739..47caf4dc
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/cs/LC_MESSAGES/messages.po      | 156 ++++++++++++-----------
- app/translations/da/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/de/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/es/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/fa/LC_MESSAGES/messages.po      | 153 +++++++++++-----------
- app/translations/fr/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/gsw/LC_MESSAGES/messages.po     | 153 +++++++++++-----------
- app/translations/he/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/hr/LC_MESSAGES/messages.po      | 153 +++++++++++-----------
- app/translations/hu/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/is/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/it/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/lt/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 154 +++++++++++-----------
- app/translations/nl/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/pl/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/pt/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 154 +++++++++++-----------
- app/translations/ro/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/ru/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/sv/LC_MESSAGES/messages.po      | 154 +++++++++++-----------
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 154 +++++++++++-----------
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 154 +++++++++++-----------
- messages.pot                                     | 153 +++++++++++-----------
- 25 files changed, 2022 insertions(+), 1826 deletions(-)
+Already up to date.
 
 Array
 (
@@ -16575,9 +16531,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
- + 423a4f4...1565861 main       -> origin/main  (forced update)
-                                                                                Successfully rebased and updated refs/heads/main.
+Already up to date.
 
 Array
 (
@@ -20233,10 +20187,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-1password/connect-sync
-1password/connect-sync:latest Downloads: 8571437  Stars: 10  Base: unknown
-1password/connect-api
-1password/connect-api:latest Downloads: 8813543  Stars: 15  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -20425,12 +20375,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-aukevanderheide/mqtt2discord
-aukevanderheide/mqtt2discord:latest Downloads: 81  Stars: 0  Base: unknown
-Pulling aukevanderheide/mqtt2discord:latest
-Killed
-benzauber/convert-commander
-benzauber/convert-commander:latest Downloads: 2355  Stars: 0  Base: unknown
+icbest/giftmanager
+icbest/giftmanager:latest Downloads: 48813  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
