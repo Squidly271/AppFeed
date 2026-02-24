@@ -130,28 +130,12 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 Downloading ReadMeABook's Repository
 
 From https://github.com/kikootwo/ReadMeABook
-   7a1a8ff..b15a472  main       -> origin/main
- * [new tag]         v1.0.11    -> v1.0.11
-Updating 7a1a8ff..b15a472
+   b15a472..33c2265  main       -> origin/main
+Updating b15a472..33c2265
 Fast-forward
- documentation/integrations/audible.md        |   1 +
- documentation/settings-pages.md              |   2 +-
- package.json                                 |   2 +-
- src/app/api/config/[category]/route.ts       |  38 ----------
- src/app/api/config/route.ts                  |  84 ----------------------
- src/lib/constants/download-timeouts.ts       |  10 +++
- src/lib/constants/language-config.ts         |  36 +++++++++-
- src/lib/integrations/deluge.service.ts       |   7 +-
- src/lib/integrations/prowlarr.service.ts     |   5 +-
- src/lib/integrations/qbittorrent.service.ts  |   7 +-
- src/lib/integrations/transmission.service.ts |   7 +-
- src/lib/types/audible.ts                     |   9 ++-
- tests/api/config.routes.test.ts              | 104 ---------------------------
- 13 files changed, 71 insertions(+), 241 deletions(-)
- delete mode 100644 src/app/api/config/[category]/route.ts
- delete mode 100644 src/app/api/config/route.ts
- create mode 100644 src/lib/constants/download-timeouts.ts
- delete mode 100644 tests/api/config.routes.test.ts
+ src/lib/integrations/qbittorrent.service.ts    |  16 ++-
+ tests/integrations/qbittorrent.service.test.ts | 159 +++++++++++++++++++++++++
+ 2 files changed, 173 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -644,21 +628,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   12b517e..34e870d  main       -> origin/main
-Updating 12b517e..34e870d
-Fast-forward
- NeXroll/backend/main.py                            | 105 ++++---
- NeXroll/frontend/build/asset-manifest.json         |   6 +-
- NeXroll/frontend/build/index.html                  |   2 +-
- .../js/{main.e9bfa099.js => main.202c1dad.js}      |   6 +-
- ...js.LICENSE.txt => main.202c1dad.js.LICENSE.txt} |   0
- .../{main.e9bfa099.js.map => main.202c1dad.js.map} |   2 +-
- NeXroll/frontend/src/App.js                        | 347 +++++++++++----------
- 7 files changed, 246 insertions(+), 222 deletions(-)
- rename NeXroll/frontend/build/static/js/{main.e9bfa099.js => main.202c1dad.js} (65%)
- rename NeXroll/frontend/build/static/js/{main.e9bfa099.js.LICENSE.txt => main.202c1dad.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.e9bfa099.js.map => main.202c1dad.js.map} (55%)
+Already up to date.
 
 Array
 (
@@ -715,8 +685,6 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
- * [new tag]         v1.6.8     -> v1.6.8
 Already up to date.
 
 Array
@@ -16531,7 +16499,12 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   1565861..6326a71  main       -> origin/main
+Updating 1565861..6326a71
+Fast-forward
+ automation/change_monitoring/data.json | 26 +++++++-------------------
+ 1 file changed, 7 insertions(+), 19 deletions(-)
 
 Array
 (
@@ -20375,8 +20348,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-icbest/giftmanager
-icbest/giftmanager:latest Downloads: 48813  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
