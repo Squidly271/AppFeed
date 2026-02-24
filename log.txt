@@ -13,16 +13,7 @@ Downloading Repo Info
 
 Downloading gibz104's Repository
 
-From https://github.com/gibz104/SpoolmanSync
-   470d895..b539c8a  main       -> origin/main
- * [new tag]         v1.2.4     -> v1.2.4
-Updating 470d895..b539c8a
-Fast-forward
- CHANGELOG.md                      |  5 +++++
- app/package.json                  |  2 +-
- app/src/app/api/webhook/route.ts  | 13 +++++++++++--
- spoolmansync-ha-addon/config.yaml |  2 +-
- 4 files changed, 18 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -492,15 +483,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   027eb31..a58fb28  main       -> origin/main
-Updating 027eb31..a58fb28
-Fast-forward
- app/api/stockworks/filament-colors/route.ts   | 22 +++--------
- app/api/stockworks/material-warnings/route.ts | 22 +++--------
- components/admin/PushNotificationsCard.tsx    | 54 +++++++++++++++++----------
- lib/stockworks-client.ts                      | 35 +++++++++++++++--
- 4 files changed, 79 insertions(+), 54 deletions(-)
+Already up to date.
 
 Array
 (
@@ -853,11 +836,17 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/sparkison/m3u-editor
-   9f47e6ce..865981ec  master     -> origin/master
-Updating 9f47e6ce..865981ec
+   865981ec..995aad06  master     -> origin/master
+Updating 865981ec..995aad06
 Fast-forward
- app/Http/Controllers/PlaylistGenerateController.php | 6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
+ app/Console/Commands/RegisterM3uProxyWebhook.php   |  2 +-
+ .../Controllers/PlaylistGenerateController.php     |  6 +-
+ app/Services/M3uProxyService.php                   | 66 ++++++++++++++++++----
+ app/Services/ProfileService.php                    | 48 ++++++++++++++++
+ docker/8.4/supervisord.conf                        | 17 ++++++
+ routes/console.php                                 |  5 ++
+ start-container                                    | 15 ++---
+ 7 files changed, 135 insertions(+), 24 deletions(-)
 
 Array
 (
@@ -893,60 +882,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   13a6cc9..5732e5d  main          -> origin/main
- * [new tag]         v3.3.5-beta.3 -> v3.3.5-beta.3
-Updating 13a6cc9..5732e5d
-Fast-forward
- client/package.json                                |   2 +-
- client/src/components/pages/GalleryDetail.jsx      |   5 +-
- client/src/components/pages/GroupDetail.jsx        |   7 +-
- client/src/components/pages/PerformerDetail.jsx    |  11 +-
- client/src/components/pages/Scene.jsx              |   5 +-
- client/src/components/pages/StudioDetail.jsx       |  13 +-
- client/src/components/pages/TagDetail.jsx          |  15 +-
- .../src/components/settings/ServerStatsSection.jsx |   2 +-
- client/src/components/ui/AddToPlaylistButton.jsx   |  31 +-
- client/src/components/ui/SearchableSelect.jsx      |  23 +-
- client/src/hooks/useFilterState.js                 |  11 +-
- client/src/utils/compositeKey.js                   |  36 +
- client/src/utils/filterConfig.js                   | 828 +++++++++++++--------
- client/src/utils/urlParams.js                      |   3 +-
- .../tests/components/ui/SearchableSelect.test.jsx  |  83 ++-
- .../tests/hooks/useFilterState.presetInit.test.jsx | 124 ++-
- client/tests/utils/compositeKey.test.js            | 116 +++
- client/tests/utils/filterConfig.test.js            | 272 ++++++-
- client/tests/utils/galleryFilterConfig.test.js     |   2 +-
- client/tests/utils/groupFilterConfig.test.js       |   2 +-
- client/tests/utils/performerFilterConfig.test.js   |  97 ++-
- client/tests/utils/studioFilterConfig.test.js      |  10 +-
- client/tests/utils/tagFilterConfig.test.js         |   8 +-
- server/controllers/carousel.ts                     |  12 +-
- server/controllers/library/scenes.ts               |  57 +-
- server/controllers/playlist.ts                     |  15 +-
- server/package.json                                |   2 +-
- server/routes/sync.ts                              |   6 +-
- server/services/EntityExclusionHelper.ts           | 104 ++-
- server/services/ExclusionComputationService.ts     |  22 +
- server/services/GalleryQueryBuilder.ts             |  10 +-
- server/services/GroupQueryBuilder.ts               |  15 +-
- server/services/PerformerQueryBuilder.ts           |  15 +-
- server/services/SceneQueryBuilder.ts               |  17 +-
- server/services/StudioQueryBuilder.ts              |   6 +-
- server/services/TagQueryBuilder.ts                 |   6 +-
- .../tests/controllers/playlistSharedAccess.test.ts | 152 ++++
- .../playlistSharedAuthBoundaries.test.ts           | 324 ++++++++
- server/tests/routes/syncReprobeClips.test.ts       | 178 +++++
- .../tests/services/EntityExclusionHelper.test.ts   | 155 +++-
- .../services/ExclusionComputationService.test.ts   | 163 ++++
- .../services/SceneQueryBuilderTagFilter.test.ts    | 171 +++++
- 42 files changed, 2674 insertions(+), 462 deletions(-)
- create mode 100644 client/src/utils/compositeKey.js
- create mode 100644 client/tests/utils/compositeKey.test.js
- create mode 100644 server/tests/controllers/playlistSharedAccess.test.ts
- create mode 100644 server/tests/controllers/playlistSharedAuthBoundaries.test.ts
- create mode 100644 server/tests/routes/syncReprobeClips.test.ts
- create mode 100644 server/tests/services/SceneQueryBuilderTagFilter.test.ts
+Already up to date.
 
 Array
 (
@@ -20224,6 +20160,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+Tagged - Can't determine last update
+goauthentik/server
+ghcr.io/goauthentik/server:2025.8.1 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -20247,15 +20186,11 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-rafhaanshah/reddit-post-notifier
-ghcr.io/rafhaanshah/reddit-post-notifier:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
-misterbabou/gptwol
-misterbabou/gptwol Downloads: 404932  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
@@ -20276,8 +20211,6 @@ misterbabou/gptwol Downloads: 404932  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-mosswill/isaiah
-mosswill/isaiah:latest Downloads: 104797  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20335,8 +20268,6 @@ mosswill/isaiah:latest Downloads: 104797  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/xfburn
-jlesage/xfburn Downloads: 2139  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -20379,8 +20310,6 @@ jlesage/xfburn Downloads: 2139  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-fletchto99/preview-maid
-fletchto99/preview-maid Downloads: 6894  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20422,13 +20351,6 @@ fletchto99/preview-maid Downloads: 6894  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-chocobozzz/peertube
-chocobozzz/peertube:production-bookworm Downloads: 7132744  Stars: 63  Base: unknown
-mwader/postfix-relay
-mwader/postfix-relay:latest Downloads: 10721807  Stars: 30  Base: unknown
-jma1ice/newsletterr
-jma1ice/newsletterr:latest Downloads: 7104  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
