@@ -13,7 +13,7 @@ Downloading Repo Info
 
 Downloading test Repository
 
-Cloning into 'test'...
+Already up to date.
 
 Array
 (
@@ -854,7 +854,58 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/sparkison/m3u-editor
+   995aad06..e6195120  master     -> origin/master
+Updating 995aad06..e6195120
+Fast-forward
+ .gitignore                                         |   3 +
+ AGENTS.md                                          |   9 +-
+ app/Console/Commands/NetworkBroadcastWorker.php    |  14 +
+ app/Enums/PlaylistSourceType.php                   |   1 +
+ .../MediaServerIntegrationResource.php             | 243 +++++-
+ .../Pages/CreateMediaServerIntegration.php         |   8 +
+ .../RelationManagers/MoviesRelationManager.php     |  73 ++
+ .../RelationManagers/SeriesRelationManager.php     |  67 ++
+ .../Resources/Playlists/PlaylistResource.php       |  15 +-
+ .../Controllers/MediaServerProxyController.php     | 164 ++++
+ app/Jobs/FetchTmdbIds.php                          | 437 ++++++++++-
+ app/Jobs/SyncMediaServer.php                       | 130 +++-
+ app/Models/Channel.php                             |   2 +
+ app/Models/MediaServerIntegration.php              |  85 ++
+ app/Models/Series.php                              |   2 +
+ app/Services/LocalMediaService.php                 | 859 +++++++++++++++++++++
+ app/Services/MediaServerService.php                |   1 +
+ app/Services/NetworkBroadcastService.php           |  79 +-
+ app/Services/TmdbService.php                       | 330 ++++++++
+ config/cache.php                                   |   4 +-
+ config/database.php                                |   6 +-
+ config/dev.php                                     |   4 +-
+ ...l_media_fields_to_media_server_integrations.php |  49 ++
+ ..._000001_make_media_server_host_api_nullable.php |  33 +
+ ...fetch_metadata_to_media_server_integrations.php |  31 +
+ ..._02_08_153537_add_tmdb_id_to_episodes_table.php |  28 +
+ docker-compose.aio.yml                             |   2 +-
+ routes/web.php                                     |   9 +
+ tests/Feature/FetchTmdbIdsSeasonCoverTest.php      | 130 ++++
+ tests/Feature/FetchTmdbIdsTest.php                 | 102 ++-
+ tests/Feature/LocalMediaIntegrationTest.php        | 696 +++++++++++++++++
+ tests/Feature/MediaServerIntegrationTest.php       | 108 +++
+ tests/Feature/NetworkBroadcastBootRecoveryTest.php | 291 +++++++
+ tests/Feature/NetworkBroadcastSeekTest.php         | 119 +++
+ tests/Feature/TmdbMetadataFieldsTest.php           | 187 +++++
+ 35 files changed, 4245 insertions(+), 76 deletions(-)
+ create mode 100644 app/Filament/Resources/MediaServerIntegrations/RelationManagers/MoviesRelationManager.php
+ create mode 100644 app/Filament/Resources/MediaServerIntegrations/RelationManagers/SeriesRelationManager.php
+ create mode 100644 app/Services/LocalMediaService.php
+ create mode 100644 database/migrations/2026_02_06_000001_add_local_media_fields_to_media_server_integrations.php
+ create mode 100644 database/migrations/2026_02_07_000001_make_media_server_host_api_nullable.php
+ create mode 100644 database/migrations/2026_02_07_211333_add_auto_fetch_metadata_to_media_server_integrations.php
+ create mode 100644 database/migrations/2026_02_08_153537_add_tmdb_id_to_episodes_table.php
+ create mode 100644 tests/Feature/FetchTmdbIdsSeasonCoverTest.php
+ create mode 100644 tests/Feature/LocalMediaIntegrationTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastBootRecoveryTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastSeekTest.php
+ create mode 100644 tests/Feature/TmdbMetadataFieldsTest.php
 
 Array
 (
@@ -20220,10 +20271,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-willfarrell/autoheal
-willfarrell/autoheal Downloads: 145322715  Stars: 145  Base: unknown
-dohsimpson/habittrove
-dohsimpson/habittrove:latest Downloads: 90773  Stars: 1  Base: unknown
+drazzilb08/daps
+drazzilb08/daps Downloads: 70108  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20241,6 +20290,8 @@ dohsimpson/habittrove:latest Downloads: 90773  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/luanti
+lscr.io/linuxserver/luanti Downloads: 18604  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20364,8 +20415,14 @@ dohsimpson/habittrove:latest Downloads: 90773  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-sj26/mailcatcher
-sj26/mailcatcher:latest Downloads: 5564709  Stars: 32  Base: unknown
+oliverbravery/printguard
+ghcr.io/oliverbravery/printguard:latest Downloads:   Stars:   Base: unknown
+mympd/mympd
+ghcr.io/jcorporation/mympd/mympd:latest Downloads:   Stars:   Base: unknown
+rain0r/ampd
+rain0r/ampd:latest Downloads: 1623  Stars: 0  Base: unknown
+foxxmd/context-mod
+ghcr.io/foxxmd/context-mod:latest Downloads: 12471  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
