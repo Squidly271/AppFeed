@@ -224,7 +224,24 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   547af71..01cac0e  main       -> origin/main
+Updating 547af71..01cac0e
+Fast-forward
+ .gitignore                                  |   3 +-
+ package-lock.json                           | 877 ++++++++++++++++++++++++++--
+ package.json                                |   4 +-
+ src/app/api/requests/[id]/download/route.ts | 152 +++++
+ src/app/api/requests/route.ts               |  16 +-
+ src/components/requests/RequestCard.tsx     |  19 +-
+ src/lib/constants/audio-formats.ts          |  13 +
+ src/lib/constants/request-statuses.ts       |   7 +
+ src/lib/utils/file-organizer.ts             |  77 ++-
+ src/lib/utils/jwt.ts                        |  30 +
+ tests/utils/file-organizer.test.ts          |  49 ++
+ 11 files changed, 1197 insertions(+), 50 deletions(-)
+ create mode 100644 src/app/api/requests/[id]/download/route.ts
+ create mode 100644 src/lib/constants/request-statuses.ts
 
 Array
 (
@@ -578,18 +595,49 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   9964d9c..cd6b47c  main       -> origin/main
+Updating 9964d9c..cd6b47c
+Fast-forward
+ .env.example                                  |   3 -
+ Dockerfile                                    |   1 +
+ app/api/admin/models/[id]/route.ts            |   9 +-
+ app/api/models/[id]/route.ts                  |   7 -
+ app/api/stockworks/material-warnings/route.ts |  34 +-
+ app/cart/page.tsx                             | 230 ++++++++--
+ app/models/[id]/page.tsx                      |  31 +-
+ app/products/[id]/page.tsx                    |   1 +
+ components/AppSidebar.tsx                     |  14 +-
+ components/ModelPartsList.tsx                 |  93 ++--
+ components/ModelViewer.tsx                    | 345 +++++++++++++--
+ components/admin/ModelManager.tsx             |   2 +-
+ components/admin/ProductBuilder.tsx           | 161 ++++++-
+ components/cart/AddToCartButtons.tsx          |   2 +-
+ components/products/ProductConfigurator.tsx   |  81 +++-
+ docker-compose.yml                            |  25 ++
+ lib/amazon.ts                                 | 616 --------------------------
+ lib/amazonMetadata.ts                         | 145 ------
+ lib/amazonSpotlights.ts                       |  76 ----
+ unraid/templates/makerworks-v2-worker.xml     |  28 ++
+ unraid/templates/makerworks-v2.xml            |   7 +-
+ 21 files changed, 891 insertions(+), 1020 deletions(-)
+ delete mode 100644 lib/amazon.ts
+ delete mode 100644 lib/amazonMetadata.ts
+ delete mode 100644 lib/amazonSpotlights.ts
+ create mode 100644 unraid/templates/makerworks-v2-worker.xml
 
 Array
 (
     [https://github.com/schartrand77/mkw2] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2.xml
+            [0] => /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2-worker.xml
+            [1] => /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2-worker.xml...Success
 Processing /tmp/GitHub/repositoryClone/schartrand77/mkw2/unraid/templates/makerworks-v2.xml...Success
 
 
@@ -966,7 +1014,24 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   a801b90..20442c9  main       -> origin/main
+Updating a801b90..20442c9
+Fast-forward
+ docs/plans/2026-02-27-brain-backfill-tracker.md    |  70 ++
+ server/services/ExclusionComputationService.ts     |  25 +-
+ server/tests/middleware/authMiddleware.test.ts     | 460 ++++++++++++
+ server/tests/services/ClipQueryBuilder.test.ts     | 237 +++++++
+ .../services/ExclusionComputationService.test.ts   | 781 +++++++++++++++++++++
+ server/tests/services/GalleryQueryBuilder.test.ts  |  94 +++
+ server/tests/services/SceneQueryBuilder.test.ts    | 429 +++++++++--
+ server/tests/services/StashEntityService.test.ts   | 195 +++++
+ server/tests/services/StashInstanceManager.test.ts |  47 ++
+ server/tests/utils/entityInstanceId.test.ts        |  46 ++
+ 10 files changed, 2312 insertions(+), 72 deletions(-)
+ create mode 100644 docs/plans/2026-02-27-brain-backfill-tracker.md
+ create mode 100644 server/tests/middleware/authMiddleware.test.ts
+ create mode 100644 server/tests/services/ClipQueryBuilder.test.ts
 
 Array
 (
@@ -20275,8 +20340,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-seaweedbraincy/jellyfin-newsletter
-ghcr.io/seaweedbraincy/jellyfin-newsletter:latest Downloads:   Stars:   Base: unknown
+vladoportos/skillgoblin
+vladoportos/skillgoblin:latest Downloads: 1151  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -20442,6 +20507,8 @@ ghcr.io/seaweedbraincy/jellyfin-newsletter:latest Downloads:   Stars:   Base: un
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+didmar/whisper-api-server
+didmar/whisper-api-server Downloads: 1007  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
