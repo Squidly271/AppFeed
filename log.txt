@@ -89,12 +89,7 @@ Removed from CA123
 
 Downloading Kling's Repository
 
-From https://github.com/davidjkling/unraid-templates
-   3069148..2cdd4d5  main       -> origin/main
-Updating 3069148..2cdd4d5
-Fast-forward
- templates/bunkerweb-aio.xml | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -229,7 +224,56 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   01cac0e..3ee67c8  main       -> origin/main
+ * [new tag]         v1.0.15    -> v1.0.15
+Updating 01cac0e..3ee67c8
+Fast-forward
+ .gitignore                                         |   3 +-
+ docker-compose.yml                                 |   5 +
+ documentation-agent-prompt.md                      | 335 +++++++++++++++++++++
+ documentation/features/manual-import.md            |  87 ++++++
+ package.json                                       |   2 +-
+ .../migration.sql                                  |   2 +
+ prisma/schema.prisma                               |   1 +
+ src/app/admin/users/page.tsx                       |  58 ++++
+ src/app/api/admin/filesystem/browse/route.ts       | 208 +++++++++++++
+ src/app/api/admin/manual-import/route.ts           | 265 ++++++++++++++++
+ .../api/admin/settings/download-access/route.ts    |  91 ++++++
+ src/app/api/admin/users/[id]/route.ts              |  22 +-
+ src/app/api/admin/users/route.ts                   |   1 +
+ .../api/audiobooks/[asin]/download-status/route.ts |  70 +++++
+ src/app/api/auth/me/route.ts                       |   9 +
+ src/app/api/requests/[id]/download-token/route.ts  |  89 ++++++
+ src/app/api/requests/[id]/download/route.ts        |   2 +-
+ src/app/api/requests/route.ts                      |   7 +-
+ .../admin/users/GlobalUserSettingsModal.tsx        |  33 ++
+ .../admin/users/UserPermissionsModal.tsx           |  25 ++
+ src/components/audiobooks/AudiobookCard.tsx        |  13 +-
+ .../audiobooks/AudiobookDetailsModal.tsx           | 101 ++++++-
+ src/components/audiobooks/ManualImportBrowser.tsx  | 302 +++++++++++++++++++
+ .../audiobooks/manual-import/BrowsePhase.tsx       | 278 +++++++++++++++++
+ .../audiobooks/manual-import/ConfirmPhase.tsx      | 142 +++++++++
+ src/components/audiobooks/manual-import/types.ts   |  33 ++
+ src/components/requests/RequestCard.tsx            |  14 +-
+ src/contexts/AuthContext.tsx                       |   1 +
+ src/lib/hooks/useRequests.ts                       |  19 ++
+ src/lib/utils/permissions.ts                       |  13 +
+ tests/api/requests-approval.routes.test.ts         |   1 +
+ .../audiobooks/AudiobookDetailsModal.test.tsx      |   1 +
+ 32 files changed, 2204 insertions(+), 29 deletions(-)
+ create mode 100644 documentation-agent-prompt.md
+ create mode 100644 documentation/features/manual-import.md
+ create mode 100644 prisma/migrations/20260212000000_add_download_access_permission/migration.sql
+ create mode 100644 src/app/api/admin/filesystem/browse/route.ts
+ create mode 100644 src/app/api/admin/manual-import/route.ts
+ create mode 100644 src/app/api/admin/settings/download-access/route.ts
+ create mode 100644 src/app/api/audiobooks/[asin]/download-status/route.ts
+ create mode 100644 src/app/api/requests/[id]/download-token/route.ts
+ create mode 100644 src/components/audiobooks/ManualImportBrowser.tsx
+ create mode 100644 src/components/audiobooks/manual-import/BrowsePhase.tsx
+ create mode 100644 src/components/audiobooks/manual-import/ConfirmPhase.tsx
+ create mode 100644 src/components/audiobooks/manual-import/types.ts
 
 Array
 (
@@ -583,22 +627,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   cd6b47c..60a212b  main       -> origin/main
-Updating cd6b47c..60a212b
-Fast-forward
- app/api/admin/merch/[id]/route.ts                  |  55 +++++++--
- app/api/admin/merch/route.ts                       |  47 +++++---
- app/api/merch/route.ts                             |   1 +
- app/products/[id]/page.tsx                         |  49 ++++++--
- app/products/page.tsx                              |  14 ++-
- components/admin/CatalogManager.tsx                | 130 ++++++++++++++++-----
- components/products/PhotoMarquee.tsx               |  54 +++++++++
- .../migration.sql                                  |   9 ++
- prisma/schema.prisma                               |   1 +
- 9 files changed, 295 insertions(+), 65 deletions(-)
- create mode 100644 components/products/PhotoMarquee.tsx
- create mode 100644 prisma/migrations/20260227110000_merch_gallery_image_urls/migration.sql
+Already up to date.
 
 Array
 (
@@ -953,28 +982,13 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
-   e619512..a7db3fd  master             -> origin/master
- * [new tag]         dev-0.9.7          -> dev-0.9.7
- * [new tag]         experimental-0.9.7 -> experimental-0.9.7
- * [new tag]         dev-0.9.6          -> dev-0.9.6
- * [new tag]         experimental-0.9.6 -> experimental-0.9.6
-Updating e619512..a7db3fd
+   a7db3fd..c5fbdac  master     -> origin/master
+Updating a7db3fd..c5fbdac
 Fast-forward
- .github/workflows/publish_dev.yml                  | 108 +++++++++++++++++++-
- .github/workflows/publish_experimental.yml         | 111 ++++++++++++++++++++-
- Dockerfile                                         |   2 +-
- app/Filament/Pages/Preferences.php                 |   9 ++
- .../CustomPlaylists/CustomPlaylistResource.php     |   4 +-
- .../MediaServerIntegrationResource.php             |  34 -------
- .../MergedPlaylists/MergedPlaylistResource.php     |   4 +-
- .../PlaylistAliases/PlaylistAliasResource.php      |   4 +-
- .../Resources/Playlists/PlaylistResource.php       |   4 +-
- .../StreamProfiles/StreamProfileResource.php       |   2 +-
- app/Jobs/FetchTmdbIds.php                          |  24 ++++-
- app/Jobs/ProcessM3uImport.php                      |  67 ++++++++-----
- config/dev.php                                     |   4 +-
- resources/css/globals/global.scss                  |  16 +++
- 14 files changed, 319 insertions(+), 74 deletions(-)
+ app/Console/Commands/RegisterM3uProxyWebhook.php |   3 +-
+ app/Services/M3uProxyService.php                 |  15 ++
+ package-lock.json                                | 206 +++++++++++------------
+ 3 files changed, 119 insertions(+), 105 deletions(-)
 
 Array
 (
@@ -1010,29 +1024,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   20442c9..2776c1a  main       -> origin/main
-Updating 20442c9..2776c1a
-Fast-forward
- client/tests/hooks/useAsyncData.test.jsx           | 176 ++++++
- client/tests/hooks/useCancellableQuery.test.jsx    | 266 +++++++++
- client/tests/hooks/useUserStats.test.jsx           | 167 ++++++
- client/tests/hooks/useWatchHistory.test.jsx        | 255 +++++++++
- docs/plans/2026-02-27-brain-backfill-tracker.md    |  10 +-
- .../tests/controllers/playlistOperations.test.ts   | 610 +++++++++++++++++++++
- server/tests/controllers/setup.test.ts             | 527 ++++++++++++++++++
- server/tests/initializers/stashInstance.test.ts    | 132 +++++
- .../tests/services/PlaylistAccessService.test.ts   | 107 ++++
- .../tests/services/RankingComputeService.test.ts   | 421 ++++++++++++--
- 10 files changed, 2609 insertions(+), 62 deletions(-)
- create mode 100644 client/tests/hooks/useAsyncData.test.jsx
- create mode 100644 client/tests/hooks/useCancellableQuery.test.jsx
- create mode 100644 client/tests/hooks/useUserStats.test.jsx
- create mode 100644 client/tests/hooks/useWatchHistory.test.jsx
- create mode 100644 server/tests/controllers/playlistOperations.test.ts
- create mode 100644 server/tests/controllers/setup.test.ts
- create mode 100644 server/tests/initializers/stashInstance.test.ts
- create mode 100644 server/tests/services/PlaylistAccessService.test.ts
+Already up to date.
 
 Array
 (
@@ -20271,6 +20263,8 @@ Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
+jessielw/mp4forge
+ghcr.io/jessielw/mp4forge Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
@@ -20319,8 +20313,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
-cordlesswool/shrtn
-cordlesswool/shrtn Downloads: 5619  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
@@ -20366,8 +20358,6 @@ cordlesswool/shrtn Downloads: 5619  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-cobbert/manjaro-package-mirror
-cobbert/manjaro-package-mirror Downloads: 245  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -20427,9 +20417,6 @@ cobbert/manjaro-package-mirror Downloads: 245  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-Tagged - Can't determine last update
-acronisdocker/backup_agent
-acronisdocker/backup_agent:12960 Downloads: 156330  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -20513,10 +20500,8 @@ acronisdocker/backup_agent:12960 Downloads: 156330  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-jma1ice/conjurr
-jma1ice/conjurr:latest Downloads: 2024  Stars: 0  Base: unknown
-damongolding/immich-kiosk
-damongolding/immich-kiosk:latest Downloads: 223960  Stars: 1  Base: unknown
+kennethreitz/httpbin
+kennethreitz/httpbin:latest Downloads: 49128264  Stars: 130  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
