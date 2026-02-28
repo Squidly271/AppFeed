@@ -89,13 +89,7 @@ Removed from CA123
 
 Downloading Kling's Repository
 
-From https://github.com/davidjkling/unraid-templates
-   8155726..289157d  main       -> origin/main
-Updating 8155726..289157d
-Fast-forward
- templates/ollama.xml | 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 68 insertions(+)
- create mode 100644 templates/ollama.xml
+Already up to date.
 
 Array
 (
@@ -729,7 +723,35 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   c72afdd..b468791  main           -> origin/main
+ * [new tag]         v1.11.0-beta.7 -> v1.11.0-beta.7
+Updating c72afdd..b468791
+Fast-forward
+ NeXroll/RELEASE_NOTES_v1.11.0-beta.6.md            |   8 +
+ NeXroll/RELEASE_NOTES_v1.11.0-beta.7.md            | 124 ++++
+ NeXroll/backend/dynamic_preroll.py                 | 170 +++--
+ NeXroll/backend/main.py                            | 115 +++-
+ NeXroll/backend/models.py                          |   2 +
+ NeXroll/backend/radarr_connector.py                |  21 +-
+ NeXroll/backend/scheduler.py                       |   4 +-
+ NeXroll/backend/sw.js                              |  43 +-
+ NeXroll/backend/version.py                         |   2 +-
+ NeXroll/frontend/build/asset-manifest.json         |   6 +-
+ NeXroll/frontend/build/index.html                  |   2 +-
+ .../js/{main.202c1dad.js => main.89c9cf52.js}      |   6 +-
+ ...js.LICENSE.txt => main.89c9cf52.js.LICENSE.txt} |   0
+ .../{main.202c1dad.js.map => main.89c9cf52.js.map} |   2 +-
+ NeXroll/frontend/build/sw.js                       |  43 +-
+ NeXroll/frontend/package.json                      |   2 +-
+ NeXroll/frontend/public/sw.js                      |  43 +-
+ NeXroll/frontend/src/App.js                        | 699 +++++++++++++++++----
+ NeXroll/version.py                                 |   2 +-
+ 19 files changed, 1037 insertions(+), 257 deletions(-)
+ create mode 100644 NeXroll/RELEASE_NOTES_v1.11.0-beta.7.md
+ rename NeXroll/frontend/build/static/js/{main.202c1dad.js => main.89c9cf52.js} (55%)
+ rename NeXroll/frontend/build/static/js/{main.202c1dad.js.LICENSE.txt => main.89c9cf52.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.202c1dad.js.map => main.89c9cf52.js.map} (54%)
 
 Array
 (
@@ -978,77 +1000,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   4f1a69c..9cbe03d  main       -> origin/main
-Updating 4f1a69c..9cbe03d
-Fast-forward
- server/controllers/carousel.ts                 |   9 +-
- server/controllers/clips.ts                    |   4 +-
- server/controllers/download.ts                 |  14 +-
- server/controllers/groups.ts                   |  18 +--
- server/controllers/imageViewHistory.ts         |  16 +--
- server/controllers/library/galleries.ts        |   6 +-
- server/controllers/library/groups.ts           |   5 +-
- server/controllers/library/images.ts           |   9 +-
- server/controllers/library/performers.ts       |  10 +-
- server/controllers/library/scenes.ts           |  47 ++++---
- server/controllers/library/studios.ts          |   5 +-
- server/controllers/library/tags.ts             |   9 +-
- server/controllers/playlist.ts                 |   4 +-
- server/controllers/proxy.ts                    |   9 +-
- server/controllers/setup.ts                    |  13 +-
- server/controllers/stats.ts                    |   2 +-
- server/controllers/user.ts                     | 115 +++-------------
- server/controllers/video.ts                    |  20 +--
- server/controllers/watchHistory.ts             |  32 ++---
- server/eslint.config.js                        |  49 +++++--
- server/index.ts                                |   8 +-
- server/initializers/api.ts                     |   4 +-
- server/jobs/downloadCleanup.ts                 |   4 +-
- server/middleware/auth.ts                      |   4 +-
- server/package-lock.json                       | 178 +++++++++++++++----------
- server/package.json                            |   1 +
- server/routes/auth.ts                          |   8 +-
- server/routes/databaseBackup.ts                |   2 +-
- server/routes/exclusions.ts                    |   2 +-
- server/routes/mergeReconciliation.ts           |  14 +-
- server/routes/sync.ts                          |  35 +++--
- server/schemas/base.ts                         |   2 +-
- server/scripts/generate-api-docs.ts            |   3 +-
- server/scripts/lib/routeParser.ts              |  10 +-
- server/scripts/lib/typeExtractor.ts            |   4 +-
- server/services/ClipPreviewProber.ts           |   4 +-
- server/services/ClipQueryBuilder.ts            |   5 +-
- server/services/DownloadService.ts             |   2 +-
- server/services/ExclusionComputationService.ts |  10 +-
- server/services/GalleryQueryBuilder.ts         |   4 +-
- server/services/GroupQueryBuilder.ts           |   4 +-
- server/services/MergeReconciliationService.ts  |  16 ++-
- server/services/PerformerQueryBuilder.ts       |   4 +-
- server/services/RankingComputeService.ts       |   9 +-
- server/services/SceneQueryBuilder.ts           |   4 +-
- server/services/StashEntityService.ts          |  26 ++--
- server/services/StashSyncService.ts            |  14 +-
- server/services/StudioQueryBuilder.ts          |   4 +-
- server/services/SyncScheduler.ts               |   4 +-
- server/services/TagQueryBuilder.ts             |   4 +-
- server/services/UserHiddenEntityService.ts     |   2 +-
- server/services/UserStatsAggregationService.ts |  34 ++---
- server/services/UserStatsService.ts            |  30 ++---
- server/tsconfig.json                           |   3 +-
- server/types/api/index.ts                      |  15 +++
- server/types/api/library.ts                    |   9 ++
- server/types/api/proxy.ts                      |  19 +++
- server/types/api/user.ts                       |  90 +++++++++++++
- server/utils/codecDetection.ts                 |   2 +-
- server/utils/entityInstanceId.ts               |  38 +++---
- server/utils/recoveryKey.ts                    |   3 +-
- server/utils/routeHelpers.ts                   |  19 ++-
- server/utils/seededRandom.ts                   |   2 +-
- server/utils/stashUrlProxy.ts                  |   4 +-
- 64 files changed, 604 insertions(+), 455 deletions(-)
- create mode 100644 server/types/api/proxy.ts
- create mode 100644 server/types/api/user.ts
+Already up to date.
 
 Array
 (
@@ -6085,7 +6037,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   4d6abfb..af4f3f6  main       -> origin/main
+Updating 4d6abfb..af4f3f6
+Fast-forward
+ unraid/vscodium-web.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -9480,7 +9437,9 @@ Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Astroneer.
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Soulmask.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Nvidia-Drivers.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-nvidia-driver/master/nvidia-driver.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/V-Rising.xml...Success
-Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/hpsahba.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-hpsahba/master/hpsahba.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/hpsahba.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-hpsahba/master/hpsahba.plg attempt 1...Fatal: Plugin URL on xml template does not match PluginURL in .plg (https://raw.githubusercontent.com/ich777/unraid-hpsahba/master/hpsahba.plg vs https://github.com/ich777/unraid-hpsahba/raw/master/hpsahba.plg)
+
+Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Unreal-Tournament-99.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LifeIsFeudal-YourOwn.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DMClassic.xml...Success
@@ -11556,17 +11515,7 @@ Processing /tmp/GitHub/repositoryClone/openspeedtest/unraid-docker-plugin/opensp
 
 Downloading uberchuckie's Repository
 
-From https://github.com/charlescng/docker-containers
-   d2b9f87..523e301  master     -> origin/master
-Updating d2b9f87..523e301
-Fast-forward
- observium/Dockerfile       |  7 ++++---
- observium/README.md        | 17 ++++++++++++++++-
- observium/apache-observium | 24 ++++++++++++++++++++++++
- observium/firstrun.sh      | 32 ++++++++++++++++++++++++++++++++
- observium/mariadb.sh       |  3 +++
- observium/ports.conf       |  1 +
- 6 files changed, 80 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -14617,12 +14566,7 @@ Processing /tmp/GitHub/repositoryClone/crazyqin/unraid-templates/pt_helper/pt_he
 
 Downloading pbear's Repository
 
-From https://github.com/imTHAI/unraid-templates
-   4c45b71..5f91cf5  main       -> origin/main
-Updating 4c45b71..5f91cf5
-Fast-forward
- rustatio/rustatio.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -20543,12 +20487,13 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-takitsu21/rustatio
-ghcr.io/takitsu21/rustatio Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+Tagged - Can't determine last update
+viyh/whisper
+viyh/whisper:0.1.0-alpha Downloads: 111505  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
