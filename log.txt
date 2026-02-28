@@ -90,11 +90,11 @@ Removed from CA123
 Downloading Kling's Repository
 
 From https://github.com/davidjkling/unraid-templates
-   f626baf..84ba1a7  main       -> origin/main
-Updating f626baf..84ba1a7
+   84ba1a7..8155726  main       -> origin/main
+Updating 84ba1a7..8155726
 Fast-forward
- templates/bunkerweb-aio.xml | 10 +---------
- 1 file changed, 1 insertion(+), 9 deletions(-)
+ templates/bunkerweb-aio.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -583,13 +583,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   da7a040..0ec2557  main       -> origin/main
-Updating da7a040..0ec2557
-Fast-forward
- components/ModelImagesManager.tsx | 47 +++++++++++++++++++++++++++++++--------
- components/admin/ModelManager.tsx |  6 ++++-
- 2 files changed, 43 insertions(+), 10 deletions(-)
+Already up to date.
 
 Array
 (
@@ -907,416 +901,7 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-From https://github.com/ruaan-deysel/unraid-management-agent
-   7a1ae2d..84513b8  main       -> origin/main
- * [new tag]         v2026.03.00 -> v2026.03.00
-Updating 7a1ae2d..84513b8
-Fast-forward
- .ai-scratch/.gitkeep                               |    0
- .claude/settings.local.json                        |   35 +-
- .cursorrules                                       |   27 +
- .devcontainer/Dockerfile                           |   68 +-
- .devcontainer/README.md                            |  318 +--
- .devcontainer/devcontainer.json                    |   58 +-
- .devcontainer/docker-compose.yml                   |   57 -
- .devcontainer/mosquitto.conf                       |   32 -
- .devcontainer/on-create.sh                         |   19 +
- .github/ISSUE_TEMPLATE/bug_report.md               |    4 +-
- .github/ISSUE_TEMPLATE/feature_request.md          |    4 +-
- .github/ISSUE_TEMPLATE/hardware_compatibility.md   |    6 +-
- .github/PULL_REQUEST_TEMPLATE.md                   |   19 +-
- .github/agents/speckit.analyze.agent.md            |  184 --
- .github/agents/speckit.checklist.agent.md          |  294 ---
- .github/agents/speckit.clarify.agent.md            |  181 --
- .github/agents/speckit.constitution.agent.md       |   82 -
- .github/agents/speckit.implement.agent.md          |  135 --
- .github/agents/speckit.plan.agent.md               |   89 -
- .github/agents/speckit.specify.agent.md            |  258 ---
- .github/agents/speckit.tasks.agent.md              |  137 --
- .github/agents/speckit.taskstoissues.agent.md      |   28 -
- .github/copilot-instructions.md                    |  273 +--
- .github/instructions/api-handlers.instructions.md  |   50 +
- .github/instructions/collectors.instructions.md    |   70 +
- .github/instructions/controllers.instructions.md   |   52 +
- .github/instructions/dto.instructions.md           |   35 +
- .github/instructions/go.instructions.md            |   39 +
- .github/instructions/mcp.instructions.md           |   34 +
- .github/instructions/tests.instructions.md         |   58 +
- .github/instructions/yaml-markdown.instructions.md |   44 +
- .github/prompts/Add Collector.prompt.md            |  124 ++
- .github/prompts/Add Controller.prompt.md           |   69 +
- .github/prompts/Add MCP Tool.prompt.md             |   54 +
- .github/prompts/Add REST Endpoint.prompt.md        |   85 +
- .github/prompts/Add WebSocket Event.prompt.md      |   74 +
- .github/prompts/Debug Collector Issue.prompt.md    |   66 +
- .github/prompts/speckit.analyze.prompt.md          |    3 -
- .github/prompts/speckit.checklist.prompt.md        |    3 -
- .github/prompts/speckit.clarify.prompt.md          |    3 -
- .github/prompts/speckit.constitution.prompt.md     |    3 -
- .github/prompts/speckit.implement.prompt.md        |    3 -
- .github/prompts/speckit.plan.prompt.md             |    3 -
- .github/prompts/speckit.specify.prompt.md          |    3 -
- .github/prompts/speckit.tasks.prompt.md            |    3 -
- .github/prompts/speckit.taskstoissues.prompt.md    |    3 -
- .github/workflows/release.yml                      |    2 +-
- .gitignore                                         |    6 +
- .markdownlint.json                                 |   11 +-
- .pre-commit-config.yaml                            |   17 +-
- .prettierignore                                    |   45 +
- .prettierrc.yml                                    |   18 +
- .specify/memory/constitution.md                    |  340 ----
- .specify/scripts/bash/check-prerequisites.sh       |  166 --
- .specify/scripts/bash/common.sh                    |  155 --
- .specify/scripts/bash/create-new-feature.sh        |  305 ---
- .specify/scripts/bash/setup-plan.sh                |   60 -
- .specify/scripts/bash/update-agent-context.sh      |  789 --------
- .specify/templates/agent-file-template.md          |   28 -
- .specify/templates/checklist-template.md           |   40 -
- .specify/templates/plan-template.md                |  104 -
- .specify/templates/spec-template.md                |  115 --
- .specify/templates/tasks-template.md               |  251 ---
- AGENTS.md                                          |  519 +++++
- CHANGELOG.md                                       |  160 ++
- CLAUDE.md                                          |  462 +----
- CONTRIBUTING.md                                    |    2 +-
- GEMINI.md                                          |  173 +-
- Makefile                                           |    7 +-
- README.md                                          |   19 +-
- SECURITY.md                                        |   10 +-
- VERSION                                            |    2 +-
- ansible/.ansible-lint                              |   20 +
- ansible/README.md                                  |   62 +
- ansible/ansible.cfg                                |   20 +
- ansible/deploy.yml                                 |   79 +
- ansible/group_vars/all.yml                         |   14 +
- ansible/inventory.yml.example                      |   17 +
- ansible/roles/deploy/tasks/main.yml                |  114 ++
- ansible/roles/uninstall/tasks/main.yml             |   99 +
- ansible/roles/verify/tasks/alerts_crud.yml         |   64 +
- ansible/roles/verify/tasks/endpoints.yml           |   95 +
- ansible/roles/verify/tasks/errors.yml              |   93 +
- ansible/roles/verify/tasks/healthchecks_crud.yml   |   65 +
- ansible/roles/verify/tasks/main.yml                |   39 +
- ansible/roles/verify/tasks/mcp.yml                 |  184 ++
- ansible/roles/verify/tasks/mqtt.yml                |   22 +
- .../verify/tasks/notifications_collectors.yml      |   46 +
- ansible/roles/verify/tasks/parameterized.yml       |  147 ++
- ansible/roles/verify/tasks/prometheus.yml          |   53 +
- ansible/roles/verify/tasks/schemas.yml             |  100 +
- ansible/roles/verify/tasks/swagger.yml             |   50 +
- ansible/roles/verify/tasks/websocket.yml           |   23 +
- daemon/constants/const.go                          |    4 +
- daemon/constants/topics.go                         |   50 +
- daemon/docs/docs.go                                | 2039 +++++++++++++++++--
- daemon/docs/swagger.json                           | 2041 ++++++++++++++++++--
- daemon/docs/swagger.yaml                           | 1336 ++++++++++++-
- daemon/domain/config.go                            |    5 +-
- daemon/domain/config_test.go                       |  182 ++
- daemon/domain/context.go                           |    4 +-
- daemon/domain/eventbus.go                          |  137 ++
- daemon/domain/eventbus_test.go                     |  232 +++
- daemon/domain/fileconfig.go                        |   89 +
- daemon/dto/alert.go                                |  119 ++
- daemon/dto/docker.go                               |   62 +
- daemon/dto/healthcheck.go                          |  119 ++
- daemon/dto/mcp.go                                  |  117 ++
- daemon/dto/mqtt.go                                 |   17 +-
- daemon/dto/mqtt_test.go                            |    2 +-
- daemon/dto/process.go                              |   25 +
- daemon/dto/registration.go                         |   14 +-
- daemon/dto/settings.go                             |   18 +
- daemon/dto/vm.go                                   |   19 +
- daemon/dto/websocket.go                            |   16 +-
- daemon/dto/zfs.go                                  |    4 +-
- daemon/lib/dmidecode.go                            |   59 +-
- daemon/lib/dmidecode_parsing_test.go               |  429 ++++
- daemon/lib/emhttp.go                               |  139 ++
- daemon/lib/emhttp_test.go                          |  221 +++
- daemon/lib/ethtool.go                              |    7 +-
- daemon/lib/public_parse_test.go                    |  115 ++
- daemon/lib/sysfs_hardware.go                       |    5 +-
- daemon/lib/sysfs_hardware_test.go                  |  210 +-
- daemon/lib/utils_test.go                           |    2 +-
- daemon/lib/validation.go                           |  135 +-
- daemon/lib/validation_new_test.go                  |  291 +++
- daemon/logger/logger.go                            |   28 +-
- daemon/services/alerting/dispatcher.go             |  171 ++
- daemon/services/alerting/engine.go                 |  337 ++++
- daemon/services/alerting/engine_test.go            |  300 +++
- daemon/services/alerting/evaluator.go              |  239 +++
- daemon/services/alerting/evaluator_test.go         |  223 +++
- daemon/services/alerting/store.go                  |  206 ++
- daemon/services/alerting/store_test.go             |  200 ++
- daemon/services/api/cache_store.go                 |  190 ++
- daemon/services/api/event_bindings.go              |  131 ++
- daemon/services/api/handlers.go                    | 1444 ++++++++++++--
- daemon/services/api/handlers_cache_test.go         | 1045 ++++++++++
- daemon/services/api/handlers_coverage_test.go      | 1022 ++++++++++
- daemon/services/api/handlers_edge_cases_test.go    |   37 +-
- daemon/services/api/handlers_management_test.go    |  372 ++++
- daemon/services/api/handlers_new_test.go           |  596 ++++++
- daemon/services/api/handlers_operations_test.go    |  273 +++
- daemon/services/api/handlers_settings_test.go      |  298 +++
- daemon/services/api/handlers_test.go               |   38 +-
- daemon/services/api/logs.go                        |    5 +-
- daemon/services/api/logs_coverage_test.go          |  121 ++
- daemon/services/api/logs_test.go                   |   48 +-
- daemon/services/api/metrics.go                     |  107 +-
- daemon/services/api/metrics_coverage_test.go       |  288 +++
- daemon/services/api/metrics_test.go                |   60 +-
- daemon/services/api/middleware.go                  |   62 +-
- daemon/services/api/middleware_test.go             |   30 +-
- daemon/services/api/server.go                      |  437 ++---
- daemon/services/api/server_methods_test.go         |  659 +++++++
- daemon/services/api/server_test.go                 |   31 +-
- daemon/services/api/subscribe_events_test.go       |  520 +++++
- daemon/services/api/websocket.go                   |   81 +-
- daemon/services/api/websocket_coverage_test.go     |  439 +++++
- daemon/services/api/websocket_test.go              |   32 +-
- daemon/services/collector_manager.go               |   47 +-
- daemon/services/collector_manager_coverage_test.go |  182 ++
- daemon/services/collector_manager_test.go          |    3 +-
- daemon/services/collectors/array.go                |   33 +-
- daemon/services/collectors/array_test.go           |    3 +-
- .../collectors/collectors_integration_test.go      |   29 +-
- daemon/services/collectors/collectors_pure_test.go |  430 +++++
- daemon/services/collectors/disk.go                 |   48 +-
- daemon/services/collectors/disk_test.go            |   19 +-
- daemon/services/collectors/docker.go               |   13 +-
- daemon/services/collectors/docker_test.go          |    7 +-
- daemon/services/collectors/filewatcher.go          |  108 ++
- daemon/services/collectors/filewatcher_test.go     |  175 ++
- daemon/services/collectors/gpu.go                  |   37 +-
- daemon/services/collectors/gpu_test.go             |    3 +-
- daemon/services/collectors/hardware.go             |    5 +-
- daemon/services/collectors/hardware_test.go        |    5 +-
- daemon/services/collectors/network.go              |    5 +-
- daemon/services/collectors/network_access.go       |    4 +-
- daemon/services/collectors/network_test.go         |    3 +-
- daemon/services/collectors/notification.go         |   16 +-
- daemon/services/collectors/notification_test.go    |   83 +-
- daemon/services/collectors/nut.go                  |   16 +-
- daemon/services/collectors/nut_test.go             |    3 +-
- daemon/services/collectors/parsing_test.go         |  565 ++++++
- daemon/services/collectors/registration.go         |    4 +-
- daemon/services/collectors/registration_test.go    |    5 +-
- daemon/services/collectors/settings.go             |   21 +-
- daemon/services/collectors/share.go                |   30 +-
- daemon/services/collectors/share_test.go           |    3 +-
- daemon/services/collectors/system.go               |   25 +-
- daemon/services/collectors/system_test.go          |   17 +-
- daemon/services/collectors/unassigned.go           |   11 +-
- daemon/services/collectors/unassigned_test.go      |    5 +-
- daemon/services/collectors/ups.go                  |   17 +-
- daemon/services/collectors/ups_test.go             |    3 +-
- daemon/services/collectors/vm.go                   |   17 +-
- daemon/services/collectors/vm_test.go              |    9 +-
- daemon/services/collectors/zfs.go                  |    8 +-
- daemon/services/collectors/zfs_test.go             |    9 +-
- daemon/services/controllers/array.go               |   73 +-
- daemon/services/controllers/coverage_test.go       |  277 +++
- daemon/services/controllers/docker.go              |  509 +++++
- daemon/services/controllers/docker_helpers_test.go |   71 +
- daemon/services/controllers/docker_test.go         |   77 +
- daemon/services/controllers/notification.go        |    3 +-
- .../controllers/notification_operations_test.go    |  105 +-
- daemon/services/controllers/plugin.go              |  129 ++
- daemon/services/controllers/plugin_test.go         |   12 +
- daemon/services/controllers/process.go             |  128 ++
- daemon/services/controllers/process_test.go        |  229 +++
- daemon/services/controllers/service.go             |  113 ++
- daemon/services/controllers/service_test.go        |  139 ++
- daemon/services/controllers/system_test.go         |    4 +-
- daemon/services/controllers/vm.go                  |  169 ++
- daemon/services/controllers/vm_test.go             |   20 +
- daemon/services/mcp/control_tools_test.go          |  898 +++++++++
- daemon/services/mcp/server.go                      |  916 ++++++++-
- daemon/services/mcp/server_test.go                 |    6 +-
- daemon/services/mcp/tools_test.go                  | 1235 ++++++++++++
- daemon/services/mqtt/client.go                     |  171 +-
- daemon/services/mqtt/client_coverage_test.go       |  451 +++++
- daemon/services/mqtt/client_test.go                |   38 +-
- daemon/services/mqtt/commands.go                   |  327 ++++
- daemon/services/mqtt/discovery.go                  | 1407 ++++++++++++++
- daemon/services/orchestrator.go                    |  242 +--
- daemon/services/orchestrator_test.go               |   86 +
- daemon/services/watchdog/probes.go                 |  130 ++
- daemon/services/watchdog/probes_test.go            |  298 +++
- daemon/services/watchdog/remediation.go            |  101 +
- daemon/services/watchdog/runner.go                 |  290 +++
- daemon/services/watchdog/runner_test.go            |  406 ++++
- daemon/services/watchdog/store.go                  |  227 +++
- daemon/services/watchdog/store_test.go             |  200 ++
- docs/api/prometheus.md                             |  112 +-
- docs/api/rest-api.md                               |   29 +-
- docs/api/websocket-events.md                       |   38 +-
- docs/api/websocket-structure.md                    |  400 ++--
- docs/development/code-quality.md                   |   10 +-
- docs/guides/configuration.md                       |   62 +-
- docs/guides/quick-start.md                         |    8 +-
- docs/guides/system-requirements.md                 |   48 +-
- docs/integrations/grafana.md                       |   16 +-
- docs/integrations/home-assistant.md                |   54 +-
- docs/integrations/mcp.md                           |  103 +-
- docs/integrations/mqtt.md                          |   14 +-
- go.mod                                             |   16 +-
- go.sum                                             |   33 +-
- main.go                                            |   97 +-
- meta/plugin/README.md                              |    2 +-
- meta/plugin/default.cfg                            |   23 +
- meta/plugin/include/exec.php                       |  114 ++
- meta/plugin/include/update.php                     |   21 +
- meta/plugin/scripts/apply                          |   48 +
- meta/plugin/scripts/start                          |   20 +-
- meta/plugin/unraid-management-agent.page           |  710 +++----
- meta/template/unraid-management-agent.plg          |   10 +-
- scripts/README.md                                  |  172 +-
- scripts/deploy-plugin.sh                           |   33 +-
- scripts/diag.sh                                    |  172 ++
- scripts/mqtt-test.sh                               |   97 -
- scripts/validate-live.sh.example                   |   80 -
- tests/integration/pubsub_test.go                   |   22 +-
- unraid-management-agent.plg                        |   12 +-
- unraid-management-agent.xml                        |    8 +-
- 266 files changed, 33071 insertions(+), 7761 deletions(-)
- create mode 100644 .ai-scratch/.gitkeep
- create mode 100644 .cursorrules
- delete mode 100644 .devcontainer/docker-compose.yml
- delete mode 100644 .devcontainer/mosquitto.conf
- create mode 100755 .devcontainer/on-create.sh
- delete mode 100644 .github/agents/speckit.analyze.agent.md
- delete mode 100644 .github/agents/speckit.checklist.agent.md
- delete mode 100644 .github/agents/speckit.clarify.agent.md
- delete mode 100644 .github/agents/speckit.constitution.agent.md
- delete mode 100644 .github/agents/speckit.implement.agent.md
- delete mode 100644 .github/agents/speckit.plan.agent.md
- delete mode 100644 .github/agents/speckit.specify.agent.md
- delete mode 100644 .github/agents/speckit.tasks.agent.md
- delete mode 100644 .github/agents/speckit.taskstoissues.agent.md
- create mode 100644 .github/instructions/api-handlers.instructions.md
- create mode 100644 .github/instructions/collectors.instructions.md
- create mode 100644 .github/instructions/controllers.instructions.md
- create mode 100644 .github/instructions/dto.instructions.md
- create mode 100644 .github/instructions/go.instructions.md
- create mode 100644 .github/instructions/mcp.instructions.md
- create mode 100644 .github/instructions/tests.instructions.md
- create mode 100644 .github/instructions/yaml-markdown.instructions.md
- create mode 100644 .github/prompts/Add Collector.prompt.md
- create mode 100644 .github/prompts/Add Controller.prompt.md
- create mode 100644 .github/prompts/Add MCP Tool.prompt.md
- create mode 100644 .github/prompts/Add REST Endpoint.prompt.md
- create mode 100644 .github/prompts/Add WebSocket Event.prompt.md
- create mode 100644 .github/prompts/Debug Collector Issue.prompt.md
- delete mode 100644 .github/prompts/speckit.analyze.prompt.md
- delete mode 100644 .github/prompts/speckit.checklist.prompt.md
- delete mode 100644 .github/prompts/speckit.clarify.prompt.md
- delete mode 100644 .github/prompts/speckit.constitution.prompt.md
- delete mode 100644 .github/prompts/speckit.implement.prompt.md
- delete mode 100644 .github/prompts/speckit.plan.prompt.md
- delete mode 100644 .github/prompts/speckit.specify.prompt.md
- delete mode 100644 .github/prompts/speckit.tasks.prompt.md
- delete mode 100644 .github/prompts/speckit.taskstoissues.prompt.md
- create mode 100644 .prettierignore
- create mode 100644 .prettierrc.yml
- delete mode 100644 .specify/memory/constitution.md
- delete mode 100755 .specify/scripts/bash/check-prerequisites.sh
- delete mode 100755 .specify/scripts/bash/common.sh
- delete mode 100755 .specify/scripts/bash/create-new-feature.sh
- delete mode 100755 .specify/scripts/bash/setup-plan.sh
- delete mode 100755 .specify/scripts/bash/update-agent-context.sh
- delete mode 100644 .specify/templates/agent-file-template.md
- delete mode 100644 .specify/templates/checklist-template.md
- delete mode 100644 .specify/templates/plan-template.md
- delete mode 100644 .specify/templates/spec-template.md
- delete mode 100644 .specify/templates/tasks-template.md
- create mode 100644 AGENTS.md
- create mode 100644 ansible/.ansible-lint
- create mode 100644 ansible/README.md
- create mode 100644 ansible/ansible.cfg
- create mode 100644 ansible/deploy.yml
- create mode 100644 ansible/group_vars/all.yml
- create mode 100644 ansible/inventory.yml.example
- create mode 100644 ansible/roles/deploy/tasks/main.yml
- create mode 100644 ansible/roles/uninstall/tasks/main.yml
- create mode 100644 ansible/roles/verify/tasks/alerts_crud.yml
- create mode 100644 ansible/roles/verify/tasks/endpoints.yml
- create mode 100644 ansible/roles/verify/tasks/errors.yml
- create mode 100644 ansible/roles/verify/tasks/healthchecks_crud.yml
- create mode 100644 ansible/roles/verify/tasks/main.yml
- create mode 100644 ansible/roles/verify/tasks/mcp.yml
- create mode 100644 ansible/roles/verify/tasks/mqtt.yml
- create mode 100644 ansible/roles/verify/tasks/notifications_collectors.yml
- create mode 100644 ansible/roles/verify/tasks/parameterized.yml
- create mode 100644 ansible/roles/verify/tasks/prometheus.yml
- create mode 100644 ansible/roles/verify/tasks/schemas.yml
- create mode 100644 ansible/roles/verify/tasks/swagger.yml
- create mode 100644 ansible/roles/verify/tasks/websocket.yml
- create mode 100644 daemon/constants/topics.go
- create mode 100644 daemon/domain/config_test.go
- create mode 100644 daemon/domain/eventbus.go
- create mode 100644 daemon/domain/eventbus_test.go
- create mode 100644 daemon/domain/fileconfig.go
- create mode 100644 daemon/dto/alert.go
- create mode 100644 daemon/dto/healthcheck.go
- create mode 100644 daemon/dto/process.go
- create mode 100644 daemon/lib/dmidecode_parsing_test.go
- create mode 100644 daemon/lib/emhttp.go
- create mode 100644 daemon/lib/emhttp_test.go
- create mode 100644 daemon/lib/public_parse_test.go
- create mode 100644 daemon/lib/validation_new_test.go
- create mode 100644 daemon/services/alerting/dispatcher.go
- create mode 100644 daemon/services/alerting/engine.go
- create mode 100644 daemon/services/alerting/engine_test.go
- create mode 100644 daemon/services/alerting/evaluator.go
- create mode 100644 daemon/services/alerting/evaluator_test.go
- create mode 100644 daemon/services/alerting/store.go
- create mode 100644 daemon/services/alerting/store_test.go
- create mode 100644 daemon/services/api/cache_store.go
- create mode 100644 daemon/services/api/event_bindings.go
- create mode 100644 daemon/services/api/handlers_cache_test.go
- create mode 100644 daemon/services/api/handlers_coverage_test.go
- create mode 100644 daemon/services/api/handlers_management_test.go
- create mode 100644 daemon/services/api/handlers_new_test.go
- create mode 100644 daemon/services/api/handlers_operations_test.go
- create mode 100644 daemon/services/api/handlers_settings_test.go
- create mode 100644 daemon/services/api/logs_coverage_test.go
- create mode 100644 daemon/services/api/metrics_coverage_test.go
- create mode 100644 daemon/services/api/server_methods_test.go
- create mode 100644 daemon/services/api/subscribe_events_test.go
- create mode 100644 daemon/services/api/websocket_coverage_test.go
- create mode 100644 daemon/services/collector_manager_coverage_test.go
- create mode 100644 daemon/services/collectors/collectors_pure_test.go
- create mode 100644 daemon/services/collectors/filewatcher.go
- create mode 100644 daemon/services/collectors/filewatcher_test.go
- create mode 100644 daemon/services/collectors/parsing_test.go
- create mode 100644 daemon/services/controllers/coverage_test.go
- create mode 100644 daemon/services/controllers/docker_helpers_test.go
- create mode 100644 daemon/services/controllers/plugin.go
- create mode 100644 daemon/services/controllers/plugin_test.go
- create mode 100644 daemon/services/controllers/process.go
- create mode 100644 daemon/services/controllers/process_test.go
- create mode 100644 daemon/services/controllers/service.go
- create mode 100644 daemon/services/controllers/service_test.go
- create mode 100644 daemon/services/mcp/control_tools_test.go
- create mode 100644 daemon/services/mcp/tools_test.go
- create mode 100644 daemon/services/mqtt/client_coverage_test.go
- create mode 100644 daemon/services/mqtt/commands.go
- create mode 100644 daemon/services/mqtt/discovery.go
- create mode 100644 daemon/services/orchestrator_test.go
- create mode 100644 daemon/services/watchdog/probes.go
- create mode 100644 daemon/services/watchdog/probes_test.go
- create mode 100644 daemon/services/watchdog/remediation.go
- create mode 100644 daemon/services/watchdog/runner.go
- create mode 100644 daemon/services/watchdog/runner_test.go
- create mode 100644 daemon/services/watchdog/store.go
- create mode 100644 daemon/services/watchdog/store_test.go
- create mode 100644 meta/plugin/default.cfg
- create mode 100644 meta/plugin/include/exec.php
- create mode 100644 meta/plugin/include/update.php
- create mode 100755 meta/plugin/scripts/apply
- create mode 100755 scripts/diag.sh
- delete mode 100755 scripts/mqtt-test.sh
- delete mode 100755 scripts/validate-live.sh.example
+Already up to date.
 
 Array
 (
@@ -1352,16 +937,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   3d2318e..05eac02  master             -> origin/master
- * [new tag]         dev-0.9.9          -> dev-0.9.9
- * [new tag]         experimental-0.9.9 -> experimental-0.9.9
-Updating 3d2318e..05eac02
-Fast-forward
- .../Resources/Playlists/PlaylistResource.php       |   9 +-
- app/Jobs/ProcessM3uImport.php                      | 109 ++++++++++++++++-----
- config/dev.php                                     |   4 +-
- 3 files changed, 94 insertions(+), 28 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1397,17 +973,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   785538a..466089f  main       -> origin/main
-Updating 785538a..466089f
-Fast-forward
- server/tests/controllers/ratings.test.ts      |  581 ++++++++++++++
- server/tests/controllers/user.test.ts         |  810 ++++++++++++++++++++
- server/tests/controllers/userFeatures.test.ts | 1003 +++++++++++++++++++++++++
- 3 files changed, 2394 insertions(+)
- create mode 100644 server/tests/controllers/ratings.test.ts
- create mode 100644 server/tests/controllers/user.test.ts
- create mode 100644 server/tests/controllers/userFeatures.test.ts
+Already up to date.
 
 Array
 (
@@ -6444,13 +6010,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   11f1446..a24d6ba  main       -> origin/main
-Updating 11f1446..a24d6ba
-Fast-forward
- unraid/webstation.xml | 39 +++++++++++++++++++++++++++++++++++++++
- 1 file changed, 39 insertions(+)
- create mode 100644 unraid/webstation.xml
+Already up to date.
 
 Array
 (
@@ -20733,8 +20293,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-zitadel/zitadel
-ghcr.io/zitadel/zitadel:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20751,13 +20309,8 @@ ghcr.io/zitadel/zitadel:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-waazaafr/rdiff-backup-rdiffweb
-waazaafr/rdiff-backup-rdiffweb:latest Downloads: 645  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-Tagged - Can't determine last update
-opensearchproject/opensearch
-opensearchproject/opensearch:2 Downloads: 154514625  Stars: 195  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20775,10 +20328,6 @@ opensearchproject/opensearch:2 Downloads: 154514625  Stars: 195  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/webstation
-lscr.io/linuxserver/webstation Downloads:   Stars:   Base: unknown
-Pulling lscr.io/linuxserver/webstation
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/webstation/manifests/latest": denied
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20861,8 +20410,8 @@ Error response from daemon: Head "https://ghcr.io/v2/linuxserver/webstation/mani
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-dungfu/twitch-drops-miner
-dungfu/twitch-drops-miner Downloads: 136911  Stars: 18  Base: unknown
+cassandra/home-information
+ghcr.io/cassandra/home-information:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20871,8 +20420,6 @@ dungfu/twitch-drops-miner Downloads: 136911  Stars: 18  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
-hotio/requestrr
-ghcr.io/hotio/requestrr:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Skitals/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
@@ -20902,24 +20449,10 @@ ghcr.io/hotio/requestrr:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-dumbwareio/dumbterm
-dumbwareio/dumbterm:latest Downloads: 110162  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-charmcli/soft-serve
-charmcli/soft-serve:latest Downloads: 76000  Stars: 1  Base: unknown
-kong/kong-gateway
-kong/kong-gateway:latest Downloads: 916950565  Stars: 66  Base: unknown
-collabora/whisperlive-cpu
-ghcr.io/collabora/whisperlive-cpu:latest Downloads:   Stars:   Base: unknown
-collabora/whisperlive-gpu
-ghcr.io/collabora/whisperlive-gpu:latest Downloads:   Stars:   Base: unknown
-heywillow/willow-application-server
-ghcr.io/heywillow/willow-application-server:latest Downloads:   Stars:   Base: unknown
-hound-search/hound
-ghcr.io/hound-search/hound:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
