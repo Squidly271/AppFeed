@@ -89,19 +89,29 @@ Removed from CA123
 
 Downloading Kling's Repository
 
-Already up to date.
+From https://github.com/davidjkling/unraid-templates
+   8155726..289157d  main       -> origin/main
+Updating 8155726..289157d
+Fast-forward
+ templates/ollama.xml | 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 68 insertions(+)
+ create mode 100644 templates/ollama.xml
 
 Array
 (
     [https://github.com/davidjkling/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/bunkerweb-aio.xml
-            [1] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca_profile.xml
+            [0] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ollama.xml
+            [1] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/bunkerweb-aio.xml
+            [2] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca_profile.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ollama.xml...Fatal: Incorrect characters in name
+
+Success
 Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/bunkerweb-aio.xml...Success
 Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca_profile.xml...FOUND PROFILE
 
@@ -932,9 +942,6 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
- * [new tag]         dev-0.9.10          -> dev-0.9.10
- * [new tag]         experimental-0.9.10 -> experimental-0.9.10
 Already up to date.
 
 Array
@@ -971,7 +978,77 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   4f1a69c..9cbe03d  main       -> origin/main
+Updating 4f1a69c..9cbe03d
+Fast-forward
+ server/controllers/carousel.ts                 |   9 +-
+ server/controllers/clips.ts                    |   4 +-
+ server/controllers/download.ts                 |  14 +-
+ server/controllers/groups.ts                   |  18 +--
+ server/controllers/imageViewHistory.ts         |  16 +--
+ server/controllers/library/galleries.ts        |   6 +-
+ server/controllers/library/groups.ts           |   5 +-
+ server/controllers/library/images.ts           |   9 +-
+ server/controllers/library/performers.ts       |  10 +-
+ server/controllers/library/scenes.ts           |  47 ++++---
+ server/controllers/library/studios.ts          |   5 +-
+ server/controllers/library/tags.ts             |   9 +-
+ server/controllers/playlist.ts                 |   4 +-
+ server/controllers/proxy.ts                    |   9 +-
+ server/controllers/setup.ts                    |  13 +-
+ server/controllers/stats.ts                    |   2 +-
+ server/controllers/user.ts                     | 115 +++-------------
+ server/controllers/video.ts                    |  20 +--
+ server/controllers/watchHistory.ts             |  32 ++---
+ server/eslint.config.js                        |  49 +++++--
+ server/index.ts                                |   8 +-
+ server/initializers/api.ts                     |   4 +-
+ server/jobs/downloadCleanup.ts                 |   4 +-
+ server/middleware/auth.ts                      |   4 +-
+ server/package-lock.json                       | 178 +++++++++++++++----------
+ server/package.json                            |   1 +
+ server/routes/auth.ts                          |   8 +-
+ server/routes/databaseBackup.ts                |   2 +-
+ server/routes/exclusions.ts                    |   2 +-
+ server/routes/mergeReconciliation.ts           |  14 +-
+ server/routes/sync.ts                          |  35 +++--
+ server/schemas/base.ts                         |   2 +-
+ server/scripts/generate-api-docs.ts            |   3 +-
+ server/scripts/lib/routeParser.ts              |  10 +-
+ server/scripts/lib/typeExtractor.ts            |   4 +-
+ server/services/ClipPreviewProber.ts           |   4 +-
+ server/services/ClipQueryBuilder.ts            |   5 +-
+ server/services/DownloadService.ts             |   2 +-
+ server/services/ExclusionComputationService.ts |  10 +-
+ server/services/GalleryQueryBuilder.ts         |   4 +-
+ server/services/GroupQueryBuilder.ts           |   4 +-
+ server/services/MergeReconciliationService.ts  |  16 ++-
+ server/services/PerformerQueryBuilder.ts       |   4 +-
+ server/services/RankingComputeService.ts       |   9 +-
+ server/services/SceneQueryBuilder.ts           |   4 +-
+ server/services/StashEntityService.ts          |  26 ++--
+ server/services/StashSyncService.ts            |  14 +-
+ server/services/StudioQueryBuilder.ts          |   4 +-
+ server/services/SyncScheduler.ts               |   4 +-
+ server/services/TagQueryBuilder.ts             |   4 +-
+ server/services/UserHiddenEntityService.ts     |   2 +-
+ server/services/UserStatsAggregationService.ts |  34 ++---
+ server/services/UserStatsService.ts            |  30 ++---
+ server/tsconfig.json                           |   3 +-
+ server/types/api/index.ts                      |  15 +++
+ server/types/api/library.ts                    |   9 ++
+ server/types/api/proxy.ts                      |  19 +++
+ server/types/api/user.ts                       |  90 +++++++++++++
+ server/utils/codecDetection.ts                 |   2 +-
+ server/utils/entityInstanceId.ts               |  38 +++---
+ server/utils/recoveryKey.ts                    |   3 +-
+ server/utils/routeHelpers.ts                   |  19 ++-
+ server/utils/seededRandom.ts                   |   2 +-
+ server/utils/stashUrlProxy.ts                  |   4 +-
+ 64 files changed, 604 insertions(+), 455 deletions(-)
+ create mode 100644 server/types/api/proxy.ts
+ create mode 100644 server/types/api/user.ts
 
 Array
 (
@@ -11479,7 +11556,17 @@ Processing /tmp/GitHub/repositoryClone/openspeedtest/unraid-docker-plugin/opensp
 
 Downloading uberchuckie's Repository
 
-Already up to date.
+From https://github.com/charlescng/docker-containers
+   d2b9f87..523e301  master     -> origin/master
+Updating d2b9f87..523e301
+Fast-forward
+ observium/Dockerfile       |  7 ++++---
+ observium/README.md        | 17 ++++++++++++++++-
+ observium/apache-observium | 24 ++++++++++++++++++++++++
+ observium/firstrun.sh      | 32 ++++++++++++++++++++++++++++++++
+ observium/mariadb.sh       |  3 +++
+ observium/ports.conf       |  1 +
+ 6 files changed, 80 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -14530,7 +14617,12 @@ Processing /tmp/GitHub/repositoryClone/crazyqin/unraid-templates/pt_helper/pt_he
 
 Downloading pbear's Repository
 
-Already up to date.
+From https://github.com/imTHAI/unraid-templates
+   4c45b71..5f91cf5  main       -> origin/main
+Updating 4c45b71..5f91cf5
+Fast-forward
+ rustatio/rustatio.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -15586,12 +15678,7 @@ Processing /tmp/GitHub/repositoryClone/Polemus/Unraid/RabbitMQ/RabbitMQ.xml...Su
 
 Downloading Kilrah's Repository
 
-From https://github.com/kilrah/unraid-docker-templates
-   93ca4e5..9cabb76  main       -> origin/main
-Updating 93ca4e5..9cabb76
-Fast-forward
- templates/freefilesync.xml | 7 +------
- 1 file changed, 1 insertion(+), 6 deletions(-)
+Already up to date.
 
 Array
 (
@@ -20302,8 +20389,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-jordan-dalby/bytestash
-ghcr.io/jordan-dalby/bytestash:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20458,12 +20543,12 @@ ghcr.io/jordan-dalby/bytestash:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+takitsu21/rustatio
+ghcr.io/takitsu21/rustatio Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-gabehf/koito
-gabehf/koito:latest Downloads: 75922  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20480,8 +20565,6 @@ gabehf/koito:latest Downloads: 75922  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-pcjones/mediathekarr
-pcjones/mediathekarr Downloads: 86832  Stars: 0  Base: unknown
 Privileged: 130
 
 
