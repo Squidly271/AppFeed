@@ -402,246 +402,7 @@ Success
 
 Downloading tenletter's Repository
 
-From https://github.com/softerfish/seekandwatch
-   9806c5d..2efbb70  main       -> origin/main
- * [new tag]         v1.6.3     -> v1.6.3
-Updating 9806c5d..2efbb70
-Fast-forward
- .github/workflows/pairing-validation.yml |    41 +
- .github/workflows/tests.yml              |    46 +
- README.md                                |    44 +-
- api/__init__.py                          |    14 +-
- api/helpers.py                           |     8 +-
- api/routes_backup.py                     |    18 +-
- api/routes_main.py                       |  1091 +--
- api/routes_monitoring.py                 |   228 +
- api/routes_pair.py                       |    73 +-
- api/routes_tunnel.py                     |    96 +-
- api/routes_webhook.py                    |   145 +-
- app.py                                   |  2038 +----
- auth_decorators.py                       |     6 +-
- config.py                                |    41 +-
- entrypoint.sh                            |    72 +-
- migrations/__init__.py                   |     1 +
- migrations/add_security_tables.py        |    31 +
- migrations/migration_manager.py          |   299 +
- migrations/versions.py                   |   125 +
- models.py                                |    28 +-
- requirements.txt                         |     3 +
- seekandwatch.xml                         |     2 +-
- services/CloudService.py                 |   111 +-
- services/CollectionService.py            |   644 +-
- services/IntegrationsService.py          |   109 +-
- services/Router.py                       |    27 +
- services/cache_service.py                |    92 +
- services/media_service.py                |   115 +
- services/plex_service.py                 |   307 +
- services/tmdb_service.py                 |   407 +
- static/icon.png                          |   Bin 1450762 -> 146871 bytes
- static/style.css                         | 12122 +++++++++++++++--------------
- templates/base.html                      |   128 +-
- templates/blocklist.html                 |     9 +-
- templates/calendar.html                  |     2 +-
- templates/dashboard.html                 |    74 +-
- templates/error.html                     |     2 +-
- templates/kometa.html                    |  5305 ++++++-------
- templates/login.html                     |    43 +-
- templates/logs.html                      |   384 +-
- templates/media.html                     |    44 +-
- templates/playlists.html                 |  2190 +++---
- templates/requests.html                  |     6 +-
- templates/requests_settings.html         |    48 +-
- templates/reset_password.html            |     4 +-
- templates/results.html                   |    67 +-
- templates/review.html                    |   639 +-
- templates/scripts_runner.html            |   160 +
- templates/settings.html                  |  2745 +++----
- templates/support.html                   |     2 +-
- templates/test_runner.html               |   175 +
- templates/webhook_logs.html              |   135 +
- templates/welcome_codes.html             |     4 +-
- tests/.gitkeep                           |     0
- tests/README.md                          |   323 +
- tests/TEST_INVENTORY.md                  |   517 ++
- tests/run_all_tests.py                   |    81 +
- tests/test_auth.py                       |   218 +
- tests/test_blueprint_migration.py        |   259 +
- tests/test_cache.py                      |   143 +
- tests/test_cache_integration.py          |   368 +
- tests/test_critical_fixes.py             |   353 +
- tests/test_critical_functions.py         |   311 +
- tests/test_csrf_tokens.py                |   186 +
- tests/test_helpers.py                    |   185 +
- tests/test_import_safety.py              |   392 +
- tests/test_integrity.py                  |    42 +
- tests/test_media_service.py              |   157 +
- tests/test_multi_library_collections.py  |   202 +
- tests/test_pairing_flow.py               |   230 +
- tests/test_pairing_routes.py             |    95 +
- tests/test_phase3_2e_2f_routes.py        |   504 ++
- tests/test_phase3_helpers.py             |   237 +
- tests/test_plex_service.py               |   155 +
- tests/test_rate_limiter_migration.py     |    93 +
- tests/test_request_flow.py               |   308 +
- tests/test_security_changes.py           |   341 +
- tests/test_security_fixes.py             |   246 +
- tests/test_smoke_runtime.py              |   178 +
- tests/test_system.py                     |   194 +
- tests/test_thread_safe_cache.py          |   222 +
- tests/test_tmdb_service.py               |   122 +
- tests/test_unraid_compatibility.py       |   238 +
- tests/test_url_contracts.py              |   105 +
- tests/test_validators.py                 |   108 +
- tests/verify_phase2.py                   |   280 +
- tests/verify_routes.py                   |   188 +
- tunnel/__init__.py                       |   159 +-
- tunnel/background_tasks.py               |    94 +
- tunnel/binary.py                         |   550 +-
- tunnel/cache.py                          |   237 +
- tunnel/config.py                         |    68 +-
- tunnel/context_safety.py                 |   172 +
- tunnel/db_helpers.py                     |   105 +
- tunnel/error_messages.py                 |   228 +-
- tunnel/exceptions.py                     |    66 +-
- tunnel/feature_flags.py                  |   207 +
- tunnel/health.py                         |   625 +-
- tunnel/helpers.py                        |   151 +
- tunnel/manager.py                        |  3320 ++++----
- tunnel/message_helpers.py                |    42 +
- tunnel/migration_helpers.py              |   127 +
- tunnel/monitoring.py                     |   329 +
- tunnel/rate_limiter.py                   |    14 +
- tunnel/registrar.py                      |   438 +-
- tunnel/secure_test_runner.py             |   161 +
- tunnel/security.py                       |   312 +-
- tunnel/session_helpers.py                |   100 +
- tunnel/system.py                         |    99 +
- tunnel/template_helpers.py               |    66 +
- tunnel/user_helpers.py                   |    55 +
- tunnel/validators.py                     |   196 +
- tunnel/version_check.py                  |   133 +
- tunnel/webhook_security.py               |   105 +
- utils.py                                 |   213 +-
- utils/__init__.py                        |   145 +
- utils/background_tasks.py                |    94 +
- utils/cache.py                           |   237 +
- utils/context_safety.py                  |   172 +
- utils/db_helpers.py                      |   105 +
- utils/feature_flags.py                   |   207 +
- utils/helpers.py                         |   151 +
- utils/message_helpers.py                 |    42 +
- utils/migration_helpers.py               |   127 +
- utils/monitoring.py                      |   329 +
- utils/rate_limiter.py                    |    14 +
- utils/secure_test_runner.py              |   161 +
- utils/session_helpers.py                 |   100 +
- utils/system.py                          |    99 +
- utils/template_helpers.py                |    66 +
- utils/user_helpers.py                    |    55 +
- utils/validators.py                      |   196 +
- utils/version_check.py                   |   133 +
- utils/webhook_security.py                |   105 +
- web/__init__.py                          |     7 +
- web/routes_auth.py                       |   167 +
- web/routes_generate.py                   |   807 ++
- web/routes_pages.py                      |   238 +
- web/routes_requests.py                   |   223 +
- web/routes_settings.py                   |   241 +
- web/routes_utility.py                    |   190 +
- 141 files changed, 33122 insertions(+), 17792 deletions(-)
- create mode 100644 .github/workflows/pairing-validation.yml
- create mode 100644 .github/workflows/tests.yml
- create mode 100644 api/routes_monitoring.py
- create mode 100644 migrations/__init__.py
- create mode 100644 migrations/add_security_tables.py
- create mode 100644 migrations/migration_manager.py
- create mode 100644 migrations/versions.py
- create mode 100644 services/Router.py
- create mode 100644 services/cache_service.py
- create mode 100644 services/media_service.py
- create mode 100644 services/plex_service.py
- create mode 100644 services/tmdb_service.py
- create mode 100644 templates/scripts_runner.html
- create mode 100644 templates/test_runner.html
- create mode 100644 templates/webhook_logs.html
- create mode 100644 tests/.gitkeep
- create mode 100644 tests/README.md
- create mode 100644 tests/TEST_INVENTORY.md
- create mode 100644 tests/run_all_tests.py
- create mode 100644 tests/test_auth.py
- create mode 100644 tests/test_blueprint_migration.py
- create mode 100644 tests/test_cache.py
- create mode 100644 tests/test_cache_integration.py
- create mode 100644 tests/test_critical_fixes.py
- create mode 100644 tests/test_critical_functions.py
- create mode 100644 tests/test_csrf_tokens.py
- create mode 100644 tests/test_helpers.py
- create mode 100644 tests/test_import_safety.py
- create mode 100644 tests/test_integrity.py
- create mode 100644 tests/test_media_service.py
- create mode 100644 tests/test_multi_library_collections.py
- create mode 100644 tests/test_pairing_flow.py
- create mode 100644 tests/test_pairing_routes.py
- create mode 100644 tests/test_phase3_2e_2f_routes.py
- create mode 100644 tests/test_phase3_helpers.py
- create mode 100644 tests/test_plex_service.py
- create mode 100644 tests/test_rate_limiter_migration.py
- create mode 100644 tests/test_request_flow.py
- create mode 100644 tests/test_security_changes.py
- create mode 100644 tests/test_security_fixes.py
- create mode 100644 tests/test_smoke_runtime.py
- create mode 100644 tests/test_system.py
- create mode 100644 tests/test_thread_safe_cache.py
- create mode 100644 tests/test_tmdb_service.py
- create mode 100644 tests/test_unraid_compatibility.py
- create mode 100644 tests/test_url_contracts.py
- create mode 100644 tests/test_validators.py
- create mode 100644 tests/verify_phase2.py
- create mode 100644 tests/verify_routes.py
- create mode 100644 tunnel/background_tasks.py
- create mode 100644 tunnel/cache.py
- create mode 100644 tunnel/context_safety.py
- create mode 100644 tunnel/db_helpers.py
- create mode 100644 tunnel/feature_flags.py
- create mode 100644 tunnel/helpers.py
- create mode 100644 tunnel/message_helpers.py
- create mode 100644 tunnel/migration_helpers.py
- create mode 100644 tunnel/monitoring.py
- create mode 100644 tunnel/rate_limiter.py
- create mode 100644 tunnel/secure_test_runner.py
- create mode 100644 tunnel/session_helpers.py
- create mode 100644 tunnel/system.py
- create mode 100644 tunnel/template_helpers.py
- create mode 100644 tunnel/user_helpers.py
- create mode 100644 tunnel/validators.py
- create mode 100644 tunnel/version_check.py
- create mode 100644 tunnel/webhook_security.py
- create mode 100644 utils/__init__.py
- create mode 100644 utils/background_tasks.py
- create mode 100644 utils/cache.py
- create mode 100644 utils/context_safety.py
- create mode 100644 utils/db_helpers.py
- create mode 100644 utils/feature_flags.py
- create mode 100644 utils/helpers.py
- create mode 100644 utils/message_helpers.py
- create mode 100644 utils/migration_helpers.py
- create mode 100644 utils/monitoring.py
- create mode 100644 utils/rate_limiter.py
- create mode 100644 utils/secure_test_runner.py
- create mode 100644 utils/session_helpers.py
- create mode 100644 utils/system.py
- create mode 100644 utils/template_helpers.py
- create mode 100644 utils/user_helpers.py
- create mode 100644 utils/validators.py
- create mode 100644 utils/version_check.py
- create mode 100644 utils/webhook_security.py
- create mode 100644 web/__init__.py
- create mode 100644 web/routes_auth.py
- create mode 100644 web/routes_generate.py
- create mode 100644 web/routes_pages.py
- create mode 100644 web/routes_requests.py
- create mode 100644 web/routes_settings.py
- create mode 100644 web/routes_utility.py
+Already up to date.
 
 Array
 (
@@ -960,23 +721,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   b468791..2778520  main       -> origin/main
-Updating b468791..2778520
-Fast-forward
- NeXroll/RELEASE_NOTES_v1.11.0-beta.7.md            | 14 ++++
- NeXroll/backend/main.py                            | 37 ++++++++++-
- NeXroll/backend/models.py                          |  1 +
- NeXroll/frontend/build/asset-manifest.json         |  6 +-
- NeXroll/frontend/build/index.html                  |  2 +-
- .../js/{main.89c9cf52.js => main.11c901fd.js}      |  6 +-
- ...js.LICENSE.txt => main.11c901fd.js.LICENSE.txt} |  0
- .../{main.89c9cf52.js.map => main.11c901fd.js.map} |  2 +-
- NeXroll/frontend/src/App.js                        | 75 +++++++++++++++++++---
- 9 files changed, 124 insertions(+), 19 deletions(-)
- rename NeXroll/frontend/build/static/js/{main.89c9cf52.js => main.11c901fd.js} (62%)
- rename NeXroll/frontend/build/static/js/{main.89c9cf52.js.LICENSE.txt => main.11c901fd.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.89c9cf52.js.map => main.11c901fd.js.map} (54%)
+Already up to date.
 
 Array
 (
@@ -5422,7 +5167,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   258dfc41..8d131fd8  main       -> origin/main
+Updating 258dfc41..8d131fd8
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 25 insertions(+), 25 deletions(-)
 
 Array
 (
@@ -20668,9 +20442,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-Tagged - Can't determine last update
-seafileltd/notification-server
-seafileltd/notification-server:12.0-latest Downloads: 39809  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
