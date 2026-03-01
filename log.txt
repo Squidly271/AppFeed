@@ -580,7 +580,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   f334193..a61f6a2  main       -> origin/main
+Updating f334193..a61f6a2
+Fast-forward
+ app/api/stockworks/filament-colors/route.ts | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -970,7 +975,56 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-Already up to date.
+From https://github.com/carrotwaxr/peek-stash-browser
+   9cbe03d..a16194e  main       -> origin/main
+Updating 9cbe03d..a16194e
+Fast-forward
+ server/controllers/carousel.ts                |  14 +-
+ server/controllers/clips.ts                   |  59 ++--
+ server/controllers/customTheme.ts             |  13 +-
+ server/controllers/download.ts                |  73 ++--
+ server/controllers/groups.ts                  |  62 ++--
+ server/controllers/library/performers.ts      |   2 +-
+ server/controllers/library/scenes.ts          |   2 +-
+ server/controllers/library/studios.ts         |   2 +-
+ server/controllers/library/tags.ts            |   2 +-
+ server/controllers/playlist.ts                |  37 +--
+ server/controllers/proxy.ts                   |  15 +-
+ server/controllers/stats.ts                   |   8 +-
+ server/controllers/timelineController.ts      |  23 +-
+ server/controllers/user.ts                    | 390 +++++++++++++---------
+ server/controllers/video.ts                   |  21 +-
+ server/initializers/api.ts                    |   7 +-
+ server/middleware/errorHandler.ts             |  67 ++++
+ server/routes/auth.ts                         |  11 +-
+ server/services/GalleryQueryBuilder.ts        |  37 +--
+ server/services/GroupQueryBuilder.ts          |  32 +-
+ server/services/PerformerQueryBuilder.ts      |  36 +-
+ server/services/SceneQueryBuilder.ts          |  53 +--
+ server/services/StudioQueryBuilder.ts         |  17 +-
+ server/services/TagQueryBuilder.ts            |  34 +-
+ server/tests/controllers/download.test.ts     |   7 +-
+ server/tests/controllers/userFeatures.test.ts |   3 +-
+ server/types/api/clips.ts                     |  64 ++++
+ server/types/api/download.ts                  | 128 +++++++
+ server/types/api/groups.ts                    | 187 +++++++++++
+ server/types/api/index.ts                     | 128 +++++++
+ server/types/api/stats.ts                     |  75 +++++
+ server/types/api/timeline.ts                  |  32 ++
+ server/types/api/user.ts                      | 462 ++++++++++++++++++++++++++
+ server/types/internal/queryRows.ts            | 284 ++++++++++++++++
+ server/utils/responses.ts                     |  46 +++
+ server/utils/sqlHelpers.ts                    |  27 ++
+ 36 files changed, 2005 insertions(+), 455 deletions(-)
+ create mode 100644 server/middleware/errorHandler.ts
+ create mode 100644 server/types/api/clips.ts
+ create mode 100644 server/types/api/download.ts
+ create mode 100644 server/types/api/groups.ts
+ create mode 100644 server/types/api/stats.ts
+ create mode 100644 server/types/api/timeline.ts
+ create mode 100644 server/types/internal/queryRows.ts
+ create mode 100644 server/utils/responses.ts
+ create mode 100644 server/utils/sqlHelpers.ts
 
 Array
 (
@@ -20458,12 +20512,24 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-coderluii/channelwatch
-coderluii/channelwatch:latest Downloads: 859  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+rfsbraz/deleterr
+rfsbraz/deleterr:latest Downloads: 14823  Stars: 2  Base: unknown
+mrmn/pdfding
+mrmn/pdfding:latest Downloads: 209300  Stars: 3  Base: unknown
+tiehfood/thrifty-api
+tiehfood/thrifty-api:latest Downloads: 1165  Stars: 0  Base: unknown
+tiehfood/thrifty-ui
+tiehfood/thrifty-ui:latest Downloads: 1315  Stars: 0  Base: unknown
+chadwpalm/lumunarr
+chadwpalm/lumunarr:latest Downloads: 15237  Stars: 0  Base: unknown
+clidey/whodb
+clidey/whodb:latest Downloads: 192374  Stars: 3  Base: unknown
+remyfv/woli-webgui
+remyfv/woli-webgui:latest Downloads: 378  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20478,8 +20544,6 @@ coderluii/channelwatch:latest Downloads: 859  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-bfritscher/typesense-dashboard
-ghcr.io/bfritscher/typesense-dashboard:latest Downloads: 30087  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 130
