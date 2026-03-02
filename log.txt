@@ -90,12 +90,11 @@ Removed from CA123
 Downloading Kling's Repository
 
 From https://github.com/davidjkling/unraid-templates
-   3fcf783..636ed97  main       -> origin/main
-Updating 3fcf783..636ed97
+   636ed97..dbf5aee  main       -> origin/main
+Updating 636ed97..dbf5aee
 Fast-forward
- templates/open-webui.xml | 53 ++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 53 insertions(+)
- create mode 100644 templates/open-webui.xml
+ templates/open-webui.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -943,8 +942,18 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
- * [new tag]         dev-0.9.11          -> dev-0.9.11
- * [new tag]         experimental-0.9.12 -> experimental-0.9.12
+ * [new tag]         v0.9.10-dev          -> v0.9.10-dev
+ * [new tag]         v0.9.10-experimental -> v0.9.10-experimental
+ * [new tag]         v0.9.11-dev          -> v0.9.11-dev
+ * [new tag]         v0.9.12-experimental -> v0.9.12-experimental
+ * [new tag]         v0.9.6-dev           -> v0.9.6-dev
+ * [new tag]         v0.9.6-experimental  -> v0.9.6-experimental
+ * [new tag]         v0.9.7-dev           -> v0.9.7-dev
+ * [new tag]         v0.9.7-experimental  -> v0.9.7-experimental
+ * [new tag]         v0.9.8-dev           -> v0.9.8-dev
+ * [new tag]         v0.9.8-experimental  -> v0.9.8-experimental
+ * [new tag]         v0.9.9-dev           -> v0.9.9-dev
+ * [new tag]         v0.9.9-experimental  -> v0.9.9-experimental
 Already up to date.
 
 Array
@@ -981,30 +990,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   4870b29..4a1f603  main       -> origin/main
-Updating 4870b29..4a1f603
-Fast-forward
- e2e/global-setup.ts                                |  12 +-
- e2e/home.spec.ts                                   | 132 +++++++
- e2e/playlists.spec.ts                              | 269 +++++++++++++++
- e2e/scenes.spec.ts                                 | 184 ++++++++++
- e2e/search-filter.spec.ts                          | 121 +++++++
- e2e/settings-theme.spec.ts                         | 202 +++++++++++
- .../integration/perf/api-benchmarks.perf.test.ts   | 380 +++++++++++++++++++++
- server/integration/perf/measureEndpoint.ts         | 102 ++++++
- server/integration/perf/vitest.perf.config.ts      |  24 ++
- server/package.json                                |   1 +
- shared/package.json                                |  52 +++
- 11 files changed, 1478 insertions(+), 1 deletion(-)
- create mode 100644 e2e/home.spec.ts
- create mode 100644 e2e/playlists.spec.ts
- create mode 100644 e2e/scenes.spec.ts
- create mode 100644 e2e/search-filter.spec.ts
- create mode 100644 e2e/settings-theme.spec.ts
- create mode 100644 server/integration/perf/api-benchmarks.perf.test.ts
- create mode 100644 server/integration/perf/measureEndpoint.ts
- create mode 100644 server/integration/perf/vitest.perf.config.ts
+Already up to date.
 
 Array
 (
@@ -4312,173 +4298,7 @@ Success
 
 Downloading ciuse99's Repository
 
-From https://github.com/giuseppe99barchetta/SuggestArr
-   e2cad14..0a9d539  main       -> origin/main
- * [new tag]         v2.4.0     -> v2.4.0
-Updating e2cad14..0a9d539
-Fast-forward
- .github/workflows/ci.yml                           |    2 +
- .github/workflows/docker_hub_build.yml             |    8 +
- .github/workflows/docker_hub_build_nightly.yml     |    3 +
- api_service/app.py                                 |  103 +-
- api_service/auth/__init__.py                       |    0
- api_service/auth/auth_service.py                   |  186 ++++
- api_service/auth/limiter.py                        |   26 +
- api_service/auth/middleware.py                     |  271 +++++
- api_service/auth/secret_key.py                     |   95 ++
- api_service/automate_process.py                    |   26 +-
- api_service/blueprints/admin/__init__.py           |    0
- api_service/blueprints/admin/routes.py             |  225 ++++
- api_service/blueprints/ai_search/routes.py         |    7 +-
- api_service/blueprints/auth/__init__.py            |    0
- api_service/blueprints/auth/routes.py              |  452 ++++++++
- api_service/blueprints/automation/routes.py        |    4 +
- api_service/blueprints/config/routes.py            |  232 +++-
- api_service/blueprints/health/__init__.py          |    1 +
- api_service/blueprints/health/routes.py            |  188 ++++
- api_service/blueprints/jellyfin/routes.py          |  157 +--
- api_service/blueprints/jobs/routes.py              |  325 +++++-
- api_service/blueprints/omdb/routes.py              |    8 +-
- api_service/blueprints/plex/routes.py              |  115 +-
- api_service/blueprints/seer/routes.py              |  215 ++--
- api_service/blueprints/tmdb/routes.py              |  509 ++++++---
- api_service/blueprints/users/__init__.py           |    0
- api_service/blueprints/users/routes.py             |  510 +++++++++
- api_service/config/config.py                       |   15 +-
- api_service/db/adapters/sqlite_adapter.py          |    2 +-
- api_service/db/connection_pool.py                  |    3 +-
- api_service/db/database_manager.py                 |  863 ++++++++++++++-
- api_service/exceptions/api_exceptions.py           |    6 +-
- api_service/handler/jellyfin_handler.py            |  153 ++-
- api_service/handler/plex_handler.py                |  152 ++-
- api_service/jobs/discover_automation.py            |  120 ++-
- api_service/jobs/queue_worker.py                   |  139 +--
- api_service/jobs/recommendation_automation.py      |  140 ++-
- api_service/requirements.txt                       |    9 +-
- .../services/ai_search/ai_search_service.py        |  135 +--
- api_service/services/config_service.py             |  181 ++++
- api_service/services/jellyfin/jellyfin_client.py   |  338 ++++--
- api_service/services/jellyseer/seer_client.py      |  151 ++-
- api_service/services/llm/llm_service.py            |  475 +++++----
- api_service/services/llm/schemas.py                |   78 ++
- api_service/services/omdb/omdb_client.py           |   82 +-
- api_service/services/plex/plex_client.py           |  185 ++--
- api_service/services/tmdb/tmdb_client.py           |  508 ++++++---
- api_service/services/tmdb/tmdb_discover.py         |  118 ++-
- api_service/test/test_ai_search_service.py         |  557 ++++++++++
- api_service/test/test_auth.py                      |  984 +++++++++++++++++
- api_service/test/test_automate_process.py          |  539 ++++++++++
- api_service/test/test_config.py                    |  201 +++-
- api_service/test/test_db_users.py                  |  654 ++++++++++++
- api_service/test/test_error_handlers.py            |  614 +++++++++++
- api_service/test/test_jellyfin_client.py           |  407 +++++++
- api_service/test/test_llm_service.py               |  475 +++++++++
- api_service/test/test_plex_client.py               |  319 ++++++
- api_service/test/test_plex_routes.py               |   66 ++
- api_service/test/test_plex_services.py             |  298 ++++++
- api_service/test/test_secret_key.py                |  285 +++++
- api_service/test/test_seer_client.py               |  464 ++++++++
- api_service/test/test_tmdb_client.py               |  563 ++++++++++
- api_service/test/test_tmdb_discover.py             |  337 ++++++
- api_service/test/test_users_media_links.py         |  525 +++++++++
- api_service/test/test_users_routes.py              |  400 +++++++
- api_service/utils/ssrf_guard.py                    |   70 ++
- client/package.json                                |    4 +-
- client/src/api/api.js                              |   86 +-
- client/src/api/jobsApi.js                          |   48 +
- client/src/api/tmdbApi.js                          |   52 +-
- client/src/assets/logos/emby-logo.png              |  Bin 5508 -> 0 bytes
- client/src/assets/logos/emby-logo.svg              |   10 +
- client/src/assets/logos/jellyfin-logo.png          |  Bin 37118 -> 0 bytes
- client/src/assets/logos/jellyfin-logo.svg          |    5 +
- client/src/assets/logos/plex-logo.png              |  Bin 62908 -> 0 bytes
- client/src/assets/logos/plex-logo.svg              |    4 +
- client/src/assets/styles/dashboardPage.css         |   54 +-
- client/src/components/ConfigWizard.vue             | 1114 ++++++++++++++++----
- client/src/components/DashboardPage.vue            |  236 ++++-
- client/src/components/LoginPage.vue                |  319 ++++++
- client/src/components/OnboardingTour.vue           |  469 ++++++++
- client/src/components/RequestsPage.vue             |    7 +-
- .../components/configWizard/AdditionalSettings.vue |  223 ----
- .../configWizard/ContentFilterSettings.vue         |  155 ++-
- client/src/components/configWizard/DbConfig.vue    |  300 ------
- .../src/components/configWizard/JellyfinConfig.vue |  598 -----------
- .../configWizard/MediaServiceSelection.vue         |   87 +-
- client/src/components/configWizard/OmdbConfig.vue  |  446 --------
- client/src/components/configWizard/PlexConfig.vue  |  516 ---------
- .../src/components/configWizard/SchedulingStep.vue |  167 +++
- client/src/components/configWizard/SeerConfig.vue  |  826 ---------------
- client/src/components/configWizard/TmdbConfig.vue  |  383 -------
- client/src/components/settings/AiSearchPage.vue    |   18 +-
- .../src/components/settings/SettingsAdvanced.vue   |   84 +-
- .../src/components/settings/SettingsDatabase.vue   |   74 +-
- client/src/components/settings/SettingsJobs.vue    |  487 ++++++++-
- .../src/components/settings/SettingsRequests.vue   |   44 -
- .../src/components/settings/SettingsServices.vue   |  461 ++++++--
- client/src/components/settings/UserManagement.vue  |  785 ++++++++++++++
- client/src/components/settings/UserProfile.vue     |  747 +++++++++++++
- .../components/settings/jobs/DryRunResultModal.vue |  765 ++++++++++++++
- client/src/components/settings/jobs/JobFilters.vue |  117 +-
- client/src/components/settings/jobs/JobModal.vue   |   32 +-
- .../settings/jobs/RecommendationFilters.vue        |    6 +-
- client/src/components/wizard/WizardCompletion.vue  |    8 +-
- client/src/composables/useAuth.js                  |  198 ++++
- client/src/composables/useBackgroundImage.js       |   10 +-
- client/src/composables/useConfigImport.js          |    9 +-
- client/src/router/index.js                         |   52 +-
- 109 files changed, 19950 insertions(+), 5335 deletions(-)
- create mode 100644 api_service/auth/__init__.py
- create mode 100644 api_service/auth/auth_service.py
- create mode 100644 api_service/auth/limiter.py
- create mode 100644 api_service/auth/middleware.py
- create mode 100644 api_service/auth/secret_key.py
- create mode 100644 api_service/blueprints/admin/__init__.py
- create mode 100644 api_service/blueprints/admin/routes.py
- create mode 100644 api_service/blueprints/auth/__init__.py
- create mode 100644 api_service/blueprints/auth/routes.py
- create mode 100644 api_service/blueprints/health/__init__.py
- create mode 100644 api_service/blueprints/health/routes.py
- create mode 100644 api_service/blueprints/users/__init__.py
- create mode 100644 api_service/blueprints/users/routes.py
- create mode 100644 api_service/services/config_service.py
- create mode 100644 api_service/services/llm/schemas.py
- create mode 100644 api_service/test/test_ai_search_service.py
- create mode 100644 api_service/test/test_auth.py
- create mode 100644 api_service/test/test_automate_process.py
- create mode 100644 api_service/test/test_db_users.py
- create mode 100644 api_service/test/test_error_handlers.py
- create mode 100644 api_service/test/test_jellyfin_client.py
- create mode 100644 api_service/test/test_llm_service.py
- create mode 100644 api_service/test/test_plex_client.py
- create mode 100644 api_service/test/test_plex_routes.py
- create mode 100644 api_service/test/test_plex_services.py
- create mode 100644 api_service/test/test_secret_key.py
- create mode 100644 api_service/test/test_seer_client.py
- create mode 100644 api_service/test/test_tmdb_client.py
- create mode 100644 api_service/test/test_tmdb_discover.py
- create mode 100644 api_service/test/test_users_media_links.py
- create mode 100644 api_service/test/test_users_routes.py
- create mode 100644 api_service/utils/ssrf_guard.py
- delete mode 100644 client/src/assets/logos/emby-logo.png
- create mode 100644 client/src/assets/logos/emby-logo.svg
- delete mode 100644 client/src/assets/logos/jellyfin-logo.png
- create mode 100644 client/src/assets/logos/jellyfin-logo.svg
- delete mode 100644 client/src/assets/logos/plex-logo.png
- create mode 100644 client/src/assets/logos/plex-logo.svg
- create mode 100644 client/src/components/LoginPage.vue
- create mode 100644 client/src/components/OnboardingTour.vue
- delete mode 100644 client/src/components/configWizard/AdditionalSettings.vue
- delete mode 100644 client/src/components/configWizard/DbConfig.vue
- delete mode 100644 client/src/components/configWizard/JellyfinConfig.vue
- delete mode 100644 client/src/components/configWizard/OmdbConfig.vue
- delete mode 100644 client/src/components/configWizard/PlexConfig.vue
- create mode 100644 client/src/components/configWizard/SchedulingStep.vue
- delete mode 100644 client/src/components/configWizard/SeerConfig.vue
- delete mode 100644 client/src/components/configWizard/TmdbConfig.vue
- create mode 100644 client/src/components/settings/UserManagement.vue
- create mode 100644 client/src/components/settings/UserProfile.vue
- create mode 100644 client/src/components/settings/jobs/DryRunResultModal.vue
- create mode 100644 client/src/composables/useAuth.js
+Already up to date.
 
 Array
 (
@@ -5996,23 +5816,6 @@ Port referenced in webUI does not correspond with a container port defined.  Ent
 Success
 
 
-Downloading SlrG's Repository
-
-Already up to date.
-
-Array
-(
-    [https://github.com/SlrG/docker-templates] => Array
-        (
-            [0] => /tmp/GitHub/repositoryClone/SlrG/docker-templates/SlrG/glFTPd.xml
-        )
-
-)
-   Success!
-Repo Branch: master
-Processing /tmp/GitHub/repositoryClone/SlrG/docker-templates/SlrG/glFTPd.xml...Success
-
-
 Downloading coppit's Repository
 
 Already up to date.
@@ -6207,7 +6010,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   9b42013..298d5f9  main       -> origin/main
+Updating 9b42013..298d5f9
+Fast-forward
+ unraid/mariadb.xml | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -12118,7 +11926,14 @@ Processing /tmp/GitHub/repositoryClone/DanRegalia/UNRAID/apache-hopweb-dev-unrai
 
 Downloading Official Unraid Repository
 
-Already up to date.
+From https://github.com/unraid/language-templates
+   81faa00..effd8e7  master     -> origin/master
+Updating 81faa00..effd8e7
+Fast-forward
+ limetech/lang-de_DE.xml |  2 +-
+ limetech/lang-ja_JA.XML | 14 ++++++++++++++
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+ create mode 100644 limetech/lang-ja_JA.XML
 
 Array
 (
@@ -20429,10 +20244,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
-open-webui/open-webui
-ghcr.io/open-webui/open-webui Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/open-webui/open-webui
-Killed
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
@@ -20646,6 +20457,9 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/kata.runtime/master/plugins/kata.runtime.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
+Tagged - Can't determine last update
+caddy
+caddy:2-alpine Downloads: 676092812  Stars: 944  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
@@ -20670,6 +20484,12 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+fuzzygrim/yamtrack
+ghcr.io/fuzzygrim/yamtrack Downloads:   Stars:   Base: unknown
+allaboutduncan/comic-utils-web
+allaboutduncan/comic-utils-web:latest Downloads: 42798  Stars: 0  Base: unknown
+davidewiest/reader
+davidewiest/reader Downloads: 19746  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20684,9 +20504,6 @@ Killed
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-Tagged - Can't determine last update
-jnbarlow/monero-nodeboard
-jnbarlow/monero-nodeboard:main Downloads: 542  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 132
