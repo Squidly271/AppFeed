@@ -108,15 +108,7 @@ Removed from CA123
 
 Downloading Kling's Repository
 
-From https://github.com/davidjkling/unraid-templates
-   8680049..abbbd9f  main       -> origin/main
-Updating 8680049..abbbd9f
-Fast-forward
- templates/ollama.xml     | 71 ------------------------------------------------
- templates/open-webui.xml | 64 -------------------------------------------
- 2 files changed, 135 deletions(-)
- delete mode 100644 templates/ollama.xml
- delete mode 100644 templates/open-webui.xml
+Already up to date.
 
 Array
 (
@@ -251,65 +243,7 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-From https://github.com/kikootwo/ReadMeABook
-   3ee67c8..bfd624e  main       -> origin/main
- * [new tag]         v1.0.16    -> v1.0.16
-Updating 3ee67c8..bfd624e
-Fast-forward
- package.json                                       |   2 +-
- .../migration.sql                                  |   2 +
- prisma/schema.prisma                               |   3 +-
- .../admin/components/AdjustSearchTermsModal.tsx    | 154 ++++++++++++
- src/app/admin/components/RecentRequestsTable.tsx   |  41 +++-
- .../admin/components/RequestActionsDropdown.tsx    |  97 +++++++-
- .../settings/tabs/BookDateTab/BookDateTab.tsx      |   3 +-
- src/app/api/admin/manual-import/route.ts           |   4 +-
- .../admin/requests/[id]/retry-download/route.ts    | 271 +++++++++++++++++++++
- .../api/admin/requests/[id]/search-terms/route.ts  | 133 ++++++++++
- src/app/api/admin/requests/route.ts                |   2 +
- src/app/api/authors/[asin]/books/route.ts          |  14 +-
- src/app/api/bookdate/config/route.ts               |   6 +-
- src/app/api/bookdate/test-connection/route.ts      |  52 +++-
- .../api/requests/[id]/interactive-search/route.ts  |   4 +-
- src/app/api/series/[asin]/route.ts                 |  10 +-
- src/app/authors/[asin]/page.tsx                    |  54 +++-
- src/app/page.tsx                                   |  47 ++--
- src/app/search/page.tsx                            |  78 +++---
- src/app/series/[asin]/page.tsx                     |  58 ++++-
- src/app/setup/steps/BookDateStep.tsx               |   3 +-
- src/components/audiobooks/ManualImportBrowser.tsx  |   6 +
- .../audiobooks/manual-import/ConfirmPhase.tsx      |  28 +++
- .../requests/InteractiveTorrentSearchModal.tsx     |   8 +-
- src/components/ui/HideAvailableToggle.tsx          |  81 ++++++
- src/components/ui/LoadMoreBar.tsx                  |  82 +++++++
- src/components/ui/SectionToolbar.tsx               | 175 +++++++++++++
- src/contexts/PreferencesContext.tsx                |  28 ++-
- src/lib/bookdate/helpers.ts                        |  70 +++++-
- src/lib/hooks/useAudiobooks.ts                     |  62 ++++-
- src/lib/hooks/useAuthors.ts                        |  62 ++++-
- src/lib/hooks/useSeries.ts                         |  62 ++++-
- src/lib/integrations/audible-series.ts             |  15 +-
- src/lib/integrations/audible.service.ts            | 185 +++++++-------
- src/lib/processors/download-torrent.processor.ts   |  26 +-
- src/lib/processors/monitor-download.processor.ts   | 126 +++++++---
- src/lib/processors/organize-files.processor.ts     |  76 +++++-
- src/lib/processors/search-indexers.processor.ts    |  15 +-
- src/lib/services/job-queue.service.ts              |  33 ++-
- .../notification/providers/apprise.provider.ts     |  24 +-
- src/lib/utils/connection-errors.ts                 |  80 ++++++
- .../components/RequestActionsDropdown.test.tsx     |   4 +
- tests/app/search.page.test.tsx                     |  68 ++++--
- tests/lib/hooks/useAudiobooks.test.tsx             |  25 +-
- tests/services/apprise.provider.test.ts            |  96 ++++++++
- 45 files changed, 2156 insertions(+), 319 deletions(-)
- create mode 100644 prisma/migrations/20260302000000_add_custom_search_terms/migration.sql
- create mode 100644 src/app/admin/components/AdjustSearchTermsModal.tsx
- create mode 100644 src/app/api/admin/requests/[id]/retry-download/route.ts
- create mode 100644 src/app/api/admin/requests/[id]/search-terms/route.ts
- create mode 100644 src/components/ui/HideAvailableToggle.tsx
- create mode 100644 src/components/ui/LoadMoreBar.tsx
- create mode 100644 src/components/ui/SectionToolbar.tsx
- create mode 100644 src/lib/utils/connection-errors.ts
+Already up to date.
 
 Array
 (
@@ -485,7 +419,9 @@ Success
 
 Downloading tenletter's Repository
 
-Already up to date.
+From https://github.com/softerfish/seekandwatch
+ + 2efbb70...a86063b main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
@@ -861,13 +797,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   daf1225..d55d9e4  main       -> origin/main
-Updating daf1225..d55d9e4
-Fast-forward
- package-lock.json | 130 ++++++++++++------------------------------------------
- package.json      |   2 +-
- 2 files changed, 29 insertions(+), 103 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1059,854 +989,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   4a1f603..1324593  main       -> origin/main
-Updating 4a1f603..1324593
-Fast-forward
- .github/workflows/ci.yml                           |    4 +
- CLAUDE.md                                          |    6 +-
- client/eslint.config.js                            |   18 +-
- client/index.html                                  |    2 +-
- client/package-lock.json                           |  679 ++++++++-----
- client/package.json                                |    9 +-
- client/src/{App.jsx => App.tsx}                    |  113 +--
- client/src/api/admin.ts                            |   63 ++
- client/src/api/client.ts                           |  155 +++
- client/src/api/clips.ts                            |   49 +
- client/src/api/image-view-history.ts               |   15 +
- client/src/api/index.ts                            |   63 ++
- client/src/api/library.ts                          |  238 +++++
- client/src/api/playlists.ts                        |   16 +
- client/src/api/queryClient.ts                      |   41 +
- client/src/api/queryKeys.ts                        |  123 +++
- client/src/api/ratings.ts                          |   33 +
- client/src/api/setup.ts                            |   34 +
- client/src/api/watch-history.ts                    |    8 +
- .../branding/{PeekLogo.jsx => PeekLogo.tsx}        |    4 +-
- .../cards/{ClipCard.jsx => ClipCard.tsx}           |   16 +-
- .../{ClipCardPreview.jsx => ClipCardPreview.tsx}   |    2 +-
- .../cards/{GalleryCard.jsx => GalleryCard.tsx}     |   14 +-
- .../cards/{GroupCard.jsx => GroupCard.tsx}         |   12 +-
- .../cards/{ImageCard.jsx => ImageCard.tsx}         |   14 +-
- .../cards/{PerformerCard.jsx => PerformerCard.tsx} |   14 +-
- .../cards/{StudioCard.jsx => StudioCard.tsx}       |   12 +-
- .../components/cards/{TagCard.jsx => TagCard.tsx}  |   12 +-
- client/src/components/cards/index.js               |    7 -
- client/src/components/cards/index.ts               |    7 +
- .../{CarouselBuilder.jsx => CarouselBuilder.tsx}   |   12 +-
- .../{CarouselPreview.jsx => CarouselPreview.tsx}   |    4 +-
- .../{IconPicker.jsx => IconPicker.tsx}             |    2 +-
- .../{IconPickerButton.jsx => IconPickerButton.tsx} |    2 +-
- .../{RuleEditor.jsx => RuleEditor.tsx}             |    6 +-
- .../{carouselIcons.js => carouselIcons.ts}         |    0
- .../clip-search/{ClipGrid.jsx => ClipGrid.tsx}     |    6 +-
- .../clip-search/{ClipSearch.jsx => ClipSearch.tsx} |   20 +-
- .../clips/{ClipList.jsx => ClipList.tsx}           |    2 +-
- .../{FolderBreadcrumb.jsx => FolderBreadcrumb.tsx} |    0
- .../folder/{FolderCard.jsx => FolderCard.tsx}      |    4 +-
- ...FolderTreeSidebar.jsx => FolderTreeSidebar.tsx} |    2 +-
- .../folder/{FolderView.jsx => FolderView.tsx}      |   12 +-
- client/src/components/folder/index.js              |    5 -
- client/src/components/folder/index.ts              |    5 +
- .../grids/{GalleryGrid.jsx => GalleryGrid.tsx}     |    4 +-
- .../grids/{GroupGrid.jsx => GroupGrid.tsx}         |    4 +-
- .../grids/{ImageGrid.jsx => ImageGrid.tsx}         |    4 +-
- .../grids/{PerformerGrid.jsx => PerformerGrid.tsx} |    4 +-
- .../grids/{StudioGrid.jsx => StudioGrid.tsx}       |    4 +-
- .../components/grids/{TagGrid.jsx => TagGrid.tsx}  |    4 +-
- client/src/components/grids/index.js               |    6 -
- client/src/components/grids/index.ts               |    6 +
- .../guards/{RouteGuards.jsx => RouteGuards.tsx}    |    6 +-
- .../icons/{ThemedIcon.jsx => ThemedIcon.tsx}       |    4 +-
- client/src/components/icons/index.js               |    2 -
- client/src/components/icons/index.ts               |    2 +
- .../{UserSetupModal.jsx => UserSetupModal.tsx}     |    6 +-
- .../src/components/pages/{Clips.jsx => Clips.tsx}  |    6 +-
- .../pages/{Downloads.jsx => Downloads.tsx}         |    8 +-
- ...rgotPasswordPage.jsx => ForgotPasswordPage.tsx} |    4 +-
- .../pages/{Galleries.jsx => Galleries.tsx}         |   36 +-
- .../pages/{GalleryDetail.jsx => GalleryDetail.tsx} |   28 +-
- .../pages/{GroupDetail.jsx => GroupDetail.tsx}     |   26 +-
- .../components/pages/{Groups.jsx => Groups.tsx}    |   26 +-
- .../{HiddenItemsPage.jsx => HiddenItemsPage.tsx}   |    8 +-
- client/src/components/pages/{Home.jsx => Home.tsx} |   37 +-
- .../components/pages/{Images.jsx => Images.tsx}    |   36 +-
- .../src/components/pages/{Login.jsx => Login.tsx}  |   10 +-
- .../{PerformerDetail.jsx => PerformerDetail.tsx}   |   28 +-
- .../pages/{Performers.jsx => Performers.tsx}       |   24 +-
- .../{PlaylistDetail.jsx => PlaylistDetail.tsx}     |   46 +-
- .../pages/{Playlists.jsx => Playlists.tsx}         |   22 +-
- .../pages/{Recommended.jsx => Recommended.tsx}     |   26 +-
- .../src/components/pages/{Scene.jsx => Scene.tsx}  |   30 +-
- .../pages/{SceneDetails.jsx => SceneDetails.tsx}   |   16 +-
- .../components/pages/{Scenes.jsx => Scenes.tsx}    |    6 +-
- .../pages/{SettingsPage.jsx => SettingsPage.tsx}   |   30 +-
- .../pages/{SetupWizard.jsx => SetupWizard.tsx}     |    8 +-
- .../pages/{StudioDetail.jsx => StudioDetail.tsx}   |   28 +-
- .../components/pages/{Studios.jsx => Studios.tsx}  |   24 +-
- .../pages/{TagDetail.jsx => TagDetail.tsx}         |   28 +-
- client/src/components/pages/{Tags.jsx => Tags.tsx} |   28 +-
- .../UserStats/{UserStats.jsx => UserStats.tsx}     |    8 +-
- .../{EngagementTotals.jsx => EngagementTotals.tsx} |    6 +-
- .../{HighlightCard.jsx => HighlightCard.tsx}       |    4 +-
- .../{LibraryOverview.jsx => LibraryOverview.tsx}   |    4 +-
- .../components/{StatCard.jsx => StatCard.tsx}      |    2 +-
- .../components/{TopList.jsx => TopList.tsx}        |    4 +-
- .../components/pages/UserStats/components/index.js |    7 -
- .../components/pages/UserStats/components/index.ts |    7 +
- client/src/components/pages/UserStats/index.js     |    1 -
- client/src/components/pages/UserStats/index.ts     |    1 +
- .../pages/{WatchHistory.jsx => WatchHistory.tsx}   |    8 +-
- .../{PlaylistSidebar.jsx => PlaylistSidebar.tsx}   |    6 +-
- ...aylistStatusCard.jsx => PlaylistStatusCard.tsx} |    8 +-
- ...arePlaylistModal.jsx => SharePlaylistModal.tsx} |    6 +-
- .../scene-search/{SceneGrid.jsx => SceneGrid.tsx}  |   14 +-
- .../{SceneSearch.jsx => SceneSearch.tsx}           |   30 +-
- .../{SceneDescription.jsx => SceneDescription.tsx} |    4 +-
- .../scene/{SceneMetadata.jsx => SceneMetadata.tsx} |    6 +-
- .../scene/{SceneStats.jsx => SceneStats.tsx}       |    2 +-
- .../{SceneThumbnail.jsx => SceneThumbnail.tsx}     |    4 +-
- .../scene/{SceneTitle.jsx => SceneTitle.tsx}       |    8 +-
- client/src/components/scene/index.js               |    5 -
- client/src/components/scene/index.ts               |    5 +
- ...DisplaySettings.jsx => CardDisplaySettings.tsx} |    8 +-
- .../{CarouselSettings.jsx => CarouselSettings.tsx} |    4 +-
- ...tionsModal.jsx => ContentRestrictionsModal.tsx} |   17 +-
- .../{CreateUserModal.jsx => CreateUserModal.tsx}   |    9 +-
- ...CustomThemeEditor.jsx => CustomThemeEditor.tsx} |    4 +-
- ...stomThemeManager.jsx => CustomThemeManager.tsx} |   35 +-
- .../settings/{GroupModal.jsx => GroupModal.tsx}    |    4 +-
- ...ingPageSettings.jsx => LandingPageSettings.tsx} |    4 +-
- ...vigationSettings.jsx => NavigationSettings.tsx} |    6 +-
- .../{SectionSelector.jsx => SectionSelector.tsx}   |    0
- ...rverStatsSection.jsx => ServerStatsSection.tsx} |   23 +-
- .../{SettingsLayout.jsx => SettingsLayout.tsx}     |    0
- ...nstanceSection.jsx => StashInstanceSection.tsx} |   37 +-
- ...ncFromStashModal.jsx => SyncFromStashModal.tsx} |   11 +-
- ...SettingsSection.jsx => SyncSettingsSection.tsx} |   21 +-
- ...eColumnSettings.jsx => TableColumnSettings.tsx} |    4 +-
- .../{UserEditModal.jsx => UserEditModal.tsx}       |   19 +-
- ...gementSection.jsx => UserManagementSection.tsx} |   22 +-
- ...rsionInfoSection.jsx => VersionInfoSection.tsx} |   11 +-
- .../tabs/{AccountTab.jsx => AccountTab.tsx}        |   17 +-
- .../settings/tabs/{BackupTab.jsx => BackupTab.tsx} |   19 +-
- .../tabs/{ContentTab.jsx => ContentTab.tsx}        |    4 +-
- .../{CustomizationTab.jsx => CustomizationTab.tsx} |   27 +-
- .../{MergeRecoveryTab.jsx => MergeRecoveryTab.tsx} |   27 +-
- .../tabs/{NavigationTab.jsx => NavigationTab.tsx}  |   35 +-
- .../tabs/{PlaybackTab.jsx => PlaybackTab.tsx}      |   19 +-
- .../components/settings/tabs/ServerConfigTab.jsx   |   33 -
- .../components/settings/tabs/ServerConfigTab.tsx   |   27 +
- .../settings/tabs/{ThemeTab.jsx => ThemeTab.tsx}   |    6 +-
- ...UserManagementTab.jsx => UserManagementTab.tsx} |   18 +-
- ...mnConfigPopover.jsx => ColumnConfigPopover.tsx} |    2 +-
- .../{MultiValueCell.jsx => MultiValueCell.tsx}     |    0
- .../table/{TableHeader.jsx => TableHeader.tsx}     |    2 +-
- .../table/{TableView.jsx => TableView.tsx}         |    6 +-
- .../table/{cellRenderers.jsx => cellRenderers.tsx} |    8 +-
- .../table/{formatters.js => formatters.ts}         |    0
- client/src/components/table/index.js               |    6 -
- client/src/components/table/index.ts               |    6 +
- .../{TagHierarchyView.jsx => TagHierarchyView.tsx} |    6 +-
- .../tags/{TagTreeNode.jsx => TagTreeNode.tsx}      |    6 +-
- client/src/components/tags/index.js                |    3 -
- client/src/components/tags/index.ts                |    3 +
- .../timeline/{TimelineBar.jsx => TimelineBar.tsx}  |    0
- .../{TimelineControls.jsx => TimelineControls.tsx} |    0
- .../{TimelineEdgeNav.jsx => TimelineEdgeNav.tsx}   |    0
- ...lineMobileSheet.jsx => TimelineMobileSheet.tsx} |    0
- .../{TimelineStrip.jsx => TimelineStrip.tsx}       |    4 +-
- .../{TimelineView.jsx => TimelineView.tsx}         |   14 +-
- .../{useTimelineState.js => useTimelineState.ts}   |    2 +-
- ...ActiveFilterChips.jsx => ActiveFilterChips.tsx} |    2 +-
- ...oPlaylistButton.jsx => AddToPlaylistButton.tsx} |   32 +-
- .../components/ui/{BaseCard.jsx => BaseCard.tsx}   |   10 +-
- .../components/ui/{BaseGrid.jsx => BaseGrid.tsx}   |    6 +-
- .../ui/{BulkActionBar.jsx => BulkActionBar.tsx}    |    2 +-
- .../src/components/ui/{Button.jsx => Button.tsx}   |    0
- .../ui/{CardComponents.jsx => CardComponents.tsx}  |   12 +-
- ...CountIndicators.jsx => CardCountIndicators.tsx} |    2 +-
- .../{CardStatusIcons.jsx => CardStatusIcons.tsx}   |    0
- .../ui/{ConfirmDialog.jsx => ConfirmDialog.tsx}    |    4 +-
- .../{ContextSettings.jsx => ContextSettings.tsx}   |   17 +-
- ...ngCarousel.jsx => ContinueWatchingCarousel.tsx} |   10 +-
- .../ui/{EmptyState.jsx => EmptyState.tsx}          |    0
- .../ui/{EntityMenu.jsx => EntityMenu.tsx}          |    0
- .../ui/{ErrorMessage.jsx => ErrorMessage.tsx}      |    2 +-
- ...leDescription.jsx => ExpandableDescription.tsx} |    0
- ...alPlayerButton.jsx => ExternalPlayerButton.tsx} |    2 +-
- .../ui/{FavoriteButton.jsx => FavoriteButton.tsx}  |    2 +-
- .../ui/{FilterControls.jsx => FilterControls.tsx}  |    4 +-
- .../ui/{FilterPresets.jsx => FilterPresets.tsx}    |    6 +-
- .../ui/{GenderIcon.jsx => GenderIcon.tsx}          |    4 +-
- .../ui/{GlobalLayout.jsx => GlobalLayout.tsx}      |   12 +-
- .../components/ui/{HelpModal.jsx => HelpModal.tsx} |    2 +-
- ...mationDialog.jsx => HideConfirmationDialog.tsx} |    2 +-
- .../ui/{InfoMessage.jsx => InfoMessage.tsx}        |    2 +-
- .../ui/{LayoutRenderer.jsx => LayoutRenderer.tsx}  |    2 +-
- .../ui/{LazyThumbnail.jsx => LazyThumbnail.tsx}    |    2 +-
- .../components/ui/{Lightbox.jsx => Lightbox.tsx}   |   10 +-
- .../ui/{LoadingSpinner.jsx => LoadingSpinner.tsx}  |    0
- .../ui/{MarqueeText.jsx => MarqueeText.tsx}        |    0
- .../ui/{MediaImage.jsx => MediaImage.tsx}          |    0
- .../ui/{MetadataDrawer.jsx => MetadataDrawer.tsx}  |   18 +-
- .../ui/{Navigation.jsx => Navigation.tsx}          |   16 +-
- .../ui/{OCounterButton.jsx => OCounterButton.tsx}  |    2 +-
- .../ui/{PageHeader.jsx => PageHeader.tsx}          |    0
- .../ui/{PageLayout.jsx => PageLayout.tsx}          |    0
- ...ginatedImageGrid.jsx => PaginatedImageGrid.tsx} |    8 +-
- .../ui/{Pagination.jsx => Pagination.tsx}          |    6 +-
- client/src/components/ui/{Paper.jsx => Paper.tsx}  |    0
- ...ayCountIndicator.jsx => PlayCountIndicator.tsx} |    0
- .../ui/{RatingBadge.jsx => RatingBadge.tsx}        |    0
- .../ui/{RatingSlider.jsx => RatingSlider.tsx}      |    2 +-
- ...tingSliderDialog.jsx => RatingSliderDialog.tsx} |    2 +-
- ...commendedSidebar.jsx => RecommendedSidebar.tsx} |   19 +-
- .../components/ui/{SceneCard.jsx => SceneCard.tsx} |   18 +-
- .../{SceneCardPreview.jsx => SceneCardPreview.tsx} |    4 +-
- .../ui/{SceneCarousel.jsx => SceneCarousel.tsx}    |    6 +-
- .../ui/{SceneListItem.jsx => SceneListItem.tsx}    |   14 +-
- .../ui/{ScenesLikeThis.jsx => ScenesLikeThis.tsx}  |   15 +-
- .../ui/{SearchControls.jsx => SearchControls.tsx}  |   12 +-
- .../ui/{SearchInput.jsx => SearchInput.tsx}        |    4 +-
- .../ui/{SearchResults.jsx => SearchResults.tsx}    |    6 +-
- .../ui/{SearchableGrid.jsx => SearchableGrid.tsx}  |   10 +-
- .../{SearchableSelect.jsx => SearchableSelect.tsx} |   10 +-
- .../ui/{SectionLink.jsx => SectionLink.tsx}        |    2 +-
- .../src/components/ui/{Sidebar.jsx => Sidebar.tsx} |   16 +-
- ...SkeletonSceneCard.jsx => SkeletonSceneCard.tsx} |    2 +-
- .../ui/{SuccessMessage.jsx => SuccessMessage.tsx}  |    2 +-
- .../src/components/ui/{Switch.jsx => Switch.tsx}   |    0
- ...ncProgressBanner.jsx => SyncProgressBanner.tsx} |    2 +-
- .../ui/{TabNavigation.jsx => TabNavigation.tsx}    |    0
- .../components/ui/{TagChips.jsx => TagChips.tsx}   |    4 +-
- .../src/components/ui/{Tooltip.jsx => Tooltip.tsx} |    0
- ...TooltipEntityGrid.jsx => TooltipEntityGrid.tsx} |    4 +-
- .../src/components/ui/{TopBar.jsx => TopBar.tsx}   |   16 +-
- .../components/ui/{UserMenu.jsx => UserMenu.tsx}   |    8 +-
- ...ViewInStashButton.jsx => ViewInStashButton.tsx} |    0
- .../ui/{ViewModeToggle.jsx => ViewModeToggle.tsx}  |    0
- .../ui/{WarningMessage.jsx => WarningMessage.tsx}  |    2 +-
- .../ui/{ZoomSlider.jsx => ZoomSlider.tsx}          |    2 +-
- .../icons/{IntersexIcon.jsx => IntersexIcon.tsx}   |    0
- .../icons/{NonBinaryIcon.jsx => NonBinaryIcon.tsx} |    0
- client/src/components/ui/index.js                  |   79 --
- client/src/components/ui/index.ts                  |   79 ++
- .../ui/layouts/{GridLayout.jsx => GridLayout.tsx}  |    2 +-
- .../{PlaybackControls.jsx => PlaybackControls.tsx} |   14 +-
- .../{VideoPlayer.jsx => VideoPlayer.tsx}           |   24 +-
- ...durationMiddleware.js => durationMiddleware.ts} |    0
- .../plugins/{big-buttons.js => big-buttons.ts}     |    0
- .../plugins/{markers.js => markers.ts}             |    0
- .../plugins/{media-session.js => media-session.ts} |    0
- .../{pause-on-scrub.js => pause-on-scrub.ts}       |    0
- .../{persist-volume.js => persist-volume.ts}       |    0
- .../plugins/{skip-buttons.js => skip-buttons.ts}   |    0
- .../{source-selector.js => source-selector.ts}     |    0
- .../{track-activity.js => track-activity.ts}       |    0
- .../video-player/plugins/{vrmode.js => vrmode.ts}  |    0
- ...onFullscreen.js => useOrientationFullscreen.ts} |    0
- .../{useVideoPlayer.js => useVideoPlayer.ts}       |   16 +-
- .../{videoPlayerUtils.js => videoPlayerUtils.ts}   |    0
- .../{vtt-thumbnails.js => vtt-thumbnails.ts}       |    0
- .../components/wall/{WallItem.jsx => WallItem.tsx} |    4 +-
- .../components/wall/{WallView.jsx => WallView.tsx} |    4 +-
- .../wall/{wallConfig.js => wallConfig.ts}          |    2 +-
- ...tityDisplayConfig.js => entityDisplayConfig.ts} |    0
- ...indicatorBehaviors.js => indicatorBehaviors.ts} |    0
- .../config/{tableColumns.js => tableColumns.ts}    |    0
- client/src/constants/{appIcons.js => appIcons.ts}  |    4 +-
- .../src/constants/{carousels.js => carousels.ts}   |    2 +-
- .../constants/{entityIcons.js => entityIcons.ts}   |    2 +-
- client/src/constants/{grids.js => grids.ts}        |    0
- .../src/constants/{navigation.js => navigation.ts} |    2 +-
- .../contexts/{AuthContext.jsx => AuthContext.tsx}  |    2 +-
- ...ContextProvider.jsx => AuthContextProvider.tsx} |    0
- ...sContext.jsx => CardDisplaySettingsContext.tsx} |   15 +-
- .../{ConfigContext.jsx => ConfigContext.tsx}       |    2 +-
- ...enePlayerContext.jsx => ScenePlayerContext.tsx} |   18 +-
- .../{TVModeContext.js => TVModeContext.ts}         |    0
- .../{TVModeProvider.jsx => TVModeProvider.tsx}     |    2 +-
- ...eferenceContext.js => UnitPreferenceContext.ts} |    2 +-
- ...enceProvider.jsx => UnitPreferenceProvider.tsx} |   14 +-
- ...scenePlayerReducer.js => scenePlayerReducer.ts} |    0
- client/src/hooks/useApi.js                         |   39 -
- client/src/hooks/useApi.ts                         |   38 +
- client/src/hooks/{useAuth.js => useAuth.ts}        |    2 +-
- client/src/hooks/useCancellableQuery.js            |  126 ---
- client/src/hooks/useCancellableQuery.ts            |  110 +++
- ...useCardKeyboardNav.js => useCardKeyboardNav.ts} |    0
- .../{useCardSelection.js => useCardSelection.ts}   |    0
- .../src/hooks/{useDebounce.js => useDebounce.ts}   |    0
- ...AspectRatio.js => useEntityImageAspectRatio.ts} |    0
- .../hooks/{useFilterState.js => useFilterState.ts} |    4 +-
- .../src/hooks/{useFocusTrap.js => useFocusTrap.ts} |    0
- .../{useFolderViewTags.js => useFolderViewTags.ts} |    4 +-
- .../hooks/{useFullscreen.js => useFullscreen.ts}   |    0
- ...eGlobalNavigation.js => useGlobalNavigation.ts} |    2 +-
- .../hooks/{useGridColumns.js => useGridColumns.ts} |    0
- ...eTVNavigation.js => useGridPageTVNavigation.ts} |    6 +-
- .../{useHiddenEntities.js => useHiddenEntities.ts} |    6 +-
- .../{useHideBulkAction.js => useHideBulkAction.ts} |    4 +-
- ...arouselQueries.js => useHomeCarouselQueries.ts} |    2 +-
- ...talNavigation.js => useHorizontalNavigation.ts} |    0
- ...eImagesPagination.js => useImagesPagination.ts} |    2 +-
- ...eyboardShortcuts.js => useKeyboardShortcuts.ts} |    0
- .../src/hooks/{useMediaKeys.js => useMediaKeys.ts} |    4 +-
- .../hooks/{useMediaQuery.js => useMediaQuery.ts}   |    0
- ...useNavigationState.js => useNavigationState.ts} |    0
- .../src/hooks/{usePageTitle.js => usePageTitle.ts} |    0
- ...aginatedLightbox.js => usePaginatedLightbox.ts} |    0
- .../{useRatingHotkeys.js => useRatingHotkeys.ts}   |    2 +-
- ...useScrollDirection.js => useScrollDirection.ts} |    0
- ...crollRestoration.js => useScrollRestoration.ts} |    0
- ...lToCurrentItem.js => useScrollToCurrentItem.ts} |    0
- ...patialNavigation.js => useSpatialNavigation.ts} |    0
- client/src/hooks/{useTVMode.js => useTVMode.ts}    |    2 +-
- .../{useTVNavigation.js => useTVNavigation.ts}     |    0
- .../{useTableColumns.js => useTableColumns.ts}     |    2 +-
- ...ationDetection.js => useTruncationDetection.ts} |    0
- .../src/hooks/{useUrlState.js => useUrlState.ts}   |    0
- client/src/hooks/useUserStats.js                   |   60 --
- client/src/hooks/useUserStats.ts                   |   43 +
- .../{useWallPlayback.js => useWallPlayback.ts}     |    2 +-
- .../{useWatchHistory.js => useWatchHistory.ts}     |    6 +-
- client/src/{main.jsx => main.tsx}                  |    2 +-
- client/src/services/api.js                         | 1021 --------------------
- .../themes/{ThemeContext.js => ThemeContext.ts}    |    0
- .../{ThemeProvider.jsx => ThemeProvider.tsx}       |   19 +-
- .../src/themes/icons/{iconSets.js => iconSets.ts}  |    4 +-
- client/src/themes/{themes.js => themes.ts}         |    2 +-
- client/src/themes/{useTheme.js => useTheme.ts}     |    2 +-
- .../{buildFolderTree.js => buildFolderTree.ts}     |    0
- .../src/utils/{buildTagTree.js => buildTagTree.ts} |    0
- client/src/utils/{colorScale.js => colorScale.ts}  |    0
- .../src/utils/{compositeKey.js => compositeKey.ts} |    0
- client/src/utils/{date.js => date.ts}              |    0
- .../src/utils/{entityLinks.js => entityLinks.ts}   |    0
- .../src/utils/{filterCache.js => filterCache.ts}   |    0
- .../src/utils/{filterConfig.js => filterConfig.ts} |    2 +-
- client/src/utils/{format.js => format.ts}          |    0
- client/src/utils/{gallery.js => gallery.ts}        |    0
- ...ryInheritance.js => imageGalleryInheritance.ts} |    0
- client/src/utils/{siteInfo.js => siteInfo.ts}      |    0
- .../src/utils/{spriteSheet.js => spriteSheet.ts}   |    0
- client/src/utils/{toast.jsx => toast.tsx}          |    2 +-
- .../{unitConversions.js => unitConversions.ts}     |    0
- client/src/utils/{urlParams.js => urlParams.ts}    |    2 +-
- .../src/utils/{videoFormat.js => videoFormat.ts}   |    0
- .../cards/{ClipCard.test.jsx => ClipCard.test.tsx} |    6 +-
- .../{GalleryCard.test.jsx => GalleryCard.test.tsx} |    2 +-
- .../{GroupCard.test.jsx => GroupCard.test.tsx}     |    2 +-
- .../{ImageCard.test.jsx => ImageCard.test.tsx}     |    2 +-
- ...rformerCard.test.jsx => PerformerCard.test.tsx} |    2 +-
- .../{StudioCard.test.jsx => StudioCard.test.tsx}   |    2 +-
- .../cards/{TagCard.test.jsx => TagCard.test.tsx}   |    2 +-
- .../clips/{ClipList.test.jsx => ClipList.test.tsx} |    6 +-
- .../{FolderView.test.jsx => FolderView.test.tsx}   |    2 +-
- .../{GalleryGrid.test.jsx => GalleryGrid.test.tsx} |    0
- .../{GroupGrid.test.jsx => GroupGrid.test.tsx}     |    0
- .../{ImageGrid.test.jsx => ImageGrid.test.tsx}     |    0
- ...rformerGrid.test.jsx => PerformerGrid.test.tsx} |    0
- .../{StudioGrid.test.jsx => StudioGrid.test.tsx}   |    0
- .../grids/{TagGrid.test.jsx => TagGrid.test.tsx}   |    0
- ...SetupModal.test.jsx => UserSetupModal.test.tsx} |    8 +-
- ...rdPage.test.jsx => ForgotPasswordPage.test.tsx} |    4 +-
- ...tings.test.jsx => CardDisplaySettings.test.tsx} |   10 +-
- .../{ContentTab.test.jsx => ContentTab.test.tsx}   |    8 +-
- ...tion.test.jsx => StashInstanceSection.test.tsx} |  137 ++-
- ...erEditModal.test.jsx => UserEditModal.test.tsx} |    4 +-
- ...llRenderers.test.jsx => cellRenderers.test.tsx} |    2 +-
- ...rchyView.test.jsx => TagHierarchyView.test.tsx} |    2 +-
- .../{TagTreeNode.test.jsx => TagTreeNode.test.tsx} |    2 +-
- .../{TimelineBar.test.jsx => TimelineBar.test.tsx} |    2 +-
- ...Controls.test.jsx => TimelineControls.test.tsx} |    2 +-
- ...Sheet.test.jsx => TimelineMobileSheet.test.tsx} |    2 +-
- ...melineStrip.test.jsx => TimelineStrip.test.tsx} |    2 +-
- ...TimelineView.test.jsx => TimelineView.test.tsx} |   12 +-
- .../ui/{BaseCard.test.jsx => BaseCard.test.tsx}    |    0
- .../ui/{BaseGrid.test.jsx => BaseGrid.test.tsx}    |    0
- ...lkActionBar.test.jsx => BulkActionBar.test.tsx} |    0
- ...ty.test.jsx => CardComponents.density.test.tsx} |    4 +-
- ...Components.test.jsx => CardComponents.test.tsx} |    0
- ...ators.test.jsx => CardCountIndicators.test.tsx} |    2 +-
- ...ion.test.jsx => ExpandableDescription.test.tsx} |    0
- ...lterPresets.test.jsx => FilterPresets.test.tsx} |    4 +-
- .../ui/{Lightbox.test.jsx => Lightbox.test.tsx}    |    8 +-
- .../{MarqueeText.test.jsx => MarqueeText.test.tsx} |    2 +-
- .../{Pagination.test.jsx => Pagination.test.tsx}   |    6 +-
- .../ui/{SceneCard.test.jsx => SceneCard.test.tsx}  |    2 +-
- ...ettings.test.jsx => SceneCardSettings.test.tsx} |   10 +-
- ...chControls.test.jsx => SearchControls.test.tsx} |   14 +-
- ...lsInit.test.jsx => SearchControlsInit.test.tsx} |   14 +-
- ...chableGrid.test.jsx => SearchableGrid.test.tsx} |    0
- ...leSelect.test.jsx => SearchableSelect.test.tsx} |    8 +-
- ...eneCard.test.jsx => SkeletonSceneCard.test.tsx} |    6 +-
- ...bNavigation.test.jsx => TabNavigation.test.tsx} |    2 +-
- .../ui/{Tooltip.test.jsx => Tooltip.test.tsx}      |    0
- ...ModeToggle.test.jsx => ViewModeToggle.test.tsx} |    2 +-
- ...ack-activity.test.js => track-activity.test.ts} |    2 +-
- .../{wallConfig.test.js => wallConfig.test.ts}     |    2 +-
- ...yConfig.test.js => entityDisplayConfig.test.ts} |    2 +-
- .../{AuthContext.test.jsx => AuthContext.test.tsx} |    4 +-
- ...nfigContext.test.jsx => ConfigContext.test.tsx} |    6 +-
- ...ontext.test.jsx => ScenePlayerContext.test.tsx} |   58 +-
- ...rReducer.test.js => scenePlayerReducer.test.ts} |    2 +-
- ...useAsyncData.test.jsx => useAsyncData.test.tsx} |   76 +-
- .../hooks/{useAuth.test.jsx => useAuth.test.tsx}   |    4 +-
- client/tests/hooks/useCancellableQuery.test.jsx    |  266 -----
- client/tests/hooks/useCancellableQuery.test.tsx    |  265 +++++
- ...gs.test.jsx => useCardDisplaySettings.test.tsx} |   48 +-
- ...boardNav.test.js => useCardKeyboardNav.test.ts} |    2 +-
- ...dSelection.test.js => useCardSelection.test.ts} |    2 +-
- ...test.jsx => useFilterState.presetInit.test.tsx} |    6 +-
- ...ilterState.test.jsx => useFilterState.test.tsx} |    6 +-
- ...e.test.jsx => useFilterState.viewMode.test.tsx} |    4 +-
- ...ation.test.jsx => useImagesPagination.test.tsx} |    2 +-
- ...useMediaQuery.test.js => useMediaQuery.test.ts} |    2 +-
- ...nState.test.jsx => useNavigationState.test.tsx} |    2 +-
- ...tbox.test.jsx => usePaginatedLightbox.test.tsx} |    2 +-
- ...ineState.test.jsx => useTimelineState.test.tsx} |    6 +-
- ...tion.test.js => useTruncationDetection.test.ts} |    0
- .../{useUrlState.test.jsx => useUrlState.test.tsx} |    2 +-
- ...useUserStats.test.jsx => useUserStats.test.tsx} |  114 +--
- ...chHistory.test.jsx => useWatchHistory.test.tsx} |   10 +-
- .../timelineDateFilter.integration.test.jsx        |    2 +-
- client/tests/{setup.js => setup.ts}                |    0
- client/tests/{testUtils.jsx => testUtils.tsx}      |   30 +-
- ...dFolderTree.test.js => buildFolderTree.test.ts} |    2 +-
- .../{buildTagTree.test.js => buildTagTree.test.ts} |    2 +-
- .../{compositeKey.test.js => compositeKey.test.ts} |    2 +-
- .../{filterConfig.test.js => filterConfig.test.ts} |    2 +-
- .../tests/utils/{format.test.js => format.test.ts} |    2 +-
- ...rConfig.test.js => galleryFilterConfig.test.ts} |    2 +-
- ...terConfig.test.js => groupFilterConfig.test.ts} |    2 +-
- ...onfig.test.js => performerFilterConfig.test.ts} |    2 +-
- ...erConfig.test.js => studioFilterConfig.test.ts} |    2 +-
- ...ilterConfig.test.js => tagFilterConfig.test.ts} |    5 +-
- ...Conversions.test.js => unitConversions.test.ts} |    2 +-
- .../utils/{urlParams.test.js => urlParams.test.ts} |   12 +-
- client/tsconfig.json                               |   32 +
- client/vite.config.js                              |   12 +
- client/vitest.config.js                            |   13 +-
- 426 files changed, 3303 insertions(+), 3396 deletions(-)
- rename client/src/{App.jsx => App.tsx} (84%)
- create mode 100644 client/src/api/admin.ts
- create mode 100644 client/src/api/client.ts
- create mode 100644 client/src/api/clips.ts
- create mode 100644 client/src/api/image-view-history.ts
- create mode 100644 client/src/api/index.ts
- create mode 100644 client/src/api/library.ts
- create mode 100644 client/src/api/playlists.ts
- create mode 100644 client/src/api/queryClient.ts
- create mode 100644 client/src/api/queryKeys.ts
- create mode 100644 client/src/api/ratings.ts
- create mode 100644 client/src/api/setup.ts
- create mode 100644 client/src/api/watch-history.ts
- rename client/src/components/branding/{PeekLogo.jsx => PeekLogo.tsx} (95%)
- rename client/src/components/cards/{ClipCard.jsx => ClipCard.tsx} (94%)
- rename client/src/components/cards/{ClipCardPreview.jsx => ClipCardPreview.tsx} (98%)
- rename client/src/components/cards/{GalleryCard.jsx => GalleryCard.tsx} (94%)
- rename client/src/components/cards/{GroupCard.jsx => GroupCard.tsx} (94%)
- rename client/src/components/cards/{ImageCard.jsx => ImageCard.tsx} (94%)
- rename client/src/components/cards/{PerformerCard.jsx => PerformerCard.tsx} (94%)
- rename client/src/components/cards/{StudioCard.jsx => StudioCard.tsx} (94%)
- rename client/src/components/cards/{TagCard.jsx => TagCard.tsx} (95%)
- delete mode 100644 client/src/components/cards/index.js
- create mode 100644 client/src/components/cards/index.ts
- rename client/src/components/carousel-builder/{CarouselBuilder.jsx => CarouselBuilder.tsx} (98%)
- rename client/src/components/carousel-builder/{CarouselPreview.jsx => CarouselPreview.tsx} (97%)
- rename client/src/components/carousel-builder/{IconPicker.jsx => IconPicker.tsx} (98%)
- rename client/src/components/carousel-builder/{IconPickerButton.jsx => IconPickerButton.tsx} (96%)
- rename client/src/components/carousel-builder/{RuleEditor.jsx => RuleEditor.tsx} (98%)
- rename client/src/components/carousel-builder/{carouselIcons.js => carouselIcons.ts} (100%)
- rename client/src/components/clip-search/{ClipGrid.jsx => ClipGrid.tsx} (90%)
- rename client/src/components/clip-search/{ClipSearch.jsx => ClipSearch.tsx} (92%)
- rename client/src/components/clips/{ClipList.jsx => ClipList.tsx} (97%)
- rename client/src/components/folder/{FolderBreadcrumb.jsx => FolderBreadcrumb.tsx} (100%)
- rename client/src/components/folder/{FolderCard.jsx => FolderCard.tsx} (93%)
- rename client/src/components/folder/{FolderTreeSidebar.jsx => FolderTreeSidebar.tsx} (99%)
- rename client/src/components/folder/{FolderView.jsx => FolderView.tsx} (94%)
- delete mode 100644 client/src/components/folder/index.js
- create mode 100644 client/src/components/folder/index.ts
- rename client/src/components/grids/{GalleryGrid.jsx => GalleryGrid.tsx} (90%)
- rename client/src/components/grids/{GroupGrid.jsx => GroupGrid.tsx} (90%)
- rename client/src/components/grids/{ImageGrid.jsx => ImageGrid.tsx} (90%)
- rename client/src/components/grids/{PerformerGrid.jsx => PerformerGrid.tsx} (90%)
- rename client/src/components/grids/{StudioGrid.jsx => StudioGrid.tsx} (90%)
- rename client/src/components/grids/{TagGrid.jsx => TagGrid.tsx} (90%)
- delete mode 100644 client/src/components/grids/index.js
- create mode 100644 client/src/components/grids/index.ts
- rename client/src/components/guards/{RouteGuards.jsx => RouteGuards.tsx} (94%)
- rename client/src/components/icons/{ThemedIcon.jsx => ThemedIcon.tsx} (86%)
- delete mode 100644 client/src/components/icons/index.js
- create mode 100644 client/src/components/icons/index.ts
- rename client/src/components/modals/{UserSetupModal.jsx => UserSetupModal.tsx} (98%)
- rename client/src/components/pages/{Clips.jsx => Clips.tsx} (73%)
- rename client/src/components/pages/{Downloads.jsx => Downloads.tsx} (98%)
- rename client/src/components/pages/{ForgotPasswordPage.jsx => ForgotPasswordPage.tsx} (98%)
- rename client/src/components/pages/{Galleries.jsx => Galleries.tsx} (91%)
- rename client/src/components/pages/{GalleryDetail.jsx => GalleryDetail.tsx} (95%)
- rename client/src/components/pages/{GroupDetail.jsx => GroupDetail.tsx} (96%)
- rename client/src/components/pages/{Groups.jsx => Groups.tsx} (90%)
- rename client/src/components/pages/{HiddenItemsPage.jsx => HiddenItemsPage.tsx} (98%)
- rename client/src/components/pages/{Home.jsx => Home.tsx} (95%)
- rename client/src/components/pages/{Images.jsx => Images.tsx} (94%)
- rename client/src/components/pages/{Login.jsx => Login.tsx} (94%)
- rename client/src/components/pages/{PerformerDetail.jsx => PerformerDetail.tsx} (97%)
- rename client/src/components/pages/{Performers.jsx => Performers.tsx} (92%)
- rename client/src/components/pages/{PlaylistDetail.jsx => PlaylistDetail.tsx} (96%)
- rename client/src/components/pages/{Playlists.jsx => Playlists.tsx} (96%)
- rename client/src/components/pages/{Recommended.jsx => Recommended.tsx} (92%)
- rename client/src/components/pages/{Scene.jsx => Scene.tsx} (94%)
- rename client/src/components/pages/{SceneDetails.jsx => SceneDetails.tsx} (98%)
- rename client/src/components/pages/{Scenes.jsx => Scenes.tsx} (73%)
- rename client/src/components/pages/{SettingsPage.jsx => SettingsPage.tsx} (82%)
- rename client/src/components/pages/{SetupWizard.jsx => SetupWizard.tsx} (98%)
- rename client/src/components/pages/{StudioDetail.jsx => StudioDetail.tsx} (97%)
- rename client/src/components/pages/{Studios.jsx => Studios.tsx} (91%)
- rename client/src/components/pages/{TagDetail.jsx => TagDetail.tsx} (96%)
- rename client/src/components/pages/{Tags.jsx => Tags.tsx} (91%)
- rename client/src/components/pages/UserStats/{UserStats.jsx => UserStats.tsx} (98%)
- rename client/src/components/pages/UserStats/components/{EngagementTotals.jsx => EngagementTotals.tsx} (93%)
- rename client/src/components/pages/UserStats/components/{HighlightCard.jsx => HighlightCard.tsx} (96%)
- rename client/src/components/pages/UserStats/components/{LibraryOverview.jsx => LibraryOverview.tsx} (92%)
- rename client/src/components/pages/UserStats/components/{StatCard.jsx => StatCard.tsx} (94%)
- rename client/src/components/pages/UserStats/components/{TopList.jsx => TopList.tsx} (98%)
- delete mode 100644 client/src/components/pages/UserStats/components/index.js
- create mode 100644 client/src/components/pages/UserStats/components/index.ts
- delete mode 100644 client/src/components/pages/UserStats/index.js
- create mode 100644 client/src/components/pages/UserStats/index.ts
- rename client/src/components/pages/{WatchHistory.jsx => WatchHistory.tsx} (98%)
- rename client/src/components/playlist/{PlaylistSidebar.jsx => PlaylistSidebar.tsx} (99%)
- rename client/src/components/playlist/{PlaylistStatusCard.jsx => PlaylistStatusCard.tsx} (99%)
- rename client/src/components/playlists/{SharePlaylistModal.jsx => SharePlaylistModal.tsx} (97%)
- rename client/src/components/scene-search/{SceneGrid.jsx => SceneGrid.tsx} (94%)
- rename client/src/components/scene-search/{SceneSearch.jsx => SceneSearch.tsx} (94%)
- rename client/src/components/scene/{SceneDescription.jsx => SceneDescription.tsx} (87%)
- rename client/src/components/scene/{SceneMetadata.jsx => SceneMetadata.tsx} (96%)
- rename client/src/components/scene/{SceneStats.jsx => SceneStats.tsx} (93%)
- rename client/src/components/scene/{SceneThumbnail.jsx => SceneThumbnail.tsx} (96%)
- rename client/src/components/scene/{SceneTitle.jsx => SceneTitle.tsx} (93%)
- delete mode 100644 client/src/components/scene/index.js
- create mode 100644 client/src/components/scene/index.ts
- rename client/src/components/settings/{CardDisplaySettings.jsx => CardDisplaySettings.tsx} (97%)
- rename client/src/components/settings/{CarouselSettings.jsx => CarouselSettings.tsx} (99%)
- rename client/src/components/settings/{ContentRestrictionsModal.jsx => ContentRestrictionsModal.tsx} (97%)
- rename client/src/components/settings/{CreateUserModal.jsx => CreateUserModal.tsx} (95%)
- rename client/src/components/settings/{CustomThemeEditor.jsx => CustomThemeEditor.tsx} (99%)
- rename client/src/components/settings/{CustomThemeManager.jsx => CustomThemeManager.tsx} (89%)
- rename client/src/components/settings/{GroupModal.jsx => GroupModal.tsx} (99%)
- rename client/src/components/settings/{LandingPageSettings.jsx => LandingPageSettings.tsx} (98%)
- rename client/src/components/settings/{NavigationSettings.jsx => NavigationSettings.tsx} (97%)
- rename client/src/components/settings/{SectionSelector.jsx => SectionSelector.tsx} (100%)
- rename client/src/components/settings/{ServerStatsSection.jsx => ServerStatsSection.tsx} (96%)
- rename client/src/components/settings/{SettingsLayout.jsx => SettingsLayout.tsx} (100%)
- rename client/src/components/settings/{StashInstanceSection.jsx => StashInstanceSection.tsx} (93%)
- rename client/src/components/settings/{SyncFromStashModal.jsx => SyncFromStashModal.tsx} (97%)
- rename client/src/components/settings/{SyncSettingsSection.jsx => SyncSettingsSection.tsx} (82%)
- rename client/src/components/settings/{TableColumnSettings.jsx => TableColumnSettings.tsx} (99%)
- rename client/src/components/settings/{UserEditModal.jsx => UserEditModal.tsx} (97%)
- rename client/src/components/settings/{UserManagementSection.jsx => UserManagementSection.tsx} (97%)
- rename client/src/components/settings/{VersionInfoSection.jsx => VersionInfoSection.tsx} (97%)
- rename client/src/components/settings/tabs/{AccountTab.jsx => AccountTab.tsx} (96%)
- rename client/src/components/settings/tabs/{BackupTab.jsx => BackupTab.tsx} (90%)
- rename client/src/components/settings/tabs/{ContentTab.jsx => ContentTab.tsx} (98%)
- rename client/src/components/settings/tabs/{CustomizationTab.jsx => CustomizationTab.tsx} (92%)
- rename client/src/components/settings/tabs/{MergeRecoveryTab.jsx => MergeRecoveryTab.tsx} (91%)
- rename client/src/components/settings/tabs/{NavigationTab.jsx => NavigationTab.tsx} (80%)
- rename client/src/components/settings/tabs/{PlaybackTab.jsx => PlaybackTab.tsx} (94%)
- delete mode 100644 client/src/components/settings/tabs/ServerConfigTab.jsx
- create mode 100644 client/src/components/settings/tabs/ServerConfigTab.tsx
- rename client/src/components/settings/tabs/{ThemeTab.jsx => ThemeTab.tsx} (95%)
- rename client/src/components/settings/tabs/{UserManagementTab.jsx => UserManagementTab.tsx} (83%)
- rename client/src/components/table/{ColumnConfigPopover.jsx => ColumnConfigPopover.tsx} (99%)
- rename client/src/components/table/{MultiValueCell.jsx => MultiValueCell.tsx} (100%)
- rename client/src/components/table/{TableHeader.jsx => TableHeader.tsx} (98%)
- rename client/src/components/table/{TableView.jsx => TableView.tsx} (97%)
- rename client/src/components/table/{cellRenderers.jsx => cellRenderers.tsx} (99%)
- rename client/src/components/table/{formatters.js => formatters.ts} (100%)
- delete mode 100644 client/src/components/table/index.js
- create mode 100644 client/src/components/table/index.ts
- rename client/src/components/tags/{TagHierarchyView.jsx => TagHierarchyView.tsx} (98%)
- rename client/src/components/tags/{TagTreeNode.jsx => TagTreeNode.tsx} (98%)
- delete mode 100644 client/src/components/tags/index.js
- create mode 100644 client/src/components/tags/index.ts
- rename client/src/components/timeline/{TimelineBar.jsx => TimelineBar.tsx} (100%)
- rename client/src/components/timeline/{TimelineControls.jsx => TimelineControls.tsx} (100%)
- rename client/src/components/timeline/{TimelineEdgeNav.jsx => TimelineEdgeNav.tsx} (100%)
- rename client/src/components/timeline/{TimelineMobileSheet.jsx => TimelineMobileSheet.tsx} (100%)
- rename client/src/components/timeline/{TimelineStrip.jsx => TimelineStrip.tsx} (99%)
- rename client/src/components/timeline/{TimelineView.jsx => TimelineView.tsx} (95%)
- rename client/src/components/timeline/{useTimelineState.js => useTimelineState.ts} (99%)
- rename client/src/components/ui/{ActiveFilterChips.jsx => ActiveFilterChips.tsx} (99%)
- rename client/src/components/ui/{AddToPlaylistButton.jsx => AddToPlaylistButton.tsx} (95%)
- rename client/src/components/ui/{BaseCard.jsx => BaseCard.tsx} (97%)
- rename client/src/components/ui/{BaseGrid.jsx => BaseGrid.tsx} (95%)
- rename client/src/components/ui/{BulkActionBar.jsx => BulkActionBar.tsx} (98%)
- rename client/src/components/ui/{Button.jsx => Button.tsx} (100%)
- rename client/src/components/ui/{CardComponents.jsx => CardComponents.tsx} (98%)
- rename client/src/components/ui/{CardCountIndicators.jsx => CardCountIndicators.tsx} (98%)
- rename client/src/components/ui/{CardStatusIcons.jsx => CardStatusIcons.tsx} (100%)
- rename client/src/components/ui/{ConfirmDialog.jsx => ConfirmDialog.tsx} (95%)
- rename client/src/components/ui/{ContextSettings.jsx => ContextSettings.tsx} (97%)
- rename client/src/components/ui/{ContinueWatchingCarousel.jsx => ContinueWatchingCarousel.tsx} (95%)
- rename client/src/components/ui/{EmptyState.jsx => EmptyState.tsx} (100%)
- rename client/src/components/ui/{EntityMenu.jsx => EntityMenu.tsx} (100%)
- rename client/src/components/ui/{ErrorMessage.jsx => ErrorMessage.tsx} (98%)
- rename client/src/components/ui/{ExpandableDescription.jsx => ExpandableDescription.tsx} (100%)
- rename client/src/components/ui/{ExternalPlayerButton.jsx => ExternalPlayerButton.tsx} (99%)
- rename client/src/components/ui/{FavoriteButton.jsx => FavoriteButton.tsx} (94%)
- rename client/src/components/ui/{FilterControls.jsx => FilterControls.tsx} (99%)
- rename client/src/components/ui/{FilterPresets.jsx => FilterPresets.tsx} (99%)
- rename client/src/components/ui/{GenderIcon.jsx => GenderIcon.tsx} (95%)
- rename client/src/components/ui/{GlobalLayout.jsx => GlobalLayout.tsx} (91%)
- rename client/src/components/ui/{HelpModal.jsx => HelpModal.tsx} (99%)
- rename client/src/components/ui/{HideConfirmationDialog.jsx => HideConfirmationDialog.tsx} (97%)
- rename client/src/components/ui/{InfoMessage.jsx => InfoMessage.tsx} (98%)
- rename client/src/components/ui/{LayoutRenderer.jsx => LayoutRenderer.tsx} (97%)
- rename client/src/components/ui/{LazyThumbnail.jsx => LazyThumbnail.tsx} (93%)
- rename client/src/components/ui/{Lightbox.jsx => Lightbox.tsx} (99%)
- rename client/src/components/ui/{LoadingSpinner.jsx => LoadingSpinner.tsx} (100%)
- rename client/src/components/ui/{MarqueeText.jsx => MarqueeText.tsx} (100%)
- rename client/src/components/ui/{MediaImage.jsx => MediaImage.tsx} (100%)
- rename client/src/components/ui/{MetadataDrawer.jsx => MetadataDrawer.tsx} (95%)
- rename client/src/components/ui/{Navigation.jsx => Navigation.tsx} (94%)
- rename client/src/components/ui/{OCounterButton.jsx => OCounterButton.tsx} (99%)
- rename client/src/components/ui/{PageHeader.jsx => PageHeader.tsx} (100%)
- rename client/src/components/ui/{PageLayout.jsx => PageLayout.tsx} (100%)
- rename client/src/components/ui/{PaginatedImageGrid.jsx => PaginatedImageGrid.tsx} (96%)
- rename client/src/components/ui/{Pagination.jsx => Pagination.tsx} (98%)
- rename client/src/components/ui/{Paper.jsx => Paper.tsx} (100%)
- rename client/src/components/ui/{PlayCountIndicator.jsx => PlayCountIndicator.tsx} (100%)
- rename client/src/components/ui/{RatingBadge.jsx => RatingBadge.tsx} (100%)
- rename client/src/components/ui/{RatingSlider.jsx => RatingSlider.tsx} (98%)
- rename client/src/components/ui/{RatingSliderDialog.jsx => RatingSliderDialog.tsx} (99%)
- rename client/src/components/ui/{RecommendedSidebar.jsx => RecommendedSidebar.tsx} (92%)
- rename client/src/components/ui/{SceneCard.jsx => SceneCard.tsx} (96%)
- rename client/src/components/ui/{SceneCardPreview.jsx => SceneCardPreview.tsx} (99%)
- rename client/src/components/ui/{SceneCarousel.jsx => SceneCarousel.tsx} (98%)
- rename client/src/components/ui/{SceneListItem.jsx => SceneListItem.tsx} (96%)
- rename client/src/components/ui/{ScenesLikeThis.jsx => ScenesLikeThis.tsx} (90%)
- rename client/src/components/ui/{SearchControls.jsx => SearchControls.tsx} (99%)
- rename client/src/components/ui/{SearchInput.jsx => SearchInput.tsx} (97%)
- rename client/src/components/ui/{SearchResults.jsx => SearchResults.tsx} (95%)
- rename client/src/components/ui/{SearchableGrid.jsx => SearchableGrid.tsx} (95%)
- rename client/src/components/ui/{SearchableSelect.jsx => SearchableSelect.tsx} (98%)
- rename client/src/components/ui/{SectionLink.jsx => SectionLink.tsx} (99%)
- rename client/src/components/ui/{Sidebar.jsx => Sidebar.tsx} (98%)
- rename client/src/components/ui/{SkeletonSceneCard.jsx => SkeletonSceneCard.tsx} (99%)
- rename client/src/components/ui/{SuccessMessage.jsx => SuccessMessage.tsx} (98%)
- rename client/src/components/ui/{Switch.jsx => Switch.tsx} (100%)
- rename client/src/components/ui/{SyncProgressBanner.jsx => SyncProgressBanner.tsx} (95%)
- rename client/src/components/ui/{TabNavigation.jsx => TabNavigation.tsx} (100%)
- rename client/src/components/ui/{TagChips.jsx => TagChips.tsx} (90%)
- rename client/src/components/ui/{Tooltip.jsx => Tooltip.tsx} (100%)
- rename client/src/components/ui/{TooltipEntityGrid.jsx => TooltipEntityGrid.tsx} (97%)
- rename client/src/components/ui/{TopBar.jsx => TopBar.tsx} (95%)
- rename client/src/components/ui/{UserMenu.jsx => UserMenu.tsx} (97%)
- rename client/src/components/ui/{ViewInStashButton.jsx => ViewInStashButton.tsx} (100%)
- rename client/src/components/ui/{ViewModeToggle.jsx => ViewModeToggle.tsx} (100%)
- rename client/src/components/ui/{WarningMessage.jsx => WarningMessage.tsx} (98%)
- rename client/src/components/ui/{ZoomSlider.jsx => ZoomSlider.tsx} (95%)
- rename client/src/components/ui/icons/{IntersexIcon.jsx => IntersexIcon.tsx} (100%)
- rename client/src/components/ui/icons/{NonBinaryIcon.jsx => NonBinaryIcon.tsx} (100%)
- delete mode 100644 client/src/components/ui/index.js
- create mode 100644 client/src/components/ui/index.ts
- rename client/src/components/ui/layouts/{GridLayout.jsx => GridLayout.tsx} (97%)
- rename client/src/components/video-player/{PlaybackControls.jsx => PlaybackControls.tsx} (96%)
- rename client/src/components/video-player/{VideoPlayer.jsx => VideoPlayer.tsx} (93%)
- rename client/src/components/video-player/{durationMiddleware.js => durationMiddleware.ts} (100%)
- rename client/src/components/video-player/plugins/{big-buttons.js => big-buttons.ts} (100%)
- rename client/src/components/video-player/plugins/{markers.js => markers.ts} (100%)
- rename client/src/components/video-player/plugins/{media-session.js => media-session.ts} (100%)
- rename client/src/components/video-player/plugins/{pause-on-scrub.js => pause-on-scrub.ts} (100%)
- rename client/src/components/video-player/plugins/{persist-volume.js => persist-volume.ts} (100%)
- rename client/src/components/video-player/plugins/{skip-buttons.js => skip-buttons.ts} (100%)
- rename client/src/components/video-player/plugins/{source-selector.js => source-selector.ts} (100%)
- rename client/src/components/video-player/plugins/{track-activity.js => track-activity.ts} (100%)
- rename client/src/components/video-player/plugins/{vrmode.js => vrmode.ts} (100%)
- rename client/src/components/video-player/{useOrientationFullscreen.js => useOrientationFullscreen.ts} (100%)
- rename client/src/components/video-player/{useVideoPlayer.js => useVideoPlayer.ts} (98%)
- rename client/src/components/video-player/{videoPlayerUtils.js => videoPlayerUtils.ts} (100%)
- rename client/src/components/video-player/{vtt-thumbnails.js => vtt-thumbnails.ts} (100%)
- rename client/src/components/wall/{WallItem.jsx => WallItem.tsx} (98%)
- rename client/src/components/wall/{WallView.jsx => WallView.tsx} (98%)
- rename client/src/components/wall/{wallConfig.js => wallConfig.ts} (98%)
- rename client/src/config/{entityDisplayConfig.js => entityDisplayConfig.ts} (100%)
- rename client/src/config/{indicatorBehaviors.js => indicatorBehaviors.ts} (100%)
- rename client/src/config/{tableColumns.js => tableColumns.ts} (100%)
- rename client/src/constants/{appIcons.js => appIcons.ts} (98%)
- rename client/src/constants/{carousels.js => carousels.ts} (98%)
- rename client/src/constants/{entityIcons.js => entityIcons.ts} (99%)
- rename client/src/constants/{grids.js => grids.ts} (100%)
- rename client/src/constants/{navigation.js => navigation.ts} (99%)
- rename client/src/contexts/{AuthContext.jsx => AuthContext.tsx} (97%)
- rename client/src/contexts/{AuthContextProvider.jsx => AuthContextProvider.tsx} (100%)
- rename client/src/contexts/{CardDisplaySettingsContext.jsx => CardDisplaySettingsContext.tsx} (87%)
- rename client/src/contexts/{ConfigContext.jsx => ConfigContext.tsx} (96%)
- rename client/src/contexts/{ScenePlayerContext.jsx => ScenePlayerContext.tsx} (93%)
- rename client/src/contexts/{TVModeContext.js => TVModeContext.ts} (100%)
- rename client/src/contexts/{TVModeProvider.jsx => TVModeProvider.tsx} (92%)
- rename client/src/contexts/{UnitPreferenceContext.js => UnitPreferenceContext.ts} (83%)
- rename client/src/contexts/{UnitPreferenceProvider.jsx => UnitPreferenceProvider.tsx} (75%)
- rename client/src/contexts/{scenePlayerReducer.js => scenePlayerReducer.ts} (100%)
- delete mode 100644 client/src/hooks/useApi.js
- create mode 100644 client/src/hooks/useApi.ts
- rename client/src/hooks/{useAuth.js => useAuth.ts} (76%)
- delete mode 100644 client/src/hooks/useCancellableQuery.js
- create mode 100644 client/src/hooks/useCancellableQuery.ts
- rename client/src/hooks/{useCardKeyboardNav.js => useCardKeyboardNav.ts} (100%)
- rename client/src/hooks/{useCardSelection.js => useCardSelection.ts} (100%)
- rename client/src/hooks/{useDebounce.js => useDebounce.ts} (100%)
- rename client/src/hooks/{useEntityImageAspectRatio.js => useEntityImageAspectRatio.ts} (100%)
- rename client/src/hooks/{useFilterState.js => useFilterState.ts} (99%)
- rename client/src/hooks/{useFocusTrap.js => useFocusTrap.ts} (100%)
- rename client/src/hooks/{useFolderViewTags.js => useFolderViewTags.ts} (96%)
- rename client/src/hooks/{useFullscreen.js => useFullscreen.ts} (100%)
- rename client/src/hooks/{useGlobalNavigation.js => useGlobalNavigation.ts} (97%)
- rename client/src/hooks/{useGridColumns.js => useGridColumns.ts} (100%)
- rename client/src/hooks/{useGridPageTVNavigation.js => useGridPageTVNavigation.ts} (97%)
- rename client/src/hooks/{useHiddenEntities.js => useHiddenEntities.ts} (96%)
- rename client/src/hooks/{useHideBulkAction.js => useHideBulkAction.ts} (94%)
- rename client/src/hooks/{useHomeCarouselQueries.js => useHomeCarouselQueries.ts} (97%)
- rename client/src/hooks/{useHorizontalNavigation.js => useHorizontalNavigation.ts} (100%)
- rename client/src/hooks/{useImagesPagination.js => useImagesPagination.ts} (97%)
- rename client/src/hooks/{useKeyboardShortcuts.js => useKeyboardShortcuts.ts} (100%)
- rename client/src/hooks/{useMediaKeys.js => useMediaKeys.ts} (98%)
- rename client/src/hooks/{useMediaQuery.js => useMediaQuery.ts} (100%)
- rename client/src/hooks/{useNavigationState.js => useNavigationState.ts} (100%)
- rename client/src/hooks/{usePageTitle.js => usePageTitle.ts} (100%)
- rename client/src/hooks/{usePaginatedLightbox.js => usePaginatedLightbox.ts} (100%)
- rename client/src/hooks/{useRatingHotkeys.js => useRatingHotkeys.ts} (98%)
- rename client/src/hooks/{useScrollDirection.js => useScrollDirection.ts} (100%)
- rename client/src/hooks/{useScrollRestoration.js => useScrollRestoration.ts} (100%)
- rename client/src/hooks/{useScrollToCurrentItem.js => useScrollToCurrentItem.ts} (100%)
- rename client/src/hooks/{useSpatialNavigation.js => useSpatialNavigation.ts} (100%)
- rename client/src/hooks/{useTVMode.js => useTVMode.ts} (78%)
- rename client/src/hooks/{useTVNavigation.js => useTVNavigation.ts} (100%)
- rename client/src/hooks/{useTableColumns.js => useTableColumns.ts} (99%)
- rename client/src/hooks/{useTruncationDetection.js => useTruncationDetection.ts} (100%)
- rename client/src/hooks/{useUrlState.js => useUrlState.ts} (100%)
- delete mode 100644 client/src/hooks/useUserStats.js
- create mode 100644 client/src/hooks/useUserStats.ts
- rename client/src/hooks/{useWallPlayback.js => useWallPlayback.ts} (95%)
- rename client/src/hooks/{useWatchHistory.js => useWatchHistory.ts} (96%)
- rename client/src/{main.jsx => main.tsx} (87%)
- delete mode 100644 client/src/services/api.js
- rename client/src/themes/{ThemeContext.js => ThemeContext.ts} (100%)
- rename client/src/themes/{ThemeProvider.jsx => ThemeProvider.tsx} (89%)
- rename client/src/themes/icons/{iconSets.js => iconSets.ts} (96%)
- rename client/src/themes/{themes.js => themes.ts} (99%)
- rename client/src/themes/{useTheme.js => useTheme.ts} (81%)
- rename client/src/utils/{buildFolderTree.js => buildFolderTree.ts} (100%)
- rename client/src/utils/{buildTagTree.js => buildTagTree.ts} (100%)
- rename client/src/utils/{colorScale.js => colorScale.ts} (100%)
- rename client/src/utils/{compositeKey.js => compositeKey.ts} (100%)
- rename client/src/utils/{date.js => date.ts} (100%)
- rename client/src/utils/{entityLinks.js => entityLinks.ts} (100%)
- rename client/src/utils/{filterCache.js => filterCache.ts} (100%)
- rename client/src/utils/{filterConfig.js => filterConfig.ts} (99%)
- rename client/src/utils/{format.js => format.ts} (100%)
- rename client/src/utils/{gallery.js => gallery.ts} (100%)
- rename client/src/utils/{imageGalleryInheritance.js => imageGalleryInheritance.ts} (100%)
- rename client/src/utils/{siteInfo.js => siteInfo.ts} (100%)
- rename client/src/utils/{spriteSheet.js => spriteSheet.ts} (100%)
- rename client/src/utils/{toast.jsx => toast.tsx} (98%)
- rename client/src/utils/{unitConversions.js => unitConversions.ts} (100%)
- rename client/src/utils/{urlParams.js => urlParams.ts} (99%)
- rename client/src/utils/{videoFormat.js => videoFormat.ts} (100%)
- rename client/tests/components/cards/{ClipCard.test.jsx => ClipCard.test.tsx} (91%)
- rename client/tests/components/cards/{GalleryCard.test.jsx => GalleryCard.test.tsx} (99%)
- rename client/tests/components/cards/{GroupCard.test.jsx => GroupCard.test.tsx} (96%)
- rename client/tests/components/cards/{ImageCard.test.jsx => ImageCard.test.tsx} (96%)
- rename client/tests/components/cards/{PerformerCard.test.jsx => PerformerCard.test.tsx} (99%)
- rename client/tests/components/cards/{StudioCard.test.jsx => StudioCard.test.tsx} (99%)
- rename client/tests/components/cards/{TagCard.test.jsx => TagCard.test.tsx} (96%)
- rename client/tests/components/clips/{ClipList.test.jsx => ClipList.test.tsx} (92%)
- rename client/tests/components/folder/{FolderView.test.jsx => FolderView.test.tsx} (99%)
- rename client/tests/components/grids/{GalleryGrid.test.jsx => GalleryGrid.test.tsx} (100%)
- rename client/tests/components/grids/{GroupGrid.test.jsx => GroupGrid.test.tsx} (100%)
- rename client/tests/components/grids/{ImageGrid.test.jsx => ImageGrid.test.tsx} (100%)
- rename client/tests/components/grids/{PerformerGrid.test.jsx => PerformerGrid.test.tsx} (100%)
- rename client/tests/components/grids/{StudioGrid.test.jsx => StudioGrid.test.tsx} (100%)
- rename client/tests/components/grids/{TagGrid.test.jsx => TagGrid.test.tsx} (100%)
- rename client/tests/components/modals/{UserSetupModal.test.jsx => UserSetupModal.test.tsx} (94%)
- rename client/tests/components/pages/{ForgotPasswordPage.test.jsx => ForgotPasswordPage.test.tsx} (97%)
- rename client/tests/components/settings/{CardDisplaySettings.test.jsx => CardDisplaySettings.test.tsx} (98%)
- rename client/tests/components/settings/{ContentTab.test.jsx => ContentTab.test.tsx} (91%)
- rename client/tests/components/settings/{StashInstanceSection.test.jsx => StashInstanceSection.test.tsx} (65%)
- rename client/tests/components/settings/{UserEditModal.test.jsx => UserEditModal.test.tsx} (99%)
- rename client/tests/components/table/{cellRenderers.test.jsx => cellRenderers.test.tsx} (98%)
- rename client/tests/components/tags/{TagHierarchyView.test.jsx => TagHierarchyView.test.tsx} (99%)
- rename client/tests/components/tags/{TagTreeNode.test.jsx => TagTreeNode.test.tsx} (99%)
- rename client/tests/components/timeline/{TimelineBar.test.jsx => TimelineBar.test.tsx} (99%)
- rename client/tests/components/timeline/{TimelineControls.test.jsx => TimelineControls.test.tsx} (99%)
- rename client/tests/components/timeline/{TimelineMobileSheet.test.jsx => TimelineMobileSheet.test.tsx} (99%)
- rename client/tests/components/timeline/{TimelineStrip.test.jsx => TimelineStrip.test.tsx} (99%)
- rename client/tests/components/timeline/{TimelineView.test.jsx => TimelineView.test.tsx} (98%)
- rename client/tests/components/ui/{BaseCard.test.jsx => BaseCard.test.tsx} (100%)
- rename client/tests/components/ui/{BaseGrid.test.jsx => BaseGrid.test.tsx} (100%)
- rename client/tests/components/ui/{BulkActionBar.test.jsx => BulkActionBar.test.tsx} (100%)
- rename client/tests/components/ui/{CardComponents.density.test.jsx => CardComponents.density.test.tsx} (95%)
- rename client/tests/components/ui/{CardComponents.test.jsx => CardComponents.test.tsx} (100%)
- rename client/tests/components/ui/{CardCountIndicators.test.jsx => CardCountIndicators.test.tsx} (96%)
- rename client/tests/components/ui/{ExpandableDescription.test.jsx => ExpandableDescription.test.tsx} (100%)
- rename client/tests/components/ui/{FilterPresets.test.jsx => FilterPresets.test.tsx} (99%)
- rename client/tests/components/ui/{Lightbox.test.jsx => Lightbox.test.tsx} (98%)
- rename client/tests/components/ui/{MarqueeText.test.jsx => MarqueeText.test.tsx} (98%)
- rename client/tests/components/ui/{Pagination.test.jsx => Pagination.test.tsx} (98%)
- rename client/tests/components/ui/{SceneCard.test.jsx => SceneCard.test.tsx} (96%)
- rename client/tests/components/ui/{SceneCardSettings.test.jsx => SceneCardSettings.test.tsx} (96%)
- rename client/tests/components/ui/{SearchControls.test.jsx => SearchControls.test.tsx} (97%)
- rename client/tests/components/ui/{SearchControlsInit.test.jsx => SearchControlsInit.test.tsx} (94%)
- rename client/tests/components/ui/{SearchableGrid.test.jsx => SearchableGrid.test.tsx} (100%)
- rename client/tests/components/ui/{SearchableSelect.test.jsx => SearchableSelect.test.tsx} (98%)
- rename client/tests/components/ui/{SkeletonSceneCard.test.jsx => SkeletonSceneCard.test.tsx} (98%)
- rename client/tests/components/ui/{TabNavigation.test.jsx => TabNavigation.test.tsx} (99%)
- rename client/tests/components/ui/{Tooltip.test.jsx => Tooltip.test.tsx} (100%)
- rename client/tests/components/ui/{ViewModeToggle.test.jsx => ViewModeToggle.test.tsx} (99%)
- rename client/tests/components/video-player/{track-activity.test.js => track-activity.test.ts} (99%)
- rename client/tests/components/wall/{wallConfig.test.js => wallConfig.test.ts} (99%)
- rename client/tests/config/{entityDisplayConfig.test.js => entityDisplayConfig.test.ts} (98%)
- rename client/tests/contexts/{AuthContext.test.jsx => AuthContext.test.tsx} (98%)
- rename client/tests/contexts/{ConfigContext.test.jsx => ConfigContext.test.tsx} (97%)
- rename client/tests/contexts/{ScenePlayerContext.test.jsx => ScenePlayerContext.test.tsx} (93%)
- rename client/tests/contexts/{scenePlayerReducer.test.js => scenePlayerReducer.test.ts} (99%)
- rename client/tests/hooks/{useAsyncData.test.jsx => useAsyncData.test.tsx} (66%)
- rename client/tests/hooks/{useAuth.test.jsx => useAuth.test.tsx} (93%)
- delete mode 100644 client/tests/hooks/useCancellableQuery.test.jsx
- create mode 100644 client/tests/hooks/useCancellableQuery.test.tsx
- rename client/tests/hooks/{useCardDisplaySettings.test.jsx => useCardDisplaySettings.test.tsx} (91%)
- rename client/tests/hooks/{useCardKeyboardNav.test.js => useCardKeyboardNav.test.ts} (99%)
- rename client/tests/hooks/{useCardSelection.test.js => useCardSelection.test.ts} (99%)
- rename client/tests/hooks/{useFilterState.presetInit.test.jsx => useFilterState.presetInit.test.tsx} (98%)
- rename client/tests/hooks/{useFilterState.test.jsx => useFilterState.test.tsx} (98%)
- rename client/tests/hooks/{useFilterState.viewMode.test.jsx => useFilterState.viewMode.test.tsx} (97%)
- rename client/tests/hooks/{useImagesPagination.test.jsx => useImagesPagination.test.tsx} (99%)
- rename client/tests/hooks/{useMediaQuery.test.js => useMediaQuery.test.ts} (98%)
- rename client/tests/hooks/{useNavigationState.test.jsx => useNavigationState.test.tsx} (99%)
- rename client/tests/hooks/{usePaginatedLightbox.test.jsx => usePaginatedLightbox.test.tsx} (99%)
- rename client/tests/hooks/{useTimelineState.test.jsx => useTimelineState.test.tsx} (97%)
- rename client/tests/hooks/{useTruncationDetection.test.js => useTruncationDetection.test.ts} (100%)
- rename client/tests/hooks/{useUrlState.test.jsx => useUrlState.test.tsx} (98%)
- rename client/tests/hooks/{useUserStats.test.jsx => useUserStats.test.tsx} (50%)
- rename client/tests/hooks/{useWatchHistory.test.jsx => useWatchHistory.test.tsx} (96%)
- rename client/tests/{setup.js => setup.ts} (100%)
- rename client/tests/{testUtils.jsx => testUtils.tsx} (87%)
- rename client/tests/utils/{buildFolderTree.test.js => buildFolderTree.test.ts} (99%)
- rename client/tests/utils/{buildTagTree.test.js => buildTagTree.test.ts} (98%)
- rename client/tests/utils/{compositeKey.test.js => compositeKey.test.ts} (99%)
- rename client/tests/utils/{filterConfig.test.js => filterConfig.test.ts} (99%)
- rename client/tests/utils/{format.test.js => format.test.ts} (99%)
- rename client/tests/utils/{galleryFilterConfig.test.js => galleryFilterConfig.test.ts} (99%)
- rename client/tests/utils/{groupFilterConfig.test.js => groupFilterConfig.test.ts} (99%)
- rename client/tests/utils/{performerFilterConfig.test.js => performerFilterConfig.test.ts} (99%)
- rename client/tests/utils/{studioFilterConfig.test.js => studioFilterConfig.test.ts} (99%)
- rename client/tests/utils/{tagFilterConfig.test.js => tagFilterConfig.test.ts} (97%)
- rename client/tests/utils/{unitConversions.test.js => unitConversions.test.ts} (98%)
- rename client/tests/utils/{urlParams.test.js => urlParams.test.ts} (95%)
- create mode 100644 client/tsconfig.json
+Already up to date.
 
 Array
 (
@@ -5214,20 +4297,7 @@ Success
 
 Downloading ciuse99's Repository
 
-From https://github.com/giuseppe99barchetta/SuggestArr
-   daecfcb..f40b075  main       -> origin/main
-Updating daecfcb..f40b075
-Fast-forward
- api_service/config/config.py      |  19 ++++-
- client/jsconfig.json              |  19 -----
- client/package.json               |   1 +
- client/src/composables/useAuth.js |  28 ++++++-
- client/src/env.d.ts               |   1 -
- client/src/main.js                |  57 +++++++++-----
- client/src/router/index.js        | 159 ++++++++++++++++++++++----------------
- client/tsconfig.json              |   6 +-
- 8 files changed, 176 insertions(+), 114 deletions(-)
- delete mode 100644 client/jsconfig.json
+Already up to date.
 
 Array
 (
@@ -6939,12 +6009,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   298d5f9..3cd438f  main       -> origin/main
-Updating 298d5f9..3cd438f
-Fast-forward
- unraid/webstation.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -13858,8 +12923,6 @@ Processing /tmp/GitHub/repositoryClone/OFark/docker-templates/OFark/Compressarr.
 Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
-From https://gitlab.com/crafty-controller/crafty-4
- * [new tag]           v4.10.0    -> v4.10.0
 Already up to date.
 
 Array
@@ -20278,12 +19341,7 @@ Processing /tmp/GitHub/repositoryClone/nylonee/watchlistarr-unraid/watchlistarr.
 
 Downloading PeteAsking's Repository
 
-From https://github.com/pallebone/UnifiUnraidReborn
-   409e41a..589a018  main       -> origin/main
-Updating 409e41a..589a018
-Fast-forward
- XMLSettings.xml | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -20460,7 +19518,13 @@ Success
 
 Downloading joly0's Repository
 
-Already up to date.
+From https://github.com/Joly0/docker-templates
+   5fffe73..18b4080  main       -> origin/main
+Updating 5fffe73..18b4080
+Fast-forward
+ templates/ollama.xml     | 58 +++++++++++++++++++++++++++++++++++++++++++-----
+ templates/open-webui.xml | 41 +++++++++++++++++++++++++++++-----
+ 2 files changed, 88 insertions(+), 11 deletions(-)
 
 Array
 (
@@ -21179,8 +20243,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
-mumblevoip/mumble-server
-mumblevoip/mumble-server:latest Downloads: 2853809  Stars: 26  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -21273,6 +20335,9 @@ mumblevoip/mumble-server:latest Downloads: 2853809  Stars: 26  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+Tagged - Can't determine last update
+karakeep-app/karakeep
+ghcr.io/karakeep-app/karakeep:release Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -21413,6 +20478,8 @@ mumblevoip/mumble-server:latest Downloads: 2853809  Stars: 26  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+rishikanthc/scriberr
+ghcr.io/rishikanthc/scriberr:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
