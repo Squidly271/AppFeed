@@ -446,75 +446,18 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 Downloading ReadMeABook's Repository
 
 From https://github.com/kikootwo/ReadMeABook
-   bfd624e..cbf02d3  main       -> origin/main
-Updating bfd624e..cbf02d3
+   cbf02d3..441724c  main       -> origin/main
+Updating cbf02d3..441724c
 Fast-forward
- .../20260303000000_add_works_table/migration.sql   |  42 ++
- .../migration.sql                                  |  51 ++
- prisma/schema.prisma                               |  86 +++
- src/app/api/audiobooks/new-releases/route.ts       |  23 +-
- src/app/api/audiobooks/popular/route.ts            |  23 +-
- src/app/api/audiobooks/search/route.ts             |  14 +-
- src/app/api/authors/[asin]/books/route.ts          |  14 +-
- src/app/api/series/[asin]/route.ts                 |  12 +-
- src/app/api/user/watched-authors/[id]/route.ts     |  52 ++
- src/app/api/user/watched-authors/route.ts          | 125 +++++
- src/app/api/user/watched-series/[id]/route.ts      |  52 ++
- src/app/api/user/watched-series/route.ts           | 125 +++++
- src/app/page.tsx                                   |  67 +--
- src/app/profile/page.tsx                           |   7 +
- src/components/authors/AuthorDetailCard.tsx        |  36 +-
- src/components/profile/WatchedListsSection.tsx     | 323 +++++++++++
- src/components/series/SeriesDetailCard.tsx         |  36 +-
- src/components/ui/StickyPagination.tsx             | 170 ------
- src/components/ui/UnifiedPagination.tsx            | 325 ++++++++++++
- src/components/ui/WatchButton.tsx                  | 186 +++++++
- src/lib/hooks/useAudiobooks.ts                     |   7 +-
- src/lib/hooks/useWatchedAuthors.ts                 | 119 +++++
- src/lib/hooks/useWatchedSeries.ts                  | 119 +++++
- src/lib/integrations/audible-series.ts             |  13 +-
- src/lib/integrations/audible.service.ts            |  29 +-
- .../processors/check-watched-lists.processor.ts    |  43 ++
- src/lib/services/job-queue.service.ts              |  50 ++
- src/lib/services/request-creator.service.ts        |  10 +
- src/lib/services/scheduler.service.ts              |  19 +-
- src/lib/services/watched-lists.service.ts          | 414 +++++++++++++++
- src/lib/services/works.service.ts                  | 248 +++++++++
- src/lib/utils/audiobook-matcher.ts                 | 107 ++++
- src/lib/utils/deduplicate-audiobooks.ts            | 203 +++++++
- src/lib/utils/parse-runtime.ts                     |  44 ++
- tests/app/home.page.test.tsx                       |  25 +-
- tests/components/ui/StickyPagination.test.tsx      | 133 -----
- tests/components/ui/UnifiedPagination.test.tsx     | 203 +++++++
- tests/helpers/prisma.ts                            |   4 +
- tests/services/job-queue.service.test.ts           |   6 +
- tests/services/scheduler.service.test.ts           |   2 +-
- tests/services/watched-lists.service.test.ts       | 588 +++++++++++++++++++++
- tests/services/works.service.test.ts               | 306 +++++++++++
- tests/utils/deduplicate-audiobooks.test.ts         | 451 ++++++++++++++++
- 43 files changed, 4489 insertions(+), 423 deletions(-)
- create mode 100644 prisma/migrations/20260303000000_add_works_table/migration.sql
- create mode 100644 prisma/migrations/20260303100000_add_watched_series_authors/migration.sql
- create mode 100644 src/app/api/user/watched-authors/[id]/route.ts
- create mode 100644 src/app/api/user/watched-authors/route.ts
- create mode 100644 src/app/api/user/watched-series/[id]/route.ts
- create mode 100644 src/app/api/user/watched-series/route.ts
- create mode 100644 src/components/profile/WatchedListsSection.tsx
- delete mode 100644 src/components/ui/StickyPagination.tsx
- create mode 100644 src/components/ui/UnifiedPagination.tsx
- create mode 100644 src/components/ui/WatchButton.tsx
- create mode 100644 src/lib/hooks/useWatchedAuthors.ts
- create mode 100644 src/lib/hooks/useWatchedSeries.ts
- create mode 100644 src/lib/processors/check-watched-lists.processor.ts
- create mode 100644 src/lib/services/watched-lists.service.ts
- create mode 100644 src/lib/services/works.service.ts
- create mode 100644 src/lib/utils/deduplicate-audiobooks.ts
- create mode 100644 src/lib/utils/parse-runtime.ts
- delete mode 100644 tests/components/ui/StickyPagination.test.tsx
- create mode 100644 tests/components/ui/UnifiedPagination.test.tsx
- create mode 100644 tests/services/watched-lists.service.test.ts
- create mode 100644 tests/services/works.service.test.ts
- create mode 100644 tests/utils/deduplicate-audiobooks.test.ts
+ .../migration.sql                                  |   3 +
+ src/app/api/admin/manual-import/route.ts           |  43 ++++++++
+ src/app/api/auth/admin/login/route.ts              |   4 +-
+ src/app/api/setup/complete/route.ts                |   5 +-
+ src/lib/processors/organize-files.processor.ts     | 112 ++++++++++++++++++++-
+ src/lib/services/auth/LocalAuthProvider.ts         |  13 ++-
+ tests/services/auth/local-auth-provider.test.ts    |  70 +++++++++++++
+ 7 files changed, 239 insertions(+), 11 deletions(-)
+ create mode 100644 prisma/migrations/20260304000000_normalize_local_usernames/migration.sql
 
 Array
 (
@@ -868,13 +811,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   6024508..4656f39  main       -> origin/main
-Updating 6024508..4656f39
-Fast-forward
- app/api/admin/models/[id]/images/route.ts | 14 ++++++++++++--
- app/api/models/[id]/images/route.ts       | 14 ++++++++++++--
- 2 files changed, 24 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1015,8 +952,6 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
- * [new tag]         v1.11.0-beta.9 -> v1.11.0-beta.9
 Already up to date.
 
 Array
@@ -1074,27 +1009,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   5389028..d5f1604  main       -> origin/main
-Updating 5389028..d5f1604
-Fast-forward
- CHANGELOG.md               |   6 ++
- package-lock.json          |   4 +-
- package.json               |   2 +-
- public/shared/admin.js     | 135 +++++++++++++++++++++++++++++++++++++++++----
- public/shared/i18n/de.json |  12 ++++
- public/shared/i18n/en.json |  12 ++++
- public/shared/i18n/es.json |  12 ++++
- public/shared/i18n/fr.json |  12 ++++
- public/shared/i18n/it.json |  12 ++++
- public/shared/i18n/nl.json |  12 ++++
- public/shared/i18n/pt.json |  12 ++++
- public/shared/i18n/zh.json |  12 ++++
- public/shared/scripts.js   |  18 ++++++
- public/shared/styles.css   |  80 ++++++++++++++++++++++++++-
- src/server.js              |  34 +++++++++++-
- version.json               |   2 +-
- 16 files changed, 358 insertions(+), 19 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1250,6 +1165,9 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
+From https://github.com/m3ue/m3u-editor
+ * [new tag]         v0.9.13-dev -> v0.9.13-dev
+ * [new tag]         v0.9.14-exp -> v0.9.14-exp
 Already up to date.
 
 Array
@@ -1357,7 +1275,12 @@ Success
 
 Downloading Uderzo's Repository
 
-Already up to date.
+From https://github.com/BabaBooey84/unraid-templates
+   4dd8bab..314996f  main       -> origin/main
+Updating 4dd8bab..314996f
+Fast-forward
+ templates/Sharkord.xml | 33 ++++++++++++++++++++++++++-------
+ 1 file changed, 26 insertions(+), 7 deletions(-)
 
 Array
 (
@@ -15292,13 +15215,7 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-From https://github.com/JPDVM2014/unraid-templates
-   2dac205..59a734e  main       -> origin/main
-Updating 2dac205..59a734e
-Fast-forward
- shelfarr.xml | 30 ------------------------------
- 1 file changed, 30 deletions(-)
- delete mode 100644 shelfarr.xml
+Already up to date.
 
 Array
 (
@@ -20589,6 +20506,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
+lymphatus/caesium-app-web
+lymphatus/caesium-app-web:latest Downloads: 1369  Stars: 0  Base: unknown
+autobrr/netronome
+ghcr.io/autobrr/netronome:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
@@ -20790,6 +20711,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+calibrain/calibre-web-automated-book-downloader
+ghcr.io/calibrain/calibre-web-automated-book-downloader:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 132
