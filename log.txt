@@ -661,98 +661,11 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   ab276ff..9b31ef0  main       -> origin/main
-Updating ab276ff..9b31ef0
+   9b31ef0..4c756ac  main       -> origin/main
+Updating 9b31ef0..4c756ac
 Fast-forward
- README.md                                          |  20 +-
- .../admin/orders/[orderId]/slicer-stats/route.ts   |  29 ++-
- app/api/checkout/route.ts                          |  67 ++++-
- .../organizations/[organizationId]/route.ts        |  13 +-
- .../organizations/[organizationId]/usage/route.ts  |  29 +++
- app/api/customer/organizations/route.ts            |   7 +
- app/api/models/[id]/comments/route.ts              |  23 ++
- app/api/models/[id]/quote/route.ts                 |  11 +-
- app/api/models/[id]/route.ts                       |  19 +-
- app/api/models/route.ts                            | 219 ++++++++++++++--
- app/api/presets/route.ts                           |  89 ++++++-
- app/api/stockworks/material-warnings/route.ts      | 184 +-------------
- app/cart/page.tsx                                  |   2 -
- app/checkout/page.tsx                              |  71 +++++-
- app/customer/orders/[orderId]/page.tsx             | 123 ++++++++-
- app/customer/portal/page.tsx                       |  34 ++-
- .../[organizationId]/[projectCode]/page.tsx        | 158 ++++++++++++
- app/customer/workspaces/page.tsx                   | 108 ++++++++
- app/discover/page.tsx                              |  60 ++++-
- app/models/[id]/page.tsx                           |  74 ++++--
- app/settings/organizations/page.tsx                | 241 +++++++++++++++++-
- app/u/[slug]/page.tsx                              |   8 +
- components/AppSidebar.tsx                          |   6 +-
- components/CreatorQualityCard.tsx                  |  58 +++++
- components/FeasibilityScorecard.tsx                |  39 +++
- components/Gallery.tsx                             |  82 ++++--
- components/InstantQuoteConfigurator.tsx            | 135 +++++++++-
- components/MaterialRecommenderCard.tsx             |  52 ++++
- components/ModelComments.tsx                       | 120 ++++++++-
- components/ModelLineageCard.tsx                    |  97 +++++++
- components/ModelProcessingNotifier.tsx             |  15 +-
- components/ModelReviewWorkspace.tsx                | 144 +++++++++++
- components/ModelViewer.tsx                         | 221 +++++-----------
- components/PrintabilityChecksCard.tsx              | 101 ++++++++
- components/QuoteBreakdownCard.tsx                  | 168 +++++++++++++
- components/StatusChip.tsx                          |  28 +++
- components/admin/AnalyticsDashboard.tsx            |  90 +++++++
- components/cart/CartProvider.tsx                   |   3 +
- components/checkout/CheckoutMiniSummary.tsx        |  47 ++++
- components/checkout/ConfigurationCompareCard.tsx   |  52 ++++
- components/checkout/OrderSummary.tsx               |  23 ++
- components/customer/CustomerPresetsPanel.tsx       |  41 ++-
- components/discover/DiscoverFilters.tsx            | 276 +++++++++++++++++++-
- components/discover/DiscoverModelList.tsx          |  36 +++
- components/discover/DiscoverPresetBar.tsx          | 258 +++++++++++++++++++
- docs/app-frontend-audit.md                         |  63 +++++
- docs/user-manual.md                                | 279 +++++++++++++++++----
- lib/admin/analytics.ts                             |  81 ++++++
- lib/comments.ts                                    |  51 +++-
- lib/creator-quality.ts                             | 129 ++++++++++
- lib/feasibility-scorecard.ts                       |  56 +++++
- lib/material-availability.ts                       | 195 ++++++++++++++
- lib/material-recommender.ts                        |  84 +++++++
- lib/model-lineage.ts                               |  72 ++++++
- lib/orders.ts                                      |   4 +
- lib/organizations.ts                               |  40 ++-
- lib/procurement-config.ts                          |  61 +++++
- lib/production.ts                                  | 207 ++++++++++++++-
- lib/project-workspaces.ts                          | 217 ++++++++++++++++
- .../migration.sql                                  |   8 +
- .../migration.sql                                  |   2 +
- prisma/schema.prisma                               |   6 +
- scripts/backfill-comment-part-review.js            |  49 ++++
- types/checkout.ts                                  |  11 +
- types/discover.ts                                  |  18 ++
- 65 files changed, 4791 insertions(+), 523 deletions(-)
- create mode 100644 app/customer/workspaces/[organizationId]/[projectCode]/page.tsx
- create mode 100644 app/customer/workspaces/page.tsx
- create mode 100644 components/CreatorQualityCard.tsx
- create mode 100644 components/FeasibilityScorecard.tsx
- create mode 100644 components/MaterialRecommenderCard.tsx
- create mode 100644 components/ModelLineageCard.tsx
- create mode 100644 components/ModelReviewWorkspace.tsx
- create mode 100644 components/PrintabilityChecksCard.tsx
- create mode 100644 components/QuoteBreakdownCard.tsx
- create mode 100644 components/StatusChip.tsx
- create mode 100644 components/checkout/CheckoutMiniSummary.tsx
- create mode 100644 components/checkout/ConfigurationCompareCard.tsx
- create mode 100644 components/discover/DiscoverPresetBar.tsx
- create mode 100644 lib/creator-quality.ts
- create mode 100644 lib/feasibility-scorecard.ts
- create mode 100644 lib/material-availability.ts
- create mode 100644 lib/material-recommender.ts
- create mode 100644 lib/model-lineage.ts
- create mode 100644 lib/procurement-config.ts
- create mode 100644 lib/project-workspaces.ts
- create mode 100644 prisma/migrations/20260303153000_model_comment_part_pins/migration.sql
- create mode 100644 prisma/migrations/20260303174500_organization_procurement_config/migration.sql
- create mode 100644 scripts/backfill-comment-part-review.js
+ components/discover/DiscoverFilters.tsx | 52 +++++++--------------------------
+ 1 file changed, 11 insertions(+), 41 deletions(-)
 
 Array
 (
@@ -893,6 +806,8 @@ Success
 
 Downloading NeXroll's Repository
 
+From https://github.com/JFLXCLOUD/NeXroll
+ * [new tag]         v1.11.0-beta.8 -> v1.11.0-beta.8
 Already up to date.
 
 Array
@@ -1143,31 +1058,13 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 Downloading Carrot Waxxr's Repository
 
 From https://github.com/carrotwaxr/peek-stash-browser
-   b3efc7c..8abb1d0  main          -> origin/main
- * [new tag]         v3.3.6-beta.2 -> v3.3.6-beta.2
-Updating b3efc7c..8abb1d0
+   8abb1d0..3d8e47e  main       -> origin/main
+ * [new tag]         v3.3.6     -> v3.3.6
+Updating 8abb1d0..3d8e47e
 Fast-forward
- client/package.json                                |  2 +-
- client/src/components/pages/Home.tsx               |  3 +-
- client/src/components/pages/PerformerDetail.tsx    |  5 +-
- client/src/components/pages/SceneDetails.tsx       | 55 ++++++----------------
- client/src/components/pages/StudioDetail.tsx       | 22 ++++-----
- client/src/components/pages/TagDetail.tsx          | 22 ++++-----
- .../src/components/settings/CustomThemeManager.tsx |  4 +-
- client/src/components/ui/ActiveFilterChips.tsx     |  8 +---
- client/src/components/ui/ScenesLikeThis.tsx        |  7 +--
- client/src/components/ui/SearchControls.tsx        | 19 ++++----
- client/src/components/ui/TagChips.tsx              |  9 +++-
- client/src/hooks/useImagesPagination.ts            | 13 +++--
- client/src/hooks/usePaginatedLightbox.ts           |  2 +-
- client/src/themes/ThemeContext.ts                  |  3 +-
- client/src/themes/ThemeProvider.tsx                | 35 +++++++-------
- client/src/themes/themes.ts                        |  2 +-
- client/src/utils/filterConfig.ts                   | 25 ++++++++++
- client/src/utils/urlParams.ts                      | 17 +------
- client/tests/hooks/usePaginatedLightbox.test.tsx   |  3 +-
- server/package.json                                |  2 +-
- 20 files changed, 123 insertions(+), 135 deletions(-)
+ client/package.json | 2 +-
+ server/package.json | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -20643,29 +20540,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-manictime/manictimeserver
-manictime/manictimeserver:latest Downloads: 210633  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-huntarr/4sonarr
-huntarr/4sonarr:latest Downloads: 61679  Stars: 0  Base: unknown
-huntarr/4readarr
-huntarr/4readarr:latest Downloads: 1600  Stars: 0  Base: unknown
-huntarr/4radarr
-huntarr/4radarr:latest Downloads: 21522  Stars: 0  Base: unknown
-huntarr/4whisparr
-huntarr/4whisparr:latest Downloads: 294  Stars: 0  Base: unknown
-huntarr/4lidarr
-huntarr/4lidarr:latest Downloads: 4683  Stars: 0  Base: unknown
-saihgupr/homeassistanttimemachine
-ghcr.io/saihgupr/homeassistanttimemachine:latest Downloads:   Stars:   Base: unknown
-norishapp/norish
-norishapp/norish:latest Downloads: 103437  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-litongjava/whisper-cpp-server
-litongjava/whisper-cpp-server:1.0.0 Downloads: 1124  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
