@@ -51,12 +51,11 @@ Failed loading XML
 Downloading Scootter's Repository
 
 From https://github.com/sceather/unraid-templates
-   f567711..f71ca79  main       -> origin/main
-Updating f567711..f71ca79
+   f71ca79..ea76a6a  main       -> origin/main
+Updating f71ca79..ea76a6a
 Fast-forward
- Dockhand.xml        |   2 +-
- images/scootter.png | Bin 787202 -> 279564 bytes
- 2 files changed, 1 insertion(+), 1 deletion(-)
+ README.md | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
 
 Array
 (
@@ -446,87 +445,17 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 Downloading ReadMeABook's Repository
 
 From https://github.com/kikootwo/ReadMeABook
-   079a337..c35bec9  main       -> origin/main
- * [new tag]         v1.1.0     -> v1.1.0
-Updating 079a337..c35bec9
+   c35bec9..3e2221a  main       -> origin/main
+ * [new tag]         v1.1.1     -> v1.1.1
+Updating c35bec9..3e2221a
 Fast-forward
- documentation/TABLEOFCONTENTS.md                   |   4 +
- documentation/backend/services/scheduler.md        |   8 +-
- documentation/features/home-sections.md            |  64 ++++
- documentation/integrations/audible.md              |   6 +-
- documentation/integrations/ebook-sidecar.md        |  10 +-
- documentation/settings-pages.md                    |   4 +-
- package.json                                       |   2 +-
- .../20260306000000_add_home_sections/migration.sql |  49 +++
- .../migration.sql                                  |  17 +
- prisma/schema.prisma                               |  57 +++-
- public/placeholder_cover.svg                       |  22 ++
- src/app/admin/components/RecentRequestsTable.tsx   |   2 +-
- src/app/admin/components/ReportedIssuesSection.tsx |  24 +-
- .../admin/components/RequestActionsDropdown.tsx    |   2 +-
- src/app/admin/page.tsx                             |  24 +-
- src/app/admin/settings/tabs/EbookTab/EbookTab.tsx  |   4 +-
- .../settings/tabs/EbookTab/useEbookSettings.ts     |   4 +-
- src/app/api/admin/manual-import/route.ts           |  40 ++-
- src/app/api/admin/settings/ebook/route.ts          |   2 +-
- src/app/api/admin/settings/route.ts                |   2 +-
- src/app/api/audible/categories/route.ts            |  39 +++
- .../[asin]/interactive-search-ebook/route.ts       |   2 +-
- .../api/audiobooks/category/[categoryId]/route.ts  | 154 ++++++++++
- src/app/api/audiobooks/covers/route.ts             |  26 +-
- src/app/api/audiobooks/new-releases/route.ts       | 116 +++----
- src/app/api/audiobooks/popular/route.ts            | 116 +++----
- .../[id]/interactive-search-ebook/route.ts         |   2 +-
- src/app/api/user/home-sections/route.ts            | 202 ++++++++++++
- src/app/login/page.tsx                             |   1 +
- src/app/page.tsx                                   | 329 ++++++++++----------
- src/components/audiobooks/AudiobookCard.tsx        |  18 +-
- .../audiobooks/AudiobookDetailsModal.tsx           |  16 +-
- src/components/bookdate/BookPickerModal.tsx        |   2 +
- src/components/bookdate/RecommendationCard.tsx     |  15 +-
- src/components/home/HomeSection.tsx                | 310 +++++++++++++++++++
- src/components/home/HomeSectionConfigModal.tsx     | 342 +++++++++++++++++++++
- src/components/profile/ShelvesSection.tsx          |   4 +-
- src/components/profile/WatchedListsSection.tsx     |  17 +-
- src/components/requests/RequestCard.tsx            |  46 ++-
- src/components/series/SeriesCard.tsx               |  28 +-
- src/components/series/SeriesDetailCard.tsx         |  20 +-
- src/components/series/SimilarSeriesRow.tsx         |  23 +-
- src/components/ui/UnifiedPagination.tsx            | 237 +++++++++-----
- src/lib/hooks/useHomeSections.ts                   | 119 +++++++
- src/lib/integrations/audible.service.ts            | 158 ++++++++++
- src/lib/processors/audible-refresh.processor.ts    | 264 +++++++++-------
- src/lib/processors/direct-download.processor.ts    |   2 +-
- src/lib/processors/search-ebook.processor.ts       |   2 +-
- src/lib/services/ebook-scraper.ts                  |   4 +-
- src/lib/services/thumbnail-cache.service.ts        |  22 +-
- tests/api/admin-manual-import.routes.test.ts       | 258 ++++++++++++++++
- tests/api/admin-settings-core.routes.test.ts       |   2 +-
- tests/api/admin-settings-tests.routes.test.ts      |   6 +-
- tests/api/audiobooks-browse.routes.test.ts         |  28 +-
- tests/api/home-sections.routes.test.ts             | 166 ++++++++++
- .../components/RequestActionsDropdown.test.tsx     |   2 +-
- .../tabs/EbookTab/useEbookSettings.test.tsx        |   4 +-
- tests/app/home.page.test.tsx                       |  66 +++-
- tests/components/admin-settings-indexers.test.tsx  |   2 +-
- tests/helpers/prisma.ts                            |   5 +
- tests/processors/audible-refresh.processor.test.ts |  85 ++++-
- tests/processors/direct-download.processor.test.ts |   6 +-
- tests/processors/search-ebook.processor.test.ts    |  10 +-
- tests/services/ebook-scraper.test.ts               |  14 +-
- 64 files changed, 2927 insertions(+), 710 deletions(-)
- create mode 100644 documentation/features/home-sections.md
- create mode 100644 prisma/migrations/20260306000000_add_home_sections/migration.sql
- create mode 100644 prisma/migrations/20260307000000_remove_popular_newrelease_flags/migration.sql
- create mode 100644 public/placeholder_cover.svg
- create mode 100644 src/app/api/audible/categories/route.ts
- create mode 100644 src/app/api/audiobooks/category/[categoryId]/route.ts
- create mode 100644 src/app/api/user/home-sections/route.ts
- create mode 100644 src/components/home/HomeSection.tsx
- create mode 100644 src/components/home/HomeSectionConfigModal.tsx
- create mode 100644 src/lib/hooks/useHomeSections.ts
- create mode 100644 tests/api/admin-manual-import.routes.test.ts
- create mode 100644 tests/api/home-sections.routes.test.ts
+ docker/unified/entrypoint.sh                          | 9 +++++++++
+ package.json                                          | 2 +-
+ prisma/data-migrations/normalize-local-usernames.sql  | 7 +++++++
+ src/app/api/requests/[id]/interactive-search/route.ts | 6 +++---
+ src/lib/processors/search-indexers.processor.ts       | 5 +++--
+ 5 files changed, 23 insertions(+), 6 deletions(-)
+ create mode 100644 prisma/data-migrations/normalize-local-usernames.sql
 
 Array
 (
@@ -881,18 +810,11 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   84c13e3..5489261  main       -> origin/main
-Updating 84c13e3..5489261
+   5489261..c448b8b  main       -> origin/main
+Updating 5489261..c448b8b
 Fast-forward
- app/admin/products/page.tsx          |  4 +++-
- app/api/admin/products/route.ts      |  4 +++-
- app/api/models/route.ts              | 10 +++++-----
- app/api/products/route.ts            |  4 +++-
- app/products/page.tsx                |  4 +++-
- components/products/PhotoMarquee.tsx | 13 ++-----------
- lib/product-template-variants.ts     | 35 +++++++++++++++++++++++++++++++++++
- 7 files changed, 54 insertions(+), 20 deletions(-)
- create mode 100644 lib/product-template-variants.ts
+ app/products/[id]/page.tsx | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -1033,7 +955,22 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   991b4cb..51806e8  main       -> origin/main
+ * [new tag]         v1.11.9    -> v1.11.9
+Updating 991b4cb..51806e8
+Fast-forward
+ DOCKER.md                        |   3 +-
+ NeXroll/CHANGELOG.md             |  62 ++++++
+ NeXroll/RELEASE_NOTES_v1.11.9.md | 189 +++++++++++++++++
+ NeXroll/backend/main.py          |  35 ++++
+ NeXroll/backend/version.py       |   2 +-
+ NeXroll/version.py               |   2 +-
+ NeXroll/version_info.txt         |   8 +-
+ Releases/installer.nsi           | 436 ---------------------------------------
+ 8 files changed, 293 insertions(+), 444 deletions(-)
+ create mode 100644 NeXroll/RELEASE_NOTES_v1.11.9.md
+ delete mode 100644 Releases/installer.nsi
 
 Array
 (
@@ -1090,7 +1027,31 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   37903b8..de9c254  main       -> origin/main
+Updating 37903b8..de9c254
+Fast-forward
+ CHANGELOG.md               |  43 +++++++++
+ CLAUDE.md                  |  35 ++++++++
+ package-lock.json          |   4 +-
+ package.json               |   2 +-
+ public-readonly/index.html |   9 +-
+ public/index.html          |  73 ++++++++--------
+ public/shared/admin.css    | 214 ++++++++++++++++++++++++++++++++++++++++++---
+ public/shared/admin.js     | 174 ++++++++++++++++++++++++------------
+ public/shared/i18n/de.json |  20 +++++
+ public/shared/i18n/en.json |  20 +++++
+ public/shared/i18n/es.json |  20 +++++
+ public/shared/i18n/fr.json |  20 +++++
+ public/shared/i18n/it.json |  20 +++++
+ public/shared/i18n/nl.json |  20 +++++
+ public/shared/i18n/pt.json |  20 +++++
+ public/shared/i18n/zh.json |  23 ++++-
+ public/shared/scripts.js   |  73 ++++++++++++----
+ public/shared/styles.css   |  21 +++--
+ src/server.js              |  28 +++---
+ version.json               |   2 +-
+ 20 files changed, 691 insertions(+), 150 deletions(-)
 
 Array
 (
@@ -1246,54 +1207,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   05eac02..4c87bf3  master     -> origin/master
- * [new tag]         v0.9.14-dev -> v0.9.14-dev
- * [new tag]         v0.9.15-exp -> v0.9.15-exp
-Updating 05eac02..4c87bf3
-Fast-forward
- .github/workflows/publish_dev.yml                  |   8 +-
- .github/workflows/publish_experimental.yml         |   8 +-
- .../GuestPanel/Resources/Vods/VodResource.php      |   6 +-
- app/Filament/Pages/Preferences.php                 |   4 +-
- .../Resources/Channels/ChannelResource.php         |   4 +-
- .../Resources/Playlists/PlaylistResource.php       |  21 +-
- app/Filament/Resources/Series/Pages/ListSeries.php | 396 ++++++++++++++++----
- .../StreamFileSettingResource.php                  |  76 +++-
- app/Filament/Resources/Vods/Pages/ListVod.php      | 402 +++++++++++++++++----
- app/Filament/Resources/Vods/VodResource.php        |   6 +-
- app/Filament/Widgets/UpdateNoticeWidget.php        |  10 -
- app/Forms/Components/TmdbSearchResults.php         |  46 ++-
- app/Http/Controllers/EpgGenerateController.php     |  62 +++-
- app/Http/Controllers/ProxyController.php           |  29 +-
- app/Http/Controllers/XtreamApiController.php       |   3 +-
- app/Jobs/CheckSeriesImportProgress.php             |  27 +-
- app/Jobs/ProcessM3uImportSeries.php                |   4 +-
- app/Jobs/ProcessM3uImportSeriesEpisodes.php        |  12 +-
- app/Jobs/ProcessM3uImportVod.php                   |  18 +-
- app/Jobs/ProcessVodChannels.php                    |   4 +
- app/Jobs/ProcessVodChannelsChunk.php               |   3 +-
- app/Jobs/ProcessVodChannelsComplete.php            |  31 +-
- app/Jobs/SyncSeriesStrmFiles.php                   |  42 ++-
- app/Jobs/SyncVodStrmFiles.php                      |  60 +--
- app/Models/Channel.php                             |  14 +-
- app/Models/Playlist.php                            |   1 +
- app/Models/Series.php                              |  24 +-
- app/Models/StreamFileSetting.php                   |   2 +
- app/Providers/VersionServiceProvider.php           |   4 +-
- app/Services/NfoService.php                        |   5 +-
- app/Services/PlaylistService.php                   |   2 +-
- config/dev.php                                     |   4 +-
- ...lder_metadata_to_stream_file_settings_table.php |  67 ++++
- ..._auto_sync_series_stream_files_to_playlists.php |  36 ++
- package-lock.json                                  |   6 +-
- .../forms/components/tmdb-search-results.blade.php |   4 +-
- .../forms/components/tmdb-search-results.blade.php |   4 +-
- tests/Feature/VodResourceTableTest.php             |  82 +++++
- 38 files changed, 1243 insertions(+), 294 deletions(-)
- create mode 100644 database/migrations/2026_03_02_100000_add_folder_metadata_to_stream_file_settings_table.php
- create mode 100644 database/migrations/2026_03_04_000001_add_auto_sync_series_stream_files_to_playlists.php
- create mode 100644 tests/Feature/VodResourceTableTest.php
+Already up to date.
 
 Array
 (
@@ -20655,6 +20569,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+sahara101/movie-roulette
+ghcr.io/sahara101/movie-roulette:latest Downloads: 56333  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20673,6 +20589,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+petersem/posterr
+petersem/posterr Downloads: 637844  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20726,15 +20644,99 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/SlrG/unRAID/raw/master/Plugins/ProFTPd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/docgyver/unraid-v6-plugins/master/denyhosts.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/docgyver/unraid-v6-plugins/master/ssh.plg attempt 1...
+stuckless/sagetv-server-java9
+stuckless/sagetv-server-java9 Downloads: 4483  Stars: 0  Base: unknown
+stuckless/sagetv-server-java10
+stuckless/sagetv-server-java10 Downloads: 8236  Stars: 0  Base: unknown
+tynor88/unoeuro-dns
+tynor88/unoeuro-dns Downloads: 22949  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/unbalance/releases/latest/download/unbalanced.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+msjpq/firefox-vnc
+msjpq/firefox-vnc Downloads: 109489  Stars: 4  Base: unknown
+ghost
+ghost Downloads: 374120756  Stars: 1803  Base: unknown
+steamcache/steamcache-dns
+steamcache/steamcache-dns:latest Downloads: 2620656  Stars: 27  Base: unknown
+taskcafe/taskcafe
+taskcafe/taskcafe Downloads: 1588137  Stars: 12  Base: unknown
+Tagged - Can't determine last update
+haugene/transmission-openvpn
+haugene/transmission-openvpn:dev Downloads: 392287360  Stars: 660  Base: unknown
+jlesage/cloudberry-backup
+jlesage/cloudberry-backup Downloads: 2255435  Stars: 13  Base: unknown
+jlesage/putty
+jlesage/putty Downloads: 1576331  Stars: 24  Base: unknown
+jlesage/mkv-muxing-batch-gui
+jlesage/mkv-muxing-batch-gui Downloads: 27861  Stars: 0  Base: unknown
+jlesage/freefilesync
+jlesage/freefilesync Downloads: 279878  Stars: 10  Base: unknown
+jlesage/crashplan-pro
+jlesage/crashplan-pro Downloads: 22479347  Stars: 122  Base: unknown
+library/rocket.chat
+library/rocket.chat Downloads: 76008689  Stars: 847  Base: unknown
+markusmcnugen/crushftp
+markusmcnugen/crushftp:latest Downloads: 149583  Stars: 2  Base: unknown
+Tagged - Can't determine last update
+esphome/esphome
+ghcr.io/esphome/esphome:stable Downloads: 67267904  Stars: 168  Base: unknown
+dchesterton/amcrest2mqtt
+dchesterton/amcrest2mqtt Downloads: 658919  Stars: 6  Base: unknown
+danmed/tasmobackupv1
+danmed/tasmobackupv1 Downloads: 2036775  Stars: 3  Base: unknown
+tasmoadmin/tasmoadmin
+ghcr.io/tasmoadmin/tasmoadmin:latest Downloads:   Stars:   Base: unknown
+bramblegb/openeats
+bramblegb/openeats Downloads: 175928  Stars: 0  Base: unknown
+acaranta/docker-joplin
+acaranta/docker-joplin Downloads: 43793  Stars: 0  Base: unknown
+tracksapp/tracks
+tracksapp/tracks Downloads: 97299  Stars: 11  Base: unknown
+dullage/tahskr-server
+dullage/tahskr-server Downloads: 2633  Stars: 0  Base: unknown
+bityard/silicon
+bityard/silicon Downloads: 30960  Stars: 0  Base: unknown
+candiddev/homechart
+candiddev/homechart Downloads: 318698  Stars: 8  Base: unknown
+viktorstrate/photoview
+viktorstrate/photoview Downloads: 4861882  Stars: 42  Base: unknown
+benoitpodwinski/phpservermon
+benoitpodwinski/phpservermon Downloads: 678334  Stars: 6  Base: unknown
+vabene1111/recipes
+vabene1111/recipes Downloads: 11159276  Stars: 67  Base: unknown
+cmccambridge/mosquitto-unraid
+cmccambridge/mosquitto-unraid:latest Downloads: 1009121  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
+dyonr/owncloud-client
+dyonr/owncloud-client Downloads: 11541  Stars: 0  Base: unknown
+dyonr/jackettvpn
+dyonr/jackettvpn Downloads: 5903994  Stars: 17  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+siwatinc/phlex
+siwatinc/phlex Downloads: 410117  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
+Tagged - Can't determine last update
+causticlab/hass-configurator-docker
+causticlab/hass-configurator-docker:x86_64 Downloads: 24011662  Stars: 36  Base: unknown
+alqutami/rtmp-hls
+alqutami/rtmp-hls Downloads: 1361832  Stars: 122  Base: unknown
+knex666/rssnotipy
+knex666/rssnotipy Downloads: 18949  Stars: 0  Base: unknown
+infiniteproject/icecast
+infiniteproject/icecast Downloads: 4451120  Stars: 36  Base: unknown
+knex666/mopidy
+knex666/mopidy Downloads: 132415  Stars: 0  Base: unknown
+dax333/cron-streamripper
+dax333/cron-streamripper Downloads: 16355  Stars: 1  Base: unknown
+Tagged - Can't determine last update
+elasticsearch
+elasticsearch:6.6.2 Downloads: 943200497  Stars: 6581  Base: unknown
+getpinry/pinry
+getpinry/pinry Downloads: 1108316  Stars: 10  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -20771,15 +20773,56 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
+angelics/unraid-docker-ravencoin-p2p
+angelics/unraid-docker-ravencoin-p2p Downloads: 21732  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+songkong/songkong
+songkong/songkong Downloads: 2162823  Stars: 5  Base: unknown
+khak1s/dashgate
+khak1s/dashgate:latest Downloads: 1254  Stars: 0  Base: unknown
+nmtan/chevereto
+nmtan/chevereto Downloads: 13163717  Stars: 115  Base: unknown
+openclaw/openclaw
+ghcr.io/openclaw/openclaw:latest Downloads:   Stars:   Base: unknown
+golift/unifi-poller
+golift/unifi-poller Downloads: 32543397  Stars: 56  Base: unknown
+lukehagar/pocketbase
+lukehagar/pocketbase Downloads: 28525  Stars: 1  Base: unknown
+huginn/huginn
+ghcr.io/huginn/huginn Downloads: 20333743  Stars: 207  Base: unknown
+themepark-dev/theme
+ghcr.io/themepark-dev/theme.park Downloads:   Stars:   Base: unknown
+ozmoetr/testerfy
+ghcr.io/ozmoetr/testerfy:latest Downloads:   Stars:   Base: unknown
+trentferguson/homescreen-hero
+trentferguson/homescreen-hero:latest Downloads: 13483  Stars: 0  Base: unknown
+mrlt8/wyze-bridge
+mrlt8/wyze-bridge Downloads: 3987074  Stars: 38  Base: unknown
+crazymax/cloudflared
+crazymax/cloudflared Downloads: 13603825  Stars: 30  Base: unknown
+kenyonj/airbridge
+ghcr.io/kenyonj/airbridge Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
+alturismo/xteve_g2g_owi
+alturismo/xteve_g2g_owi Downloads: 830700  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
+spaceinvaderone/deconz
+spaceinvaderone/deconz Downloads: 220939  Stars: 0  Base: unknown
+spaceinvaderone/explainshell
+spaceinvaderone/explainshell Downloads: 145184  Stars: 6  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
+rocker/rstudio
+rocker/rstudio Downloads: 28082852  Stars: 460  Base: unknown
+electricbrainuk/idleminerdashboard
+electricbrainuk/idleminerdashboard Downloads: 21653  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
+Tagged - Can't determine last update
+hotio/base
+ghcr.io/hotio/base:alpinevpn Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Skitals/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
@@ -20789,6 +20832,20 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/kata.runtime/master/plugins/kata.runtime.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
+galexrt/healthchecks
+galexrt/healthchecks:latest Downloads: 871947  Stars: 9  Base: unknown
+charlocharlie/epicgames-freegames
+charlocharlie/epicgames-freegames:latest Downloads: 3294243  Stars: 114  Base: unknown
+mikenye/tar1090
+mikenye/tar1090:latest Downloads: 1927649  Stars: 12  Base: unknown
+registry.gitlab.com/commento/commento
+registry.gitlab.com/commento/commento Downloads:   Stars:   Base: unknown
+leantime/leantime
+leantime/leantime:latest Downloads: 2443848  Stars: 60  Base: unknown
+mattermost/mattermost-push-proxy
+mattermost/mattermost-push-proxy:latest Downloads: 278612  Stars: 5  Base: unknown
+ecodms/allinone-18.09
+ecodms/allinone-18.09 Downloads: 4432526  Stars: 45  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
@@ -20813,6 +20870,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+imagegenius/teslacamplayer
+ghcr.io/imagegenius/teslacamplayer Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20827,6 +20886,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+resilio/sync
+resilio/sync:latest Downloads: 27883751  Stars: 244  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 132
