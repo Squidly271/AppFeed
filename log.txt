@@ -445,124 +445,7 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-From https://github.com/kikootwo/ReadMeABook
-   f65cb59..079a337  main       -> origin/main
-Updating f65cb59..079a337
-Fast-forward
- .gitignore                                         |   3 +-
- documentation/TABLEOFCONTENTS.md                   |  12 +
- documentation/backend/services/goodreads-sync.md   |  75 +++++
- documentation/backend/services/hardcover-sync.md   |  66 ++++
- package-lock.json                                  |  12 +-
- .../migration.sql                                  |  49 +++
- .../migration.sql                                  |  41 +++
- .../migration.sql                                  |  33 ++
- prisma/schema.prisma                               |  92 +++++-
- public/goodreads-icon.png                          | Bin 0 -> 1062 bytes
- public/hardcover-icon.svg                          |   1 +
- src/app/admin/components/ConfirmDialog.tsx         | 227 ++++++++-----
- src/app/admin/settings/lib/helpers.ts              |   2 +
- src/app/admin/settings/lib/types.ts                |   2 +-
- src/app/admin/settings/page.tsx                    |   6 +-
- src/app/admin/settings/tabs/ApiTab/ApiTab.tsx      | 307 +++++++++++++++++
- src/app/api-docs/page.tsx                          | 142 ++++++++
- src/app/api/admin/api-tokens/[id]/route.ts         |  56 ++++
- src/app/api/admin/api-tokens/route.ts              | 190 +++++++++++
- src/app/api/user/api-tokens/[id]/route.ts          |  59 ++++
- src/app/api/user/api-tokens/route.ts               | 141 ++++++++
- src/app/api/user/goodreads-shelves/[id]/route.ts   |  60 ++++
- src/app/api/user/goodreads-shelves/route.ts        |   4 +-
- src/app/api/user/hardcover-shelves/[id]/route.ts   | 177 ++++++++++
- src/app/api/user/hardcover-shelves/route.ts        | 195 +++++++++++
- src/app/api/user/shelves/route.ts                  |  73 +++++
- src/app/globals.css                                |  25 ++
- src/app/profile/page.tsx                           |  10 +-
- src/components/api-docs/EndpointCard.tsx           | 157 +++++++++
- src/components/api-docs/ResponseViewer.tsx         | 151 +++++++++
- src/components/api-docs/TokenInput.tsx             | 104 ++++++
- src/components/layout/Header.tsx                   |  72 ++--
- src/components/profile/ApiTokensSection.tsx        | 234 +++++++++++++
- ...dreadsShelvesSection.tsx => ShelvesSection.tsx} | 244 ++++++++++----
- src/components/ui/AddGoodreadsShelfModal.tsx       | 154 ---------
- src/components/ui/AddShelfModal.tsx                | 230 +++++++++++++
- src/components/ui/ConfirmModal.tsx                 |   6 +-
- src/components/ui/HardcoverForm.tsx                | 318 ++++++++++++++++++
- src/components/ui/ManageShelfModal.tsx             | 153 +++++++++
- src/lib/constants/api-tokens.ts                    | 107 ++++++
- src/lib/hooks/createShelfHooks.ts                  | 172 ++++++++++
- src/lib/hooks/useApiTokens.ts                      | 232 +++++++++++++
- src/lib/hooks/useGoodreadsShelves.ts               | 106 +-----
- src/lib/hooks/useHardcoverShelves.ts               |  50 +++
- src/lib/hooks/useShelves.ts                        |  40 +++
- src/lib/middleware/auth.ts                         | 110 ++++++-
- .../processors/sync-goodreads-shelves.processor.ts |  42 ---
- src/lib/processors/sync-shelves.processor.ts       |  96 ++++++
- src/lib/services/goodreads-sync.service.ts         | 364 +++++----------------
- src/lib/services/hardcover-api.service.ts          | 327 ++++++++++++++++++
- src/lib/services/hardcover-sync.service.ts         | 122 +++++++
- src/lib/services/job-queue.service.ts              |  22 +-
- src/lib/services/scheduler.service.ts              |  44 ++-
- src/lib/services/shelf-sync-core.service.ts        | 274 ++++++++++++++++
- src/lib/types/api-tokens.ts                        |  23 ++
- src/lib/utils/api-token.ts                         |  30 ++
- src/lib/utils/apiTokenRateLimit.ts                 |  92 ++++++
- src/lib/utils/client-url.ts                        |  12 +
- src/lib/utils/shelf-helpers.ts                     |  36 ++
- tests/api/admin-api-tokens.routes.test.ts          | 215 ++++++++++++
- tests/api/goodreads-shelves-id.routes.test.ts      | 186 +++++++++++
- tests/api/hardcover-shelves-id.routes.test.ts      | 233 +++++++++++++
- tests/api/hardcover-shelves.routes.test.ts         | 216 ++++++++++++
- tests/helpers/prisma.ts                            |   4 +-
- tests/middleware/auth.middleware.test.ts           | 194 ++++++++++-
- tests/services/job-queue.service.test.ts           |   8 +-
- tests/services/scheduler.service.test.ts           |   8 +-
- tests/utils/apiTokenRateLimit.test.ts              | 203 ++++++++++++
- 68 files changed, 6663 insertions(+), 788 deletions(-)
- create mode 100644 documentation/backend/services/goodreads-sync.md
- create mode 100644 documentation/backend/services/hardcover-sync.md
- create mode 100644 prisma/migrations/20260303200000_add_hardcover_shelves/migration.sql
- create mode 100644 prisma/migrations/20260304000000_unify_book_mappings/migration.sql
- create mode 100644 prisma/migrations/20260305000000_add_api_tokens_table/migration.sql
- create mode 100644 public/goodreads-icon.png
- create mode 100644 public/hardcover-icon.svg
- create mode 100644 src/app/admin/settings/tabs/ApiTab/ApiTab.tsx
- create mode 100644 src/app/api-docs/page.tsx
- create mode 100644 src/app/api/admin/api-tokens/[id]/route.ts
- create mode 100644 src/app/api/admin/api-tokens/route.ts
- create mode 100644 src/app/api/user/api-tokens/[id]/route.ts
- create mode 100644 src/app/api/user/api-tokens/route.ts
- create mode 100644 src/app/api/user/hardcover-shelves/[id]/route.ts
- create mode 100644 src/app/api/user/hardcover-shelves/route.ts
- create mode 100644 src/app/api/user/shelves/route.ts
- create mode 100644 src/components/api-docs/EndpointCard.tsx
- create mode 100644 src/components/api-docs/ResponseViewer.tsx
- create mode 100644 src/components/api-docs/TokenInput.tsx
- create mode 100644 src/components/profile/ApiTokensSection.tsx
- rename src/components/profile/{GoodreadsShelvesSection.tsx => ShelvesSection.tsx} (56%)
- delete mode 100644 src/components/ui/AddGoodreadsShelfModal.tsx
- create mode 100644 src/components/ui/AddShelfModal.tsx
- create mode 100644 src/components/ui/HardcoverForm.tsx
- create mode 100644 src/components/ui/ManageShelfModal.tsx
- create mode 100644 src/lib/constants/api-tokens.ts
- create mode 100644 src/lib/hooks/createShelfHooks.ts
- create mode 100644 src/lib/hooks/useApiTokens.ts
- create mode 100644 src/lib/hooks/useHardcoverShelves.ts
- create mode 100644 src/lib/hooks/useShelves.ts
- delete mode 100644 src/lib/processors/sync-goodreads-shelves.processor.ts
- create mode 100644 src/lib/processors/sync-shelves.processor.ts
- create mode 100644 src/lib/services/hardcover-api.service.ts
- create mode 100644 src/lib/services/hardcover-sync.service.ts
- create mode 100644 src/lib/services/shelf-sync-core.service.ts
- create mode 100644 src/lib/types/api-tokens.ts
- create mode 100644 src/lib/utils/api-token.ts
- create mode 100644 src/lib/utils/apiTokenRateLimit.ts
- create mode 100644 src/lib/utils/client-url.ts
- create mode 100644 src/lib/utils/shelf-helpers.ts
- create mode 100644 tests/api/admin-api-tokens.routes.test.ts
- create mode 100644 tests/api/goodreads-shelves-id.routes.test.ts
- create mode 100644 tests/api/hardcover-shelves-id.routes.test.ts
- create mode 100644 tests/api/hardcover-shelves.routes.test.ts
- create mode 100644 tests/utils/apiTokenRateLimit.test.ts
+Already up to date.
 
 Array
 (
@@ -1057,12 +940,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   b2b00e3..958025b  main       -> origin/main
-Updating b2b00e3..958025b
-Fast-forward
- NeXroll/backend/scheduler.py | 100 ++++++++++++++++++++++++-------------------
- 1 file changed, 55 insertions(+), 45 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1311,34 +1189,7 @@ Processing /tmp/GitHub/repositoryClone/T4s3rF4c3/macreplay_v2/my-macreplayv2.xml
 
 Downloading Carrot Waxxr's Repository
 
-From https://github.com/carrotwaxr/peek-stash-browser
-   3d8e47e..dc514a5  main       -> origin/main
-Updating 3d8e47e..dc514a5
-Fast-forward
- client/src/components/cards/ClipCard.tsx           |   1 +
- client/src/components/cards/ClipCardPreview.tsx    |   4 +-
- client/tests/api/hooks/useGalleries.test.tsx       |   4 +-
- client/tests/api/hooks/useGroups.test.tsx          |   4 +-
- client/tests/api/hooks/useImages.test.tsx          |   4 +-
- client/tests/api/hooks/usePerformers.test.tsx      |   6 +-
- client/tests/api/hooks/useScenes.test.tsx          |   6 +-
- client/tests/api/hooks/useStudios.test.tsx         |   4 +-
- client/tests/api/hooks/useTags.test.tsx            |   4 +-
- .../components/cards/ClipCardPreview.test.tsx      |  86 +++++++++++++++++
- client/tests/components/pages/Galleries.test.tsx   |  28 +++---
- client/tests/components/pages/Groups.test.tsx      |  26 +++---
- client/tests/components/pages/Home.test.tsx        |  14 +--
- client/tests/components/pages/Images.test.tsx      |  28 +++---
- client/tests/components/pages/Performers.test.tsx  |  26 +++---
- client/tests/components/pages/Studios.test.tsx     |  26 +++---
- client/tests/components/pages/Tags.test.tsx        |  26 +++---
- client/tests/contexts/scenePlayerReducer.test.ts   |   3 +-
- .../tests/hooks/useGridPageTVNavigation.test.tsx   |   2 +-
- server/services/ClipQueryBuilder.ts                |   4 +
- server/services/ClipService.ts                     |  13 ++-
- server/tests/services/ClipService.test.ts          | 104 ++++++++++++++++++++-
- 22 files changed, 312 insertions(+), 111 deletions(-)
- create mode 100644 client/tests/components/cards/ClipCardPreview.test.tsx
+Already up to date.
 
 Array
 (
@@ -5535,36 +5386,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   3bbfa440..ede5dc34  main       -> origin/main
-Updating 3bbfa440..ede5dc34
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
