@@ -947,18 +947,114 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   20cf974..92ac44b  main       -> origin/main
+Updating 20cf974..92ac44b
+Fast-forward
+ .gitignore                                         |   4 +
+ DOCKER.md                                          |   2 +-
+ NeXroll/backend/jellyfin_connector.py              |  16 +-
+ NeXroll/backend/main.py                            | 743 ++++++++++++++++++++-
+ NeXroll/backend/models.py                          |   2 +
+ NeXroll/backend/scheduler.py                       |  46 ++
+ NeXroll/backend/secure_store.py                    |  20 +-
+ NeXroll/backend/version.py                         |   2 +-
+ NeXroll/frontend/build/asset-manifest.json         |   6 +-
+ NeXroll/frontend/build/index.html                  |   2 +-
+ .../js/{main.8f3488bb.js => main.f97448e7.js}      |   6 +-
+ ...js.LICENSE.txt => main.f97448e7.js.LICENSE.txt} |   0
+ .../{main.8f3488bb.js.map => main.f97448e7.js.map} |   2 +-
+ NeXroll/frontend/package.json                      |   2 +-
+ NeXroll/frontend/src/App.js                        | 548 ++++++++++++++-
+ NeXroll/version.py                                 |   2 +-
+ NeXroll/version_info.txt                           |   8 +-
+ Plugins/NeXroll.Emby/Configuration/configPage.html | 170 +++++
+ Plugins/NeXroll.Emby/NeXroll.Emby.csproj           |  48 ++
+ Plugins/NeXroll.Emby/NexrollIntroProvider.cs       | 147 ++++
+ Plugins/NeXroll.Emby/Plugin.cs                     |  41 ++
+ Plugins/NeXroll.Emby/PluginConfiguration.cs        |  51 ++
+ Plugins/NeXroll.Emby/Properties/AssemblyInfo.cs    |   6 +
+ Plugins/NeXroll.Emby/README.md                     |  46 ++
+ .../NeXroll.Jellyfin/Configuration/configPage.html | 229 +++++++
+ Plugins/NeXroll.Jellyfin/NeXroll.Jellyfin.csproj   |  25 +
+ Plugins/NeXroll.Jellyfin/NexrollIntroProvider.cs   | 349 ++++++++++
+ Plugins/NeXroll.Jellyfin/Plugin.cs                 |  47 ++
+ Plugins/NeXroll.Jellyfin/PluginConfiguration.cs    |  53 ++
+ .../NeXroll.Jellyfin/Properties/AssemblyInfo.cs    |   6 +
+ Plugins/NeXroll.Jellyfin/README.md                 |  96 +++
+ Plugins/NeXroll.Jellyfin/build.bat                 |  55 ++
+ Plugins/NeXroll.Jellyfin/publish/Diacritics.dll    | Bin 0 -> 29696 bytes
+ Plugins/NeXroll.Jellyfin/publish/Emby.Naming.dll   | Bin 0 -> 81408 bytes
+ .../publish/ICU4N.Transliterator.dll               | Bin 0 -> 687616 bytes
+ Plugins/NeXroll.Jellyfin/publish/ICU4N.dll         | Bin 0 -> 13657600 bytes
+ Plugins/NeXroll.Jellyfin/publish/J2N.dll           | Bin 0 -> 590848 bytes
+ Plugins/NeXroll.Jellyfin/publish/Jellyfin.Data.dll | Bin 0 -> 68608 bytes
+ .../publish/Jellyfin.Extensions.dll                | Bin 0 -> 29696 bytes
+ .../publish/MediaBrowser.Common.dll                | Bin 0 -> 48128 bytes
+ .../publish/MediaBrowser.Controller.dll            | Bin 0 -> 569344 bytes
+ .../publish/MediaBrowser.Model.dll                 | Bin 0 -> 467456 bytes
+ .../Microsoft.Extensions.Configuration.Binder.dll  | Bin 0 -> 42784 bytes
+ ...Extensions.DependencyInjection.Abstractions.dll | Bin 0 -> 63768 bytes
+ .../Microsoft.Extensions.DependencyInjection.dll   | Bin 0 -> 92952 bytes
+ .../Microsoft.Extensions.Logging.Abstractions.dll  | Bin 0 -> 65288 bytes
+ .../publish/Microsoft.Extensions.Logging.dll       | Bin 0 -> 50976 bytes
+ .../publish/Microsoft.Extensions.Options.dll       | Bin 0 -> 64776 bytes
+ .../publish/NeXroll.Jellyfin.deps.json             | 315 +++++++++
+ .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.dll  | Bin 0 -> 28672 bytes
+ .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.pdb  | Bin 0 -> 23544 bytes
+ .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.xml  | 100 +++
+ 52 files changed, 3144 insertions(+), 51 deletions(-)
+ rename NeXroll/frontend/build/static/js/{main.8f3488bb.js => main.f97448e7.js} (59%)
+ rename NeXroll/frontend/build/static/js/{main.8f3488bb.js.LICENSE.txt => main.f97448e7.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.8f3488bb.js.map => main.f97448e7.js.map} (54%)
+ create mode 100644 Plugins/NeXroll.Emby/Configuration/configPage.html
+ create mode 100644 Plugins/NeXroll.Emby/NeXroll.Emby.csproj
+ create mode 100644 Plugins/NeXroll.Emby/NexrollIntroProvider.cs
+ create mode 100644 Plugins/NeXroll.Emby/Plugin.cs
+ create mode 100644 Plugins/NeXroll.Emby/PluginConfiguration.cs
+ create mode 100644 Plugins/NeXroll.Emby/Properties/AssemblyInfo.cs
+ create mode 100644 Plugins/NeXroll.Emby/README.md
+ create mode 100644 Plugins/NeXroll.Jellyfin/Configuration/configPage.html
+ create mode 100644 Plugins/NeXroll.Jellyfin/NeXroll.Jellyfin.csproj
+ create mode 100644 Plugins/NeXroll.Jellyfin/NexrollIntroProvider.cs
+ create mode 100644 Plugins/NeXroll.Jellyfin/Plugin.cs
+ create mode 100644 Plugins/NeXroll.Jellyfin/PluginConfiguration.cs
+ create mode 100644 Plugins/NeXroll.Jellyfin/Properties/AssemblyInfo.cs
+ create mode 100644 Plugins/NeXroll.Jellyfin/README.md
+ create mode 100644 Plugins/NeXroll.Jellyfin/build.bat
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Diacritics.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Emby.Naming.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/ICU4N.Transliterator.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/ICU4N.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/J2N.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Jellyfin.Data.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Jellyfin.Extensions.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/MediaBrowser.Common.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/MediaBrowser.Controller.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/MediaBrowser.Model.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Configuration.Binder.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.DependencyInjection.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Logging.Abstractions.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Logging.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Options.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/NeXroll.Jellyfin.deps.json
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/NeXroll.Jellyfin.dll
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/NeXroll.Jellyfin.pdb
+ create mode 100644 Plugins/NeXroll.Jellyfin/publish/NeXroll.Jellyfin.xml
 
 Array
 (
     [https://github.com/JFLXCLOUD/NeXroll] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/JFLXCLOUD/NeXroll/nexroll-unraid-template.xml
+            [0] => /tmp/GitHub/repositoryClone/JFLXCLOUD/NeXroll/Plugins/NeXroll.Jellyfin/publish/NeXroll.Jellyfin.xml
+            [1] => /tmp/GitHub/repositoryClone/JFLXCLOUD/NeXroll/nexroll-unraid-template.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/JFLXCLOUD/NeXroll/Plugins/NeXroll.Jellyfin/publish/NeXroll.Jellyfin.xml...Not a valid application xml
 Processing /tmp/GitHub/repositoryClone/JFLXCLOUD/NeXroll/nexroll-unraid-template.xml...Success
 
 
@@ -1160,16 +1256,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   f044947..0e9a086  master      -> origin/master
- * [new tag]         v0.9.21-dev -> v0.9.21-dev
-Updating f044947..0e9a086
-Fast-forward
- app/Services/M3uProxyService.php |  7 ++++---
- app/Services/ProxyService.php    | 18 +++++++++++++-----
- config/dev.php                   |  4 ++--
- config/proxy.php                 |  1 +
- 4 files changed, 20 insertions(+), 10 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4378,12 +4465,7 @@ Removed from CA123
 
 Downloading bmartino1's Repository
 
-From https://github.com/bmartino1/unraid-docker-templates
-   deeaf3e..8a5563a  main       -> origin/main
-Updating deeaf3e..8a5563a
-Fast-forward
- plexrepair.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -20693,18 +20775,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+wow-signal-dev/metadata-remote
+ghcr.io/wow-signal-dev/metadata-remote:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-samdbmg/dhcp-netboot.xyz
-samdbmg/dhcp-netboot.xyz:latest Downloads: 15411  Stars: 1  Base: unknown
-swaggerapi/swagger-ui
-swaggerapi/swagger-ui:latest Downloads: 99109516  Stars: 288  Base: unknown
-swaggerapi/swagger-editor
-swaggerapi/swagger-editor:latest Downloads: 16827229  Stars: 387  Base: unknown
-gabe565/castsponsorskip
-ghcr.io/gabe565/castsponsorskip:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20717,8 +20793,6 @@ ghcr.io/gabe565/castsponsorskip:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
-infotrend/openai_webui
-infotrend/openai_webui:latest Downloads: 2172  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
