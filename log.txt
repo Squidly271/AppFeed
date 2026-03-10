@@ -806,7 +806,36 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   5060d80..bc574e0  main       -> origin/main
+Updating 5060d80..bc574e0
+Fast-forward
+ .env.example                                       |   2 +
+ README.md                                          |  28 +-
+ app/admin/jobs/page.tsx                            |  16 +-
+ app/admin/users/[userId]/orders/[orderId]/page.tsx |  43 +-
+ app/admin/users/[userId]/orders/page.tsx           |  75 ++--
+ app/api/admin/env-check/route.ts                   |   1 +
+ app/api/admin/printlab/jobs/[id]/resubmit/route.ts |  22 +
+ app/api/admin/printlab/jobs/route.ts               |  63 +++
+ app/api/checkout/route.ts                          |  15 +
+ app/api/printlab/jobs/[jobId]/route.ts             | 136 +++++++
+ app/customer/orders/[orderId]/page.tsx             |  36 +-
+ components/admin/PrintLabJobQueue.tsx              | 236 +++++++++++
+ lib/admin/queries.ts                               |  50 +++
+ lib/orders.ts                                      |  47 +++
+ lib/printlab-jobs.ts                               | 453 +++++++++++++++++++++
+ lib/printlab.ts                                    | 130 +++++-
+ .../20260310120000_printlab_jobs/migration.sql     |  57 +++
+ prisma/schema.prisma                               |  47 +++
+ tests/integration-contracts.test.ts                | 215 +++++++++-
+ 19 files changed, 1610 insertions(+), 62 deletions(-)
+ create mode 100644 app/api/admin/printlab/jobs/[id]/resubmit/route.ts
+ create mode 100644 app/api/admin/printlab/jobs/route.ts
+ create mode 100644 app/api/printlab/jobs/[jobId]/route.ts
+ create mode 100644 components/admin/PrintLabJobQueue.tsx
+ create mode 100644 lib/printlab-jobs.ts
+ create mode 100644 prisma/migrations/20260310120000_printlab_jobs/migration.sql
 
 Array
 (
@@ -7967,16 +7996,7 @@ Processing /tmp/GitHub/repositoryClone/jason-bean/docker-templates/jasonbean-rep
 
 Downloading Official Plex Repository
 
-From https://github.com/plexinc/pms-docker
-   582fdee..1cef65e  master           -> origin/master
- * [new tag]         helm-chart-1.5.0 -> helm-chart-1.5.0
-Updating 582fdee..1cef65e
-Fast-forward
- charts/plex-media-server/Chart.yaml             |  4 ++--
- charts/plex-media-server/README.md              |  4 ++--
- charts/plex-media-server/templates/service.yaml |  3 +++
- charts/plex-media-server/values.yaml            | 10 +++++++++-
- 4 files changed, 16 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -18419,9 +18439,7 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/giganode/unraid-plugins/i915-sriov.xml... Downloading https://raw.githubusercontent.com/giganode/unraid-i915-sriov/master/i915-sriov.plg attempt 1...bool(false)
-out: int(35)
-error: failed.  Sleeping 5... Downloading https://raw.githubusercontent.com/giganode/unraid-i915-sriov/master/i915-sriov.plg attempt 2...Success
+Processing /tmp/GitHub/repositoryClone/giganode/unraid-plugins/i915-sriov.xml... Downloading https://raw.githubusercontent.com/giganode/unraid-i915-sriov/master/i915-sriov.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/giganode/unraid-plugins/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/giganode/unraid-plugins/mqtt-pub-sub.xml... Downloading https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/giganode/unraid-plugins/corsairpsu.xml... Downloading https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...Success
@@ -20460,22 +20478,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
-Tagged - Can't determine last update
-orangecoding/fredy
-ghcr.io/orangecoding/fredy:master Downloads:   Stars:   Base: unknown
-jandrop/file-manager-api
-jandrop/file-manager-api:latest Downloads: 5248  Stars: 0  Base: unknown
-jandrop/file-manager-ui
-jandrop/file-manager-ui:latest Downloads: 5175  Stars: 0  Base: unknown
-connorgallopo/tracearr
-ghcr.io/connorgallopo/tracearr:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-connorgallopo/tracearr
-ghcr.io/connorgallopo/tracearr:supervised Downloads:   Stars:   Base: unknown
-indemnity83/always-bring-a-gift
-ghcr.io/indemnity83/always-bring-a-gift:latest Downloads:   Stars:   Base: unknown
-keenaanee/cinemastatus
-keenaanee/cinemastatus:latest Downloads: 239  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
