@@ -33,48 +33,36 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 Downloading XCrownedClownsX's Repository
 
 From https://github.com/alexphillips-dev/FolderView-Plus
-   da62acf..e226071  main       -> origin/main
- * [new tag]         v2026.03.11.08 -> v2026.03.11.08
- * [new tag]         v2026.03.11.09 -> v2026.03.11.09
- * [new tag]         v2026.03.11.10 -> v2026.03.11.10
-Updating da62acf..e226071
+   e226071..9fe1434  main           -> origin/main
+ * [new tag]         v2026.03.11.11 -> v2026.03.11.11
+ * [new tag]         v2026.03.11.15 -> v2026.03.11.15
+ * [new tag]         v2026.03.11.13 -> v2026.03.11.13
+ * [new tag]         v2026.03.11.14 -> v2026.03.11.14
+Updating e226071..9fe1434
 Fast-forward
- archive/folderview.plus-2026.03.11.08.txz          | Bin 0 -> 14642856 bytes
- archive/folderview.plus-2026.03.11.08.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.11.09.txz          | Bin 0 -> 14643064 bytes
- archive/folderview.plus-2026.03.11.09.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.11.10.txz          | Bin 0 -> 14644560 bytes
- archive/folderview.plus-2026.03.11.10.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.11.11.txz          | Bin 0 -> 14644560 bytes
- archive/folderview.plus-2026.03.11.11.txz.sha256   |   1 +
- folderview.plus.plg                                |  29 +-
- scripts/ensure_plg_changes_entry.sh                |   8 +-
+ archive/folderview.plus-2026.03.11.13.txz          | Bin 0 -> 14644564 bytes
+ archive/folderview.plus-2026.03.11.13.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.11.14.txz          | Bin 0 -> 14648832 bytes
+ archive/folderview.plus-2026.03.11.14.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.11.15.txz          | Bin 0 -> 14649532 bytes
+ archive/folderview.plus-2026.03.11.15.txz.sha256   |   1 +
+ folderview.plus.plg                                |  26 +-
+ scripts/perf_baseline.json                         |  30 +-
  scripts/perf_budget_guard.sh                       |   6 +-
- scripts/release_guard.sh                           |  59 ++
- .../emhttp/plugins/folderview.plus/Folder.page     |  76 ++
- .../plugins/folderview.plus/FolderViewPlus.page    |  54 ++
- .../plugins/folderview.plus/scripts/dashboard.js   |  36 +-
- .../plugins/folderview.plus/scripts/docker.js      |  20 +-
- .../plugins/folderview.plus/scripts/folder.js      | 126 +++-
- .../folderview.plus/scripts/folderviewplus.js      | 772 +++++++++++++++++++--
+ .../plugins/folderview.plus/FolderViewPlus.page    |  16 +
+ .../folderview.plus/scripts/folderviewplus.js      | 386 ++++++++++++++++++---
  .../scripts/folderviewplus.utils.js                |  38 +-
- .../emhttp/plugins/folderview.plus/scripts/vm.js   |  23 +-
- .../emhttp/plugins/folderview.plus/server/lib.php  |  39 +-
- .../plugins/folderview.plus/styles/folder.css      |  13 +
- .../folderview.plus/styles/folderviewplus.css      |  94 ++-
- tests/folderviewplus-utils.test.mjs                |  29 +-
- tests/settings-bindings.test.mjs                   |  34 +
- tests/ui-smoke-layout.test.mjs                     |  27 +-
- tests/versioning-guard.test.mjs                    |   5 +-
- 27 files changed, 1363 insertions(+), 129 deletions(-)
- create mode 100644 archive/folderview.plus-2026.03.11.08.txz
- create mode 100644 archive/folderview.plus-2026.03.11.08.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.11.09.txz
- create mode 100644 archive/folderview.plus-2026.03.11.09.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.11.10.txz
- create mode 100644 archive/folderview.plus-2026.03.11.10.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.11.11.txz
- create mode 100644 archive/folderview.plus-2026.03.11.11.txz.sha256
+ .../emhttp/plugins/folderview.plus/server/lib.php  |  24 ++
+ .../folderview.plus/styles/folderviewplus.css      | 166 +++++++--
+ tests/folderviewplus-utils.test.mjs                |  16 +-
+ tests/ui-smoke-layout.test.mjs                     |  20 ++
+ 16 files changed, 646 insertions(+), 85 deletions(-)
+ create mode 100644 archive/folderview.plus-2026.03.11.13.txz
+ create mode 100644 archive/folderview.plus-2026.03.11.13.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.11.14.txz
+ create mode 100644 archive/folderview.plus-2026.03.11.14.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.11.15.txz
+ create mode 100644 archive/folderview.plus-2026.03.11.15.txz.sha256
 
 Array
 (
@@ -110,7 +98,15 @@ Success
 
 Downloading Lazaros Chalkidis' Repository
 
-Already up to date.
+From https://github.com/Lazaros-Chalkidis/unraid-logsviewer
+   0ac8552..fade003  main       -> origin/main
+ * [new tag]         2026.03.12 -> 2026.03.12
+Updating 0ac8552..fade003
+Fast-forward
+ README.md      |  4 ++--
+ build.sh       |  6 ++----
+ logsviewer.plg | 15 ++++++++++++---
+ 3 files changed, 16 insertions(+), 9 deletions(-)
 
 Array
 (
@@ -122,9 +118,7 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/Lazaros-Chalkidis/unraid-logsviewer/logsviewer.xml... Downloading https://raw.githubusercontent.com/Lazaros-Chalkidis/unraid-logsviewer/main/logsviewer.plg attempt 1...Plugin Support thread not present on forum https://github.com/Lazaros-Chalkidis/unraid-logsviewer/issues
-
-Removed from CA123
+Processing /tmp/GitHub/repositoryClone/Lazaros-Chalkidis/unraid-logsviewer/logsviewer.xml... Downloading https://raw.githubusercontent.com/Lazaros-Chalkidis/unraid-logsviewer/main/logsviewer.plg attempt 1...Removed from CA123
 
 
 Downloading eliasbenb's Repository
@@ -922,29 +916,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   b0e1d44..e57b9aa  main       -> origin/main
-Updating b0e1d44..e57b9aa
-Fast-forward
- README.md                              |   2 +-
- app/api/models/[id]/revisions/route.ts |  30 ++++--
- app/api/models/[id]/route.ts           |   7 +-
- app/api/upload/route.ts                |  25 +++--
- app/files/[...path]/route.ts           |   6 +-
- app/models/[id]/page.tsx               |  11 +-
- app/upload/UploadForm.tsx              |   7 +-
- components/ModelProcessingNotifier.tsx |   8 +-
- components/ModelRevisionsManager.tsx   |   5 +-
- components/orders/RevisionUploader.tsx |   5 +-
- docs/user-manual.md                    |   2 +-
- lib/assembly-grouping.ts               |   7 +-
- lib/model-files.ts                     |  69 ++++++++++++
- lib/model-preview-queue.ts             | 192 ++++++++++++++++++++++++++++++---
- lib/model-processing-notifications.ts  |   2 +-
- scripts/bulk-upload-models.ts          |   4 +-
- unraid/templates/makerworks-v2.xml     |   2 +-
- 17 files changed, 317 insertions(+), 67 deletions(-)
- create mode 100644 lib/model-files.ts
+Already up to date.
 
 Array
 (
@@ -1085,39 +1057,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   d7d121f..47384de  main       -> origin/main
-Updating d7d121f..47384de
-Fast-forward
- NeXroll/backend/main.py                            | 290 ++++++++++++++++-
- NeXroll/backend/version.py                         |   2 +-
- NeXroll/frontend/build/asset-manifest.json         |   6 +-
- NeXroll/frontend/build/index.html                  |   2 +-
- .../js/{main.f97448e7.js => main.2f131cb0.js}      |   6 +-
- ...js.LICENSE.txt => main.2f131cb0.js.LICENSE.txt} |   0
- .../{main.f97448e7.js.map => main.2f131cb0.js.map} |   2 +-
- NeXroll/frontend/src/App.js                        | 351 ++++++++++++++++++---
- NeXroll/version.py                                 |   2 +-
- NeXroll/version_info.txt                           |   4 +-
- Plugins/NeXroll.Emby.dll                           | Bin 0 -> 29184 bytes
- Plugins/NeXroll.Emby/Configuration/configPage.html | 218 ++++---------
- Plugins/NeXroll.Emby/Configuration/configPage.js   |  92 ++++++
- Plugins/NeXroll.Emby/NeXroll.Emby.csproj           |   2 +-
- Plugins/NeXroll.Emby/NexrollIntroProvider.cs       | 222 +++++++++++--
- Plugins/NeXroll.Emby/Plugin.cs                     |   7 +-
- Plugins/NeXroll.Emby/README.md                     |   4 +-
- Plugins/NeXroll.Jellyfin.dll                       | Bin 0 -> 32256 bytes
- Plugins/NeXroll.Jellyfin/README.md                 |   2 +-
- .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.dll  | Bin 28672 -> 32256 bytes
- docs/wiki/Emby.md                                  |   2 +-
- docs/wiki/Jellyfin.md                              |   2 +-
- 22 files changed, 961 insertions(+), 255 deletions(-)
- rename NeXroll/frontend/build/static/js/{main.f97448e7.js => main.2f131cb0.js} (63%)
- rename NeXroll/frontend/build/static/js/{main.f97448e7.js.LICENSE.txt => main.2f131cb0.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.f97448e7.js.map => main.2f131cb0.js.map} (54%)
- create mode 100644 Plugins/NeXroll.Emby.dll
- create mode 100644 Plugins/NeXroll.Emby/Configuration/configPage.js
- create mode 100644 Plugins/NeXroll.Jellyfin.dll
+Already up to date.
 
 Array
 (
@@ -4541,7 +4481,17 @@ Removed from CA123
 
 Downloading bmartino1's Repository
 
-Already up to date.
+From https://github.com/bmartino1/unraid-docker-templates
+   84ce254..e9aaa44  main       -> origin/main
+Updating 84ce254..e9aaa44
+Fast-forward
+ CHANGELOG.MD        |   9 ++++++++
+ README.md           |  20 ++++++++++++++++
+ images/unifi.png    | Bin 0 -> 6432 bytes
+ unifi-os-server.xml |  64 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 93 insertions(+)
+ create mode 100644 images/unifi.png
+ create mode 100644 unifi-os-server.xml
 
 Array
 (
@@ -4556,14 +4506,15 @@ Array
             [6] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
             [7] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
             [8] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml
-            [9] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml
-            [10] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml
-            [11] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/sftp2.xml
-            [12] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/clamdscan.xml
-            [13] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/plexrepair.xml
-            [14] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-valkey.xml
-            [15] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoinknotsgui.xml
-            [16] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-postgress.xml
+            [9] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/unifi-os-server.xml
+            [10] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml
+            [11] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml
+            [12] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/sftp2.xml
+            [13] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/clamdscan.xml
+            [14] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/plexrepair.xml
+            [15] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-valkey.xml
+            [16] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoinknotsgui.xml
+            [17] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/immich-postgress.xml
         )
 
 )
@@ -4586,6 +4537,11 @@ Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/depreca
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/retroassembly.xml...Success
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/unifi-os-server.xml...Privileged mode set.  This may not be necessary
+
+Port referenced in webUI does not correspond with a container port defined.  Entry changed to https://[IP]:[PORT:443]
+
+Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/netprobe.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/rejettohfs3.xml...Success
 Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/sftp2.xml...Success
@@ -20621,6 +20577,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
+liorbasss/tandarr
+liorbasss/tandarr:latest Downloads: 423  Stars: 0  Base: unknown
+dervish/unraidmonitorbot
+dervish/unraidmonitorbot:latest Downloads: 1568  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
@@ -20699,8 +20659,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-noah231515/receipt-wrangler
-noah231515/receipt-wrangler:latest Downloads: 137505  Stars: 0  Base: unknown
+lemker/unifi-os-server
+ghcr.io/lemker/unifi-os-server:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/lemker/unifi-os-server:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20719,8 +20681,6 @@ noah231515/receipt-wrangler:latest Downloads: 137505  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-entree3000/qbithelparr
-entree3000/qbithelparr:latest Downloads: 389  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20827,9 +20787,6 @@ entree3000/qbithelparr:latest Downloads: 389  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
-Tagged - Can't determine last update
-securecompliance/gvm
-securecompliance/gvm:11.0.1-r3 Downloads: 2354571  Stars: 50  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
@@ -20859,24 +20816,15 @@ securecompliance/gvm:11.0.1-r3 Downloads: 2354571  Stars: 50  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
-signtools/signtools
-signtools/signtools Downloads: 100614  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+opensensor/lightnvr
+ghcr.io/opensensor/lightnvr Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-mauricenino/dashdot
-mauricenino/dashdot:latest Downloads: 4879058  Stars: 48  Base: unknown
-slskd/slskd
-slskd/slskd:latest Downloads: 2579483  Stars: 13  Base: unknown
-sahara101/dakosys
-ghcr.io/sahara101/dakosys:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-oleduc/docker-obsidian-livesync-couchdb
-oleduc/docker-obsidian-livesync-couchdb:stable Downloads: 186140  Stars: 5  Base: unknown
-brockbreacher/join-bot
-ghcr.io/brockbreacher/join-bot Downloads: 204  Stars: 0  Base: unknown
+ps5-mqtt/amd64
+ghcr.io/funkeyflo/ps5-mqtt/amd64:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20893,7 +20841,7 @@ ghcr.io/brockbreacher/join-bot Downloads: 204  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 132
+Privileged: 133
 
 
 Updating GitHub
