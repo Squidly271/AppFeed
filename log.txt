@@ -4586,7 +4586,146 @@ Success
 
 Downloading ciuse99's Repository
 
-Already up to date.
+From https://github.com/giuseppe99barchetta/SuggestArr
+   e4b388a..671e099  main       -> origin/main
+ * [new tag]         v2.4.3     -> v2.4.3
+Updating e4b388a..671e099
+Fast-forward
+ .github/pull_request_template.md                   |   9 +
+ .github/workflows/ci.yml                           |   2 +-
+ .github/workflows/docker_hub_build.yml             |  12 +-
+ .github/workflows/docker_hub_build_nightly.yml     |  10 +-
+ CONTRIBUTING.md                                    |  30 +-
+ README.md                                          |  14 +-
+ TMDB_API_ENDPOINTS.md                              |   8 +-
+ api_service/app.py                                 |  22 +-
+ api_service/auth/auth_service.py                   |  28 +-
+ api_service/auth/middleware.py                     |   2 +
+ api_service/automate_process.py                    |  14 +-
+ api_service/blueprints/ai_search/routes.py         |  16 +-
+ api_service/blueprints/auth/routes.py              |   6 +-
+ api_service/blueprints/config/routes.py            | 149 ++++
+ api_service/blueprints/health/routes.py            |   2 +-
+ api_service/blueprints/integrations/__init__.py    |   1 +
+ api_service/blueprints/integrations/routes.py      | 185 +++++
+ api_service/blueprints/jellyfin/routes.py          |  12 +-
+ api_service/blueprints/jobs/routes.py              | 112 ++-
+ api_service/blueprints/seer/routes.py              |  42 +-
+ api_service/blueprints/users/routes.py             | 167 +++-
+ api_service/config/config.py                       |   2 +-
+ api_service/conftest.py                            |   6 +
+ api_service/db/database_manager.py                 | 240 +++++-
+ api_service/db/job_repository.py                   |  24 +-
+ api_service/handler/base_handler.py                | 232 ++++++
+ api_service/handler/jellyfin_handler.py            | 176 ++--
+ api_service/handler/plex_handler.py                | 179 ++--
+ api_service/jobs/discover_automation.py            |  19 +-
+ api_service/jobs/queue_worker.py                   |   2 +-
+ api_service/jobs/recommendation_automation.py      | 148 +++-
+ api_service/jobs/system_job_sync.py                |   9 +-
+ api_service/requirements.dev.txt                   |   3 +-
+ api_service/requirements.txt                       |   8 +-
+ api_service/run_migrations.py                      | 102 +++
+ .../services/ai_search/ai_search_service.py        | 437 +++++++++-
+ api_service/services/filter_normalization.py       | 193 +++++
+ api_service/services/http/__init__.py              |   4 +
+ api_service/services/http/base_client.py           |  51 ++
+ api_service/services/jellyfin/jellyfin_client.py   | 156 +++-
+ api_service/services/llm/llm_service.py            | 243 +++++-
+ api_service/services/llm/schemas.py                |  40 +-
+ api_service/services/omdb/omdb_client.py           |  78 +-
+ api_service/services/plex/plex_client.py           |  39 +-
+ .../services/{jellyseer => seer}/__init__.py       |   0
+ .../services/{jellyseer => seer}/seer_client.py    | 151 +++-
+ api_service/services/tmdb/tmdb_client.py           |  80 +-
+ api_service/services/tmdb/tmdb_discover.py         |  76 +-
+ api_service/test/test_ai_search_service.py         | 248 +++++-
+ api_service/test/test_automate_process.py          |   9 +-
+ api_service/test/test_error_handlers.py            | 614 --------------
+ api_service/test/test_filter_normalization.py      |  66 ++
+ api_service/test/test_integrations_self_link.py    | 209 +++++
+ api_service/test/test_jellyfin_client.py           |  61 ++
+ api_service/test/test_llm_service.py               |  40 +-
+ api_service/test/test_media_handler_integration.py | 568 +++++++++++++
+ api_service/test/test_omdb_filters.py              |  36 +-
+ api_service/test/test_recommendation_automation.py |  66 ++
+ api_service/test/test_seer_client.py               | 146 +++-
+ api_service/test/test_tmdb_client.py               |  12 +
+ api_service/test/test_tmdb_discover.py             |  31 +-
+ api_service/test/test_users_routes.py              |  39 +
+ api_service/utils/clients.py                       |   2 +-
+ api_service/utils/error_handlers.py                |  47 --
+ api_service/utils/error_handling.py                |  32 +-
+ client/.stylelintignore                            |   3 +
+ client/.stylelintrc.json                           |  57 ++
+ client/package.json                                |   6 +-
+ client/src/api/api.js                              |  21 +-
+ .../src/assets/styles/DESIGN_TOKENS_CHEATSHEET.md  | 320 +++++++
+ client/src/assets/styles/README.md                 | 316 +++++++
+ client/src/assets/styles/advancedFilterConfig.css  |  84 +-
+ client/src/assets/styles/aiSearchPage.css          |   8 +-
+ client/src/assets/styles/dashboardPage.css         | 513 ++++++------
+ client/src/assets/styles/global.css                |  36 +-
+ client/src/assets/styles/logs.css                  |   3 +-
+ client/src/assets/styles/primitives/button.css     | 642 ++++++++++++++
+ client/src/assets/styles/primitives/card.css       | 303 +++++++
+ client/src/assets/styles/primitives/form.css       | 437 ++++++++++
+ client/src/assets/styles/primitives/modal.css      | 309 +++++++
+ client/src/assets/styles/requestsPage.css          |  41 +-
+ client/src/assets/styles/theme.css                 | 242 +++---
+ client/src/assets/styles/toast-custom.css          |  30 +-
+ client/src/assets/styles/variables.css             | 476 +++++++++--
+ client/src/assets/styles/wizard.css                | 189 +++--
+ client/src/components/ConfigWizard.vue             |  47 +-
+ client/src/components/DashboardPage.vue            | 210 +++--
+ client/src/components/LoginPage.vue                |   1 -
+ client/src/components/RequestsPage.vue             |  43 +-
+ client/src/components/common/BaseDropdown.vue      | 279 +++++--
+ .../src/components/configWizard/SchedulingStep.vue |   2 +-
+ client/src/components/settings/AiSearchPage.vue    |   8 +-
+ .../src/components/settings/SettingsAdvanced.vue   | 288 +++++--
+ .../src/components/settings/SettingsDatabase.vue   |  11 +-
+ client/src/components/settings/SettingsJobs.vue    |  47 +-
+ .../src/components/settings/SettingsRequests.vue   |  28 +-
+ .../src/components/settings/SettingsServices.vue   | 117 ++-
+ client/src/components/settings/UserManagement.vue  | 922 ++++++++++++++++-----
+ client/src/components/settings/UserProfile.vue     | 281 ++++---
+ .../components/settings/jobs/DryRunResultModal.vue |  76 +-
+ .../components/settings/jobs/JobHistoryModal.vue   |  71 +-
+ client/src/components/settings/jobs/JobModal.vue   | 191 +----
+ .../settings/jobs/RecommendationFilters.vue        |  15 +-
+ client/src/components/ui/BaseCard.vue              | 164 ++--
+ client/src/composables/useAuth.js                  |  41 +
+ client/src/composables/useBackgroundImage.js       |  61 +-
+ client/src/composables/useConfigManager.js         |   3 +
+ client/src/main.js                                 |   2 +
+ client/src/router/index.js                         |  86 +-
+ unraid/template.xml                                |   2 +-
+ 110 files changed, 9720 insertions(+), 3079 deletions(-)
+ create mode 100644 .github/pull_request_template.md
+ create mode 100644 api_service/blueprints/integrations/__init__.py
+ create mode 100644 api_service/blueprints/integrations/routes.py
+ create mode 100644 api_service/handler/base_handler.py
+ create mode 100644 api_service/run_migrations.py
+ create mode 100644 api_service/services/filter_normalization.py
+ create mode 100644 api_service/services/http/__init__.py
+ create mode 100644 api_service/services/http/base_client.py
+ rename api_service/services/{jellyseer => seer}/__init__.py (100%)
+ rename api_service/services/{jellyseer => seer}/seer_client.py (73%)
+ delete mode 100644 api_service/test/test_error_handlers.py
+ create mode 100644 api_service/test/test_filter_normalization.py
+ create mode 100644 api_service/test/test_integrations_self_link.py
+ create mode 100644 api_service/test/test_media_handler_integration.py
+ create mode 100644 api_service/test/test_recommendation_automation.py
+ delete mode 100644 api_service/utils/error_handlers.py
+ create mode 100644 client/.stylelintignore
+ create mode 100644 client/.stylelintrc.json
+ create mode 100644 client/src/assets/styles/DESIGN_TOKENS_CHEATSHEET.md
+ create mode 100644 client/src/assets/styles/README.md
+ create mode 100644 client/src/assets/styles/primitives/button.css
+ create mode 100644 client/src/assets/styles/primitives/card.css
+ create mode 100644 client/src/assets/styles/primitives/form.css
+ create mode 100644 client/src/assets/styles/primitives/modal.css
 
 Array
 (
@@ -20625,13 +20764,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-dockpeek/dockpeek
-ghcr.io/dockpeek/dockpeek:latest Downloads: 201412  Stars: 3  Base: unknown
-Tagged - Can't determine last update
-neosmemo/memos
-neosmemo/memos:stable Downloads: 7348393  Stars: 224  Base: unknown
-kyantech/palmr
-kyantech/palmr:latest Downloads: 224228  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -20651,6 +20783,8 @@ kyantech/palmr:latest Downloads: 224228  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/openvscode-server
+lscr.io/linuxserver/openvscode-server Downloads: 597287  Stars: 47  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20696,6 +20830,8 @@ kyantech/palmr:latest Downloads: 224228  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
+shizunge/endlessh-go
+shizunge/endlessh-go Downloads: 928094  Stars: 8  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
