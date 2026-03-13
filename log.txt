@@ -524,7 +524,63 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   0ae8f66..850e777  main       -> origin/main
+ * [new tag]         v1.1.6     -> v1.1.6
+Updating 0ae8f66..850e777
+Fast-forward
+ documentation/TABLEOFCONTENTS.md                   |   5 +
+ documentation/backend/services/auth.md             |   8 +
+ documentation/features/bulk-import.md              |  82 +++++
+ package.json                                       |   2 +-
+ .../migration.sql                                  |   2 +
+ .../migration.sql                                  |   2 +
+ prisma/schema.prisma                               |   6 +
+ src/app/admin/page.tsx                             |  35 ++-
+ src/app/admin/users/page.tsx                       |  29 +-
+ src/app/api/admin/api-tokens/[id]/route.ts         |   2 +-
+ src/app/api/admin/api-tokens/route.ts              |   2 +-
+ src/app/api/admin/bulk-import/execute/route.ts     | 292 +++++++++++++++++
+ src/app/api/admin/bulk-import/scan/route.ts        | 271 ++++++++++++++++
+ src/app/api/admin/users/[id]/login-token/route.ts  |  99 ++++++
+ src/app/api/admin/users/route.ts                   |   8 +-
+ src/app/api/auth/refresh/route.ts                  |  23 +-
+ src/app/api/auth/token/login/route.ts              |  90 ++++++
+ src/app/api/user/api-tokens/[id]/route.ts          |   2 +-
+ src/app/api/user/api-tokens/route.ts               |   2 +-
+ src/app/auth/token/login/page.tsx                  |  68 ++++
+ src/components/admin/BulkImportWizard.tsx          | 348 +++++++++++++++++++++
+ .../admin/bulk-import/MatchReviewStep.tsx          | 344 ++++++++++++++++++++
+ .../admin/bulk-import/ScanFolderStep.tsx           | 346 ++++++++++++++++++++
+ .../admin/bulk-import/ScanProgressStep.tsx         | 179 +++++++++++
+ src/components/admin/bulk-import/types.ts          |  81 +++++
+ .../admin/users/UserPermissionsModal.tsx           |  86 +++++
+ src/lib/middleware/auth.ts                         |  14 +
+ src/lib/utils/bulk-import-scanner.ts               | 294 +++++++++++++++++
+ src/lib/utils/jwt.ts                               |   2 +
+ .../utils/{apiTokenRateLimit.ts => rateLimit.ts}   |  17 +-
+ tests/api/admin-api-tokens.routes.test.ts          |   2 +-
+ tests/api/admin-login-token.routes.test.ts         | 106 +++++++
+ tests/api/auth-login-token.routes.test.ts          |  95 ++++++
+ tests/utils/apiTokenRateLimit.test.ts              |   2 +-
+ 34 files changed, 2930 insertions(+), 16 deletions(-)
+ create mode 100644 documentation/features/bulk-import.md
+ create mode 100644 prisma/migrations/20260312000000_add_login_token_hash/migration.sql
+ create mode 100644 prisma/migrations/20260313000000_add_sessions_invalidated_at/migration.sql
+ create mode 100644 src/app/api/admin/bulk-import/execute/route.ts
+ create mode 100644 src/app/api/admin/bulk-import/scan/route.ts
+ create mode 100644 src/app/api/admin/users/[id]/login-token/route.ts
+ create mode 100644 src/app/api/auth/token/login/route.ts
+ create mode 100644 src/app/auth/token/login/page.tsx
+ create mode 100644 src/components/admin/BulkImportWizard.tsx
+ create mode 100644 src/components/admin/bulk-import/MatchReviewStep.tsx
+ create mode 100644 src/components/admin/bulk-import/ScanFolderStep.tsx
+ create mode 100644 src/components/admin/bulk-import/ScanProgressStep.tsx
+ create mode 100644 src/components/admin/bulk-import/types.ts
+ create mode 100644 src/lib/utils/bulk-import-scanner.ts
+ rename src/lib/utils/{apiTokenRateLimit.ts => rateLimit.ts} (79%)
+ create mode 100644 tests/api/admin-login-token.routes.test.ts
+ create mode 100644 tests/api/auth-login-token.routes.test.ts
 
 Array
 (
@@ -12727,15 +12783,7 @@ Processing /tmp/GitHub/repositoryClone/Adidasdaniel98/RepetierDocker/repetier.xm
 
 Downloading jmztaylor's Repository
 
-From https://github.com/JmzTaylor/unraid_templates
-   d4a08bd..566b5dd  master     -> origin/master
-Updating d4a08bd..566b5dd
-Fast-forward
- booklore.png | Bin 1916 -> 0 bytes
- booklore.xml |  34 ----------------------------------
- 2 files changed, 34 deletions(-)
- delete mode 100644 booklore.png
- delete mode 100644 booklore.xml
+Already up to date.
 
 Array
 (
@@ -20607,8 +20655,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-sanjeet990/astroluma
-sanjeet990/astroluma:latest Downloads: 95539  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20644,8 +20690,6 @@ sanjeet990/astroluma:latest Downloads: 95539  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/kali-linux
-lscr.io/linuxserver/kali-linux Downloads: 52396  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20728,15 +20772,6 @@ lscr.io/linuxserver/kali-linux Downloads: 52396  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-haveagitgat/tdarr_node
-ghcr.io/haveagitgat/tdarr_node Downloads: 9401644  Stars: 20  Base: unknown
-tigerblue77/dell_idrac_fan_controller
-tigerblue77/dell_idrac_fan_controller Downloads: 363046  Stars: 7  Base: unknown
-Tagged - Can't determine last update
-mealie-recipes/mealie
-ghcr.io/mealie-recipes/mealie:nightly Downloads:   Stars:   Base: unknown
-alcapone1933/ddns-ipv64
-alcapone1933/ddns-ipv64:latest Downloads: 195277  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20754,8 +20789,6 @@ alcapone1933/ddns-ipv64:latest Downloads: 195277  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/kata.runtime/master/plugins/kata.runtime.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
-outlinewiki/outline
-outlinewiki/outline:latest Downloads: 11388660  Stars: 185  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
@@ -20774,38 +20807,15 @@ outlinewiki/outline:latest Downloads: 11388660  Stars: 185  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
-bobbintb/uup-dumper
-bobbintb/uup-dumper Downloads: 853  Stars: 0  Base: unknown
-surrealdb/surrealdb
-surrealdb/surrealdb:latest Downloads: 1851642  Stars: 73  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-imthai/opencanary
-imthai/opencanary Downloads: 452  Stars: 0  Base: unknown
-germannewsmaker/myspeed
-germannewsmaker/myspeed Downloads: 4196285  Stars: 15  Base: unknown
-Tagged - Can't determine last update
-daredoes/mopidy3
-daredoes/mopidy3:stable Downloads: 5030  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-azuracast/nowplaying
-azuracast/nowplaying:latest Downloads:   Stars:   Base: unknown
-bellingcat/auto-archiver
-bellingcat/auto-archiver:latest Downloads: 4823  Stars: 1  Base: unknown
-dopeytree/tvx
-ghcr.io/dopeytree/tvx:latest Downloads:   Stars:   Base: unknown
-psalias2006/gpu-hot
-ghcr.io/psalias2006/gpu-hot:latest Downloads:   Stars:   Base: unknown
-azuracast/relay
-ghcr.io/azuracast/relay:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
-dock.mau.dev/maubot/maubot
-dock.mau.dev/maubot/maubot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
