@@ -32,15 +32,7 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 
 Downloading XCrownedClownsX's Repository
 
-From https://github.com/alexphillips-dev/FolderView-Plus
-   abb3d02..f77d37d  main       -> origin/main
-Updating abb3d02..f77d37d
-Fast-forward
- folderview.plus.plg             |  4 ++--
- pkg_build.sh                    |  7 ++++---
- scripts/release_guard.sh        | 33 +++++++++++++++++++++++++++++++++
- tests/versioning-guard.test.mjs | 10 ++++++++++
- 4 files changed, 49 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1241,11 +1233,18 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
-   5f4e003..b437ae2  master     -> origin/master
-Updating 5f4e003..b437ae2
+   b437ae2..99cb563  master      -> origin/master
+ * [new tag]         v0.9.27-dev -> v0.9.27-dev
+Updating b437ae2..99cb563
 Fast-forward
- app/Filament/Resources/PlaylistAliases/PlaylistAliasResource.php | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ .../Resources/Playlists/PlaylistResource.php       | 84 ++++++++++++++--------
+ app/Models/Playlist.php                            |  1 +
+ app/Services/ProfileService.php                    |  9 +--
+ config/dev.php                                     |  4 +-
+ ...enable_provider_affinity_to_playlists_table.php | 22 ++++++
+ tests/Feature/ClientProfileAffinityTest.php        | 57 ++++++++++-----
+ 6 files changed, 123 insertions(+), 54 deletions(-)
+ create mode 100644 database/migrations/2026_03_15_000001_add_enable_provider_affinity_to_playlists_table.php
 
 Array
 (
@@ -1582,7 +1581,9 @@ Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/dayNight.xml..
 Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/factoryReset.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.factory.reset.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/systemInfo.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.info.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/localMaster.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.local.master.plg attempt 1...Success
-Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/fileManager.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.file.manager.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/fileManager.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.file.manager.plg attempt 1...bool(false)
+out: int(56)
+error: failed.  Sleeping 5... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.file.manager.plg attempt 2...Success
 Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/fileIntegrity.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.file.integrity.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/scsiDevices.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.scsi.devices.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/dynamix-plugins-xml/s3_sleep.xml... Downloading https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.s3.sleep.plg attempt 1...Success
@@ -20626,8 +20627,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-cronicle-edge/cronicle-edge
-ghcr.io/cronicle-edge/cronicle-edge:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -20765,8 +20764,6 @@ ghcr.io/cronicle-edge/cronicle-edge:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-chrizzo84/azpipeline
-ghcr.io/chrizzo84/azpipeline Downloads: 2489  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
