@@ -33,48 +33,33 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 Downloading XCrownedClownsX's Repository
 
 From https://github.com/alexphillips-dev/FolderView-Plus
-   8e66320..6c710f0  main           -> origin/main
- * [new tag]         v2026.03.14.02 -> v2026.03.14.02
-Updating 8e66320..6c710f0
+   6c710f0..abb3d02  main           -> origin/main
+ * [new tag]         v2026.03.15.03 -> v2026.03.15.03
+Updating 6c710f0..abb3d02
 Fast-forward
- .githooks/pre-push                                 |    3 +
- .github/workflows/ci.yml                           |    3 +-
- .github/workflows/release-beta.yml                 |    3 +-
- .github/workflows/release-main.yml                 |    3 +-
- .github/workflows/release-on-main.yml              |    3 +-
- .github/workflows/release-stable.yml               |    3 +-
- archive/folderview.plus-2026.03.14.01.txz          |  Bin 0 -> 14673748 bytes
- archive/folderview.plus-2026.03.14.01.txz.sha256   |    1 +
- archive/folderview.plus-2026.03.14.02.txz          |  Bin 0 -> 14674776 bytes
- archive/folderview.plus-2026.03.14.02.txz.sha256   |    1 +
- folderview.plus.plg                                |   20 +-
- folderview.plus.xml                                |    2 +-
- scripts/include_order_guard.sh                     |   67 +
- scripts/install_smoke.sh                           |    4 +
- scripts/perf_baseline.json                         |   32 +-
- scripts/perf_baseline_refresh.sh                   |   23 +
- scripts/perf_budget_guard.sh                       |   60 +
- scripts/release_guard.sh                           |   41 +-
- scripts/release_prepare.sh                         |    2 +
- .../plugins/folderview.plus/FolderViewPlus.page    |    2 +
- .../scripts/folderviewplus.import.js               | 1160 +++++
- .../folderview.plus/scripts/folderviewplus.js      | 4717 ++------------------
- .../scripts/folderviewplus.utils.js                |   23 +
- .../scripts/folderviewplus.wizard.js               | 3048 +++++++++++++
- .../folderview.plus/styles/folderviewplus.css      |   36 +
- tests/import-presets-backup-compare.test.mjs       |   11 +-
- tests/mobile-touch-support.test.mjs                |   10 +-
- tests/performance-optimizations.test.mjs           |   14 +-
- tests/settings-bindings.test.mjs                   |   27 +-
- tests/ui-smoke-layout.test.mjs                     |   89 +-
- 30 files changed, 4934 insertions(+), 4474 deletions(-)
- create mode 100644 archive/folderview.plus-2026.03.14.01.txz
- create mode 100644 archive/folderview.plus-2026.03.14.01.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.14.02.txz
- create mode 100644 archive/folderview.plus-2026.03.14.02.txz.sha256
- create mode 100644 scripts/include_order_guard.sh
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.import.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.wizard.js
+ archive/folderview.plus-2026.03.15.01.txz          | Bin 0 -> 14675064 bytes
+ archive/folderview.plus-2026.03.15.01.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.15.02.txz          | Bin 0 -> 14674208 bytes
+ archive/folderview.plus-2026.03.15.02.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.15.03.txz          | Bin 0 -> 14674172 bytes
+ archive/folderview.plus-2026.03.15.03.txz.sha256   |   1 +
+ folderview.plus.plg                                |  22 +++-
+ folderview.plus.xml                                |   2 +-
+ scripts/perf_baseline.json                         |  18 +--
+ .../plugins/folderview.plus/FolderViewPlus.page    | 122 ++++++++++-----------
+ .../scripts/folderviewplus.import.js               |   3 -
+ .../folderview.plus/scripts/folderviewplus.js      |  28 ++---
+ .../scripts/folderviewplus.request.js              |  38 +++++++
+ .../emhttp/plugins/folderview.plus/server/lib.php  |  12 +-
+ tests/request-client.test.mjs                      |  22 ++++
+ tests/settings-bindings.test.mjs                   |   5 +
+ 16 files changed, 183 insertions(+), 92 deletions(-)
+ create mode 100644 archive/folderview.plus-2026.03.15.01.txz
+ create mode 100644 archive/folderview.plus-2026.03.15.01.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.15.02.txz
+ create mode 100644 archive/folderview.plus-2026.03.15.02.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.15.03.txz
+ create mode 100644 archive/folderview.plus-2026.03.15.03.txz.sha256
 
 Array
 (
@@ -88,7 +73,7 @@ Array
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/alexphillips-dev/FolderView-Plus/folderview.plus.xml... Downloading https://raw.githubusercontent.com/alexphillips-dev/FolderView-Plus/main/folderview.plus.plg attempt 1...Fatal: Plugin URL on xml template does not match PluginURL in .plg (https://raw.githubusercontent.com/alexphillips-dev/FolderView-Plus/main/folderview.plus.plg vs https://raw.githubusercontent.com/alexphillips-dev/FolderView-Plus/dev/folderview.plus.plg)
 
-Success
+Removed from CA123
 
 
 Downloading Bert McCutchen's Repository
@@ -3540,12 +3525,7 @@ Processing /tmp/GitHub/repositoryClone/TheMapledCog/unraid-templates/Jetlog/Jetl
 
 Downloading error311's Repository
 
-From https://github.com/error311/UNRAID_COMMUNITY_APPS
-   0bf8dea..87938a0  main       -> origin/main
-Updating 0bf8dea..87938a0
-Fast-forward
- multi-file-upload-editor-docker.xml | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -5512,7 +5492,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   37f3a610..3bb38ac9  main       -> origin/main
+Updating 37f3a610..3bb38ac9
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 25 insertions(+), 25 deletions(-)
 
 Array
 (
@@ -20562,7 +20571,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
- Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alexphillips-dev/FolderView-Plus/dev/folderview.plus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/Lazaros-Chalkidis/unraid-logsviewer/raw/main/logsviewer.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/emaspa/wireview-hwmon-unraid/raw/main/wireview-hwmon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
@@ -20616,6 +20624,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+joplin/server
+joplin/server:latest Downloads: 11875324  Stars: 297  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/automover/main/plugin/automover.plg attempt 1...
@@ -20763,10 +20773,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-0xdespot/lido-csm-dashboard
-0xdespot/lido-csm-dashboard:latest Downloads: 1350  Stars: 1  Base: unknown
-stnsmith/fossflow
-stnsmith/fossflow Downloads: 210719  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20821,10 +20827,6 @@ stnsmith/fossflow Downloads: 210719  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-gyzod/ocpp2mqtt
-gyzod/ocpp2mqtt Downloads: 424  Stars: 1  Base: unknown
-calibrain/shelfmark
-ghcr.io/calibrain/shelfmark:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 133
