@@ -68,7 +68,12 @@ Success
 
 Downloading Lazaros Chalkidis' Repository
 
-Already up to date.
+From https://github.com/Lazaros-Chalkidis/unraid-logsviewer
+   27c59dc..914c3ba  main       -> origin/main
+Updating 27c59dc..914c3ba
+Fast-forward
+ LICENSE | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -1198,7 +1203,82 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-Already up to date.
+From https://github.com/ruaan-deysel/unraid-management-agent
+   b95ef8d..aa4a194  main       -> origin/main
+ * [new tag]         v2026.03.02 -> v2026.03.02
+Updating b95ef8d..aa4a194
+Fast-forward
+ .devcontainer/Dockerfile                           |  20 -
+ .devcontainer/README.md                            | 159 ------
+ .devcontainer/devcontainer.json                    |  74 ---
+ .devcontainer/on-create.sh                         |  19 -
+ .github/copilot-instructions.md                    |   1 -
+ .github/workflows/release.yml                      |  22 +-
+ .gitignore                                         |   1 +
+ .pre-commit-config.yaml                            |   2 +-
+ AGENTS.md                                          |  18 +-
+ CHANGELOG.md                                       |  41 ++
+ CLAUDE.md                                          |   1 -
+ GEMINI.md                                          |   1 -
+ README.md                                          |  22 +-
+ VERSION                                            |   2 +-
+ ansible/README.md                                  |  18 +-
+ ansible/deploy.yml                                 |   7 +-
+ ansible/group_vars/all.yml                         |   1 -
+ ansible/roles/build/tasks/main.yml                 |  25 +
+ daemon/domain/fileconfig.go                        |   3 +-
+ daemon/lib/shell.go                                |   7 +-
+ daemon/lib/sysfs_hardware.go                       |   2 +-
+ daemon/lib/testutil/testutil.go                    |   8 +-
+ daemon/lib/utils.go                                |   2 +-
+ daemon/services/alerting/dispatcher.go             |   8 +-
+ daemon/services/api/logs.go                        |  46 +-
+ daemon/services/api/logs_coverage_test.go          |   1 +
+ daemon/services/api/logs_test.go                   |  61 +-
+ daemon/services/api/websocket.go                   |  25 +-
+ daemon/services/api/websocket_test.go              |  77 +++
+ daemon/services/collector_manager.go               |  26 +-
+ daemon/services/collector_manager_test.go          |  41 ++
+ daemon/services/collectors/disk.go                 |   4 +-
+ daemon/services/collectors/docker.go               |   4 +-
+ daemon/services/collectors/network.go              |   6 +-
+ daemon/services/collectors/parity.go               |  10 +
+ daemon/services/collectors/parity_test.go          |  41 ++
+ daemon/services/collectors/settings.go             |   6 +-
+ daemon/services/collectors/system.go               |   8 +-
+ daemon/services/collectors/unassigned.go           |  66 +--
+ daemon/services/collectors/unassigned_test.go      |  21 +
+ daemon/services/mqtt/client.go                     |  13 +-
+ daemon/services/mqtt/client_test.go                |  23 +
+ daemon/services/mqtt/commands.go                   |   2 +-
+ daemon/services/watchdog/probes.go                 |   6 +-
+ daemon/services/watchdog/remediation.go            |   3 +-
+ docs/plans/2026-03-08-homelab-hardening-design.md  | 149 +++++
+ .../2026-03-08-homelab-hardening-implementation.md | 527 ++++++++++++++++++
+ go.mod                                             |   8 +-
+ go.sum                                             |  12 +-
+ meta/template/unraid-management-agent.plg          | 170 ------
+ scripts/README.md                                  | 179 ------
+ scripts/config.sh.example                          |  29 -
+ scripts/deploy-plugin.sh                           | 367 ------------
+ scripts/diag.sh                                    | 172 ------
+ scripts/validate-live.sh                           | 617 ---------------------
+ unraid-management-agent.plg                        |  54 +-
+ unraid-management-agent.xml                        |  10 +-
+ 57 files changed, 1205 insertions(+), 2043 deletions(-)
+ delete mode 100644 .devcontainer/Dockerfile
+ delete mode 100644 .devcontainer/README.md
+ delete mode 100644 .devcontainer/devcontainer.json
+ delete mode 100755 .devcontainer/on-create.sh
+ create mode 100644 ansible/roles/build/tasks/main.yml
+ create mode 100644 docs/plans/2026-03-08-homelab-hardening-design.md
+ create mode 100644 docs/plans/2026-03-08-homelab-hardening-implementation.md
+ delete mode 100644 meta/template/unraid-management-agent.plg
+ delete mode 100644 scripts/README.md
+ delete mode 100755 scripts/config.sh.example
+ delete mode 100755 scripts/deploy-plugin.sh
+ delete mode 100755 scripts/diag.sh
+ delete mode 100755 scripts/validate-live.sh
 
 Array
 (
@@ -16894,12 +16974,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   503f461..d3ec0f2  main       -> origin/main
-Updating 503f461..d3ec0f2
-Fast-forward
- automation/change_monitoring/data.json | 12 ++++++------
- 1 file changed, 6 insertions(+), 6 deletions(-)
+Already up to date.
 
 Array
 (
