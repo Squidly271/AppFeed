@@ -465,7 +465,16 @@ Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca
 
 Downloading gibz104's Repository
 
-Already up to date.
+From https://github.com/gibz104/SpoolmanSync
+   ed83066..7584b09  main       -> origin/main
+ * [new tag]         v1.3.6     -> v1.3.6
+Updating ed83066..7584b09
+Fast-forward
+ CHANGELOG.md                      |  7 ++++++-
+ app/package.json                  |  2 +-
+ app/src/app/api/printers/route.ts | 11 ++++++++++-
+ spoolmansync-ha-addon/config.yaml |  2 +-
+ 4 files changed, 18 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -1291,7 +1300,139 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   95c54f6e..155b8b4a  master       -> origin/master
+ * [new tag]           v0.10.13-dev -> v0.10.13-dev
+ * [new tag]           v0.10.11-exp -> v0.10.11-exp
+ * [new tag]           v0.10.12-exp -> v0.10.12-exp
+ * [new tag]           v0.10.13-exp -> v0.10.13-exp
+Updating 95c54f6e..155b8b4a
+Fast-forward
+ .env.example                                       |  13 +
+ .github/workflows/publish_dev.yml                  |   9 +
+ .github/workflows/publish_experimental.yml         |   9 +
+ .gitignore                                         |   1 +
+ Dockerfile                                         |  34 +-
+ app/Console/Commands/NetworkBroadcastHeal.php      |   6 +-
+ app/Enums/TranscodeMode.php                        |  18 +
+ .../MediaServerIntegrationResource.php             | 109 ++-
+ .../Resources/Networks/NetworkResource.php         | 209 ++++-
+ .../Resources/Networks/Pages/EditNetwork.php       |   1 +
+ .../Networks/Pages/ManualScheduleBuilder.php       | 811 ++++++++++++++++++
+ .../PlaylistAliases/PlaylistAliasResource.php      |   2 +-
+ .../PlaylistViewers/Pages/ListPlaylistViewers.php  |  18 +
+ .../PlaylistViewers/Pages/ViewPlaylistViewer.php   |  11 +
+ .../PlaylistViewers/PlaylistViewerResource.php     | 172 ++++
+ .../WatchProgressRelationManager.php               | 275 ++++++
+ .../StreamFileSettingResource.php                  |   2 +-
+ app/Filament/Resources/Vods/Pages/ViewVod.php      |   3 +
+ app/Http/Controllers/Api/EpgApiController.php      |   5 +-
+ app/Http/Controllers/Api/M3uProxyApiController.php | 177 +++-
+ app/Http/Controllers/ChannelController.php         | 279 ++++++
+ .../Controllers/MediaServerProxyController.php     | 186 ++++
+ app/Http/Controllers/NetworkPlaylistController.php |   2 +-
+ app/Http/Controllers/PlayerController.php          |  15 +
+ .../Controllers/PlaylistGenerateController.php     |   2 +-
+ app/Http/Controllers/WatchProgressController.php   | 191 +++++
+ app/Http/Controllers/XtreamApiController.php       | 421 ++++++++-
+ app/Jobs/FetchTmdbIds.php                          | 146 +++-
+ app/Jobs/SyncMediaServer.php                       | 163 +++-
+ app/Livewire/StreamPlayer.php                      |  20 +
+ app/Models/Channel.php                             |   3 +
+ app/Models/CustomPlaylist.php                      |   6 +
+ app/Models/Episode.php                             |   5 +
+ app/Models/MediaServerIntegration.php              |  19 +
+ app/Models/MergedPlaylist.php                      |   6 +
+ app/Models/Network.php                             |  23 +
+ app/Models/NetworkProgramme.php                    |   2 +
+ app/Models/Playlist.php                            |   6 +
+ app/Models/PlaylistAlias.php                       |   6 +
+ app/Models/PlaylistAuth.php                        |   5 +
+ app/Models/PlaylistViewer.php                      |  43 +
+ app/Models/ViewerWatchProgress.php                 | 103 +++
+ app/Providers/AppServiceProvider.php               |  45 +
+ app/Services/EmbyJellyfinService.php               |   8 +-
+ app/Services/LocalMediaService.php                 |  16 +-
+ app/Services/M3uProxyService.php                   |   5 +
+ app/Services/MediaServerService.php                |   1 +
+ app/Services/NetworkBroadcastService.php           | 465 +++++++++-
+ app/Services/NetworkChannelSyncService.php         |  32 +-
+ app/Services/NetworkScheduleService.php            |  12 +-
+ app/Services/PlexService.php                       | 152 +++-
+ app/Services/WebDavMediaService.php                | 945 +++++++++++++++++++++
+ bootstrap/app.php                                  |   2 +
+ config/dev.php                                     |   2 +-
+ ...av_credentials_to_media_server_integrations.php |  36 +
+ ...037_deduplicate_series_and_add_unique_index.php |  91 ++
+ ..._04_000001_add_group_name_to_networks_table.php |  28 +
+ ..._03_04_000001_create_playlist_viewers_table.php |  25 +
+ ...4_000002_create_viewer_watch_progress_table.php |  34 +
+ ...26_03_04_000003_seed_admin_playlist_viewers.php |  58 ++
+ ...04_add_playlist_auth_id_to_playlist_viewers.php |  27 +
+ ...anual_schedule_recurrence_to_networks_table.php |  28 +
+ ..._add_schedule_gap_seconds_to_networks_table.php |  28 +
+ ...nned_start_time_to_network_programmes_table.php |  23 +
+ ..._broadcast_retry_tracking_to_networks_table.php |  32 +
+ ...cast_transcode_session_id_to_networks_table.php |  24 +
+ ...dcast_boot_recovery_until_to_networks_table.php |  28 +
+ docker-compose.proxy-vpn.yml                       |   2 +-
+ docker-compose.proxy.yml                           |   2 +-
+ docker/8.4/supervisord.conf                        |   2 +-
+ docs/dockerfile-build-args.md                      |  51 +-
+ docs/hls-storage-config.md                         | 111 ++-
+ docs/network-integration.md                        |   7 +-
+ resources/js/app.js                                |   1 +
+ resources/js/vendor/multi-stream-manager.js        |  10 +
+ resources/js/vendor/schedule-builder.js            | 618 ++++++++++++++
+ resources/js/vendor/stream-viewer.js               | 188 +++-
+ .../components/floating-stream-players.blade.php   |  35 +-
+ .../pages/manual-schedule-builder.blade.php        | 448 ++++++++++
+ .../resources/vods/pages/view-vod.blade.php        |   3 +
+ resources/views/livewire/stream-player.blade.php   |  31 +-
+ resources/views/player/popout.blade.php            |  34 +-
+ routes/web.php                                     |  28 +-
+ start-container                                    |  44 +
+ test_schedule_builder.php                          | 497 +++++++++++
+ tests/Feature/FetchTmdbIdsTest.php                 | 534 ++++++++++++
+ tests/Feature/LocalMediaIntegrationTest.php        |  91 ++
+ tests/Feature/ManualScheduleBuilderTest.php        | 588 +++++++++++++
+ tests/Feature/NetworkBroadcastBootRecoveryTest.php | 437 ++++++++++
+ .../NetworkBroadcastFailureHandlingTest.php        | 721 ++++++++++++++++
+ tests/Feature/NetworkBroadcastPayloadTest.php      |  70 ++
+ tests/Feature/NetworkGroupNameTest.php             | 109 +++
+ tests/Feature/SyncMediaServerTest.php              | 186 ++++
+ tests/Feature/WebDavMediaIntegrationTest.php       | 569 +++++++++++++
+ 94 files changed, 10859 insertions(+), 242 deletions(-)
+ create mode 100644 app/Filament/Resources/Networks/Pages/ManualScheduleBuilder.php
+ create mode 100644 app/Filament/Resources/PlaylistViewers/Pages/ListPlaylistViewers.php
+ create mode 100644 app/Filament/Resources/PlaylistViewers/Pages/ViewPlaylistViewer.php
+ create mode 100644 app/Filament/Resources/PlaylistViewers/PlaylistViewerResource.php
+ create mode 100644 app/Filament/Resources/PlaylistViewers/RelationManagers/WatchProgressRelationManager.php
+ create mode 100644 app/Http/Controllers/WatchProgressController.php
+ create mode 100644 app/Models/PlaylistViewer.php
+ create mode 100644 app/Models/ViewerWatchProgress.php
+ create mode 100644 app/Services/WebDavMediaService.php
+ create mode 100644 database/migrations/2026_02_28_175430_add_webdav_credentials_to_media_server_integrations.php
+ create mode 100644 database/migrations/2026_03_02_032037_deduplicate_series_and_add_unique_index.php
+ create mode 100644 database/migrations/2026_03_04_000001_add_group_name_to_networks_table.php
+ create mode 100644 database/migrations/2026_03_04_000001_create_playlist_viewers_table.php
+ create mode 100644 database/migrations/2026_03_04_000002_create_viewer_watch_progress_table.php
+ create mode 100644 database/migrations/2026_03_04_000003_seed_admin_playlist_viewers.php
+ create mode 100644 database/migrations/2026_03_04_000004_add_playlist_auth_id_to_playlist_viewers.php
+ create mode 100644 database/migrations/2026_03_05_044254_add_manual_schedule_recurrence_to_networks_table.php
+ create mode 100644 database/migrations/2026_03_05_170000_add_schedule_gap_seconds_to_networks_table.php
+ create mode 100644 database/migrations/2026_03_05_220000_add_sort_order_and_pinned_start_time_to_network_programmes_table.php
+ create mode 100644 database/migrations/2026_03_06_000001_add_broadcast_retry_tracking_to_networks_table.php
+ create mode 100644 database/migrations/2026_03_06_000002_add_broadcast_transcode_session_id_to_networks_table.php
+ create mode 100644 database/migrations/2026_03_11_183021_add_broadcast_boot_recovery_until_to_networks_table.php
+ create mode 100644 resources/js/vendor/schedule-builder.js
+ create mode 100644 resources/views/filament/resources/networks/pages/manual-schedule-builder.blade.php
+ create mode 100644 test_schedule_builder.php
+ create mode 100644 tests/Feature/ManualScheduleBuilderTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastFailureHandlingTest.php
+ create mode 100644 tests/Feature/NetworkBroadcastPayloadTest.php
+ create mode 100644 tests/Feature/NetworkGroupNameTest.php
+ create mode 100644 tests/Feature/WebDavMediaIntegrationTest.php
 
 Array
 (
