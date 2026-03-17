@@ -85,7 +85,61 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 
 Downloading XCrownedClownsX's Repository
 
-Already up to date.
+From https://github.com/alexphillips-dev/FolderView-Plus
+   147b4de..38f2346  main           -> origin/main
+ * [new tag]         v2026.03.17.17 -> v2026.03.17.17
+Updating 147b4de..38f2346
+Fast-forward
+ CHANGELOG-fixes.md                                 |  20 +++
+ archive/folderview.plus-2026.03.17.07.txz          | Bin 0 -> 14683688 bytes
+ archive/folderview.plus-2026.03.17.07.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.08.txz          | Bin 0 -> 14683652 bytes
+ archive/folderview.plus-2026.03.17.08.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.09.txz          | Bin 0 -> 14683712 bytes
+ archive/folderview.plus-2026.03.17.09.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.10.txz          | Bin 0 -> 14683684 bytes
+ archive/folderview.plus-2026.03.17.10.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.11.txz          | Bin 0 -> 14683704 bytes
+ archive/folderview.plus-2026.03.17.11.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.12.txz          | Bin 0 -> 14683868 bytes
+ archive/folderview.plus-2026.03.17.12.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.13.txz          | Bin 0 -> 14684152 bytes
+ archive/folderview.plus-2026.03.17.13.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.14.txz          | Bin 0 -> 14684236 bytes
+ archive/folderview.plus-2026.03.17.14.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.15.txz          | Bin 0 -> 14684364 bytes
+ archive/folderview.plus-2026.03.17.15.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.17.17.txz          | Bin 0 -> 14684364 bytes
+ archive/folderview.plus-2026.03.17.17.txz.sha256   |   1 +
+ folderview.plus.plg                                |  57 +++++-
+ .../plugins/folderview.plus/FolderViewPlus.page    |  42 ++++-
+ .../plugins/folderview.plus/scripts/docker.js      |  86 +++++++--
+ .../folderview.plus/scripts/folderviewplus.js      | 197 +++++++++++++++++++--
+ .../emhttp/plugins/folderview.plus/server/lib.php  |  34 +++-
+ .../folderview.plus/styles/folderviewplus.css      | 101 ++++++++++-
+ tests/settings-bindings.test.mjs                   |  24 +++
+ tests/ui-smoke-layout.test.mjs                     |  18 +-
+ 29 files changed, 539 insertions(+), 50 deletions(-)
+ create mode 100644 archive/folderview.plus-2026.03.17.07.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.07.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.08.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.08.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.09.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.09.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.10.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.10.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.11.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.11.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.12.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.12.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.13.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.13.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.14.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.14.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.15.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.15.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.17.17.txz
+ create mode 100644 archive/folderview.plus-2026.03.17.17.txz.sha256
 
 Array
 (
@@ -279,7 +333,73 @@ Processing /tmp/GitHub/repositoryClone/Starosdev/unraid-templates/ca_profile.xml
 
 Downloading UR-jay's Repository
 
-Already up to date.
+From https://github.com/GHJJ123/brainrotguard
+   1e6ea93..a320490  main       -> origin/main
+Updating 1e6ea93..a320490
+Fast-forward
+ CHANGELOG.md                    |  22 ++
+ README.md                       |   2 +
+ bot/activity.py                 |  88 +++---
+ bot/approval.py                 | 168 ++++++-----
+ bot/channels.py                 | 113 ++++----
+ bot/commands.py                 | 255 ++++++++++-------
+ bot/helpers.py                  |   7 +-
+ bot/setup.py                    | 179 +++++++-----
+ bot/telegram_bot.py             |  95 ++++++-
+ bot/timelimits.py               | 611 +++++++++++++++++++++++-----------------
+ config.example.yaml             |   4 +
+ config.py                       |  18 ++
+ docs/configuration.md           |  30 ++
+ i18n/__init__.py                | 177 ++++++++++++
+ i18n/locales/README.md          | 123 ++++++++
+ i18n/locales/__init__.py        |   1 +
+ i18n/locales/en.py              |   6 +
+ i18n/locales/nb.py              | 482 +++++++++++++++++++++++++++++++
+ main.py                         |   6 +
+ tests/test_bot_localization.py  | 208 ++++++++++++++
+ tests/test_config.py            |  54 +++-
+ tests/test_i18n.py              |  43 +++
+ tests/test_utils.py             |  21 +-
+ tests/test_web_cache.py         |  20 ++
+ tests/test_web_integration.py   | 132 ++++++++-
+ utils.py                        |  24 +-
+ version.py                      |   2 +-
+ web/app.py                      |   8 +-
+ web/cache.py                    |   3 +-
+ web/helpers.py                  |  22 +-
+ web/middleware.py               |   5 +
+ web/routers/auth.py             |  18 +-
+ web/routers/catalog.py          |  17 +-
+ web/routers/pages.py            |  11 +-
+ web/routers/pwa.py              |  31 ++
+ web/routers/search.py           |  13 +-
+ web/routers/watch.py            |  20 +-
+ web/shared.py                   |  38 +++
+ web/static/manifest.webmanifest |  23 ++
+ web/static/service-worker.js    |  64 +++++
+ web/static/style.css            | 324 +++++++++++++--------
+ web/templates/activity.html     |  32 +--
+ web/templates/base.html         | 148 +++++++++-
+ web/templates/denied.html       |   8 +-
+ web/templates/index.html        | 489 ++++++++++++++++++++------------
+ web/templates/login.html        |  14 +-
+ web/templates/outsidehours.html |  10 +-
+ web/templates/pending.html      |   6 +-
+ web/templates/search.html       |  95 +++++--
+ web/templates/timesup.html      |  20 +-
+ web/templates/watch.html        | 236 ++++++++++++++--
+ 51 files changed, 3478 insertions(+), 1068 deletions(-)
+ create mode 100644 i18n/__init__.py
+ create mode 100644 i18n/locales/README.md
+ create mode 100644 i18n/locales/__init__.py
+ create mode 100644 i18n/locales/en.py
+ create mode 100644 i18n/locales/nb.py
+ create mode 100644 tests/test_bot_localization.py
+ create mode 100644 tests/test_i18n.py
+ create mode 100644 tests/test_web_cache.py
+ create mode 100644 web/routers/pwa.py
+ create mode 100644 web/static/manifest.webmanifest
+ create mode 100644 web/static/service-worker.js
 
 Array
 (
@@ -759,42 +879,7 @@ Success
 
 Downloading tenletter's Repository
 
-From https://github.com/softerfish/seekandwatch
-   d8f01c5..925a0a1  main       -> origin/main
- * [new tag]         v1.6.6     -> v1.6.6
-Updating d8f01c5..925a0a1
-Fast-forward
- Dockerfile                       |    9 +-
- README.md                        |   12 +-
- api/__init__.py                  |   10 +
- api/routes_main.py               |   62 +-
- api/routes_pair.py               |  167 ++--
- api/routes_tunnel.py             |    4 +
- app.py                           |   54 +-
- config.py                        |    2 +-
- models.py                        |   19 +
- services/IntegrationsService.py  |   34 +-
- static/style.css                 | 2018 +++++++++++++++++++++++++++++++-------
- templates/base.html              |  134 +--
- templates/blocklist.html         |   89 +-
- templates/media.html             |  706 +++++++------
- templates/requests_settings.html | 1619 ++++++++++++++++--------------
- templates/results.html           |  121 +--
- templates/review.html            |  471 ++++-----
- templates/settings.html          |  753 +++++++-------
- tests/test_image_proxy.py        |   90 ++
- tunnel/health.py                 |   16 +
- tunnel/manager.py                |   91 +-
- tunnel/registrar.py              |    6 +-
- utils/legacy.py                  |   10 +-
- utils/webhook_security.py        |   54 -
- web/routes_auth.py               |    6 +
- web/routes_generate.py           |   20 +-
- web/routes_requests.py           |   36 +-
- web/routes_settings.py           |   27 +-
- web/routes_utility.py            |  115 ++-
- 29 files changed, 4430 insertions(+), 2325 deletions(-)
- create mode 100644 tests/test_image_proxy.py
+Already up to date.
 
 Array
 (
@@ -6385,22 +6470,11 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 Downloading linuxserver's Repository
 
 From https://github.com/linuxserver/templates
-   838be03..f9fe49d  main       -> origin/main
-Updating 838be03..f9fe49d
+   f9fe49d..7b22012  main       -> origin/main
+Updating f9fe49d..7b22012
 Fast-forward
- unraid/azahar.xml         | 5 ++++-
- unraid/dolphin.xml        | 5 ++++-
- unraid/dosbox-staging.xml | 5 ++++-
- unraid/duckstation.xml    | 5 ++++-
- unraid/eden.xml           | 5 ++++-
- unraid/flycast.xml        | 5 ++++-
- unraid/gzdoom.xml         | 5 ++++-
- unraid/mame.xml           | 5 ++++-
- unraid/melonds.xml        | 5 ++++-
- unraid/modrinth.xml       | 5 ++++-
- unraid/pcsx2.xml          | 5 ++++-
- unraid/retroarch.xml      | 5 ++++-
- 12 files changed, 48 insertions(+), 12 deletions(-)
+ unraid/webstation.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
