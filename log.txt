@@ -1294,175 +1294,14 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
-   85777ba8..e877936a  master     -> origin/master
-Updating 85777ba8..e877936a
+   e877936a..8d8e9aba  master     -> origin/master
+Updating e877936a..8d8e9aba
 Fast-forward
- .agents/skills/configuring-horizon/SKILL.md        |   85 +
- .../configuring-horizon/references/metrics.md      |   21 +
- .../references/notifications.md                    |   21 +
- .../configuring-horizon/references/supervisors.md  |   27 +
- .../skills/configuring-horizon/references/tags.md  |   21 +
- .agents/skills/pest-testing/SKILL.md               |  157 ++
- .agents/skills/tailwindcss-development/SKILL.md    |  119 ++
- .claude/skills/configuring-horizon/SKILL.md        |   85 +
- .../configuring-horizon/references/metrics.md      |   21 +
- .../references/notifications.md                    |   21 +
- .../configuring-horizon/references/supervisors.md  |   27 +
- .../skills/configuring-horizon/references/tags.md  |   21 +
- .claude/skills/pest-testing/SKILL.md               |  157 ++
- .claude/skills/tailwindcss-development/SKILL.md    |  119 ++
- .cursor/mcp.json                                   |   11 +
- .cursor/skills/configuring-horizon/SKILL.md        |   85 +
- .../configuring-horizon/references/metrics.md      |   21 +
- .../references/notifications.md                    |   21 +
- .../configuring-horizon/references/supervisors.md  |   27 +
- .../skills/configuring-horizon/references/tags.md  |   21 +
- .cursor/skills/pest-testing/SKILL.md               |  157 ++
- .cursor/skills/tailwindcss-development/SKILL.md    |  119 ++
- .github/skills/configuring-horizon/SKILL.md        |   85 +
- .../configuring-horizon/references/metrics.md      |   21 +
- .../references/notifications.md                    |   21 +
- .../configuring-horizon/references/supervisors.md  |   27 +
- .../skills/configuring-horizon/references/tags.md  |   21 +
- .github/skills/pest-testing/SKILL.md               |  157 ++
- .github/skills/tailwindcss-development/SKILL.md    |  119 ++
- AGENTS.md                                          |  198 +--
- CLAUDE.md                                          |  193 +--
- GEMINI.md                                          |  193 +--
- app/Console/Commands/NetworkBroadcastWorker.php    |    3 +-
- app/Facades/GitInfo.php                            |    2 +-
- app/Filament/GuestPanel/Pages/GuestDashboard.php   |    4 +-
- .../GuestPanel/Resources/Series/SeriesResource.php |    6 +-
- .../GuestPanel/Resources/Vods/Pages/ListVod.php    |    2 +-
- .../GuestPanel/Resources/Vods/VodResource.php      |    6 +-
- app/Filament/Pages/Preferences.php                 |    7 +-
- .../MediaServerIntegrationResource.php             |    3 +-
- .../Resources/Networks/NetworkResource.php         |   16 +-
- .../Resources/Networks/Pages/EditNetwork.php       |    3 +-
- .../NetworkContentRelationManager.php              |    7 +-
- .../Resources/Playlists/PlaylistResource.php       |    2 +-
- .../RelationManagers/EpisodesRelationManager.php   |    3 +-
- app/Filament/Resources/Series/SeriesResource.php   |    8 +-
- app/Filament/Resources/Users/UserResource.php      |    8 +-
- app/Filament/Resources/Vods/VodResource.php        |   19 +-
- app/Filament/Tables/NetworkEpisodesTable.php       |    3 +-
- app/Filament/Tables/NetworkMoviesTable.php         |    3 +-
- app/Filament/Tables/SourceCategoriesTable.php      |    3 +-
- app/Filament/Tables/SourceGroupsTable.php          |    3 +-
- app/Http/Controllers/Api/EpgApiController.php      |    4 +-
- app/Http/Controllers/Api/M3uProxyApiController.php |    3 +-
- app/Http/Controllers/ChannelController.php         |   10 +-
- app/Http/Controllers/EpgGenerateController.php     |   10 +-
- app/Http/Controllers/NetworkPlaylistController.php |   12 +-
- app/Http/Controllers/PlayerController.php          |    3 +-
- .../Controllers/PlaylistGenerateController.php     |    4 +-
- app/Http/Controllers/ShortURLController.php        |    6 +-
- app/Http/Controllers/XtreamApiController.php       |    8 +-
- app/Http/Controllers/XtreamStreamController.php    |    4 +-
- app/Http/Middleware/DashboardMiddleware.php        |    2 +-
- app/Http/Middleware/GuestPlaylistAuth.php          |    8 +-
- app/Http/Middleware/ProxyRateLimitMiddleware.php   |    2 +-
- app/Jobs/CopyAttributesToPlaylist.php              |    3 +-
- app/Jobs/RefreshPlaylistProfiles.php               |    5 +-
- app/Jobs/SyncMediaServer.php                       |    3 +-
- app/Listeners/PlaylistListener.php                 |    8 +-
- app/Listeners/SyncListener.php                     |    2 +-
- app/Livewire/PlaylistInfo.php                      |    3 +-
- app/Livewire/TmdbSearch.php                        |    3 +-
- app/Models/Channel.php                             |    4 +-
- app/Models/CustomPlaylist.php                      |   10 +-
- app/Models/MediaServerIntegration.php              |    3 +-
- app/Models/MergedPlaylist.php                      |   16 +-
- app/Models/Network.php                             |    2 +-
- app/Models/NetworkContent.php                      |   13 +-
- app/Models/Playlist.php                            |    6 +-
- app/Models/StrmFileMapping.php                     |   17 +-
- app/Providers/AppServiceProvider.php               |   27 +-
- app/Services/AssetInventoryService.php             |    3 +-
- app/Services/M3uProxyService.php                   |    4 +-
- app/Services/NetworkBroadcastService.php           |    6 +-
- app/Services/NetworkEpgService.php                 |    3 +-
- app/Services/NfoService.php                        |    9 +-
- app/Services/PlaylistService.php                   |    7 +-
- app/Services/PlexService.php                       |    2 +-
- app/Services/SchedulesDirectService.php            |   20 +-
- app/Services/WebDavMediaService.php                |    3 +-
- boost.json                                         |    9 +
- bootstrap/app.php                                  |    6 +-
- bootstrap/providers.php                            |   19 +-
- composer.lock                                      | 1641 +++++++++-----------
- config/auth.php                                    |    4 +-
- config/backup-restore.php                          |    3 +-
- config/backup.php                                  |   31 +-
- config/blueprint.php                               |   46 +-
- config/filament.php                                |    8 +-
- config/sanctum.php                                 |    9 +-
- config/settings.php                                |   20 +-
- config/short-url.php                               |   15 +-
- .../factories/MediaServerIntegrationFactory.php    |    2 +-
- database/factories/NetworkFactory.php              |    5 +-
- database/factories/NetworkProgrammeFactory.php     |    5 +-
- database/factories/UserFactory.php                 |    3 +-
- ...2_110254_add_logo_proxy_toggle_to_playlists.php |    9 +-
- ...3_add_logo_proxy_toggle_to_playlisy_aliases.php |    3 +-
- ...026_01_12_000004_add_uuid_to_networks_table.php |    3 +-
- ...0_add_broadcast_reference_to_networks_table.php |    2 +-
- ...27_100002_migrate_stream_file_settings_data.php |    5 +-
- ...04_add_playlist_auth_id_to_playlist_viewers.php |    3 +-
- opencode.json                                      |   14 +
- routes/api.php                                     |   22 +-
- routes/web.php                                     |  119 +-
- test_schedule_builder.php                          |    5 +-
- tests/Feature/JobsTableSchemaTest.php              |    3 +-
- tests/Feature/LocalMediaIntegrationTest.php        |  153 +-
- tests/Feature/LogoCacheCleanupCommandTest.php      |    9 +-
- tests/Feature/LogoRepositoryTest.php               |   11 +-
- tests/Feature/MediaServerIntegrationTest.php       |   17 +-
- tests/Feature/MergeChannelOrderingTest.php         |    3 +-
- tests/Feature/NetworkBroadcastBootRecoveryTest.php |   19 +-
- tests/Feature/NetworkBroadcastEnsureTest.php       |    3 +-
- .../NetworkBroadcastFailureHandlingTest.php        |    3 +-
- tests/Feature/NetworkCleanupTest.php               |   14 +-
- tests/Feature/NetworkReconnectAfterStopTest.php    |    5 +-
- tests/Feature/ProviderRequestDelayTest.php         |    6 +-
- tests/Feature/StrmFileMappingTest.php              |    6 +-
- tests/Feature/WebDavMediaIntegrationTest.php       |   21 +-
- tests/Feature/XtreamApiControllerTest.php          |    6 +-
- tests/Pest.php                                     |    7 +-
- tests/Unit/MergeChannelsTest.php                   |    3 +-
- tests/Unit/NetworkContentTest.php                  |    2 +-
- tests/Unit/NfoServiceTest.php                      |   26 +-
- 135 files changed, 3508 insertions(+), 1588 deletions(-)
- create mode 100644 .agents/skills/configuring-horizon/SKILL.md
- create mode 100644 .agents/skills/configuring-horizon/references/metrics.md
- create mode 100644 .agents/skills/configuring-horizon/references/notifications.md
- create mode 100644 .agents/skills/configuring-horizon/references/supervisors.md
- create mode 100644 .agents/skills/configuring-horizon/references/tags.md
- create mode 100644 .agents/skills/pest-testing/SKILL.md
- create mode 100644 .agents/skills/tailwindcss-development/SKILL.md
- create mode 100644 .claude/skills/configuring-horizon/SKILL.md
- create mode 100644 .claude/skills/configuring-horizon/references/metrics.md
- create mode 100644 .claude/skills/configuring-horizon/references/notifications.md
- create mode 100644 .claude/skills/configuring-horizon/references/supervisors.md
- create mode 100644 .claude/skills/configuring-horizon/references/tags.md
- create mode 100644 .claude/skills/pest-testing/SKILL.md
- create mode 100644 .claude/skills/tailwindcss-development/SKILL.md
- create mode 100644 .cursor/mcp.json
- create mode 100644 .cursor/skills/configuring-horizon/SKILL.md
- create mode 100644 .cursor/skills/configuring-horizon/references/metrics.md
- create mode 100644 .cursor/skills/configuring-horizon/references/notifications.md
- create mode 100644 .cursor/skills/configuring-horizon/references/supervisors.md
- create mode 100644 .cursor/skills/configuring-horizon/references/tags.md
- create mode 100644 .cursor/skills/pest-testing/SKILL.md
- create mode 100644 .cursor/skills/tailwindcss-development/SKILL.md
- create mode 100644 .github/skills/configuring-horizon/SKILL.md
- create mode 100644 .github/skills/configuring-horizon/references/metrics.md
- create mode 100644 .github/skills/configuring-horizon/references/notifications.md
- create mode 100644 .github/skills/configuring-horizon/references/supervisors.md
- create mode 100644 .github/skills/configuring-horizon/references/tags.md
- create mode 100644 .github/skills/pest-testing/SKILL.md
- create mode 100644 .github/skills/tailwindcss-development/SKILL.md
- create mode 100644 opencode.json
+ app/Filament/Pages/ReleaseLogs.php                 | 25 +++++--
+ app/Models/Channel.php                             | 14 +++-
+ app/Providers/VersionServiceProvider.php           | 78 +++++++++++++++++-----
+ .../views/filament/pages/release-logs.blade.php    | 37 +++++-----
+ 4 files changed, 113 insertions(+), 41 deletions(-)
 
 Array
 (
@@ -16693,13 +16532,7 @@ Processing /tmp/GitHub/repositoryClone/daredoes/unraid-templates/daredoes/mopidy
 
 Downloading Masterwishx's Repository
 
-From https://github.com/masterwishx/unraid-templates
-   9f2bc10..8e47908  main       -> origin/main
-Updating 9f2bc10..8e47908
-Fast-forward
- images/cloudflare-ddns.png | Bin 0 -> 247271 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 images/cloudflare-ddns.png
+Already up to date.
 
 Array
 (
@@ -20765,6 +20598,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ruaan-deysel/unraid-management-agent/raw/main/unraid-management-agent.plg attempt 1...
+pansalut/koffan
+ghcr.io/pansalut/koffan:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -20809,6 +20644,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+s1t5/mailarchiver
+s1t5/mailarchiver Downloads: 355146  Stars: 1  Base: unknown
+jjermany/plex-notifier
+jjermany/plex-notifier:latest Downloads:   Stars:   Base: unknown
+stalwartlabs/stalwart
+stalwartlabs/stalwart:latest Downloads: 383204  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -20817,6 +20658,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/vm-backup-and-restore/main/plugin/vm-backup-and-restore.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
+cirx08/wedding_share
+cirx08/wedding_share:latest Downloads: 87638  Stars: 2  Base: unknown
+yannisalexiou/appstore-webhook-proxy
+yannisalexiou/appstore-webhook-proxy Downloads: 364  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -20833,13 +20678,19 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+teamspeaksystems/teamspeak6-server
+teamspeaksystems/teamspeak6-server:latest Downloads: 267832  Stars: 15  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+mainfrezzer/bashupload
+ghcr.io/mainfrezzer/bashupload:latest Downloads: 404  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+bmmbmm01/sftp2
+bmmbmm01/sftp2:latest Downloads: 870  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20856,9 +20707,22 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+Tagged - Can't determine last update
+iampuid0/dmb
+iampuid0/dmb:FastAPI Downloads: 96686  Stars: 6  Base: unknown
+hacdias/webdav
+hacdias/webdav:latest Downloads: 191615  Stars: 36  Base: unknown
+iib0011/omni-tools
+iib0011/omni-tools Downloads: 2563084  Stars: 8  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
+indifferentbroccoli/hytale-server-docker
+indifferentbroccoli/hytale-server-docker Downloads: 46041  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+llukas22/jellyswarrm
+ghcr.io/llukas22/jellyswarrm:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
+binhex/arch-qbittorrent
+ghcr.io/binhex/arch-qbittorrent Downloads: 11824  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -20875,6 +20739,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/sealskin
+lscr.io/linuxserver/sealskin Downloads: 18799  Stars: 1  Base: unknown
+linuxserver/dolphin
+lscr.io/linuxserver/dolphin Downloads: 19481  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/community.applications/master/plugins/community.applications.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
@@ -20918,6 +20786,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:neoforged Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+gitea.fithwum.tech/fithwum/minecraft
+gitea.fithwum.tech/fithwum/minecraft:fabric Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -20957,12 +20831,22 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+sportarr/sportarr
+sportarr/sportarr:latest Downloads: 76073  Stars: 0  Base: unknown
+steveharsant/purgarr
+ghcr.io/steveharsant/purgarr:latest Downloads:   Stars:   Base: unknown
+henrywhitaker3/adguard-exporter
+ghcr.io/henrywhitaker3/adguard-exporter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
+spaceinvaderone/pia-wg-config-generator
+spaceinvaderone/pia-wg-config-generator:latest Downloads: 3470  Stars: 1  Base: unknown
+spaceinvaderone/jellemplex-dedupe
+spaceinvaderone/jellemplex-dedupe:latest Downloads: 5577  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20994,14 +20878,56 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+turtletank99/adbtuner
+turtletank99/adbtuner Downloads: 22830  Stars: 2  Base: unknown
+librespeed/speedtest
+ghcr.io/librespeed/speedtest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+eitchtee/wygiwyh
+eitchtee/wygiwyh:latest Downloads: 70739  Stars: 0  Base: unknown
+registry.supertokens.io/supertokens/supertokens-postgresql
+registry.supertokens.io/supertokens/supertokens-postgresql:latest Downloads:   Stars:   Base: unknown
+Tagged - Can't determine last update
+dutchcoders/transfer.sh
+dutchcoders/transfer.sh:edge Downloads: 9262449  Stars: 42  Base: unknown
+thealhu/tc2-bbs-mesh
+thealhu/tc2-bbs-mesh:latest Downloads: 13355  Stars: 4  Base: unknown
+Tagged - Can't determine last update
+spudgunman/meshing-around
+ghcr.io/spudgunman/meshing-around:main Downloads:   Stars:   Base: unknown
+m3sserstudi0s/swiparr
+ghcr.io/m3sserstudi0s/swiparr:latest Downloads:   Stars:   Base: unknown
+jeffvli/feishin
+ghcr.io/jeffvli/feishin:latest Downloads:   Stars:   Base: unknown
+basshous3/taggarr
+basshous3/taggarr:latest Downloads: 23592  Stars: 2  Base: unknown
+clharrel/dynamix
+clharrel/dynamix:latest Downloads: 8083  Stars: 1  Base: unknown
+zenitram/malla
+ghcr.io/zenitram/malla:latest Downloads:   Stars:   Base: unknown
+registry.supertokens.io/supertokens/supertokens-mysql
+registry.supertokens.io/supertokens/supertokens-mysql:latest Downloads:   Stars:   Base: unknown
+seerr-team/seerr
+ghcr.io/seerr-team/seerr:latest Downloads:   Stars:   Base: unknown
+querylab/lazywarden
+querylab/lazywarden:latest Downloads: 1793  Stars: 0  Base: unknown
+pablorevilla-meshtastic/meshview
+ghcr.io/pablorevilla-meshtastic/meshview:latest Downloads:   Stars:   Base: unknown
+terrateamio/terrateam-setup
+ghcr.io/terrateamio/terrateam-setup:latest Downloads:   Stars:   Base: unknown
+hghugo/freeboxos-ultra-dashboard
+ghcr.io/hghugo/freeboxos-ultra-dashboard:latest Downloads:   Stars:   Base: unknown
+brockbreacher/accept-bot
+ghcr.io/brockbreacher/accept-bot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
+thewicklowwolf/lidify
+thewicklowwolf/lidify Downloads: 221999  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
@@ -21012,6 +20938,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+athombv/homey-shs
+ghcr.io/athombv/homey-shs:latest Downloads:   Stars:   Base: unknown
+ownbee/hass-otbr-docker
+ghcr.io/ownbee/hass-otbr-docker:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 133
