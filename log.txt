@@ -13,13 +13,7 @@ Downloading Repo Info
 
 Downloading got3nks' Repository
 
-From https://github.com/got3nks/amutorrent
-   4625a16..481fcd4  main       -> origin/main
-Updating 4625a16..481fcd4
-Fast-forward
- package-lock.json        |  4 ++--
- server/package-lock.json | 12 ++++++------
- 2 files changed, 8 insertions(+), 8 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1300,34 +1294,175 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
-   1b78fcaf..85777ba8  master       -> origin/master
- * [new tag]           v0.10.17-dev -> v0.10.17-dev
- * [new tag]           v0.10.17-exp -> v0.10.17-exp
-Updating 1b78fcaf..85777ba8
+   85777ba8..e877936a  master     -> origin/master
+Updating 85777ba8..e877936a
 Fast-forward
- app/Filament/Pages/M3uProxyStreamMonitor.php       |  15 +
- .../PlaylistAliases/PlaylistAliasResource.php      |  12 +-
- .../PlaylistAuths/PlaylistAuthResource.php         |  18 ++
- .../Controllers/PlaylistGenerateController.php     |  40 +--
- app/Http/Controllers/XtreamApiController.php       |  19 +-
- app/Http/Middleware/GuestPlaylistAuth.php          |   7 +-
- app/Listeners/PlaylistListener.php                 |   7 +-
- app/Models/PlaylistAlias.php                       |  51 ++-
- app/Models/PlaylistAuth.php                        |   5 +-
- app/Pivots/PlaylistAuthPivot.php                   |   5 +
- app/Services/PlaylistService.php                   |  41 +--
- app/Services/ProfileService.php                    |  46 +++
- config/dev.php                                     |   4 +-
- .../2026_03_18_083841_drop_enabled_from_alias.php  |  32 ++
- docker/8.4/nginx/xtream.conf                       | 346 +++++++++++++++++++--
- .../pages/m3u-proxy-stream-monitor.blade.php       |   5 +
- .../ProfileService/SyncPrimaryProfileTest.php      | 138 ++++++++
- tests/Feature/PlaylistAliasTest.php                | 275 ++++++++++++++++
- tests/Feature/PlaylistInfoProfileDisplayTest.php   |   2 -
- 19 files changed, 969 insertions(+), 99 deletions(-)
- create mode 100644 database/migrations/2026_03_18_083841_drop_enabled_from_alias.php
- create mode 100644 tests/Feature/Feature/ProfileService/SyncPrimaryProfileTest.php
- create mode 100644 tests/Feature/PlaylistAliasTest.php
+ .agents/skills/configuring-horizon/SKILL.md        |   85 +
+ .../configuring-horizon/references/metrics.md      |   21 +
+ .../references/notifications.md                    |   21 +
+ .../configuring-horizon/references/supervisors.md  |   27 +
+ .../skills/configuring-horizon/references/tags.md  |   21 +
+ .agents/skills/pest-testing/SKILL.md               |  157 ++
+ .agents/skills/tailwindcss-development/SKILL.md    |  119 ++
+ .claude/skills/configuring-horizon/SKILL.md        |   85 +
+ .../configuring-horizon/references/metrics.md      |   21 +
+ .../references/notifications.md                    |   21 +
+ .../configuring-horizon/references/supervisors.md  |   27 +
+ .../skills/configuring-horizon/references/tags.md  |   21 +
+ .claude/skills/pest-testing/SKILL.md               |  157 ++
+ .claude/skills/tailwindcss-development/SKILL.md    |  119 ++
+ .cursor/mcp.json                                   |   11 +
+ .cursor/skills/configuring-horizon/SKILL.md        |   85 +
+ .../configuring-horizon/references/metrics.md      |   21 +
+ .../references/notifications.md                    |   21 +
+ .../configuring-horizon/references/supervisors.md  |   27 +
+ .../skills/configuring-horizon/references/tags.md  |   21 +
+ .cursor/skills/pest-testing/SKILL.md               |  157 ++
+ .cursor/skills/tailwindcss-development/SKILL.md    |  119 ++
+ .github/skills/configuring-horizon/SKILL.md        |   85 +
+ .../configuring-horizon/references/metrics.md      |   21 +
+ .../references/notifications.md                    |   21 +
+ .../configuring-horizon/references/supervisors.md  |   27 +
+ .../skills/configuring-horizon/references/tags.md  |   21 +
+ .github/skills/pest-testing/SKILL.md               |  157 ++
+ .github/skills/tailwindcss-development/SKILL.md    |  119 ++
+ AGENTS.md                                          |  198 +--
+ CLAUDE.md                                          |  193 +--
+ GEMINI.md                                          |  193 +--
+ app/Console/Commands/NetworkBroadcastWorker.php    |    3 +-
+ app/Facades/GitInfo.php                            |    2 +-
+ app/Filament/GuestPanel/Pages/GuestDashboard.php   |    4 +-
+ .../GuestPanel/Resources/Series/SeriesResource.php |    6 +-
+ .../GuestPanel/Resources/Vods/Pages/ListVod.php    |    2 +-
+ .../GuestPanel/Resources/Vods/VodResource.php      |    6 +-
+ app/Filament/Pages/Preferences.php                 |    7 +-
+ .../MediaServerIntegrationResource.php             |    3 +-
+ .../Resources/Networks/NetworkResource.php         |   16 +-
+ .../Resources/Networks/Pages/EditNetwork.php       |    3 +-
+ .../NetworkContentRelationManager.php              |    7 +-
+ .../Resources/Playlists/PlaylistResource.php       |    2 +-
+ .../RelationManagers/EpisodesRelationManager.php   |    3 +-
+ app/Filament/Resources/Series/SeriesResource.php   |    8 +-
+ app/Filament/Resources/Users/UserResource.php      |    8 +-
+ app/Filament/Resources/Vods/VodResource.php        |   19 +-
+ app/Filament/Tables/NetworkEpisodesTable.php       |    3 +-
+ app/Filament/Tables/NetworkMoviesTable.php         |    3 +-
+ app/Filament/Tables/SourceCategoriesTable.php      |    3 +-
+ app/Filament/Tables/SourceGroupsTable.php          |    3 +-
+ app/Http/Controllers/Api/EpgApiController.php      |    4 +-
+ app/Http/Controllers/Api/M3uProxyApiController.php |    3 +-
+ app/Http/Controllers/ChannelController.php         |   10 +-
+ app/Http/Controllers/EpgGenerateController.php     |   10 +-
+ app/Http/Controllers/NetworkPlaylistController.php |   12 +-
+ app/Http/Controllers/PlayerController.php          |    3 +-
+ .../Controllers/PlaylistGenerateController.php     |    4 +-
+ app/Http/Controllers/ShortURLController.php        |    6 +-
+ app/Http/Controllers/XtreamApiController.php       |    8 +-
+ app/Http/Controllers/XtreamStreamController.php    |    4 +-
+ app/Http/Middleware/DashboardMiddleware.php        |    2 +-
+ app/Http/Middleware/GuestPlaylistAuth.php          |    8 +-
+ app/Http/Middleware/ProxyRateLimitMiddleware.php   |    2 +-
+ app/Jobs/CopyAttributesToPlaylist.php              |    3 +-
+ app/Jobs/RefreshPlaylistProfiles.php               |    5 +-
+ app/Jobs/SyncMediaServer.php                       |    3 +-
+ app/Listeners/PlaylistListener.php                 |    8 +-
+ app/Listeners/SyncListener.php                     |    2 +-
+ app/Livewire/PlaylistInfo.php                      |    3 +-
+ app/Livewire/TmdbSearch.php                        |    3 +-
+ app/Models/Channel.php                             |    4 +-
+ app/Models/CustomPlaylist.php                      |   10 +-
+ app/Models/MediaServerIntegration.php              |    3 +-
+ app/Models/MergedPlaylist.php                      |   16 +-
+ app/Models/Network.php                             |    2 +-
+ app/Models/NetworkContent.php                      |   13 +-
+ app/Models/Playlist.php                            |    6 +-
+ app/Models/StrmFileMapping.php                     |   17 +-
+ app/Providers/AppServiceProvider.php               |   27 +-
+ app/Services/AssetInventoryService.php             |    3 +-
+ app/Services/M3uProxyService.php                   |    4 +-
+ app/Services/NetworkBroadcastService.php           |    6 +-
+ app/Services/NetworkEpgService.php                 |    3 +-
+ app/Services/NfoService.php                        |    9 +-
+ app/Services/PlaylistService.php                   |    7 +-
+ app/Services/PlexService.php                       |    2 +-
+ app/Services/SchedulesDirectService.php            |   20 +-
+ app/Services/WebDavMediaService.php                |    3 +-
+ boost.json                                         |    9 +
+ bootstrap/app.php                                  |    6 +-
+ bootstrap/providers.php                            |   19 +-
+ composer.lock                                      | 1641 +++++++++-----------
+ config/auth.php                                    |    4 +-
+ config/backup-restore.php                          |    3 +-
+ config/backup.php                                  |   31 +-
+ config/blueprint.php                               |   46 +-
+ config/filament.php                                |    8 +-
+ config/sanctum.php                                 |    9 +-
+ config/settings.php                                |   20 +-
+ config/short-url.php                               |   15 +-
+ .../factories/MediaServerIntegrationFactory.php    |    2 +-
+ database/factories/NetworkFactory.php              |    5 +-
+ database/factories/NetworkProgrammeFactory.php     |    5 +-
+ database/factories/UserFactory.php                 |    3 +-
+ ...2_110254_add_logo_proxy_toggle_to_playlists.php |    9 +-
+ ...3_add_logo_proxy_toggle_to_playlisy_aliases.php |    3 +-
+ ...026_01_12_000004_add_uuid_to_networks_table.php |    3 +-
+ ...0_add_broadcast_reference_to_networks_table.php |    2 +-
+ ...27_100002_migrate_stream_file_settings_data.php |    5 +-
+ ...04_add_playlist_auth_id_to_playlist_viewers.php |    3 +-
+ opencode.json                                      |   14 +
+ routes/api.php                                     |   22 +-
+ routes/web.php                                     |  119 +-
+ test_schedule_builder.php                          |    5 +-
+ tests/Feature/JobsTableSchemaTest.php              |    3 +-
+ tests/Feature/LocalMediaIntegrationTest.php        |  153 +-
+ tests/Feature/LogoCacheCleanupCommandTest.php      |    9 +-
+ tests/Feature/LogoRepositoryTest.php               |   11 +-
+ tests/Feature/MediaServerIntegrationTest.php       |   17 +-
+ tests/Feature/MergeChannelOrderingTest.php         |    3 +-
+ tests/Feature/NetworkBroadcastBootRecoveryTest.php |   19 +-
+ tests/Feature/NetworkBroadcastEnsureTest.php       |    3 +-
+ .../NetworkBroadcastFailureHandlingTest.php        |    3 +-
+ tests/Feature/NetworkCleanupTest.php               |   14 +-
+ tests/Feature/NetworkReconnectAfterStopTest.php    |    5 +-
+ tests/Feature/ProviderRequestDelayTest.php         |    6 +-
+ tests/Feature/StrmFileMappingTest.php              |    6 +-
+ tests/Feature/WebDavMediaIntegrationTest.php       |   21 +-
+ tests/Feature/XtreamApiControllerTest.php          |    6 +-
+ tests/Pest.php                                     |    7 +-
+ tests/Unit/MergeChannelsTest.php                   |    3 +-
+ tests/Unit/NetworkContentTest.php                  |    2 +-
+ tests/Unit/NfoServiceTest.php                      |   26 +-
+ 135 files changed, 3508 insertions(+), 1588 deletions(-)
+ create mode 100644 .agents/skills/configuring-horizon/SKILL.md
+ create mode 100644 .agents/skills/configuring-horizon/references/metrics.md
+ create mode 100644 .agents/skills/configuring-horizon/references/notifications.md
+ create mode 100644 .agents/skills/configuring-horizon/references/supervisors.md
+ create mode 100644 .agents/skills/configuring-horizon/references/tags.md
+ create mode 100644 .agents/skills/pest-testing/SKILL.md
+ create mode 100644 .agents/skills/tailwindcss-development/SKILL.md
+ create mode 100644 .claude/skills/configuring-horizon/SKILL.md
+ create mode 100644 .claude/skills/configuring-horizon/references/metrics.md
+ create mode 100644 .claude/skills/configuring-horizon/references/notifications.md
+ create mode 100644 .claude/skills/configuring-horizon/references/supervisors.md
+ create mode 100644 .claude/skills/configuring-horizon/references/tags.md
+ create mode 100644 .claude/skills/pest-testing/SKILL.md
+ create mode 100644 .claude/skills/tailwindcss-development/SKILL.md
+ create mode 100644 .cursor/mcp.json
+ create mode 100644 .cursor/skills/configuring-horizon/SKILL.md
+ create mode 100644 .cursor/skills/configuring-horizon/references/metrics.md
+ create mode 100644 .cursor/skills/configuring-horizon/references/notifications.md
+ create mode 100644 .cursor/skills/configuring-horizon/references/supervisors.md
+ create mode 100644 .cursor/skills/configuring-horizon/references/tags.md
+ create mode 100644 .cursor/skills/pest-testing/SKILL.md
+ create mode 100644 .cursor/skills/tailwindcss-development/SKILL.md
+ create mode 100644 .github/skills/configuring-horizon/SKILL.md
+ create mode 100644 .github/skills/configuring-horizon/references/metrics.md
+ create mode 100644 .github/skills/configuring-horizon/references/notifications.md
+ create mode 100644 .github/skills/configuring-horizon/references/supervisors.md
+ create mode 100644 .github/skills/configuring-horizon/references/tags.md
+ create mode 100644 .github/skills/pest-testing/SKILL.md
+ create mode 100644 .github/skills/tailwindcss-development/SKILL.md
+ create mode 100644 opencode.json
 
 Array
 (
@@ -16558,7 +16693,13 @@ Processing /tmp/GitHub/repositoryClone/daredoes/unraid-templates/daredoes/mopidy
 
 Downloading Masterwishx's Repository
 
-Already up to date.
+From https://github.com/masterwishx/unraid-templates
+   9f2bc10..8e47908  main       -> origin/main
+Updating 9f2bc10..8e47908
+Fast-forward
+ images/cloudflare-ddns.png | Bin 0 -> 247271 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 images/cloudflare-ddns.png
 
 Array
 (
