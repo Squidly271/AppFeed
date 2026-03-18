@@ -30,13 +30,7 @@ Processing /tmp/GitHub/repositoryClone/got3nks/amutorrent/unraid/amutorrent.xml.
 
 Downloading BitCryptic's Repository
 
-From https://github.com/bitcryptic-gw/unraid-pi-network-node
-   d0b0a52..2a15a69  main       -> origin/main
-Updating d0b0a52..2a15a69
-Fast-forward
- PiNetworkNode.xml | 2 +-
- README.md         | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -286,12 +280,24 @@ Processing /tmp/GitHub/repositoryClone/Starosdev/unraid-templates/ca_profile.xml
 Downloading UR-jay's Repository
 
 From https://github.com/GHJJ123/brainrotguard
-   a320490..a9d4b39  main       -> origin/main
-Updating a320490..a9d4b39
+   a9d4b39..9569d5a  main       -> origin/main
+ * [new tag]         v1.30.0    -> v1.30.0
+Updating a9d4b39..9569d5a
 Fast-forward
- data/video_store.py       | 20 +++++++++++++++++++-
- tests/test_video_store.py | 23 +++++++++++++++++++++++
- 2 files changed, 42 insertions(+), 1 deletion(-)
+ CHANGELOG.md              |   5 +-
+ bot/commands.py           |  58 ++++++++++-
+ bot/telegram_bot.py       |   1 +
+ data/child_store.py       |   2 +-
+ data/video_store.py       |  20 ++--
+ docs/telegram-commands.md |  12 +++
+ i18n/locales/nb.py        |  10 +-
+ version.py                |   2 +-
+ web/cache.py              |  11 +-
+ web/helpers.py            |  10 ++
+ web/routers/pages.py      |   6 +-
+ web/static/style.css      |   7 +-
+ web/templates/index.html  | 253 +++++++++++++++++++++++++++++++---------------
+ 13 files changed, 299 insertions(+), 98 deletions(-)
 
 Array
 (
@@ -1305,41 +1311,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   15358c2d..1b78fcaf  master       -> origin/master
- * [new tag]           v0.10.16-dev -> v0.10.16-dev
- * [new tag]           v0.10.16-exp -> v0.10.16-exp
- * [new tag]           v0.10.14-dev -> v0.10.14-dev
- * [new tag]           v0.10.14-exp -> v0.10.14-exp
- * [new tag]           v0.10.15-dev -> v0.10.15-dev
- * [new tag]           v0.10.15-exp -> v0.10.15-exp
-Updating 15358c2d..1b78fcaf
-Fast-forward
- app/Console/Commands/ProfileConnectionWorker.php   | 169 --------
- app/Console/Commands/RefreshPlaylistProfiles.php   |  58 +++
- app/Http/Controllers/Api/M3uProxyApiController.php |   7 +-
- app/Jobs/ProcessM3uImportSeriesChunk.php           |   2 +-
- app/Jobs/SyncXtreamSeries.php                      |  87 ++--
- app/Models/Channel.php                             |   2 +-
- app/Services/M3uProxyService.php                   | 123 ++++--
- app/Services/ProfileService.php                    | 451 ++++++---------------
- app/Services/XtreamService.php                     |   8 +-
- config/dev.php                                     |   4 +-
- docker/8.4/supervisord.conf                        |  18 +-
- routes/console.php                                 |   2 +-
- start-container                                    |   4 -
- tests/Feature/BypassProviderLimitsTest.php         |  51 ++-
- tests/Feature/ClientProfileAffinityTest.php        |  80 ++--
- tests/Feature/DirectStreamPoolReuseTest.php        | 327 +++++++++++++++
- tests/Feature/PlaylistInfoProfileDisplayTest.php   |   3 +-
- tests/Feature/ProfileAuditFixesTest.php            | 362 ++++++-----------
- .../Feature/ProfileConnectionRaceConditionTest.php | 120 ++----
- tests/Feature/ProfileConnectionWorkerTest.php      | 102 -----
- 20 files changed, 909 insertions(+), 1071 deletions(-)
- delete mode 100644 app/Console/Commands/ProfileConnectionWorker.php
- create mode 100644 app/Console/Commands/RefreshPlaylistProfiles.php
- create mode 100644 tests/Feature/DirectStreamPoolReuseTest.php
- delete mode 100644 tests/Feature/ProfileConnectionWorkerTest.php
+Already up to date.
 
 Array
 (
@@ -20622,11 +20594,6 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Updating stats on containers
 
-Tagged - Can't determine last update
-pinetwork/pi-node-docker
-pinetwork/pi-node-docker:organization_mainnet-v1.0-p20.2 Downloads: 1643091980  Stars: 193  Base: unknown
-Pulling pinetwork/pi-node-docker:organization_mainnet-v1.0-p20.2
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/cslemieux/unraid-custom-smb-shares/main/custom.smb.shares.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alexphillips-dev/FolderView-Plus/main/folderview.plus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/Lazaros-Chalkidis/unraid-streamviewer/raw/main/streamviewer.plg attempt 1...
