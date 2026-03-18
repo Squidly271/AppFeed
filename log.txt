@@ -13,7 +13,33 @@ Downloading Repo Info
 
 Downloading got3nks' Repository
 
-Already up to date.
+From https://github.com/got3nks/amutorrent
+   58a91ad..4625a16  main       -> origin/main
+ * [new tag]         v3.4.2     -> v3.4.2
+Updating 58a91ad..4625a16
+Fast-forward
+ .env.example                                      |  16 +--
+ CHANGELOG.md                                      |  13 ++
+ docs/CONFIGURATION.md                             |  28 +++--
+ docs/INSTALLATION.md                              |   2 +-
+ docs/RTORRENT.md                                  | 114 ++++++++++++++---
+ package.json                                      |   2 +-
+ server/lib/DataFetchService.js                    |  21 +++-
+ server/lib/configTester.js                        |  15 ++-
+ server/lib/instanceId.js                          |  10 +-
+ server/lib/rtorrent/RtorrentHandler.js            |  55 +++++---
+ server/lib/rtorrent/ScgiTransport.js              | 147 ++++++++++++++++++++++
+ server/modules/amuleManager.js                    |   6 +-
+ server/modules/autoRefreshManager.js              |   5 +
+ server/modules/config.js                          |   2 +
+ server/modules/configAPI.js                       |  17 ++-
+ server/modules/rtorrentManager.js                 |  17 ++-
+ server/package.json                               |   2 +-
+ static/components/settings/ClientInstanceModal.js |  46 +++++--
+ static/components/views/SetupWizardView.js        |  80 +++++++++---
+ website/scripts/sync-docs.cjs                     |   2 +-
+ 20 files changed, 504 insertions(+), 96 deletions(-)
+ create mode 100644 server/lib/rtorrent/ScgiTransport.js
 
 Array
 (
@@ -577,7 +603,7 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-index/unraid-aicliagents.xml... Downloading https://github.com/johnpwhite/unraid-plg-aicliagents/raw/main/unraid-aicliagents.plg attempt 1...Removed from CA123
+Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-index/unraid-aicliagents.xml... Downloading https://github.com/johnpwhite/unraid-plg-aicliagents/raw/main/unraid-aicliagents.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-index/unraid-zram-card.xml... Downloading https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...Success
 
 
@@ -1137,28 +1163,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   088cbd6..e28098e  main       -> origin/main
-Updating 088cbd6..e28098e
-Fast-forward
- CHANGELOG.md               |  12 ++++
- package-lock.json          |   4 +-
- package.json               |   2 +-
- public-readonly/index.html |  15 ++--
- public/shared/admin.js     |  93 +++++++++++++++++++-----
- public/shared/i18n/de.json |   2 +
- public/shared/i18n/en.json |   2 +
- public/shared/i18n/es.json |   2 +
- public/shared/i18n/fr.json |   2 +
- public/shared/i18n/it.json |   2 +
- public/shared/i18n/nl.json |   2 +
- public/shared/i18n/pt.json |   2 +
- public/shared/i18n/zh.json |   2 +
- public/shared/scripts.js   |  15 ++--
- public/shared/styles.css   |  28 ++++++--
- src/server.js              | 172 +++++++++++++++++++++++++++++++++++++++++++--
- version.json               |   2 +-
- 17 files changed, 315 insertions(+), 44 deletions(-)
+Already up to date.
 
 Array
 (
@@ -5908,7 +5913,18 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 
 Downloading Binhex's Repository
 
-Already up to date.
+From https://github.com/binhex/templates
+   f78c0ea..5d1e68a  main       -> origin/main
+Updating f78c0ea..5d1e68a
+Fast-forward
+ .github/README.md                             |   5 +
+ .github/workflows/workflow-docker-manual.yml  | 463 ++++++++++++++++++++++
+ .github/workflows/workflow-docker-release.yml | 533 ++++++++++++++++++++++++++
+ projects/common/.gitignore                    |   3 +
+ 4 files changed, 1004 insertions(+)
+ create mode 100755 .github/README.md
+ create mode 100755 .github/workflows/workflow-docker-manual.yml
+ create mode 100755 .github/workflows/workflow-docker-release.yml
 
 Array
 (
@@ -20604,6 +20620,7 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/emaspa/wireview-hwmon-unraid/raw/main/wireview-hwmon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
+ Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
