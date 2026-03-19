@@ -85,124 +85,7 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 
 Downloading XCrownedClownsX's Repository
 
-From https://github.com/alexphillips-dev/FolderView-Plus
-   38f2346..46a6b52  main           -> origin/main
- * [new tag]         v2026.03.18.10 -> v2026.03.18.10
-Updating 38f2346..46a6b52
-Fast-forward
- .github/workflows/ci.yml                           |   4 +
- .github/workflows/release-beta.yml                 |   4 +
- .github/workflows/release-main.yml                 |   4 +
- .github/workflows/release-on-main.yml              |   4 +
- .github/workflows/release-stable.yml               |   4 +
- CHANGELOG-fixes.md                                 |  21 +
- archive/folderview.plus-2026.03.17.18.txz          | Bin 0 -> 14687524 bytes
- archive/folderview.plus-2026.03.17.18.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.19.txz          | Bin 0 -> 14687584 bytes
- archive/folderview.plus-2026.03.17.19.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.20.txz          | Bin 0 -> 14687620 bytes
- archive/folderview.plus-2026.03.17.20.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.21.txz          | Bin 0 -> 14687648 bytes
- archive/folderview.plus-2026.03.17.21.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.23.txz          | Bin 0 -> 14690960 bytes
- archive/folderview.plus-2026.03.17.23.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.24.txz          | Bin 0 -> 14691128 bytes
- archive/folderview.plus-2026.03.17.24.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.25.txz          | Bin 0 -> 14691268 bytes
- archive/folderview.plus-2026.03.17.25.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.26.txz          | Bin 0 -> 14691376 bytes
- archive/folderview.plus-2026.03.17.26.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.27.txz          | Bin 0 -> 14693200 bytes
- archive/folderview.plus-2026.03.17.27.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.17.28.txz          | Bin 0 -> 14693268 bytes
- archive/folderview.plus-2026.03.17.28.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.01.txz          | Bin 0 -> 14693376 bytes
- archive/folderview.plus-2026.03.18.01.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.02.txz          | Bin 0 -> 14693376 bytes
- archive/folderview.plus-2026.03.18.02.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.03.txz          | Bin 0 -> 14693572 bytes
- archive/folderview.plus-2026.03.18.03.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.04.txz          | Bin 0 -> 14693620 bytes
- archive/folderview.plus-2026.03.18.04.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.05.txz          | Bin 0 -> 14693752 bytes
- archive/folderview.plus-2026.03.18.05.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.06.txz          | Bin 0 -> 14693900 bytes
- archive/folderview.plus-2026.03.18.06.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.08.txz          | Bin 0 -> 14694008 bytes
- archive/folderview.plus-2026.03.18.08.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.09.txz          | Bin 0 -> 14694604 bytes
- archive/folderview.plus-2026.03.18.09.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.18.10.txz          | Bin 0 -> 14694444 bytes
- archive/folderview.plus-2026.03.18.10.txz.sha256   |   1 +
- folderview.plus.plg                                | 122 ++-
- folderview.plus.xml                                |   2 +-
- scripts/api_contract_guard.sh                      |   5 +-
- scripts/browser_smoke.mjs                          | 205 +++++
- scripts/ensure_plg_changes_entry.sh                |   8 +-
- scripts/include_order_guard.sh                     |   1 +
- scripts/perf_baseline.json                         |  34 +-
- scripts/release_guard.sh                           |   2 +-
- .../plugins/folderview.plus/FolderViewPlus.page    |  28 +-
- .../folderview.plus/folderview.plus.Docker.page    |   1 +
- .../folderview.plus/folderview.plus.VMs.page       |   1 +
- .../plugins/folderview.plus/scripts/docker.js      | 511 +++++++++++--
- .../folderview.plus/scripts/folderviewplus.js      | 837 ++++++++++++++++++---
- .../scripts/folderviewplus.updates.js              | 153 ++++
- .../scripts/runtime.column-layout.js               | 116 +++
- .../emhttp/plugins/folderview.plus/scripts/vm.js   |  99 +++
- .../emhttp/plugins/folderview.plus/server/lib.php  |   2 +
- .../folderview.plus/server/lib.validation.php      | 157 ++++
- .../plugins/folderview.plus/server/prefs.php       |  10 +-
- .../plugins/folderview.plus/styles/docker.css      |  38 +-
- .../folderview.plus/styles/folderviewplus.css      | 461 ++++++++++--
- tests/payload-schema-validation.test.mjs           |  26 +
- tests/performance-optimizations.test.mjs           |  26 +
- tests/settings-bindings.test.mjs                   |  15 +
- tests/ui-smoke-layout.test.mjs                     |  37 +-
- tests/versioning-guard.test.mjs                    |  18 +-
- 70 files changed, 2706 insertions(+), 269 deletions(-)
- create mode 100644 archive/folderview.plus-2026.03.17.18.txz
- create mode 100644 archive/folderview.plus-2026.03.17.18.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.19.txz
- create mode 100644 archive/folderview.plus-2026.03.17.19.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.20.txz
- create mode 100644 archive/folderview.plus-2026.03.17.20.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.21.txz
- create mode 100644 archive/folderview.plus-2026.03.17.21.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.23.txz
- create mode 100644 archive/folderview.plus-2026.03.17.23.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.24.txz
- create mode 100644 archive/folderview.plus-2026.03.17.24.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.25.txz
- create mode 100644 archive/folderview.plus-2026.03.17.25.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.26.txz
- create mode 100644 archive/folderview.plus-2026.03.17.26.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.27.txz
- create mode 100644 archive/folderview.plus-2026.03.17.27.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.17.28.txz
- create mode 100644 archive/folderview.plus-2026.03.17.28.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.01.txz
- create mode 100644 archive/folderview.plus-2026.03.18.01.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.02.txz
- create mode 100644 archive/folderview.plus-2026.03.18.02.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.03.txz
- create mode 100644 archive/folderview.plus-2026.03.18.03.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.04.txz
- create mode 100644 archive/folderview.plus-2026.03.18.04.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.05.txz
- create mode 100644 archive/folderview.plus-2026.03.18.05.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.06.txz
- create mode 100644 archive/folderview.plus-2026.03.18.06.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.08.txz
- create mode 100644 archive/folderview.plus-2026.03.18.08.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.09.txz
- create mode 100644 archive/folderview.plus-2026.03.18.09.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.18.10.txz
- create mode 100644 archive/folderview.plus-2026.03.18.10.txz.sha256
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.updates.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/runtime.column-layout.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/server/lib.validation.php
- create mode 100644 tests/payload-schema-validation.test.mjs
+Already up to date.
 
 Array
 (
@@ -1254,7 +1137,54 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   e28098e..27d358c  main       -> origin/main
+Updating e28098e..27d358c
+Fast-forward
+ CHANGELOG.md                 |   14 +
+ CLAUDE.md                    |   87 ++++
+ docs/guide/index.de.md       |    1 +
+ docs/guide/index.es.md       |    1 +
+ docs/guide/index.fr.md       |    1 +
+ docs/guide/index.it.md       |    1 +
+ docs/guide/index.md          |    1 +
+ docs/guide/index.nl.md       |    1 +
+ docs/guide/index.pt.md       |    1 +
+ docs/guide/index.zh.md       |    1 +
+ docs/guide/static-site.de.md |  120 +++++
+ docs/guide/static-site.es.md |  120 +++++
+ docs/guide/static-site.fr.md |  120 +++++
+ docs/guide/static-site.it.md |  120 +++++
+ docs/guide/static-site.md    |  120 +++++
+ docs/guide/static-site.nl.md |  120 +++++
+ docs/guide/static-site.pt.md |  120 +++++
+ docs/guide/static-site.zh.md |  120 +++++
+ mkdocs.yml                   |    8 +
+ package-lock.json            | 1144 +++++++++++++++++++++++++++++++++++++++++-
+ package.json                 |    3 +-
+ public-readonly/index.html   |  104 +++-
+ public/index.html            |   16 +
+ public/shared/admin.js       |   27 +
+ public/shared/i18n.js        |   56 ++-
+ public/shared/i18n/de.json   |    7 +
+ public/shared/i18n/en.json   |    7 +
+ public/shared/i18n/es.json   |    7 +
+ public/shared/i18n/fr.json   |    7 +
+ public/shared/i18n/it.json   |    7 +
+ public/shared/i18n/nl.json   |    7 +
+ public/shared/i18n/pt.json   |    7 +
+ public/shared/i18n/zh.json   |    7 +
+ src/server.js                |  157 ++++++
+ version.json                 |    2 +-
+ 35 files changed, 2610 insertions(+), 32 deletions(-)
+ create mode 100644 docs/guide/static-site.de.md
+ create mode 100644 docs/guide/static-site.es.md
+ create mode 100644 docs/guide/static-site.fr.md
+ create mode 100644 docs/guide/static-site.it.md
+ create mode 100644 docs/guide/static-site.md
+ create mode 100644 docs/guide/static-site.nl.md
+ create mode 100644 docs/guide/static-site.pt.md
+ create mode 100644 docs/guide/static-site.zh.md
 
 Array
 (
@@ -8282,7 +8212,12 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   ac265f8..544c554  master     -> origin/master
+Updating ac265f8..544c554
+Fast-forward
+ jlesage/nginx-proxy-manager.xml | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -14290,7 +14225,12 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-Already up to date.
+From https://github.com/Goobaroo/unraid-templates
+   e94a488..314d19b  main       -> origin/main
+Updating e94a488..314d19b
+Fast-forward
+ ftbstoneblock4_server.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -16383,7 +16323,14 @@ Processing /tmp/GitHub/repositoryClone/chrizzo84/unraid-templates/ca_profile.xml
 
 Downloading ZappyZap's Repository
 
-Already up to date.
+From https://github.com/devzwf/unraid-docker-templates
+   3985a20..7da3841  main       -> origin/main
+Updating 3985a20..7da3841
+Fast-forward
+ .../pihole-dot-doh-v6.xml                               | 17 +++++++++++------
+ pihole-dot-doh.xml                                      | 14 +++++++++-----
+ 2 files changed, 20 insertions(+), 11 deletions(-)
+ rename pihole-dot-doh-v6.xml => deprecated/pihole-dot-doh-v6.xml (86%)
 
 Array
 (
@@ -16399,27 +16346,27 @@ Array
             [7] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbKan.xml
             [8] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbDrop.xml
             [9] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/termix.xml
-            [10] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml
-            [11] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v5.xml
-            [12] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml
-            [13] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml
-            [14] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml
-            [15] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/iventoy.xml
-            [16] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/myspeed.xml
-            [17] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.xml
-            [18] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml
-            [19] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml
-            [20] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml
-            [21] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambuddy.xml
-            [22] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/ca_profile.xml
-            [23] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bichon.xml
-            [24] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pulse.xml
-            [25] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/binner.xml
-            [26] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/zerobyte.xml
-            [27] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/nutify.xml
-            [28] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/glance.xml
-            [29] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/silverbullet.xml
-            [30] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh-v6.xml
+            [10] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v6.xml
+            [11] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml
+            [12] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v5.xml
+            [13] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml
+            [14] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretiny.xml
+            [15] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/blocky.xml
+            [16] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/iventoy.xml
+            [17] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/myspeed.xml
+            [18] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/tasks-md.xml
+            [19] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbbudget.xml
+            [20] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/cups-airprint.xml
+            [21] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/homebox.xml
+            [22] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bambuddy.xml
+            [23] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/ca_profile.xml
+            [24] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/bichon.xml
+            [25] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pulse.xml
+            [26] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/binner.xml
+            [27] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/zerobyte.xml
+            [28] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/nutify.xml
+            [29] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/glance.xml
+            [30] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/silverbullet.xml
             [31] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/hydroqc2mqtt.xml
             [32] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/lightnvr.xml
             [33] => /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/birdnet-go.xml
@@ -16453,6 +16400,7 @@ Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbKan.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/dumbDrop.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/termix.xml...Success
+Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v6.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/esphome-libretuya.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/pihole-dot-doh-v5.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/deprecated/speedtest-tracker.xml... ***DEPRECATED BY REPO PATH*** Removed from CA123
@@ -16477,7 +16425,6 @@ Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/nutify.xml
 Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/glance.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/silverbullet.xml...Success
-Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/pihole-dot-doh-v6.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/hydroqc2mqtt.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/lightnvr.xml...Success
 Processing /tmp/GitHub/repositoryClone/devzwf/unraid-docker-templates/birdnet-go.xml...Success
@@ -20782,8 +20729,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-arianrhodsandlot/retroassembly
-arianrhodsandlot/retroassembly Downloads: 206505  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20938,17 +20883,12 @@ arianrhodsandlot/retroassembly Downloads: 206505  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+devzwf/pihole-dot-doh
+devzwf/pihole-dot-doh:latest Downloads: 105896  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-dgruhin-hrizn/aperture
-ghcr.io/dgruhin-hrizn/aperture:latest Downloads:   Stars:   Base: unknown
-ohmzii/immaculaterr
-ohmzii/immaculaterr:latest Downloads: 7491  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-syncin/server
-syncin/server:1 Downloads: 50424  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
