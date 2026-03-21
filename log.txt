@@ -13,7 +13,25 @@ Downloading Repo Info
 
 Downloading got3nks' Repository
 
-Already up to date.
+From https://github.com/got3nks/amutorrent
+   88dbf4a..b97177e  main       -> origin/main
+Updating 88dbf4a..b97177e
+Fast-forward
+ server/lib/DataFetchService.js                   | 24 +++++++
+ server/modules/delugeManager.js                  | 11 ++-
+ server/modules/qbittorrentManager.js             | 11 ++-
+ server/modules/rtorrentManager.js                | 10 +--
+ server/modules/transmissionManager.js            | 11 ++-
+ static/components/common/DownloadMobileCard.js   |  1 +
+ static/components/common/MobileCardHeader.js     | 29 ++++----
+ static/components/common/SearchResultsList.js    | 88 ++++++++++++++++--------
+ static/components/common/SearchResultsSection.js | 64 +++++++++++------
+ static/components/common/Tooltip.js              |  4 +-
+ static/contexts/ActionsContext.js                |  9 ++-
+ static/contexts/StaticDataContext.js             |  3 +-
+ static/contexts/WebSocketContext.js              | 34 ++++++---
+ static/utils/columnBuilders.js                   | 11 +--
+ 14 files changed, 201 insertions(+), 109 deletions(-)
 
 Array
 (
@@ -85,7 +103,82 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 
 Downloading XCrownedClownsX's Repository
 
-Already up to date.
+From https://github.com/alexphillips-dev/FolderView-Plus
+   7a6172a..7ce17be  main           -> origin/main
+ * [new tag]         v2026.03.21.20 -> v2026.03.21.20
+Updating 7a6172a..7ce17be
+Fast-forward
+ archive/folderview.plus-2026.03.19.26.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.19.27.txz          | Bin 14721632 -> 0 bytes
+ archive/folderview.plus-2026.03.19.27.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.19.28.txz          | Bin 14721472 -> 0 bytes
+ archive/folderview.plus-2026.03.19.28.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.19.29.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.20.01.txz          | Bin 14722968 -> 0 bytes
+ archive/folderview.plus-2026.03.20.01.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.20.02.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.20.04.txz.sha256   |   1 -
+ archive/folderview.plus-2026.03.20.05.txz.sha256   |   1 -
+ ...20.05.txz => folderview.plus-2026.03.21.11.txz} | Bin 14723440 -> 14742648 bytes
+ archive/folderview.plus-2026.03.21.11.txz.sha256   |   1 +
+ ...19.29.txz => folderview.plus-2026.03.21.12.txz} | Bin 14721472 -> 14742644 bytes
+ archive/folderview.plus-2026.03.21.12.txz.sha256   |   1 +
+ ...20.04.txz => folderview.plus-2026.03.21.13.txz} | Bin 14723364 -> 14743004 bytes
+ archive/folderview.plus-2026.03.21.13.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.21.15.txz          | Bin 0 -> 14743084 bytes
+ archive/folderview.plus-2026.03.21.15.txz.sha256   |   1 +
+ archive/folderview.plus-2026.03.21.16.txz          | Bin 0 -> 14745528 bytes
+ archive/folderview.plus-2026.03.21.16.txz.sha256   |   1 +
+ ...20.02.txz => folderview.plus-2026.03.21.18.txz} | Bin 14724380 -> 14745552 bytes
+ archive/folderview.plus-2026.03.21.18.txz.sha256   |   1 +
+ ...19.26.txz => folderview.plus-2026.03.21.20.txz} | Bin 14720932 -> 14745552 bytes
+ archive/folderview.plus-2026.03.21.20.txz.sha256   |   1 +
+ folderview.plus.plg                                |  66 +-
+ scripts/perf_baseline.json                         |  14 +-
+ .../plugins/folderview.plus/scripts/dashboard.js   |  25 +-
+ .../plugins/folderview.plus/scripts/docker.js      |  75 +-
+ .../plugins/folderview.plus/scripts/folder.js      | 476 +++++++++--
+ .../folderview.plus/scripts/folderviewplus.js      | 100 ++-
+ .../scripts/folderviewplus.utils.js                | 204 +++++
+ .../emhttp/plugins/folderview.plus/scripts/vm.js   | 920 ++++++++++++++++++---
+ .../plugins/folderview.plus/styles/docker.css      |   2 +
+ .../emhttp/plugins/folderview.plus/styles/vm.css   | 126 ++-
+ tests/docker-vm-parity-contract.test.mjs           |  93 +++
+ tests/folder-editor-nesting-guard.test.mjs         |   8 +
+ tests/folderviewplus-utils.test.mjs                |  22 +
+ tests/performance-optimizations.test.mjs           |  36 +
+ tests/settings-bindings.test.mjs                   |   5 +
+ tests/vm-mobile-name-alignment-guard.test.mjs      |  45 +
+ tests/vm-runtime-docker-parity-guard.test.mjs      |  41 +
+ 42 files changed, 2056 insertions(+), 217 deletions(-)
+ delete mode 100644 archive/folderview.plus-2026.03.19.26.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.19.27.txz
+ delete mode 100644 archive/folderview.plus-2026.03.19.27.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.19.28.txz
+ delete mode 100644 archive/folderview.plus-2026.03.19.28.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.19.29.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.01.txz
+ delete mode 100644 archive/folderview.plus-2026.03.20.01.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.02.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.04.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.05.txz.sha256
+ rename archive/{folderview.plus-2026.03.20.05.txz => folderview.plus-2026.03.21.11.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.11.txz.sha256
+ rename archive/{folderview.plus-2026.03.19.29.txz => folderview.plus-2026.03.21.12.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.12.txz.sha256
+ rename archive/{folderview.plus-2026.03.20.04.txz => folderview.plus-2026.03.21.13.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.13.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.15.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.15.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.16.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.16.txz.sha256
+ rename archive/{folderview.plus-2026.03.20.02.txz => folderview.plus-2026.03.21.18.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.18.txz.sha256
+ rename archive/{folderview.plus-2026.03.19.26.txz => folderview.plus-2026.03.21.20.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.20.txz.sha256
+ create mode 100644 tests/docker-vm-parity-contract.test.mjs
+ create mode 100644 tests/vm-mobile-name-alignment-guard.test.mjs
+ create mode 100644 tests/vm-runtime-docker-parity-guard.test.mjs
 
 Array
 (
@@ -1291,12 +1384,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   90f97f81..ca6c905d  master     -> origin/master
-Updating 90f97f81..ca6c905d
-Fast-forward
- app/Console/Commands/ResetPassword.php | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -6354,7 +6442,17 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   1db6f6f..30234f1  main       -> origin/main
+Updating 1db6f6f..30234f1
+Fast-forward
+ unraid/altus.xml          | 5 ++++-
+ unraid/digikam.xml        | 5 ++++-
+ unraid/ferdium.xml        | 5 ++++-
+ unraid/github-desktop.xml | 5 ++++-
+ unraid/joplin.xml         | 5 ++++-
+ unraid/obsidian.xml       | 5 ++++-
+ 6 files changed, 24 insertions(+), 6 deletions(-)
 
 Array
 (
@@ -20676,8 +20774,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-khairul169/garage-webui
-khairul169/garage-webui:latest Downloads: 333620  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -20815,8 +20911,6 @@ khairul169/garage-webui:latest Downloads: 333620  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-crosstalk-solutions/unifi-toolkit
-ghcr.io/crosstalk-solutions/unifi-toolkit:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
