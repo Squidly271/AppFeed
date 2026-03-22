@@ -85,78 +85,7 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 
 Downloading XCrownedClownsX's Repository
 
-From https://github.com/alexphillips-dev/FolderView-Plus
-   e71d2be..9ed2704  main           -> origin/main
- * [new tag]         v2026.03.22.07 -> v2026.03.22.07
-Updating e71d2be..9ed2704
-Fast-forward
- archive/folderview.plus-2026.03.21.16.txz.sha256   |    1 -
- archive/folderview.plus-2026.03.21.18.txz.sha256   |    1 -
- archive/folderview.plus-2026.03.21.19.txz.sha256   |    1 -
- archive/folderview.plus-2026.03.21.20.txz          |  Bin 14745552 -> 0 bytes
- archive/folderview.plus-2026.03.21.20.txz.sha256   |    1 -
- archive/folderview.plus-2026.03.21.21.txz.sha256   |    1 -
- archive/folderview.plus-2026.03.21.22.txz.sha256   |    1 -
- ...21.21.txz => folderview.plus-2026.03.22.01.txz} |  Bin 14746380 -> 14762660 bytes
- archive/folderview.plus-2026.03.22.01.txz.sha256   |    1 +
- ...21.19.txz => folderview.plus-2026.03.22.02.txz} |  Bin 14746380 -> 14763048 bytes
- archive/folderview.plus-2026.03.22.02.txz.sha256   |    1 +
- ...21.18.txz => folderview.plus-2026.03.22.04.txz} |  Bin 14745552 -> 14764212 bytes
- archive/folderview.plus-2026.03.22.04.txz.sha256   |    1 +
- ...21.16.txz => folderview.plus-2026.03.22.05.txz} |  Bin 14745528 -> 14763988 bytes
- archive/folderview.plus-2026.03.22.05.txz.sha256   |    1 +
- ...21.22.txz => folderview.plus-2026.03.22.07.txz} |  Bin 14746844 -> 14762352 bytes
- archive/folderview.plus-2026.03.22.07.txz.sha256   |    1 +
- folderview.plus.plg                                |   38 +-
- folderview.plus.xml                                |    2 +-
- scripts/include_order_guard.sh                     |    8 +-
- scripts/install_smoke.sh                           |   12 +
- scripts/perf_baseline.json                         |   42 +-
- scripts/perf_baseline_refresh.sh                   |   12 +
- scripts/perf_budget_guard.sh                       |   48 +
- scripts/release_guard.sh                           |  116 +-
- .../emhttp/plugins/folderview.plus/Folder.page     |    4 +-
- .../plugins/folderview.plus/FolderViewPlus.page    |    6 +
- .../emhttp/plugins/folderview.plus/langs/en.json   |    4 +-
- .../plugins/folderview.plus/scripts/docker.js      |   10 -
- .../scripts/folderviewplus.activity-diagnostics.js |  604 ++++
- .../scripts/folderviewplus.folder-editor.js        |  882 ++++++
- .../folderview.plus/scripts/folderviewplus.js      | 2899 +-------------------
- .../scripts/folderviewplus.runtime-parity.js       |   36 +
- .../scripts/folderviewplus.settings-sections.js    |   96 +
- .../scripts/folderviewplus.setup-assistant.js      |  369 +++
- .../scripts/folderviewplus.starter-templates.js    |  924 +++++++
- tests/advanced-module-contracts.test.mjs           |   22 +-
- tests/dashboard-layout-regression.test.mjs         |   16 +-
- tests/folder-editor-nesting-guard.test.mjs         |    1 +
- tests/mobile-iphone-regression.test.mjs            |   13 +-
- tests/settings-bindings.test.mjs                   |   12 +-
- tests/setup-assistant-smart-detect.test.mjs        |    2 +-
- tests/ui-smoke-layout.test.mjs                     |   27 +-
- 43 files changed, 3383 insertions(+), 2833 deletions(-)
- delete mode 100644 archive/folderview.plus-2026.03.21.16.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.21.18.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.21.19.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.21.20.txz
- delete mode 100644 archive/folderview.plus-2026.03.21.20.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.21.21.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.21.22.txz.sha256
- rename archive/{folderview.plus-2026.03.21.21.txz => folderview.plus-2026.03.22.01.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.03.22.01.txz.sha256
- rename archive/{folderview.plus-2026.03.21.19.txz => folderview.plus-2026.03.22.02.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.03.22.02.txz.sha256
- rename archive/{folderview.plus-2026.03.21.18.txz => folderview.plus-2026.03.22.04.txz} (68%)
- create mode 100644 archive/folderview.plus-2026.03.22.04.txz.sha256
- rename archive/{folderview.plus-2026.03.21.16.txz => folderview.plus-2026.03.22.05.txz} (68%)
- create mode 100644 archive/folderview.plus-2026.03.22.05.txz.sha256
- rename archive/{folderview.plus-2026.03.21.22.txz => folderview.plus-2026.03.22.07.txz} (68%)
- create mode 100644 archive/folderview.plus-2026.03.22.07.txz.sha256
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.activity-diagnostics.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.folder-editor.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.runtime-parity.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.settings-sections.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.setup-assistant.js
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.starter-templates.js
+Already up to date.
 
 Array
 (
@@ -1007,12 +936,11 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   ebc43f4..5720108  main       -> origin/main
-Updating ebc43f4..5720108
+   5720108..26e20e0  main       -> origin/main
+Updating 5720108..26e20e0
 Fast-forward
- app/globals.css           | 113 ++++++++++++++++++++++++++++++++++++++++++++++
- components/AppSidebar.tsx |  80 ++++++++++++++++++++++++--------
- 2 files changed, 175 insertions(+), 18 deletions(-)
+ components/admin/ModelManager.tsx | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -4495,18 +4423,28 @@ Processing /tmp/GitHub/repositoryClone/tommyvange/unraid-templates/ArrStalledHan
 
 Downloading MackAttack's Repository
 
-Already up to date.
+From https://github.com/MROGHUB/unraid-templates
+   fd698bb..d332354  main       -> origin/main
+Updating fd698bb..d332354
+Fast-forward
+ xyOps/xyOps.xml | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 51 insertions(+)
+ create mode 100644 xyOps/xyOps.xml
 
 Array
 (
     [https://github.com/MROGHUB/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/MROGHUB/unraid-templates/SpotDL-WebGUI/SpotDL-WebGUI.xml
+            [0] => /tmp/GitHub/repositoryClone/MROGHUB/unraid-templates/xyOps/xyOps.xml
+            [1] => /tmp/GitHub/repositoryClone/MROGHUB/unraid-templates/SpotDL-WebGUI/SpotDL-WebGUI.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/MROGHUB/unraid-templates/xyOps/xyOps.xml...Unknown category Tools:Productivity:Network:Other
+
+Success
 Processing /tmp/GitHub/repositoryClone/MROGHUB/unraid-templates/SpotDL-WebGUI/SpotDL-WebGUI.xml...Unknown category Downloaders:MediaApp:Music
 
 Success
@@ -20732,6 +20670,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+pixlcore/xyops
+ghcr.io/pixlcore/xyops:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/pixlcore/xyops:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
