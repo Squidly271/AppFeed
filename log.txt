@@ -463,7 +463,31 @@ Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca
 
 Downloading gibz104's Repository
 
-Already up to date.
+From https://github.com/gibz104/SpoolmanSync
+   7584b09..5fb5ce2  main       -> origin/main
+ * [new tag]         v1.4.0     -> v1.4.0
+Updating 7584b09..5fb5ce2
+Fast-forward
+ CHANGELOG.md                                  |  17 +
+ app/package-lock.json                         |  39 +-
+ app/package.json                              |   6 +-
+ app/src/app/api/automations/route.ts          |  56 +-
+ app/src/app/api/printers/route.ts             | 143 +++-
+ app/src/app/api/spools/route.ts               |  29 +
+ app/src/app/api/webhook/route.ts              |  54 +-
+ app/src/app/automations/page.tsx              |  20 +-
+ app/src/app/page.tsx                          |  30 +
+ app/src/app/scan/spool/[id]/page.tsx          |   4 +-
+ app/src/components/dashboard/printer-card.tsx |   4 +-
+ app/src/lib/api/homeassistant.ts              | 673 ++++++++---------
+ app/src/lib/api/spoolman.ts                   |  62 +-
+ app/src/lib/entity-patterns.test.ts           | 991 --------------------------
+ app/src/lib/entity-patterns.ts                | 844 ----------------------
+ app/src/lib/ha-config-generator.ts            |  20 +-
+ spoolmansync-ha-addon/config.yaml             |   2 +-
+ 17 files changed, 773 insertions(+), 2221 deletions(-)
+ delete mode 100644 app/src/lib/entity-patterns.test.ts
+ delete mode 100644 app/src/lib/entity-patterns.ts
 
 Array
 (
@@ -1076,22 +1100,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   d4205e6..4480ecc  main       -> origin/main
-Updating d4205e6..4480ecc
-Fast-forward
- NeXroll/backend/version.py                         |   2 +-
- NeXroll/frontend/build/asset-manifest.json         |   6 +-
- NeXroll/frontend/build/index.html                  |   2 +-
- .../js/{main.a7e71b01.js => main.04c809ec.js}      |   6 +-
- ...js.LICENSE.txt => main.04c809ec.js.LICENSE.txt} |   0
- .../{main.a7e71b01.js.map => main.04c809ec.js.map} |   2 +-
- NeXroll/frontend/src/App.js                        | 170 +++++++++++++++++++++
- NeXroll/version.py                                 |   2 +-
- 8 files changed, 180 insertions(+), 10 deletions(-)
- rename NeXroll/frontend/build/static/js/{main.a7e71b01.js => main.04c809ec.js} (82%)
- rename NeXroll/frontend/build/static/js/{main.a7e71b01.js.LICENSE.txt => main.04c809ec.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.a7e71b01.js.map => main.04c809ec.js.map} (57%)
+Already up to date.
 
 Array
 (
@@ -1306,15 +1315,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   ca6c905d..951fdd12  master     -> origin/master
- * [new tag]           v0.10.20-dev -> v0.10.20-dev
-Updating ca6c905d..951fdd12
-Fast-forward
- app/Filament/GuestPanel/Resources/Vods/Pages/ListVod.php | 4 ++--
- app/Models/Series.php                                    | 2 +-
- config/dev.php                                           | 4 ++--
- 3 files changed, 5 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4441,7 +4442,12 @@ Processing /tmp/GitHub/repositoryClone/tommyvange/unraid-templates/ArrStalledHan
 
 Downloading MackAttack's Repository
 
-Already up to date.
+From https://github.com/MROGHUB/unraid-templates
+   5a7cddc..59bc889  main       -> origin/main
+Updating 5a7cddc..59bc889
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
 
 Array
 (
@@ -9303,13 +9309,7 @@ Processing /tmp/GitHub/repositoryClone/RazorSiM/docker-templates/hass-configurat
 
 Downloading knex666's Repository
 
-From https://github.com/maschhoff/docker
-   f163a3d..7312950  master     -> origin/master
-Updating f163a3d..7312950
-Fast-forward
- unraid xml/my-imapsyncweb | 36 ++++++++++++++++++++++++++++++++++++
- 1 file changed, 36 insertions(+)
- create mode 100644 unraid xml/my-imapsyncweb
+Already up to date.
 
 Array
 (
@@ -20845,6 +20845,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+jinglemansweep/meshcore-mqtt
+ghcr.io/jinglemansweep/meshcore-mqtt:latest Downloads:   Stars:   Base: unknown
+mrtbot/mesh-ai
+mrtbot/mesh-ai:latest Downloads: 619  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
