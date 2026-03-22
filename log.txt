@@ -86,43 +86,153 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 Downloading XCrownedClownsX's Repository
 
 From https://github.com/alexphillips-dev/FolderView-Plus
-   7ce17be..dc86d45  main           -> origin/main
- * [new tag]         v2026.03.21.24 -> v2026.03.21.24
-Updating 7ce17be..dc86d45
+   dc86d45..e71d2be  main           -> origin/main
+ * [new tag]         v2026.03.21.43 -> v2026.03.21.43
+Updating dc86d45..e71d2be
 Fast-forward
- archive/folderview.plus-2026.03.20.06.txz.sha256   |   1 -
- archive/folderview.plus-2026.03.20.07.txz.sha256   |   1 -
- archive/folderview.plus-2026.03.20.08.txz.sha256   |   1 -
- archive/folderview.plus-2026.03.20.09.txz.sha256   |   1 -
- ...20.09.txz => folderview.plus-2026.03.21.19.txz} | Bin 14724892 -> 14746380 bytes
- archive/folderview.plus-2026.03.21.19.txz.sha256   |   1 +
- ...20.08.txz => folderview.plus-2026.03.21.21.txz} | Bin 14724468 -> 14746380 bytes
- archive/folderview.plus-2026.03.21.21.txz.sha256   |   1 +
- ...20.06.txz => folderview.plus-2026.03.21.22.txz} | Bin 14723456 -> 14746844 bytes
- archive/folderview.plus-2026.03.21.22.txz.sha256   |   1 +
- ...20.07.txz => folderview.plus-2026.03.21.23.txz} | Bin 14724248 -> 14746852 bytes
- archive/folderview.plus-2026.03.21.23.txz.sha256   |   1 +
- archive/folderview.plus-2026.03.21.24.txz          | Bin 0 -> 14746852 bytes
- archive/folderview.plus-2026.03.21.24.txz.sha256   |   1 +
- folderview.plus.plg                                |  35 ++-
- .../folderview.plus/scripts/folderviewplus.js      | 262 +++++++++++++++++----
- .../folderview.plus/styles/folderviewplus.css      |  51 ++++
- tests/settings-bindings.test.mjs                   |   8 +
- 18 files changed, 310 insertions(+), 55 deletions(-)
- delete mode 100644 archive/folderview.plus-2026.03.20.06.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.20.07.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.20.08.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.03.20.09.txz.sha256
- rename archive/{folderview.plus-2026.03.20.09.txz => folderview.plus-2026.03.21.19.txz} (67%)
- create mode 100644 archive/folderview.plus-2026.03.21.19.txz.sha256
- rename archive/{folderview.plus-2026.03.20.08.txz => folderview.plus-2026.03.21.21.txz} (67%)
- create mode 100644 archive/folderview.plus-2026.03.21.21.txz.sha256
- rename archive/{folderview.plus-2026.03.20.06.txz => folderview.plus-2026.03.21.22.txz} (67%)
- create mode 100644 archive/folderview.plus-2026.03.21.22.txz.sha256
- rename archive/{folderview.plus-2026.03.20.07.txz => folderview.plus-2026.03.21.23.txz} (67%)
- create mode 100644 archive/folderview.plus-2026.03.21.23.txz.sha256
- create mode 100644 archive/folderview.plus-2026.03.21.24.txz
- create mode 100644 archive/folderview.plus-2026.03.21.24.txz.sha256
+ archive/folderview.plus-2026.03.20.10.txz          |  Bin 14726400 -> 0 bytes
+ archive/folderview.plus-2026.03.20.10.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.20.11.txz          |  Bin 14726160 -> 0 bytes
+ archive/folderview.plus-2026.03.20.11.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.20.12.txz          |  Bin 14726792 -> 0 bytes
+ archive/folderview.plus-2026.03.20.12.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.20.13.txz          |  Bin 14728880 -> 0 bytes
+ archive/folderview.plus-2026.03.20.13.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.20.14.txz          |  Bin 14732020 -> 0 bytes
+ archive/folderview.plus-2026.03.20.14.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.01.txz          |  Bin 14732172 -> 0 bytes
+ archive/folderview.plus-2026.03.21.01.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.03.txz          |  Bin 14732172 -> 0 bytes
+ archive/folderview.plus-2026.03.21.03.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.04.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.07.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.08.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.09.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.10.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.11.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.12.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.13.txz.sha256   |    1 -
+ archive/folderview.plus-2026.03.21.15.txz          |  Bin 14743084 -> 0 bytes
+ archive/folderview.plus-2026.03.21.15.txz.sha256   |    1 -
+ ...21.08.txz => folderview.plus-2026.03.21.25.txz} |  Bin 14736528 -> 14747988 bytes
+ archive/folderview.plus-2026.03.21.25.txz.sha256   |    1 +
+ ...21.12.txz => folderview.plus-2026.03.21.27.txz} |  Bin 14742644 -> 14748116 bytes
+ archive/folderview.plus-2026.03.21.27.txz.sha256   |    1 +
+ ...21.13.txz => folderview.plus-2026.03.21.29.txz} |  Bin 14743004 -> 14749496 bytes
+ archive/folderview.plus-2026.03.21.29.txz.sha256   |    1 +
+ ...21.10.txz => folderview.plus-2026.03.21.30.txz} |  Bin 14740156 -> 14749396 bytes
+ archive/folderview.plus-2026.03.21.30.txz.sha256   |    1 +
+ ...21.09.txz => folderview.plus-2026.03.21.32.txz} |  Bin 14740156 -> 14750068 bytes
+ archive/folderview.plus-2026.03.21.32.txz.sha256   |    1 +
+ ...21.04.txz => folderview.plus-2026.03.21.33.txz} |  Bin 14735692 -> 14754392 bytes
+ archive/folderview.plus-2026.03.21.33.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.34.txz          |  Bin 0 -> 14756024 bytes
+ archive/folderview.plus-2026.03.21.34.txz.sha256   |    1 +
+ ...21.11.txz => folderview.plus-2026.03.21.35.txz} |  Bin 14742648 -> 14754760 bytes
+ archive/folderview.plus-2026.03.21.35.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.36.txz          |  Bin 0 -> 14755592 bytes
+ archive/folderview.plus-2026.03.21.36.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.37.txz          |  Bin 0 -> 14755956 bytes
+ archive/folderview.plus-2026.03.21.37.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.38.txz          |  Bin 0 -> 14756152 bytes
+ archive/folderview.plus-2026.03.21.38.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.39.txz          |  Bin 0 -> 14756744 bytes
+ archive/folderview.plus-2026.03.21.39.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.40.txz          |  Bin 0 -> 14758252 bytes
+ archive/folderview.plus-2026.03.21.40.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.41.txz          |  Bin 0 -> 14758548 bytes
+ archive/folderview.plus-2026.03.21.41.txz.sha256   |    1 +
+ ...21.07.txz => folderview.plus-2026.03.21.42.txz} |  Bin 14736088 -> 14760724 bytes
+ archive/folderview.plus-2026.03.21.42.txz.sha256   |    1 +
+ archive/folderview.plus-2026.03.21.43.txz          |  Bin 0 -> 14760724 bytes
+ archive/folderview.plus-2026.03.21.43.txz.sha256   |    1 +
+ folderview.plus.plg                                |  112 +-
+ scripts/lang_usage_guard.sh                        |    4 +-
+ scripts/perf_baseline.json                         |   38 +-
+ .../local/emhttp/plugins/folderview.plus/README.md |   24 +-
+ .../emhttp/plugins/folderview.plus/langs/cs.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/de.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/en.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/es.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/fr.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/it.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/ja.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/ko.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/nl.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/pl.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/pt.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/ro.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/ru.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/sv.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/tr.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/uk.json   |    3 +-
+ .../emhttp/plugins/folderview.plus/langs/zh.json   |    3 +-
+ .../plugins/folderview.plus/scripts/folder.js      |    2 +-
+ .../folderview.plus/scripts/folderviewplus.js      |  703 ++++++++-
+ .../scripts/folderviewplus.utils.js                |    1 +
+ .../scripts/folderviewplus.wizard.js               | 1627 +++++++++++++++++++-
+ .../folderview.plus/styles/folderviewplus.css      |  217 +++
+ tests/folderviewplus-utils.test.mjs                |   12 +
+ tests/settings-bindings.test.mjs                   |    6 +
+ tests/setup-assistant-smart-detect.test.mjs        |  395 +++++
+ 85 files changed, 3097 insertions(+), 127 deletions(-)
+ delete mode 100644 archive/folderview.plus-2026.03.20.10.txz
+ delete mode 100644 archive/folderview.plus-2026.03.20.10.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.11.txz
+ delete mode 100644 archive/folderview.plus-2026.03.20.11.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.12.txz
+ delete mode 100644 archive/folderview.plus-2026.03.20.12.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.13.txz
+ delete mode 100644 archive/folderview.plus-2026.03.20.13.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.20.14.txz
+ delete mode 100644 archive/folderview.plus-2026.03.20.14.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.01.txz
+ delete mode 100644 archive/folderview.plus-2026.03.21.01.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.03.txz
+ delete mode 100644 archive/folderview.plus-2026.03.21.03.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.04.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.07.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.08.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.09.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.10.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.11.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.12.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.13.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.03.21.15.txz
+ delete mode 100644 archive/folderview.plus-2026.03.21.15.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.08.txz => folderview.plus-2026.03.21.25.txz} (97%)
+ create mode 100644 archive/folderview.plus-2026.03.21.25.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.12.txz => folderview.plus-2026.03.21.27.txz} (97%)
+ create mode 100644 archive/folderview.plus-2026.03.21.27.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.13.txz => folderview.plus-2026.03.21.29.txz} (97%)
+ create mode 100644 archive/folderview.plus-2026.03.21.29.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.10.txz => folderview.plus-2026.03.21.30.txz} (97%)
+ create mode 100644 archive/folderview.plus-2026.03.21.30.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.09.txz => folderview.plus-2026.03.21.32.txz} (97%)
+ create mode 100644 archive/folderview.plus-2026.03.21.32.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.04.txz => folderview.plus-2026.03.21.33.txz} (97%)
+ create mode 100644 archive/folderview.plus-2026.03.21.33.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.34.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.34.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.11.txz => folderview.plus-2026.03.21.35.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.35.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.36.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.36.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.37.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.37.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.38.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.38.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.39.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.39.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.40.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.40.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.41.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.41.txz.sha256
+ rename archive/{folderview.plus-2026.03.21.07.txz => folderview.plus-2026.03.21.42.txz} (68%)
+ create mode 100644 archive/folderview.plus-2026.03.21.42.txz.sha256
+ create mode 100644 archive/folderview.plus-2026.03.21.43.txz
+ create mode 100644 archive/folderview.plus-2026.03.21.43.txz.sha256
+ create mode 100644 tests/setup-assistant-smart-detect.test.mjs
 
 Array
 (
@@ -1113,7 +1223,33 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   47384de..f116175  main       -> origin/main
+ * [new tag]         v1.12.0-beta.2 -> v1.12.0-beta.2
+Updating 47384de..f116175
+Fast-forward
+ .gitignore                                         |    5 +
+ NeXroll/RELEASE_NOTES_v1.12.0-beta.2.md            |  107 +
+ NeXroll/backend/main.py                            |  763 +++-
+ NeXroll/backend/models.py                          |    4 +
+ NeXroll/backend/scheduler.py                       |  324 +-
+ NeXroll/backend/version.py                         |    2 +-
+ NeXroll/frontend/build/asset-manifest.json         |    6 +-
+ NeXroll/frontend/build/index.html                  |    2 +-
+ NeXroll/frontend/build/static/js/main.2f131cb0.js  |    3 -
+ NeXroll/frontend/build/static/js/main.a7e71b01.js  |    3 +
+ ...js.LICENSE.txt => main.a7e71b01.js.LICENSE.txt} |    0
+ .../{main.2f131cb0.js.map => main.a7e71b01.js.map} |    2 +-
+ NeXroll/frontend/src/App.js                        | 3630 +++++++++++++++-----
+ NeXroll/version.py                                 |    2 +-
+ NeXroll/version_info.txt                           |    4 +-
+ docs/wiki/Docker.md                                |  145 +-
+ 16 files changed, 3808 insertions(+), 1194 deletions(-)
+ create mode 100644 NeXroll/RELEASE_NOTES_v1.12.0-beta.2.md
+ delete mode 100644 NeXroll/frontend/build/static/js/main.2f131cb0.js
+ create mode 100644 NeXroll/frontend/build/static/js/main.a7e71b01.js
+ rename NeXroll/frontend/build/static/js/{main.2f131cb0.js.LICENSE.txt => main.a7e71b01.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.2f131cb0.js.map => main.a7e71b01.js.map} (52%)
 
 Array
 (
@@ -1416,12 +1552,7 @@ Failed loading XML
 
 Downloading sarcasm's Repository
 
-From https://github.com/kroeberd/unraid-templates
-   7fc8018..d124b88  main       -> origin/main
-Updating 7fc8018..d124b88
-Fast-forward
- templates/mediastarr.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -8207,7 +8338,12 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   12eb319..a12a503  master     -> origin/master
+Updating 12eb319..a12a503
+Fast-forward
+ jlesage/jmkvpropedit.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -20666,6 +20802,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+Tagged - Can't determine last update
+tronbyt/server
+ghcr.io/tronbyt/server:2 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
