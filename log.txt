@@ -296,7 +296,34 @@ Processing /tmp/GitHub/repositoryClone/Starosdev/unraid-templates/ca_profile.xml
 
 Downloading UR-jay's Repository
 
-Already up to date.
+From https://github.com/GHJJ123/brainrotguard
+   3748eea..fbeaf13  main       -> origin/main
+ * [new tag]         v1.31.0    -> v1.31.0
+Updating 3748eea..fbeaf13
+Fast-forward
+ CHANGELOG.md                  |  21 ++
+ data/child_store.py           |  15 ++
+ data/video_store.py           | 129 ++++++++++
+ i18n/locales/en.py            |  20 ++
+ i18n/locales/nb.py            |  19 ++
+ tests/test_video_store.py     |  67 ++++++
+ tests/test_web_cache.py       |  10 +-
+ tests/test_web_integration.py | 289 +++++++++++++++++++++-
+ version.py                    |   2 +-
+ web/app.py                    |  13 +-
+ web/cache.py                  |  90 ++++---
+ web/helpers.py                |   6 +-
+ web/routers/catalog.py        |  20 +-
+ web/routers/pages.py          | 156 +++++++++++-
+ web/static/service-worker.js  |   4 +-
+ web/static/style.css          | 289 +++++++++++++++++++++-
+ web/templates/base.html       |   8 +-
+ web/templates/history.html    | 228 ++++++++++++++++++
+ web/templates/index.html      | 544 +++++++++++++++++++++++++++++++++++-------
+ web/templates/requests.html   |  79 ++++++
+ 20 files changed, 1862 insertions(+), 147 deletions(-)
+ create mode 100644 web/templates/history.html
+ create mode 100644 web/templates/requests.html
 
 Array
 (
@@ -463,19 +490,29 @@ Removed from CA123
 
 Downloading Kling's Repository
 
-Already up to date.
+From https://github.com/davidjkling/unraid-templates
+   3b5bc2e..e7469ce  main       -> origin/main
+Updating 3b5bc2e..e7469ce
+Fast-forward
+ static/degoog.png    | Bin 0 -> 19198 bytes
+ templates/degoog.xml |  31 +++++++++++++++++++++++++++++++
+ 2 files changed, 31 insertions(+)
+ create mode 100644 static/degoog.png
+ create mode 100644 templates/degoog.xml
 
 Array
 (
     [https://github.com/davidjkling/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/bunkerweb-aio.xml
-            [1] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca_profile.xml
+            [0] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/degoog.xml
+            [1] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/bunkerweb-aio.xml
+            [2] => /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca_profile.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/degoog.xml...Success
 Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/bunkerweb-aio.xml...Success
 Processing /tmp/GitHub/repositoryClone/davidjkling/unraid-templates/templates/ca_profile.xml...FOUND PROFILE
 
@@ -1095,7 +1132,25 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   6152cdc..835e1ad  main       -> origin/main
+ * [new tag]         v1.12.0-beta.3 -> v1.12.0-beta.3
+Updating 6152cdc..835e1ad
+Fast-forward
+ .github/workflows/docker-build.yml                 | 55 ++++------------------
+ Dockerfile                                         | 31 ++++++++----
+ NeXroll/CHANGELOG.md                               |  2 +-
+ NeXroll/frontend/build/asset-manifest.json         |  6 +--
+ NeXroll/frontend/build/index.html                  |  2 +-
+ .../js/{main.deeb8deb.js => main.ed55f900.js}      |  6 +--
+ ...js.LICENSE.txt => main.ed55f900.js.LICENSE.txt} |  0
+ .../{main.deeb8deb.js.map => main.ed55f900.js.map} |  2 +-
+ NeXroll/frontend/src/App.js                        | 11 +++--
+ requirements.txt                                   | 34 ++++++-------
+ 10 files changed, 64 insertions(+), 85 deletions(-)
+ rename NeXroll/frontend/build/static/js/{main.deeb8deb.js => main.ed55f900.js} (65%)
+ rename NeXroll/frontend/build/static/js/{main.deeb8deb.js.LICENSE.txt => main.ed55f900.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.deeb8deb.js.map => main.ed55f900.js.map} (55%)
 
 Array
 (
@@ -1310,48 +1365,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   22c06db2..8f8b5ee3  master     -> origin/master
-Updating 22c06db2..8f8b5ee3
-Fast-forward
- app/Filament/Pages/Backups.php                     |   5 +-
- app/Filament/Pages/LogViewer.php                   | 275 ++++++++
- app/Filament/Pages/ReleaseLogs.php                 |   2 +-
- app/Filament/Resources/Assets/AssetResource.php    |   2 +-
- .../ChannelScrubbers/ChannelScrubberResource.php   |   2 +-
- app/Filament/Resources/EpgMaps/EpgMapResource.php  |   2 +-
- app/Filament/Resources/Epgs/EpgResource.php        |   2 +-
- .../MediaServerIntegrationResource.php             |   5 +-
- .../Resources/MergedEpgs/MergedEpgResource.php     |   2 +-
- .../PersonalAccessTokenResource.php                |   7 +-
- .../WatchProgressRelationManager.php               |   2 +-
- .../Resources/Playlists/PlaylistResource.php       |   6 +-
- .../PostProcesses/PostProcessResource.php          |   7 +-
- app/Providers/Filament/AdminPanelProvider.php      |  15 +-
- app/Tables/Columns/ProgressColumn.php              |  57 ++
- composer.json                                      |  15 +-
- composer.lock                                      | 693 ++++++++++-----------
- public/js/filament/filament/app.js                 |   2 +-
- .../js/filament/forms/components/checkbox-list.js  |   2 +-
- public/js/filament/forms/components/file-upload.js |   4 +-
- public/js/filament/forms/components/rich-editor.js |   2 +-
- public/js/filament/forms/components/select.js      |   2 +-
- public/js/filament/notifications/notifications.js  |   2 +-
- public/js/filament/schemas/components/tabs.js      |   2 +-
- public/js/filament/schemas/schemas.js              |   2 +-
- public/js/filament/support/support.js              |  12 +-
- .../filament/tables/components/columns/checkbox.js |   2 +-
- .../filament/tables/components/columns/select.js   |   2 +-
- .../tables/components/columns/text-input.js        |   2 +-
- .../filament/tables/components/columns/toggle.js   |   2 +-
- resources/css/app.css                              |   2 -
- .../views/filament/pages/log-viewer.blade.php      | 229 +++++++
- resources/views/tables/columns/progress.blade.php  |  25 +
- 33 files changed, 944 insertions(+), 449 deletions(-)
- create mode 100644 app/Filament/Pages/LogViewer.php
- create mode 100644 app/Tables/Columns/ProgressColumn.php
- create mode 100644 resources/views/filament/pages/log-viewer.blade.php
- create mode 100644 resources/views/tables/columns/progress.blade.php
+Already up to date.
 
 Array
 (
@@ -5509,13 +5523,7 @@ Removed from CA123
 
 Downloading LubricantJam's Repository
 
-From https://github.com/JamsRepos/Unraid-Templates
-   3d8c801..703c41b  main       -> origin/main
-Updating 3d8c801..703c41b
-Fast-forward
- templates/aiostreams.xml | 35 +++++++++++++++++++++++++++++++++++
- 1 file changed, 35 insertions(+)
- create mode 100644 templates/aiostreams.xml
+Already up to date.
 
 Array
 (
@@ -20655,6 +20663,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/emaspa/wireview-hwmon-unraid/raw/main/wireview-hwmon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
+fccview/degoog
+ghcr.io/fccview/degoog:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/fccview/degoog:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
@@ -20754,12 +20766,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-viren070/aiostreams
-ghcr.io/viren070/aiostreams:latest Downloads: 116423  Stars: 8  Base: unknown
-Pulling ghcr.io/viren070/aiostreams:latest
-Killed
-ghomashudson/jellyfin-auto-collections
-ghcr.io/ghomashudson/jellyfin-auto-collections:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -20817,6 +20823,8 @@ ghcr.io/ghomashudson/jellyfin-auto-collections:latest Downloads:   Stars:   Base
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+jlesage/krusader
+jlesage/krusader Downloads: 5633  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
