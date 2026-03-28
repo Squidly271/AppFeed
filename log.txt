@@ -1101,7 +1101,32 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   497171d..ece4f2f  main           -> origin/main
+ * [new tag]         v1.12.0-beta.4 -> v1.12.0-beta.4
+Updating 497171d..ece4f2f
+Fast-forward
+ NeXroll/CHANGELOG.md                               |  39 ++
+ NeXroll/backend/dynamic_preroll.py                 |  68 +++-
+ NeXroll/backend/main.py                            | 176 +++++++-
+ NeXroll/backend/models.py                          |   5 +-
+ NeXroll/backend/radarr_connector.py                |   2 +-
+ NeXroll/backend/scheduler.py                       |  34 +-
+ NeXroll/frontend/build/asset-manifest.json         |   6 +-
+ NeXroll/frontend/build/index.html                  |   2 +-
+ NeXroll/frontend/build/static/js/main.806ff9fb.js  |   3 +
+ ...js.LICENSE.txt => main.806ff9fb.js.LICENSE.txt} |   0
+ .../{main.ed55f900.js.map => main.806ff9fb.js.map} |   2 +-
+ NeXroll/frontend/build/static/js/main.ed55f900.js  |   3 -
+ NeXroll/frontend/src/App.js                        | 448 +++++++++++++++++----
+ .../src/components/SequencePreviewModal.js         |   9 +-
+ NeXroll/version.py                                 |   2 +-
+ NeXroll/version_info.txt                           |  10 +-
+ 16 files changed, 659 insertions(+), 150 deletions(-)
+ create mode 100644 NeXroll/frontend/build/static/js/main.806ff9fb.js
+ rename NeXroll/frontend/build/static/js/{main.ed55f900.js.LICENSE.txt => main.806ff9fb.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.ed55f900.js.map => main.806ff9fb.js.map} (52%)
+ delete mode 100644 NeXroll/frontend/build/static/js/main.ed55f900.js
 
 Array
 (
@@ -1316,7 +1341,34 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   bc805ac3..54ef57f1  master     -> origin/master
+ * [new tag]           v0.10.27-dev -> v0.10.27-dev
+ * [new tag]           v0.10.28-dev -> v0.10.28-dev
+Updating bc805ac3..54ef57f1
+Fast-forward
+ Dockerfile                                         |   8 +-
+ app/Console/Commands/RefreshEpg.php                |  20 +-
+ app/Console/Commands/RefreshPlaylist.php           |   8 +-
+ .../Resources/Channels/ChannelResource.php         |  19 +-
+ .../Resources/Channels/Pages/ListChannels.php      |  10 +-
+ app/Filament/Resources/Series/Pages/ListSeries.php |   3 +
+ app/Filament/Resources/Series/SeriesResource.php   |   5 +-
+ app/Filament/Resources/Vods/Pages/ListVod.php      |  10 +-
+ app/Filament/Resources/Vods/VodResource.php        |  15 +-
+ app/Jobs/ProcessEpgImport.php                      |   6 +
+ app/Jobs/ProcessM3uImport.php                      |   7 +
+ app/Jobs/ProcessM3uImportComplete.php              |  17 +-
+ app/Providers/AppServiceProvider.php               |   7 -
+ app/Traits/RenderlessColumnUpdates.php             |  19 +
+ config/dev.php                                     |   4 +-
+ docker/8.4/nginx/nginx.conf                        |  14 +
+ .../filament-schemas/components/form.blade.php     |  19 +
+ test_schedule_builder.php                          | 498 ---------------------
+ 18 files changed, 128 insertions(+), 561 deletions(-)
+ create mode 100644 app/Traits/RenderlessColumnUpdates.php
+ create mode 100644 resources/views/vendor/filament-schemas/components/form.blade.php
+ delete mode 100644 test_schedule_builder.php
 
 Array
 (
@@ -1704,13 +1756,7 @@ Processing /tmp/GitHub/repositoryClone/bigsing/unraid-templates/templates/joplin
 
 Downloading xxBeanSproutxx's Repository
 
-From https://github.com/xxBeanSproutxx/unraid-docling-ca
-   6c44f3f..cf3cc32  main       -> origin/main
-Updating 6c44f3f..cf3cc32
-Fast-forward
- README.md                   |  6 ++++++
- templates/docling-serve.xml | 13 +++++++++----
- 2 files changed, 15 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -5404,36 +5450,46 @@ Removed from CA123
 
 Downloading LubricantJam's Repository
 
-Already up to date.
+From https://github.com/JamsRepos/Unraid-Templates
+   59962e9..cd4dba1  main       -> origin/main
+Updating 59962e9..cd4dba1
+Fast-forward
+ logos/aiometadata.png     | Bin 0 -> 1469609 bytes
+ templates/aiometadata.xml |  30 ++++++++++++++++++++++++++++++
+ 2 files changed, 30 insertions(+)
+ create mode 100644 logos/aiometadata.png
+ create mode 100644 templates/aiometadata.xml
 
 Array
 (
     [https://github.com/JamsRepos/Unraid-Templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel.xml
-            [1] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/aiostreams.xml
-            [2] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyswarrm.xml
-            [3] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyhub.xml
-            [4] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/ca_profile.xml
-            [5] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/github-release-monitor.xml
-            [6] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyfin-auto-collections.xml
-            [7] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/capture.xml
-            [8] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/suggestarr.xml
-            [9] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/pelagica.xml
-            [10] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/isaiah.xml
-            [11] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel-agent.xml
-            [12] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/materialious.xml
-            [13] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/checkcle-monitoring-agent.xml
-            [14] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamyfin-optimised-versions.xml
-            [15] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellysweep.xml
-            [16] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/comet.xml
-            [17] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/mediafusion.xml
-            [18] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamystats.xml
+            [0] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/aiometadata.xml
+            [1] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel.xml
+            [2] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/aiostreams.xml
+            [3] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyswarrm.xml
+            [4] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyhub.xml
+            [5] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/ca_profile.xml
+            [6] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/github-release-monitor.xml
+            [7] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyfin-auto-collections.xml
+            [8] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/capture.xml
+            [9] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/suggestarr.xml
+            [10] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/pelagica.xml
+            [11] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/isaiah.xml
+            [12] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel-agent.xml
+            [13] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/materialious.xml
+            [14] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/checkcle-monitoring-agent.xml
+            [15] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamyfin-optimised-versions.xml
+            [16] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellysweep.xml
+            [17] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/comet.xml
+            [18] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/mediafusion.xml
+            [19] => /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/streamystats.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/aiometadata.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/beszel.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/aiostreams.xml...Success
 Processing /tmp/GitHub/repositoryClone/JamsRepos/Unraid-Templates/templates/jellyswarrm.xml...Success
@@ -20544,6 +20600,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/emaspa/wireview-hwmon-unraid/raw/main/wireview-hwmon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
+laurensguijt/unraid-pwa
+ghcr.io/laurensguijt/unraid-pwa:latest Downloads:   Stars:   Base: unknown
+neur0map/deskmon-agent
+ghcr.io/neur0map/deskmon-agent:latest Downloads:   Stars:   Base: unknown
+bunkerity/bunkerweb-all-in-one
+bunkerity/bunkerweb-all-in-one:latest Downloads: 39381  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-aicliagents/raw/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
@@ -20621,6 +20683,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+cedya77/aiometadata
+ghcr.io/cedya77/aiometadata:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/cedya77/aiometadata:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
