@@ -298,7 +298,12 @@ Processing /tmp/GitHub/repositoryClone/Starosdev/unraid-templates/ca_profile.xml
 
 Downloading UR-jay's Repository
 
-Already up to date.
+From https://github.com/GHJJ123/brainrotguard
+   7d2d05d..c9b88a0  main       -> origin/main
+Updating 7d2d05d..c9b88a0
+Fast-forward
+ web/templates/watch.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -5491,7 +5496,143 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   d2dc88a6..4a60ad7e  main       -> origin/main
+ * [new tag]           v2026.3.0  -> v2026.3.0
+Updating d2dc88a6..4a60ad7e
+Fast-forward
+ .github/workflows/ci.yml                           |   4 +-
+ .github/workflows/release.yml                      |   4 +-
+ app/__init__.py                                    |   4 +-
+ app/activity/api/blueprint.py                      |  12 +-
+ app/activity/api/helpers.py                        |  14 +-
+ app/activity/monitoring/collectors/emby.py         |  31 +-
+ app/activity/monitoring/collectors/jellyfin.py     |  31 +-
+ app/activity/monitoring/session_manager.py         |   2 +-
+ app/blueprints/admin/routes.py                     |  16 +-
+ app/blueprints/api/api_routes.py                   |   6 +-
+ app/blueprints/api/models.py                       |   2 +-
+ app/blueprints/api_keys/routes.py                  |  45 +-
+ app/blueprints/auth/ldap_auth.py                   | 104 +++++
+ app/blueprints/auth/routes.py                      |  50 ++-
+ app/blueprints/notifications/routes.py             |  33 ++
+ app/blueprints/public/routes.py                    |  68 ++-
+ app/blueprints/settings/routes.py                  | 234 ++++++++++
+ app/blueprints/wizard/routes.py                    |  12 +-
+ app/blueprints/wizard_admin/routes.py              |   2 +-
+ app/context_processors.py                          |   2 +-
+ app/extensions.py                                  |  20 +-
+ app/forms/ldap.py                                  |  91 ++++
+ app/jinja_filters.py                               |   8 +-
+ app/models.py                                      | 104 ++++-
+ app/services/activity/identity_resolution.py       |   8 +-
+ app/services/activity/ingestion.py                 |  39 +-
+ app/services/activity/maintenance.py               |  28 +-
+ app/services/companions/audiobookrequest.py        |   8 +-
+ app/services/companions/ombi.py                    |   8 +-
+ app/services/companions/overseerr.py               |  24 +-
+ app/services/historical/__init__.py                |   2 +-
+ .../historical/importers/jellyfin_importer.py      |  30 +-
+ app/services/historical/importers/plex_importer.py |   2 +-
+ app/services/invitation_flow/manager.py            |   4 +-
+ app/services/invitation_flow/server_registry.py    |   6 +-
+ app/services/invitation_flow/strategies.py         |   8 +-
+ app/services/invitation_flow/workflows.py          |  31 +-
+ app/services/invitation_manager.py                 |   2 +-
+ app/services/invites.py                            |   5 +-
+ app/services/ldap/__init__.py                      |   0
+ app/services/ldap/client.py                        | 470 +++++++++++++++++++++
+ app/services/ldap/encryption.py                    |  28 ++
+ app/services/ldap/invitation_ldap.py               |  60 +++
+ app/services/ldap/user_sync.py                     | 182 ++++++++
+ app/services/media/audiobookshelf.py               |  74 ++--
+ app/services/media/client_base.py                  |  24 +-
+ app/services/media/drop.py                         |  22 +-
+ app/services/media/emby.py                         |  85 ++--
+ app/services/media/jellyfin.py                     | 152 ++++---
+ app/services/media/kavita.py                       |  14 +-
+ app/services/media/komga.py                        |  23 +-
+ app/services/media/navidrome.py                    |  16 +-
+ app/services/media/plex.py                         | 107 +++--
+ app/services/media/romm.py                         |  13 +-
+ app/services/media/service.py                      | 127 ++++--
+ app/services/notifications.py                      |  30 +-
+ app/services/wizard_export_import.py               |   4 +-
+ app/services/wizard_widgets.py                     |  11 +-
+ app/static/package-lock.json                       | 415 ++++++++++++++----
+ app/static/package.json                            |   6 +-
+ app/static/src/style.css                           |   9 +
+ app/tasks/ldap_sync.py                             | 108 +++++
+ app/templates/_partials/ldap_alert.html            |  26 ++
+ .../_partials/ldap_group_sync_result.html          |  15 +
+ app/templates/_partials/ldap_user_sync_result.html |  32 ++
+ app/templates/admin.html                           |   2 +-
+ app/templates/components/passkey_register.html     |   6 +-
+ app/templates/login.html                           | 255 +++++------
+ .../modals/create-notification-agent.html          |  28 ++
+ app/templates/modals/edit-notification-agent.html  |  36 ++
+ app/templates/modals/invite.html                   |  23 +
+ app/templates/settings/index.html                  |  17 +
+ app/templates/settings/ldap.html                   | 268 ++++++++++++
+ app/templates/tables/user_card.html                |  28 +-
+ app/utils/session_cache.py                         |  99 +++--
+ docker-compose.test.yml                            |  20 +-
+ docs/using-wizarr/ldap-authentication.md           | 345 +++++++++++++++
+ migrations/env.py                                  |   2 +-
+ migrations/versions/20250612_add_identity_table.py |   4 +-
+ .../20250612_migrate_settings_to_media_server.py   |   4 +-
+ .../versions/20250618_library_unique_per_server.py |   2 +-
+ migrations/versions/20251226_add_ldap_support.py   |  97 +++++
+ .../4a39bd26329d_20260329_add_user_created_at.py   |  33 ++
+ .../versions/8e5c69f96870_merge_ldap_with_main.py  |  21 +
+ ...6155a91eb50_add_telegram_notification_fields.py |  32 ++
+ package.json                                       |   2 +-
+ pyproject.toml                                     |  10 +-
+ tests/activity/conftest.py                         |   8 +-
+ tests/conftest.py                                  |   2 +-
+ tests/e2e/test_invitation_e2e.py                   |   4 +-
+ tests/e2e/test_ldap_admin_login_e2e.py             | 217 ++++++++++
+ tests/test_invitation_flow.py                      |   6 +-
+ tests/test_invitation_server_defaulting.py         |   4 +-
+ tests/test_invite_code_manager.py                  | 108 ++---
+ tests/test_ldap_admin_auth.py                      | 228 ++++++++++
+ tests/test_ldap_client.py                          | 248 +++++++++++
+ tests/test_ldap_encryption.py                      |  51 +++
+ tests/test_ldap_invitation.py                      | 130 ++++++
+ tests/test_ldap_invitation_form.py                 |  99 +++++
+ tests/test_migrations.py                           |  28 +-
+ tests/test_pre_wizard_endpoint.py                  |   6 +-
+ tests/test_session_cache.py                        |  80 ++++
+ tests/test_wizard_admin_forms.py                   |  41 +-
+ tests/test_wizard_error_handling.py                |  41 +-
+ tests/test_wizard_rendering.py                     |   6 +-
+ tests/test_wizard_reset.py                         |  14 +-
+ uv.lock                                            | 306 +++++++-------
+ 107 files changed, 5216 insertions(+), 902 deletions(-)
+ create mode 100644 app/blueprints/auth/ldap_auth.py
+ create mode 100644 app/forms/ldap.py
+ create mode 100644 app/services/ldap/__init__.py
+ create mode 100644 app/services/ldap/client.py
+ create mode 100644 app/services/ldap/encryption.py
+ create mode 100644 app/services/ldap/invitation_ldap.py
+ create mode 100644 app/services/ldap/user_sync.py
+ create mode 100644 app/tasks/ldap_sync.py
+ create mode 100644 app/templates/_partials/ldap_alert.html
+ create mode 100644 app/templates/_partials/ldap_group_sync_result.html
+ create mode 100644 app/templates/_partials/ldap_user_sync_result.html
+ create mode 100644 app/templates/settings/ldap.html
+ create mode 100644 docs/using-wizarr/ldap-authentication.md
+ create mode 100644 migrations/versions/20251226_add_ldap_support.py
+ create mode 100644 migrations/versions/4a39bd26329d_20260329_add_user_created_at.py
+ create mode 100644 migrations/versions/8e5c69f96870_merge_ldap_with_main.py
+ create mode 100644 migrations/versions/e6155a91eb50_add_telegram_notification_fields.py
+ create mode 100644 tests/e2e/test_ldap_admin_login_e2e.py
+ create mode 100644 tests/test_ldap_admin_auth.py
+ create mode 100644 tests/test_ldap_client.py
+ create mode 100644 tests/test_ldap_encryption.py
+ create mode 100644 tests/test_ldap_invitation.py
+ create mode 100644 tests/test_ldap_invitation_form.py
+ create mode 100644 tests/test_session_cache.py
 
 Array
 (
@@ -20592,6 +20733,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
+seaweedbraincy/jellyfin-newsletter
+ghcr.io/seaweedbraincy/jellyfin-newsletter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -20720,8 +20863,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
-hotio/qui
-ghcr.io/hotio/qui:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Skitals/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
@@ -20754,8 +20895,6 @@ ghcr.io/hotio/qui:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-unclecode/crawl4ai
-unclecode/crawl4ai:latest Downloads: 1832704  Stars: 31  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
