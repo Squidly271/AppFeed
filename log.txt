@@ -1101,32 +1101,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   497171d..ece4f2f  main           -> origin/main
- * [new tag]         v1.12.0-beta.4 -> v1.12.0-beta.4
-Updating 497171d..ece4f2f
-Fast-forward
- NeXroll/CHANGELOG.md                               |  39 ++
- NeXroll/backend/dynamic_preroll.py                 |  68 +++-
- NeXroll/backend/main.py                            | 176 +++++++-
- NeXroll/backend/models.py                          |   5 +-
- NeXroll/backend/radarr_connector.py                |   2 +-
- NeXroll/backend/scheduler.py                       |  34 +-
- NeXroll/frontend/build/asset-manifest.json         |   6 +-
- NeXroll/frontend/build/index.html                  |   2 +-
- NeXroll/frontend/build/static/js/main.806ff9fb.js  |   3 +
- ...js.LICENSE.txt => main.806ff9fb.js.LICENSE.txt} |   0
- .../{main.ed55f900.js.map => main.806ff9fb.js.map} |   2 +-
- NeXroll/frontend/build/static/js/main.ed55f900.js  |   3 -
- NeXroll/frontend/src/App.js                        | 448 +++++++++++++++++----
- .../src/components/SequencePreviewModal.js         |   9 +-
- NeXroll/version.py                                 |   2 +-
- NeXroll/version_info.txt                           |  10 +-
- 16 files changed, 659 insertions(+), 150 deletions(-)
- create mode 100644 NeXroll/frontend/build/static/js/main.806ff9fb.js
- rename NeXroll/frontend/build/static/js/{main.ed55f900.js.LICENSE.txt => main.806ff9fb.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.ed55f900.js.map => main.806ff9fb.js.map} (52%)
- delete mode 100644 NeXroll/frontend/build/static/js/main.ed55f900.js
+Already up to date.
 
 Array
 (
@@ -1305,7 +1280,47 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 
 Downloading PanicMechanic00's Repository
 
-Already up to date.
+From https://github.com/ruaan-deysel/unraid-management-agent
+   f92e584..bd7ccb2  main       -> origin/main
+Updating f92e584..bd7ccb2
+Fast-forward
+ daemon/docs/docs.go                             |  10 +
+ daemon/docs/swagger.json                        |  10 +
+ daemon/docs/swagger.yaml                        |  10 +
+ daemon/dto/mqtt.go                              |   7 +
+ daemon/dto/mqtt_test.go                         |  28 ++
+ daemon/dto/network.go                           |   5 +
+ daemon/dto/system.go                            |   0
+ daemon/lib/shell.go                             |  11 +
+ daemon/services/collector_manager.go            |   7 +
+ daemon/services/collectors/network.go           |  60 +++-
+ daemon/services/collectors/network_test.go      | 169 +++++++++
+ daemon/services/collectors/notification.go      |  55 ++-
+ daemon/services/collectors/notification_test.go |  78 +++++
+ daemon/services/collectors/parsing_test.go      |  13 +-
+ daemon/services/collectors/share.go             |  74 +++-
+ daemon/services/collectors/system.go            |  19 +-
+ daemon/services/collectors/system_test.go       |   6 +-
+ daemon/services/collectors/ups.go               |  16 +-
+ daemon/services/controllers/notification.go     |  13 +-
+ daemon/services/mqtt/client.go                  |  80 ++++-
+ daemon/services/mqtt/client_coverage_test.go    |  16 +
+ daemon/services/mqtt/client_test.go             |  77 +++++
+ daemon/services/mqtt/discovery.go               | 433 +++++++++++++++++++++++-
+ daemon/services/orchestrator.go                 |   7 +
+ meta/plugin/unraid-management-agent.page        |  16 +-
+ 25 files changed, 1169 insertions(+), 51 deletions(-)
+ mode change 100644 => 100755 daemon/dto/system.go
+ mode change 100644 => 100755 daemon/services/collectors/network.go
+ mode change 100644 => 100755 daemon/services/collectors/network_test.go
+ mode change 100644 => 100755 daemon/services/collectors/notification.go
+ mode change 100644 => 100755 daemon/services/collectors/notification_test.go
+ mode change 100644 => 100755 daemon/services/collectors/parsing_test.go
+ mode change 100644 => 100755 daemon/services/collectors/system.go
+ mode change 100644 => 100755 daemon/services/collectors/system_test.go
+ mode change 100644 => 100755 daemon/services/controllers/notification.go
+ mode change 100644 => 100755 daemon/services/mqtt/client.go
+ mode change 100644 => 100755 daemon/services/mqtt/discovery.go
 
 Array
 (
@@ -1341,34 +1356,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   bc805ac3..54ef57f1  master     -> origin/master
- * [new tag]           v0.10.27-dev -> v0.10.27-dev
- * [new tag]           v0.10.28-dev -> v0.10.28-dev
-Updating bc805ac3..54ef57f1
-Fast-forward
- Dockerfile                                         |   8 +-
- app/Console/Commands/RefreshEpg.php                |  20 +-
- app/Console/Commands/RefreshPlaylist.php           |   8 +-
- .../Resources/Channels/ChannelResource.php         |  19 +-
- .../Resources/Channels/Pages/ListChannels.php      |  10 +-
- app/Filament/Resources/Series/Pages/ListSeries.php |   3 +
- app/Filament/Resources/Series/SeriesResource.php   |   5 +-
- app/Filament/Resources/Vods/Pages/ListVod.php      |  10 +-
- app/Filament/Resources/Vods/VodResource.php        |  15 +-
- app/Jobs/ProcessEpgImport.php                      |   6 +
- app/Jobs/ProcessM3uImport.php                      |   7 +
- app/Jobs/ProcessM3uImportComplete.php              |  17 +-
- app/Providers/AppServiceProvider.php               |   7 -
- app/Traits/RenderlessColumnUpdates.php             |  19 +
- config/dev.php                                     |   4 +-
- docker/8.4/nginx/nginx.conf                        |  14 +
- .../filament-schemas/components/form.blade.php     |  19 +
- test_schedule_builder.php                          | 498 ---------------------
- 18 files changed, 128 insertions(+), 561 deletions(-)
- create mode 100644 app/Traits/RenderlessColumnUpdates.php
- create mode 100644 resources/views/vendor/filament-schemas/components/form.blade.php
- delete mode 100644 test_schedule_builder.php
+Already up to date.
 
 Array
 (
@@ -5450,15 +5438,7 @@ Removed from CA123
 
 Downloading LubricantJam's Repository
 
-From https://github.com/JamsRepos/Unraid-Templates
-   59962e9..cd4dba1  main       -> origin/main
-Updating 59962e9..cd4dba1
-Fast-forward
- logos/aiometadata.png     | Bin 0 -> 1469609 bytes
- templates/aiometadata.xml |  30 ++++++++++++++++++++++++++++++
- 2 files changed, 30 insertions(+)
- create mode 100644 logos/aiometadata.png
- create mode 100644 templates/aiometadata.xml
+Already up to date.
 
 Array
 (
@@ -20600,12 +20580,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/emaspa/wireview-hwmon-unraid/raw/main/wireview-hwmon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
-laurensguijt/unraid-pwa
-ghcr.io/laurensguijt/unraid-pwa:latest Downloads:   Stars:   Base: unknown
-neur0map/deskmon-agent
-ghcr.io/neur0map/deskmon-agent:latest Downloads:   Stars:   Base: unknown
-bunkerity/bunkerweb-all-in-one
-bunkerity/bunkerweb-all-in-one:latest Downloads: 39381  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-aicliagents/raw/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
@@ -20683,10 +20657,6 @@ bunkerity/bunkerweb-all-in-one:latest Downloads: 39381  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-cedya77/aiometadata
-ghcr.io/cedya77/aiometadata:latest Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/cedya77/aiometadata:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
