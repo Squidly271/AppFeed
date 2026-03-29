@@ -1281,80 +1281,16 @@ Processing /tmp/GitHub/repositoryClone/DevlinDelFuego/unraid-templates/yourls/yo
 Downloading PanicMechanic00's Repository
 
 From https://github.com/ruaan-deysel/unraid-management-agent
-   bd7ccb2..291ab57  main       -> origin/main
- * [new tag]         v2026.03.04 -> v2026.03.04
-Updating bd7ccb2..291ab57
+   291ab57..3245db4  main       -> origin/main
+ * [new tag]         v2026.03.05 -> v2026.03.05
+Updating 291ab57..3245db4
 Fast-forward
- .claude/commands/speckit.analyze.md                | 184 -------
- .claude/commands/speckit.checklist.md              | 294 -----------
- .claude/commands/speckit.clarify.md                | 181 -------
- .claude/commands/speckit.constitution.md           |  82 ----
- .claude/commands/speckit.implement.md              | 135 -----
- .claude/commands/speckit.plan.md                   |  89 ----
- .claude/commands/speckit.specify.md                | 258 ----------
- .claude/commands/speckit.tasks.md                  | 137 ------
- .claude/commands/speckit.taskstoissues.md          |  28 --
- .pre-commit-config.yaml                            |  20 +-
- CHANGELOG.md                                       |  78 +++
- VERSION                                            |   2 +-
- daemon/constants/const.go                          |   3 +
- daemon/constants/topics.go                         |   2 +
- daemon/docs/docs.go                                | 541 +++++++++++++++++++++
- daemon/docs/swagger.json                           | 541 +++++++++++++++++++++
- daemon/docs/swagger.yaml                           | 365 ++++++++++++++
- daemon/domain/context.go                           |   1 +
- daemon/domain/fileconfig.go                        |   1 +
- daemon/dto/fan.go                                  | 112 +++++
- daemon/dto/mcp.go                                  |  26 +
- daemon/lib/hwmon.go                                | 203 ++++++++
- daemon/lib/validation.go                           |  43 ++
- daemon/services/api/cache_store.go                 |   6 +
- daemon/services/api/event_bindings.go              |   3 +
- daemon/services/api/handlers.go                    | 248 ++++++++++
- daemon/services/api/metrics.go                     |  30 ++
- daemon/services/api/server.go                      |  17 +
- daemon/services/collector_manager.go               |   5 +
- daemon/services/collector_manager_coverage_test.go |   2 +-
- daemon/services/collectors/fancontrol.go           | 112 +++++
- daemon/services/collectors/network_test.go         |  20 +-
- daemon/services/collectors/system.go               |  14 +-
- daemon/services/collectors/ups.go                  |   2 +-
- daemon/services/collectors/zfs.go                  |  24 +-
- daemon/services/controllers/fan.go                 | 341 +++++++++++++
- daemon/services/controllers/fan_config.go          | 108 ++++
- daemon/services/controllers/fan_curves.go          | 275 +++++++++++
- daemon/services/controllers/fan_hwmon.go           | 138 ++++++
- daemon/services/controllers/fan_ipmi.go            | 130 +++++
- daemon/services/controllers/fan_safety.go          | 158 ++++++
- daemon/services/mcp/server.go                      | 132 +++++
- daemon/services/mcp/server_test.go                 |   1 +
- daemon/services/mqtt/client.go                     |  16 +-
- daemon/services/mqtt/discovery.go                  |  79 ++-
- daemon/services/orchestrator.go                    |  42 +-
- go.mod                                             |   4 +-
- go.sum                                             |  12 +-
- main.go                                            |   4 +
- unraid-management-agent.plg                        |   4 +-
- unraid-management-agent.xml                        |   2 +-
- 51 files changed, 3805 insertions(+), 1450 deletions(-)
- delete mode 100644 .claude/commands/speckit.analyze.md
- delete mode 100644 .claude/commands/speckit.checklist.md
- delete mode 100644 .claude/commands/speckit.clarify.md
- delete mode 100644 .claude/commands/speckit.constitution.md
- delete mode 100644 .claude/commands/speckit.implement.md
- delete mode 100644 .claude/commands/speckit.plan.md
- delete mode 100644 .claude/commands/speckit.specify.md
- delete mode 100644 .claude/commands/speckit.tasks.md
- delete mode 100644 .claude/commands/speckit.taskstoissues.md
- create mode 100644 daemon/dto/fan.go
- create mode 100644 daemon/lib/hwmon.go
- create mode 100644 daemon/services/collectors/fancontrol.go
- create mode 100644 daemon/services/controllers/fan.go
- create mode 100644 daemon/services/controllers/fan_config.go
- create mode 100644 daemon/services/controllers/fan_curves.go
- create mode 100644 daemon/services/controllers/fan_hwmon.go
- create mode 100644 daemon/services/controllers/fan_ipmi.go
- create mode 100644 daemon/services/controllers/fan_safety.go
+ CHANGELOG.md                         | 14 ++++++++++++++
+ VERSION                              |  2 +-
+ daemon/services/collectors/array.go  | 25 ++++++++++++++++++++-----
+ daemon/services/collectors/system.go |  6 +++---
+ unraid-management-agent.plg          |  4 ++--
+ 5 files changed, 40 insertions(+), 11 deletions(-)
 
 Array
 (
@@ -5565,7 +5501,36 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   c8a457fc..d2dc88a6  main       -> origin/main
+Updating c8a457fc..d2dc88a6
+Fast-forward
+ app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/da/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/de/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/es/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
+ app/translations/he/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/is/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/it/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
+ messages.pot                                     | 2 +-
+ 25 files changed, 25 insertions(+), 25 deletions(-)
 
 Array
 (
@@ -16980,13 +16945,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   c735be4..18fe357  main       -> origin/main
-Updating c735be4..18fe357
-Fast-forward
- automation/change_monitoring/data.json |  6 +++---
- templates/music_downloader.xml         | 23 ++++++++++++++++-------
- 2 files changed, 19 insertions(+), 10 deletions(-)
+Already up to date.
 
 Array
 (
@@ -20648,8 +20607,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-octoeverywhere/octoeverywhere
-octoeverywhere/octoeverywhere Downloads: 298783  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -20681,10 +20638,6 @@ octoeverywhere/octoeverywhere Downloads: 298783  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-matda59/video-to-mp3-converter
-matda59/video-to-mp3-converter:latest Downloads: 602  Stars: 0  Base: unknown
-7eventy7/discodrome
-7eventy7/discodrome Downloads: 5184  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -20701,19 +20654,9 @@ matda59/video-to-mp3-converter:latest Downloads: 602  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-mmartial/comfyui-nvidia-docker
-mmartial/comfyui-nvidia-docker Downloads: 136695  Stars: 7  Base: unknown
-rommapp/romm
-rommapp/romm:latest Downloads: 6589931  Stars: 20  Base: unknown
-cardanocommunity/cardano-node
-cardanocommunity/cardano-node Downloads: 574430  Stars: 20  Base: unknown
-flowiseai/flowise
-flowiseai/flowise Downloads: 6115075  Stars: 87  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
-tinymediamanager/tinymediamanager
-tinymediamanager/tinymediamanager:latest Downloads: 4530664  Stars: 129  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -20808,8 +20751,6 @@ tinymediamanager/tinymediamanager:latest Downloads: 4530664  Stars: 129  Base: u
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-mbrubeck/agate
-ghcr.io/mbrubeck/agate:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -20829,8 +20770,6 @@ ghcr.io/mbrubeck/agate:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-soulteary/cronicle
-soulteary/cronicle:latest Downloads: 199826  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -20848,43 +20787,12 @@ soulteary/cronicle:latest Downloads: 199826  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-cabernetwork/cabernet
-ghcr.io/cabernetwork/cabernet:latest Downloads:   Stars:   Base: unknown
-bropat/eufy-security-ws
-bropat/eufy-security-ws Downloads: 2007851  Stars: 12  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-platerecognizer/alpr-stream
-platerecognizer/alpr-stream:gpu Downloads: 911514  Stars: 5  Base: unknown
-platerecognizer/alpr
-platerecognizer/alpr:latest Downloads: 1698862  Stars: 13  Base: unknown
-lmerza/frigate_plate_recognizer
-lmerza/frigate_plate_recognizer:latest Downloads: 30003  Stars: 0  Base: unknown
-platerecognizer/container
-platerecognizer/container:latest Downloads: 827  Stars: 0  Base: unknown
-platerecognizer/alpr-gpu
-platerecognizer/alpr-gpu:latest Downloads: 12571  Stars: 0  Base: unknown
-platerecognizer/people-tracker
-platerecognizer/people-tracker:latest Downloads: 653  Stars: 0  Base: unknown
-platerecognizer/container-video
-platerecognizer/container-video:latest Downloads: 1111  Stars: 0  Base: unknown
-platerecognizer/usdot
-platerecognizer/usdot:latest Downloads: 292  Stars: 0  Base: unknown
-icyphox/legit
-ghcr.io/icyphox/legit:latest Downloads:   Stars:   Base: unknown
-dendianugerah/reubah
-ghcr.io/dendianugerah/reubah:latest Downloads:   Stars:   Base: unknown
-soggy8/musikat
-ghcr.io/soggy8/musikat:latest Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/soggy8/musikat:latest
-Killed
-platerecognizer/alpr-stream
-platerecognizer/alpr-stream:latest Downloads: 911514  Stars: 5  Base: unknown
-dmitriy/broadlink-mqtt
-dmitriy/broadlink-mqtt Downloads: 20916  Stars: 4  Base: unknown
+ajnart/dcm
+ghcr.io/ajnart/dcm:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -20897,9 +20805,6 @@ dmitriy/broadlink-mqtt Downloads: 20916  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
-Tagged - Can't determine last update
-berriai/litellm
-ghcr.io/berriai/litellm:main-latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
