@@ -1648,7 +1648,115 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   54ef57f1..917cbc5b  master     -> origin/master
+ * [new tag]           v0.10.29-dev -> v0.10.29-dev
+ * [new tag]           v0.10.30-dev -> v0.10.30-dev
+Updating 54ef57f1..917cbc5b
+Fast-forward
+ .env.example                                       |   20 +-
+ .gitignore                                         |    5 +
+ app/Console/Commands/RefreshEpg.php                |   14 +-
+ app/Console/Commands/RefreshPlaylist.php           |   14 +-
+ app/Console/Commands/SyncPlexDvr.php               |   73 ++
+ app/Filament/Actions/BulkModalActionGroup.php      |  107 ++
+ app/Filament/Auth/EditProfile.php                  |   48 +-
+ app/Filament/Auth/Login.php                        |   76 ++
+ app/Filament/Pages/LogViewer.php                   |    2 +-
+ .../Resources/Channels/ChannelResource.php         | 1163 ++++++++---------
+ app/Filament/Resources/Groups/GroupResource.php    |   29 +-
+ app/Filament/Resources/Groups/Pages/EditGroup.php  |    3 +-
+ .../MediaServerIntegrationResource.php             |  450 ++++++-
+ .../Resources/Playlists/PlaylistResource.php       |   35 +
+ app/Filament/Resources/Series/SeriesResource.php   |  655 +++++-----
+ app/Filament/Resources/Users/UserResource.php      |    2 +-
+ .../Resources/VodGroups/Pages/EditVodGroup.php     |    3 +-
+ .../Resources/VodGroups/VodGroupResource.php       |    3 +-
+ app/Filament/Resources/Vods/Pages/ViewVod.php      |    2 +-
+ app/Filament/Resources/Vods/VodResource.php        | 1100 ++++++++--------
+ app/Http/Controllers/Api/EpgApiController.php      |    3 +-
+ app/Http/Controllers/Auth/OidcController.php       |   90 ++
+ app/Http/Controllers/GroupController.php           |    2 +-
+ app/Jobs/CheckXtreamDnsHealth.php                  |   45 +
+ app/Jobs/CreateBackup.php                          |    4 +-
+ app/Jobs/MapEpgToChannels.php                      |    4 +
+ app/Jobs/ProcessM3uImport.php                      |   57 +-
+ app/Jobs/ProcessM3uImportComplete.php              |    8 +-
+ app/Jobs/RestoreBackup.php                         |    4 +-
+ app/Jobs/SyncMediaServer.php                       |    6 +-
+ app/Jobs/SyncPlexDvrJob.php                        |   86 ++
+ app/Jobs/SyncSeriesStrmFiles.php                   |    5 +
+ app/Jobs/SyncVodStrmFiles.php                      |    5 +
+ app/Listeners/BackupFailed.php                     |    2 +-
+ app/Listeners/SyncListener.php                     |    7 +
+ app/Livewire/EpgViewer.php                         |    3 +-
+ app/Livewire/XtreamDnsStatus.php                   |   55 +
+ app/Models/Channel.php                             |   25 +-
+ app/Models/Episode.php                             |   21 +-
+ app/Models/Group.php                               |    3 +-
+ app/Models/MediaServerIntegration.php              |    3 +
+ app/Models/Playlist.php                            |   95 ++
+ app/Models/User.php                                |   12 +-
+ app/Observers/ChannelObserver.php                  |   23 +
+ app/Providers/AppServiceProvider.php               |   33 +-
+ app/Providers/Filament/AdminPanelProvider.php      |   14 +-
+ app/Services/PlexManagementService.php             | 1342 ++++++++++++++++++++
+ app/Services/XtreamHealthService.php               |  128 ++
+ app/Services/XtreamService.php                     |  108 +-
+ composer.json                                      |    4 +-
+ composer.lock                                      |  515 +++++++-
+ config/dev.php                                     |   10 +-
+ config/livewire.php                                |   14 +
+ config/services.php                                |   13 +
+ database/factories/UserFactory.php                 |   11 +
+ ..._09_100000_add_soft_deletes_to_groups_table.php |   29 +
+ ...026_03_27_211617_add_oidc_id_to_users_table.php |   30 +
+ ...26_03_27_223323_add_is_admin_to_users_table.php |   39 +
+ ...agement_fields_to_media_server_integrations.php |   31 +
+ ...add_xtream_fallback_urls_to_playlists_table.php |   22 +
+ ...laylist_fields_to_media_server_integrations.php |   23 +
+ ...8_replace_plex_dvr_columns_with_tuners_json.php |   25 +
+ .../filament/auth/oidc-login-button.blade.php      |   22 +
+ .../resources/vods/pages/view-vod.blade.php        |    2 +-
+ .../views/livewire/xtream-dns-status.blade.php     |   66 +
+ routes/web.php                                     |    5 +
+ tests/Feature/ChannelObserverTest.php              |   86 ++
+ tests/Feature/GroupEnableChannelRecountTest.php    |  177 +++
+ tests/Feature/GroupSoftDeleteTest.php              |  131 ++
+ tests/Feature/IsAdminColumnTest.php                |   76 ++
+ tests/Feature/OidcAuthenticationTest.php           |  192 +++
+ tests/Feature/PlexManagementServiceTest.php        |  780 ++++++++++++
+ tests/Feature/SyncListenerTest.php                 |   50 +
+ tests/Feature/SyncPlexDvrJobTest.php               |  154 +++
+ tests/Feature/UserPermissionsTest.php              |    3 +-
+ tests/Feature/XtreamFallbackUrlsTest.php           |  443 +++++++
+ 76 files changed, 7393 insertions(+), 1557 deletions(-)
+ create mode 100644 app/Console/Commands/SyncPlexDvr.php
+ create mode 100644 app/Filament/Actions/BulkModalActionGroup.php
+ create mode 100644 app/Http/Controllers/Auth/OidcController.php
+ create mode 100644 app/Jobs/CheckXtreamDnsHealth.php
+ create mode 100644 app/Jobs/SyncPlexDvrJob.php
+ create mode 100644 app/Livewire/XtreamDnsStatus.php
+ create mode 100644 app/Observers/ChannelObserver.php
+ create mode 100644 app/Services/PlexManagementService.php
+ create mode 100644 app/Services/XtreamHealthService.php
+ create mode 100644 database/migrations/2025_12_09_100000_add_soft_deletes_to_groups_table.php
+ create mode 100644 database/migrations/2026_03_27_211617_add_oidc_id_to_users_table.php
+ create mode 100644 database/migrations/2026_03_27_223323_add_is_admin_to_users_table.php
+ create mode 100644 database/migrations/2026_03_28_160729_add_plex_management_fields_to_media_server_integrations.php
+ create mode 100644 database/migrations/2026_03_29_000001_add_xtream_fallback_urls_to_playlists_table.php
+ create mode 100644 database/migrations/2026_03_29_113111_add_plex_dvr_device_and_playlist_fields_to_media_server_integrations.php
+ create mode 100644 database/migrations/2026_03_29_130008_replace_plex_dvr_columns_with_tuners_json.php
+ create mode 100644 resources/views/filament/auth/oidc-login-button.blade.php
+ create mode 100644 resources/views/livewire/xtream-dns-status.blade.php
+ create mode 100644 tests/Feature/ChannelObserverTest.php
+ create mode 100644 tests/Feature/GroupEnableChannelRecountTest.php
+ create mode 100644 tests/Feature/GroupSoftDeleteTest.php
+ create mode 100644 tests/Feature/IsAdminColumnTest.php
+ create mode 100644 tests/Feature/OidcAuthenticationTest.php
+ create mode 100644 tests/Feature/PlexManagementServiceTest.php
+ create mode 100644 tests/Feature/SyncPlexDvrJobTest.php
+ create mode 100644 tests/Feature/XtreamFallbackUrlsTest.php
 
 Array
 (
@@ -8460,12 +8568,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   f25c16d..2ea1f3a  master     -> origin/master
-Updating f25c16d..2ea1f3a
-Fast-forward
- jlesage/freefilesync.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21117,6 +21220,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+coderluii/channelwatch
+coderluii/channelwatch:latest Downloads: 1762  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
@@ -21135,8 +21240,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-documenso/documenso
-ghcr.io/documenso/documenso:latest Downloads: 359661  Stars: 6  Base: unknown
+bfritscher/typesense-dashboard
+ghcr.io/bfritscher/typesense-dashboard:latest Downloads: 35590  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 134
