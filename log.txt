@@ -1450,75 +1450,7 @@ Success
 
 Downloading NeXroll's Repository
 
-From https://github.com/JFLXCLOUD/NeXroll
-   2f867fa..0ba6a90  main           -> origin/main
- * [new tag]         v1.12.0-beta.7 -> v1.12.0-beta.7
-Updating 2f867fa..0ba6a90
-Fast-forward
- NeXroll/RELEASE_NOTES_v1.12.0-beta.7.md            |  19 +
- NeXroll/backend/main.py                            |  41 +-
- NeXroll/backend/version.py                         |   2 +-
- NeXroll/frontend/build/asset-manifest.json         |   6 +-
- NeXroll/frontend/build/index.html                  |   2 +-
- .../js/{main.806ff9fb.js => main.1587360b.js}      |   6 +-
- ...js.LICENSE.txt => main.1587360b.js.LICENSE.txt} |   0
- .../{main.806ff9fb.js.map => main.1587360b.js.map} |   2 +-
- NeXroll/version.py                                 |   2 +-
- NeXroll/version_info.txt                           |   8 +-
- Plugins/NeXroll.Jellyfin/NeXroll.Jellyfin.csproj   |  12 +-
- Plugins/NeXroll.Jellyfin/NexrollIntroProvider.cs   |   2 +-
- .../NeXroll.Jellyfin/publish/BitFaster.Caching.dll | Bin 0 -> 164864 bytes
- Plugins/NeXroll.Jellyfin/publish/Diacritics.dll    | Bin 29696 -> 29696 bytes
- Plugins/NeXroll.Jellyfin/publish/Emby.Naming.dll   | Bin 81408 -> 94720 bytes
- Plugins/NeXroll.Jellyfin/publish/Jellyfin.Data.dll | Bin 68608 -> 16384 bytes
- .../publish/Jellyfin.Database.Implementations.dll  | Bin 0 -> 206848 bytes
- .../publish/Jellyfin.Extensions.dll                | Bin 29696 -> 31744 bytes
- .../publish/Jellyfin.MediaEncoding.Keyframes.dll   | Bin 0 -> 12800 bytes
- .../publish/MediaBrowser.Common.dll                | Bin 48128 -> 49152 bytes
- .../publish/MediaBrowser.Controller.dll            | Bin 569344 -> 604672 bytes
- .../publish/MediaBrowser.Model.dll                 | Bin 467456 -> 483328 bytes
- .../Microsoft.EntityFrameworkCore.Abstractions.dll | Bin 0 -> 34872 bytes
- .../Microsoft.EntityFrameworkCore.Relational.dll   | Bin 0 -> 2143816 bytes
- .../publish/Microsoft.EntityFrameworkCore.dll      | Bin 0 -> 2692152 bytes
- .../Microsoft.Extensions.Caching.Abstractions.dll  | Bin 0 -> 36640 bytes
- .../Microsoft.Extensions.Caching.Memory.dll        | Bin 0 -> 48936 bytes
- ...osoft.Extensions.Configuration.Abstractions.dll | Bin 0 -> 29488 bytes
- .../Microsoft.Extensions.Configuration.Binder.dll  | Bin 42784 -> 44840 bytes
- ...Extensions.DependencyInjection.Abstractions.dll | Bin 63768 -> 66352 bytes
- .../Microsoft.Extensions.DependencyInjection.dll   | Bin 92952 -> 93480 bytes
- .../Microsoft.Extensions.Logging.Abstractions.dll  | Bin 65288 -> 67384 bytes
- .../publish/Microsoft.Extensions.Logging.dll       | Bin 50976 -> 52512 bytes
- .../publish/Microsoft.Extensions.Options.dll       | Bin 64776 -> 66352 bytes
- .../publish/Microsoft.Extensions.Primitives.dll    | Bin 0 -> 45352 bytes
- Plugins/NeXroll.Jellyfin/publish/NEbml.Core.dll    | Bin 0 -> 24576 bytes
- .../publish/NeXroll.Jellyfin.deps.json             | 514 +++++++++++++++------
- .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.dll  | Bin 32256 -> 32256 bytes
- .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.pdb  | Bin 23544 -> 25528 bytes
- .../NeXroll.Jellyfin/publish/NeXroll.Jellyfin.xml  |  40 +-
- Plugins/NeXroll.Jellyfin/publish/Polly.Core.dll    | Bin 0 -> 223136 bytes
- Plugins/NeXroll.Jellyfin/publish/Polly.dll         | Bin 0 -> 287648 bytes
- .../publish/System.Net.Http.Json.dll               | Bin 0 -> 57104 bytes
- Releases/installer.nsi                             | 436 +++++++++++++++++
- 44 files changed, 927 insertions(+), 165 deletions(-)
- create mode 100644 NeXroll/RELEASE_NOTES_v1.12.0-beta.7.md
- rename NeXroll/frontend/build/static/js/{main.806ff9fb.js => main.1587360b.js} (63%)
- rename NeXroll/frontend/build/static/js/{main.806ff9fb.js.LICENSE.txt => main.1587360b.js.LICENSE.txt} (100%)
- rename NeXroll/frontend/build/static/js/{main.806ff9fb.js.map => main.1587360b.js.map} (55%)
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/BitFaster.Caching.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Jellyfin.Database.Implementations.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Jellyfin.MediaEncoding.Keyframes.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.EntityFrameworkCore.Abstractions.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.EntityFrameworkCore.Relational.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.EntityFrameworkCore.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Caching.Abstractions.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Caching.Memory.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Configuration.Abstractions.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Microsoft.Extensions.Primitives.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/NEbml.Core.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Polly.Core.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/Polly.dll
- create mode 100644 Plugins/NeXroll.Jellyfin/publish/System.Net.Http.Json.dll
- create mode 100644 Releases/installer.nsi
+Already up to date.
 
 Array
 (
@@ -17308,13 +17240,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   303eea9..b9fb882  main       -> origin/main
-Updating 303eea9..b9fb882
-Fast-forward
- automation/change_monitoring/data.json | 14 +++++++++++++-
- templates/pinepods.xml                 |  8 +++++++-
- 2 files changed, 20 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21053,9 +20979,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-Tagged - Can't determine last update
-schaka/janitorr
-ghcr.io/schaka/janitorr:jvm-stable Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -21189,9 +21112,6 @@ ghcr.io/schaka/janitorr:jvm-stable Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-revenz/fileflows
-revenz/fileflows:stable Downloads: 2416372  Stars: 12  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
@@ -21208,10 +21128,13 @@ revenz/fileflows:stable Downloads: 2416372  Stars: 12  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
-zoraxydocker/zoraxy
-zoraxydocker/zoraxy Downloads: 888932  Stars: 15  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
+Tagged - Can't determine last update
+typesense/typesense
+typesense/typesense:29.0 Downloads: 24895883  Stars: 65  Base: unknown
+docker-public.packages.atlassian.com/sox/atlassian/bitbucket-pipelines-runner
+docker-public.packages.atlassian.com/sox/atlassian/bitbucket-pipelines-runner:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 134
