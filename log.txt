@@ -491,7 +491,12 @@ Success
 
 Downloading Lazaros Chalkidis' Repository
 
-Already up to date.
+From https://github.com/Lazaros-Chalkidis/unraid-CA
+   cec0a72..2c52071  main       -> origin/main
+Updating cec0a72..2c52071
+Fast-forward
+ logsviewer.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -1509,7 +1514,15 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   27d358c..59ac28f  main       -> origin/main
+Updating 27d358c..59ac28f
+Fast-forward
+ CHANGELOG.md      |  6 ++++++
+ package-lock.json | 16 ++++++++--------
+ package.json      |  2 +-
+ version.json      |  2 +-
+ 4 files changed, 16 insertions(+), 10 deletions(-)
 
 Array
 (
@@ -1648,115 +1661,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   54ef57f1..917cbc5b  master     -> origin/master
- * [new tag]           v0.10.29-dev -> v0.10.29-dev
- * [new tag]           v0.10.30-dev -> v0.10.30-dev
-Updating 54ef57f1..917cbc5b
-Fast-forward
- .env.example                                       |   20 +-
- .gitignore                                         |    5 +
- app/Console/Commands/RefreshEpg.php                |   14 +-
- app/Console/Commands/RefreshPlaylist.php           |   14 +-
- app/Console/Commands/SyncPlexDvr.php               |   73 ++
- app/Filament/Actions/BulkModalActionGroup.php      |  107 ++
- app/Filament/Auth/EditProfile.php                  |   48 +-
- app/Filament/Auth/Login.php                        |   76 ++
- app/Filament/Pages/LogViewer.php                   |    2 +-
- .../Resources/Channels/ChannelResource.php         | 1163 ++++++++---------
- app/Filament/Resources/Groups/GroupResource.php    |   29 +-
- app/Filament/Resources/Groups/Pages/EditGroup.php  |    3 +-
- .../MediaServerIntegrationResource.php             |  450 ++++++-
- .../Resources/Playlists/PlaylistResource.php       |   35 +
- app/Filament/Resources/Series/SeriesResource.php   |  655 +++++-----
- app/Filament/Resources/Users/UserResource.php      |    2 +-
- .../Resources/VodGroups/Pages/EditVodGroup.php     |    3 +-
- .../Resources/VodGroups/VodGroupResource.php       |    3 +-
- app/Filament/Resources/Vods/Pages/ViewVod.php      |    2 +-
- app/Filament/Resources/Vods/VodResource.php        | 1100 ++++++++--------
- app/Http/Controllers/Api/EpgApiController.php      |    3 +-
- app/Http/Controllers/Auth/OidcController.php       |   90 ++
- app/Http/Controllers/GroupController.php           |    2 +-
- app/Jobs/CheckXtreamDnsHealth.php                  |   45 +
- app/Jobs/CreateBackup.php                          |    4 +-
- app/Jobs/MapEpgToChannels.php                      |    4 +
- app/Jobs/ProcessM3uImport.php                      |   57 +-
- app/Jobs/ProcessM3uImportComplete.php              |    8 +-
- app/Jobs/RestoreBackup.php                         |    4 +-
- app/Jobs/SyncMediaServer.php                       |    6 +-
- app/Jobs/SyncPlexDvrJob.php                        |   86 ++
- app/Jobs/SyncSeriesStrmFiles.php                   |    5 +
- app/Jobs/SyncVodStrmFiles.php                      |    5 +
- app/Listeners/BackupFailed.php                     |    2 +-
- app/Listeners/SyncListener.php                     |    7 +
- app/Livewire/EpgViewer.php                         |    3 +-
- app/Livewire/XtreamDnsStatus.php                   |   55 +
- app/Models/Channel.php                             |   25 +-
- app/Models/Episode.php                             |   21 +-
- app/Models/Group.php                               |    3 +-
- app/Models/MediaServerIntegration.php              |    3 +
- app/Models/Playlist.php                            |   95 ++
- app/Models/User.php                                |   12 +-
- app/Observers/ChannelObserver.php                  |   23 +
- app/Providers/AppServiceProvider.php               |   33 +-
- app/Providers/Filament/AdminPanelProvider.php      |   14 +-
- app/Services/PlexManagementService.php             | 1342 ++++++++++++++++++++
- app/Services/XtreamHealthService.php               |  128 ++
- app/Services/XtreamService.php                     |  108 +-
- composer.json                                      |    4 +-
- composer.lock                                      |  515 +++++++-
- config/dev.php                                     |   10 +-
- config/livewire.php                                |   14 +
- config/services.php                                |   13 +
- database/factories/UserFactory.php                 |   11 +
- ..._09_100000_add_soft_deletes_to_groups_table.php |   29 +
- ...026_03_27_211617_add_oidc_id_to_users_table.php |   30 +
- ...26_03_27_223323_add_is_admin_to_users_table.php |   39 +
- ...agement_fields_to_media_server_integrations.php |   31 +
- ...add_xtream_fallback_urls_to_playlists_table.php |   22 +
- ...laylist_fields_to_media_server_integrations.php |   23 +
- ...8_replace_plex_dvr_columns_with_tuners_json.php |   25 +
- .../filament/auth/oidc-login-button.blade.php      |   22 +
- .../resources/vods/pages/view-vod.blade.php        |    2 +-
- .../views/livewire/xtream-dns-status.blade.php     |   66 +
- routes/web.php                                     |    5 +
- tests/Feature/ChannelObserverTest.php              |   86 ++
- tests/Feature/GroupEnableChannelRecountTest.php    |  177 +++
- tests/Feature/GroupSoftDeleteTest.php              |  131 ++
- tests/Feature/IsAdminColumnTest.php                |   76 ++
- tests/Feature/OidcAuthenticationTest.php           |  192 +++
- tests/Feature/PlexManagementServiceTest.php        |  780 ++++++++++++
- tests/Feature/SyncListenerTest.php                 |   50 +
- tests/Feature/SyncPlexDvrJobTest.php               |  154 +++
- tests/Feature/UserPermissionsTest.php              |    3 +-
- tests/Feature/XtreamFallbackUrlsTest.php           |  443 +++++++
- 76 files changed, 7393 insertions(+), 1557 deletions(-)
- create mode 100644 app/Console/Commands/SyncPlexDvr.php
- create mode 100644 app/Filament/Actions/BulkModalActionGroup.php
- create mode 100644 app/Http/Controllers/Auth/OidcController.php
- create mode 100644 app/Jobs/CheckXtreamDnsHealth.php
- create mode 100644 app/Jobs/SyncPlexDvrJob.php
- create mode 100644 app/Livewire/XtreamDnsStatus.php
- create mode 100644 app/Observers/ChannelObserver.php
- create mode 100644 app/Services/PlexManagementService.php
- create mode 100644 app/Services/XtreamHealthService.php
- create mode 100644 database/migrations/2025_12_09_100000_add_soft_deletes_to_groups_table.php
- create mode 100644 database/migrations/2026_03_27_211617_add_oidc_id_to_users_table.php
- create mode 100644 database/migrations/2026_03_27_223323_add_is_admin_to_users_table.php
- create mode 100644 database/migrations/2026_03_28_160729_add_plex_management_fields_to_media_server_integrations.php
- create mode 100644 database/migrations/2026_03_29_000001_add_xtream_fallback_urls_to_playlists_table.php
- create mode 100644 database/migrations/2026_03_29_113111_add_plex_dvr_device_and_playlist_fields_to_media_server_integrations.php
- create mode 100644 database/migrations/2026_03_29_130008_replace_plex_dvr_columns_with_tuners_json.php
- create mode 100644 resources/views/filament/auth/oidc-login-button.blade.php
- create mode 100644 resources/views/livewire/xtream-dns-status.blade.php
- create mode 100644 tests/Feature/ChannelObserverTest.php
- create mode 100644 tests/Feature/GroupEnableChannelRecountTest.php
- create mode 100644 tests/Feature/GroupSoftDeleteTest.php
- create mode 100644 tests/Feature/IsAdminColumnTest.php
- create mode 100644 tests/Feature/OidcAuthenticationTest.php
- create mode 100644 tests/Feature/PlexManagementServiceTest.php
- create mode 100644 tests/Feature/SyncPlexDvrJobTest.php
- create mode 100644 tests/Feature/XtreamFallbackUrlsTest.php
+Already up to date.
 
 Array
 (
@@ -4901,13 +4806,19 @@ Removed from CA123
 
 Downloading bmartino1's Repository
 
-Already up to date.
+From https://github.com/bmartino1/unraid-docker-templates
+   9108577..d7e4da9  main       -> origin/main
+Updating 9108577..d7e4da9
+Fast-forward
+ previlaged-unifi-os-server.xml => privileged-unifi-os-server.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rename previlaged-unifi-os-server.xml => privileged-unifi-os-server.xml (99%)
 
 Array
 (
     [https://github.com/bmartino1/unraid-docker-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/previlaged-unifi-os-server.xml
+            [0] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/privileged-unifi-os-server.xml
             [1] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/bitcoincoregui.xml
             [2] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/ckpool.xml
             [3] => /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/avahi.xml
@@ -4928,7 +4839,7 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/previlaged-unifi-os-server.xml...Privileged mode set.  This may not be necessary
+Processing /tmp/GitHub/repositoryClone/bmartino1/unraid-docker-templates/privileged-unifi-os-server.xml...Privileged mode set.  This may not be necessary
 
 Port referenced in webUI does not correspond with a container port defined.  Entry changed to https://[IP]:[PORT:443]
 
@@ -7804,7 +7715,13 @@ Removed from CA123
 
 Downloading Squid's Repository
 
-Already up to date.
+From https://github.com/Squidly271/plugin-repository
+   e3aa8bf..493b5a2  master     -> origin/master
+Updating e3aa8bf..493b5a2
+Fast-forward
+ user.scripts copy.xml | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+ create mode 100644 user.scripts copy.xml
 
 Array
 (
@@ -7812,24 +7729,25 @@ Array
         (
             [0] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/theme.engine.xml
             [1] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/ca.cfg.editor.xml
-            [2] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/autoupdate.xml
-            [3] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/cleanup.xml
-            [4] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/page.notes.xml
-            [5] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/disable.security.xml
-            [6] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/gui-links.xml
-            [7] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/oldappdatabackup.xml
-            [8] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/ca_profile.xml
-            [9] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/turbomode.xml
-            [10] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/wechat.xml
-            [11] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/gui.search.xml
-            [12] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/appdatabackup_v2.xml
-            [13] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/user.scripts.xml
-            [14] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/docker.patch2.xml
-            [15] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/flashremount.xml
-            [16] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/ca.mover.tuning.xml
-            [17] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/unlimited-width.xml
-            [18] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/customtab.xml
-            [19] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/docker.patch.xml
+            [2] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/user.scripts copy.xml
+            [3] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/autoupdate.xml
+            [4] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/cleanup.xml
+            [5] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/page.notes.xml
+            [6] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/disable.security.xml
+            [7] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/gui-links.xml
+            [8] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/oldappdatabackup.xml
+            [9] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/ca_profile.xml
+            [10] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/turbomode.xml
+            [11] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/wechat.xml
+            [12] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/gui.search.xml
+            [13] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/appdatabackup_v2.xml
+            [14] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/user.scripts.xml
+            [15] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/docker.patch2.xml
+            [16] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/flashremount.xml
+            [17] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/ca.mover.tuning.xml
+            [18] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/unlimited-width.xml
+            [19] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/customtab.xml
+            [20] => /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/docker.patch.xml
         )
 
 )
@@ -7837,6 +7755,9 @@ Array
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/theme.engine.xml... Downloading https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/ca.cfg.editor.xml... Downloading https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/user.scripts copy.xml...Privileged mode set.  This may not be necessary
+
+Success
 Processing /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/autoupdate.xml... Downloading https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/cleanup.xml... Downloading https://raw.githubusercontent.com/Squidly271/ca.cleanup.appdata/master/plugins/ca.cleanup.appdata.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/Squidly271/plugin-repository/page.notes.xml... Downloading https://raw.githubusercontent.com/Squidly271/page.notes/main/plugins/page.notes.plg attempt 1...Success
@@ -21220,12 +21141,24 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-coderluii/channelwatch
-coderluii/channelwatch:latest Downloads: 1762  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+rfsbraz/deleterr
+rfsbraz/deleterr:latest Downloads: 16595  Stars: 2  Base: unknown
+mrmn/pdfding
+mrmn/pdfding:latest Downloads: 231477  Stars: 3  Base: unknown
+tiehfood/thrifty-api
+tiehfood/thrifty-api:latest Downloads: 1382  Stars: 0  Base: unknown
+tiehfood/thrifty-ui
+tiehfood/thrifty-ui:latest Downloads: 1560  Stars: 0  Base: unknown
+chadwpalm/lumunarr
+chadwpalm/lumunarr:latest Downloads: 16460  Stars: 0  Base: unknown
+clidey/whodb
+clidey/whodb:latest Downloads: 216741  Stars: 4  Base: unknown
+remyfv/woli-webgui
+remyfv/woli-webgui:latest Downloads: 408  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21240,11 +21173,9 @@ coderluii/channelwatch:latest Downloads: 1762  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-bfritscher/typesense-dashboard
-ghcr.io/bfritscher/typesense-dashboard:latest Downloads: 35590  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 134
+Privileged: 135
 
 
 Updating GitHub
