@@ -495,131 +495,7 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 
 Downloading XCrownedClownsX's Repository
 
-From https://github.com/alexphillips-dev/FolderView-Plus
-   1a6ea74..edb6afd  main           -> origin/main
- * [new tag]         v2026.04.05.13 -> v2026.04.05.13
- * [new tag]         v2026.04.05.12 -> v2026.04.05.12
-Updating 1a6ea74..edb6afd
-Fast-forward
- .github/workflows/release-main.yml                 |  45 +--
- .github/workflows/release-on-main.yml              |   1 +
- README.md                                          |   6 +-
- archive/folderview.plus-2026.04.04.08.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.09.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.10.txz          | Bin 14940688 -> 0 bytes
- archive/folderview.plus-2026.04.04.10.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.11.txz          | Bin 14940996 -> 0 bytes
- archive/folderview.plus-2026.04.04.11.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.12.txz          | Bin 14940996 -> 0 bytes
- archive/folderview.plus-2026.04.04.12.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.13.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.14.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.15.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.16.txz          | Bin 14942352 -> 0 bytes
- archive/folderview.plus-2026.04.04.16.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.04.17.txz.sha256   |   1 -
- archive/folderview.plus-2026.04.05.03.txz          | Bin 0 -> 14952160 bytes
- archive/folderview.plus-2026.04.05.03.txz.sha256   |   1 +
- ...04.13.txz => folderview.plus-2026.04.05.04.txz} | Bin 14942908 -> 14951724 bytes
- archive/folderview.plus-2026.04.05.04.txz.sha256   |   1 +
- ...04.08.txz => folderview.plus-2026.04.05.05.txz} | Bin 14940460 -> 14951908 bytes
- archive/folderview.plus-2026.04.05.05.txz.sha256   |   1 +
- archive/folderview.plus-2026.04.05.06.txz          | Bin 0 -> 14952160 bytes
- archive/folderview.plus-2026.04.05.06.txz.sha256   |   1 +
- archive/folderview.plus-2026.04.05.07.txz          | Bin 0 -> 14952160 bytes
- archive/folderview.plus-2026.04.05.07.txz.sha256   |   1 +
- archive/folderview.plus-2026.04.05.08.txz          | Bin 0 -> 14952160 bytes
- archive/folderview.plus-2026.04.05.08.txz.sha256   |   1 +
- ...04.17.txz => folderview.plus-2026.04.05.09.txz} | Bin 14943000 -> 14951668 bytes
- archive/folderview.plus-2026.04.05.09.txz.sha256   |   1 +
- archive/folderview.plus-2026.04.05.10.txz          | Bin 0 -> 14951592 bytes
- archive/folderview.plus-2026.04.05.10.txz.sha256   |   1 +
- ...04.14.txz => folderview.plus-2026.04.05.11.txz} | Bin 14942080 -> 14951592 bytes
- archive/folderview.plus-2026.04.05.11.txz.sha256   |   1 +
- ...04.15.txz => folderview.plus-2026.04.05.12.txz} | Bin 14942060 -> 14951592 bytes
- archive/folderview.plus-2026.04.05.12.txz.sha256   |   1 +
- ...04.09.txz => folderview.plus-2026.04.05.13.txz} | Bin 14940460 -> 14952396 bytes
- archive/folderview.plus-2026.04.05.13.txz.sha256   |   1 +
- docs/releases/2026.04.05.13.md                     |  29 ++
- folderview.plus.plg                                |  27 +-
- scripts/ensure_plg_changes_entry.sh                | 155 ++++++-
- scripts/include_order_guard.sh                     |   3 +-
- scripts/install_smoke.sh                           |   2 +
- scripts/perf_baseline.json                         |  38 +-
- scripts/perf_baseline_refresh.sh                   |   2 +
- scripts/perf_budget_guard.sh                       |   8 +
- scripts/release_guard.sh                           |  21 +-
- scripts/release_notes_consistency_guard.sh         |  18 +
- scripts/release_prepare.sh                         |  72 +++-
- scripts/remote_publish_guard.sh                    |  96 ++---
- scripts/run_ci_suite.sh                            |   7 +-
- scripts/simulate_main_release.sh                   |  32 ++
- scripts/sync_main_to_dev.sh                        |  24 +-
- scripts/workflow_self_check.sh                     |   4 +
- .../emhttp/plugins/folderview.plus/Folder.page     |  27 +-
- .../plugins/folderview.plus/FolderViewPlus.page    |  63 +--
- .../folderview.plus/folderview.plus.Dashboard.page |  18 +-
- .../folderview.plus/folderview.plus.Docker.page    |  44 +-
- .../folderview.plus/folderview.plus.VMs.page       |  26 +-
- .../plugins/folderview.plus/langs/script.php       |  35 +-
- .../plugins/folderview.plus/scripts/docker.js      |  26 ++
- .../scripts/docker.runtime.preview-actions.js      |   8 +
- .../scripts/folder.editor.members.js               |  58 ++-
- .../plugins/folderview.plus/scripts/folder.js      | 434 +++++++++++++++++++-
- .../scripts/folderviewplus.bulk-assignment.js      | 174 ++++----
- .../folderviewplus.bulk-assignment.shared.js       | 445 +++++++++++++++++++++
- .../folderview.plus/scripts/folderviewplus.js      |   8 +
- .../emhttp/plugins/folderview.plus/server/lib.php  | 111 +++++
- .../plugins/folderview.plus/styles/folder.css      |  77 ++++
- tests/advanced-module-contracts.test.mjs           |   5 +-
- tests/docker-preview-overflow-feature.test.mjs     |  12 +
- tests/extracted-module-bootstrap-guard.test.mjs    |   2 +
- tests/folder-contract-shared-architecture.test.mjs |  13 +-
- tests/folder-editor-member-bulk-move.test.mjs      |  54 +++
- tests/security-hardening.test.mjs                  |  25 +-
- tests/settings-surface-regression.test.mjs         |   4 +
- tests/versioning-guard.test.mjs                    |  54 ++-
- 78 files changed, 1952 insertions(+), 382 deletions(-)
- delete mode 100644 archive/folderview.plus-2026.04.04.08.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.09.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.10.txz
- delete mode 100644 archive/folderview.plus-2026.04.04.10.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.11.txz
- delete mode 100644 archive/folderview.plus-2026.04.04.11.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.12.txz
- delete mode 100644 archive/folderview.plus-2026.04.04.12.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.13.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.14.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.15.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.16.txz
- delete mode 100644 archive/folderview.plus-2026.04.04.16.txz.sha256
- delete mode 100644 archive/folderview.plus-2026.04.04.17.txz.sha256
- create mode 100644 archive/folderview.plus-2026.04.05.03.txz
- create mode 100644 archive/folderview.plus-2026.04.05.03.txz.sha256
- rename archive/{folderview.plus-2026.04.04.13.txz => folderview.plus-2026.04.05.04.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.04.05.04.txz.sha256
- rename archive/{folderview.plus-2026.04.04.08.txz => folderview.plus-2026.04.05.05.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.04.05.05.txz.sha256
- create mode 100644 archive/folderview.plus-2026.04.05.06.txz
- create mode 100644 archive/folderview.plus-2026.04.05.06.txz.sha256
- create mode 100644 archive/folderview.plus-2026.04.05.07.txz
- create mode 100644 archive/folderview.plus-2026.04.05.07.txz.sha256
- create mode 100644 archive/folderview.plus-2026.04.05.08.txz
- create mode 100644 archive/folderview.plus-2026.04.05.08.txz.sha256
- rename archive/{folderview.plus-2026.04.04.17.txz => folderview.plus-2026.04.05.09.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.04.05.09.txz.sha256
- create mode 100644 archive/folderview.plus-2026.04.05.10.txz
- create mode 100644 archive/folderview.plus-2026.04.05.10.txz.sha256
- rename archive/{folderview.plus-2026.04.04.14.txz => folderview.plus-2026.04.05.11.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.04.05.11.txz.sha256
- rename archive/{folderview.plus-2026.04.04.15.txz => folderview.plus-2026.04.05.12.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.04.05.12.txz.sha256
- rename archive/{folderview.plus-2026.04.04.09.txz => folderview.plus-2026.04.05.13.txz} (65%)
- create mode 100644 archive/folderview.plus-2026.04.05.13.txz.sha256
- create mode 100644 docs/releases/2026.04.05.13.md
- create mode 100644 scripts/simulate_main_release.sh
- create mode 100644 src/folderview.plus/usr/local/emhttp/plugins/folderview.plus/scripts/folderviewplus.bulk-assignment.shared.js
- create mode 100644 tests/folder-editor-member-bulk-move.test.mjs
+Already up to date.
 
 Array
 (
@@ -6810,14 +6686,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   f839470..b6f4919  main       -> origin/main
-Updating f839470..b6f4919
-Fast-forward
- unraid/darktable.xml | 5 ++++-
- unraid/digikam.xml   | 5 ++++-
- unraid/rustdesk.xml  | 5 ++++-
- 3 files changed, 12 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21004,12 +20873,7 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-From https://github.com/ProphetSe7en/unraid-templates
-   67ee8bc..001cbbb  main       -> origin/main
-Updating 67ee8bc..001cbbb
-Fast-forward
- vpn-gateway.xml | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21077,8 +20941,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-corentinth/it-tools
-corentinth/it-tools:latest Downloads: 18511699  Stars: 223  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -21110,11 +20972,6 @@ corentinth/it-tools:latest Downloads: 18511699  Stars: 223  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-harung43/dollardollar
-harung43/dollardollar:latest Downloads: 35087  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-zhliau/fika-spt-server-docker
-ghcr.io/zhliau/fika-spt-server-docker:3.11.3 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21264,6 +21121,8 @@ ghcr.io/zhliau/fika-spt-server-docker:3.11.3 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+rustmailer/bichon
+rustmailer/bichon:latest Downloads: 157617  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
@@ -21278,18 +21137,12 @@ ghcr.io/zhliau/fika-spt-server-docker:3.11.3 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
-git.d3vyce.fr/d3vyce/teleinfo_exporter
-git.d3vyce.fr/d3vyce/teleinfo_exporter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Tagged - Can't determine last update
-prophetse7en/vpn-gateway
-ghcr.io/prophetse7en/vpn-gateway:v1.2.14 Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/prophetse7en/vpn-gateway:v1.2.14
 Privileged: 134
 
 
