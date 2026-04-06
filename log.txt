@@ -107,12 +107,11 @@ Processing /tmp/GitHub/repositoryClone/b1tsized/unraid-templates/gcp-dynamic-dns
 Downloading pacnpal's Repository
 
 From https://github.com/pacnpal/unraid-templates
-   ce0b4a3..9cac9ae  main       -> origin/main
-Updating ce0b4a3..9cac9ae
+   9cac9ae..111985d  main       -> origin/main
+Updating 9cac9ae..111985d
 Fast-forward
- compressatorium.xml | 2 +-
- simpleguardhome.xml | 4 ++--
- 2 files changed, 3 insertions(+), 3 deletions(-)
+ simpleguardhome.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -131,12 +130,7 @@ Processing /tmp/GitHub/repositoryClone/pacnpal/unraid-templates/simpleguardhome.
 
 Downloading Goodhall Solutions' Repository
 
-From https://github.com/Goodhall-Solutions/unraid-templates
-   847ef5f..521ac96  main       -> origin/main
-Updating 847ef5f..521ac96
-Fast-forward
- fodaris-server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -163,9 +157,7 @@ Success
 
 Downloading JudoChinX's Repository
 
-From https://github.com/JudoChinX/unraid-templates
- + 1ac215c...a6825a4 main       -> origin/main  (forced update)
-                                                                                Successfully rebased and updated refs/heads/main.
+Already up to date.
 
 Array
 (
@@ -870,14 +862,57 @@ Processing /tmp/GitHub/repositoryClone/hsiang-han/unraid_templates/ca_profile.xm
 Downloading XCrownedClownsX's Repository
 
 From https://github.com/alexphillips-dev/FolderView-Plus
-   edb6afd..37f7df3  main       -> origin/main
-Updating edb6afd..37f7df3
+   37f7df3..a6078bc  main           -> origin/main
+ * [new tag]         v2026.04.06.04 -> v2026.04.06.04
+Updating 37f7df3..a6078bc
 Fast-forward
- scripts/sync_main_to_dev.sh     |  80 +++++++++++++++++++++++++++----
- tests/sync-main-to-dev.test.mjs | 102 ++++++++++++++++++++++++++++++++++++++++
- tests/versioning-guard.test.mjs |   7 ++-
- 3 files changed, 178 insertions(+), 11 deletions(-)
- create mode 100644 tests/sync-main-to-dev.test.mjs
+ archive/folderview.plus-2026.04.04.18.txz.sha256   |   1 -
+ archive/folderview.plus-2026.04.04.19.txz.sha256   |   1 -
+ archive/folderview.plus-2026.04.04.21.txz.sha256   |   1 -
+ archive/folderview.plus-2026.04.04.22.txz.sha256   |   1 -
+ archive/folderview.plus-2026.04.05.13.txz          | Bin 14952396 -> 14955872 bytes
+ archive/folderview.plus-2026.04.05.13.txz.sha256   |   2 +-
+ ...04.19.txz => folderview.plus-2026.04.05.14.txz} | Bin 14943592 -> 14956280 bytes
+ archive/folderview.plus-2026.04.05.14.txz.sha256   |   1 +
+ ...04.18.txz => folderview.plus-2026.04.06.02.txz} | Bin 14943864 -> 14956404 bytes
+ archive/folderview.plus-2026.04.06.02.txz.sha256   |   1 +
+ ...04.22.txz => folderview.plus-2026.04.06.03.txz} | Bin 14943972 -> 14957408 bytes
+ archive/folderview.plus-2026.04.06.03.txz.sha256   |   1 +
+ ...04.21.txz => folderview.plus-2026.04.06.04.txz} | Bin 14943424 -> 14954704 bytes
+ archive/folderview.plus-2026.04.06.04.txz.sha256   |   1 +
+ docs/releases/2026.04.06.04.md                     |  14 ++
+ folderview.plus.plg                                | 125 +++++++++----
+ folderview.plus.xml                                |   2 +-
+ scripts/perf_baseline.json                         |  26 +--
+ .../plugins/folderview.plus/scripts/docker.js      |  44 ++++-
+ .../scripts/docker.runtime.actions.js              |   9 +-
+ .../scripts/docker.runtime.preview-actions.js      | 184 +++++++++++++++++++
+ .../folderview.plus/scripts/folderviewplus.js      |  13 +-
+ .../scripts/folderviewplus.settings-tree.js        | 201 +++++++++++++++++++--
+ .../emhttp/plugins/folderview.plus/scripts/vm.js   |  10 +-
+ .../folderview.plus/server/lib.diagnostics.php     |  93 +++++++++-
+ tests/diagnostics-summary-contract.test.mjs        | 126 +++++++++++++
+ tests/docker-folder-row-quick-actions.test.mjs     |  16 ++
+ tests/folder-action-regression.test.mjs            |   4 +-
+ tests/runtime-action-refresh-optimization.test.mjs |  33 ++++
+ tests/save-cancel-behavior.test.mjs                |  25 ++-
+ tests/settings-bindings.test.mjs                   |   6 +-
+ 31 files changed, 836 insertions(+), 105 deletions(-)
+ delete mode 100644 archive/folderview.plus-2026.04.04.18.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.04.04.19.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.04.04.21.txz.sha256
+ delete mode 100644 archive/folderview.plus-2026.04.04.22.txz.sha256
+ rename archive/{folderview.plus-2026.04.04.19.txz => folderview.plus-2026.04.05.14.txz} (65%)
+ create mode 100644 archive/folderview.plus-2026.04.05.14.txz.sha256
+ rename archive/{folderview.plus-2026.04.04.18.txz => folderview.plus-2026.04.06.02.txz} (65%)
+ create mode 100644 archive/folderview.plus-2026.04.06.02.txz.sha256
+ rename archive/{folderview.plus-2026.04.04.22.txz => folderview.plus-2026.04.06.03.txz} (65%)
+ create mode 100644 archive/folderview.plus-2026.04.06.03.txz.sha256
+ rename archive/{folderview.plus-2026.04.04.21.txz => folderview.plus-2026.04.06.04.txz} (65%)
+ create mode 100644 archive/folderview.plus-2026.04.06.04.txz.sha256
+ create mode 100644 docs/releases/2026.04.06.04.md
+ create mode 100644 tests/diagnostics-summary-contract.test.mjs
+ create mode 100644 tests/runtime-action-refresh-optimization.test.mjs
 
 Array
 (
@@ -2087,28 +2122,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   82e15513..461d7a82  master     -> origin/master
-Updating 82e15513..461d7a82
-Fast-forward
- app/Filament/Pages/ReleaseLogs.php               |  2 +-
- app/Filament/Resources/Series/SeriesResource.php | 35 +++++++++++++++---------
- app/Filament/Resources/Vods/VodResource.php      | 34 +++++++++++++----------
- app/Http/Controllers/ChannelController.php       |  7 ++---
- app/Http/Controllers/WatchProgressController.php |  2 +-
- app/Jobs/SyncSeriesStrmFiles.php                 |  7 +++--
- app/Jobs/SyncVodStrmFiles.php                    | 13 ++-------
- app/Models/Channel.php                           | 23 ++++++++++++++++
- app/Models/Series.php                            | 22 +++++++++++----
- config/horizon.php                               |  2 +-
- config/queue.php                                 |  6 ++--
- docker/8.4/supervisord.conf                      |  2 +-
- routes/api.php                                   |  6 +++-
- routes/console.php                               |  2 +-
- routes/web.php                                   |  8 +++---
- tests/Feature/EpgApiControllerTest.php           |  1 +
- tests/Feature/FetchTmdbIdsTest.php               | 17 ++++++------
- 17 files changed, 118 insertions(+), 71 deletions(-)
+Already up to date.
 
 Array
 (
@@ -7089,12 +7103,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   5264526..9d953e4  main       -> origin/main
-Updating 5264526..9d953e4
-Fast-forward
- unraid/mstream.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21308,10 +21317,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/cloudflare-
 
 Updating stats on containers
 
-pacnpal/simpleguardhome
-pacnpal/simpleguardhome:latest Downloads: 1372  Stars: 0  Base: unknown
-Pulling pacnpal/simpleguardhome:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dereckhall/unraid-deadmans-switch/main/plugin/deadman-switch.plg attempt 1...
@@ -21534,6 +21539,9 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
+Tagged - Can't determine last update
+ferretdb/ferretdb
+ghcr.io/ferretdb/ferretdb:2 Downloads: 17687  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
