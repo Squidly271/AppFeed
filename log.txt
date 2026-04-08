@@ -14,24 +14,18 @@ Downloading Repo Info
 Downloading sworcery's Repository
 
 From https://github.com/sworcery/ChannelHoarder
-   a88a771..3d16d70  main       -> origin/main
- * [new tag]         v1.5.3     -> v1.5.3
-Updating a88a771..3d16d70
+   3d16d70..2b772a8  main       -> origin/main
+ * [new tag]         v1.6.0     -> v1.6.0
+Updating 3d16d70..2b772a8
 Fast-forward
- CHANGELOG.md                                |  22 +++++
- backend/app/config.py                       |   2 +-
- backend/app/main.py                         |  11 +++
- backend/app/services/diagnostics_service.py |   7 +-
- backend/app/services/download_service.py    |   9 +-
- backend/app/services/scheduler_service.py   |  10 +++
- backend/app/services/ytdlp_service.py       |  31 +++++--
- backend/app/tasks/pot_watchdog.py           | 123 ++++++++++++++++++++++++++++
- backend/app/utils/error_codes.py            |   6 ++
- backend/pyproject.toml                      |   2 +-
- docker/entrypoint.sh                        |   2 +-
- frontend/package.json                       |   2 +-
- 12 files changed, 212 insertions(+), 15 deletions(-)
- create mode 100644 backend/app/tasks/pot_watchdog.py
+ .github/workflows/docker-build.yml       |   7 ++-
+ CHANGELOG.md                             |   5 ++
+ backend/app/config.py                    |   2 +-
+ backend/app/services/download_service.py | 104 ++++++++++++++++++-------------
+ backend/pyproject.toml                   |   2 +-
+ frontend/package.json                    |   2 +-
+ frontend/src/pages/DownloadsPage.tsx     |   2 +-
+ 7 files changed, 74 insertions(+), 50 deletions(-)
 
 Array
 (
@@ -272,7 +266,13 @@ Processing /tmp/GitHub/repositoryClone/ipdock/unraid-templates/ipdock.xml...Succ
 
 Downloading geiserx's Repository
 
-Already up to date.
+From https://github.com/GeiserX/docker-templates
+   5fd4829..3a9273b  main       -> origin/main
+Updating 5fd4829..3a9273b
+Fast-forward
+ .github/workflows/stale.yml | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 .github/workflows/stale.yml
 
 Array
 (
@@ -6236,36 +6236,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   34a48d60..7cbb80fb  main       -> origin/main
-Updating 34a48d60..7cbb80fb
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -17669,7 +17640,26 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+   dd261f8..80ef355  main       -> origin/main
+Updating dd261f8..80ef355
+Fast-forward
+ .forgejo/workflows/monitor_app_changes.yml         | 48 ++++++++++++++++++++++
+ .../ISSUE_TEMPLATE/new_template_request.yml        |  0
+ .../workflows/automerge.yml                        |  0
+ .../workflows/main_branch_protection.yml           |  0
+ .../workflows/monitor_app_changes.yml              |  0
+ .../workflows/on_template_status_changes.yml       |  0
+ .../workflows/pr_checks.yml                        |  0
+ automation/change_monitoring/data.json             |  8 ++--
+ 8 files changed, 52 insertions(+), 4 deletions(-)
+ create mode 100644 .forgejo/workflows/monitor_app_changes.yml
+ rename {.github => .github.archive}/ISSUE_TEMPLATE/new_template_request.yml (100%)
+ rename {.github => .github.archive}/workflows/automerge.yml (100%)
+ rename {.github => .github.archive}/workflows/main_branch_protection.yml (100%)
+ rename {.github => .github.archive}/workflows/monitor_app_changes.yml (100%)
+ rename {.github => .github.archive}/workflows/on_template_status_changes.yml (100%)
+ rename {.github => .github.archive}/workflows/pr_checks.yml (100%)
 
 Array
 (
@@ -21279,7 +21269,13 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-Already up to date.
+From https://github.com/ProphetSe7en/unraid-templates
+   6556d42..ba2f902  main       -> origin/main
+Updating 6556d42..ba2f902
+Fast-forward
+ containernetwork-autofix.xml | 46 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+ create mode 100644 containernetwork-autofix.xml
 
 Array
 (
@@ -21290,6 +21286,7 @@ Array
             [2] => /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/vpn-gateway.xml
             [3] => /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/clonarr.xml
             [4] => /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/cloudflare-tunnel.xml
+            [5] => /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containernetwork-autofix.xml
         )
 
 )
@@ -21300,6 +21297,7 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/constat.xml
 Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/vpn-gateway.xml...Success
 Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/clonarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/cloudflare-tunnel.xml...Success
+Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containernetwork-autofix.xml...Success
 
 
 
@@ -21415,8 +21413,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/onlyoffice
-lscr.io/linuxserver/onlyoffice Downloads: 8173  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...
@@ -21495,9 +21491,6 @@ lscr.io/linuxserver/onlyoffice Downloads: 8173  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-Tagged - Can't determine last update
-codeberg.org/forgejo/forgejo
-codeberg.org/forgejo/forgejo:11 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -21538,10 +21531,6 @@ codeberg.org/forgejo/forgejo:11 Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-pyroghostx/forgottenmovies
-pyroghostx/forgottenmovies:latest Downloads: 5378  Stars: 0  Base: unknown
-flixorui/flixor
-ghcr.io/flixorui/flixor:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21558,6 +21547,9 @@ ghcr.io/flixorui/flixor:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
+prophetse7en/containernetwork-autofix
+ghcr.io/prophetse7en/containernetwork-autofix:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/prophetse7en/containernetwork-autofix:latest
 Privileged: 136
 
 
