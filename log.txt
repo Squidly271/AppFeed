@@ -2066,7 +2066,44 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   38a78328..86aa39d6  master     -> origin/master
+Updating 38a78328..86aa39d6
+Fast-forward
+ app/Console/Commands/CheckPluginUpdates.php        |  98 +++++
+ app/Filament/Actions/PluginInstallActions.php      |   2 +-
+ app/Filament/Pages/PluginsDashboard.php            | 124 ++++--
+ .../Resources/Plugins/Pages/EditPlugin.php         |  93 +++++
+ app/Filament/Resources/Plugins/PluginResource.php  |   7 +-
+ app/Livewire/StreamPlayer.php                      |  88 -----
+ app/Models/Plugin.php                              |  16 +
+ app/Plugins/PluginManager.php                      |  20 +
+ app/Plugins/PluginUpdateChecker.php                | 271 +++++++++++++
+ app/Plugins/PluginValidator.php                    |   6 +
+ app/Plugins/Support/PluginManifest.php             |  28 ++
+ app/Providers/AppServiceProvider.php               |   4 -
+ config/plugins.php                                 |   6 +
+ ...te_check_columns_to_extension_plugins_table.php |  39 ++
+ docs/stream-player.md                              | 176 ---------
+ resources/js/vendor/multi-stream-manager.js        |  86 ++++-
+ resources/js/vendor/stream-viewer.js               |  67 +---
+ .../components/floating-stream-players.blade.php   |  41 +-
+ .../filament/pages/plugins-dashboard.blade.php     | 129 ++++---
+ resources/views/livewire/stream-player.blade.php   | 220 -----------
+ resources/views/player/popout.blade.php            |  24 +-
+ routes/console.php                                 |   8 +
+ routes/web.php                                     |   6 +-
+ tests/Feature/PluginUpdateCheckerTest.php          | 427 +++++++++++++++++++++
+ tests/Feature/WatchProgressRateLimitingTest.php    |  15 +
+ 25 files changed, 1324 insertions(+), 677 deletions(-)
+ create mode 100644 app/Console/Commands/CheckPluginUpdates.php
+ delete mode 100644 app/Livewire/StreamPlayer.php
+ create mode 100644 app/Plugins/PluginUpdateChecker.php
+ create mode 100644 database/migrations/2026_04_08_095437_add_update_check_columns_to_extension_plugins_table.php
+ delete mode 100644 docs/stream-player.md
+ delete mode 100644 resources/views/livewire/stream-player.blade.php
+ create mode 100644 tests/Feature/PluginUpdateCheckerTest.php
+ create mode 100644 tests/Feature/WatchProgressRateLimitingTest.php
 
 Array
 (
@@ -5716,12 +5753,11 @@ Processing /tmp/GitHub/repositoryClone/Cobbert/unraid-templates/cardano-node/Car
 Downloading Cyberschorsch's Repository
 
 From https://github.com/Cyberschorsch/unraid-templates
-   9380196..8ebc23c  main       -> origin/main
-Updating 9380196..8ebc23c
+   8ebc23c..d8375b2  main       -> origin/main
+Updating 8ebc23c..d8375b2
 Fast-forward
- templates/unsloth-studio | 40 ++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 40 insertions(+)
- create mode 100644 templates/unsloth-studio
+ templates/unsloth-studio | 34 +++++++++++++++++++---------------
+ 1 file changed, 19 insertions(+), 15 deletions(-)
 
 Array
 (
@@ -21239,11 +21275,13 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 Downloading ProphetSe7en's Repository
 
 From https://github.com/ProphetSe7en/unraid-templates
-   ba2f902..d388a22  main       -> origin/main
-Updating ba2f902..d388a22
+   d388a22..770183c  main       -> origin/main
+Updating d388a22..770183c
 Fast-forward
- containernetwork-autofix.xml | 1 +
- 1 file changed, 1 insertion(+)
+ constat.xml                  | 1 -
+ containernetwork-autofix.xml | 1 -
+ purgebot.xml                 | 1 -
+ 3 files changed, 3 deletions(-)
 
 Array
 (
@@ -21293,8 +21331,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
-matheusvellone/actual-ical
-ghcr.io/matheusvellone/actual-ical Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -21364,17 +21400,13 @@ ghcr.io/matheusvellone/actual-ical Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-Tagged - Can't determine last update
-waazaafr/webserver-apache-php8
-waazaafr/webserver-apache-php8:8.3 Downloads: 5589  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-waazaafr/webserver-apache-php8
-waazaafr/webserver-apache-php8:8.4 Downloads: 5589  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+mikenye/radarbox
+mikenye/radarbox Downloads: 1452296  Stars: 7  Base: unknown
+unknowncall/storyscan
+ghcr.io/unknowncall/storyscan:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
-alexta69/metube
-ghcr.io/alexta69/metube Downloads: 29838103  Stars: 158  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -21391,8 +21423,6 @@ ghcr.io/alexta69/metube Downloads: 29838103  Stars: 158  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/vivaldi
-lscr.io/linuxserver/vivaldi Downloads: 19588  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...
