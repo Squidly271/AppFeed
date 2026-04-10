@@ -122,23 +122,37 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 Downloading sworcery's Repository
 
 From https://github.com/sworcery/ChannelHoarder
-   3633ee5..1d6831b  main       -> origin/main
-Updating 3633ee5..1d6831b
+   1d6831b..a141eb4  main       -> origin/main
+ * [new tag]         v1.7.2     -> v1.7.2
+ * [new tag]         v1.7.9     -> v1.7.9
+Updating 1d6831b..a141eb4
 Fast-forward
- backend/app/config.py                       |  2 +-
- backend/app/main.py                         | 21 +++++++++++++++
- backend/app/services/channel_service.py     | 32 +++++++++++++++++++---
- backend/app/services/youtube_api_service.py | 26 ++++++++++++++++++
- backend/pyproject.toml                      |  2 +-
- frontend/package.json                       |  2 +-
- frontend/src/components/ui/HelpIcon.tsx     | 16 +++++++++++
- frontend/src/components/ui/Tooltip.tsx      | 42 +++++++++++++++++++++++++++++
- frontend/src/pages/ChannelDetailPage.tsx    |  4 ++-
- frontend/src/pages/DownloadsPage.tsx        |  6 ++++-
- frontend/src/pages/SettingsPage.tsx         | 35 +++++++++++++++++++++---
- 11 files changed, 175 insertions(+), 13 deletions(-)
- create mode 100644 frontend/src/components/ui/HelpIcon.tsx
- create mode 100644 frontend/src/components/ui/Tooltip.tsx
+ README.md                                   |  74 ++++---
+ backend/app/config.py                       |   2 +-
+ backend/app/database.py                     |  24 +++
+ backend/app/models.py                       |   5 +
+ backend/app/routers/channels.py             | 296 +++++++++++++++++++++++++++-
+ backend/app/schemas.py                      |  11 ++
+ backend/app/services/channel_service.py     |  18 +-
+ backend/app/services/ytdlp_service.py       |  23 +++
+ backend/app/tasks/process_queue.py          |   1 +
+ backend/app/utils/quality_utils.py          |  22 +++
+ backend/pyproject.toml                      |   2 +-
+ frontend/package.json                       |   2 +-
+ frontend/src/components/ui/DropdownMenu.tsx |  61 ++++++
+ frontend/src/components/ui/HelpIcon.tsx     |  29 ++-
+ frontend/src/components/ui/StatusIcon.tsx   | 120 +++++++++++
+ frontend/src/components/ui/Tooltip.tsx      |   2 +-
+ frontend/src/lib/api.ts                     |  29 ++-
+ frontend/src/lib/types.ts                   |   5 +
+ frontend/src/pages/ChannelDetailPage.tsx    | 242 +++++++++++++++++++----
+ frontend/src/pages/DownloadsPage.tsx        |  29 ++-
+ frontend/src/pages/SettingsPage.tsx         |  48 ++---
+ screenshots/dashboard.png                   | Bin 109281 -> 109221 bytes
+ 22 files changed, 923 insertions(+), 122 deletions(-)
+ create mode 100644 backend/app/utils/quality_utils.py
+ create mode 100644 frontend/src/components/ui/DropdownMenu.tsx
+ create mode 100644 frontend/src/components/ui/StatusIcon.tsx
 
 Array
 (
@@ -440,7 +454,13 @@ Processing /tmp/GitHub/repositoryClone/GeiserX/docker-templates/drumsergio/jelly
 
 Downloading ripleyxlr8's Repository
 
-Already up to date.
+From https://github.com/ripleyXLR8/unraid-templates
+   8b333d4..24edfb7  main       -> origin/main
+Updating 8b333d4..24edfb7
+Fast-forward
+ README.md                 | 2 +-
+ my-cinema-alexa-skill.xml | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -598,12 +618,7 @@ Processing /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/heldevtest.xml..
 
 Downloading nulcraft's Repository
 
-From https://github.com/nulcraft/unraid-templates
-   ca6f2dd..c34a9ce  main       -> origin/main
-Updating ca6f2dd..c34a9ce
-Fast-forward
- boxwatchr.xml | 12 ++++++------
- 1 file changed, 6 insertions(+), 6 deletions(-)
+Already up to date.
 
 Array
 (
@@ -2185,7 +2200,93 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   af2cd3f2..893ea435  master     -> origin/master
+Updating af2cd3f2..893ea435
+Fast-forward
+ app/Console/Commands/ExtractTranslations.php       |    2 +-
+ app/Console/Commands/GenerateTranslations.php      |   54 +-
+ app/Console/Commands/SyncBundledPlugins.php        |   65 -
+ app/Console/Commands/SyncOfficialPlugins.php       |   80 +
+ app/Console/Commands/Xtream2Strm.php               |  160 --
+ .../CopilotTools/EpgChannelMatcherTool.php         |   10 +-
+ app/Filament/CopilotTools/EpgMappingStateTool.php  |    4 +-
+ app/Filament/CopilotTools/ListRecordsTool.php      |    4 +-
+ app/Filament/CopilotTools/SearchDocsTool.php       |    2 +-
+ app/Filament/CopilotTools/SearchRecordsTool.php    |    4 +-
+ app/Filament/Pages/CreatePlugin.php                |   46 +-
+ .../Resources/Channels/ChannelResource.php         |   68 +-
+ .../Resources/Networks/NetworkResource.php         |   24 +-
+ .../Resources/Playlists/PlaylistResource.php       |    8 +-
+ .../Resources/Plugins/Pages/EditPlugin.php         |    2 +-
+ app/Filament/Resources/Plugins/PluginResource.php  |   85 +
+ app/Filament/Resources/Vods/VodResource.php        |   56 +-
+ app/Http/Controllers/Api/M3uProxyApiController.php |   22 +-
+ app/Http/Controllers/XtreamApiController.php       |    2 +-
+ app/Http/Controllers/XtreamStreamController.php    |   11 +-
+ app/Jobs/ProcessM3uImportChunk.php                 |    1 +
+ app/Models/Channel.php                             |   36 +-
+ app/Models/Plugin.php                              |   18 +
+ app/Models/StreamProfile.php                       |   21 +-
+ app/Plugins/PluginManager.php                      |   79 +-
+ app/Providers/Filament/AdminPanelProvider.php      |    1 +
+ composer.lock                                      |   12 +-
+ config/plugins.php                                 |   26 +
+ database/factories/StreamProfileFactory.php        |    1 -
+ ...214646_add_proxy_settings_to_channels_table.php |   34 +
+ docker/8.4/supervisord.conf                        |    8 +-
+ lang/de.json                                       |   68 +-
+ lang/en.json                                       |   62 +
+ lang/es.json                                       |   80 +-
+ lang/fr.json                                       |   86 +-
+ lang/zh_CN.json                                    | 2476 ++++++++++++++++++++
+ lang/zh_CN/auth.php                                |    7 +
+ lang/zh_CN/navigation.php                          |   37 +
+ lang/zh_CN/notifications.php                       |    8 +
+ lang/zh_CN/pages.php                               |   12 +
+ lang/zh_CN/pagination.php                          |    6 +
+ lang/zh_CN/passwords.php                           |    9 +
+ lang/zh_CN/resources.php                           |   17 +
+ lang/zh_CN/validation.php                          |  164 ++
+ plugins-bundled/channels-dvr/Plugin.php            |  350 ---
+ plugins-bundled/channels-dvr/plugin.json           |   95 -
+ .../tv-logos/.github/workflows/plugin-ci.yml       |   36 -
+ plugins-bundled/tv-logos/AGENTS.md                 |   17 -
+ plugins-bundled/tv-logos/CLAUDE.md                 |   11 -
+ plugins-bundled/tv-logos/Plugin.php                |  616 -----
+ plugins-bundled/tv-logos/README.md                 |   70 -
+ plugins-bundled/tv-logos/plugin.json               |  104 -
+ plugins-bundled/tv-logos/scripts/package-plugin.sh |   33 -
+ .../tv-logos/scripts/validate-plugin.php           |   38 -
+ tests/Feature/ChannelStreamProfileTest.php         |  379 +++
+ tests/Feature/XtreamApiControllerTest.php          |   46 +
+ tests/Unit/TvLogosPluginTest.php                   |   98 -
+ 57 files changed, 4008 insertions(+), 1863 deletions(-)
+ delete mode 100644 app/Console/Commands/SyncBundledPlugins.php
+ create mode 100644 app/Console/Commands/SyncOfficialPlugins.php
+ delete mode 100644 app/Console/Commands/Xtream2Strm.php
+ create mode 100644 database/migrations/2026_04_10_214646_add_proxy_settings_to_channels_table.php
+ create mode 100644 lang/zh_CN.json
+ create mode 100644 lang/zh_CN/auth.php
+ create mode 100644 lang/zh_CN/navigation.php
+ create mode 100644 lang/zh_CN/notifications.php
+ create mode 100644 lang/zh_CN/pages.php
+ create mode 100644 lang/zh_CN/pagination.php
+ create mode 100644 lang/zh_CN/passwords.php
+ create mode 100644 lang/zh_CN/resources.php
+ create mode 100644 lang/zh_CN/validation.php
+ delete mode 100644 plugins-bundled/channels-dvr/Plugin.php
+ delete mode 100644 plugins-bundled/channels-dvr/plugin.json
+ delete mode 100644 plugins-bundled/tv-logos/.github/workflows/plugin-ci.yml
+ delete mode 100644 plugins-bundled/tv-logos/AGENTS.md
+ delete mode 100644 plugins-bundled/tv-logos/CLAUDE.md
+ delete mode 100644 plugins-bundled/tv-logos/Plugin.php
+ delete mode 100644 plugins-bundled/tv-logos/README.md
+ delete mode 100644 plugins-bundled/tv-logos/plugin.json
+ delete mode 100755 plugins-bundled/tv-logos/scripts/package-plugin.sh
+ delete mode 100644 plugins-bundled/tv-logos/scripts/validate-plugin.php
+ create mode 100644 tests/Feature/ChannelStreamProfileTest.php
+ delete mode 100644 tests/Unit/TvLogosPluginTest.php
 
 Array
 (
@@ -7168,7 +7269,14 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   107607a..12da062  main       -> origin/main
+Updating 107607a..12da062
+Fast-forward
+ unraid/{ => deprecated}/citron.xml | 1 +
+ unraid/ignore.list                 | 1 +
+ 2 files changed, 2 insertions(+)
+ rename unraid/{ => deprecated}/citron.xml (98%)
 
 Array
 (
@@ -7236,120 +7344,120 @@ Array
             [59] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/booksonic-air.xml
             [60] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/snipe-it.xml
             [61] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/photoshow.xml
-            [62] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/scrutiny.xml
-            [63] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/nntp2nntp.xml
-            [64] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/emulatorjs.xml
-            [65] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/unifi-controller.xml
-            [66] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/muximux.xml
-            [67] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/wireguard.xml
-            [68] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/ffmpeg.xml
-            [69] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/chevereto.xml
-            [70] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/pylon.xml
-            [71] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/quassel-core.xml
-            [72] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/papermerge.xml
-            [73] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ngircd.xml
-            [74] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/transmission.xml
-            [75] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rdesktop.xml
-            [76] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/telegram.xml
-            [77] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ungoogled-chromium.xml
-            [78] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/apprise-api.xml
-            [79] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mylar3.xml
-            [80] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/habridge.xml
-            [81] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mastodon.xml
-            [82] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sonarr.xml
-            [83] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calligra.xml
-            [84] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/filezilla.xml
-            [85] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vivaldi.xml
-            [86] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/limnoria.xml
-            [87] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bookstack.xml
-            [88] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qdirstat.xml
-            [89] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/melonds.xml
-            [90] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vlc.xml
-            [91] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/msedge.xml
-            [92] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thelounge.xml
-            [93] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/homeassistant.xml
-            [94] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grav.xml
-            [95] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/tvheadend.xml
-            [96] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/emby.xml
-            [97] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duplicati.xml
-            [98] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/krita.xml
-            [99] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/manyfold.xml
-            [100] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/modrinth.xml
-            [101] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbget.xml
-            [102] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sealskin.xml
-            [103] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dokuwiki.xml
-            [104] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckdns.xml
-            [105] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/shadps4.xml
-            [106] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/librewolf.xml
-            [107] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pyload-ng.xml
-            [108] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/onlyoffice.xml
-            [109] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/faster-whisper.xml
-            [110] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/netbox.xml
-            [111] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thunderbird.xml
-            [112] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/unifi-network-application.xml
-            [113] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syslog-ng.xml
-            [114] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/smokeping.xml
-            [115] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dogwalk.xml
-            [116] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kometa.xml
-            [117] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/signal.xml
-            [118] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
-            [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
-            [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
-            [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
-            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
-            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
-            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
-            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
-            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
-            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
-            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
-            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
-            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
-            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
-            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
-            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
-            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
-            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
-            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
-            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
-            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
-            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/steam.xml
-            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
-            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
-            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
-            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
-            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
-            [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
-            [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
-            [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/eden.xml
-            [148] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
-            [149] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
-            [150] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
-            [151] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webtop.xml
-            [152] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webcord.xml
-            [153] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wps-office.xml
-            [154] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckstation.xml
-            [155] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/budge.xml
-            [156] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/handbrake.xml
-            [157] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ldap-auth.xml
-            [158] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/inkscape.xml
-            [159] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/opera.xml
-            [160] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/radarr.xml
-            [161] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/beets.xml
-            [162] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rsnapshot.xml
-            [163] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/healthchecks.xml
-            [164] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pcsx2.xml
-            [165] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/scummvm.xml
-            [166] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kicad.xml
-            [167] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/hedgedoc.xml
-            [168] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jackett.xml
-            [169] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/chromium.xml
-            [170] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sickgear.xml
-            [171] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/speedtest-tracker.xml
-            [172] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/prowlarr.xml
-            [173] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webstation.xml
-            [174] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml
-            [175] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/citron.xml
+            [62] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/citron.xml
+            [63] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/scrutiny.xml
+            [64] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/nntp2nntp.xml
+            [65] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/emulatorjs.xml
+            [66] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/unifi-controller.xml
+            [67] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/muximux.xml
+            [68] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/wireguard.xml
+            [69] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/ffmpeg.xml
+            [70] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/chevereto.xml
+            [71] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/pylon.xml
+            [72] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/quassel-core.xml
+            [73] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/papermerge.xml
+            [74] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ngircd.xml
+            [75] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/transmission.xml
+            [76] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rdesktop.xml
+            [77] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/telegram.xml
+            [78] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ungoogled-chromium.xml
+            [79] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/apprise-api.xml
+            [80] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mylar3.xml
+            [81] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/habridge.xml
+            [82] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mastodon.xml
+            [83] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sonarr.xml
+            [84] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calligra.xml
+            [85] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/filezilla.xml
+            [86] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vivaldi.xml
+            [87] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/limnoria.xml
+            [88] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bookstack.xml
+            [89] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qdirstat.xml
+            [90] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/melonds.xml
+            [91] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vlc.xml
+            [92] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/msedge.xml
+            [93] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thelounge.xml
+            [94] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/homeassistant.xml
+            [95] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grav.xml
+            [96] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/tvheadend.xml
+            [97] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/emby.xml
+            [98] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duplicati.xml
+            [99] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/krita.xml
+            [100] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/manyfold.xml
+            [101] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/modrinth.xml
+            [102] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbget.xml
+            [103] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sealskin.xml
+            [104] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dokuwiki.xml
+            [105] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckdns.xml
+            [106] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/shadps4.xml
+            [107] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/librewolf.xml
+            [108] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pyload-ng.xml
+            [109] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/onlyoffice.xml
+            [110] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/faster-whisper.xml
+            [111] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/netbox.xml
+            [112] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/thunderbird.xml
+            [113] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/unifi-network-application.xml
+            [114] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syslog-ng.xml
+            [115] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/smokeping.xml
+            [116] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dogwalk.xml
+            [117] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kometa.xml
+            [118] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/signal.xml
+            [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
+            [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
+            [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
+            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
+            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
+            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
+            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
+            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
+            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
+            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
+            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
+            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
+            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
+            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
+            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
+            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
+            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
+            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
+            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
+            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
+            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
+            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/steam.xml
+            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
+            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
+            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
+            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
+            [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
+            [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
+            [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
+            [148] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/eden.xml
+            [149] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
+            [150] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
+            [151] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
+            [152] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webtop.xml
+            [153] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webcord.xml
+            [154] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wps-office.xml
+            [155] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckstation.xml
+            [156] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/budge.xml
+            [157] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/handbrake.xml
+            [158] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ldap-auth.xml
+            [159] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/inkscape.xml
+            [160] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/opera.xml
+            [161] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/radarr.xml
+            [162] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/beets.xml
+            [163] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rsnapshot.xml
+            [164] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/healthchecks.xml
+            [165] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pcsx2.xml
+            [166] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/scummvm.xml
+            [167] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kicad.xml
+            [168] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/hedgedoc.xml
+            [169] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jackett.xml
+            [170] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/chromium.xml
+            [171] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sickgear.xml
+            [172] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/speedtest-tracker.xml
+            [173] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/prowlarr.xml
+            [174] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webstation.xml
+            [175] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml
             [176] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freecad.xml
             [177] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lidarr.xml
             [178] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mariadb.xml
@@ -7606,6 +7714,9 @@ Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/s
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/photoshow.xml... ***DEPRECATED BY REPO PATH*** No category entry present - using a guessed category
+
+Success
+Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/citron.xml... ***DEPRECATED BY REPO PATH*** No category entry present
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/deprecated/scrutiny.xml... ***DEPRECATED BY REPO PATH*** No category entry present - using a guessed category
@@ -7945,9 +8056,6 @@ Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webstation.x
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml...No category entry present - using a guessed category
-
-Success
-Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/citron.xml...No category entry present
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freecad.xml...No category entry present - using a guessed category
@@ -21363,7 +21471,12 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-Already up to date.
+From https://github.com/ProphetSe7en/unraid-templates
+   770183c..bce53df  main       -> origin/main
+Updating 770183c..bce53df
+Fast-forward
+ vpn-gateway.xml | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -21635,6 +21748,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
+Tagged - Can't determine last update
+prophetse7en/vpn-gateway
+ghcr.io/prophetse7en/vpn-gateway:v1.3.0 Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/prophetse7en/vpn-gateway:v1.3.0
 Privileged: 136
 
 
