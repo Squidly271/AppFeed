@@ -13,7 +13,43 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   ea1e365..6b3a762  main       -> origin/main
+ * [new tag]         v0.4.2     -> v0.4.2
+ * [new tag]         v0.4.0     -> v0.4.0
+ * [new tag]         v0.4.1     -> v0.4.1
+Updating ea1e365..6b3a762
+Fast-forward
+ CLAUDE.md                                     |   12 +-
+ README.md                                     |    5 +-
+ docs/screenshots/meal-plan-edit.png           |  Bin 0 -> 213961 bytes
+ docs/screenshots/meal-plan.png                |  Bin 0 -> 257082 bytes
+ messages/de.json                              |   18 +-
+ messages/en.json                              |   18 +-
+ package.json                                  |    2 +-
+ src/app.css                                   |    1 +
+ src/app.html                                  |    5 +
+ src/hooks.server.ts                           |    6 +-
+ src/lib/changelog.ts                          |   37 +
+ src/lib/components/InfoModal.svelte           |   10 +
+ src/lib/components/MealPlanner.svelte         |  718 +++++++++++++++
+ src/lib/components/ShortcutMenu.svelte        |   21 +
+ src/lib/db/migrations/0018_wise_meteorite.sql |   14 +
+ src/lib/db/migrations/meta/0018_snapshot.json | 1170 +++++++++++++++++++++++++
+ src/lib/db/migrations/meta/_journal.json      |    7 +
+ src/lib/db/schema.ts                          |   12 +
+ src/lib/i18n.svelte.ts                        |   17 +
+ src/lib/userSettingsTypes.ts                  |    6 +-
+ src/routes/api/meal-plan/+server.ts           |  248 ++++++
+ src/routes/einstellungen/+page.svelte         |   57 +-
+ src/routes/rezepte/+page.svelte               |   53 +-
+ 23 files changed, 2411 insertions(+), 26 deletions(-)
+ create mode 100644 docs/screenshots/meal-plan-edit.png
+ create mode 100644 docs/screenshots/meal-plan.png
+ create mode 100644 src/lib/components/MealPlanner.svelte
+ create mode 100644 src/lib/db/migrations/0018_wise_meteorite.sql
+ create mode 100644 src/lib/db/migrations/meta/0018_snapshot.json
+ create mode 100644 src/routes/api/meal-plan/+server.ts
 
 Array
 (
@@ -102,58 +138,7 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-From https://github.com/HabiRabbu/Musicseerr
-   e74ff3b..63ccf03  main       -> origin/main
-Updating e74ff3b..63ccf03
-Fast-forward
- CONTRIBUTING.md                                    |   2 +-
- docker-compose.dev.yml                             |  29 +
- .../{env.dev.example => env.development.example}   |   0
- frontend/eslint.config.js                          |  20 +
- frontend/package.json                              |  10 +-
- frontend/pnpm-lock.yaml                            |  93 ++++
- .../src/lib/{utils/api.ts => api/api-utils.ts}     |   0
- frontend/src/lib/api/client.ts                     |   2 +-
- frontend/src/lib/components/ArtistHero.svelte      |   2 +-
- frontend/src/lib/components/BaseImage.svelte       |   2 +-
- .../src/lib/components/DiscoverArtistHero.svelte   |   2 +-
- frontend/src/lib/components/GenreGrid.svelte       |   2 +-
- .../src/lib/components/SearchSuggestions.svelte    |   2 +-
- .../src/lib/components/SimpleSourceSwitcher.svelte |  46 ++
- frontend/src/lib/components/TimeRangeView.svelte   |   4 +-
- .../lib/components/settings/SettingsCache.svelte   |   2 +-
- .../components/settings/SettingsPreferences.svelte |   2 +-
- frontend/src/lib/constants.ts                      |   3 +-
- frontend/src/lib/queries/HomeQuery.svelte.ts       |  20 +
- .../src/lib/queries/IndexedDbPersister.svelte.ts   |  52 ++
- frontend/src/lib/queries/QueryClient.ts            |  72 +++
- frontend/src/lib/queries/QueryProvider.svelte      |  20 +
- frontend/src/lib/stores/musicSource.ts             |   4 +-
- frontend/src/lib/stores/player.spec.ts             |   1 -
- frontend/src/lib/stores/syncStatus.svelte.ts       |   2 +-
- frontend/src/lib/utils/errorHandling.ts            |   2 +-
- frontend/src/lib/utils/navigationAbort.test.ts     |  14 -
- frontend/src/lib/utils/navigationAbort.ts          |   4 +-
- frontend/src/lib/utils/typeHelpers.ts              |   3 +
- frontend/src/routes/+layout.svelte                 | 585 +++++++++++----------
- frontend/src/routes/+layout.ts                     |  24 +
- frontend/src/routes/+page.svelte                   | 183 +------
- frontend/src/routes/album/[id]/AlbumHeader.svelte  |   2 +-
- frontend/src/routes/genre/+page.svelte             |   2 +-
- frontend/src/routes/playlists/[id]/+page.svelte    |   2 +-
- uv.lock                                            |   3 +
- 36 files changed, 733 insertions(+), 485 deletions(-)
- create mode 100644 docker-compose.dev.yml
- rename frontend/{env.dev.example => env.development.example} (100%)
- rename frontend/src/lib/{utils/api.ts => api/api-utils.ts} (100%)
- create mode 100644 frontend/src/lib/components/SimpleSourceSwitcher.svelte
- create mode 100644 frontend/src/lib/queries/HomeQuery.svelte.ts
- create mode 100644 frontend/src/lib/queries/IndexedDbPersister.svelte.ts
- create mode 100644 frontend/src/lib/queries/QueryClient.ts
- create mode 100644 frontend/src/lib/queries/QueryProvider.svelte
- create mode 100644 frontend/src/lib/utils/typeHelpers.ts
- create mode 100644 frontend/src/routes/+layout.ts
- create mode 100644 uv.lock
+Already up to date.
 
 Array
 (
@@ -472,7 +457,12 @@ Processing /tmp/GitHub/repositoryClone/GeiserX/docker-templates/drumsergio/jelly
 
 Downloading ripleyxlr8's Repository
 
-Already up to date.
+From https://github.com/ripleyXLR8/unraid-templates
+   24edfb7..94d37ff  main       -> origin/main
+Updating 24edfb7..94d37ff
+Fast-forward
+ my-cinema-alexa-skill.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -1587,15 +1577,7 @@ Processing /tmp/GitHub/repositoryClone/medzin/docker-templates/medzin/n8n.xml...
 
 Downloading MrCorehh's Repository
 
-From https://github.com/MrCorehh/unraid-templates
-   7c87927..cb72281  main       -> origin/main
-Updating 7c87927..cb72281
-Fast-forward
- netplexflix/mtdp.png | Bin 0 -> 18172 bytes
- netplexflix/mtdp.xml |  37 +++++++++++++++++++++++++++++++++++++
- 2 files changed, 37 insertions(+)
- create mode 100644 netplexflix/mtdp.png
- create mode 100644 netplexflix/mtdp.xml
+Already up to date.
 
 Array
 (
@@ -2222,7 +2204,13 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   893ea435..e983d2a3  master     -> origin/master
+Updating 893ea435..e983d2a3
+Fast-forward
+ package-lock.json | 25 ++++++++++++++-----------
+ package.json      |  2 +-
+ 2 files changed, 15 insertions(+), 12 deletions(-)
 
 Array
 (
@@ -21400,12 +21388,7 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-From https://github.com/ProphetSe7en/unraid-templates
-   34d6efd..0065ba3  main       -> origin/main
-Updating 34d6efd..0065ba3
-Fast-forward
- dozzle.xml | 17 +++++++++--------
- 1 file changed, 9 insertions(+), 8 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21436,6 +21419,10 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
+ripleyxlr8/my-cinema-amazon-skill-for-kodi
+ghcr.io/ripleyxlr8/my-cinema-amazon-skill-for-kodi:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/ripleyxlr8/my-cinema-amazon-skill-for-kodi:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dereckhall/unraid-deadmans-switch/main/plugin/deadman-switch.plg attempt 1...
@@ -21454,10 +21441,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
-netplexflix/mtdp
-netplexflix/mtdp:latest Downloads: 1379  Stars: 0  Base: unknown
-Pulling netplexflix/mtdp:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
@@ -21514,9 +21497,6 @@ Killed
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-Tagged - Can't determine last update
-ne0ark/internxt-cli
-ne0ark/internxt-cli:main Downloads: 27302  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21649,8 +21629,6 @@ ne0ark/internxt-cli:main Downloads: 27302  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-snuffydev/beatbump
-snuffydev/beatbump:latest Downloads: 62598  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -21672,16 +21650,6 @@ snuffydev/beatbump:latest Downloads: 62598  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-rekkyrosso/ampcast
-ghcr.io/rekkyrosso/ampcast:latest Downloads:   Stars:   Base: unknown
-4gray/iptvnator
-4gray/iptvnator:latest Downloads: 59741  Stars: 5  Base: unknown
-4gray/iptvnator-backend
-4gray/iptvnator-backend:latest Downloads: 3922043  Stars: 3  Base: unknown
-ngrok/ngrok
-ngrok/ngrok:latest Downloads: 2817340  Stars: 64  Base: unknown
-pepaondrugs/playitgg-docker
-pepaondrugs/playitgg-docker Downloads: 69416  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
