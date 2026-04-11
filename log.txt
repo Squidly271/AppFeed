@@ -30,12 +30,7 @@ Processing /tmp/GitHub/repositoryClone/peterthepeter/groly/unraid/groly.xml...Su
 
 Downloading billyboi's Repository
 
-From https://github.com/Billyboii/mcsmanager-unraid
-   fe9ffde..49fbe7b  main       -> origin/main
-Updating fe9ffde..49fbe7b
-Fast-forward
- mcsmanager-daemon.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -125,42 +120,18 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 Downloading sworcery's Repository
 
 From https://github.com/sworcery/ChannelHoarder
-   2b899f7..b045258  main       -> origin/main
- * [new tag]         v1.7.11    -> v1.7.11
-Updating 2b899f7..b045258
+   b045258..c725588  main       -> origin/main
+Updating b045258..c725588
 Fast-forward
- README.md                                     |  15 +++-
- backend/app/config.py                         |  11 ++-
- backend/app/database.py                       |   1 +
- backend/app/main.py                           |   5 ++
- backend/app/routers/channels.py               | 117 +++++++++++++++++++++++++-
- backend/app/routers/downloads.py              |   6 +-
- backend/app/routers/system.py                 |  52 ++++++++++++
- backend/app/schemas.py                        |   9 +-
- backend/app/services/download_service.py      |   6 ++
- backend/app/services/scheduler_service.py     |  10 +++
- backend/app/services/settings_service.py      |  14 +++
- backend/app/services/ytdlp_service.py         |   1 +
- backend/app/tasks/quality_upgrade.py          |  60 +++++++++++++
- backend/app/utils/log_buffer.py               |  44 ++++++++++
- backend/app/utils/permissions.py              |  71 ++++++++++++++++
- backend/app/utils/quality_utils.py            |   2 +-
- backend/pyproject.toml                        |   2 +-
- docker/Dockerfile                             |   4 +-
- docker/docker-compose.yml                     |   1 +
- docker/entrypoint.sh                          |   3 +-
- frontend/package.json                         |   2 +-
- frontend/src/components/ui/StatusIcon.tsx     |   3 +-
- frontend/src/lib/api.ts                       |  22 +++++
- frontend/src/pages/ChannelDetailPage.tsx      |  60 ++++++++++++-
- frontend/src/pages/ChannelsPage.tsx           |  57 +++++++++++++
- frontend/src/pages/DiagnosticsPage.tsx        |  77 ++++++++++++++++-
- frontend/src/pages/SettingsPage.tsx           |  81 +++++++++++++++++-
- frontend/src/pages/StandaloneDownloadPage.tsx |   1 +
- 28 files changed, 715 insertions(+), 22 deletions(-)
- create mode 100644 backend/app/tasks/quality_upgrade.py
- create mode 100644 backend/app/utils/log_buffer.py
- create mode 100644 backend/app/utils/permissions.py
+ README.md                                   |  16 ++-
+ backend/app/routers/channels.py             | 209 +++++++++++++++++-----------
+ backend/app/services/webhook_service.py     |  12 ++
+ backend/app/tasks/quality_upgrade.py        |   6 +
+ frontend/src/components/layout/AppShell.tsx |  15 ++
+ frontend/src/pages/ChannelDetailPage.tsx    |  14 +-
+ frontend/src/pages/ChannelsPage.tsx         |  10 +-
+ frontend/src/pages/SettingsPage.tsx         |   9 +-
+ 8 files changed, 195 insertions(+), 96 deletions(-)
 
 Array
 (
@@ -21429,6 +21400,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
+liorbasss/tandarr
+liorbasss/tandarr:latest Downloads: 501  Stars: 0  Base: unknown
+dervish/unraidmonitorbot
+dervish/unraidmonitorbot:latest Downloads: 2519  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
@@ -21485,8 +21460,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-noah231515/receipt-wrangler
-noah231515/receipt-wrangler:latest Downloads: 173631  Stars: 0  Base: unknown
+lemker/unifi-os-server
+ghcr.io/lemker/unifi-os-server:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21505,8 +21480,6 @@ noah231515/receipt-wrangler:latest Downloads: 173631  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-entree3000/qbithelparr
-entree3000/qbithelparr:latest Downloads: 496  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -21609,9 +21582,6 @@ entree3000/qbithelparr:latest Downloads: 496  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
-Tagged - Can't determine last update
-securecompliance/gvm
-securecompliance/gvm:11.0.1-r3 Downloads: 2356562  Stars: 50  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
@@ -21640,24 +21610,15 @@ securecompliance/gvm:11.0.1-r3 Downloads: 2356562  Stars: 50  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid-lcd/master/lcd_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
-signtools/signtools
-signtools/signtools Downloads: 103957  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+opensensor/lightnvr
+ghcr.io/opensensor/lightnvr Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-mauricenino/dashdot
-mauricenino/dashdot:latest Downloads: 5114941  Stars: 48  Base: unknown
-slskd/slskd
-slskd/slskd:latest Downloads: 2862414  Stars: 14  Base: unknown
-sahara101/dakosys
-ghcr.io/sahara101/dakosys:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-oleduc/docker-obsidian-livesync-couchdb
-oleduc/docker-obsidian-livesync-couchdb:stable Downloads: 205791  Stars: 5  Base: unknown
-brockbreacher/join-bot
-ghcr.io/brockbreacher/join-bot Downloads: 241  Stars: 0  Base: unknown
+ps5-mqtt/amd64
+ghcr.io/funkeyflo/ps5-mqtt/amd64:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
