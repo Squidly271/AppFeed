@@ -13,7 +13,28 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   7780cea..ea1e365  main       -> origin/main
+Updating 7780cea..ea1e365
+Fast-forward
+ messages/de.json                            |    6 +
+ messages/en.json                            |    6 +
+ package.json                                |    2 +-
+ src/app.html                                |    8 +
+ src/hooks.server.ts                         |   32 +-
+ src/lib/changelog.ts                        |   13 +
+ src/lib/i18n.svelte.ts                      |    7 +
+ src/lib/password.ts                         |    6 +-
+ src/lib/server/loginRateLimit.ts            |   10 +
+ src/lib/server/pushDebounce.ts              |   14 +-
+ src/lib/server/pushNotifications.ts         |   23 +-
+ src/lib/userSettings.svelte.ts              |   16 +-
+ src/lib/userSettingsTypes.ts                |    2 +
+ src/routes/+layout.svelte                   |    9 +
+ src/routes/einstellungen/+page.svelte       | 1098 +++++++++++++++------------
+ src/routes/einstellungen/users/+page.svelte |  126 +--
+ src/routes/listen/[id]/+page.svelte         |    7 +-
+ 17 files changed, 802 insertions(+), 583 deletions(-)
 
 Array
 (
@@ -120,11 +141,26 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 Downloading sworcery's Repository
 
 From https://github.com/sworcery/ChannelHoarder
-   e413702..32fa155  main       -> origin/main
-Updating e413702..32fa155
+   32fa155..ae92a00  main       -> origin/main
+Updating 32fa155..ae92a00
 Fast-forward
- backend/app/routers/channels.py | 57 ++++++++++++++++++++++++++++++++++-------
- 1 file changed, 48 insertions(+), 9 deletions(-)
+ .gitignore                               |   2 +-
+ CHANGELOG.md                             |  18 +
+ README.md                                |   2 -
+ backend/app/config.py                    |   2 +-
+ backend/app/routers/channels.py          | 613 +++++++++++++++++++++++--------
+ backend/app/services/channel_service.py  |   5 +-
+ backend/app/services/ytdlp_service.py    |  19 +-
+ backend/app/utils/cookie_utils.py        |   9 +-
+ backend/pyproject.toml                   |   2 +-
+ frontend/package.json                    |   2 +-
+ frontend/src/lib/api.ts                  |  12 +
+ frontend/src/pages/ChannelDetailPage.tsx | 235 +++++++++++-
+ frontend/src/pages/ChannelsPage.tsx      | 135 +++++--
+ frontend/src/pages/SettingsPage.tsx      |   3 +
+ screenshots/dashboard.png                | Bin 109221 -> 0 bytes
+ 15 files changed, 842 insertions(+), 217 deletions(-)
+ delete mode 100644 screenshots/dashboard.png
 
 Array
 (
@@ -7149,12 +7185,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   12da062..7f20dfe  main       -> origin/main
-Updating 12da062..7f20dfe
-Fast-forward
- unraid/mylar3.xml | 19 ++++++++-----------
- 1 file changed, 8 insertions(+), 11 deletions(-)
+Already up to date.
 
 Array
 (
@@ -17735,12 +17766,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   a545b45..07ee9ca  main       -> origin/main
-Updating a545b45..07ee9ca
-Fast-forward
- automation/change_monitoring/data.json | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21354,7 +21380,12 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-Already up to date.
+From https://github.com/ProphetSe7en/unraid-templates
+   aaecd8b..34d6efd  main       -> origin/main
+Updating aaecd8b..34d6efd
+Fast-forward
+ dozzle.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -21403,10 +21434,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/johnpwhite/unraid-plg-zram/raw/main/unraid-zram-card.plg attempt 1...
-netplexflix/wtwp
-netplexflix/wtwp:latest Downloads: 5981  Stars: 0  Base: unknown
-speedarr/speedarr
-speedarr/speedarr:latest Downloads: 4907  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
@@ -21498,6 +21525,8 @@ speedarr/speedarr:latest Downloads: 4907  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/dogwalk
+lscr.io/linuxserver/dogwalk Downloads: 4572  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...
@@ -21534,15 +21563,13 @@ speedarr/speedarr:latest Downloads: 4907  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-rmoriz/openra
-rmoriz/openra Downloads: 1958926  Stars: 7  Base: unknown
+stashapp/stash
+stashapp/stash Downloads: 28217713  Stars: 98  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
-jeffersonjhunt/shinysdr
-jeffersonjhunt/shinysdr Downloads: 46106  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...
@@ -21588,6 +21615,8 @@ jeffersonjhunt/shinysdr Downloads: 46106  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
+hotio/slskd
+ghcr.io/hotio/slskd:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Skitals/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
@@ -21597,8 +21626,6 @@ jeffersonjhunt/shinysdr Downloads: 46106  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/kata.runtime/master/plugins/kata.runtime.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
-bitnami/keycloak
-bitnami/keycloak:latest Downloads: 32062536  Stars: 119  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
@@ -21618,17 +21645,24 @@ bitnami/keycloak:latest Downloads: 32062536  Stars: 119  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-Tagged - Can't determine last update
-ai-dock/comfyui
-ghcr.io/ai-dock/comfyui:latest-cuda Downloads:   Stars:   Base: unknown
-vllm/vllm-openai
-vllm/vllm-openai Downloads: 17589674  Stars: 271  Base: unknown
-figro/flood-ui
-figro/flood-ui Downloads: 23481  Stars: 0  Base: unknown
+sagetvopen/sagetv-server-java11
+sagetvopen/sagetv-server-java11 Downloads: 907  Stars: 0  Base: unknown
+sagetvopen/sagetv-server-java8
+sagetvopen/sagetv-server-java8 Downloads: 1553  Stars: 0  Base: unknown
+sagetvopen/sagetv-server-java16
+sagetvopen/sagetv-server-java16 Downloads: 2170  Stars: 0  Base: unknown
+nq00/hyperion-ng
+nq00/hyperion-ng Downloads: 14671  Stars: 0  Base: unknown
+flaminel/cleanuperr
+flaminel/cleanuperr:latest Downloads:   Stars:   Base: unknown
+dolibarr/dolibarr
+dolibarr/dolibarr Downloads: 502663  Stars: 36  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+vogler/free-games-claimer
+ghcr.io/vogler/free-games-claimer:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21638,17 +21672,11 @@ figro/flood-ui Downloads: 23481  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
-fireflyiii/data-importer
-fireflyiii/data-importer:latest Downloads: 11188890  Stars: 20  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
-datarhei/restreamer
-datarhei/restreamer Downloads: 5191721  Stars: 78  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-RiDDiX/home-assistant-matter-hub
-ghcr.io/RiDDiX/home-assistant-matter-hub:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 136
