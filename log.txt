@@ -102,7 +102,287 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-Already up to date.
+From https://github.com/HabiRabbu/Musicseerr
+   e523f2c..0f25ebc  main       -> origin/main
+Updating e523f2c..0f25ebc
+Fast-forward
+ Makefile                                           |   79 +-
+ README.md                                          |   19 +-
+ backend/api/v1/routes/jellyfin_library.py          |  306 +++++-
+ backend/api/v1/routes/navidrome_library.py         |  283 +++++-
+ backend/api/v1/routes/playlists.py                 |   16 +-
+ backend/api/v1/routes/plex_auth.py                 |   62 ++
+ backend/api/v1/routes/plex_library.py              |  386 ++++++++
+ backend/api/v1/routes/settings.py                  |   51 +
+ backend/api/v1/routes/stream.py                    |   72 +-
+ backend/api/v1/schemas/advanced_settings.py        |   37 +-
+ backend/api/v1/schemas/common.py                   |    1 +
+ backend/api/v1/schemas/jellyfin.py                 |  123 +++
+ backend/api/v1/schemas/navidrome.py                |  130 +++
+ backend/api/v1/schemas/playlists.py                |    6 +-
+ backend/api/v1/schemas/plex.py                     |  231 +++++
+ backend/api/v1/schemas/settings.py                 |   30 +
+ backend/core/dependencies/__init__.py              |    6 +
+ backend/core/dependencies/repo_providers.py        |   29 +-
+ backend/core/dependencies/service_providers.py     |   28 +-
+ backend/core/dependencies/type_aliases.py          |    9 +
+ backend/core/exceptions.py                         |   15 +
+ backend/core/tasks.py                              |   20 +-
+ backend/infrastructure/cache/cache_keys.py         |   26 +-
+ backend/infrastructure/persistence/mbid_store.py   |   77 +-
+ backend/main.py                                    |   15 +
+ backend/repositories/async_playlist_repository.py  |   13 +-
+ backend/repositories/jellyfin_models.py            |   81 ++
+ backend/repositories/jellyfin_repository.py        |  404 +++++++-
+ backend/repositories/navidrome_models.py           |  149 +++
+ backend/repositories/navidrome_repository.py       |  234 ++++-
+ backend/repositories/playlist_repository.py        |   78 +-
+ backend/repositories/plex_models.py                |  313 ++++++
+ backend/repositories/plex_repository.py            |  864 +++++++++++++++++
+ backend/repositories/protocols/__init__.py         |    2 +
+ backend/repositories/protocols/jellyfin.py         |   49 +-
+ backend/repositories/protocols/navidrome.py        |   42 +
+ backend/repositories/protocols/plex.py             |  157 +++
+ backend/services/artist_service.py                 |    7 +-
+ backend/services/home/facade.py                    |    3 +-
+ backend/services/home/integration_helpers.py       |    9 +
+ backend/services/jellyfin_library_service.py       |  442 ++++++++-
+ backend/services/jellyfin_playback_service.py      |   19 +-
+ backend/services/navidrome_library_service.py      |  459 ++++++++-
+ backend/services/navidrome_playback_service.py     |   35 +-
+ backend/services/playlist_service.py               |   96 +-
+ backend/services/plex_library_service.py           | 1021 ++++++++++++++++++++
+ backend/services/plex_playback_service.py          |   71 ++
+ backend/services/preferences_service.py            |   65 ++
+ backend/services/settings_service.py               |  125 ++-
+ backend/tests/repositories/test_plex_repository.py |  836 ++++++++++++++++
+ backend/tests/routes/test_discovery_routes.py      |  153 +++
+ backend/tests/routes/test_now_playing_routes.py    |  155 +++
+ backend/tests/routes/test_plex_auth.py             |   99 ++
+ backend/tests/routes/test_plex_routes.py           |  280 ++++++
+ backend/tests/routes/test_plex_settings.py         |  143 +++
+ backend/tests/services/test_content_enrichment.py  |  230 +++++
+ backend/tests/services/test_deep_discovery.py      |  269 ++++++
+ backend/tests/services/test_discovery.py           |  263 +++++
+ .../services/test_jellyfin_library_service.py      |  218 +++++
+ .../services/test_navidrome_library_service.py     |   66 +-
+ backend/tests/services/test_now_playing.py         |  321 ++++++
+ backend/tests/services/test_playlist_service.py    |    4 +-
+ .../services/test_playlist_source_resolution.py    |    2 +-
+ .../tests/services/test_plex_integration_status.py |   61 ++
+ .../tests/services/test_plex_library_service.py    |  411 ++++++++
+ .../tests/services/test_plex_playback_service.py   |  128 +++
+ .../tests/services/test_plex_settings_lifecycle.py |  171 ++++
+ .../tests/services/test_source_playlist_import.py  |  330 +++++++
+ backend/tests/test_audiodb_settings.py             |   14 +-
+ backend/tests/test_dependencies_package.py         |    2 +-
+ backend/tests/test_peer_review_fixes.py            |  266 +++++
+ config/config.example.json                         |    5 +
+ frontend/eslint.config.js                          |    6 +
+ frontend/src/app.css                               |   73 ++
+ frontend/src/lib/actions/reveal.ts                 |   48 +
+ frontend/src/lib/api/playlists.spec.ts             |    3 +-
+ frontend/src/lib/api/playlists.ts                  |    6 +-
+ .../src/lib/components/AddToPlaylistModal.svelte   |   33 +-
+ frontend/src/lib/components/AlbumGrid.svelte       |   93 ++
+ .../src/lib/components/ArtistIndexSidebar.svelte   |  103 ++
+ .../src/lib/components/AudioQualityBadge.svelte    |   61 ++
+ frontend/src/lib/components/BrowseHeroCards.svelte |  182 ++++
+ frontend/src/lib/components/DiscoveryShelf.svelte  |   59 ++
+ .../src/lib/components/DiscoveryTrackTable.svelte  |   79 ++
+ frontend/src/lib/components/DiscoveryZone.svelte   |   32 +
+ .../src/lib/components/FeaturedAlbumHero.svelte    |  142 +++
+ frontend/src/lib/components/GenrePillFilter.svelte |   79 ++
+ .../src/lib/components/GenreSongsBrowser.svelte    |  147 +++
+ frontend/src/lib/components/HomeSection.svelte     |    1 +
+ .../lib/components/HomeSectionNowPlaying.svelte    |   96 ++
+ frontend/src/lib/components/HubPageSkeleton.svelte |   22 +
+ frontend/src/lib/components/HubShelf.svelte        |   50 +
+ .../src/lib/components/InstantMixButton.svelte     |   18 +
+ .../src/lib/components/LastFmEnrichment.svelte     |    2 +-
+ .../src/lib/components/LibraryFilterBar.svelte     |  100 +-
+ frontend/src/lib/components/LibraryPage.svelte     |   58 +-
+ frontend/src/lib/components/LyricsPanel.svelte     |  162 ++++
+ frontend/src/lib/components/MetadataPanel.svelte   |  115 +++
+ .../src/lib/components/MostPlayedSection.svelte    |  109 +++
+ .../src/lib/components/NowPlayingWidget.svelte     |  107 ++
+ frontend/src/lib/components/PageHeader.svelte      |    2 +-
+ frontend/src/lib/components/Player.svelte          |  111 ++-
+ frontend/src/lib/components/PlaylistCard.svelte    |   65 +-
+ .../src/lib/components/PlaylistCard.svelte.spec.ts |    3 +-
+ .../src/lib/components/PlaylistImportBanner.svelte |  167 ++++
+ frontend/src/lib/components/PlexIcon.svelte        |   14 +
+ frontend/src/lib/components/QueueDrawer.svelte     |    5 +
+ frontend/src/lib/components/QuickStatsBar.svelte   |   45 +
+ .../src/lib/components/SidebarVisualiser.svelte    |   32 +
+ .../lib/components/SourceAlbumCardCompact.svelte   |   32 +
+ .../src/lib/components/SourceAlbumModal.svelte     |  193 +++-
+ .../src/lib/components/SourceArtistCard.svelte     |   74 ++
+ frontend/src/lib/components/SourceHubHeader.svelte |   47 +
+ .../src/lib/components/SourcePickerDropdown.svelte |    3 +
+ .../src/lib/components/SourcePlaylistCard.svelte   |   66 ++
+ .../src/lib/components/SourcePlaylistDetail.svelte |  150 +++
+ .../src/lib/components/SourceTrackTable.svelte     |   74 ++
+ .../settings/SettingsBackendCache.svelte           |   36 +-
+ .../settings/SettingsFrontendCache.svelte          |   12 +-
+ .../lib/components/settings/SettingsPlex.svelte    |  326 +++++++
+ .../components/settings/SettingsPreferences.svelte |   10 +-
+ .../components/settings/advanced-settings-types.ts |    5 +
+ frontend/src/lib/constants.ts                      |  171 +++-
+ frontend/src/lib/player/NativeAudioSource.ts       |    2 +-
+ frontend/src/lib/player/createSource.ts            |    3 +
+ frontend/src/lib/player/launchPlexPlayback.spec.ts |  245 +++++
+ frontend/src/lib/player/launchPlexPlayback.ts      |   46 +
+ frontend/src/lib/player/navidromePlaybackApi.ts    |    9 +
+ frontend/src/lib/player/plexPlaybackApi.spec.ts    |  187 ++++
+ frontend/src/lib/player/plexPlaybackApi.ts         |   52 +
+ frontend/src/lib/player/queueHelpers.spec.ts       |    3 +-
+ frontend/src/lib/player/queueHelpers.ts            |  103 +-
+ frontend/src/lib/player/types.ts                   |    8 +-
+ frontend/src/lib/queries/HomeQuery.svelte.ts       |    2 +-
+ .../src/lib/queries/IndexedDbPersister.svelte.ts   |    1 -
+ frontend/src/lib/queries/QueryClient.ts            |   11 +
+ .../src/lib/queries/artist/ArtistQueries.svelte.ts |  154 +++
+ .../lib/queries/artist/ArtistQueryKeyFactory.ts    |   15 +
+ frontend/src/lib/stores/cacheTtl.ts                |   14 +-
+ frontend/src/lib/stores/integration.ts             |    3 +
+ frontend/src/lib/stores/nowPlayingMerged.svelte.ts |  133 +++
+ .../src/lib/stores/nowPlayingSessions.svelte.ts    |  281 ++++++
+ frontend/src/lib/stores/player.svelte.ts           |  101 +-
+ frontend/src/lib/stores/playerJellyfinReporting.ts |   16 +-
+ frontend/src/lib/stores/playerPlaybackMethods.ts   |    6 +-
+ frontend/src/lib/stores/playerSourceResolver.ts    |    6 +
+ frontend/src/lib/types.ts                          |  464 ++++++++-
+ frontend/src/lib/utils/albumCardPlayback.ts        |   57 +-
+ frontend/src/lib/utils/albumDetailCache.ts         |    4 +-
+ frontend/src/lib/utils/artistDetailCache.ts        |   28 -
+ frontend/src/lib/utils/formatting.ts               |    5 +-
+ frontend/src/lib/utils/libraryController.svelte.ts |   70 +-
+ .../src/lib/utils/libraryTrackLoader.svelte.ts     |  194 ++++
+ frontend/src/lib/utils/plexLibraryCache.ts         |   36 +
+ frontend/src/lib/utils/sources.ts                  |    4 +-
+ frontend/src/lib/utils/typeHelpers.ts              |    3 -
+ frontend/src/routes/+layout.svelte                 |   80 +-
+ frontend/src/routes/+page.svelte                   |   30 +-
+ frontend/src/routes/album/[id]/+page.svelte        |    8 +
+ .../src/routes/album/[id]/AlbumSourceBars.svelte   |   34 +-
+ .../src/routes/album/[id]/AlbumTrackList.svelte    |   45 +-
+ frontend/src/routes/album/[id]/albumFetchers.ts    |   12 +
+ .../src/routes/album/[id]/albumPageState.svelte.ts |   98 +-
+ .../src/routes/album/[id]/albumPlaybackHandlers.ts |   57 +-
+ frontend/src/routes/artist/[id]/+page.svelte       |  710 +++-----------
+ frontend/src/routes/artist/[id]/+page.ts           |    4 +
+ frontend/src/routes/library/+page.svelte           |   33 +-
+ frontend/src/routes/library/jellyfin/+page.svelte  |  664 ++++++++++---
+ .../routes/library/jellyfin/albums/+page.svelte    |  210 ++++
+ .../routes/library/jellyfin/artists/+page.svelte   |  180 ++++
+ .../routes/library/jellyfin/playlists/+page.svelte |   52 +
+ .../library/jellyfin/playlists/[id]/+page.svelte   |   19 +
+ .../routes/library/jellyfin/tracks/+page.svelte    |  372 +++++++
+ frontend/src/routes/library/local/+page.svelte     |    7 +-
+ frontend/src/routes/library/navidrome/+page.svelte |  797 +++++++++++----
+ .../routes/library/navidrome/albums/+page.svelte   |  205 ++++
+ .../routes/library/navidrome/artists/+page.svelte  |  144 +++
+ .../library/navidrome/playlists/+page.svelte       |   52 +
+ .../library/navidrome/playlists/[id]/+page.svelte  |   19 +
+ .../routes/library/navidrome/tracks/+page.svelte   |  334 +++++++
+ frontend/src/routes/library/plex/+page.svelte      |  483 +++++++++
+ .../src/routes/library/plex/activity/+page.svelte  |  209 ++++
+ .../src/routes/library/plex/albums/+page.svelte    |  208 ++++
+ .../src/routes/library/plex/artists/+page.svelte   |  173 ++++
+ .../src/routes/library/plex/playlists/+page.svelte |   52 +
+ .../library/plex/playlists/[id]/+page.svelte       |   19 +
+ .../src/routes/library/plex/tracks/+page.svelte    |  396 ++++++++
+ .../routes/playlists/[id]/PlaylistHeader.svelte    |   47 +-
+ .../routes/playlists/[id]/PlaylistTrackList.svelte |    3 +-
+ .../src/routes/playlists/[id]/page.svelte.spec.ts  |    9 +-
+ frontend/src/routes/playlists/page.svelte.spec.ts  |    1 +
+ frontend/src/routes/settings/+page.svelte          |   17 +-
+ 192 files changed, 21538 insertions(+), 1362 deletions(-)
+ create mode 100644 backend/api/v1/routes/plex_auth.py
+ create mode 100644 backend/api/v1/routes/plex_library.py
+ create mode 100644 backend/api/v1/schemas/plex.py
+ create mode 100644 backend/repositories/plex_models.py
+ create mode 100644 backend/repositories/plex_repository.py
+ create mode 100644 backend/repositories/protocols/plex.py
+ create mode 100644 backend/services/plex_library_service.py
+ create mode 100644 backend/services/plex_playback_service.py
+ create mode 100644 backend/tests/repositories/test_plex_repository.py
+ create mode 100644 backend/tests/routes/test_discovery_routes.py
+ create mode 100644 backend/tests/routes/test_now_playing_routes.py
+ create mode 100644 backend/tests/routes/test_plex_auth.py
+ create mode 100644 backend/tests/routes/test_plex_routes.py
+ create mode 100644 backend/tests/routes/test_plex_settings.py
+ create mode 100644 backend/tests/services/test_content_enrichment.py
+ create mode 100644 backend/tests/services/test_deep_discovery.py
+ create mode 100644 backend/tests/services/test_discovery.py
+ create mode 100644 backend/tests/services/test_jellyfin_library_service.py
+ create mode 100644 backend/tests/services/test_now_playing.py
+ create mode 100644 backend/tests/services/test_plex_integration_status.py
+ create mode 100644 backend/tests/services/test_plex_library_service.py
+ create mode 100644 backend/tests/services/test_plex_playback_service.py
+ create mode 100644 backend/tests/services/test_plex_settings_lifecycle.py
+ create mode 100644 backend/tests/services/test_source_playlist_import.py
+ create mode 100644 backend/tests/test_peer_review_fixes.py
+ create mode 100644 frontend/src/lib/actions/reveal.ts
+ create mode 100644 frontend/src/lib/components/AlbumGrid.svelte
+ create mode 100644 frontend/src/lib/components/ArtistIndexSidebar.svelte
+ create mode 100644 frontend/src/lib/components/AudioQualityBadge.svelte
+ create mode 100644 frontend/src/lib/components/BrowseHeroCards.svelte
+ create mode 100644 frontend/src/lib/components/DiscoveryShelf.svelte
+ create mode 100644 frontend/src/lib/components/DiscoveryTrackTable.svelte
+ create mode 100644 frontend/src/lib/components/DiscoveryZone.svelte
+ create mode 100644 frontend/src/lib/components/FeaturedAlbumHero.svelte
+ create mode 100644 frontend/src/lib/components/GenrePillFilter.svelte
+ create mode 100644 frontend/src/lib/components/GenreSongsBrowser.svelte
+ create mode 100644 frontend/src/lib/components/HomeSectionNowPlaying.svelte
+ create mode 100644 frontend/src/lib/components/HubPageSkeleton.svelte
+ create mode 100644 frontend/src/lib/components/HubShelf.svelte
+ create mode 100644 frontend/src/lib/components/InstantMixButton.svelte
+ create mode 100644 frontend/src/lib/components/LyricsPanel.svelte
+ create mode 100644 frontend/src/lib/components/MetadataPanel.svelte
+ create mode 100644 frontend/src/lib/components/MostPlayedSection.svelte
+ create mode 100644 frontend/src/lib/components/NowPlayingWidget.svelte
+ create mode 100644 frontend/src/lib/components/PlaylistImportBanner.svelte
+ create mode 100644 frontend/src/lib/components/PlexIcon.svelte
+ create mode 100644 frontend/src/lib/components/QuickStatsBar.svelte
+ create mode 100644 frontend/src/lib/components/SidebarVisualiser.svelte
+ create mode 100644 frontend/src/lib/components/SourceAlbumCardCompact.svelte
+ create mode 100644 frontend/src/lib/components/SourceArtistCard.svelte
+ create mode 100644 frontend/src/lib/components/SourceHubHeader.svelte
+ create mode 100644 frontend/src/lib/components/SourcePlaylistCard.svelte
+ create mode 100644 frontend/src/lib/components/SourcePlaylistDetail.svelte
+ create mode 100644 frontend/src/lib/components/SourceTrackTable.svelte
+ create mode 100644 frontend/src/lib/components/settings/SettingsPlex.svelte
+ create mode 100644 frontend/src/lib/player/launchPlexPlayback.spec.ts
+ create mode 100644 frontend/src/lib/player/launchPlexPlayback.ts
+ create mode 100644 frontend/src/lib/player/plexPlaybackApi.spec.ts
+ create mode 100644 frontend/src/lib/player/plexPlaybackApi.ts
+ create mode 100644 frontend/src/lib/queries/artist/ArtistQueries.svelte.ts
+ create mode 100644 frontend/src/lib/queries/artist/ArtistQueryKeyFactory.ts
+ create mode 100644 frontend/src/lib/stores/nowPlayingMerged.svelte.ts
+ create mode 100644 frontend/src/lib/stores/nowPlayingSessions.svelte.ts
+ delete mode 100644 frontend/src/lib/utils/artistDetailCache.ts
+ create mode 100644 frontend/src/lib/utils/libraryTrackLoader.svelte.ts
+ create mode 100644 frontend/src/lib/utils/plexLibraryCache.ts
+ delete mode 100644 frontend/src/lib/utils/typeHelpers.ts
+ create mode 100644 frontend/src/routes/library/jellyfin/albums/+page.svelte
+ create mode 100644 frontend/src/routes/library/jellyfin/artists/+page.svelte
+ create mode 100644 frontend/src/routes/library/jellyfin/playlists/+page.svelte
+ create mode 100644 frontend/src/routes/library/jellyfin/playlists/[id]/+page.svelte
+ create mode 100644 frontend/src/routes/library/jellyfin/tracks/+page.svelte
+ create mode 100644 frontend/src/routes/library/navidrome/albums/+page.svelte
+ create mode 100644 frontend/src/routes/library/navidrome/artists/+page.svelte
+ create mode 100644 frontend/src/routes/library/navidrome/playlists/+page.svelte
+ create mode 100644 frontend/src/routes/library/navidrome/playlists/[id]/+page.svelte
+ create mode 100644 frontend/src/routes/library/navidrome/tracks/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/activity/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/albums/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/artists/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/playlists/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/playlists/[id]/+page.svelte
+ create mode 100644 frontend/src/routes/library/plex/tracks/+page.svelte
 
 Array
 (
@@ -453,13 +733,7 @@ Processing /tmp/GitHub/repositoryClone/transmute-app/unraid-template/transmute.x
 
 Downloading PikkonMG's Repository
 
-From https://github.com/PikkonMG/unraid-docker-templates
-   eeb612f..048fbfe  main       -> origin/main
-Updating eeb612f..048fbfe
-Fast-forward
- templates/img/obsidian-icon.png | Bin 0 -> 99221 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 templates/img/obsidian-icon.png
+Already up to date.
 
 Array
 (
@@ -7148,7 +7422,13 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   5495130..be339a3  main       -> origin/main
+Updating 5495130..be339a3
+Fast-forward
+ unraid/blade-of-agony.xml | 39 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+ create mode 100644 unraid/blade-of-agony.xml
 
 Array
 (
@@ -7276,121 +7556,122 @@ Array
             [119] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.xml
             [120] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml
             [121] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml
-            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
-            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
-            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
-            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
-            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
-            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
-            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
-            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
-            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
-            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
-            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
-            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
-            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
-            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
-            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
-            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
-            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
-            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
-            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/steam.xml
-            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
-            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
-            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
-            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
-            [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
-            [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
-            [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
-            [148] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/eden.xml
-            [149] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
-            [150] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
-            [151] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
-            [152] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webtop.xml
-            [153] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webcord.xml
-            [154] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wps-office.xml
-            [155] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckstation.xml
-            [156] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/budge.xml
-            [157] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/handbrake.xml
-            [158] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ldap-auth.xml
-            [159] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/inkscape.xml
-            [160] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/opera.xml
-            [161] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/radarr.xml
-            [162] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/beets.xml
-            [163] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rsnapshot.xml
-            [164] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/healthchecks.xml
-            [165] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pcsx2.xml
-            [166] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/scummvm.xml
-            [167] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kicad.xml
-            [168] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/hedgedoc.xml
-            [169] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jackett.xml
-            [170] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/chromium.xml
-            [171] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sickgear.xml
-            [172] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/speedtest-tracker.xml
-            [173] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/prowlarr.xml
-            [174] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webstation.xml
-            [175] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml
-            [176] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freecad.xml
-            [177] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lidarr.xml
-            [178] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mariadb.xml
-            [179] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kasm-static.xml
-            [180] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nginx.xml
-            [181] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/heimdall.xml
-            [182] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nextcloud.xml
-            [183] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ppsspp.xml
-            [184] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/audacity.xml
-            [185] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/joplin.xml
-            [186] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/babybuddy.xml
-            [187] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grocy.xml
-            [188] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/doublecommander.xml
-            [189] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syncthing.xml
-            [190] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dosbox-staging.xml
-            [191] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piwigo.xml
-            [192] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/keepassxc.xml
-            [193] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/swag.xml
-            [194] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/remmina.xml
-            [195] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zotero.xml
-            [196] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rustdesk.xml
-            [197] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/adguardhome-sync.xml
-            [198] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/oscam.xml
-            [199] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xbackbone.xml
-            [200] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/htpcmanager.xml
-            [201] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/changedetection.io.xml
-            [202] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webgrabplus.xml
-            [203] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dolphin.xml
-            [204] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/series-troxide.xml
-            [205] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wikijs.xml
-            [206] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pidgin.xml
-            [207] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vscodium.xml
-            [208] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nano-wallet.xml
-            [209] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xemu.xml
-            [210] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openshot.xml
-            [211] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre-web.xml
-            [212] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lollypop.xml
-            [213] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/shotcut.xml
-            [214] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbhydra2.xml
-            [215] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mysql-workbench.xml
-            [216] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/monica.xml
-            [217] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piper.xml
-            [218] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ombi.xml
-            [219] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ardour.xml
-            [220] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vscodium-web.xml
-            [221] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/resilio-sync.xml
-            [222] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mstream.xml
-            [223] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ferdium.xml
-            [224] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/firefox.xml
-            [225] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/retroarch.xml
-            [226] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jellyfin.xml
-            [227] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/orcaslicer.xml
-            [228] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/your_spotify.xml
-            [229] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/foldingathome.xml
-            [230] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rpcs3.xml
-            [231] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/obsidian.xml
-            [232] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pwndrop.xml
-            [233] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/planka.xml
-            [234] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre.xml
-            [235] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zen.xml
-            [236] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mediaelch.xml
+            [122] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blade-of-agony.xml
+            [123] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml
+            [124] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/libreoffice.xml
+            [125] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ddclient.xml
+            [126] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/digikam.xml
+            [127] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sabnzbd.xml
+            [128] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/github-desktop.xml
+            [129] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/medusa.xml
+            [130] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/davos.xml
+            [131] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/projectsend.xml
+            [132] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/code-server.xml
+            [133] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openvscode-server.xml
+            [134] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/gimp.xml
+            [135] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/altus.xml
+            [136] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/brave.xml
+            [137] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blender.xml
+            [138] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/fail2ban.xml
+            [139] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/cura.xml
+            [140] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/qbittorrent.xml
+            [141] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/steam.xml
+            [142] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/darktable.xml
+            [143] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lychee.xml
+            [144] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pydio-cells.xml
+            [145] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/flycast.xml
+            [146] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/boinc.xml
+            [147] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ubooquity.xml
+            [148] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freshrss.xml
+            [149] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/eden.xml
+            [150] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bazarr.xml
+            [151] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lazylibrarian.xml
+            [152] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/spotube.xml
+            [153] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webtop.xml
+            [154] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webcord.xml
+            [155] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wps-office.xml
+            [156] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/duckstation.xml
+            [157] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/budge.xml
+            [158] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/handbrake.xml
+            [159] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ldap-auth.xml
+            [160] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/inkscape.xml
+            [161] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/opera.xml
+            [162] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/radarr.xml
+            [163] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/beets.xml
+            [164] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rsnapshot.xml
+            [165] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/healthchecks.xml
+            [166] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pcsx2.xml
+            [167] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/scummvm.xml
+            [168] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kicad.xml
+            [169] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/hedgedoc.xml
+            [170] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jackett.xml
+            [171] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/chromium.xml
+            [172] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/sickgear.xml
+            [173] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/speedtest-tracker.xml
+            [174] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/prowlarr.xml
+            [175] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webstation.xml
+            [176] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mullvad-browser.xml
+            [177] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/freecad.xml
+            [178] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lidarr.xml
+            [179] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mariadb.xml
+            [180] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kasm-static.xml
+            [181] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nginx.xml
+            [182] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/heimdall.xml
+            [183] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nextcloud.xml
+            [184] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ppsspp.xml
+            [185] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/audacity.xml
+            [186] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/joplin.xml
+            [187] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/babybuddy.xml
+            [188] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/grocy.xml
+            [189] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/doublecommander.xml
+            [190] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/syncthing.xml
+            [191] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dosbox-staging.xml
+            [192] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piwigo.xml
+            [193] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/keepassxc.xml
+            [194] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/swag.xml
+            [195] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/remmina.xml
+            [196] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zotero.xml
+            [197] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rustdesk.xml
+            [198] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/adguardhome-sync.xml
+            [199] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/oscam.xml
+            [200] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xbackbone.xml
+            [201] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/htpcmanager.xml
+            [202] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/changedetection.io.xml
+            [203] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/webgrabplus.xml
+            [204] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/dolphin.xml
+            [205] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/series-troxide.xml
+            [206] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/wikijs.xml
+            [207] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pidgin.xml
+            [208] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vscodium.xml
+            [209] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nano-wallet.xml
+            [210] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/xemu.xml
+            [211] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/openshot.xml
+            [212] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre-web.xml
+            [213] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/lollypop.xml
+            [214] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/shotcut.xml
+            [215] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/nzbhydra2.xml
+            [216] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mysql-workbench.xml
+            [217] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/monica.xml
+            [218] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/piper.xml
+            [219] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ombi.xml
+            [220] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ardour.xml
+            [221] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/vscodium-web.xml
+            [222] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/resilio-sync.xml
+            [223] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mstream.xml
+            [224] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ferdium.xml
+            [225] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/firefox.xml
+            [226] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/retroarch.xml
+            [227] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/jellyfin.xml
+            [228] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/orcaslicer.xml
+            [229] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/your_spotify.xml
+            [230] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/foldingathome.xml
+            [231] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/rpcs3.xml
+            [232] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/obsidian.xml
+            [233] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/pwndrop.xml
+            [234] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/planka.xml
+            [235] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/calibre.xml
+            [236] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/zen.xml
+            [237] => /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/mediaelch.xml
         )
 
 )
@@ -7766,6 +8047,9 @@ Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/bambustudio.
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/couchpotato.xml...No category entry present - using a guessed category
+
+Success
+Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/blade-of-agony.xml...No category entry present
 
 Success
 Processing /tmp/GitHub/repositoryClone/linuxserver/templates/unraid/kdenlive.xml...No category entry present - using a guessed category
@@ -10252,13 +10536,7 @@ Processing /tmp/GitHub/repositoryClone/FoxxMD/unraid-docker-templates/foxxmd/pin
 
 Downloading ich777's Repository
 
-From https://github.com/ich777/docker-templates
-   1e17f35..b5b16b7  master     -> origin/master
-Updating 1e17f35..b5b16b7
-Fast-forward
- ich777/images/windsurf.png | Bin 0 -> 9360 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 ich777/images/windsurf.png
+Already up to date.
 
 Array
 (
@@ -14050,55 +14328,7 @@ Processing /tmp/GitHub/repositoryClone/OFark/docker-templates/OFark/Compressarr.
 Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
-From https://gitlab.com/crafty-controller/crafty-4
-   e00cca82..0443b939  master     -> origin/master
- * [new tag]           v4.10.3    -> v4.10.3
-Updating e00cca82..0443b939
-Fast-forward
- .gitlab/lint.yml                                   |   10 +-
- .pylintrc                                          |    4 -
- CHANGELOG.md                                       |   10 +
- README.md                                          |    2 +-
- app/classes/controllers/roles_controller.py        |  126 ++-
- app/classes/controllers/users_controller.py        |   10 +-
- app/classes/helpers/helpers.py                     |    6 +-
- app/classes/models/roles.py                        |   19 +-
- app/classes/models/server_permissions.py           |   29 +-
- app/classes/models/users.py                        |    9 +
- app/classes/shared/backup_mgr.py                   |    5 +-
- app/classes/shared/import_helper.py                |    1 -
- app/classes/shared/main_controller.py              |    1 -
- app/classes/shared/server.py                       |  108 +--
- app/classes/shared/tasks.py                        | 1002 +++++++++++---------
- app/classes/web/base_api_handler.py                |   26 +-
- app/classes/web/routes/api/crafty/config/index.py  |    2 +-
- app/classes/web/routes/api/roles/role/index.py     |    2 +-
- .../web/routes/api/servers/server/action.py        |    1 -
- .../web/routes/api/servers/server/history.py       |    1 -
- app/classes/web/routes/api/servers/server/logs.py  |    1 -
- app/classes/web/routes/api/servers/server/stats.py |    1 -
- app/classes/web/routes/api/servers/server/stdin.py |    1 -
- .../web/routes/api/servers/server/tasks/index.py   |    1 -
- .../api/servers/server/tasks/task/children.py      |    1 -
- .../routes/api/servers/server/tasks/task/index.py  |    1 -
- app/classes/web/routes/api/servers/server/users.py |    1 -
- .../routes/api/servers/server/webhooks/index.py    |    1 -
- .../api/servers/server/webhooks/webhook/index.py   |    1 -
- app/classes/web/routes/api/users/index.py          |   14 +-
- app/classes/web/routes/api/users/user/api.py       |    1 -
- app/classes/web/routes/api/users/user/index.py     |   17 +-
- app/classes/web/routes/api/users/user/otp.py       |   32 +-
- app/classes/web/routes/api/users/user/passkey.py   |   21 +-
- .../web/routes/api/users/user/permissions.py       |    1 -
- app/classes/web/tornado_handler.py                 |    1 -
- app/config/version.json                            |    2 +-
- app/frontend/templates/panel/dashboard.html        |    7 +-
- app/translations/zh_CN.json                        |   94 +-
- requirements.txt                                   |    2 +-
- sonar-project.properties                           |    2 +-
- tests/classes/models/test_roles.py                 |   46 +
- 42 files changed, 926 insertions(+), 697 deletions(-)
- create mode 100644 tests/classes/models/test_roles.py
+Already up to date.
 
 Array
 (
@@ -16174,7 +16404,12 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-Already up to date.
+From https://github.com/JPDVM2014/unraid-templates
+   fe61d81..6fbd91e  main       -> origin/main
+Updating fe61d81..6fbd91e
+Fast-forward
+ soularr.xml | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
 Array
 (
@@ -21539,6 +21774,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
+linuxserver/blade-of-agony
+lscr.io/linuxserver/blade-of-agony Downloads: 163  Stars: 0  Base: unknown
+Pulling lscr.io/linuxserver/blade-of-agony
+Error response from daemon: Head "https://ghcr.io/v2/linuxserver/blade-of-agony/manifests/latest": unauthorized
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...
@@ -21671,9 +21910,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-Tagged - Can't determine last update
-odoo
-odoo:18 Downloads: 49091677  Stars: 1502  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 136
