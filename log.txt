@@ -102,7 +102,19 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-Already up to date.
+From https://github.com/HabiRabbu/Musicseerr
+   a69a268..fd2be0d  main       -> origin/main
+Updating a69a268..fd2be0d
+Fast-forward
+ backend/api/v1/schemas/artist.py                   |   9 +-
+ backend/services/artist_service.py                 | 144 +++++++---
+ backend/tests/routes/test_artist_releases_route.py |  14 +-
+ .../services/test_artist_release_pagination.py     | 313 +++++++++++++++++++++
+ .../src/lib/queries/artist/ArtistQueries.svelte.ts |  11 +-
+ frontend/src/lib/types.ts                          |   6 +-
+ frontend/src/routes/artist/[id]/+page.svelte       |   5 +-
+ 7 files changed, 456 insertions(+), 46 deletions(-)
+ create mode 100644 backend/tests/services/test_artist_release_pagination.py
 
 Array
 (
@@ -6313,36 +6325,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   5baefd6a..e5531f06  main       -> origin/main
-Updating 5baefd6a..e5531f06
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -17758,7 +17741,9 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+ + 5a83fc2...fb6ccd7 main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
@@ -21446,6 +21431,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+joplin/server
+joplin/server:latest Downloads: 12291222  Stars: 299  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -21590,10 +21577,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-0xdespot/lido-csm-dashboard
-0xdespot/lido-csm-dashboard:latest Downloads: 2211  Stars: 1  Base: unknown
-stnsmith/fossflow
-stnsmith/fossflow Downloads: 261235  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -21648,10 +21631,6 @@ stnsmith/fossflow Downloads: 261235  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-gyzod/ocpp2mqtt
-gyzod/ocpp2mqtt Downloads: 485  Stars: 1  Base: unknown
-calibrain/shelfmark
-ghcr.io/calibrain/shelfmark:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 136
