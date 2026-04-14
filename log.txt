@@ -103,286 +103,113 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 Downloading HabiRabbu's Repository
 
 From https://github.com/HabiRabbu/Musicseerr
-   e523f2c..0f25ebc  main       -> origin/main
-Updating e523f2c..0f25ebc
+   0f25ebc..a69a268  main       -> origin/main
+Updating 0f25ebc..a69a268
 Fast-forward
- Makefile                                           |   79 +-
- README.md                                          |   19 +-
- backend/api/v1/routes/jellyfin_library.py          |  306 +++++-
- backend/api/v1/routes/navidrome_library.py         |  283 +++++-
- backend/api/v1/routes/playlists.py                 |   16 +-
- backend/api/v1/routes/plex_auth.py                 |   62 ++
- backend/api/v1/routes/plex_library.py              |  386 ++++++++
- backend/api/v1/routes/settings.py                  |   51 +
- backend/api/v1/routes/stream.py                    |   72 +-
- backend/api/v1/schemas/advanced_settings.py        |   37 +-
- backend/api/v1/schemas/common.py                   |    1 +
- backend/api/v1/schemas/jellyfin.py                 |  123 +++
- backend/api/v1/schemas/navidrome.py                |  130 +++
- backend/api/v1/schemas/playlists.py                |    6 +-
- backend/api/v1/schemas/plex.py                     |  231 +++++
- backend/api/v1/schemas/settings.py                 |   30 +
- backend/core/dependencies/__init__.py              |    6 +
- backend/core/dependencies/repo_providers.py        |   29 +-
- backend/core/dependencies/service_providers.py     |   28 +-
- backend/core/dependencies/type_aliases.py          |    9 +
- backend/core/exceptions.py                         |   15 +
- backend/core/tasks.py                              |   20 +-
- backend/infrastructure/cache/cache_keys.py         |   26 +-
- backend/infrastructure/persistence/mbid_store.py   |   77 +-
- backend/main.py                                    |   15 +
- backend/repositories/async_playlist_repository.py  |   13 +-
- backend/repositories/jellyfin_models.py            |   81 ++
- backend/repositories/jellyfin_repository.py        |  404 +++++++-
- backend/repositories/navidrome_models.py           |  149 +++
- backend/repositories/navidrome_repository.py       |  234 ++++-
- backend/repositories/playlist_repository.py        |   78 +-
- backend/repositories/plex_models.py                |  313 ++++++
- backend/repositories/plex_repository.py            |  864 +++++++++++++++++
- backend/repositories/protocols/__init__.py         |    2 +
- backend/repositories/protocols/jellyfin.py         |   49 +-
- backend/repositories/protocols/navidrome.py        |   42 +
- backend/repositories/protocols/plex.py             |  157 +++
- backend/services/artist_service.py                 |    7 +-
- backend/services/home/facade.py                    |    3 +-
- backend/services/home/integration_helpers.py       |    9 +
- backend/services/jellyfin_library_service.py       |  442 ++++++++-
- backend/services/jellyfin_playback_service.py      |   19 +-
- backend/services/navidrome_library_service.py      |  459 ++++++++-
- backend/services/navidrome_playback_service.py     |   35 +-
- backend/services/playlist_service.py               |   96 +-
- backend/services/plex_library_service.py           | 1021 ++++++++++++++++++++
- backend/services/plex_playback_service.py          |   71 ++
- backend/services/preferences_service.py            |   65 ++
- backend/services/settings_service.py               |  125 ++-
- backend/tests/repositories/test_plex_repository.py |  836 ++++++++++++++++
- backend/tests/routes/test_discovery_routes.py      |  153 +++
- backend/tests/routes/test_now_playing_routes.py    |  155 +++
- backend/tests/routes/test_plex_auth.py             |   99 ++
- backend/tests/routes/test_plex_routes.py           |  280 ++++++
- backend/tests/routes/test_plex_settings.py         |  143 +++
- backend/tests/services/test_content_enrichment.py  |  230 +++++
- backend/tests/services/test_deep_discovery.py      |  269 ++++++
- backend/tests/services/test_discovery.py           |  263 +++++
- .../services/test_jellyfin_library_service.py      |  218 +++++
- .../services/test_navidrome_library_service.py     |   66 +-
- backend/tests/services/test_now_playing.py         |  321 ++++++
- backend/tests/services/test_playlist_service.py    |    4 +-
- .../services/test_playlist_source_resolution.py    |    2 +-
- .../tests/services/test_plex_integration_status.py |   61 ++
- .../tests/services/test_plex_library_service.py    |  411 ++++++++
- .../tests/services/test_plex_playback_service.py   |  128 +++
- .../tests/services/test_plex_settings_lifecycle.py |  171 ++++
- .../tests/services/test_source_playlist_import.py  |  330 +++++++
- backend/tests/test_audiodb_settings.py             |   14 +-
- backend/tests/test_dependencies_package.py         |    2 +-
- backend/tests/test_peer_review_fixes.py            |  266 +++++
- config/config.example.json                         |    5 +
- frontend/eslint.config.js                          |    6 +
- frontend/src/app.css                               |   73 ++
- frontend/src/lib/actions/reveal.ts                 |   48 +
- frontend/src/lib/api/playlists.spec.ts             |    3 +-
- frontend/src/lib/api/playlists.ts                  |    6 +-
- .../src/lib/components/AddToPlaylistModal.svelte   |   33 +-
- frontend/src/lib/components/AlbumGrid.svelte       |   93 ++
- .../src/lib/components/ArtistIndexSidebar.svelte   |  103 ++
- .../src/lib/components/AudioQualityBadge.svelte    |   61 ++
- frontend/src/lib/components/BrowseHeroCards.svelte |  182 ++++
- frontend/src/lib/components/DiscoveryShelf.svelte  |   59 ++
- .../src/lib/components/DiscoveryTrackTable.svelte  |   79 ++
- frontend/src/lib/components/DiscoveryZone.svelte   |   32 +
- .../src/lib/components/FeaturedAlbumHero.svelte    |  142 +++
- frontend/src/lib/components/GenrePillFilter.svelte |   79 ++
- .../src/lib/components/GenreSongsBrowser.svelte    |  147 +++
- frontend/src/lib/components/HomeSection.svelte     |    1 +
- .../lib/components/HomeSectionNowPlaying.svelte    |   96 ++
- frontend/src/lib/components/HubPageSkeleton.svelte |   22 +
- frontend/src/lib/components/HubShelf.svelte        |   50 +
- .../src/lib/components/InstantMixButton.svelte     |   18 +
- .../src/lib/components/LastFmEnrichment.svelte     |    2 +-
- .../src/lib/components/LibraryFilterBar.svelte     |  100 +-
- frontend/src/lib/components/LibraryPage.svelte     |   58 +-
- frontend/src/lib/components/LyricsPanel.svelte     |  162 ++++
- frontend/src/lib/components/MetadataPanel.svelte   |  115 +++
- .../src/lib/components/MostPlayedSection.svelte    |  109 +++
- .../src/lib/components/NowPlayingWidget.svelte     |  107 ++
- frontend/src/lib/components/PageHeader.svelte      |    2 +-
- frontend/src/lib/components/Player.svelte          |  111 ++-
- frontend/src/lib/components/PlaylistCard.svelte    |   65 +-
- .../src/lib/components/PlaylistCard.svelte.spec.ts |    3 +-
- .../src/lib/components/PlaylistImportBanner.svelte |  167 ++++
- frontend/src/lib/components/PlexIcon.svelte        |   14 +
- frontend/src/lib/components/QueueDrawer.svelte     |    5 +
- frontend/src/lib/components/QuickStatsBar.svelte   |   45 +
- .../src/lib/components/SidebarVisualiser.svelte    |   32 +
- .../lib/components/SourceAlbumCardCompact.svelte   |   32 +
- .../src/lib/components/SourceAlbumModal.svelte     |  193 +++-
- .../src/lib/components/SourceArtistCard.svelte     |   74 ++
- frontend/src/lib/components/SourceHubHeader.svelte |   47 +
- .../src/lib/components/SourcePickerDropdown.svelte |    3 +
- .../src/lib/components/SourcePlaylistCard.svelte   |   66 ++
- .../src/lib/components/SourcePlaylistDetail.svelte |  150 +++
- .../src/lib/components/SourceTrackTable.svelte     |   74 ++
- .../settings/SettingsBackendCache.svelte           |   36 +-
- .../settings/SettingsFrontendCache.svelte          |   12 +-
- .../lib/components/settings/SettingsPlex.svelte    |  326 +++++++
- .../components/settings/SettingsPreferences.svelte |   10 +-
- .../components/settings/advanced-settings-types.ts |    5 +
- frontend/src/lib/constants.ts                      |  171 +++-
- frontend/src/lib/player/NativeAudioSource.ts       |    2 +-
- frontend/src/lib/player/createSource.ts            |    3 +
- frontend/src/lib/player/launchPlexPlayback.spec.ts |  245 +++++
- frontend/src/lib/player/launchPlexPlayback.ts      |   46 +
- frontend/src/lib/player/navidromePlaybackApi.ts    |    9 +
- frontend/src/lib/player/plexPlaybackApi.spec.ts    |  187 ++++
- frontend/src/lib/player/plexPlaybackApi.ts         |   52 +
- frontend/src/lib/player/queueHelpers.spec.ts       |    3 +-
- frontend/src/lib/player/queueHelpers.ts            |  103 +-
- frontend/src/lib/player/types.ts                   |    8 +-
- frontend/src/lib/queries/HomeQuery.svelte.ts       |    2 +-
- .../src/lib/queries/IndexedDbPersister.svelte.ts   |    1 -
- frontend/src/lib/queries/QueryClient.ts            |   11 +
- .../src/lib/queries/artist/ArtistQueries.svelte.ts |  154 +++
- .../lib/queries/artist/ArtistQueryKeyFactory.ts    |   15 +
- frontend/src/lib/stores/cacheTtl.ts                |   14 +-
- frontend/src/lib/stores/integration.ts             |    3 +
- frontend/src/lib/stores/nowPlayingMerged.svelte.ts |  133 +++
- .../src/lib/stores/nowPlayingSessions.svelte.ts    |  281 ++++++
- frontend/src/lib/stores/player.svelte.ts           |  101 +-
- frontend/src/lib/stores/playerJellyfinReporting.ts |   16 +-
- frontend/src/lib/stores/playerPlaybackMethods.ts   |    6 +-
- frontend/src/lib/stores/playerSourceResolver.ts    |    6 +
- frontend/src/lib/types.ts                          |  464 ++++++++-
- frontend/src/lib/utils/albumCardPlayback.ts        |   57 +-
- frontend/src/lib/utils/albumDetailCache.ts         |    4 +-
- frontend/src/lib/utils/artistDetailCache.ts        |   28 -
- frontend/src/lib/utils/formatting.ts               |    5 +-
- frontend/src/lib/utils/libraryController.svelte.ts |   70 +-
- .../src/lib/utils/libraryTrackLoader.svelte.ts     |  194 ++++
- frontend/src/lib/utils/plexLibraryCache.ts         |   36 +
- frontend/src/lib/utils/sources.ts                  |    4 +-
- frontend/src/lib/utils/typeHelpers.ts              |    3 -
- frontend/src/routes/+layout.svelte                 |   80 +-
- frontend/src/routes/+page.svelte                   |   30 +-
- frontend/src/routes/album/[id]/+page.svelte        |    8 +
- .../src/routes/album/[id]/AlbumSourceBars.svelte   |   34 +-
- .../src/routes/album/[id]/AlbumTrackList.svelte    |   45 +-
- frontend/src/routes/album/[id]/albumFetchers.ts    |   12 +
- .../src/routes/album/[id]/albumPageState.svelte.ts |   98 +-
- .../src/routes/album/[id]/albumPlaybackHandlers.ts |   57 +-
- frontend/src/routes/artist/[id]/+page.svelte       |  710 +++-----------
- frontend/src/routes/artist/[id]/+page.ts           |    4 +
- frontend/src/routes/library/+page.svelte           |   33 +-
- frontend/src/routes/library/jellyfin/+page.svelte  |  664 ++++++++++---
- .../routes/library/jellyfin/albums/+page.svelte    |  210 ++++
- .../routes/library/jellyfin/artists/+page.svelte   |  180 ++++
- .../routes/library/jellyfin/playlists/+page.svelte |   52 +
- .../library/jellyfin/playlists/[id]/+page.svelte   |   19 +
- .../routes/library/jellyfin/tracks/+page.svelte    |  372 +++++++
- frontend/src/routes/library/local/+page.svelte     |    7 +-
- frontend/src/routes/library/navidrome/+page.svelte |  797 +++++++++++----
- .../routes/library/navidrome/albums/+page.svelte   |  205 ++++
- .../routes/library/navidrome/artists/+page.svelte  |  144 +++
- .../library/navidrome/playlists/+page.svelte       |   52 +
- .../library/navidrome/playlists/[id]/+page.svelte  |   19 +
- .../routes/library/navidrome/tracks/+page.svelte   |  334 +++++++
- frontend/src/routes/library/plex/+page.svelte      |  483 +++++++++
- .../src/routes/library/plex/activity/+page.svelte  |  209 ++++
- .../src/routes/library/plex/albums/+page.svelte    |  208 ++++
- .../src/routes/library/plex/artists/+page.svelte   |  173 ++++
- .../src/routes/library/plex/playlists/+page.svelte |   52 +
- .../library/plex/playlists/[id]/+page.svelte       |   19 +
- .../src/routes/library/plex/tracks/+page.svelte    |  396 ++++++++
- .../routes/playlists/[id]/PlaylistHeader.svelte    |   47 +-
- .../routes/playlists/[id]/PlaylistTrackList.svelte |    3 +-
- .../src/routes/playlists/[id]/page.svelte.spec.ts  |    9 +-
- frontend/src/routes/playlists/page.svelte.spec.ts  |    1 +
- frontend/src/routes/settings/+page.svelte          |   17 +-
- 192 files changed, 21538 insertions(+), 1362 deletions(-)
- create mode 100644 backend/api/v1/routes/plex_auth.py
- create mode 100644 backend/api/v1/routes/plex_library.py
- create mode 100644 backend/api/v1/schemas/plex.py
- create mode 100644 backend/repositories/plex_models.py
- create mode 100644 backend/repositories/plex_repository.py
- create mode 100644 backend/repositories/protocols/plex.py
- create mode 100644 backend/services/plex_library_service.py
- create mode 100644 backend/services/plex_playback_service.py
- create mode 100644 backend/tests/repositories/test_plex_repository.py
- create mode 100644 backend/tests/routes/test_discovery_routes.py
- create mode 100644 backend/tests/routes/test_now_playing_routes.py
- create mode 100644 backend/tests/routes/test_plex_auth.py
- create mode 100644 backend/tests/routes/test_plex_routes.py
- create mode 100644 backend/tests/routes/test_plex_settings.py
- create mode 100644 backend/tests/services/test_content_enrichment.py
- create mode 100644 backend/tests/services/test_deep_discovery.py
- create mode 100644 backend/tests/services/test_discovery.py
- create mode 100644 backend/tests/services/test_jellyfin_library_service.py
- create mode 100644 backend/tests/services/test_now_playing.py
- create mode 100644 backend/tests/services/test_plex_integration_status.py
- create mode 100644 backend/tests/services/test_plex_library_service.py
- create mode 100644 backend/tests/services/test_plex_playback_service.py
- create mode 100644 backend/tests/services/test_plex_settings_lifecycle.py
- create mode 100644 backend/tests/services/test_source_playlist_import.py
- create mode 100644 backend/tests/test_peer_review_fixes.py
- create mode 100644 frontend/src/lib/actions/reveal.ts
- create mode 100644 frontend/src/lib/components/AlbumGrid.svelte
- create mode 100644 frontend/src/lib/components/ArtistIndexSidebar.svelte
- create mode 100644 frontend/src/lib/components/AudioQualityBadge.svelte
- create mode 100644 frontend/src/lib/components/BrowseHeroCards.svelte
- create mode 100644 frontend/src/lib/components/DiscoveryShelf.svelte
- create mode 100644 frontend/src/lib/components/DiscoveryTrackTable.svelte
- create mode 100644 frontend/src/lib/components/DiscoveryZone.svelte
- create mode 100644 frontend/src/lib/components/FeaturedAlbumHero.svelte
- create mode 100644 frontend/src/lib/components/GenrePillFilter.svelte
- create mode 100644 frontend/src/lib/components/GenreSongsBrowser.svelte
- create mode 100644 frontend/src/lib/components/HomeSectionNowPlaying.svelte
- create mode 100644 frontend/src/lib/components/HubPageSkeleton.svelte
- create mode 100644 frontend/src/lib/components/HubShelf.svelte
- create mode 100644 frontend/src/lib/components/InstantMixButton.svelte
- create mode 100644 frontend/src/lib/components/LyricsPanel.svelte
- create mode 100644 frontend/src/lib/components/MetadataPanel.svelte
- create mode 100644 frontend/src/lib/components/MostPlayedSection.svelte
- create mode 100644 frontend/src/lib/components/NowPlayingWidget.svelte
- create mode 100644 frontend/src/lib/components/PlaylistImportBanner.svelte
- create mode 100644 frontend/src/lib/components/PlexIcon.svelte
- create mode 100644 frontend/src/lib/components/QuickStatsBar.svelte
- create mode 100644 frontend/src/lib/components/SidebarVisualiser.svelte
- create mode 100644 frontend/src/lib/components/SourceAlbumCardCompact.svelte
- create mode 100644 frontend/src/lib/components/SourceArtistCard.svelte
- create mode 100644 frontend/src/lib/components/SourceHubHeader.svelte
- create mode 100644 frontend/src/lib/components/SourcePlaylistCard.svelte
- create mode 100644 frontend/src/lib/components/SourcePlaylistDetail.svelte
- create mode 100644 frontend/src/lib/components/SourceTrackTable.svelte
- create mode 100644 frontend/src/lib/components/settings/SettingsPlex.svelte
- create mode 100644 frontend/src/lib/player/launchPlexPlayback.spec.ts
- create mode 100644 frontend/src/lib/player/launchPlexPlayback.ts
- create mode 100644 frontend/src/lib/player/plexPlaybackApi.spec.ts
- create mode 100644 frontend/src/lib/player/plexPlaybackApi.ts
- create mode 100644 frontend/src/lib/queries/artist/ArtistQueries.svelte.ts
- create mode 100644 frontend/src/lib/queries/artist/ArtistQueryKeyFactory.ts
- create mode 100644 frontend/src/lib/stores/nowPlayingMerged.svelte.ts
- create mode 100644 frontend/src/lib/stores/nowPlayingSessions.svelte.ts
- delete mode 100644 frontend/src/lib/utils/artistDetailCache.ts
- create mode 100644 frontend/src/lib/utils/libraryTrackLoader.svelte.ts
- create mode 100644 frontend/src/lib/utils/plexLibraryCache.ts
- delete mode 100644 frontend/src/lib/utils/typeHelpers.ts
- create mode 100644 frontend/src/routes/library/jellyfin/albums/+page.svelte
- create mode 100644 frontend/src/routes/library/jellyfin/artists/+page.svelte
- create mode 100644 frontend/src/routes/library/jellyfin/playlists/+page.svelte
- create mode 100644 frontend/src/routes/library/jellyfin/playlists/[id]/+page.svelte
- create mode 100644 frontend/src/routes/library/jellyfin/tracks/+page.svelte
- create mode 100644 frontend/src/routes/library/navidrome/albums/+page.svelte
- create mode 100644 frontend/src/routes/library/navidrome/artists/+page.svelte
- create mode 100644 frontend/src/routes/library/navidrome/playlists/+page.svelte
- create mode 100644 frontend/src/routes/library/navidrome/playlists/[id]/+page.svelte
- create mode 100644 frontend/src/routes/library/navidrome/tracks/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/activity/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/albums/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/artists/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/playlists/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/playlists/[id]/+page.svelte
- create mode 100644 frontend/src/routes/library/plex/tracks/+page.svelte
+ backend/api/v1/routes/albums.py                    |   3 -
+ backend/api/v1/routes/artists.py                   |   1 -
+ backend/api/v1/routes/cache.py                     |   3 -
+ backend/api/v1/routes/cache_status.py              |   3 -
+ backend/api/v1/routes/covers.py                    |   2 -
+ backend/api/v1/routes/discover.py                  |   4 -
+ backend/api/v1/routes/home.py                      |   3 -
+ backend/api/v1/routes/lastfm.py                    |   9 -
+ backend/api/v1/routes/playlists.py                 |   3 -
+ backend/api/v1/routes/queue.py                     |   3 -
+ backend/api/v1/routes/requests.py                  |   3 -
+ backend/api/v1/routes/search.py                    |  10 +-
+ backend/api/v1/routes/settings.py                  |  13 --
+ backend/api/v1/routes/status.py                    |   3 -
+ backend/api/v1/routes/youtube.py                   |   4 -
+ backend/core/config.py                             |   7 +-
+ backend/core/dependencies/cache_providers.py       |   8 +-
+ backend/core/dependencies/cleanup.py               |   6 +-
+ backend/core/dependencies/service_providers.py     |  10 -
+ backend/core/exception_handlers.py                 |   1 -
+ backend/core/tasks.py                              |  73 +------
+ backend/infrastructure/cache/disk_cache.py         |   7 +-
+ backend/infrastructure/cache/memory_cache.py       |  11 --
+ backend/infrastructure/degradation.py              |  10 -
+ backend/infrastructure/http/client.py              |   3 -
+ backend/infrastructure/http/deduplication.py       |   3 -
+ backend/infrastructure/http/disconnect.py          |   4 -
+ backend/infrastructure/logging_helper.py           |  43 ----
+ backend/infrastructure/persistence/_database.py    |   3 -
+ backend/infrastructure/persistence/genre_index.py  |   5 +-
+ backend/infrastructure/persistence/library_db.py   |   4 +-
+ .../infrastructure/persistence/sync_state_store.py |   3 -
+ .../infrastructure/persistence/youtube_store.py    |   5 +-
+ backend/infrastructure/queue/priority_queue.py     |   5 -
+ backend/infrastructure/queue/queue_store.py        |   3 -
+ backend/infrastructure/queue/request_queue.py      |  25 +--
+ backend/infrastructure/resilience/retry.py         |  66 +------
+ backend/main.py                                    |   7 +-
+ backend/repositories/audiodb_repository.py         |  23 ---
+ backend/repositories/coverart_album.py             |  18 +-
+ backend/repositories/coverart_artist.py            |  26 ---
+ backend/repositories/coverart_disk_cache.py        |  40 ++--
+ backend/repositories/coverart_repository.py        |  31 +--
+ backend/repositories/jellyfin_repository.py        |  14 +-
+ backend/repositories/lastfm_repository.py          |   8 -
+ backend/repositories/lidarr/album.py               |  50 +----
+ backend/repositories/lidarr/artist.py              |  26 +--
+ backend/repositories/lidarr/base.py                |  16 +-
+ backend/repositories/lidarr/config.py              |   3 -
+ backend/repositories/lidarr/history.py             |  19 +-
+ backend/repositories/lidarr/library.py             |  20 +-
+ backend/repositories/listenbrainz_repository.py    |  25 ---
+ backend/repositories/musicbrainz_album.py          |   4 -
+ backend/repositories/musicbrainz_artist.py         |   2 +-
+ backend/repositories/musicbrainz_base.py           |   3 -
+ backend/repositories/navidrome_models.py           |   3 -
+ backend/repositories/navidrome_repository.py       |   3 -
+ backend/repositories/playlist_repository.py        |   7 +-
+ backend/repositories/youtube.py                    |   8 +-
+ backend/services/album_service.py                  |  26 +--
+ backend/services/artist_discovery_service.py       |  16 --
+ backend/services/artist_service.py                 |  13 --
+ backend/services/audiodb_browse_queue.py           |  11 +-
+ backend/services/audiodb_image_service.py          |  42 ----
+ backend/services/cache_service.py                  |  13 --
+ backend/services/cache_status_service.py           |   6 -
+ backend/services/discover/homepage_service.py      |  36 +---
+ backend/services/discover/queue_service.py         |  15 --
+ backend/services/discover_queue_manager.py         |  16 --
+ backend/services/genre_cover_prewarm_service.py    |   2 -
+ backend/services/home/facade.py                    |   1 -
+ backend/services/home/genre_service.py             |  11 +-
+ backend/services/lastfm_auth_service.py            |   3 -
+ backend/services/library_service.py                |  19 +-
+ backend/services/local_files_service.py            |   7 +-
+ backend/services/navidrome_library_service.py      |  24 ---
+ backend/services/playlist_service.py               |   8 -
+ backend/services/precache/album_phase.py           |   6 -
+ backend/services/precache/artist_phase.py          |   9 -
+ backend/services/precache/audiodb_phase.py         |  23 ---
+ backend/services/precache/orchestrator.py          |  26 +--
+ backend/services/preferences_service.py            |  17 --
+ backend/services/requests_page_service.py          |   4 -
+ backend/services/scrobble_service.py               |  23 ---
+ backend/services/status_service.py                 |   3 -
+ backend/services/youtube_service.py                |   7 +-
+ backend/tests/routes/test_search_routes.py         |  25 ---
+ .../tests/services/test_source_playlist_import.py  |   3 +-
+ backend/tests/test_phase9_observability.py         | 216 +--------------------
+ .../src/lib/components/DiscoverQueueModal.svelte   |  14 +-
+ .../src/lib/components/YouTubeDetailModal.svelte   |   3 +-
+ frontend/src/lib/player/NativeAudioSource.ts       |   1 -
+ .../src/lib/player/jellyfinPlaybackApi.spec.ts     |  17 +-
+ frontend/src/lib/player/jellyfinPlaybackApi.ts     |   8 +-
+ frontend/src/lib/player/navidromePlaybackApi.ts    |  22 +--
+ .../src/lib/queries/IndexedDbPersister.svelte.ts   |   5 -
+ frontend/src/lib/stores/imageSettings.ts           |   4 +-
+ frontend/src/lib/stores/library.ts                 |   3 +-
+ frontend/src/lib/stores/preferences.ts             |   7 +-
+ frontend/src/lib/utils/localStorageCache.ts        |   9 +-
+ frontend/src/routes/+layout.ts                     |   4 +-
+ frontend/src/routes/library/albums/+page.svelte    |   9 +-
+ frontend/src/routes/library/artists/+page.svelte   |   5 +-
+ 103 files changed, 127 insertions(+), 1343 deletions(-)
 
 Array
 (
@@ -399,7 +226,31 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 
 Downloading sworcery's Repository
 
-Already up to date.
+From https://github.com/sworcery/ChannelHoarder
+   00bf174..b451131  main       -> origin/main
+ * [new tag]         v1.7.19    -> v1.7.19
+ * [new tag]         v1.7.20    -> v1.7.20
+ * [new tag]         v1.7.22    -> v1.7.22
+Updating 00bf174..b451131
+Fast-forward
+ CHANGELOG.md                             |  46 ++++
+ backend/app/config.py                    |   2 +-
+ backend/app/database.py                  |   8 +
+ backend/app/models.py                    |   2 +
+ backend/app/routers/channels.py          | 386 ++++++++++++++++++++++++++++++-
+ backend/app/schemas.py                   |   4 +
+ backend/app/services/channel_service.py  |  61 +++--
+ backend/app/services/download_service.py |   9 +
+ backend/app/services/ytdlp_service.py    |  79 +++++--
+ backend/app/utils/error_codes.py         |  11 +-
+ backend/app/utils/platform_utils.py      |  30 +++
+ backend/pyproject.toml                   |   2 +-
+ frontend/package.json                    |   2 +-
+ frontend/src/lib/api.ts                  |  23 ++
+ frontend/src/lib/types.ts                |   2 +
+ frontend/src/pages/ChannelDetailPage.tsx | 127 +++++++++-
+ frontend/src/pages/SettingsPage.tsx      |  24 ++
+ 17 files changed, 767 insertions(+), 51 deletions(-)
 
 Array
 (
@@ -7422,13 +7273,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   5495130..be339a3  main       -> origin/main
-Updating 5495130..be339a3
-Fast-forward
- unraid/blade-of-agony.xml | 39 +++++++++++++++++++++++++++++++++++++++
- 1 file changed, 39 insertions(+)
- create mode 100644 unraid/blade-of-agony.xml
+Already up to date.
 
 Array
 (
@@ -16404,12 +16249,7 @@ Processing /tmp/GitHub/repositoryClone/maxcerny/unraid-docker-templates/Speedmon
 
 Downloading JPDVM2014's Repository
 
-From https://github.com/JPDVM2014/unraid-templates
-   fe61d81..6fbd91e  main       -> origin/main
-Updating fe61d81..6fbd91e
-Fast-forward
- soularr.xml | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21774,10 +21614,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/blade-of-agony
-lscr.io/linuxserver/blade-of-agony Downloads: 163  Stars: 0  Base: unknown
-Pulling lscr.io/linuxserver/blade-of-agony
-Error response from daemon: Head "https://ghcr.io/v2/linuxserver/blade-of-agony/manifests/latest": unauthorized
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...
