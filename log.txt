@@ -102,114 +102,7 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-From https://github.com/HabiRabbu/Musicseerr
-   0f25ebc..a69a268  main       -> origin/main
-Updating 0f25ebc..a69a268
-Fast-forward
- backend/api/v1/routes/albums.py                    |   3 -
- backend/api/v1/routes/artists.py                   |   1 -
- backend/api/v1/routes/cache.py                     |   3 -
- backend/api/v1/routes/cache_status.py              |   3 -
- backend/api/v1/routes/covers.py                    |   2 -
- backend/api/v1/routes/discover.py                  |   4 -
- backend/api/v1/routes/home.py                      |   3 -
- backend/api/v1/routes/lastfm.py                    |   9 -
- backend/api/v1/routes/playlists.py                 |   3 -
- backend/api/v1/routes/queue.py                     |   3 -
- backend/api/v1/routes/requests.py                  |   3 -
- backend/api/v1/routes/search.py                    |  10 +-
- backend/api/v1/routes/settings.py                  |  13 --
- backend/api/v1/routes/status.py                    |   3 -
- backend/api/v1/routes/youtube.py                   |   4 -
- backend/core/config.py                             |   7 +-
- backend/core/dependencies/cache_providers.py       |   8 +-
- backend/core/dependencies/cleanup.py               |   6 +-
- backend/core/dependencies/service_providers.py     |  10 -
- backend/core/exception_handlers.py                 |   1 -
- backend/core/tasks.py                              |  73 +------
- backend/infrastructure/cache/disk_cache.py         |   7 +-
- backend/infrastructure/cache/memory_cache.py       |  11 --
- backend/infrastructure/degradation.py              |  10 -
- backend/infrastructure/http/client.py              |   3 -
- backend/infrastructure/http/deduplication.py       |   3 -
- backend/infrastructure/http/disconnect.py          |   4 -
- backend/infrastructure/logging_helper.py           |  43 ----
- backend/infrastructure/persistence/_database.py    |   3 -
- backend/infrastructure/persistence/genre_index.py  |   5 +-
- backend/infrastructure/persistence/library_db.py   |   4 +-
- .../infrastructure/persistence/sync_state_store.py |   3 -
- .../infrastructure/persistence/youtube_store.py    |   5 +-
- backend/infrastructure/queue/priority_queue.py     |   5 -
- backend/infrastructure/queue/queue_store.py        |   3 -
- backend/infrastructure/queue/request_queue.py      |  25 +--
- backend/infrastructure/resilience/retry.py         |  66 +------
- backend/main.py                                    |   7 +-
- backend/repositories/audiodb_repository.py         |  23 ---
- backend/repositories/coverart_album.py             |  18 +-
- backend/repositories/coverart_artist.py            |  26 ---
- backend/repositories/coverart_disk_cache.py        |  40 ++--
- backend/repositories/coverart_repository.py        |  31 +--
- backend/repositories/jellyfin_repository.py        |  14 +-
- backend/repositories/lastfm_repository.py          |   8 -
- backend/repositories/lidarr/album.py               |  50 +----
- backend/repositories/lidarr/artist.py              |  26 +--
- backend/repositories/lidarr/base.py                |  16 +-
- backend/repositories/lidarr/config.py              |   3 -
- backend/repositories/lidarr/history.py             |  19 +-
- backend/repositories/lidarr/library.py             |  20 +-
- backend/repositories/listenbrainz_repository.py    |  25 ---
- backend/repositories/musicbrainz_album.py          |   4 -
- backend/repositories/musicbrainz_artist.py         |   2 +-
- backend/repositories/musicbrainz_base.py           |   3 -
- backend/repositories/navidrome_models.py           |   3 -
- backend/repositories/navidrome_repository.py       |   3 -
- backend/repositories/playlist_repository.py        |   7 +-
- backend/repositories/youtube.py                    |   8 +-
- backend/services/album_service.py                  |  26 +--
- backend/services/artist_discovery_service.py       |  16 --
- backend/services/artist_service.py                 |  13 --
- backend/services/audiodb_browse_queue.py           |  11 +-
- backend/services/audiodb_image_service.py          |  42 ----
- backend/services/cache_service.py                  |  13 --
- backend/services/cache_status_service.py           |   6 -
- backend/services/discover/homepage_service.py      |  36 +---
- backend/services/discover/queue_service.py         |  15 --
- backend/services/discover_queue_manager.py         |  16 --
- backend/services/genre_cover_prewarm_service.py    |   2 -
- backend/services/home/facade.py                    |   1 -
- backend/services/home/genre_service.py             |  11 +-
- backend/services/lastfm_auth_service.py            |   3 -
- backend/services/library_service.py                |  19 +-
- backend/services/local_files_service.py            |   7 +-
- backend/services/navidrome_library_service.py      |  24 ---
- backend/services/playlist_service.py               |   8 -
- backend/services/precache/album_phase.py           |   6 -
- backend/services/precache/artist_phase.py          |   9 -
- backend/services/precache/audiodb_phase.py         |  23 ---
- backend/services/precache/orchestrator.py          |  26 +--
- backend/services/preferences_service.py            |  17 --
- backend/services/requests_page_service.py          |   4 -
- backend/services/scrobble_service.py               |  23 ---
- backend/services/status_service.py                 |   3 -
- backend/services/youtube_service.py                |   7 +-
- backend/tests/routes/test_search_routes.py         |  25 ---
- .../tests/services/test_source_playlist_import.py  |   3 +-
- backend/tests/test_phase9_observability.py         | 216 +--------------------
- .../src/lib/components/DiscoverQueueModal.svelte   |  14 +-
- .../src/lib/components/YouTubeDetailModal.svelte   |   3 +-
- frontend/src/lib/player/NativeAudioSource.ts       |   1 -
- .../src/lib/player/jellyfinPlaybackApi.spec.ts     |  17 +-
- frontend/src/lib/player/jellyfinPlaybackApi.ts     |   8 +-
- frontend/src/lib/player/navidromePlaybackApi.ts    |  22 +--
- .../src/lib/queries/IndexedDbPersister.svelte.ts   |   5 -
- frontend/src/lib/stores/imageSettings.ts           |   4 +-
- frontend/src/lib/stores/library.ts                 |   3 +-
- frontend/src/lib/stores/preferences.ts             |   7 +-
- frontend/src/lib/utils/localStorageCache.ts        |   9 +-
- frontend/src/routes/+layout.ts                     |   4 +-
- frontend/src/routes/library/albums/+page.svelte    |   9 +-
- frontend/src/routes/library/artists/+page.svelte   |   5 +-
- 103 files changed, 127 insertions(+), 1343 deletions(-)
+Already up to date.
 
 Array
 (
@@ -227,30 +120,23 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 Downloading sworcery's Repository
 
 From https://github.com/sworcery/ChannelHoarder
-   00bf174..b451131  main       -> origin/main
- * [new tag]         v1.7.19    -> v1.7.19
- * [new tag]         v1.7.20    -> v1.7.20
- * [new tag]         v1.7.22    -> v1.7.22
-Updating 00bf174..b451131
+   b451131..39d8349  main       -> origin/main
+Updating b451131..39d8349
 Fast-forward
- CHANGELOG.md                             |  46 ++++
+ CHANGELOG.md                             |  16 ++++
  backend/app/config.py                    |   2 +-
- backend/app/database.py                  |   8 +
- backend/app/models.py                    |   2 +
- backend/app/routers/channels.py          | 386 ++++++++++++++++++++++++++++++-
- backend/app/schemas.py                   |   4 +
- backend/app/services/channel_service.py  |  61 +++--
- backend/app/services/download_service.py |   9 +
- backend/app/services/ytdlp_service.py    |  79 +++++--
- backend/app/utils/error_codes.py         |  11 +-
- backend/app/utils/platform_utils.py      |  30 +++
+ backend/app/routers/channels.py          |  65 ++------------
+ backend/app/schemas.py                   |   2 +
+ backend/app/services/channel_service.py  | 142 +++++++++++++++++++++++++++++++
+ backend/app/tasks/quality_upgrade.py     |  16 ++--
+ backend/app/tasks/scan_channels.py       |  53 +++++++++++-
+ backend/app/utils/renumber.py            |  63 ++++++++++++++
  backend/pyproject.toml                   |   2 +-
  frontend/package.json                    |   2 +-
- frontend/src/lib/api.ts                  |  23 ++
- frontend/src/lib/types.ts                |   2 +
- frontend/src/pages/ChannelDetailPage.tsx | 127 +++++++++-
- frontend/src/pages/SettingsPage.tsx      |  24 ++
- 17 files changed, 767 insertions(+), 51 deletions(-)
+ frontend/src/pages/ChannelDetailPage.tsx |  81 ++++++++----------
+ frontend/src/pages/SettingsPage.tsx      |  38 +++++++++
+ 12 files changed, 368 insertions(+), 114 deletions(-)
+ create mode 100644 backend/app/utils/renumber.py
 
 Array
 (
@@ -21576,8 +21462,18 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
+roundcube/roundcubemail
+roundcube/roundcubemail:latest Downloads: 19510491  Stars: 192  Base: unknown
+archivebox/archivebox
+ghcr.io/archivebox/archivebox:latest Downloads: 9478980  Stars: 97  Base: unknown
+mitmproxy/mitmproxy
+mitmproxy/mitmproxy Downloads: 26773330  Stars: 187  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
+pelican-dev/wings
+ghcr.io/pelican-dev/wings:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
+pelican-dev/panel
+ghcr.io/pelican-dev/panel:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
@@ -21653,6 +21549,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
+jamesits/ripe-atlas
+jamesits/ripe-atlas:latest Downloads: 1703750  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -21692,6 +21590,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
+toniebox-reverse-engineering/teddycloud
+ghcr.io/toniebox-reverse-engineering/teddycloud:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -21728,10 +21628,14 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+docmost/docmost
+docmost/docmost:latest Downloads: 3009854  Stars: 19  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+homarr-labs/homarr
+ghcr.io/homarr-labs/homarr:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21740,6 +21644,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
+greycubesgav/cryptomator-webdav
+greycubesgav/cryptomator-webdav Downloads: 1874  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
