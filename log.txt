@@ -13,129 +13,7 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-From https://github.com/peterthepeter/groly
-   68755a2..be11f21  main       -> origin/main
- * [new tag]         v0.5.0     -> v0.5.0
-Updating 68755a2..be11f21
-Fast-forward
- README.md                                          |   68 +-
- docs/screenshots/Add Supplement.png                |  Bin 0 -> 163411 bytes
- docs/screenshots/Edit Supplement.png               |  Bin 0 -> 259909 bytes
- docs/screenshots/Manage Supplement.png             |  Bin 0 -> 202642 bytes
- docs/screenshots/Meal Planner.png                  |  Bin 0 -> 351021 bytes
- docs/screenshots/Options Menu.png                  |  Bin 0 -> 177257 bytes
- docs/screenshots/Recipes.png                       |  Bin 0 -> 242335 bytes
- docs/screenshots/Settings Page.png                 |  Bin 0 -> 216775 bytes
- docs/screenshots/Shopping List Favorites.png       |  Bin 0 -> 174789 bytes
- docs/screenshots/Shopping List overview.png        |  Bin 0 -> 178274 bytes
- docs/screenshots/Shopping List.png                 |  Bin 0 -> 187193 bytes
- docs/screenshots/Supplement History.png            |  Bin 0 -> 277782 bytes
- docs/screenshots/Supplement Today.png              |  Bin 0 -> 209272 bytes
- docs/screenshots/category-sorting.png              |  Bin 222339 -> 0 bytes
- docs/screenshots/list-grid.png                     |  Bin 185067 -> 0 bytes
- docs/screenshots/list-sort.png                     |  Bin 189507 -> 0 bytes
- docs/screenshots/lists.png                         |  Bin 184738 -> 0 bytes
- docs/screenshots/meal-plan-edit.png                |  Bin 213961 -> 0 bytes
- docs/screenshots/meal-plan.png                     |  Bin 257082 -> 0 bytes
- docs/screenshots/recipe-add.png                    |  Bin 138945 -> 0 bytes
- docs/screenshots/recipe-detail.png                 |  Bin 1441732 -> 0 bytes
- docs/screenshots/shortcuts.png                     |  Bin 201420 -> 0 bytes
- messages/de.json                                   |   81 +-
- messages/en.json                                   |   81 +-
- package.json                                       |    2 +-
- src/hooks.server.ts                                |   64 +-
- src/lib/changelog.ts                               |   19 +
- src/lib/components/AppBottomNav.svelte             |  114 ++
- src/lib/components/AppHeader.svelte                |    1 -
- src/lib/components/BottomNav.svelte                |  101 +-
- src/lib/components/FabWithShortcuts.svelte         |    2 +-
- src/lib/components/HamburgerMenu.svelte            |   39 +-
- src/lib/components/InfoModal.svelte                |  514 ++++---
- src/lib/components/ItemRow.svelte                  |    2 +-
- src/lib/components/MealPlanner.svelte              |   21 +-
- src/lib/components/supplements/EditLogSheet.svelte |  117 ++
- .../components/supplements/QuickLogSheet.svelte    |  147 ++
- .../supplements/SupplementAddToListDialog.svelte   |  176 +++
- .../supplements/SupplementEditSheet.svelte         |  267 ++++
- .../supplements/SupplementReminderSheet.svelte     |  210 +++
- src/lib/db/migrations/0020_typical_synch.sql       |   39 +
- src/lib/db/migrations/0021_misty_boomer.sql        |    2 +
- src/lib/db/migrations/0022_known_puck.sql          |    2 +
- src/lib/db/migrations/0023_wonderful_pixie.sql     |   11 +
- src/lib/db/migrations/meta/0020_snapshot.json      | 1510 ++++++++++++++++++
- src/lib/db/migrations/meta/0021_snapshot.json      | 1524 ++++++++++++++++++
- src/lib/db/migrations/meta/0022_snapshot.json      | 1539 +++++++++++++++++++
- src/lib/db/migrations/meta/0023_snapshot.json      | 1614 ++++++++++++++++++++
- src/lib/db/migrations/meta/_journal.json           |   28 +
- src/lib/db/schema.ts                               |   48 +
- src/lib/i18n.svelte.ts                             |   99 ++
- src/lib/userSettings.svelte.ts                     |   16 +-
- src/lib/userSettingsTypes.ts                       |    2 +
- src/routes/+page.svelte                            |  109 +-
- src/routes/api/push-test/+server.ts                |   38 +
- src/routes/api/supplement-logs/+server.ts          |   74 +
- src/routes/api/supplement-logs/[id]/+server.ts     |   73 +
- src/routes/api/supplement-reminders/+server.ts     |  118 ++
- .../api/supplement-reminders/[id]/+server.ts       |   71 +
- src/routes/api/supplement-stats/+server.ts         |  126 ++
- src/routes/api/supplements/+server.ts              |   85 ++
- src/routes/api/supplements/[id]/+server.ts         |  115 ++
- src/routes/einstellungen/+page.svelte              |  209 ++-
- src/routes/rezepte/+page.svelte                    |  163 +-
- src/routes/rezepte/import/+page.svelte             |  283 ++--
- src/routes/supplements/+page.server.ts             |    9 +
- src/routes/supplements/+page.svelte                |  629 ++++++++
- src/routes/supplements/verwalten/+page.server.ts   |    9 +
- src/routes/supplements/verwalten/+page.svelte      |  431 ++++++
- unraid/groly.xml                                   |    2 +-
- 70 files changed, 10452 insertions(+), 552 deletions(-)
- create mode 100644 docs/screenshots/Add Supplement.png
- create mode 100644 docs/screenshots/Edit Supplement.png
- create mode 100644 docs/screenshots/Manage Supplement.png
- create mode 100644 docs/screenshots/Meal Planner.png
- create mode 100644 docs/screenshots/Options Menu.png
- create mode 100644 docs/screenshots/Recipes.png
- create mode 100644 docs/screenshots/Settings Page.png
- create mode 100644 docs/screenshots/Shopping List Favorites.png
- create mode 100644 docs/screenshots/Shopping List overview.png
- create mode 100644 docs/screenshots/Shopping List.png
- create mode 100644 docs/screenshots/Supplement History.png
- create mode 100644 docs/screenshots/Supplement Today.png
- delete mode 100644 docs/screenshots/category-sorting.png
- delete mode 100644 docs/screenshots/list-grid.png
- delete mode 100644 docs/screenshots/list-sort.png
- delete mode 100644 docs/screenshots/lists.png
- delete mode 100644 docs/screenshots/meal-plan-edit.png
- delete mode 100644 docs/screenshots/meal-plan.png
- delete mode 100644 docs/screenshots/recipe-add.png
- delete mode 100644 docs/screenshots/recipe-detail.png
- delete mode 100644 docs/screenshots/shortcuts.png
- create mode 100644 src/lib/components/AppBottomNav.svelte
- create mode 100644 src/lib/components/supplements/EditLogSheet.svelte
- create mode 100644 src/lib/components/supplements/QuickLogSheet.svelte
- create mode 100644 src/lib/components/supplements/SupplementAddToListDialog.svelte
- create mode 100644 src/lib/components/supplements/SupplementEditSheet.svelte
- create mode 100644 src/lib/components/supplements/SupplementReminderSheet.svelte
- create mode 100644 src/lib/db/migrations/0020_typical_synch.sql
- create mode 100644 src/lib/db/migrations/0021_misty_boomer.sql
- create mode 100644 src/lib/db/migrations/0022_known_puck.sql
- create mode 100644 src/lib/db/migrations/0023_wonderful_pixie.sql
- create mode 100644 src/lib/db/migrations/meta/0020_snapshot.json
- create mode 100644 src/lib/db/migrations/meta/0021_snapshot.json
- create mode 100644 src/lib/db/migrations/meta/0022_snapshot.json
- create mode 100644 src/lib/db/migrations/meta/0023_snapshot.json
- create mode 100644 src/routes/api/push-test/+server.ts
- create mode 100644 src/routes/api/supplement-logs/+server.ts
- create mode 100644 src/routes/api/supplement-logs/[id]/+server.ts
- create mode 100644 src/routes/api/supplement-reminders/+server.ts
- create mode 100644 src/routes/api/supplement-reminders/[id]/+server.ts
- create mode 100644 src/routes/api/supplement-stats/+server.ts
- create mode 100644 src/routes/api/supplements/+server.ts
- create mode 100644 src/routes/api/supplements/[id]/+server.ts
- create mode 100644 src/routes/supplements/+page.server.ts
- create mode 100644 src/routes/supplements/+page.svelte
- create mode 100644 src/routes/supplements/verwalten/+page.server.ts
- create mode 100644 src/routes/supplements/verwalten/+page.svelte
+Already up to date.
 
 Array
 (
@@ -2141,26 +2019,35 @@ Success
 Downloading vincentmakes' Repository
 
 From https://github.com/vincentmakes/cv-manager
-   5aa1c32..f8e2afc  main       -> origin/main
-Updating 5aa1c32..f8e2afc
+   f8e2afc..cce05b7  main       -> origin/main
+Updating f8e2afc..cce05b7
 Fast-forward
- CHANGELOG.md               |  9 +++++
- CLAUDE.md                  | 30 +++++++++++++--
- package-lock.json          |  4 +-
- package.json               |  2 +-
- public/shared/admin.js     |  4 +-
- public/shared/i18n/de.json |  4 ++
- public/shared/i18n/en.json |  4 ++
- public/shared/i18n/es.json |  4 ++
- public/shared/i18n/fr.json |  4 ++
- public/shared/i18n/it.json |  4 ++
- public/shared/i18n/nl.json |  4 ++
- public/shared/i18n/pt.json |  4 ++
- public/shared/i18n/zh.json |  4 ++
- src/server.js              | 59 +++++++++++++++++++++++-----
- tests/backend.test.js      | 96 ++++++++++++++++++++++++++++++++++++++++++++++
- version.json               |  2 +-
- 16 files changed, 218 insertions(+), 20 deletions(-)
+ CHANGELOG.md               |   9 ++
+ docs/guide/datasets.de.md  |  28 ++++-
+ docs/guide/datasets.es.md  |  28 ++++-
+ docs/guide/datasets.fr.md  |  28 ++++-
+ docs/guide/datasets.it.md  |  28 ++++-
+ docs/guide/datasets.md     |  30 ++++-
+ docs/guide/datasets.nl.md  |  28 ++++-
+ docs/guide/datasets.pt.md  |  28 ++++-
+ docs/guide/datasets.zh.md  |  28 ++++-
+ package-lock.json          |   4 +-
+ package.json               |   2 +-
+ public/index.html          |  30 +++++
+ public/shared/admin.css    | 276 ++++++++++++++++++++++++++++++++++++++++++
+ public/shared/admin.js     | 290 ++++++++++++++++++++++++++++++++++++++++-----
+ public/shared/i18n/de.json |  12 ++
+ public/shared/i18n/en.json |  12 ++
+ public/shared/i18n/es.json |  12 ++
+ public/shared/i18n/fr.json |  12 ++
+ public/shared/i18n/it.json |  12 ++
+ public/shared/i18n/nl.json |  12 ++
+ public/shared/i18n/pt.json |  12 ++
+ public/shared/i18n/zh.json |  12 ++
+ roadmap.md                 |   5 +
+ version.json               |   2 +-
+ 24 files changed, 900 insertions(+), 40 deletions(-)
+ create mode 100644 roadmap.md
 
 Array
 (
@@ -2300,87 +2187,11 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
-   2780abc3..6310fa4c  master     -> origin/master
- * [new tag]           v0.11.26-dev -> v0.11.26-dev
-Updating 2780abc3..6310fa4c
+   6310fa4c..22e6ed00  master     -> origin/master
+Updating 6310fa4c..22e6ed00
 Fast-forward
- app/Filament/Actions/BulkModalActionGroup.php      |   38 +-
- app/Filament/Actions/ModalActionGroup.php          |   38 +-
- .../GuestPanel/Resources/Series/SeriesResource.php |   33 +
- .../GuestPanel/Resources/Vods/VodResource.php      |   30 +
- app/Filament/Pages/M3uProxyStreamMonitor.php       |    8 +
- app/Filament/Pages/Preferences.php                 |   16 +-
- .../Resources/Categories/CategoryResource.php      |    6 +-
- .../Resources/Categories/Pages/EditCategory.php    |    2 +-
- .../Resources/Channels/ChannelResource.php         | 1332 ++++----
- app/Filament/Resources/Groups/GroupResource.php    |   19 +-
- app/Filament/Resources/Groups/Pages/EditGroup.php  |   10 +-
- .../MediaServerIntegrationResource.php             |    2 +-
- .../PlaylistAliases/PlaylistAliasResource.php      |  246 +-
- .../Resources/Playlists/PlaylistResource.php       |  677 +++--
- app/Filament/Resources/Series/SeriesResource.php   |  702 +++--
- .../StreamProfiles/StreamProfileResource.php       |   78 +-
- .../Resources/VodGroups/Pages/EditVodGroup.php     |   10 +-
- .../Resources/VodGroups/VodGroupResource.php       |   19 +-
- app/Filament/Resources/Vods/VodResource.php        | 1167 ++++---
- app/Http/Controllers/Api/DispatcharrController.php |    2 +-
- app/Http/Controllers/Api/EpgApiController.php      |    5 +-
- app/Http/Controllers/Api/M3uProxyApiController.php |   45 +-
- app/Http/Controllers/XtreamApiController.php       |   30 +-
- app/Http/Controllers/XtreamStreamController.php    |    9 +-
- app/Jobs/AddGroupsToCustomPlaylist.php             |  109 +
- app/Jobs/FetchTmdbIds.php                          |   27 +-
- app/Models/Channel.php                             |   67 +-
- app/Models/PlaylistAlias.php                       |   85 +-
- app/Models/Series.php                              |   45 +
- app/Models/StreamProfile.php                       |   13 +-
- app/Plugins/PluginSchemaMapper.php                 |   32 +-
- app/Providers/Filament/AdminPanelProvider.php      |    7 +
- app/Providers/Filament/GuestPanelPanelProvider.php |    4 +
- app/Services/M3uProxyService.php                   |   31 +-
- app/Services/PlaylistService.php                   |   70 +
- app/Services/TmdbService.php                       |    3 +
- config/dev.php                                     |    4 +-
- config/plugins.php                                 |    5 +
- database/factories/StreamProfileFactory.php        |   28 +-
- ..._add_group_filter_to_playlist_aliases_table.php |   28 +
- ...04_13_214736_add_backend_to_stream_profiles.php |   29 +
- ...04_14_013133_add_cookies_to_stream_profiles.php |   28 +
- lang/zh_CN.json                                    | 3198 ++++++++++----------
- lang/zh_CN/auth.php                                |    6 +-
- lang/zh_CN/navigation.php                          |   28 +-
- lang/zh_CN/pagination.php                          |    4 +-
- lang/zh_CN/passwords.php                           |    8 +-
- lang/zh_CN/resources.php                           |   10 +-
- lang/zh_CN/validation.php                          |  225 +-
- resources/js/app.js                                |   44 +-
- resources/js/vendor/multi-stream-manager.js        |   49 +-
- resources/js/vendor/overlay-scrollbar.js           |   42 +
- resources/js/vendor/stream-viewer.js               |   18 +-
- .../components/floating-stream-players.blade.php   |   26 +-
- .../pages/m3u-proxy-stream-monitor.blade.php       |    5 +
- resources/views/player/popout.blade.php            |   51 +-
- tests/Feature/AddGroupsToCustomPlaylistTest.php    |  255 ++
- tests/Feature/BulkEpgShiftTest.php                 |   92 +
- tests/Feature/ChannelBulkProbingActionsTest.php    |   31 +-
- tests/Feature/ChannelStreamProfileTest.php         |  196 +-
- tests/Feature/EpgGroupsTest.php                    |   97 +-
- tests/Feature/FetchTmdbIdsTest.php                 |   84 +
- tests/Feature/PlaylistAliasTest.php                |  208 ++
- tests/Feature/StopPlayerStreamTest.php             |   60 +-
- tests/Feature/StreamProfileResolverFormatTest.php  |  327 ++
- tests/Feature/TmdbScopeTest.php                    |  191 ++
- tests/Feature/VodResourceTableTest.php             |   53 +
- 67 files changed, 6533 insertions(+), 3914 deletions(-)
- create mode 100644 app/Jobs/AddGroupsToCustomPlaylist.php
- create mode 100644 database/migrations/2026_04_13_175306_add_group_filter_to_playlist_aliases_table.php
- create mode 100644 database/migrations/2026_04_13_214736_add_backend_to_stream_profiles.php
- create mode 100644 database/migrations/2026_04_14_013133_add_cookies_to_stream_profiles.php
- create mode 100644 resources/js/vendor/overlay-scrollbar.js
- create mode 100644 tests/Feature/AddGroupsToCustomPlaylistTest.php
- create mode 100644 tests/Feature/BulkEpgShiftTest.php
- create mode 100644 tests/Feature/StreamProfileResolverFormatTest.php
- create mode 100644 tests/Feature/TmdbScopeTest.php
+ package-lock.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 
 Array
 (
@@ -21613,8 +21424,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnngone/fresh-editor-unraid/main/plugin/fresh-editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/mstrhakr/compose_plugin/main/compose.manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/mstrhakr/compose_plugin/dev/compose.manager.plg attempt 1...
-g0t3nks/amutorrent
-g0t3nks/amutorrent:latest Downloads: 18930  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/cslemieux/unraid-custom-smb-shares/main/custom.smb.shares.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alexphillips-dev/FolderView-Plus/main/folderview.plus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alexphillips-dev/Appdata-Cleanup-Plus/main/plugins/appdata.cleanup.plus.plg attempt 1...
