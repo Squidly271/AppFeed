@@ -102,108 +102,7 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-From https://github.com/HabiRabbu/Musicseerr
-   6ca23bc..1e7da40  main       -> origin/main
-Updating 6ca23bc..1e7da40
-Fast-forward
- Dockerfile                                         |   3 +-
- backend/api/v1/routes/albums.py                    |  45 ++-
- backend/api/v1/routes/library.py                   |   5 +-
- backend/api/v1/routes/version.py                   |  29 ++
- backend/api/v1/schemas/album.py                    |   1 +
- backend/api/v1/schemas/discover.py                 |   1 +
- backend/api/v1/schemas/discovery.py                |   2 +
- backend/api/v1/schemas/home.py                     |   1 +
- backend/api/v1/schemas/library.py                  |   1 +
- backend/api/v1/schemas/search.py                   |   1 +
- backend/api/v1/schemas/version.py                  |  23 ++
- backend/core/dependencies/__init__.py              |   4 +
- backend/core/dependencies/repo_providers.py        |   9 +
- backend/core/dependencies/service_providers.py     |   9 +
- backend/core/dependencies/type_aliases.py          |   6 +
- backend/infrastructure/cache/cache_keys.py         |   6 +
- backend/infrastructure/cache/disk_cache.py         |   4 +-
- backend/main.py                                    |   2 +
- backend/models/album.py                            |   1 +
- backend/models/artist.py                           |   1 +
- backend/models/search.py                           |   1 +
- backend/repositories/github_repository.py          |  83 ++++++
- backend/repositories/lidarr/album.py               |  14 +
- backend/repositories/lidarr/base.py                |   3 +-
- backend/repositories/lidarr/library.py             |  26 +-
- backend/repositories/protocols/lidarr.py           |   6 +
- backend/requirements.txt                           |   1 +
- backend/services/album_service.py                  |  84 ++++--
- backend/services/album_utils.py                    |   2 +
- backend/services/artist_service.py                 |  62 ++--
- backend/services/artist_utils.py                   |   7 +
- backend/services/discover/homepage_service.py      |  42 ++-
- .../services/discover/mbid_resolution_service.py   |   2 +-
- backend/services/home/charts_service.py            |  68 +++--
- backend/services/home/facade.py                    |  12 +-
- backend/services/home/section_builders.py          |  17 +-
- backend/services/home_transformers.py              |  29 +-
- backend/services/library_service.py                |  13 +-
- backend/services/precache/album_phase.py           |   6 +-
- backend/services/precache/orchestrator.py          |  10 +-
- backend/services/search_service.py                 |  21 +-
- backend/services/version_service.py                |  59 ++++
- .../infrastructure/test_disk_metadata_cache.py     |  14 +-
- .../repositories/test_lidarr_library_cache.py      |   3 +
- backend/tests/services/test_album_service.py       |   6 +-
- backend/tests/services/test_artist_basic_info.py   |   1 +
- .../services/test_artist_release_pagination.py     |   1 +
- .../services/test_audiodb_url_only_integration.py  |   1 +
- .../tests/services/test_search_audiodb_overlay.py  |   1 +
- backend/tests/services/test_search_service.py      |   3 +
- backend/tests/test_audiodb_killswitch.py           |   1 +
- backend/tests/test_dependencies_package.py         |   2 +-
- backend/tests/test_sync_coordinator.py             |   6 +-
- frontend/package.json                              |   3 +
- frontend/pnpm-lock.yaml                            |  42 +++
- frontend/src/app.css                               |  85 +++++-
- frontend/src/lib/components/AlbumCard.svelte       |  31 ++
- .../lib/components/DiscoveryAlbumCarousel.svelte   |   1 +
- frontend/src/lib/components/GenreAlbumCard.svelte  |   6 +-
- frontend/src/lib/components/HomeSection.svelte     |   9 +-
- .../lib/components/LibraryAlbumsCarousel.svelte    |   1 +
- frontend/src/lib/components/LibraryBadge.svelte    |  75 ++++-
- frontend/src/lib/components/ReleaseList.svelte     |  70 +++--
- .../src/lib/components/SearchSuggestions.svelte    |   3 +
- frontend/src/lib/components/TimeRangeCard.svelte   |  11 +-
- frontend/src/lib/components/TopAlbumsList.svelte   |  34 ++-
- frontend/src/lib/components/UpdateBanner.svelte    |  74 +++++
- frontend/src/lib/components/VersionOverlays.svelte |  40 +++
- frontend/src/lib/components/WhatsNewModal.svelte   | 167 +++++++++++
- .../lib/components/settings/SettingsAbout.svelte   | 316 +++++++++++++++++++++
- frontend/src/lib/constants.ts                      |  16 +-
- frontend/src/lib/queries/VersionQuery.svelte.ts    |  53 ++++
- frontend/src/lib/queries/VersionQueryKeyFactory.ts |   6 +
- frontend/src/lib/stores/library.ts                 |  84 ++++--
- frontend/src/lib/stores/version.svelte.ts          |  12 +
- frontend/src/lib/types.ts                          |  12 +
- frontend/src/lib/utils/markdown.ts                 |   7 +
- frontend/src/lib/utils/monitorAlbum.ts             |   7 +
- frontend/src/routes/+layout.svelte                 |  24 +-
- frontend/src/routes/album/[id]/+page.svelte        |   4 +
- frontend/src/routes/album/[id]/AlbumHeader.svelte  |  33 ++-
- .../src/routes/album/[id]/albumEventHandlers.ts    |  24 ++
- .../src/routes/album/[id]/albumPageState.svelte.ts |  22 ++
- frontend/src/routes/settings/+page.svelte          |  22 +-
- 84 files changed, 1857 insertions(+), 198 deletions(-)
- create mode 100644 backend/api/v1/routes/version.py
- create mode 100644 backend/api/v1/schemas/version.py
- create mode 100644 backend/repositories/github_repository.py
- create mode 100644 backend/services/version_service.py
- create mode 100644 frontend/src/lib/components/UpdateBanner.svelte
- create mode 100644 frontend/src/lib/components/VersionOverlays.svelte
- create mode 100644 frontend/src/lib/components/WhatsNewModal.svelte
- create mode 100644 frontend/src/lib/components/settings/SettingsAbout.svelte
- create mode 100644 frontend/src/lib/queries/VersionQuery.svelte.ts
- create mode 100644 frontend/src/lib/queries/VersionQueryKeyFactory.ts
- create mode 100644 frontend/src/lib/stores/version.svelte.ts
- create mode 100644 frontend/src/lib/utils/markdown.ts
- create mode 100644 frontend/src/lib/utils/monitorAlbum.ts
+Already up to date.
 
 Array
 (
@@ -5572,7 +5471,15 @@ Processing /tmp/GitHub/repositoryClone/apfaffman/docker-templates/ca_profile.xml
 
 Downloading andaks' Repository
 
-Already up to date.
+From https://github.com/andaks/unraid-templates
+   9aac8af..1954349  master     -> origin/master
+Updating 9aac8af..1954349
+Fast-forward
+ chirpstack/chirpstack.xml      |  28 ++++++++++++++++++++++++++++
+ chirpstack/chirpstack_logo.png | Bin 0 -> 8301 bytes
+ 2 files changed, 28 insertions(+)
+ create mode 100644 chirpstack/chirpstack.xml
+ create mode 100644 chirpstack/chirpstack_logo.png
 
 Array
 (
@@ -5583,6 +5490,7 @@ Array
             [2] => /tmp/GitHub/repositoryClone/andaks/unraid-templates/zabbix/zabbix-server-pgsql.xml
             [3] => /tmp/GitHub/repositoryClone/andaks/unraid-templates/listmonk/listmonk.xml
             [4] => /tmp/GitHub/repositoryClone/andaks/unraid-templates/tile38/tile38.xml
+            [5] => /tmp/GitHub/repositoryClone/andaks/unraid-templates/chirpstack/chirpstack.xml
         )
 
 )
@@ -5593,6 +5501,7 @@ Processing /tmp/GitHub/repositoryClone/andaks/unraid-templates/zabbix/zabbix-web
 Processing /tmp/GitHub/repositoryClone/andaks/unraid-templates/zabbix/zabbix-server-pgsql.xml...Success
 Processing /tmp/GitHub/repositoryClone/andaks/unraid-templates/listmonk/listmonk.xml...Success
 Processing /tmp/GitHub/repositoryClone/andaks/unraid-templates/tile38/tile38.xml...Success
+Processing /tmp/GitHub/repositoryClone/andaks/unraid-templates/chirpstack/chirpstack.xml...Success
 
 
 Downloading simpleServer's Repository
@@ -9046,12 +8955,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   d34ef0a..cce172a  master     -> origin/master
-Updating d34ef0a..cce172a
-Fast-forward
- jlesage/tinymediamanager.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21108,7 +21012,12 @@ Removed from CA123
 
 Downloading Nodiaque's Repository
 
-Already up to date.
+From https://github.com/nodiaque/unraid_template
+   2c23d5e..2d8da7c  master     -> origin/master
+Updating 2c23d5e..2d8da7c
+Fast-forward
+ nodiaque/windrose.xml | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -21563,6 +21472,9 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+chirpstack/chirpstack
+chirpstack/chirpstack Downloads: 1768653  Stars: 10  Base: unknown
+Pulling chirpstack/chirpstack
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
