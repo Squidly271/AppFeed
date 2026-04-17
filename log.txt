@@ -13,7 +13,32 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   4e009dc..e6a0bc3  main       -> origin/main
+ * [new tag]         v0.5.2     -> v0.5.2
+Updating 4e009dc..e6a0bc3
+Fast-forward
+ messages/de.json                                   |   4 +
+ messages/en.json                                   |   4 +
+ package.json                                       |   2 +-
+ src/hooks.server.ts                                |   2 +-
+ src/lib/changelog.ts                               |  15 +
+ src/lib/components/AboutModal.svelte               | 124 ++++++
+ src/lib/components/AppBottomNav.svelte             |  19 +-
+ src/lib/components/HamburgerMenu.svelte            |  18 +
+ src/lib/components/InfoModal.svelte                |   4 +-
+ src/lib/components/MealPlanner.svelte              | 424 +++++++++++----------
+ .../supplements/SupplementEditSheet.svelte         | 155 +++++++-
+ src/lib/i18n.svelte.ts                             |   4 +
+ src/lib/server/pushNotifications.ts                |   2 +-
+ src/routes/api/meal-plan/+server.ts                |  54 +--
+ src/routes/api/meal-plan/[id]/+server.ts           |  56 +++
+ src/routes/rezepte/[id]/+page.svelte               | 171 +++++----
+ src/routes/supplements/+page.svelte                |  54 ++-
+ src/service-worker.ts                              |   3 +-
+ 18 files changed, 766 insertions(+), 349 deletions(-)
+ create mode 100644 src/lib/components/AboutModal.svelte
+ create mode 100644 src/routes/api/meal-plan/[id]/+server.ts
 
 Array
 (
@@ -155,7 +180,14 @@ Processing /tmp/GitHub/repositoryClone/jaydenroberts/unraid-templates/tally.xml.
 
 Downloading JSONbored's Repository
 
-Already up to date.
+From https://github.com/JSONbored/awesome-unraid
+   09b50cb..d3c9dc4  main       -> origin/main
+Updating 09b50cb..d3c9dc4
+Fast-forward
+ CHANGELOG.md |   2 +
+ khoj-aio.xml | 184 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 186 insertions(+)
+ create mode 100644 khoj-aio.xml
 
 Array
 (
@@ -164,6 +196,7 @@ Array
             [0] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/ca_profile.xml
             [1] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/sure-aio.xml
             [2] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/simplelogin-aio.xml
+            [3] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/khoj-aio.xml
         )
 
 )
@@ -174,6 +207,9 @@ Processing /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/sure-aio.xml...U
 
 Success
 Processing /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/simplelogin-aio.xml...Success
+Processing /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/khoj-aio.xml...Unknown category Utilities:
+
+Success
 
 
 Downloading CtznSnips' Repository
@@ -903,7 +939,14 @@ Processing /tmp/GitHub/repositoryClone/got3nks/amutorrent/unraid/amutorrent.xml.
 
 Downloading BitCryptic's Repository
 
-Already up to date.
+From https://github.com/bitcryptic-gw/unraid-pi-network-node
+   0bbcd3a..2a4bd3d  main       -> origin/main
+Updating 0bbcd3a..2a4bd3d
+Fast-forward
+ Dockerfile        |  2 +-
+ PiNetworkNode.xml |  6 +++---
+ README.md         | 23 ++++++++++++++++-------
+ 3 files changed, 20 insertions(+), 11 deletions(-)
 
 Array
 (
@@ -8786,19 +8829,43 @@ Processing /tmp/GitHub/repositoryClone/Waseh/unraidtemplates/ca_profile.xml...FO
 
 Downloading Uirel's Repository
 
-Already up to date.
+From https://github.com/Poag/docker-xml
+   dcfe6ed..df11c8c  master     -> origin/master
+Updating dcfe6ed..df11c8c
+Fast-forward
+ iplayarr.xml   | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ unmonitarr.xml | 40 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 87 insertions(+)
+ create mode 100644 iplayarr.xml
+ create mode 100644 unmonitarr.xml
 
 Array
 (
     [https://github.com/Poag/docker-xml] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/Poag/docker-xml/decluttarr.xml
+            [1] => /tmp/GitHub/repositoryClone/Poag/docker-xml/unmonitarr.xml
+            [2] => /tmp/GitHub/repositoryClone/Poag/docker-xml/iplayarr.xml
         )
 
 )
    Success!
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/decluttarr.xml...Success
+Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/unmonitarr.xml...No category entry present
+
+Success
+Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/iplayarr.xml...Multiple Overviews Found
+
+Multiple Category tags present - using longest one
+
+No Registry entry set.  Created from Repository setting - This may not be the correct value
+
+Fatal: No valid Overview Or Description present - Application dropped from CA automatically - Possibly far too many formatting tags present
+
+No Support or Project Link Present.  Template automatically dropped from CA
+
+Removed from CA123
 
 
 Downloading Thraxis' Repository
@@ -17743,7 +17810,9 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+ + 4dd7d14...7fb8d1b main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
@@ -21394,6 +21463,10 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
+jsonbored/khoj-aio
+jsonbored/khoj-aio:latest Downloads: 88  Stars: 0  Base: unknown
+Pulling jsonbored/khoj-aio:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoMonitor/main/plugin/hakomonitor.plg attempt 1...
@@ -21539,6 +21612,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+unmonitarr/unmonitarr
+ghcr.io/unmonitarr/unmonitarr:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/unmonitarr/unmonitarr:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
