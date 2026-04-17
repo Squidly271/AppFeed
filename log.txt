@@ -13,7 +13,49 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   e6a0bc3..f3ceb87  main       -> origin/main
+ * [new tag]         v0.5.3     -> v0.5.3
+Updating e6a0bc3..f3ceb87
+Fast-forward
+ messages/de.json                                   |   28 +-
+ messages/en.json                                   |   28 +-
+ package.json                                       |    2 +-
+ src/hooks.server.ts                                |   15 +
+ src/lib/changelog.ts                               |   13 +
+ src/lib/components/AddItemBar.svelte               |    2 +-
+ src/lib/components/HamburgerMenu.svelte            |    6 +-
+ src/lib/components/supplements/EditLogSheet.svelte |    7 +-
+ .../components/supplements/QuickLogSheet.svelte    |    9 +-
+ .../supplements/SupplementAddToListDialog.svelte   |    3 +-
+ .../supplements/SupplementEditSheet.svelte         |  173 +-
+ .../supplements/SupplementReminderSheet.svelte     |    3 +-
+ .../migrations/0024_wandering_frightful_four.sql   |   24 +
+ .../0025_supplement_catalog_package_size.sql       |    3 +
+ src/lib/db/migrations/meta/0024_snapshot.json      | 1777 ++++++++++++++++++++
+ src/lib/db/migrations/meta/0025_snapshot.json      | 1776 +++++++++++++++++++
+ src/lib/db/migrations/meta/_journal.json           |   14 +
+ src/lib/db/schema.ts                               |   23 +
+ src/lib/i18n.svelte.ts                             |   26 +
+ src/lib/units.ts                                   |   14 +
+ src/routes/api/push/subscribe/+server.ts           |    8 +-
+ src/routes/api/supplement-catalog/+server.ts       |   91 +
+ src/routes/api/supplement-catalog/[id]/+server.ts  |   70 +
+ src/routes/api/supplement-catalog/parse/+server.ts |  271 +++
+ src/routes/einstellungen/+page.svelte              |    2 +-
+ src/routes/einstellungen/admin/+page.svelte        |  930 ++++++++++
+ src/routes/supplements/+page.svelte                |   11 +-
+ src/routes/supplements/verwalten/+page.svelte      |   11 +-
+ 28 files changed, 5300 insertions(+), 40 deletions(-)
+ create mode 100644 src/lib/db/migrations/0024_wandering_frightful_four.sql
+ create mode 100644 src/lib/db/migrations/0025_supplement_catalog_package_size.sql
+ create mode 100644 src/lib/db/migrations/meta/0024_snapshot.json
+ create mode 100644 src/lib/db/migrations/meta/0025_snapshot.json
+ create mode 100644 src/lib/units.ts
+ create mode 100644 src/routes/api/supplement-catalog/+server.ts
+ create mode 100644 src/routes/api/supplement-catalog/[id]/+server.ts
+ create mode 100644 src/routes/api/supplement-catalog/parse/+server.ts
+ create mode 100644 src/routes/einstellungen/admin/+page.svelte
 
 Array
 (
@@ -2024,7 +2066,28 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   74174ee..54d5c07  main       -> origin/main
+Updating 74174ee..54d5c07
+Fast-forward
+ CHANGELOG.md               |  12 ++
+ package-lock.json          |   4 +-
+ package.json               |   2 +-
+ public/index.html          |  26 +++--
+ public/shared/admin.css    |  72 ++++++++++--
+ public/shared/admin.js     | 269 ++++++++++++++++++++++++++++++---------------
+ public/shared/i18n/de.json |  10 +-
+ public/shared/i18n/en.json |  10 +-
+ public/shared/i18n/es.json |  10 +-
+ public/shared/i18n/fr.json |  10 +-
+ public/shared/i18n/it.json |  10 +-
+ public/shared/i18n/nl.json |  10 +-
+ public/shared/i18n/pt.json |  10 +-
+ public/shared/i18n/zh.json |  10 +-
+ public/shared/styles.css   | 139 ++++++++++++++++++-----
+ src/server.js              |   4 +-
+ version.json               |   2 +-
+ 17 files changed, 457 insertions(+), 153 deletions(-)
 
 Array
 (
@@ -6690,17 +6753,7 @@ Processing /tmp/GitHub/repositoryClone/balloob/unraid-docker-templates/balloob/c
 
 Downloading Binhex's Repository
 
-From https://github.com/binhex/templates
-   f0c41a3..91e0c9b  main       -> origin/main
-Updating f0c41a3..91e0c9b
-Fast-forward
- projects/common/.gitignore                            |  2 ++
- projects/python/.pre-commit-config.yaml               | 10 +++++++---
- projects/python/pyproject.toml                        |  2 ++
- projects/python/src/appname/cli.py                    |  4 ++--
- projects/python/src/appname/{logging.py => logger.py} |  0
- 5 files changed, 13 insertions(+), 5 deletions(-)
- rename projects/python/src/appname/{logging.py => logger.py} (100%)
+Already up to date.
 
 Array
 (
@@ -8800,7 +8853,12 @@ Processing /tmp/GitHub/repositoryClone/Waseh/unraidtemplates/ca_profile.xml...FO
 
 Downloading Uirel's Repository
 
-Already up to date.
+From https://github.com/Poag/docker-xml
+   df11c8c..072b5e8  master     -> origin/master
+Updating df11c8c..072b5e8
+Fast-forward
+ iplayarr.xml | 14 ++------------
+ 1 file changed, 2 insertions(+), 12 deletions(-)
 
 Array
 (
@@ -8818,17 +8876,9 @@ Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/decluttarr.xml...Success
 Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/unmonitarr.xml...No category entry present
 
 Success
-Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/iplayarr.xml...Multiple Overviews Found
+Processing /tmp/GitHub/repositoryClone/Poag/docker-xml/iplayarr.xml...No Registry entry set.  Created from Repository setting - This may not be the correct value
 
-Multiple Category tags present - using longest one
-
-No Registry entry set.  Created from Repository setting - This may not be the correct value
-
-Fatal: No valid Overview Or Description present - Application dropped from CA automatically - Possibly far too many formatting tags present
-
-No Support or Project Link Present.  Template automatically dropped from CA
-
-Removed from CA123
+Success
 
 
 Downloading Thraxis' Repository
@@ -8987,7 +9037,12 @@ Success
 
 Downloading Djoss' Repository
 
-Already up to date.
+From https://github.com/jlesage/docker-templates
+   cce172a..bf23d60  master     -> origin/master
+Updating cce172a..bf23d60
+Fast-forward
+ jlesage/putty.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -21569,6 +21624,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+nikorag/iplayarr
+nikorag/iplayarr:latest Downloads: 47201  Stars: 1  Base: unknown
+Pulling nikorag/iplayarr:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
