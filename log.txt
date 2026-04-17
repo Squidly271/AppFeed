@@ -13,49 +13,7 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-From https://github.com/peterthepeter/groly
-   e6a0bc3..f3ceb87  main       -> origin/main
- * [new tag]         v0.5.3     -> v0.5.3
-Updating e6a0bc3..f3ceb87
-Fast-forward
- messages/de.json                                   |   28 +-
- messages/en.json                                   |   28 +-
- package.json                                       |    2 +-
- src/hooks.server.ts                                |   15 +
- src/lib/changelog.ts                               |   13 +
- src/lib/components/AddItemBar.svelte               |    2 +-
- src/lib/components/HamburgerMenu.svelte            |    6 +-
- src/lib/components/supplements/EditLogSheet.svelte |    7 +-
- .../components/supplements/QuickLogSheet.svelte    |    9 +-
- .../supplements/SupplementAddToListDialog.svelte   |    3 +-
- .../supplements/SupplementEditSheet.svelte         |  173 +-
- .../supplements/SupplementReminderSheet.svelte     |    3 +-
- .../migrations/0024_wandering_frightful_four.sql   |   24 +
- .../0025_supplement_catalog_package_size.sql       |    3 +
- src/lib/db/migrations/meta/0024_snapshot.json      | 1777 ++++++++++++++++++++
- src/lib/db/migrations/meta/0025_snapshot.json      | 1776 +++++++++++++++++++
- src/lib/db/migrations/meta/_journal.json           |   14 +
- src/lib/db/schema.ts                               |   23 +
- src/lib/i18n.svelte.ts                             |   26 +
- src/lib/units.ts                                   |   14 +
- src/routes/api/push/subscribe/+server.ts           |    8 +-
- src/routes/api/supplement-catalog/+server.ts       |   91 +
- src/routes/api/supplement-catalog/[id]/+server.ts  |   70 +
- src/routes/api/supplement-catalog/parse/+server.ts |  271 +++
- src/routes/einstellungen/+page.svelte              |    2 +-
- src/routes/einstellungen/admin/+page.svelte        |  930 ++++++++++
- src/routes/supplements/+page.svelte                |   11 +-
- src/routes/supplements/verwalten/+page.svelte      |   11 +-
- 28 files changed, 5300 insertions(+), 40 deletions(-)
- create mode 100644 src/lib/db/migrations/0024_wandering_frightful_four.sql
- create mode 100644 src/lib/db/migrations/0025_supplement_catalog_package_size.sql
- create mode 100644 src/lib/db/migrations/meta/0024_snapshot.json
- create mode 100644 src/lib/db/migrations/meta/0025_snapshot.json
- create mode 100644 src/lib/units.ts
- create mode 100644 src/routes/api/supplement-catalog/+server.ts
- create mode 100644 src/routes/api/supplement-catalog/[id]/+server.ts
- create mode 100644 src/routes/api/supplement-catalog/parse/+server.ts
- create mode 100644 src/routes/einstellungen/admin/+page.svelte
+Already up to date.
 
 Array
 (
@@ -932,7 +890,70 @@ Processing /tmp/GitHub/repositoryClone/mstrhakr/plugin-repository/compose.manage
 
 Downloading got3nks' Repository
 
-Already up to date.
+From https://github.com/got3nks/amutorrent
+   b7e5138..1d44158  main       -> origin/main
+ * [new tag]         v3.7.0     -> v3.7.0
+Updating b7e5138..1d44158
+Fast-forward
+ CHANGELOG.md                                       |  33 +++
+ Dockerfile                                         |  12 +-
+ docs/API.md                                        |  23 ++
+ docs/USERS.md                                      |   2 +
+ package-lock.json                                  |  34 ++-
+ package.json                                       |   2 +-
+ server/lib/clientMeta.js                           |   5 +
+ server/lib/downloadNormalizer.js                   |   9 +
+ server/lib/faviconCache.js                         | 295 +++++++++++++++++++++
+ server/lib/unifiedItemBuilder.js                   |  24 +-
+ server/middleware/trustedProxy.js                  |  11 +-
+ server/modules/amuleManager.js                     |  70 ++++-
+ server/modules/faviconAPI.js                       |  47 ++++
+ server/modules/restAPI.js                          |   4 +
+ server/modules/sharedDirAPI.js                     |   2 +-
+ server/modules/userManager.js                      |  20 +-
+ server/modules/webSocketHandlers.js                |  43 +++
+ server/package-lock.json                           |   6 +-
+ server/package.json                                |   2 +-
+ server/server.js                                   |   2 +
+ static/components/common/FilterCheckboxGroup.js    |  28 +-
+ static/components/common/Icon.js                   |   1 +
+ static/components/common/MobileFilterPills.js      |  28 +-
+ static/components/common/ProgressBar.js            |  14 +-
+ static/components/common/SearchResultsList.js      |  15 +-
+ static/components/common/StarRating.js             |  34 +++
+ static/components/common/TrackerLabel.js           |  29 +-
+ static/components/common/TrackerMultiSelect.js     | 196 ++++++++++++++
+ static/components/common/index.js                  |   2 +
+ static/components/modals/FileInfoModal.js          |  11 +-
+ static/components/modals/FileRatingCommentModal.js | 169 ++++++++++++
+ static/components/modals/InfoModalTables.js        |   8 +-
+ static/components/views/DownloadsView.js           |  23 +-
+ static/components/views/HistoryView.js             |  22 +-
+ static/components/views/SharedView.js              |  29 +-
+ static/components/views/UploadsView.js             |  16 +-
+ static/contexts/ActionsContext.js                  |  13 +-
+ static/hooks/index.js                              |   1 +
+ static/hooks/useColumnConfig.js                    |  12 +-
+ static/hooks/useFileRatingCommentModal.js          |  45 ++++
+ static/hooks/useItemContextMenu.js                 |  16 ++
+ static/hooks/useMobileFilters.js                   |  38 +--
+ static/hooks/useTrackerFilter.js                   |  52 ++--
+ static/hooks/useViewFilters.js                     |  22 +-
+ static/utils/capabilities.js                       |   9 +-
+ static/utils/columnBuilders.js                     |  34 +++
+ static/utils/downloadHelpers.js                    |  16 +-
+ static/utils/fieldFormatters.js                    |  93 +++++--
+ static/utils/fieldRegistry.js                      |  15 +-
+ static/utils/index.js                              |   6 +-
+ static/utils/mobileFilterHelpers.js                |  13 +-
+ static/utils/sorting.js                            |   9 +
+ 52 files changed, 1468 insertions(+), 197 deletions(-)
+ create mode 100644 server/lib/faviconCache.js
+ create mode 100644 server/modules/faviconAPI.js
+ create mode 100644 static/components/common/StarRating.js
+ create mode 100644 static/components/common/TrackerMultiSelect.js
+ create mode 100644 static/components/modals/FileRatingCommentModal.js
+ create mode 100644 static/hooks/useFileRatingCommentModal.js
 
 Array
 (
@@ -2066,28 +2087,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   74174ee..54d5c07  main       -> origin/main
-Updating 74174ee..54d5c07
-Fast-forward
- CHANGELOG.md               |  12 ++
- package-lock.json          |   4 +-
- package.json               |   2 +-
- public/index.html          |  26 +++--
- public/shared/admin.css    |  72 ++++++++++--
- public/shared/admin.js     | 269 ++++++++++++++++++++++++++++++---------------
- public/shared/i18n/de.json |  10 +-
- public/shared/i18n/en.json |  10 +-
- public/shared/i18n/es.json |  10 +-
- public/shared/i18n/fr.json |  10 +-
- public/shared/i18n/it.json |  10 +-
- public/shared/i18n/nl.json |  10 +-
- public/shared/i18n/pt.json |  10 +-
- public/shared/i18n/zh.json |  10 +-
- public/shared/styles.css   | 139 ++++++++++++++++++-----
- src/server.js              |   4 +-
- version.json               |   2 +-
- 17 files changed, 457 insertions(+), 153 deletions(-)
+Already up to date.
 
 Array
 (
@@ -8853,12 +8853,7 @@ Processing /tmp/GitHub/repositoryClone/Waseh/unraidtemplates/ca_profile.xml...FO
 
 Downloading Uirel's Repository
 
-From https://github.com/Poag/docker-xml
-   df11c8c..072b5e8  master     -> origin/master
-Updating df11c8c..072b5e8
-Fast-forward
- iplayarr.xml | 14 ++------------
- 1 file changed, 2 insertions(+), 12 deletions(-)
+Already up to date.
 
 Array
 (
@@ -9037,12 +9032,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   cce172a..bf23d60  master     -> origin/master
-Updating cce172a..bf23d60
-Fast-forward
- jlesage/putty.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21099,7 +21089,12 @@ Removed from CA123
 
 Downloading Nodiaque's Repository
 
-Already up to date.
+From https://github.com/nodiaque/unraid_template
+   22a7877..7213cbf  master     -> origin/master
+Updating 22a7877..7213cbf
+Fast-forward
+ nodiaque/windrose.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -21624,10 +21619,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-nikorag/iplayarr
-nikorag/iplayarr:latest Downloads: 47201  Stars: 1  Base: unknown
-Pulling nikorag/iplayarr:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
