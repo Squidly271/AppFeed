@@ -13,12 +13,7 @@ Downloading Repo Info
 
 Downloading facro's Repository
 
-From https://github.com/peterthepeter/groly
-   705e1d9..0c2e9e2  main       -> origin/main
-Updating 705e1d9..0c2e9e2
-Fast-forward
- src/routes/einstellungen/+page.svelte | 11 +++++++++++
- 1 file changed, 11 insertions(+)
+Already up to date.
 
 Array
 (
@@ -107,7 +102,143 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-Already up to date.
+From https://github.com/HabiRabbu/Musicseerr
+   d4d38e5..02c34cb  main       -> origin/main
+ * [new tag]         v1.3.0     -> v1.3.0
+Updating d4d38e5..02c34cb
+Fast-forward
+ Makefile                                           |  42 ++
+ backend/api/v1/routes/discover.py                  |  20 +
+ backend/api/v1/routes/download.py                  |  92 +++
+ backend/api/v1/schemas/advanced_settings.py        |  13 +
+ backend/api/v1/schemas/discover.py                 |  31 +
+ backend/api/v1/schemas/home.py                     |   2 +
+ backend/api/v1/schemas/local_files.py              |   1 +
+ backend/api/v1/schemas/settings.py                 |  18 +
+ backend/core/config.py                             |   4 +-
+ backend/core/dependencies/service_providers.py     |  29 +
+ backend/infrastructure/persistence/genre_index.py  | 122 ++++
+ backend/main.py                                    |   3 +
+ backend/repositories/lidarr/album.py               |  19 +
+ backend/repositories/musicbrainz_repository.py     |   7 +
+ backend/repositories/protocols/lidarr.py           |   6 +
+ backend/services/discover/facade.py                |  37 +-
+ backend/services/discover/homepage_service.py      | 609 +++++++++++++++++-
+ backend/services/discover/integration_helpers.py   |   4 +
+ backend/services/discover/queue_service.py         | 327 +---------
+ backend/services/discover/queue_strategies.py      | 480 ++++++++++++++
+ backend/services/discover/radio_service.py         | 265 ++++++++
+ backend/services/local_files_service.py            |  93 +++
+ backend/services/playlist_service.py               |  31 +-
+ backend/services/preferences_service.py            |  17 +
+ backend/services/settings_service.py               |   7 +
+ backend/tests/infrastructure/test_genre_index.py   | 296 +++++++++
+ backend/tests/routes/test_discover_radio_routes.py | 149 +++++
+ .../routes/test_playlist_suggestions_routes.py     | 157 +++++
+ backend/tests/schemas/__init__.py                  |   0
+ backend/tests/schemas/test_discover_schemas.py     | 169 +++++
+ backend/tests/services/test_daily_mix.py           | 403 ++++++++++++
+ backend/tests/services/test_discover_picks.py      | 716 +++++++++++++++++++++
+ backend/tests/services/test_discover_radio.py      | 537 ++++++++++++++++
+ backend/tests/services/test_discover_service.py    |  48 +-
+ .../tests/services/test_musicbrainz_rate_cap.py    | 147 +++++
+ .../tests/services/test_playlist_suggestions.py    | 541 ++++++++++++++++
+ backend/tests/services/test_queue_strategies.py    | 582 +++++++++++++++++
+ backend/tests/services/test_unexplored_genres.py   | 395 ++++++++++++
+ frontend/src/lib/actions/tilt.ts                   |  70 ++
+ frontend/src/lib/api/albums.ts                     |   9 +
+ .../src/lib/components/AlbumCardOverlay.svelte     |  14 +-
+ .../src/lib/components/AlbumRequestButton.svelte   |  51 ++
+ frontend/src/lib/components/AlbumSourceBar.svelte  |   7 +-
+ frontend/src/lib/components/BaseImage.svelte       |  47 +-
+ frontend/src/lib/components/BrowseHeroCards.svelte |  13 +-
+ frontend/src/lib/components/DailyMixCard.svelte    | 124 ++++
+ .../lib/components/DiscoverArtistMiniBand.svelte   | 105 +++
+ .../src/lib/components/DiscoverPicksSection.svelte | 255 ++++++++
+ .../src/lib/components/DiscoverQueueCard.svelte    |   6 +-
+ frontend/src/lib/components/GenrePills.svelte      | 107 +++
+ frontend/src/lib/components/HomeSection.svelte     | 106 +--
+ .../lib/components/HomeSectionNowPlaying.svelte    |   6 +-
+ frontend/src/lib/components/Player.svelte          |   3 +-
+ .../lib/components/PlaylistDiscoveryModal.svelte   | 517 +++++++++++++++
+ .../src/lib/components/PlaylistImportBanner.svelte |   6 +-
+ frontend/src/lib/components/PlaylistMosaic.svelte  |  20 +-
+ frontend/src/lib/components/QueueDrawer.svelte     |   6 +-
+ frontend/src/lib/components/RadioCard.svelte       | 217 +++++++
+ frontend/src/lib/components/RadioSection.spec.ts   |  82 +++
+ .../src/lib/components/SearchSuggestions.svelte    |  25 +-
+ frontend/src/lib/components/SearchTopResult.svelte |  21 +-
+ .../src/lib/components/SourceAlbumModal.svelte     |  27 +-
+ .../src/lib/components/SourceArtistCard.svelte     |  10 +-
+ frontend/src/lib/components/SourceBadge.svelte     |  29 +
+ .../src/lib/components/SourcePlaylistCard.svelte   |   8 +-
+ .../src/lib/components/SourcePlaylistDetail.svelte |   4 +-
+ frontend/src/lib/components/TopAlbumsList.svelte   |   6 +-
+ .../src/lib/components/TrackPreviewButton.svelte   |  10 +-
+ frontend/src/lib/components/TrackRow.svelte        |   6 +-
+ .../lib/components/WeeklyExplorationCard.svelte    |  29 +-
+ .../components/settings/SettingsDiscover.svelte    |   9 +-
+ .../components/settings/SettingsMusicBrainz.svelte |  44 +-
+ .../settings/SettingsStorageQueue.svelte           |  24 +-
+ .../components/settings/advanced-settings-types.ts |   2 +
+ frontend/src/lib/constants.ts                      |  18 +-
+ .../src/lib/queries/discover/DiscoverQuery.spec.ts | 220 +++++++
+ .../lib/queries/discover/DiscoverQuery.svelte.ts   |  79 +++
+ .../queries/discover/DiscoverQueryKeyFactory.ts    |  10 +
+ .../lib/queries/playlists/PlaylistQuery.svelte.ts  |  13 +
+ .../queries/playlists/PlaylistQueryKeyFactory.ts   |   4 +
+ frontend/src/lib/stores/cacheTtl.ts                |   2 -
+ frontend/src/lib/types.ts                          |  32 +
+ frontend/src/lib/utils/discoverCache.ts            |  14 -
+ frontend/src/lib/utils/downloadHelper.ts           |  12 +
+ frontend/src/lib/utils/libraryController.svelte.ts |  16 +-
+ frontend/src/routes/+page.svelte                   |  26 +-
+ frontend/src/routes/album/[id]/+page.svelte        |   2 +
+ .../src/routes/album/[id]/AlbumSourceBars.svelte   |   3 +
+ .../src/routes/album/[id]/AlbumTrackList.svelte    |  26 +-
+ frontend/src/routes/album/[id]/albumFetchers.ts    |  10 +-
+ .../src/routes/album/[id]/albumPageState.svelte.ts |  59 +-
+ .../src/routes/album/[id]/albumPlaybackHandlers.ts |  14 +-
+ frontend/src/routes/discover/+page.svelte          | 563 ++++++++--------
+ frontend/src/routes/discover/+page.ts              |  11 +
+ .../routes/playlists/[id]/PlaylistHeader.svelte    |  21 +-
+ frontend/static/img/cover-placeholder.jpg          | Bin 49516 -> 0 bytes
+ 96 files changed, 8770 insertions(+), 829 deletions(-)
+ create mode 100644 backend/api/v1/routes/download.py
+ create mode 100644 backend/services/discover/queue_strategies.py
+ create mode 100644 backend/services/discover/radio_service.py
+ create mode 100644 backend/tests/infrastructure/test_genre_index.py
+ create mode 100644 backend/tests/routes/test_discover_radio_routes.py
+ create mode 100644 backend/tests/routes/test_playlist_suggestions_routes.py
+ create mode 100644 backend/tests/schemas/__init__.py
+ create mode 100644 backend/tests/schemas/test_discover_schemas.py
+ create mode 100644 backend/tests/services/test_daily_mix.py
+ create mode 100644 backend/tests/services/test_discover_picks.py
+ create mode 100644 backend/tests/services/test_discover_radio.py
+ create mode 100644 backend/tests/services/test_musicbrainz_rate_cap.py
+ create mode 100644 backend/tests/services/test_playlist_suggestions.py
+ create mode 100644 backend/tests/services/test_queue_strategies.py
+ create mode 100644 backend/tests/services/test_unexplored_genres.py
+ create mode 100644 frontend/src/lib/actions/tilt.ts
+ create mode 100644 frontend/src/lib/api/albums.ts
+ create mode 100644 frontend/src/lib/components/AlbumRequestButton.svelte
+ create mode 100644 frontend/src/lib/components/DailyMixCard.svelte
+ create mode 100644 frontend/src/lib/components/DiscoverArtistMiniBand.svelte
+ create mode 100644 frontend/src/lib/components/DiscoverPicksSection.svelte
+ create mode 100644 frontend/src/lib/components/GenrePills.svelte
+ create mode 100644 frontend/src/lib/components/PlaylistDiscoveryModal.svelte
+ create mode 100644 frontend/src/lib/components/RadioCard.svelte
+ create mode 100644 frontend/src/lib/components/RadioSection.spec.ts
+ create mode 100644 frontend/src/lib/components/SourceBadge.svelte
+ create mode 100644 frontend/src/lib/queries/discover/DiscoverQuery.spec.ts
+ create mode 100644 frontend/src/lib/queries/discover/DiscoverQuery.svelte.ts
+ create mode 100644 frontend/src/lib/queries/discover/DiscoverQueryKeyFactory.ts
+ create mode 100644 frontend/src/lib/queries/playlists/PlaylistQuery.svelte.ts
+ create mode 100644 frontend/src/lib/queries/playlists/PlaylistQueryKeyFactory.ts
+ delete mode 100644 frontend/src/lib/utils/discoverCache.ts
+ create mode 100644 frontend/src/lib/utils/downloadHelper.ts
+ create mode 100644 frontend/src/routes/discover/+page.ts
+ delete mode 100644 frontend/static/img/cover-placeholder.jpg
 
 Array
 (
@@ -912,7 +1043,12 @@ Processing /tmp/GitHub/repositoryClone/got3nks/amutorrent/unraid/amutorrent.xml.
 
 Downloading BitCryptic's Repository
 
-Already up to date.
+From https://github.com/bitcryptic-gw/unraid-pi-network-node
+   2a4bd3d..96c8521  main       -> origin/main
+Updating 2a4bd3d..96c8521
+Fast-forward
+ .github/workflows/build.yml | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -2029,42 +2165,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   ef3606a..dd6c167  main       -> origin/main
-Updating ef3606a..dd6c167
-Fast-forward
- CHANGELOG.md                     |  10 ++
- docs/guide/custom-sections.de.md |  32 +++++--
- docs/guide/custom-sections.es.md |  32 +++++--
- docs/guide/custom-sections.fr.md |  32 +++++--
- docs/guide/custom-sections.it.md |  32 +++++--
- docs/guide/custom-sections.md    |  32 +++++--
- docs/guide/custom-sections.nl.md |  32 +++++--
- docs/guide/custom-sections.pt.md |  32 +++++--
- docs/guide/custom-sections.zh.md |  32 +++++--
- docs/reference/faq.de.md         |   2 +-
- docs/reference/faq.es.md         |   2 +-
- docs/reference/faq.fr.md         |   2 +-
- docs/reference/faq.it.md         |   2 +-
- docs/reference/faq.md            |   2 +-
- docs/reference/faq.nl.md         |   2 +-
- docs/reference/faq.pt.md         |   2 +-
- docs/reference/faq.zh.md         |   2 +-
- package-lock.json                |   4 +-
- package.json                     |   2 +-
- public/index.html                |  41 +++++---
- public/shared/admin.js           | 195 ++++++++++++++++++++++++++++-----------
- public/shared/i18n/de.json       |   6 +-
- public/shared/i18n/en.json       |   6 +-
- public/shared/i18n/es.json       |   6 +-
- public/shared/i18n/fr.json       |   6 +-
- public/shared/i18n/it.json       |   6 +-
- public/shared/i18n/nl.json       |   6 +-
- public/shared/i18n/pt.json       |   6 +-
- public/shared/i18n/zh.json       |   6 +-
- public/shared/styles.css         |  90 ++++++++++++++++++
- version.json                     |   2 +-
- 31 files changed, 485 insertions(+), 179 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21467,8 +21568,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
-pansalut/koffan
-ghcr.io/pansalut/koffan:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -21491,12 +21590,6 @@ ghcr.io/pansalut/koffan:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-s1t5/mailarchiver
-s1t5/mailarchiver Downloads: 451662  Stars: 1  Base: unknown
-jjermany/plex-notifier
-jjermany/plex-notifier:latest Downloads:   Stars:   Base: unknown
-stalwartlabs/stalwart
-stalwartlabs/stalwart:latest Downloads: 482900  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -21505,10 +21598,6 @@ stalwartlabs/stalwart:latest Downloads: 482900  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/vm-backup-and-restore/main/plugin/vm-backup-and-restore.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
-cirx08/wedding_share
-cirx08/wedding_share:latest Downloads: 98141  Stars: 2  Base: unknown
-yannisalexiou/appstore-webhook-proxy
-yannisalexiou/appstore-webhook-proxy Downloads: 836  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -21525,19 +21614,13 @@ yannisalexiou/appstore-webhook-proxy Downloads: 836  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-teamspeaksystems/teamspeak6-server
-teamspeaksystems/teamspeak6-server:latest Downloads: 378668  Stars: 16  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
-mainfrezzer/bashupload
-ghcr.io/mainfrezzer/bashupload:latest Downloads: 473  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-bmmbmm01/sftp2
-bmmbmm01/sftp2:latest Downloads: 1154  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21554,22 +21637,9 @@ bmmbmm01/sftp2:latest Downloads: 1154  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-Tagged - Can't determine last update
-iampuid0/dmb
-iampuid0/dmb:FastAPI Downloads: 98652  Stars: 6  Base: unknown
-hacdias/webdav
-hacdias/webdav:latest Downloads: 216784  Stars: 36  Base: unknown
-iib0011/omni-tools
-iib0011/omni-tools Downloads: 3011968  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-indifferentbroccoli/hytale-server-docker
-indifferentbroccoli/hytale-server-docker Downloads: 70031  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-llukas22/jellyswarrm
-ghcr.io/llukas22/jellyswarrm:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
-binhex/arch-qbittorrent
-ghcr.io/binhex/arch-qbittorrent Downloads: 13336  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -21586,10 +21656,6 @@ ghcr.io/binhex/arch-qbittorrent Downloads: 13336  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-dvb-driver/raw/master/dvb-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/unassigned.devices/master/unassigned.devices.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://stable.dl.unraid.net/unraid-api/dynamix.unraid.net.plg attempt 1...
-linuxserver/sealskin
-lscr.io/linuxserver/sealskin Downloads: 21538  Stars: 1  Base: unknown
-linuxserver/dolphin
-lscr.io/linuxserver/dolphin Downloads: 22806  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.cfg.editor/master/plugins/ca.cfg.editor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Squidly271/ca.update.applications/master/plugins/ca.update.applications.plg attempt 1...
@@ -21629,12 +21695,6 @@ lscr.io/linuxserver/dolphin Downloads: 22806  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
-Tagged - Can't determine last update
-gitea.fithwum.tech/fithwum/minecraft
-gitea.fithwum.tech/fithwum/minecraft:neoforged Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-gitea.fithwum.tech/fithwum/minecraft
-gitea.fithwum.tech/fithwum/minecraft:fabric Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -21673,23 +21733,15 @@ gitea.fithwum.tech/fithwum/minecraft:fabric Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
+josh5/headendarr
+josh5/headendarr:latest Downloads: 9980  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-sportarr/sportarr
-sportarr/sportarr:latest Downloads: 116980  Stars: 0  Base: unknown
-steveharsant/purgarr
-ghcr.io/steveharsant/purgarr:latest Downloads:   Stars:   Base: unknown
-henrywhitaker3/adguard-exporter
-ghcr.io/henrywhitaker3/adguard-exporter:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-vm-cycle/master/vm-cycle.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-pwm-fan/master/pwm-fan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
-spaceinvaderone/pia-wg-config-generator
-spaceinvaderone/pia-wg-config-generator:latest Downloads: 6994  Stars: 2  Base: unknown
-spaceinvaderone/jellemplex-dedupe
-spaceinvaderone/jellemplex-dedupe:latest Downloads: 7651  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21720,56 +21772,14 @@ spaceinvaderone/jellemplex-dedupe:latest Downloads: 7651  Stars: 1  Base: unknow
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-turtletank99/adbtuner
-turtletank99/adbtuner Downloads: 24563  Stars: 2  Base: unknown
-librespeed/speedtest
-ghcr.io/librespeed/speedtest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-eitchtee/wygiwyh
-eitchtee/wygiwyh:latest Downloads: 79659  Stars: 0  Base: unknown
-registry.supertokens.io/supertokens/supertokens-postgresql
-registry.supertokens.io/supertokens/supertokens-postgresql:latest Downloads:   Stars:   Base: unknown
-Tagged - Can't determine last update
-dutchcoders/transfer.sh
-dutchcoders/transfer.sh:edge Downloads: 9361029  Stars: 42  Base: unknown
-thealhu/tc2-bbs-mesh
-thealhu/tc2-bbs-mesh:latest Downloads: 13749  Stars: 4  Base: unknown
-Tagged - Can't determine last update
-spudgunman/meshing-around
-ghcr.io/spudgunman/meshing-around:main Downloads:   Stars:   Base: unknown
-m3sserstudi0s/swiparr
-ghcr.io/m3sserstudi0s/swiparr:latest Downloads:   Stars:   Base: unknown
-jeffvli/feishin
-ghcr.io/jeffvli/feishin:latest Downloads:   Stars:   Base: unknown
-basshous3/taggarr
-basshous3/taggarr:latest Downloads: 26102  Stars: 2  Base: unknown
-clharrel/dynamix
-clharrel/dynamix:latest Downloads: 8308  Stars: 1  Base: unknown
-zenitram/malla
-ghcr.io/zenitram/malla:latest Downloads:   Stars:   Base: unknown
-registry.supertokens.io/supertokens/supertokens-mysql
-registry.supertokens.io/supertokens/supertokens-mysql:latest Downloads:   Stars:   Base: unknown
-seerr-team/seerr
-ghcr.io/seerr-team/seerr:latest Downloads:   Stars:   Base: unknown
-querylab/lazywarden
-querylab/lazywarden:latest Downloads: 2203  Stars: 0  Base: unknown
-pablorevilla-meshtastic/meshview
-ghcr.io/pablorevilla-meshtastic/meshview:latest Downloads:   Stars:   Base: unknown
-terrateamio/terrateam-setup
-ghcr.io/terrateamio/terrateam-setup:latest Downloads:   Stars:   Base: unknown
-hghugo/freeboxos-ultra-dashboard
-ghcr.io/hghugo/freeboxos-ultra-dashboard:latest Downloads:   Stars:   Base: unknown
-brockbreacher/accept-bot
-ghcr.io/brockbreacher/accept-bot:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
-thewicklowwolf/lidify
-thewicklowwolf/lidify Downloads: 235132  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
@@ -21780,10 +21790,6 @@ thewicklowwolf/lidify Downloads: 235132  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
-athombv/homey-shs
-ghcr.io/athombv/homey-shs:latest Downloads:   Stars:   Base: unknown
-ownbee/hass-otbr-docker
-ghcr.io/ownbee/hass-otbr-docker:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
 Privileged: 134
