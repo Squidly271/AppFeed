@@ -102,15 +102,7 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-From https://github.com/HabiRabbu/Musicseerr
-   02c34cb..4736ed4  main       -> origin/main
- * [new tag]         v1.3.1     -> v1.3.1
-Updating 02c34cb..4736ed4
-Fast-forward
- frontend/src/lib/components/BrowseHeroCards.svelte | 16 ++--
- frontend/src/lib/components/VersionOverlays.svelte | 46 ++++++++---
- frontend/src/lib/components/WhatsNewModal.svelte   | 89 +++++++++++++---------
- 3 files changed, 98 insertions(+), 53 deletions(-)
+Already up to date.
 
 Array
 (
@@ -127,7 +119,41 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 
 Downloading sworcery's Repository
 
-Already up to date.
+From https://github.com/sworcery/ChannelHoarder
+   39d8349..b810529  main       -> origin/main
+ * [new tag]         v1.7.29    -> v1.7.29
+Updating 39d8349..b810529
+Fast-forward
+ .gitea/workflows/build.yml                         |   66 +
+ .github/workflows/docker-build.yml                 |    3 +
+ CHANGELOG.md                                       |   46 +
+ backend/app/config.py                              |    2 +-
+ backend/app/database.py                            |   24 +
+ backend/app/models.py                              |    1 +
+ backend/app/routers/channels.py                    |   45 +-
+ backend/app/routers/settings.py                    |   24 +
+ backend/app/schemas.py                             |    5 +
+ backend/app/services/channel_service.py            |   91 +-
+ backend/app/services/download_service.py           |   14 +
+ backend/app/services/scheduler_service.py          |   21 +-
+ backend/app/services/ytdlp_service.py              |    7 +-
+ backend/app/tasks/scan_channels.py                 |  109 +-
+ backend/app/utils/file_utils.py                    |    7 +-
+ backend/app/utils/scan_window.py                   |  107 +
+ backend/pyproject.toml                             |    2 +-
+ frontend/package-lock.json                         | 4081 ++++++++++++++++++++
+ frontend/package.json                              |    2 +-
+ frontend/src/App.tsx                               |    2 -
+ frontend/src/components/layout/Sidebar.tsx         |    2 -
+ .../settings/DiagnosticsTab.tsx}                   |  108 +-
+ frontend/src/lib/types.ts                          |    1 +
+ frontend/src/pages/ChannelDetailPage.tsx           |    9 +
+ frontend/src/pages/SettingsPage.tsx                |  556 +--
+ 25 files changed, 4975 insertions(+), 360 deletions(-)
+ create mode 100644 .gitea/workflows/build.yml
+ create mode 100644 backend/app/utils/scan_window.py
+ create mode 100644 frontend/package-lock.json
+ rename frontend/src/{pages/DiagnosticsPage.tsx => components/settings/DiagnosticsTab.tsx} (81%)
 
 Array
 (
@@ -2032,7 +2058,26 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   dd6c167..6ab381f  main       -> origin/main
+Updating dd6c167..6ab381f
+Fast-forward
+ CHANGELOG.md               |   7 +++
+ package-lock.json          |   4 +-
+ package.json               |   2 +-
+ public/index.html          |  13 ++++--
+ public/shared/admin.css    | 111 ++++++++++++++++++++++++++++++++++++++++++++-
+ public/shared/i18n/de.json |   2 +-
+ public/shared/i18n/en.json |   2 +-
+ public/shared/i18n/es.json |   2 +-
+ public/shared/i18n/fr.json |   2 +-
+ public/shared/i18n/it.json |   2 +-
+ public/shared/i18n/nl.json |   2 +-
+ public/shared/i18n/pt.json |   2 +-
+ public/shared/i18n/zh.json |   2 +-
+ public/shared/styles.css   |   3 ++
+ version.json               |   2 +-
+ 15 files changed, 140 insertions(+), 18 deletions(-)
 
 Array
 (
@@ -21488,8 +21533,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-arianrhodsandlot/retroassembly
-arianrhodsandlot/retroassembly Downloads: 240393  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21639,17 +21682,12 @@ arianrhodsandlot/retroassembly Downloads: 240393  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+devzwf/pihole-dot-doh
+devzwf/pihole-dot-doh:latest Downloads: 110506  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-dgruhin-hrizn/aperture
-ghcr.io/dgruhin-hrizn/aperture:latest Downloads:   Stars:   Base: unknown
-ohmzii/immaculaterr
-ohmzii/immaculaterr:latest Downloads: 11316  Stars: 1  Base: unknown
-Tagged - Can't determine last update
-syncin/server
-syncin/server:1 Downloads: 74647  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
