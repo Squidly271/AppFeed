@@ -103,142 +103,14 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 Downloading HabiRabbu's Repository
 
 From https://github.com/HabiRabbu/Musicseerr
-   d4d38e5..02c34cb  main       -> origin/main
- * [new tag]         v1.3.0     -> v1.3.0
-Updating d4d38e5..02c34cb
+   02c34cb..4736ed4  main       -> origin/main
+ * [new tag]         v1.3.1     -> v1.3.1
+Updating 02c34cb..4736ed4
 Fast-forward
- Makefile                                           |  42 ++
- backend/api/v1/routes/discover.py                  |  20 +
- backend/api/v1/routes/download.py                  |  92 +++
- backend/api/v1/schemas/advanced_settings.py        |  13 +
- backend/api/v1/schemas/discover.py                 |  31 +
- backend/api/v1/schemas/home.py                     |   2 +
- backend/api/v1/schemas/local_files.py              |   1 +
- backend/api/v1/schemas/settings.py                 |  18 +
- backend/core/config.py                             |   4 +-
- backend/core/dependencies/service_providers.py     |  29 +
- backend/infrastructure/persistence/genre_index.py  | 122 ++++
- backend/main.py                                    |   3 +
- backend/repositories/lidarr/album.py               |  19 +
- backend/repositories/musicbrainz_repository.py     |   7 +
- backend/repositories/protocols/lidarr.py           |   6 +
- backend/services/discover/facade.py                |  37 +-
- backend/services/discover/homepage_service.py      | 609 +++++++++++++++++-
- backend/services/discover/integration_helpers.py   |   4 +
- backend/services/discover/queue_service.py         | 327 +---------
- backend/services/discover/queue_strategies.py      | 480 ++++++++++++++
- backend/services/discover/radio_service.py         | 265 ++++++++
- backend/services/local_files_service.py            |  93 +++
- backend/services/playlist_service.py               |  31 +-
- backend/services/preferences_service.py            |  17 +
- backend/services/settings_service.py               |   7 +
- backend/tests/infrastructure/test_genre_index.py   | 296 +++++++++
- backend/tests/routes/test_discover_radio_routes.py | 149 +++++
- .../routes/test_playlist_suggestions_routes.py     | 157 +++++
- backend/tests/schemas/__init__.py                  |   0
- backend/tests/schemas/test_discover_schemas.py     | 169 +++++
- backend/tests/services/test_daily_mix.py           | 403 ++++++++++++
- backend/tests/services/test_discover_picks.py      | 716 +++++++++++++++++++++
- backend/tests/services/test_discover_radio.py      | 537 ++++++++++++++++
- backend/tests/services/test_discover_service.py    |  48 +-
- .../tests/services/test_musicbrainz_rate_cap.py    | 147 +++++
- .../tests/services/test_playlist_suggestions.py    | 541 ++++++++++++++++
- backend/tests/services/test_queue_strategies.py    | 582 +++++++++++++++++
- backend/tests/services/test_unexplored_genres.py   | 395 ++++++++++++
- frontend/src/lib/actions/tilt.ts                   |  70 ++
- frontend/src/lib/api/albums.ts                     |   9 +
- .../src/lib/components/AlbumCardOverlay.svelte     |  14 +-
- .../src/lib/components/AlbumRequestButton.svelte   |  51 ++
- frontend/src/lib/components/AlbumSourceBar.svelte  |   7 +-
- frontend/src/lib/components/BaseImage.svelte       |  47 +-
- frontend/src/lib/components/BrowseHeroCards.svelte |  13 +-
- frontend/src/lib/components/DailyMixCard.svelte    | 124 ++++
- .../lib/components/DiscoverArtistMiniBand.svelte   | 105 +++
- .../src/lib/components/DiscoverPicksSection.svelte | 255 ++++++++
- .../src/lib/components/DiscoverQueueCard.svelte    |   6 +-
- frontend/src/lib/components/GenrePills.svelte      | 107 +++
- frontend/src/lib/components/HomeSection.svelte     | 106 +--
- .../lib/components/HomeSectionNowPlaying.svelte    |   6 +-
- frontend/src/lib/components/Player.svelte          |   3 +-
- .../lib/components/PlaylistDiscoveryModal.svelte   | 517 +++++++++++++++
- .../src/lib/components/PlaylistImportBanner.svelte |   6 +-
- frontend/src/lib/components/PlaylistMosaic.svelte  |  20 +-
- frontend/src/lib/components/QueueDrawer.svelte     |   6 +-
- frontend/src/lib/components/RadioCard.svelte       | 217 +++++++
- frontend/src/lib/components/RadioSection.spec.ts   |  82 +++
- .../src/lib/components/SearchSuggestions.svelte    |  25 +-
- frontend/src/lib/components/SearchTopResult.svelte |  21 +-
- .../src/lib/components/SourceAlbumModal.svelte     |  27 +-
- .../src/lib/components/SourceArtistCard.svelte     |  10 +-
- frontend/src/lib/components/SourceBadge.svelte     |  29 +
- .../src/lib/components/SourcePlaylistCard.svelte   |   8 +-
- .../src/lib/components/SourcePlaylistDetail.svelte |   4 +-
- frontend/src/lib/components/TopAlbumsList.svelte   |   6 +-
- .../src/lib/components/TrackPreviewButton.svelte   |  10 +-
- frontend/src/lib/components/TrackRow.svelte        |   6 +-
- .../lib/components/WeeklyExplorationCard.svelte    |  29 +-
- .../components/settings/SettingsDiscover.svelte    |   9 +-
- .../components/settings/SettingsMusicBrainz.svelte |  44 +-
- .../settings/SettingsStorageQueue.svelte           |  24 +-
- .../components/settings/advanced-settings-types.ts |   2 +
- frontend/src/lib/constants.ts                      |  18 +-
- .../src/lib/queries/discover/DiscoverQuery.spec.ts | 220 +++++++
- .../lib/queries/discover/DiscoverQuery.svelte.ts   |  79 +++
- .../queries/discover/DiscoverQueryKeyFactory.ts    |  10 +
- .../lib/queries/playlists/PlaylistQuery.svelte.ts  |  13 +
- .../queries/playlists/PlaylistQueryKeyFactory.ts   |   4 +
- frontend/src/lib/stores/cacheTtl.ts                |   2 -
- frontend/src/lib/types.ts                          |  32 +
- frontend/src/lib/utils/discoverCache.ts            |  14 -
- frontend/src/lib/utils/downloadHelper.ts           |  12 +
- frontend/src/lib/utils/libraryController.svelte.ts |  16 +-
- frontend/src/routes/+page.svelte                   |  26 +-
- frontend/src/routes/album/[id]/+page.svelte        |   2 +
- .../src/routes/album/[id]/AlbumSourceBars.svelte   |   3 +
- .../src/routes/album/[id]/AlbumTrackList.svelte    |  26 +-
- frontend/src/routes/album/[id]/albumFetchers.ts    |  10 +-
- .../src/routes/album/[id]/albumPageState.svelte.ts |  59 +-
- .../src/routes/album/[id]/albumPlaybackHandlers.ts |  14 +-
- frontend/src/routes/discover/+page.svelte          | 563 ++++++++--------
- frontend/src/routes/discover/+page.ts              |  11 +
- .../routes/playlists/[id]/PlaylistHeader.svelte    |  21 +-
- frontend/static/img/cover-placeholder.jpg          | Bin 49516 -> 0 bytes
- 96 files changed, 8770 insertions(+), 829 deletions(-)
- create mode 100644 backend/api/v1/routes/download.py
- create mode 100644 backend/services/discover/queue_strategies.py
- create mode 100644 backend/services/discover/radio_service.py
- create mode 100644 backend/tests/infrastructure/test_genre_index.py
- create mode 100644 backend/tests/routes/test_discover_radio_routes.py
- create mode 100644 backend/tests/routes/test_playlist_suggestions_routes.py
- create mode 100644 backend/tests/schemas/__init__.py
- create mode 100644 backend/tests/schemas/test_discover_schemas.py
- create mode 100644 backend/tests/services/test_daily_mix.py
- create mode 100644 backend/tests/services/test_discover_picks.py
- create mode 100644 backend/tests/services/test_discover_radio.py
- create mode 100644 backend/tests/services/test_musicbrainz_rate_cap.py
- create mode 100644 backend/tests/services/test_playlist_suggestions.py
- create mode 100644 backend/tests/services/test_queue_strategies.py
- create mode 100644 backend/tests/services/test_unexplored_genres.py
- create mode 100644 frontend/src/lib/actions/tilt.ts
- create mode 100644 frontend/src/lib/api/albums.ts
- create mode 100644 frontend/src/lib/components/AlbumRequestButton.svelte
- create mode 100644 frontend/src/lib/components/DailyMixCard.svelte
- create mode 100644 frontend/src/lib/components/DiscoverArtistMiniBand.svelte
- create mode 100644 frontend/src/lib/components/DiscoverPicksSection.svelte
- create mode 100644 frontend/src/lib/components/GenrePills.svelte
- create mode 100644 frontend/src/lib/components/PlaylistDiscoveryModal.svelte
- create mode 100644 frontend/src/lib/components/RadioCard.svelte
- create mode 100644 frontend/src/lib/components/RadioSection.spec.ts
- create mode 100644 frontend/src/lib/components/SourceBadge.svelte
- create mode 100644 frontend/src/lib/queries/discover/DiscoverQuery.spec.ts
- create mode 100644 frontend/src/lib/queries/discover/DiscoverQuery.svelte.ts
- create mode 100644 frontend/src/lib/queries/discover/DiscoverQueryKeyFactory.ts
- create mode 100644 frontend/src/lib/queries/playlists/PlaylistQuery.svelte.ts
- create mode 100644 frontend/src/lib/queries/playlists/PlaylistQueryKeyFactory.ts
- delete mode 100644 frontend/src/lib/utils/discoverCache.ts
- create mode 100644 frontend/src/lib/utils/downloadHelper.ts
- create mode 100644 frontend/src/routes/discover/+page.ts
- delete mode 100644 frontend/static/img/cover-placeholder.jpg
+ frontend/src/lib/components/BrowseHeroCards.svelte | 16 ++--
+ frontend/src/lib/components/VersionOverlays.svelte | 46 ++++++++---
+ frontend/src/lib/components/WhatsNewModal.svelte   | 89 +++++++++++++---------
+ 3 files changed, 98 insertions(+), 53 deletions(-)
 
 Array
 (
@@ -1043,12 +915,7 @@ Processing /tmp/GitHub/repositoryClone/got3nks/amutorrent/unraid/amutorrent.xml.
 
 Downloading BitCryptic's Repository
 
-From https://github.com/bitcryptic-gw/unraid-pi-network-node
-   2a4bd3d..96c8521  main       -> origin/main
-Updating 2a4bd3d..96c8521
-Fast-forward
- .github/workflows/build.yml | 8 +++++++-
- 1 file changed, 7 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21621,6 +21488,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+arianrhodsandlot/retroassembly
+arianrhodsandlot/retroassembly Downloads: 240393  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21733,8 +21602,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-headscale-admin/raw/master/headscale-admin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
-josh5/headendarr
-josh5/headendarr:latest Downloads: 9980  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
@@ -21776,6 +21643,13 @@ josh5/headendarr:latest Downloads: 9980  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+dgruhin-hrizn/aperture
+ghcr.io/dgruhin-hrizn/aperture:latest Downloads:   Stars:   Base: unknown
+ohmzii/immaculaterr
+ohmzii/immaculaterr:latest Downloads: 11316  Stars: 1  Base: unknown
+Tagged - Can't determine last update
+syncin/server
+syncin/server:1 Downloads: 74647  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
