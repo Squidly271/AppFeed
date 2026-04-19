@@ -163,19 +163,7 @@ Processing /tmp/GitHub/repositoryClone/Pross/unraid-templates/meshsimple.xml...S
 
 Downloading HabiRabbu's Repository
 
-From https://github.com/HabiRabbu/Musicseerr
-   10c593b..a63008c  main       -> origin/main
- * [new tag]         v1.3.3     -> v1.3.3
-Updating 10c593b..a63008c
-Fast-forward
- Makefile                                        | 17 ++++++------
- backend/services/preferences_service.py         |  2 +-
- backend/static_server.py                        |  7 +++--
- backend/tests/routes/test_plex_auth.py          | 37 +++++++++++++++++++++++++
- frontend/src/lib/queries/VersionQuery.svelte.ts |  3 +-
- frontend/src/routes/+error.svelte               | 28 +++++++++++++++++++
- 6 files changed, 81 insertions(+), 13 deletions(-)
- create mode 100644 frontend/src/routes/+error.svelte
+Already up to date.
 
 Array
 (
@@ -228,12 +216,7 @@ Processing /tmp/GitHub/repositoryClone/jaydenroberts/unraid-templates/tally.xml.
 
 Downloading JSONbored's Repository
 
-From https://github.com/JSONbored/awesome-unraid
-   59c0417..3024ac5  main       -> origin/main
-Updating 59c0417..3024ac5
-Fast-forward
- mem0-aio.xml | 92 +++++++++++++++++-------------------------------------------
- 1 file changed, 26 insertions(+), 66 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1905,20 +1888,24 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   c18afe5..09f8148  main       -> origin/main
-Updating c18afe5..09f8148
+   09f8148..2a1841f  main       -> origin/main
+Updating 09f8148..2a1841f
 Fast-forward
- app/api/checkout/route.ts                 |  8 ++++
- app/cart/page.tsx                         |  2 +-
- components/InstantQuoteConfigurator.tsx   |  9 +++-
- lib/filament-palette-validation.ts        | 79 +++++++++++++++++++++++++++++++
- lib/orders.ts                             | 29 ++++++++----
- tests/filament-palette-validation.test.ts | 27 +++++++++++
- tests/order-status-selection.test.ts      | 34 +++++++++++++
- 7 files changed, 178 insertions(+), 10 deletions(-)
- create mode 100644 lib/filament-palette-validation.ts
- create mode 100644 tests/filament-palette-validation.test.ts
- create mode 100644 tests/order-status-selection.test.ts
+ app/admin/users/[userId]/orders/[orderId]/page.tsx |  14 +++
+ .../orders/[orderId]/printlab-submit/route.ts      |  22 +++++
+ app/api/checkout/route.ts                          |   6 +-
+ components/admin/PrintLabSubmitButton.tsx          |  51 ++++++++++
+ lib/orders.ts                                      |   7 +-
+ lib/printlab-order-submit.ts                       | 104 +++++++++++++++++++++
+ lib/printlab-submit.ts                             |  86 +++++++++++++++++
+ lib/printlab.ts                                    |  36 ++++++-
+ tests/printlab-submit.test.ts                      |  77 +++++++++++++++
+ 9 files changed, 400 insertions(+), 3 deletions(-)
+ create mode 100644 app/api/admin/orders/[orderId]/printlab-submit/route.ts
+ create mode 100644 components/admin/PrintLabSubmitButton.tsx
+ create mode 100644 lib/printlab-order-submit.ts
+ create mode 100644 lib/printlab-submit.ts
+ create mode 100644 tests/printlab-submit.test.ts
 
 Array
 (
@@ -12723,7 +12710,16 @@ Processing /tmp/GitHub/repositoryClone/openspeedtest/unraid-docker-plugin/opensp
 
 Downloading uberchuckie's Repository
 
-Already up to date.
+From https://github.com/charlescng/docker-containers
+   523e301..1db2d21  master     -> origin/master
+ * [new tag]         v1.0       -> v1.0
+Updating 523e301..1db2d21
+Fast-forward
+ observium/Dockerfile                       |  2 +-
+ observium/apache-observium                 |  8 ++++++++
+ observium/firstrun.sh                      | 19 ++++++++++++++++++-
+ unraid-templates/uberchuckie/observium.xml | 12 ++++++++++++
+ 4 files changed, 39 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -21473,12 +21469,7 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-From https://github.com/ProphetSe7en/unraid-templates
-   13e7cd3..261b49d  main       -> origin/main
-Updating 13e7cd3..261b49d
-Fast-forward
- clonarr.xml | 7 ++++++-
- 1 file changed, 6 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21509,9 +21500,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
-Tagged - Can't determine last update
-postgres
-postgres:16-alpine Downloads: 10520115414  Stars: 14876  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoMonitor/main/plugin/hakomonitor.plg attempt 1...
@@ -21602,6 +21590,8 @@ postgres:16-alpine Downloads: 10520115414  Stars: 14876  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+waazaafr/garage-s3-simple
+waazaafr/garage-s3-simple:latest Downloads: 5241  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -21660,9 +21650,6 @@ postgres:16-alpine Downloads: 10520115414  Stars: 14876  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
-Tagged - Can't determine last update
-gitea.fithwum.tech/fithwum/minecraft
-gitea.fithwum.tech/fithwum/minecraft:bukkit Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/devel/disklocation-devel.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/olehj/disklocation/master/disklocation-master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg attempt 1...
@@ -21739,8 +21726,6 @@ gitea.fithwum.tech/fithwum/minecraft:bukkit Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-grafana/alloy
-grafana/alloy:latest Downloads: 207670018  Stars: 18  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
