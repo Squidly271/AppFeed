@@ -146,7 +146,12 @@ Processing /tmp/GitHub/repositoryClone/sidkapahi/curatarr/curatarr.xml...Success
 
 Downloading pross' Repository
 
-Already up to date.
+From https://github.com/Pross/unraid-templates
+   7c0939f..bdf060b  main       -> origin/main
+Updating 7c0939f..bdf060b
+Fast-forward
+ meshsimple.xml | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
 
 Array
 (
@@ -2087,7 +2092,30 @@ Success
 
 Downloading vincentmakes' Repository
 
-Already up to date.
+From https://github.com/vincentmakes/cv-manager
+   31ec288..bbf6ede  main       -> origin/main
+Updating 31ec288..bbf6ede
+Fast-forward
+ CHANGELOG.md               |   6 ++
+ package-lock.json          |   4 +-
+ package.json               |   2 +-
+ public-readonly/index.html | 198 +++++++++++++++++++++++++++++++++------------
+ public/index.html          |  25 +++++-
+ public/shared/admin.css    |  28 +++++++
+ public/shared/admin.js     |  17 +++-
+ public/shared/i18n/de.json |   9 +++
+ public/shared/i18n/en.json |   9 +++
+ public/shared/i18n/es.json |   9 +++
+ public/shared/i18n/fr.json |   9 +++
+ public/shared/i18n/it.json |   9 +++
+ public/shared/i18n/nl.json |   9 +++
+ public/shared/i18n/pt.json |   9 +++
+ public/shared/i18n/zh.json |   9 +++
+ public/shared/styles.css   | 120 +++++++++++++++++++++++++++
+ src/server.js              |  24 ++++--
+ tests/backend.test.js      |  81 +++++++++++++++++++
+ version.json               |   2 +-
+ 19 files changed, 511 insertions(+), 68 deletions(-)
 
 Array
 (
@@ -2226,68 +2254,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   ed4b9779..8770e525  master       -> origin/master
- * [new tag]           v0.11.28-dev -> v0.11.28-dev
-Updating ed4b9779..8770e525
-Fast-forward
- app/Filament/Pages/M3uProxyStreamMonitor.php       | 111 +++++-
- app/Filament/Pages/Preferences.php                 |  40 +-
- .../ChannelScrubbers/ChannelScrubberResource.php   |  50 ++-
- .../ScrubberLogsRelationManager.php                |   6 +
- .../ChannelScrubberLogResource.php                 |  12 +-
- .../Resources/Playlists/PlaylistResource.php       |  46 ++-
- .../StreamProfiles/Pages/ListStreamProfiles.php    |  30 +-
- .../StreamProfiles/StreamProfileResource.php       |  37 +-
- app/Http/Controllers/XtreamApiController.php       |  27 +-
- app/Jobs/FetchTmdbIds.php                          |   2 +-
- app/Jobs/ProbeChannelStreams.php                   | 197 ++++++++--
- app/Jobs/ProbeChannelStreamsChunk.php              |  69 ++++
- app/Jobs/ProbeChannelStreamsComplete.php           |  80 ++++
- app/Jobs/ProcessChannelScrubber.php                | 151 ++++++--
- app/Jobs/ProcessChannelScrubberChunk.php           | 408 +++++++++++++++++++--
- app/Jobs/ProcessChannelScrubberComplete.php        |   2 +-
- app/Jobs/ProcessM3uImportSeriesChunk.php           |  68 ++--
- app/Jobs/ProcessM3uImportSeriesEpisodes.php        |   3 +-
- app/Listeners/SyncListener.php                     |  68 ++--
- app/Models/Channel.php                             | 117 +++---
- app/Models/ChannelScrubber.php                     |   4 +
- app/Models/ChannelScrubberLog.php                  |   1 +
- app/Models/Playlist.php                            |   2 +
- app/Models/Series.php                              | 304 +++++++--------
- app/Plugins/PluginSchemaMapper.php                 |  70 +++-
- app/Plugins/PluginValidator.php                    |  34 +-
- app/Services/M3uProxyService.php                   |  67 +++-
- app/Services/PlaylistService.php                   |   6 +-
- config/dev.php                                     |   4 +-
- config/plugins.php                                 |   1 +
- ...74410_add_use_batching_to_channel_scrubbers.php |  43 +++
- ...26_04_16_214902_add_last_modified_to_series.php |  28 ++
- ...02155_add_probe_settings_to_playlists_table.php |  29 ++
- lang/de.json                                       |  21 ++
- lang/en.json                                       |  21 ++
- lang/es.json                                       |  21 ++
- lang/fr.json                                       |  21 ++
- lang/zh_CN.json                                    |  21 ++
- resources/css/app.css                              |  12 +-
- resources/css/globals/global.scss                  |  22 +-
- .../pages/m3u-proxy-stream-monitor.blade.php       |  75 ++--
- tests/Feature/JobsTableSchemaTest.php              |  20 +
- .../Feature/M3uProxyServiceFetchResilienceTest.php |  76 ++++
- tests/Feature/PluginSettingsSchemaGroupingTest.php | 256 +++++++++++++
- tests/Feature/ProcessChannelScrubberChunkTest.php  |  84 ++++-
- .../StreamMonitorActionAuthorizationTest.php       | 148 ++++++++
- tests/Unit/StreamProfileResourceDefaultsTest.php   |  31 ++
- 47 files changed, 2440 insertions(+), 506 deletions(-)
- create mode 100644 app/Jobs/ProbeChannelStreamsChunk.php
- create mode 100644 app/Jobs/ProbeChannelStreamsComplete.php
- create mode 100644 database/migrations/2026_04_16_174410_add_use_batching_to_channel_scrubbers.php
- create mode 100644 database/migrations/2026_04_16_214902_add_last_modified_to_series.php
- create mode 100644 database/migrations/2026_04_17_002155_add_probe_settings_to_playlists_table.php
- create mode 100644 tests/Feature/M3uProxyServiceFetchResilienceTest.php
- create mode 100644 tests/Feature/PluginSettingsSchemaGroupingTest.php
- create mode 100644 tests/Feature/StreamMonitorActionAuthorizationTest.php
- create mode 100644 tests/Unit/StreamProfileResourceDefaultsTest.php
+Already up to date.
 
 Array
 (
@@ -7284,7 +7251,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   303de32..69045e9  main       -> origin/main
+Updating 303de32..69045e9
+Fast-forward
+ unraid/unifi-network-application.xml | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
 Array
 (
@@ -9198,12 +9170,7 @@ Processing /tmp/GitHub/repositoryClone/jlesage/docker-templates/jlesage/file-cen
 
 Downloading dlandon's Repository
 
-From https://github.com/dlandon/docker.templates
-   d6b74c3..ce7d651  master     -> origin/master
-Updating d6b74c3..ce7d651
-Fast-forward
- LyrionMusicServer.xml | 35 ++++++++++++++++++++++++-----------
- 1 file changed, 24 insertions(+), 11 deletions(-)
+Already up to date.
 
 Array
 (
@@ -14204,16 +14171,8 @@ Downloading freddy0's Repository
 
 warning: redirecting to https://gitlab.com/crafty-controller/crafty-4.git/
 From https://gitlab.com/crafty-controller/crafty-4
-   0443b939..6394bbc1  master     -> origin/master
-Updating 0443b939..6394bbc1
-Fast-forward
- CHANGELOG.md                 | 5 +++++
- README.md                    | 2 +-
- app/classes/shared/server.py | 4 ++--
- app/config/version.json      | 2 +-
- app/translations/tr_TR.json  | 4 ++--
- sonar-project.properties     | 4 ++--
- 6 files changed, 13 insertions(+), 8 deletions(-)
+ * [new tag]           v4.10.4    -> v4.10.4
+Already up to date.
 
 Array
 (
@@ -21572,6 +21531,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
+kroeberd/mediastarr
+kroeberd/mediastarr:latest Downloads: 13313  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.active.streams.plg attempt 1...
@@ -21696,8 +21657,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/sharry
-jlesage/sharry Downloads: 6142  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -21780,6 +21739,8 @@ jlesage/sharry Downloads: 6142  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+zedeus/nitter
+zedeus/nitter:latest Downloads: 7617779  Stars: 17  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
