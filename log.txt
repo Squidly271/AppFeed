@@ -2030,7 +2030,36 @@ Success
 
 Downloading NeXroll's Repository
 
-Already up to date.
+From https://github.com/JFLXCLOUD/NeXroll
+   7de3cdf..a13f56f  main            -> origin/main
+ * [new tag]         v1.12.0-beta.12 -> v1.12.0-beta.12
+Updating 7de3cdf..a13f56f
+Fast-forward
+ NeXroll/CHANGELOG.md                               |  17 +
+ NeXroll/backend/main.py                            | 341 +++++++++++++++++--
+ NeXroll/backend/scheduler.py                       | 120 +++++++
+ NeXroll/backend/version.py                         |   2 +-
+ NeXroll/frontend/build/asset-manifest.json         |   6 +-
+ NeXroll/frontend/build/index.html                  |   2 +-
+ NeXroll/frontend/build/static/js/main.12d24332.js  |   3 +
+ ...js.LICENSE.txt => main.12d24332.js.LICENSE.txt} |   0
+ .../{main.cef00618.js.map => main.12d24332.js.map} |   2 +-
+ NeXroll/frontend/build/static/js/main.cef00618.js  |   3 -
+ NeXroll/frontend/src/components/BlockEditor.js     | 376 +++++++++++++++++----
+ NeXroll/frontend/src/components/SequenceBlock.js   | 174 +++++++++-
+ NeXroll/frontend/src/components/SequenceBuilder.js | 103 +++++-
+ .../src/components/SequencePreviewModal.js         | 121 +++++--
+ NeXroll/frontend/src/components/SequenceStats.js   |  20 ++
+ .../frontend/src/components/SequenceTimeline.js    |  18 +-
+ NeXroll/frontend/src/utils/sequenceValidator.js    |  63 +++-
+ NeXroll/version.py                                 |   2 +-
+ NeXroll/version_info.txt                           |   8 +-
+ Releases/installer.nsi                             |   2 +-
+ 20 files changed, 1229 insertions(+), 154 deletions(-)
+ create mode 100644 NeXroll/frontend/build/static/js/main.12d24332.js
+ rename NeXroll/frontend/build/static/js/{main.cef00618.js.LICENSE.txt => main.12d24332.js.LICENSE.txt} (100%)
+ rename NeXroll/frontend/build/static/js/{main.cef00618.js.map => main.12d24332.js.map} (52%)
+ delete mode 100644 NeXroll/frontend/build/static/js/main.cef00618.js
 
 Array
 (
@@ -9553,7 +9582,15 @@ Success
 
 Downloading digiblur's Repository
 
-Already up to date.
+From https://github.com/digiblur/unraid-docker-templates
+   f1aa8d2..3c71920  master     -> origin/master
+Updating f1aa8d2..3c71920
+Fast-forward
+ esphome-enhanced.xml           |  27 +++++++++++++++++++++++++++
+ images/home-assistant-icon.png | Bin 0 -> 5441 bytes
+ 2 files changed, 27 insertions(+)
+ create mode 100644 esphome-enhanced.xml
+ create mode 100644 images/home-assistant-icon.png
 
 Array
 (
@@ -9561,29 +9598,30 @@ Array
         (
             [0] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/neolink.xml
             [1] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/ha-dockermon.xml
-            [2] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/plate-minder.xml
-            [3] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/speedtest.xml
-            [4] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/deepstack.xml
-            [5] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/tasui.xml
-            [6] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/smartthings-mqtt-bridge.xml
-            [7] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/esphome-libretiny.xml
-            [8] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/hassio_supervisor.xml
-            [9] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/esphome.xml
-            [10] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/unms.xml
-            [11] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/wyzesense2mqtt.xml
-            [12] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/ca_profile.xml
-            [13] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/open-alpr-http-wrapper.xml
-            [14] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/venstar2mqtt.xml
-            [15] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/silabs-multipan-thread.xml
-            [16] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/amcrest2mqtt.xml
-            [17] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/openWakeWord.xml
-            [18] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/ring-mqtt.xml
-            [19] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/zwave-js-ui.xml
-            [20] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/tasmobackup.xml
-            [21] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/zigbee2mqtt.xml
-            [22] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/camviewerplus.xml
-            [23] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/TasmoAdmin.xml
-            [24] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/matter-server.xml
+            [2] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/esphome-enhanced.xml
+            [3] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/plate-minder.xml
+            [4] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/speedtest.xml
+            [5] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/deepstack.xml
+            [6] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/tasui.xml
+            [7] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/smartthings-mqtt-bridge.xml
+            [8] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/esphome-libretiny.xml
+            [9] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/hassio_supervisor.xml
+            [10] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/esphome.xml
+            [11] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/unms.xml
+            [12] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/wyzesense2mqtt.xml
+            [13] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/ca_profile.xml
+            [14] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/open-alpr-http-wrapper.xml
+            [15] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/venstar2mqtt.xml
+            [16] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/silabs-multipan-thread.xml
+            [17] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/amcrest2mqtt.xml
+            [18] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/openWakeWord.xml
+            [19] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/ring-mqtt.xml
+            [20] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/zwave-js-ui.xml
+            [21] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/tasmobackup.xml
+            [22] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/zigbee2mqtt.xml
+            [23] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/camviewerplus.xml
+            [24] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/TasmoAdmin.xml
+            [25] => /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/matter-server.xml
         )
 
 )
@@ -9593,6 +9631,7 @@ Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/neolink.
 
 Success
 Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/ha-dockermon.xml...Success
+Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/esphome-enhanced.xml...Success
 Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/plate-minder.xml...Success
 Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/speedtest.xml... ***DEPRECATED BY REPO PATH*** Success
 Processing /tmp/GitHub/repositoryClone/digiblur/unraid-docker-templates/deprecated/deepstack.xml... ***DEPRECATED BY REPO PATH*** Removed from CA123
@@ -15048,12 +15087,7 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-From https://github.com/Goobaroo/unraid-templates
-   17619c5..e50bac1  main       -> origin/main
-Updating 17619c5..e50bac1
-Fast-forward
- vaulthunters3rdedition_server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -17829,14 +17863,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
-   bfceee4..2df9f8e  main       -> origin/main
-Updating bfceee4..2df9f8e
-Fast-forward
- automation/change_monitoring/data.json | 16 ++++++++++++++--
- templates/brick_tracker.xml            | 18 ++++++++++++------
- templates/tater.xml                    | 19 ++++++++-----------
- 3 files changed, 34 insertions(+), 19 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21506,16 +21533,7 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
-nebula-codes/hytale-server-manager
-ghcr.io/nebula-codes/hytale-server-manager:latest Downloads:   Stars:   Base: unknown
-cptpijun/beo_radio_scrobbler
-cptpijun/beo_radio_scrobbler Downloads: 743  Stars: 0  Base: unknown
-maikboarder/playerr
-maikboarder/playerr:latest Downloads: 14186  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
-Tagged - Can't determine last update
-mattystacks/steamcmd
-ghcr.io/mattystacks/steamcmd:foundry Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.date.time.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.safe.mode.plg attempt 1...
@@ -21563,10 +21581,6 @@ ghcr.io/mattystacks/steamcmd:foundry Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-icereed/paperless-gpt
-icereed/paperless-gpt:latest Downloads: 592167  Stars: 1  Base: unknown
-scanopy/server
-ghcr.io/scanopy/scanopy/server:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -21590,14 +21604,8 @@ ghcr.io/scanopy/scanopy/server:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-isokoliuk/mcp-searxng
-isokoliuk/mcp-searxng Downloads: 75957  Stars: 0  Base: unknown
-cbcoutinho/nextcloud-mcp-server
-ghcr.io/cbcoutinho/nextcloud-mcp-server Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-a1ex4/ownfoil
-a1ex4/ownfoil Downloads: 485635  Stars: 8  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -21651,6 +21659,10 @@ a1ex4/ownfoil Downloads: 485635  Stars: 8  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
+heffneil/esphome-enhanced-dashboard
+heffneil/esphome-enhanced-dashboard Downloads: 228  Stars: 0  Base: unknown
+Pulling heffneil/esphome-enhanced-dashboard
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -21693,10 +21705,6 @@ a1ex4/ownfoil Downloads: 485635  Stars: 8  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-elmerfds/trafegodns
-ghcr.io/elmerfds/trafegodns:latest Downloads:   Stars:   Base: unknown
-bachya/ecowitt2mqtt
-bachya/ecowitt2mqtt Downloads: 594709  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -21716,10 +21724,6 @@ bachya/ecowitt2mqtt Downloads: 594709  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-aceberg/exercisediary
-aceberg/exercisediary Downloads: 228225  Stars: 2  Base: unknown
-fgrfn/nmcontroller_web
-fgrfn/nmcontroller_web Downloads: 1467  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -21737,19 +21741,10 @@ fgrfn/nmcontroller_web Downloads: 1467  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-goobaroo/ftbinteractionsremastered
-goobaroo/ftbinteractionsremastered:latest Downloads: 2553  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-jasongdove/tvrename
-jasongdove/tvrename:develop Downloads: 1009  Stars: 0  Base: unknown
-bytemark/webdav
-bytemark/webdav:latest Downloads: 14463032  Stars: 173  Base: unknown
-zocker160/handbrake-nvenc
-zocker160/handbrake-nvenc:latest Downloads: 611088  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21760,16 +21755,12 @@ zocker160/handbrake-nvenc:latest Downloads: 611088  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8152.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/greycubesgav/unraid-templates/raw/main/davfs2//davfs2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
-hashicorp/vault
-hashicorp/vault Downloads: 224873632  Stars: 211  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-nebn/unraid-simple-monitoring-api
-ghcr.io/nebn/unraid-simple-monitoring-api:latest Downloads: 14141  Stars: 1  Base: unknown
 Privileged: 135
 
 
