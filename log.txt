@@ -74,7 +74,62 @@ Processing /tmp/GitHub/repositoryClone/mash2k3/unraid-templates/decypharr.xml...
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   90f44e3..8d6cd39  main       -> origin/main
+ * [new tag]         v0.6.0     -> v0.6.0
+Updating 90f44e3..8d6cd39
+Fast-forward
+ messages/de.json                                   |  39 +-
+ messages/en.json                                   |  39 +-
+ package.json                                       |   2 +-
+ src/app.html                                       |   1 +
+ src/hooks.server.ts                                |  95 ++++-
+ src/lib/changelog.ts                               |  15 +
+ src/lib/components/InfoModal.svelte                |  10 +
+ src/lib/components/ListCard.svelte                 |   2 +-
+ .../components/supplements/QuickLogSheet.svelte    | 220 ++++++++++-
+ .../supplements/WaterEditLogSheet.svelte           | 118 ++++++
+ .../supplements/WaterReminderSheet.svelte          | 281 ++++++++++++++
+ .../components/supplements/WaterTrackerCard.svelte | 229 +++++++++++
+ .../supplements/WaterTrackerEditSheet.svelte       | 107 ++++++
+ src/lib/db/migrations/0026_water_tracker.sql       |  11 +
+ src/lib/db/migrations/0027_water_reminders.sql     |  10 +
+ .../migrations/0028_water_reminders_interval.sql   |  14 +
+ src/lib/db/migrations/meta/_journal.json           |  21 ++
+ src/lib/db/schema.ts                               |  24 ++
+ src/lib/i18n.svelte.ts                             |  38 +-
+ src/lib/sync/db.ts                                 |  68 +++-
+ src/lib/sync/manager.ts                            |  68 +++-
+ src/lib/userSettings.svelte.ts                     |  26 +-
+ src/lib/userSettingsTypes.ts                       |   4 +
+ src/routes/api/recipes/import/+server.ts           |   4 +-
+ src/routes/api/supplement-logs/stats/+server.ts    |  29 ++
+ src/routes/api/water-logs/+server.ts               |  58 +++
+ src/routes/api/water-logs/[id]/+server.ts          |  50 +++
+ src/routes/api/water-reminders/+server.ts          |  52 +++
+ src/routes/api/water-reminders/[id]/+server.ts     |  49 +++
+ src/routes/einstellungen/admin/+page.svelte        | 417 +++++++++++++++------
+ src/routes/rezepte/+page.svelte                    |  18 +-
+ src/routes/rezepte/[id]/+page.svelte               |  25 +-
+ src/routes/rezepte/import/+page.svelte             |  19 +-
+ src/routes/supplements/+page.svelte                | 148 +++++++-
+ src/routes/supplements/verwalten/+page.svelte      | 101 ++++-
+ static/manifest.webmanifest                        |  23 ++
+ vite.config.ts                                     |   2 +
+ 37 files changed, 2261 insertions(+), 176 deletions(-)
+ create mode 100644 src/lib/components/supplements/WaterEditLogSheet.svelte
+ create mode 100644 src/lib/components/supplements/WaterReminderSheet.svelte
+ create mode 100644 src/lib/components/supplements/WaterTrackerCard.svelte
+ create mode 100644 src/lib/components/supplements/WaterTrackerEditSheet.svelte
+ create mode 100644 src/lib/db/migrations/0026_water_tracker.sql
+ create mode 100644 src/lib/db/migrations/0027_water_reminders.sql
+ create mode 100644 src/lib/db/migrations/0028_water_reminders_interval.sql
+ create mode 100644 src/routes/api/supplement-logs/stats/+server.ts
+ create mode 100644 src/routes/api/water-logs/+server.ts
+ create mode 100644 src/routes/api/water-logs/[id]/+server.ts
+ create mode 100644 src/routes/api/water-reminders/+server.ts
+ create mode 100644 src/routes/api/water-reminders/[id]/+server.ts
+ create mode 100644 static/manifest.webmanifest
 
 Array
 (
@@ -216,15 +271,7 @@ Processing /tmp/GitHub/repositoryClone/jaydenroberts/unraid-templates/tally.xml.
 
 Downloading JSONbored's Repository
 
-From https://github.com/JSONbored/awesome-unraid
-   3024ac5..87935a4  main       -> origin/main
-Updating 3024ac5..87935a4
-Fast-forward
- icons/infisical.png | Bin 0 -> 1696 bytes
- infisical-aio.xml   | 325 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 325 insertions(+)
- create mode 100644 icons/infisical.png
- create mode 100644 infisical-aio.xml
+Already up to date.
 
 Array
 (
@@ -1539,7 +1586,19 @@ Processing /tmp/GitHub/repositoryClone/johnpwhite/unraid-community-applications-
 
 Downloading ReadMeABook's Repository
 
-Already up to date.
+From https://github.com/kikootwo/ReadMeABook
+   54b54d3..5f0855b  main       -> origin/main
+ * [new tag]         v1.1.8     -> v1.1.8
+Updating 54b54d3..5f0855b
+Fast-forward
+ documentation/integrations/audible.md      |  281 +++---
+ package.json                               |    2 +-
+ src/app/path-helper/page.tsx               |  932 +++++++++++++++++++
+ src/lib/integrations/audible.service.ts    | 1274 +++++++++-----------------
+ src/lib/types/audible.ts                   |   11 +-
+ tests/integrations/audible.service.test.ts | 1348 ++++++++++++++++++++--------
+ 6 files changed, 2469 insertions(+), 1379 deletions(-)
+ create mode 100644 src/app/path-helper/page.tsx
 
 Array
 (
@@ -17834,7 +17893,9 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+ + eea54f2...efe1a63 main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
@@ -21486,10 +21547,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
-jsonbored/infisical-aio
-jsonbored/infisical-aio:latest Downloads: 53  Stars: 0  Base: unknown
-Pulling jsonbored/infisical-aio:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoMonitor/main/plugin/hakomonitor.plg attempt 1...
@@ -21717,6 +21774,8 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+jesposito/facet
+ghcr.io/jesposito/facet:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
