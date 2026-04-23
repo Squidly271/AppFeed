@@ -32,12 +32,7 @@ Processing /tmp/GitHub/repositoryClone/kaedinger/unraid-ca-xml-templates/ca_prof
 
 Downloading mcdays94's Repository
 
-From https://github.com/mcdays94/docker-templates
-   d06f7e5..d84c37f  main       -> origin/main
-Updating d06f7e5..d84c37f
-Fast-forward
- nas-doctor/nas-doctor.xml | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -2102,18 +2097,7 @@ Success
 
 Downloading vincentmakes' Repository
 
-From https://github.com/vincentmakes/cv-manager
-   af8bca2..6d2cb11  main       -> origin/main
-Updating af8bca2..6d2cb11
-Fast-forward
- CHANGELOG.md               | 10 ++++++++++
- package-lock.json          |  4 ++--
- package.json               |  2 +-
- public-readonly/index.html |  8 ++++----
- src/server.js              | 32 ++++++++++++++++++++++----------
- tests/backend.test.js      | 40 ++++++++++++++++++++++++++++++++++++++++
- version.json               |  2 +-
- 7 files changed, 80 insertions(+), 18 deletions(-)
+Already up to date.
 
 Array
 (
@@ -2253,11 +2237,66 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 Downloading shparikson's Repository
 
 From https://github.com/m3ue/m3u-editor
-   8770e525..9ab43557  master     -> origin/master
-Updating 8770e525..9ab43557
+   9ab43557..d7a71a1b  master     -> origin/master
+ * [new tag]           v0.11.29-dev -> v0.11.29-dev
+Updating 9ab43557..d7a71a1b
 Fast-forward
- package-lock.json | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ app/Facades/SortFacade.php                         |   1 +
+ .../Resources/Channels/ChannelResource.php         | 196 ++++++++++++
+ .../RelationManagers/ChannelsRelationManager.php   |  68 +++-
+ .../RelationManagers/VodRelationManager.php        |  69 +++-
+ .../Resources/Playlists/PlaylistResource.php       | 146 +++++++++
+ app/Filament/Resources/Series/SeriesResource.php   |  19 +-
+ app/Filament/Resources/Vods/VodResource.php        |  19 +-
+ .../Controllers/PlaylistGenerateController.php     |  18 +-
+ app/Http/Controllers/XtreamApiController.php       | 344 +++++++++-----------
+ app/Jobs/AutoSyncGroupsToCustomPlaylist.php        | 160 ++++++++++
+ app/Jobs/DuplicatePlaylist.php                     |   2 +
+ app/Jobs/FetchTmdbIds.php                          |   4 +-
+ app/Jobs/ProcessM3uImport.php                      |   3 +-
+ app/Jobs/ProcessM3uImportSeriesComplete.php        |  26 +-
+ app/Listeners/SyncListener.php                     |  44 +++
+ app/Models/Channel.php                             |  90 ++++++
+ app/Models/CustomPlaylist.php                      |   2 +-
+ app/Models/Playlist.php                            |   1 +
+ app/Providers/AppServiceProvider.php               |  31 ++
+ app/Services/EpgCacheService.php                   | 280 ++++++++++-------
+ app/Services/SortService.php                       | 112 +++++++
+ app/Services/TmdbService.php                       | 238 ++++++++++++++
+ config/database.php                                |   8 -
+ config/dev.php                                     |   4 +-
+ ...9_add_sort_to_channel_custom_playlist_table.php |  22 ++
+ ...to_sync_to_custom_config_to_playlists_table.php |  28 ++
+ ..._constraint_to_custom_playlist_pivot_tables.php |  73 +++++
+ docker/8.4/nginx/laravel.conf                      |   2 +
+ docker/8.4/nginx/nginx.conf                        |   2 +
+ docker/8.4/www.conf                                |   8 +-
+ lang/de.json                                       |  44 ++-
+ lang/en.json                                       |  42 ++-
+ lang/es.json                                       |  40 ++-
+ lang/fr.json                                       |  40 ++-
+ lang/zh_CN.json                                    |  40 ++-
+ .../Feature/AutoSyncGroupsToCustomPlaylistTest.php | 346 +++++++++++++++++++++
+ tests/Feature/ChannelInfoTechnicalDetailsTest.php  | 184 +++++++++++
+ tests/Feature/ChannelStreamStatsForDisplayTest.php | 149 +++++++++
+ tests/Feature/CustomPlaylistSortOrderTest.php      |  79 +++++
+ tests/Feature/FetchTmdbIdsTest.php                 | 139 +++++++++
+ .../Feature/ProcessM3uImportEnableChannelsTest.php |  74 +++++
+ .../Feature/ProcessM3uImportSeriesCompleteTest.php | 106 +++++++
+ tests/Feature/SortServiceTest.php                  | 107 +++++++
+ tests/Feature/TmdbServiceTest.php                  | 308 ++++++++++++++++++
+ tests/Unit/EpgCacheServiceXmltvSignalsTest.php     | 134 ++++++++
+ 45 files changed, 3480 insertions(+), 372 deletions(-)
+ create mode 100644 app/Jobs/AutoSyncGroupsToCustomPlaylist.php
+ create mode 100644 database/migrations/2026_04_20_185129_add_sort_to_channel_custom_playlist_table.php
+ create mode 100644 database/migrations/2026_04_20_222636_add_auto_sync_to_custom_config_to_playlists_table.php
+ create mode 100644 database/migrations/2026_04_20_233357_add_unique_constraint_to_custom_playlist_pivot_tables.php
+ create mode 100644 tests/Feature/AutoSyncGroupsToCustomPlaylistTest.php
+ create mode 100644 tests/Feature/ChannelInfoTechnicalDetailsTest.php
+ create mode 100644 tests/Feature/ChannelStreamStatsForDisplayTest.php
+ create mode 100644 tests/Feature/ProcessM3uImportEnableChannelsTest.php
+ create mode 100644 tests/Feature/ProcessM3uImportSeriesCompleteTest.php
+ create mode 100644 tests/Unit/EpgCacheServiceXmltvSignalsTest.php
 
 Array
 (
@@ -10376,7 +10415,13 @@ Processing /tmp/GitHub/repositoryClone/FoxxMD/unraid-docker-templates/foxxmd/pin
 
 Downloading ich777's Repository
 
-Already up to date.
+From https://github.com/ich777/docker-templates
+   b5b16b7..ab3c0da  master     -> origin/master
+Updating b5b16b7..ab3c0da
+Fast-forward
+ ich777/Unreal-Tournament-99.xml | 43 -----------------------------------------
+ 1 file changed, 43 deletions(-)
+ delete mode 100644 ich777/Unreal-Tournament-99.xml
 
 Array
 (
@@ -10459,114 +10504,113 @@ Array
             [74] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Nvidia-Drivers.xml
             [75] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/V-Rising.xml
             [76] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/hpsahba.xml
-            [77] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Unreal-Tournament-99.xml
-            [78] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LifeIsFeudal-YourOwn.xml
-            [79] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DMClassic.xml
-            [80] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SonsOfTheForest.xml
-            [81] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Necesse.xml
-            [82] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ECO.xml
-            [83] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Insurgency.xml
-            [84] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DayOfDefeatSource.xml
-            [85] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Valheim.xml
-            [86] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Intel-GVT-g.xml
-            [87] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Vintage-Story.xml
-            [88] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DayOfDefeat-Classic.xml
-            [89] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DaysOfWar.xml
-            [90] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/QNAP-EC.xml
-            [91] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/luckyBackup.xml
-            [92] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ColonySurvival.xml
-            [93] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Icarus.xml
-            [94] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/nvtop.xml
-            [95] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Terraria.xml
-            [96] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/NZBHydra2.xml
-            [97] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DVB-Drivers.xml
-            [98] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Tor-Browser.xml
-            [99] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Urban-Terror.xml
-            [100] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SABnzbd.xml
-            [101] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Craftopia.xml
-            [102] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/KillingFloor.xml
-            [103] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CounterStrike2D.xml
-            [104] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Lidarr.xml
-            [105] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/iSCSI-Initiator.xml
-            [106] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Vein.xml
-            [107] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/RUST.xml
-            [108] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OperationHarshDoorstop.xml
-            [109] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/NoMoreRoomInHell.xml
-            [110] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Unturned.xml
-            [111] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Firewire.xml
-            [112] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PrometheusWireguardExporter.xml
-            [113] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/uNmINeD-GUI.xml
-            [114] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CSMM-7DtD.xml
-            [115] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Longvinter.xml
-            [116] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PavlovVR.xml
-            [117] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Stun-Turn-Server.xml
-            [118] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/7DaysToDie.xml
-            [119] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MinecraftBasicServer.xml
-            [120] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/QuakeLive.xml
-            [121] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SvenCOOP.xml
-            [122] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Wreckfest.xml
-            [123] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/EuroTruckSimulator2.xml
-            [124] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MultiTheftAuto.xml
-            [125] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Barotrauma.xml
-            [126] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CStrike1.6.xml
-            [127] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/GarrysMod.xml
-            [128] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/AMD-Vendor-Reset.xml
-            [129] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Satisfactory.xml
-            [130] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/XLink-Kai-Evolution.xml
-            [131] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Citadel-ForgedWithFire.xml
-            [132] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DoH-Client.xml
-            [133] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Mordhau.xml
-            [134] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/FiveM.xml
-            [135] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/AmericasArmy-ProvingGrounds.xml
-            [136] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/KillingFloor2.xml
-            [137] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/RapidPhotoDownloader.xml
-            [138] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ProjectZomboid.xml
-            [139] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LANCache-Prefill.xml
-            [140] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/BeamNG-MP.xml
-            [141] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MemryX-Driver.xml
-            [142] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Left4Dead.xml
-            [143] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Ungoogled-Chromium.xml
-            [144] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/uinput.xml
-            [145] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Memories-of-Mars.xml
-            [146] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CStrikeConditionZero.xml
-            [147] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SurviveTheNights.xml
-            [148] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Teeworlds.xml
-            [149] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/TeamFortress2.xml
-            [150] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/IT87.xml
-            [151] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/HailoRT-Driver.xml
-            [152] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Ombi.xml
-            [153] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Thunderbird.xml
-            [154] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Avorion.xml
-            [155] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenMW-TES3MP.xml
-            [156] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Aquacomputer-D5Next.xml
-            [157] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OnlineCheckYourServer.xml
-            [158] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Debian-APT-Mirror.xml
-            [159] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LOTR-ReturnToMoria.xml
-            [160] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/intel-gpu-top.xml
-            [161] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Jenkins.xml
-            [162] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/age.xml
-            [163] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Hurtworld.xml
-            [164] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenTTD.xml
-            [165] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/WurmUnlimited.xml
-            [166] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Proxy-Server.xml
-            [167] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/HalfLife2DeathMatch.xml
-            [168] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Prometheusnvidia-smiExporter.xml
-            [169] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Monero-GUI.xml
-            [170] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PrometheusAfterburnerExporter.xml
-            [171] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/headscale-admin-plugin.xml
-            [172] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenRCT2.xml
-            [173] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CoreKeeper.xml
-            [174] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Pushover-On-Start.xml
-            [175] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/NEOTOKYO.xml
-            [176] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Owncast.xml
-            [177] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Krusader.xml
-            [178] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Creativerse.xml
-            [179] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/TheFront.xml
-            [180] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenRGB-Patch.xml
-            [181] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Remmina.xml
-            [182] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Sonarr.xml
-            [183] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/UGREENLED-Driver.xml
-            [184] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Radarr.xml
+            [77] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LifeIsFeudal-YourOwn.xml
+            [78] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DMClassic.xml
+            [79] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SonsOfTheForest.xml
+            [80] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Necesse.xml
+            [81] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ECO.xml
+            [82] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Insurgency.xml
+            [83] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DayOfDefeatSource.xml
+            [84] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Valheim.xml
+            [85] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Intel-GVT-g.xml
+            [86] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Vintage-Story.xml
+            [87] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DayOfDefeat-Classic.xml
+            [88] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DaysOfWar.xml
+            [89] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/QNAP-EC.xml
+            [90] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/luckyBackup.xml
+            [91] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ColonySurvival.xml
+            [92] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Icarus.xml
+            [93] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/nvtop.xml
+            [94] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Terraria.xml
+            [95] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/NZBHydra2.xml
+            [96] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DVB-Drivers.xml
+            [97] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Tor-Browser.xml
+            [98] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Urban-Terror.xml
+            [99] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SABnzbd.xml
+            [100] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Craftopia.xml
+            [101] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/KillingFloor.xml
+            [102] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CounterStrike2D.xml
+            [103] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Lidarr.xml
+            [104] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/iSCSI-Initiator.xml
+            [105] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Vein.xml
+            [106] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/RUST.xml
+            [107] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OperationHarshDoorstop.xml
+            [108] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/NoMoreRoomInHell.xml
+            [109] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Unturned.xml
+            [110] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Firewire.xml
+            [111] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PrometheusWireguardExporter.xml
+            [112] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/uNmINeD-GUI.xml
+            [113] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CSMM-7DtD.xml
+            [114] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Longvinter.xml
+            [115] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PavlovVR.xml
+            [116] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Stun-Turn-Server.xml
+            [117] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/7DaysToDie.xml
+            [118] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MinecraftBasicServer.xml
+            [119] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/QuakeLive.xml
+            [120] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SvenCOOP.xml
+            [121] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Wreckfest.xml
+            [122] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/EuroTruckSimulator2.xml
+            [123] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MultiTheftAuto.xml
+            [124] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Barotrauma.xml
+            [125] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CStrike1.6.xml
+            [126] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/GarrysMod.xml
+            [127] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/AMD-Vendor-Reset.xml
+            [128] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Satisfactory.xml
+            [129] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/XLink-Kai-Evolution.xml
+            [130] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Citadel-ForgedWithFire.xml
+            [131] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DoH-Client.xml
+            [132] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Mordhau.xml
+            [133] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/FiveM.xml
+            [134] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/AmericasArmy-ProvingGrounds.xml
+            [135] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/KillingFloor2.xml
+            [136] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/RapidPhotoDownloader.xml
+            [137] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ProjectZomboid.xml
+            [138] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LANCache-Prefill.xml
+            [139] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/BeamNG-MP.xml
+            [140] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MemryX-Driver.xml
+            [141] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Left4Dead.xml
+            [142] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Ungoogled-Chromium.xml
+            [143] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/uinput.xml
+            [144] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Memories-of-Mars.xml
+            [145] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CStrikeConditionZero.xml
+            [146] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SurviveTheNights.xml
+            [147] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Teeworlds.xml
+            [148] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/TeamFortress2.xml
+            [149] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/IT87.xml
+            [150] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/HailoRT-Driver.xml
+            [151] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Ombi.xml
+            [152] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Thunderbird.xml
+            [153] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Avorion.xml
+            [154] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenMW-TES3MP.xml
+            [155] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Aquacomputer-D5Next.xml
+            [156] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OnlineCheckYourServer.xml
+            [157] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Debian-APT-Mirror.xml
+            [158] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LOTR-ReturnToMoria.xml
+            [159] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/intel-gpu-top.xml
+            [160] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Jenkins.xml
+            [161] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/age.xml
+            [162] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Hurtworld.xml
+            [163] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenTTD.xml
+            [164] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/WurmUnlimited.xml
+            [165] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Proxy-Server.xml
+            [166] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/HalfLife2DeathMatch.xml
+            [167] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Prometheusnvidia-smiExporter.xml
+            [168] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Monero-GUI.xml
+            [169] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PrometheusAfterburnerExporter.xml
+            [170] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/headscale-admin-plugin.xml
+            [171] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenRCT2.xml
+            [172] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/CoreKeeper.xml
+            [173] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Pushover-On-Start.xml
+            [174] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/NEOTOKYO.xml
+            [175] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Owncast.xml
+            [176] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Krusader.xml
+            [177] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Creativerse.xml
+            [178] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/TheFront.xml
+            [179] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/OpenRGB-Patch.xml
+            [180] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Remmina.xml
+            [181] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Sonarr.xml
+            [182] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/UGREENLED-Driver.xml
+            [183] => /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Radarr.xml
         )
 
 )
@@ -10649,7 +10693,6 @@ Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Soulmask.x
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Nvidia-Drivers.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-nvidia-driver/master/nvidia-driver.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/V-Rising.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/hpsahba.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-hpsahba/master/hpsahba.plg attempt 1...Success
-Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Unreal-Tournament-99.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/LifeIsFeudal-YourOwn.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/DMClassic.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/SonsOfTheForest.xml...Success
@@ -21477,13 +21520,7 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-From https://github.com/ProphetSe7en/unraid-templates
-   e0fe225..bd38023  main       -> origin/main
-Updating e0fe225..bd38023
-Fast-forward
- clonarr.xml     |  4 +++-
- vpn-gateway.xml | 22 ++++++++++++++++++----
- 2 files changed, 21 insertions(+), 5 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21758,10 +21795,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Tagged - Can't determine last update
-prophetse7en/vpn-gateway
-ghcr.io/prophetse7en/vpn-gateway:v1.4.0 Downloads:   Stars:   Base: unknown
-Pulling ghcr.io/prophetse7en/vpn-gateway:v1.4.0
 Privileged: 135
 
 
