@@ -619,23 +619,31 @@ Processing /tmp/GitHub/repositoryClone/aglovewithoutlove/unraid-templates/tuxmat
 
 Downloading Kreuzbube88's Repository
 
-Already up to date.
+From https://github.com/Kreuzbube88/heltemplates
+   c72f287..d0cdb7d  main       -> origin/main
+Updating c72f287..d0cdb7d
+Fast-forward
+ helledger.xml | 85 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 85 insertions(+)
+ create mode 100644 helledger.xml
 
 Array
 (
     [https://github.com/Kreuzbube88/heltemplates] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helfinance.xml
-            [1] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/ca_profile.xml
-            [2] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helbackup.xml
-            [3] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/heldash.xml
-            [4] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/heldevtest.xml
+            [1] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helledger.xml
+            [2] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/ca_profile.xml
+            [3] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helbackup.xml
+            [4] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/heldash.xml
+            [5] => /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/heldevtest.xml
         )
 
 )
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helfinance.xml...Success
+Processing /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helledger.xml...Success
 Processing /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/helbackup.xml...Success
 Processing /tmp/GitHub/repositoryClone/Kreuzbube88/heltemplates/heldash.xml...Success
@@ -2236,67 +2244,7 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-From https://github.com/m3ue/m3u-editor
-   9ab43557..d7a71a1b  master     -> origin/master
- * [new tag]           v0.11.29-dev -> v0.11.29-dev
-Updating 9ab43557..d7a71a1b
-Fast-forward
- app/Facades/SortFacade.php                         |   1 +
- .../Resources/Channels/ChannelResource.php         | 196 ++++++++++++
- .../RelationManagers/ChannelsRelationManager.php   |  68 +++-
- .../RelationManagers/VodRelationManager.php        |  69 +++-
- .../Resources/Playlists/PlaylistResource.php       | 146 +++++++++
- app/Filament/Resources/Series/SeriesResource.php   |  19 +-
- app/Filament/Resources/Vods/VodResource.php        |  19 +-
- .../Controllers/PlaylistGenerateController.php     |  18 +-
- app/Http/Controllers/XtreamApiController.php       | 344 +++++++++-----------
- app/Jobs/AutoSyncGroupsToCustomPlaylist.php        | 160 ++++++++++
- app/Jobs/DuplicatePlaylist.php                     |   2 +
- app/Jobs/FetchTmdbIds.php                          |   4 +-
- app/Jobs/ProcessM3uImport.php                      |   3 +-
- app/Jobs/ProcessM3uImportSeriesComplete.php        |  26 +-
- app/Listeners/SyncListener.php                     |  44 +++
- app/Models/Channel.php                             |  90 ++++++
- app/Models/CustomPlaylist.php                      |   2 +-
- app/Models/Playlist.php                            |   1 +
- app/Providers/AppServiceProvider.php               |  31 ++
- app/Services/EpgCacheService.php                   | 280 ++++++++++-------
- app/Services/SortService.php                       | 112 +++++++
- app/Services/TmdbService.php                       | 238 ++++++++++++++
- config/database.php                                |   8 -
- config/dev.php                                     |   4 +-
- ...9_add_sort_to_channel_custom_playlist_table.php |  22 ++
- ...to_sync_to_custom_config_to_playlists_table.php |  28 ++
- ..._constraint_to_custom_playlist_pivot_tables.php |  73 +++++
- docker/8.4/nginx/laravel.conf                      |   2 +
- docker/8.4/nginx/nginx.conf                        |   2 +
- docker/8.4/www.conf                                |   8 +-
- lang/de.json                                       |  44 ++-
- lang/en.json                                       |  42 ++-
- lang/es.json                                       |  40 ++-
- lang/fr.json                                       |  40 ++-
- lang/zh_CN.json                                    |  40 ++-
- .../Feature/AutoSyncGroupsToCustomPlaylistTest.php | 346 +++++++++++++++++++++
- tests/Feature/ChannelInfoTechnicalDetailsTest.php  | 184 +++++++++++
- tests/Feature/ChannelStreamStatsForDisplayTest.php | 149 +++++++++
- tests/Feature/CustomPlaylistSortOrderTest.php      |  79 +++++
- tests/Feature/FetchTmdbIdsTest.php                 | 139 +++++++++
- .../Feature/ProcessM3uImportEnableChannelsTest.php |  74 +++++
- .../Feature/ProcessM3uImportSeriesCompleteTest.php | 106 +++++++
- tests/Feature/SortServiceTest.php                  | 107 +++++++
- tests/Feature/TmdbServiceTest.php                  | 308 ++++++++++++++++++
- tests/Unit/EpgCacheServiceXmltvSignalsTest.php     | 134 ++++++++
- 45 files changed, 3480 insertions(+), 372 deletions(-)
- create mode 100644 app/Jobs/AutoSyncGroupsToCustomPlaylist.php
- create mode 100644 database/migrations/2026_04_20_185129_add_sort_to_channel_custom_playlist_table.php
- create mode 100644 database/migrations/2026_04_20_222636_add_auto_sync_to_custom_config_to_playlists_table.php
- create mode 100644 database/migrations/2026_04_20_233357_add_unique_constraint_to_custom_playlist_pivot_tables.php
- create mode 100644 tests/Feature/AutoSyncGroupsToCustomPlaylistTest.php
- create mode 100644 tests/Feature/ChannelInfoTechnicalDetailsTest.php
- create mode 100644 tests/Feature/ChannelStreamStatsForDisplayTest.php
- create mode 100644 tests/Feature/ProcessM3uImportEnableChannelsTest.php
- create mode 100644 tests/Feature/ProcessM3uImportSeriesCompleteTest.php
- create mode 100644 tests/Unit/EpgCacheServiceXmltvSignalsTest.php
+Already up to date.
 
 Array
 (
@@ -10415,13 +10363,7 @@ Processing /tmp/GitHub/repositoryClone/FoxxMD/unraid-docker-templates/foxxmd/pin
 
 Downloading ich777's Repository
 
-From https://github.com/ich777/docker-templates
-   b5b16b7..ab3c0da  master     -> origin/master
-Updating b5b16b7..ab3c0da
-Fast-forward
- ich777/Unreal-Tournament-99.xml | 43 -----------------------------------------
- 1 file changed, 43 deletions(-)
- delete mode 100644 ich777/Unreal-Tournament-99.xml
+Already up to date.
 
 Array
 (
@@ -21520,7 +21462,12 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-Already up to date.
+From https://github.com/ProphetSe7en/unraid-templates
+   bd38023..5f36734  main       -> origin/main
+Updating bd38023..5f36734
+Fast-forward
+ vpn-gateway.xml | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
 
 Array
 (
@@ -21553,6 +21500,10 @@ Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
+kreuzbube88/helledger
+ghcr.io/kreuzbube88/helledger:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/kreuzbube88/helledger:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoMonitor/main/plugin/hakomonitor.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dereckhall/unraid-deadmans-switch/main/plugin/deadman-switch.plg attempt 1...
@@ -21795,6 +21746,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
+Tagged - Can't determine last update
+prophetse7en/vpn-gateway
+ghcr.io/prophetse7en/vpn-gateway:v1.4.1 Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/prophetse7en/vpn-gateway:v1.4.1
 Privileged: 135
 
 
