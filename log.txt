@@ -136,47 +136,7 @@ Processing /tmp/GitHub/repositoryClone/mash2k3/unraid-templates/decypharr.xml...
 
 Downloading facro's Repository
 
-From https://github.com/peterthepeter/groly
-   6876d1d..3af6a29  main       -> origin/main
-Updating 6876d1d..3af6a29
-Fast-forward
- README.md                                          |   2 +
- messages/de.json                                   |  22 ++
- messages/en.json                                   |  22 ++
- package.json                                       |   2 +-
- src/hooks.server.ts                                |  47 ++++-
- src/lib/changelog.ts                               |   9 +
- src/lib/components/AddItemModal.svelte             |  30 ++-
- .../supplements/CaffeineDrinkPickerSheet.svelte    | 168 +++++++++++++++
- .../supplements/CaffeineEditLogSheet.svelte        | 128 +++++++++++
- .../supplements/CaffeineTrackerCard.svelte         | 176 ++++++++++++++++
- .../supplements/CaffeineTrackerEditSheet.svelte    | 174 +++++++++++++++
- .../components/supplements/QuickLogSheet.svelte    |  59 +++++-
- src/lib/db/index.ts                                |   1 +
- src/lib/db/migrations/0029_caffeine_tracker.sql    |  34 +++
- src/lib/db/migrations/meta/_journal.json           |   7 +
- src/lib/db/schema.ts                               |  24 +++
- src/lib/i18n.svelte.ts                             |  23 ++
- src/lib/userSettings.svelte.ts                     |  24 ++-
- src/lib/userSettingsTypes.ts                       |   4 +
- src/routes/api/caffeine-drinks/+server.ts          |  49 +++++
- src/routes/api/caffeine-drinks/[id]/+server.ts     |  47 +++++
- src/routes/api/caffeine-logs/+server.ts            |  63 ++++++
- src/routes/api/caffeine-logs/[id]/+server.ts       |  47 +++++
- src/routes/einstellungen/admin/+page.svelte        | 233 +++++++++++++++++++++
- src/routes/listen/[id]/+page.svelte                |   1 +
- src/routes/supplements/+page.svelte                | 114 +++++++++-
- src/routes/supplements/verwalten/+page.svelte      | 150 +++++++++----
- 27 files changed, 1601 insertions(+), 59 deletions(-)
- create mode 100644 src/lib/components/supplements/CaffeineDrinkPickerSheet.svelte
- create mode 100644 src/lib/components/supplements/CaffeineEditLogSheet.svelte
- create mode 100644 src/lib/components/supplements/CaffeineTrackerCard.svelte
- create mode 100644 src/lib/components/supplements/CaffeineTrackerEditSheet.svelte
- create mode 100644 src/lib/db/migrations/0029_caffeine_tracker.sql
- create mode 100644 src/routes/api/caffeine-drinks/+server.ts
- create mode 100644 src/routes/api/caffeine-drinks/[id]/+server.ts
- create mode 100644 src/routes/api/caffeine-logs/+server.ts
- create mode 100644 src/routes/api/caffeine-logs/[id]/+server.ts
+Already up to date.
 
 Array
 (
@@ -318,14 +278,7 @@ Processing /tmp/GitHub/repositoryClone/jaydenroberts/unraid-templates/tally.xml.
 
 Downloading JSONbored's Repository
 
-From https://github.com/JSONbored/awesome-unraid
-   d8ffe39..a8b9726  main       -> origin/main
-Updating d8ffe39..a8b9726
-Fast-forward
- icons/signoz.png | Bin 37852 -> 29553 bytes
- signoz-aio.xml   | 254 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 254 insertions(+)
- create mode 100644 signoz-aio.xml
+Already up to date.
 
 Array
 (
@@ -1073,62 +1026,12 @@ Processing /tmp/GitHub/repositoryClone/mstrhakr/plugin-repository/compose.manage
 Downloading got3nks' Repository
 
 From https://github.com/got3nks/amutorrent
-   8f410d7..20073cb  main       -> origin/main
- * [new tag]         v3.8.0     -> v3.8.0
-Updating 8f410d7..20073cb
+   20073cb..bc8c954  main       -> origin/main
+Updating 20073cb..bc8c954
 Fast-forward
- CHANGELOG.md                                   |  20 ++
- package.json                                   |   2 +-
- server/lib/BaseClientManager.js                |  15 +-
- server/lib/BaseModule.js                       |  27 +-
- server/lib/CategoryManager.js                  |  22 +-
- server/lib/DataFetchService.js                 |   8 +-
- server/lib/EventScriptingManager.js            |  14 +-
- server/lib/MoveOperationManager.js             |  20 +-
- server/lib/NotificationManager.js              |  14 +-
- server/lib/faviconCache.js                     |   2 +-
- server/lib/logger.js                           | 305 +++++++++++++--------
- server/lib/qbittorrent/QBittorrentHandler.js   |   2 +-
- server/lib/torznab/TorznabHandler.js           |   2 +-
- server/lib/versionManager.js                   |   2 +-
- server/middleware/trustedProxy.js              |  15 +-
- server/modules/amuleManager.js                 |  38 +--
- server/modules/arrManager.js                   |  18 +-
- server/modules/authAPI.js                      |  12 +-
- server/modules/authManager.js                  |  24 +-
- server/modules/autoRefreshManager.js           |  20 +-
- server/modules/basicRoutes.js                  |  10 +-
- server/modules/config.js                       |  12 +-
- server/modules/configAPI.js                    |  26 +-
- server/modules/delugeManager.js                |  30 +-
- server/modules/filesystemAPI.js                |   2 +-
- server/modules/geoIPManager.js                 |  14 +-
- server/modules/historyAPI.js                   |  12 +-
- server/modules/metricsAPI.js                   |   8 +-
- server/modules/notificationsAPI.js             |  18 +-
- server/modules/prowlarrAPI.js                  |  12 +-
- server/modules/qbittorrentAPI.js               |   6 +-
- server/modules/qbittorrentManager.js           |  38 +--
- server/modules/restAPI.js                      |   2 +-
- server/modules/rtorrentManager.js              |  18 +-
- server/modules/sharedDirAPI.js                 |  25 +-
- server/modules/torznabAPI.js                   |   4 +-
- server/modules/transmissionManager.js          |  22 +-
- server/modules/userAPI.js                      |  12 +-
- server/modules/userManager.js                  |   4 +-
- server/modules/versionAPI.js                   |   4 +-
- server/modules/webSocketHandlers.js            | 176 ++++++------
- server/package.json                            |   2 +-
- server/server.js                               |   8 +-
- static/components/common/MultiSelectPopover.js | 195 +++++++++++++
- static/components/common/TrackerMultiSelect.js | 187 +++----------
- static/components/common/index.js              |   1 +
- static/components/modals/AddDownloadModal.js   |   8 +-
- static/components/views/LogsView.js            | 365 ++++++++++++++++++++++++-
- static/contexts/StaticDataContext.js           |   7 +-
- static/contexts/WebSocketContext.js            |   7 +-
- 50 files changed, 1205 insertions(+), 612 deletions(-)
- create mode 100644 static/components/common/MultiSelectPopover.js
+ server/lib/qbittorrent/QBittorrentHandler.js | 158 +++++++++++++++++++++++++--
+ server/lib/qbittorrent/stateMapping.js       |  14 ++-
+ 2 files changed, 158 insertions(+), 14 deletions(-)
 
 Array
 (
@@ -13361,13 +13264,7 @@ Array
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-ja_JA.xml... Downloading https://github.com/unraid/lang-ja_JA/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-hu_HU.xml... Downloading https://github.com/unraid/lang-hu_HU/archive/master.zip attempt 1...Success
-Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-es_ES.xml... Downloading https://github.com/unraid/lang-es_ES/archive/master.zip attempt 1...  End-of-central-directory signature not found.  Either this file is not
-  a zipfile, or it constitutes one disk of a multi-part archive.  In the
-  latter case the central directory and zipfile comment will be found on
-  the last disk(s) of this archive.
-unzip:  cannot find zipfile directory in one of /tmp/appFeed/language.zip or
-        /tmp/appFeed/language.zip.zip, and cannot find /tmp/appFeed/language.zip.ZIP, period.
-Success
+Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-es_ES.xml... Downloading https://github.com/unraid/lang-es_ES/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-ko_KO.xml... Downloading https://github.com/unraid/lang-ko_KO/archive/refs/heads/main.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-nl_NL.xml... Downloading https://github.com/unraid/lang-nl_NL/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-zh_CN.xml... Downloading https://github.com/unraid/lang-zh_CN/archive/master.zip attempt 1...Success
@@ -18027,9 +17924,7 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-From https://github.com/nwithan8/unraid_templates
- + 98aba17...5ec3593 main       -> origin/main  (forced update)
-                                                                                Successfully rebased and updated refs/heads/main.
+Already up to date.
 
 Array
 (
@@ -21652,11 +21547,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
-jsonbored/signoz-aio
-ghcr.io/jsonbored/signoz-aio:latest Downloads: 149  Stars: 0  Base: unknown
-Pulling ghcr.io/jsonbored/signoz-aio:latest
-Killed
-write /var/lib/docker/tmp/GetImageBlob2231122405: no space left on device
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
@@ -21733,6 +21623,8 @@ write /var/lib/docker/tmp/GetImageBlob2231122405: no space left on device
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
+groestlcoin/unraid-docker-groestlcoind
+groestlcoin/unraid-docker-groestlcoind Downloads: 183  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21751,6 +21643,8 @@ write /var/lib/docker/tmp/GetImageBlob2231122405: no space left on device
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+operacle/checkcle-server-agent
+operacle/checkcle-server-agent:latest Downloads: 70923  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -21800,6 +21694,8 @@ write /var/lib/docker/tmp/GetImageBlob2231122405: no space left on device
  Downloading https://ca.unraid.net/stats/https://github.com/SlrG/unRAID/raw/master/Plugins/ProFTPd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/docgyver/unraid-v6-plugins/master/denyhosts.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/docgyver/unraid-v6-plugins/master/ssh.plg attempt 1...
+ninthwalker/androidtvbackground
+ghcr.io/ninthwalker/androidtvbackground Downloads: 301  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/unbalance/releases/latest/download/unbalanced.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
@@ -21886,8 +21782,14 @@ write /var/lib/docker/tmp/GetImageBlob2231122405: no space left on device
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-ajnart/dcm
-ghcr.io/ajnart/dcm:latest Downloads:   Stars:   Base: unknown
+c4illin/convertx
+c4illin/convertx:latest Downloads: 197614  Stars: 11  Base: unknown
+databasus/databasus
+databasus/databasus:latest Downloads: 467398  Stars: 2  Base: unknown
+heywoodlh/tsunami
+heywoodlh/tsunami:latest Downloads: 1188  Stars: 0  Base: unknown
+zelon88/hrconvert2
+zelon88/hrconvert2:latest Downloads: 41717  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
