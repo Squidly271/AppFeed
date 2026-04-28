@@ -208,12 +208,7 @@ Processing /tmp/GitHub/repositoryClone/sidkapahi/curatarr/curatarr.xml...Success
 
 Downloading pross' Repository
 
-From https://github.com/Pross/unraid-templates
-   bdf060b..2c98118  main       -> origin/main
-Updating bdf060b..2c98118
-Fast-forward
- meshsimple.xml | 3 +++
- 1 file changed, 3 insertions(+)
+Already up to date.
 
 Array
 (
@@ -1970,7 +1965,50 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   7a300b0..3c0c703  main       -> origin/main
+Updating 7a300b0..3c0c703
+Fast-forward
+ .github/workflows/ci.yml                           |  6 ++
+ app/admin/backup-tools/page.tsx                    |  1 -
+ .../admin/models/[id]/images/[imageId]/route.ts    |  3 +
+ app/api/admin/models/[id]/images/route.ts          |  3 +
+ app/api/analytics/pwa-install/route.ts             | 20 +++++
+ app/cart/page.tsx                                  |  2 +-
+ app/settings/profile/page.tsx                      |  4 +-
+ components/ModelImagesManager.tsx                  |  4 +-
+ components/ModelRevisionsManager.tsx               | 10 +--
+ components/ModelViewer.tsx                         |  8 +-
+ components/PWAInstallPrompt.tsx                    | 18 +++--
+ components/admin/ModelManager.tsx                  |  3 +-
+ components/cart/AddToCartButtons.tsx               |  4 +-
+ components/notifications/NotificationsProvider.tsx | 33 +++-----
+ eslint.config.mjs                                  |  3 +-
+ lib/model-media-contract.ts                        | 39 ++++++++++
+ lib/pwa-install-analytics.ts                       | 42 +++++++++++
+ lib/session-notifications.ts                       | 61 +++++++++++++++
+ package.json                                       |  3 +-
+ public/images/model-card-fallback.svg              |  9 +++
+ scripts/a11y-alt-changed.ts                        | 87 ++++++++++++++++++++++
+ scripts/backfill-3mf-previews.js                   |  1 -
+ scripts/bootstrap-admin.js                         |  1 -
+ scripts/processing-worker.ts                       |  1 -
+ tests/a11y-alt-changed.test.ts                     | 26 +++++++
+ tests/backup.test.ts                               |  1 -
+ tests/model-media-contract.test.ts                 | 23 ++++++
+ tests/notifications-stress.test.ts                 | 30 ++++++++
+ tests/pwa-install-analytics.test.ts                | 25 +++++++
+ 29 files changed, 420 insertions(+), 51 deletions(-)
+ create mode 100644 app/api/analytics/pwa-install/route.ts
+ create mode 100644 lib/model-media-contract.ts
+ create mode 100644 lib/pwa-install-analytics.ts
+ create mode 100644 lib/session-notifications.ts
+ create mode 100644 public/images/model-card-fallback.svg
+ create mode 100644 scripts/a11y-alt-changed.ts
+ create mode 100644 tests/a11y-alt-changed.test.ts
+ create mode 100644 tests/model-media-contract.test.ts
+ create mode 100644 tests/notifications-stress.test.ts
+ create mode 100644 tests/pwa-install-analytics.test.ts
 
 Array
 (
@@ -7317,11 +7355,11 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 Downloading linuxserver's Repository
 
 From https://github.com/linuxserver/templates
-   049c863..4cd2c27  main       -> origin/main
-Updating 049c863..4cd2c27
+   4cd2c27..5335dea  main       -> origin/main
+Updating 4cd2c27..5335dea
 Fast-forward
- unraid/blender.xml  | 5 ++++-
- unraid/obsidian.xml | 5 ++++-
+ unraid/audacity.xml | 5 ++++-
+ unraid/shotcut.xml  | 5 ++++-
  2 files changed, 8 insertions(+), 2 deletions(-)
 
 Array
@@ -9139,12 +9177,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   0427841..dd30d42  master     -> origin/master
-Updating 0427841..dd30d42
-Fast-forward
- jlesage/video-duplicate-finder.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -21525,7 +21558,12 @@ Processing /tmp/GitHub/repositoryClone/gbendy/unraid-templates/sonarrtorss/sonar
 
 Downloading ProphetSe7en's Repository
 
-Already up to date.
+From https://github.com/ProphetSe7en/unraid-templates
+   8a4f546..b123038  main       -> origin/main
+Updating 8a4f546..b123038
+Fast-forward
+ clonarr.xml | 1 +
+ 1 file changed, 1 insertion(+)
 
 Array
 (
@@ -21626,20 +21664,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-damongolding/immich-kiosk
-ghcr.io/damongolding/immich-kiosk:latest Downloads: 231557  Stars: 1  Base: unknown
-vwdewaal/plex_poster_updater
-vwdewaal/plex_poster_updater Downloads: 606  Stars: 0  Base: unknown
-cyfershepard/jellystat
-cyfershepard/jellystat Downloads: 4790356  Stars: 18  Base: unknown
-thebinaryninja/tvapp2
-ghcr.io/thebinaryninja/tvapp2:latest Downloads: 12226  Stars: 6  Base: unknown
-jvdgt/docker-s3sync
-jvdgt/docker-s3sync Downloads: 202  Stars: 0  Base: unknown
-maitresinh/ebook2audiobook
-maitresinh/ebook2audiobook:latest Downloads: 152  Stars: 0  Base: unknown
-koboldai/koboldcpp
-koboldai/koboldcpp Downloads: 106067  Stars: 15  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -21663,8 +21687,6 @@ koboldai/koboldcpp Downloads: 106067  Stars: 15  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-iampuid0/dumb
-iampuid0/dumb:latest Downloads: 44172  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -21770,6 +21792,8 @@ iampuid0/dumb:latest Downloads: 44172  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/StevenDTX/unRAID-open-vm-tools/master/openVMTools_compiled.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SpaceinvaderOne/encrypted-drive-manager/main/unraid-plugin/encrypted-drive-manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jtok/unraid.vmbackup/master/vmbackup.plg attempt 1...
+hotio/qui
+ghcr.io/hotio/qui:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Cyanlabs/jsonapi-unraid/master/jsonapi.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Skitals/unraid-theme-engine/master/plugins/theme.engine.plg attempt 1...
@@ -21802,21 +21826,8 @@ iampuid0/dumb:latest Downloads: 44172  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-10mfox/gethomepage-tautulli-custom-api
-ghcr.io/10mfox/gethomepage-tautulli-custom-api:latest Downloads:   Stars:   Base: unknown
-ipmake/nevu
-ipmake/nevu:latest Downloads: 51349  Stars: 2  Base: unknown
-finab/bark-server
-finab/bark-server:latest Downloads: 3351505  Stars: 57  Base: unknown
-ad-on-is/odin
-ghcr.io/ad-on-is/odin:latest Downloads:   Stars:   Base: unknown
-darkalex17/managarr
-darkalex17/managarr:latest Downloads: 4989  Stars: 0  Base: unknown
-Tagged - Can't determine last update
-lizardbyte/sunshine
-lizardbyte/sunshine:latest-debian-bookworm Downloads: 268359  Stars: 42  Base: unknown
-l4rm4nd/traefikshaper
-l4rm4nd/traefikshaper:latest Downloads: 465  Stars: 0  Base: unknown
+unclecode/crawl4ai
+unclecode/crawl4ai:latest Downloads: 2123910  Stars: 31  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
