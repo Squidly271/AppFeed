@@ -136,7 +136,47 @@ Processing /tmp/GitHub/repositoryClone/mash2k3/unraid-templates/decypharr.xml...
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   6876d1d..3af6a29  main       -> origin/main
+Updating 6876d1d..3af6a29
+Fast-forward
+ README.md                                          |   2 +
+ messages/de.json                                   |  22 ++
+ messages/en.json                                   |  22 ++
+ package.json                                       |   2 +-
+ src/hooks.server.ts                                |  47 ++++-
+ src/lib/changelog.ts                               |   9 +
+ src/lib/components/AddItemModal.svelte             |  30 ++-
+ .../supplements/CaffeineDrinkPickerSheet.svelte    | 168 +++++++++++++++
+ .../supplements/CaffeineEditLogSheet.svelte        | 128 +++++++++++
+ .../supplements/CaffeineTrackerCard.svelte         | 176 ++++++++++++++++
+ .../supplements/CaffeineTrackerEditSheet.svelte    | 174 +++++++++++++++
+ .../components/supplements/QuickLogSheet.svelte    |  59 +++++-
+ src/lib/db/index.ts                                |   1 +
+ src/lib/db/migrations/0029_caffeine_tracker.sql    |  34 +++
+ src/lib/db/migrations/meta/_journal.json           |   7 +
+ src/lib/db/schema.ts                               |  24 +++
+ src/lib/i18n.svelte.ts                             |  23 ++
+ src/lib/userSettings.svelte.ts                     |  24 ++-
+ src/lib/userSettingsTypes.ts                       |   4 +
+ src/routes/api/caffeine-drinks/+server.ts          |  49 +++++
+ src/routes/api/caffeine-drinks/[id]/+server.ts     |  47 +++++
+ src/routes/api/caffeine-logs/+server.ts            |  63 ++++++
+ src/routes/api/caffeine-logs/[id]/+server.ts       |  47 +++++
+ src/routes/einstellungen/admin/+page.svelte        | 233 +++++++++++++++++++++
+ src/routes/listen/[id]/+page.svelte                |   1 +
+ src/routes/supplements/+page.svelte                | 114 +++++++++-
+ src/routes/supplements/verwalten/+page.svelte      | 150 +++++++++----
+ 27 files changed, 1601 insertions(+), 59 deletions(-)
+ create mode 100644 src/lib/components/supplements/CaffeineDrinkPickerSheet.svelte
+ create mode 100644 src/lib/components/supplements/CaffeineEditLogSheet.svelte
+ create mode 100644 src/lib/components/supplements/CaffeineTrackerCard.svelte
+ create mode 100644 src/lib/components/supplements/CaffeineTrackerEditSheet.svelte
+ create mode 100644 src/lib/db/migrations/0029_caffeine_tracker.sql
+ create mode 100644 src/routes/api/caffeine-drinks/+server.ts
+ create mode 100644 src/routes/api/caffeine-drinks/[id]/+server.ts
+ create mode 100644 src/routes/api/caffeine-logs/+server.ts
+ create mode 100644 src/routes/api/caffeine-logs/[id]/+server.ts
 
 Array
 (
@@ -279,28 +319,34 @@ Processing /tmp/GitHub/repositoryClone/jaydenroberts/unraid-templates/tally.xml.
 Downloading JSONbored's Repository
 
 From https://github.com/JSONbored/awesome-unraid
-   99b7a71..d8ffe39  main       -> origin/main
-Updating 99b7a71..d8ffe39
+   d8ffe39..a8b9726  main       -> origin/main
+Updating d8ffe39..a8b9726
 Fast-forward
- CHANGELOG.md | 1 +
- 1 file changed, 1 insertion(+)
+ icons/signoz.png | Bin 37852 -> 29553 bytes
+ signoz-aio.xml   | 254 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 254 insertions(+)
+ create mode 100644 signoz-aio.xml
 
 Array
 (
     [https://github.com/JSONbored/awesome-unraid] => Array
         (
             [0] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/infisical-aio.xml
-            [1] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/ca_profile.xml
-            [2] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/mem0-aio.xml
-            [3] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/sure-aio.xml
-            [4] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/simplelogin-aio.xml
-            [5] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/khoj-aio.xml
+            [1] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/signoz-aio.xml
+            [2] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/ca_profile.xml
+            [3] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/mem0-aio.xml
+            [4] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/sure-aio.xml
+            [5] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/simplelogin-aio.xml
+            [6] => /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/khoj-aio.xml
         )
 
 )
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/infisical-aio.xml...Unknown category Network:Security
+
+Success
+Processing /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/signoz-aio.xml...Unknown category Monitoring:
 
 Success
 Processing /tmp/GitHub/repositoryClone/JSONbored/awesome-unraid/ca_profile.xml...FOUND PROFILE
@@ -1026,7 +1072,63 @@ Processing /tmp/GitHub/repositoryClone/mstrhakr/plugin-repository/compose.manage
 
 Downloading got3nks' Repository
 
-Already up to date.
+From https://github.com/got3nks/amutorrent
+   8f410d7..20073cb  main       -> origin/main
+ * [new tag]         v3.8.0     -> v3.8.0
+Updating 8f410d7..20073cb
+Fast-forward
+ CHANGELOG.md                                   |  20 ++
+ package.json                                   |   2 +-
+ server/lib/BaseClientManager.js                |  15 +-
+ server/lib/BaseModule.js                       |  27 +-
+ server/lib/CategoryManager.js                  |  22 +-
+ server/lib/DataFetchService.js                 |   8 +-
+ server/lib/EventScriptingManager.js            |  14 +-
+ server/lib/MoveOperationManager.js             |  20 +-
+ server/lib/NotificationManager.js              |  14 +-
+ server/lib/faviconCache.js                     |   2 +-
+ server/lib/logger.js                           | 305 +++++++++++++--------
+ server/lib/qbittorrent/QBittorrentHandler.js   |   2 +-
+ server/lib/torznab/TorznabHandler.js           |   2 +-
+ server/lib/versionManager.js                   |   2 +-
+ server/middleware/trustedProxy.js              |  15 +-
+ server/modules/amuleManager.js                 |  38 +--
+ server/modules/arrManager.js                   |  18 +-
+ server/modules/authAPI.js                      |  12 +-
+ server/modules/authManager.js                  |  24 +-
+ server/modules/autoRefreshManager.js           |  20 +-
+ server/modules/basicRoutes.js                  |  10 +-
+ server/modules/config.js                       |  12 +-
+ server/modules/configAPI.js                    |  26 +-
+ server/modules/delugeManager.js                |  30 +-
+ server/modules/filesystemAPI.js                |   2 +-
+ server/modules/geoIPManager.js                 |  14 +-
+ server/modules/historyAPI.js                   |  12 +-
+ server/modules/metricsAPI.js                   |   8 +-
+ server/modules/notificationsAPI.js             |  18 +-
+ server/modules/prowlarrAPI.js                  |  12 +-
+ server/modules/qbittorrentAPI.js               |   6 +-
+ server/modules/qbittorrentManager.js           |  38 +--
+ server/modules/restAPI.js                      |   2 +-
+ server/modules/rtorrentManager.js              |  18 +-
+ server/modules/sharedDirAPI.js                 |  25 +-
+ server/modules/torznabAPI.js                   |   4 +-
+ server/modules/transmissionManager.js          |  22 +-
+ server/modules/userAPI.js                      |  12 +-
+ server/modules/userManager.js                  |   4 +-
+ server/modules/versionAPI.js                   |   4 +-
+ server/modules/webSocketHandlers.js            | 176 ++++++------
+ server/package.json                            |   2 +-
+ server/server.js                               |   8 +-
+ static/components/common/MultiSelectPopover.js | 195 +++++++++++++
+ static/components/common/TrackerMultiSelect.js | 187 +++----------
+ static/components/common/index.js              |   1 +
+ static/components/modals/AddDownloadModal.js   |   8 +-
+ static/components/views/LogsView.js            | 365 ++++++++++++++++++++++++-
+ static/contexts/StaticDataContext.js           |   7 +-
+ static/contexts/WebSocketContext.js            |   7 +-
+ 50 files changed, 1205 insertions(+), 612 deletions(-)
+ create mode 100644 static/components/common/MultiSelectPopover.js
 
 Array
 (
@@ -6483,36 +6585,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   6d3e0c5f..99147b38  main       -> origin/main
-Updating 6d3e0c5f..99147b38
-Fast-forward
- app/translations/ca/LC_MESSAGES/messages.po      | 2 +-
- app/translations/cs/LC_MESSAGES/messages.po      | 2 +-
- app/translations/da/LC_MESSAGES/messages.po      | 2 +-
- app/translations/de/LC_MESSAGES/messages.po      | 2 +-
- app/translations/es/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fa/LC_MESSAGES/messages.po      | 2 +-
- app/translations/fr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     | 2 +-
- app/translations/he/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hr/LC_MESSAGES/messages.po      | 2 +-
- app/translations/hu/LC_MESSAGES/messages.po      | 2 +-
- app/translations/is/LC_MESSAGES/messages.po      | 2 +-
- app/translations/it/LC_MESSAGES/messages.po      | 2 +-
- app/translations/lt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   | 2 +-
- app/translations/nl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pl/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt/LC_MESSAGES/messages.po      | 2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   | 2 +-
- app/translations/ro/LC_MESSAGES/messages.po      | 2 +-
- app/translations/ru/LC_MESSAGES/messages.po      | 2 +-
- app/translations/sv/LC_MESSAGES/messages.po      | 2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po | 2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po | 2 +-
- messages.pot                                     | 2 +-
- 25 files changed, 25 insertions(+), 25 deletions(-)
+Already up to date.
 
 Array
 (
@@ -13288,7 +13361,13 @@ Array
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-ja_JA.xml... Downloading https://github.com/unraid/lang-ja_JA/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-hu_HU.xml... Downloading https://github.com/unraid/lang-hu_HU/archive/master.zip attempt 1...Success
-Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-es_ES.xml... Downloading https://github.com/unraid/lang-es_ES/archive/master.zip attempt 1...Success
+Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-es_ES.xml... Downloading https://github.com/unraid/lang-es_ES/archive/master.zip attempt 1...  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of /tmp/appFeed/language.zip or
+        /tmp/appFeed/language.zip.zip, and cannot find /tmp/appFeed/language.zip.ZIP, period.
+Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-ko_KO.xml... Downloading https://github.com/unraid/lang-ko_KO/archive/refs/heads/main.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-nl_NL.xml... Downloading https://github.com/unraid/lang-nl_NL/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-zh_CN.xml... Downloading https://github.com/unraid/lang-zh_CN/archive/master.zip attempt 1...Success
@@ -17948,7 +18027,9 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+ + 98aba17...5ec3593 main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
@@ -21571,6 +21652,11 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
+jsonbored/signoz-aio
+ghcr.io/jsonbored/signoz-aio:latest Downloads: 149  Stars: 0  Base: unknown
+Pulling ghcr.io/jsonbored/signoz-aio:latest
+Killed
+write /var/lib/docker/tmp/GetImageBlob2231122405: no space left on device
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
@@ -21616,8 +21702,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
-octoeverywhere/octoeverywhere
-octoeverywhere/octoeverywhere Downloads: 329634  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -21649,10 +21733,6 @@ octoeverywhere/octoeverywhere Downloads: 329634  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-matda59/video-to-mp3-converter
-matda59/video-to-mp3-converter:latest Downloads: 656  Stars: 0  Base: unknown
-7eventy7/discodrome
-7eventy7/discodrome Downloads: 5958  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -21669,19 +21749,9 @@ matda59/video-to-mp3-converter:latest Downloads: 656  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-mmartial/comfyui-nvidia-docker
-mmartial/comfyui-nvidia-docker Downloads: 165696  Stars: 7  Base: unknown
-rommapp/romm
-rommapp/romm:latest Downloads: 7251352  Stars: 21  Base: unknown
-cardanocommunity/cardano-node
-cardanocommunity/cardano-node Downloads: 574693  Stars: 20  Base: unknown
-flowiseai/flowise
-flowiseai/flowise Downloads: 6243022  Stars: 88  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
-tinymediamanager/tinymediamanager
-tinymediamanager/tinymediamanager:latest Downloads: 4708806  Stars: 130  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/fix.common.problems/master/plugins/fix.common.problems.plg attempt 1...
@@ -21776,8 +21846,6 @@ tinymediamanager/tinymediamanager:latest Downloads: 4708806  Stars: 130  Base: u
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/ich777/unraid-ugreenleds-driver/raw/master/ugreenleds-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kubedzero/unraid-snmp/main/snmp.plg attempt 1...
-mbrubeck/agate
-ghcr.io/mbrubeck/agate:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-aspm-helper/master/aspm-helper.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-simple-mover/master/simple-mover.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/alturismo/unraid-cache-mover/master/cache-mover.plg attempt 1...
@@ -21797,8 +21865,6 @@ ghcr.io/mbrubeck/agate:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-soulteary/cronicle
-soulteary/cronicle:latest Downloads: 213699  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -21816,41 +21882,12 @@ soulteary/cronicle:latest Downloads: 213699  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-cabernetwork/cabernet
-ghcr.io/cabernetwork/cabernet:latest Downloads:   Stars:   Base: unknown
-bropat/eufy-security-ws
-bropat/eufy-security-ws Downloads: 2059940  Stars: 12  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-Tagged - Can't determine last update
-platerecognizer/alpr-stream
-platerecognizer/alpr-stream:gpu Downloads: 939568  Stars: 5  Base: unknown
-platerecognizer/alpr
-platerecognizer/alpr:latest Downloads: 1703894  Stars: 13  Base: unknown
-lmerza/frigate_plate_recognizer
-lmerza/frigate_plate_recognizer:latest Downloads: 30701  Stars: 0  Base: unknown
-platerecognizer/container
-platerecognizer/container:latest Downloads: 1008  Stars: 0  Base: unknown
-platerecognizer/alpr-gpu
-platerecognizer/alpr-gpu:latest Downloads: 13296  Stars: 0  Base: unknown
-platerecognizer/people-tracker
-platerecognizer/people-tracker:latest Downloads: 829  Stars: 0  Base: unknown
-platerecognizer/container-video
-platerecognizer/container-video:latest Downloads: 1274  Stars: 0  Base: unknown
-platerecognizer/usdot
-platerecognizer/usdot:latest Downloads: 378  Stars: 0  Base: unknown
-icyphox/legit
-ghcr.io/icyphox/legit:latest Downloads:   Stars:   Base: unknown
-dendianugerah/reubah
-ghcr.io/dendianugerah/reubah:latest Downloads:   Stars:   Base: unknown
-soggy8/musikat
-ghcr.io/soggy8/musikat:latest Downloads:   Stars:   Base: unknown
-platerecognizer/alpr-stream
-platerecognizer/alpr-stream:latest Downloads: 939568  Stars: 5  Base: unknown
-dmitriy/broadlink-mqtt
-dmitriy/broadlink-mqtt Downloads: 20926  Stars: 4  Base: unknown
+ajnart/dcm
+ghcr.io/ajnart/dcm:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -21863,9 +21900,6 @@ dmitriy/broadlink-mqtt Downloads: 20926  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/EideardVMR/unraid-easybackup/main/easybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dixtdf/taglib/master/plugins/taglib.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/EldonMcGuinness/UnraidDriveStandbyMonitor/raw/master/DriveStandbyMonitor.plg attempt 1...
-Tagged - Can't determine last update
-berriai/litellm
-ghcr.io/berriai/litellm:main-latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent24.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
