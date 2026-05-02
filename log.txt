@@ -389,18 +389,30 @@ Processing /tmp/GitHub/repositoryClone/Goodhall-Solutions-ltd/unraid-templates/f
 
 Downloading JudoChinX's Repository
 
-Already up to date.
+From https://github.com/JudoChinX/unraid-templates
+   eac9483..bfdfa31  main       -> origin/main
+Updating eac9483..bfdfa31
+Fast-forward
+ .github/FUNDING.yml         |  1 +
+ README.md                   | 17 +++++++++++++++--
+ templates/gitlab-runner.xml | 36 ++++++++++++++++++++++++++++++++++++
+ templates/rangarr.xml       |  2 +-
+ 4 files changed, 53 insertions(+), 3 deletions(-)
+ create mode 100644 .github/FUNDING.yml
+ create mode 100644 templates/gitlab-runner.xml
 
 Array
 (
     [https://github.com/JudoChinX/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/JudoChinX/unraid-templates/templates/rangarr.xml
+            [0] => /tmp/GitHub/repositoryClone/JudoChinX/unraid-templates/templates/gitlab-runner.xml
+            [1] => /tmp/GitHub/repositoryClone/JudoChinX/unraid-templates/templates/rangarr.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/JudoChinX/unraid-templates/templates/gitlab-runner.xml...Success
 Processing /tmp/GitHub/repositoryClone/JudoChinX/unraid-templates/templates/rangarr.xml...Success
 
 
@@ -788,12 +800,7 @@ Success
 
 Downloading Dereck's Repository
 
-From https://github.com/dereckhall/unraid-plugin-templates
-   e64e1ce..e1af028  main       -> origin/main
-Updating e64e1ce..e1af028
-Fast-forward
- deadman-switch.xml | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -1974,34 +1981,7 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-From https://github.com/schartrand77/mkw2
-   6c712e7..fc09196  main       -> origin/main
-Updating 6c712e7..fc09196
-Fast-forward
- README.md                                          |   4 +-
- .../2026-05-02-suite-demo-screenshots-design.md    |  13 ++----
- docs/wiki/Suite-Demo-Walkthrough.md                |  34 ++++----------
- .../suite-screenshots/makerworks-01-home.png       | Bin 746108 -> 747245 bytes
- .../suite-screenshots/makerworks-02-discover.png   | Bin 619685 -> 617994 bytes
- .../makerworks-03-model-detail.png                 | Bin 2393597 -> 2393698 bytes
- .../suite-screenshots/makerworks-04-cart-quote.png | Bin 883438 -> 882835 bytes
- .../suite-screenshots/makerworks-05-checkout.png   | Bin 820091 -> 821256 bytes
- .../makerworks-06-customer-order.png               | Bin 666584 -> 666663 bytes
- .../makerworks-07-admin-dashboard.png              | Bin 685531 -> 685316 bytes
- .../makerworks-08-admin-production.png             | Bin 710022 -> 709445 bytes
- .../makerworks-09-admin-inventory.png              | Bin 680652 -> 0 bytes
- .../makerworks-09-print-job-detail.png             | Bin 0 -> 1247275 bytes
- .../makerworks-10-admin-inventory.png              | Bin 0 -> 682506 bytes
- .../suite-screenshots/stockworks-01-materials.png  | Bin 346471 -> 346476 bytes
- .../suite-screenshots/stockworks-02-inventory.png  | Bin 331779 -> 331780 bytes
- .../suite-screenshots/stockworks-05-orders.png     | Bin 88129 -> 88145 bytes
- .../suite-screenshots/stockworks-06-reports.png    | Bin 265577 -> 265589 bytes
- .../suite-screenshots/stockworks-07-printlab.png   | Bin 178665 -> 178717 bytes
- lib/suite-demo/manifest.ts                         |  49 +++++----------------
- 20 files changed, 24 insertions(+), 76 deletions(-)
- delete mode 100644 docs/wiki/assets/suite-screenshots/makerworks-09-admin-inventory.png
- create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-09-print-job-detail.png
- create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-10-admin-inventory.png
+Already up to date.
 
 Array
 (
@@ -2342,7 +2322,54 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   97676d4f..a5e91b56  master     -> origin/master
+ * [new tag]           v0.11.32-dev -> v0.11.32-dev
+Updating 97676d4f..a5e91b56
+Fast-forward
+ app/Filament/Pages/M3uProxyStreamMonitor.php       | 265 +++++++----
+ app/Filament/Pages/Preferences.php                 |   4 +-
+ app/Filament/Resources/Assets/AssetResource.php    |   8 +
+ app/Filament/Resources/Assets/Pages/ListAssets.php |   8 +
+ .../Assets/Widgets/AssetStatsOverview.php          |  67 +++
+ .../Resources/Channels/ChannelResource.php         |  43 +-
+ app/Filament/Resources/Groups/GroupResource.php    |  96 ++++
+ .../Resources/VodGroups/VodGroupResource.php       |  96 ++++
+ app/Filament/Resources/Vods/VodResource.php        |  41 ++
+ app/Jobs/FireSyncCompletedEvent.php                |  24 +
+ app/Jobs/ProcessM3uImportChunk.php                 |  12 +-
+ app/Jobs/ProcessM3uImportComplete.php              |  60 +--
+ app/Jobs/ProcessM3uImportVod.php                   |  33 +-
+ app/Jobs/ProcessM3uVodImportChunk.php              |  12 +-
+ app/Jobs/ProcessVodChannels.php                    |   8 +-
+ app/Jobs/ProcessVodChannelsComplete.php            |  16 +-
+ app/Jobs/SyncSeriesStrmFiles.php                   |   3 +
+ app/Jobs/SyncVodStrmFiles.php                      |   3 +
+ app/Jobs/TriggerSeriesImport.php                   |  38 ++
+ app/Models/Group.php                               |   6 +
+ app/Observers/ChannelObserver.php                  |  23 +
+ app/Services/M3uProxyService.php                   |   5 +-
+ app/Services/PlaylistService.php                   |  21 +
+ config/dev.php                                     |   4 +-
+ ...31322_add_stream_profile_id_to_groups_table.php |  27 ++
+ lang/de.json                                       |  12 +-
+ lang/en.json                                       |   6 +-
+ lang/es.json                                       |   6 +-
+ lang/fr.json                                       |   6 +-
+ lang/zh_CN.json                                    |   6 +-
+ .../pages/m3u-proxy-stream-monitor.blade.php       | 486 ++++++++++++++-------
+ tests/Feature/BulkSetStreamProfileTest.php         | 373 ++++++++++++++++
+ tests/Feature/ProcessVodChannelsCompleteTest.php   | 235 ++++++++++
+ .../StreamMonitorActionAuthorizationTest.php       | 114 +++--
+ tests/Feature/StreamMonitorMediaInfoTest.php       | 356 +++++++++++++++
+ 35 files changed, 2129 insertions(+), 394 deletions(-)
+ create mode 100644 app/Filament/Resources/Assets/Widgets/AssetStatsOverview.php
+ create mode 100644 app/Jobs/FireSyncCompletedEvent.php
+ create mode 100644 app/Jobs/TriggerSeriesImport.php
+ create mode 100644 database/migrations/2026_04_30_231322_add_stream_profile_id_to_groups_table.php
+ create mode 100644 tests/Feature/BulkSetStreamProfileTest.php
+ create mode 100644 tests/Feature/ProcessVodChannelsCompleteTest.php
+ create mode 100644 tests/Feature/StreamMonitorMediaInfoTest.php
 
 Array
 (
@@ -3218,7 +3245,15 @@ Processing /tmp/GitHub/repositoryClone/secretlycarl/onboarderr-unraid/templates/
 
 Downloading Tajniak81's Repository
 
-Already up to date.
+From https://github.com/tajniak81/unraid-docker-templates
+   75d95aa..596de6f  main       -> origin/main
+Updating 75d95aa..596de6f
+Fast-forward
+ bulwark/bulwark.xml      |  47 +++++++++++++++++++++++++++++++++++++++++++++++
+ bulwark/icon/bulwark.png | Bin 0 -> 20544 bytes
+ 2 files changed, 47 insertions(+)
+ create mode 100644 bulwark/bulwark.xml
+ create mode 100644 bulwark/icon/bulwark.png
 
 Array
 (
@@ -3230,7 +3265,8 @@ Array
             [3] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml
             [4] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml
             [5] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/backapp/backapp.xml
-            [6] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml
+            [6] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/bulwark/bulwark.xml
+            [7] => /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml
         )
 
 )
@@ -3242,6 +3278,7 @@ Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/dockhan
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/stalwart/stalwart.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/arcane/arcane.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/backapp/backapp.xml...Success
+Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/bulwark/bulwark.xml...Success
 Processing /tmp/GitHub/repositoryClone/tajniak81/unraid-docker-templates/electerm-web/electerm-web.xml...Success
 
 
@@ -7345,12 +7382,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-From https://github.com/linuxserver/templates
-   c76065a..0c3d665  main       -> origin/main
-Updating c76065a..0c3d665
-Fast-forward
- unraid/bookstack.xml | 9 ++++++---
- 1 file changed, 6 insertions(+), 3 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21583,6 +21615,8 @@ Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
+gitlab/gitlab-runner
+gitlab/gitlab-runner:latest Downloads: 3634237402  Stars: 997  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoMonitor/main/plugin/hakomonitor.plg attempt 1...
@@ -21627,6 +21661,10 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.wireguard.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.system.autofan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/dynamix/master/unRAIDv6/dynamix.ssd.trim.plg attempt 1...
+bulwarkmail/webmail
+ghcr.io/bulwarkmail/webmail:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/bulwarkmail/webmail:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://github.com/jo-sobo/scriptlogs-unraid-plugin/raw/main/scriptlogs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/strike84/unraid-disk.space.management/refs/heads/main/DiskSpaceManagement.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/flash-backup/main/plugin/flash-backup.plg attempt 1...
@@ -21807,6 +21845,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+glanceapp/glance
+glanceapp/glance Downloads: 5078371  Stars: 9  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
