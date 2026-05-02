@@ -1970,11 +1970,76 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 Downloading schartrand77's Repository
 
 From https://github.com/schartrand77/mkw2
-   0f8001b..c3e64fb  main       -> origin/main
-Updating 0f8001b..c3e64fb
+   c3e64fb..6c712e7  main       -> origin/main
+Updating c3e64fb..6c712e7
 Fast-forward
- unraid/templates/makerworks-v2.xml | 11 +++++++++--
- 1 file changed, 9 insertions(+), 2 deletions(-)
+ README.md                                          |  54 +-
+ .../plans/2026-05-02-suite-demo-screenshots.md     | 165 +++++
+ .../2026-05-02-suite-demo-screenshots-design.md    | 225 ++++++
+ docs/wiki/Suite-Demo-Walkthrough.md                | 187 +++++
+ .../suite-screenshots/makerworks-01-home.png       | Bin 0 -> 746108 bytes
+ .../suite-screenshots/makerworks-02-discover.png   | Bin 0 -> 619685 bytes
+ .../makerworks-03-model-detail.png                 | Bin 0 -> 2393597 bytes
+ .../suite-screenshots/makerworks-04-cart-quote.png | Bin 0 -> 883438 bytes
+ .../suite-screenshots/makerworks-05-checkout.png   | Bin 0 -> 820091 bytes
+ .../makerworks-06-customer-order.png               | Bin 0 -> 666584 bytes
+ .../makerworks-07-admin-dashboard.png              | Bin 0 -> 685531 bytes
+ .../makerworks-08-admin-production.png             | Bin 0 -> 710022 bytes
+ .../makerworks-09-admin-inventory.png              | Bin 0 -> 680652 bytes
+ .../suite-screenshots/printlab-01-printers.png     | Bin 0 -> 109589 bytes
+ .../printlab-02-printer-detail.png                 | Bin 0 -> 109589 bytes
+ .../printlab-03-makerworks-library.png             | Bin 0 -> 36068 bytes
+ .../suite-screenshots/printlab-04-preflight.png    | Bin 0 -> 52481 bytes
+ .../assets/suite-screenshots/printlab-05-jobs.png  | Bin 0 -> 52481 bytes
+ .../suite-screenshots/stockworks-01-materials.png  | Bin 0 -> 346471 bytes
+ .../suite-screenshots/stockworks-02-inventory.png  | Bin 0 -> 331779 bytes
+ .../suite-screenshots/stockworks-03-hardware.png   | Bin 0 -> 246056 bytes
+ .../suite-screenshots/stockworks-04-movements.png  | Bin 0 -> 90152 bytes
+ .../suite-screenshots/stockworks-05-orders.png     | Bin 0 -> 88129 bytes
+ .../suite-screenshots/stockworks-06-reports.png    | Bin 0 -> 265577 bytes
+ .../suite-screenshots/stockworks-07-printlab.png   | Bin 0 -> 178665 bytes
+ lib/suite-demo/manifest.ts                         | 256 +++++++
+ lib/suite-demo/wiki.ts                             |  66 ++
+ package.json                                       |   3 +
+ scripts/capture-suite-screenshots.ts               | 336 +++++++++
+ scripts/generate-suite-demo-wiki.ts                |  25 +
+ scripts/suite-demo-seed.ts                         | 809 +++++++++++++++++++++
+ tests/suite-demo-screenshots.test.ts               |  56 ++
+ tests/suite-demo-seed.test.ts                      |  90 +++
+ tests/suite-demo-wiki.test.ts                      |  27 +
+ 34 files changed, 2279 insertions(+), 20 deletions(-)
+ create mode 100644 docs/superpowers/plans/2026-05-02-suite-demo-screenshots.md
+ create mode 100644 docs/superpowers/specs/2026-05-02-suite-demo-screenshots-design.md
+ create mode 100644 docs/wiki/Suite-Demo-Walkthrough.md
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-01-home.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-02-discover.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-03-model-detail.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-04-cart-quote.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-05-checkout.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-06-customer-order.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-07-admin-dashboard.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-08-admin-production.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/makerworks-09-admin-inventory.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/printlab-01-printers.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/printlab-02-printer-detail.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/printlab-03-makerworks-library.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/printlab-04-preflight.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/printlab-05-jobs.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-01-materials.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-02-inventory.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-03-hardware.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-04-movements.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-05-orders.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-06-reports.png
+ create mode 100644 docs/wiki/assets/suite-screenshots/stockworks-07-printlab.png
+ create mode 100644 lib/suite-demo/manifest.ts
+ create mode 100644 lib/suite-demo/wiki.ts
+ create mode 100644 scripts/capture-suite-screenshots.ts
+ create mode 100644 scripts/generate-suite-demo-wiki.ts
+ create mode 100644 scripts/suite-demo-seed.ts
+ create mode 100644 tests/suite-demo-screenshots.test.ts
+ create mode 100644 tests/suite-demo-seed.test.ts
+ create mode 100644 tests/suite-demo-wiki.test.ts
 
 Array
 (
@@ -4749,23 +4814,7 @@ Success
 
 Downloading Pirat's Repository
 
-From https://github.com/Piratkopia13/unraid-buddybackup
-   ddd36f9..a19d266  main       -> origin/main
- * [new tag]         2026.05.02 -> 2026.05.02
-Updating ddd36f9..a19d266
-Fast-forward
- buddybackup.plg                                    |  12 +-
- .../local/emhttp/plugins/buddybackup/Backups.page  |  10 +-
- .../emhttp/plugins/buddybackup/BuddyBackup.page    |  35 ++-
- .../plugins/buddybackup/BuddysBackupSettings.page  |  51 ++--
- .../plugins/buddybackup/SnapshotSettings.page      |  28 +-
- .../local/emhttp/plugins/buddybackup/common.php    |   7 +
- .../emhttp/plugins/buddybackup/deps/restrict_zfs   |   9 +-
- .../plugins/buddybackup/scripts/rc.buddybackup     | 175 ++++++++++-
- .../plugins/buddybackup/scripts/rc.buddybackup.php | 112 ++++++-
- t/restrict_zfs.t                                   | 328 +++++++++++++++++++++
- 10 files changed, 704 insertions(+), 63 deletions(-)
- create mode 100644 t/restrict_zfs.t
+Already up to date.
 
 Array
 (
@@ -21795,6 +21844,18 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+athomasson2/ebook2audiobookxtts
+athomasson2/ebook2audiobookxtts:latest Downloads: 45489  Stars: 6  Base: unknown
+Tagged - Can't determine last update
+notifiarr/starrproxy
+ghcr.io/notifiarr/starrproxy:main Downloads:   Stars:   Base: unknown
+anirdev/slink
+anirdev/slink:latest Downloads: 262380  Stars: 1  Base: unknown
+nwithan8/ntfy-on-start
+nwithan8/ntfy-on-start:latest Downloads: 513  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+notifiarr/dockwatch
+ghcr.io/notifiarr/dockwatch:main Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
