@@ -1969,7 +1969,12 @@ Processing /tmp/GitHub/repositoryClone/cabi24/notenregal/unraid/notenregal.xml..
 
 Downloading schartrand77's Repository
 
-Already up to date.
+From https://github.com/schartrand77/mkw2
+   0f8001b..c3e64fb  main       -> origin/main
+Updating 0f8001b..c3e64fb
+Fast-forward
+ unraid/templates/makerworks-v2.xml | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
 
 Array
 (
@@ -4744,7 +4749,23 @@ Success
 
 Downloading Pirat's Repository
 
-Already up to date.
+From https://github.com/Piratkopia13/unraid-buddybackup
+   ddd36f9..a19d266  main       -> origin/main
+ * [new tag]         2026.05.02 -> 2026.05.02
+Updating ddd36f9..a19d266
+Fast-forward
+ buddybackup.plg                                    |  12 +-
+ .../local/emhttp/plugins/buddybackup/Backups.page  |  10 +-
+ .../emhttp/plugins/buddybackup/BuddyBackup.page    |  35 ++-
+ .../plugins/buddybackup/BuddysBackupSettings.page  |  51 ++--
+ .../plugins/buddybackup/SnapshotSettings.page      |  28 +-
+ .../local/emhttp/plugins/buddybackup/common.php    |   7 +
+ .../emhttp/plugins/buddybackup/deps/restrict_zfs   |   9 +-
+ .../plugins/buddybackup/scripts/rc.buddybackup     | 175 ++++++++++-
+ .../plugins/buddybackup/scripts/rc.buddybackup.php | 112 ++++++-
+ t/restrict_zfs.t                                   | 328 +++++++++++++++++++++
+ 10 files changed, 704 insertions(+), 63 deletions(-)
+ create mode 100644 t/restrict_zfs.t
 
 Array
 (
@@ -5571,55 +5592,7 @@ Success
 
 Downloading ciuse99's Repository
 
-From https://github.com/giuseppe99barchetta/SuggestArr
-   f22d5a9..925810f  main       -> origin/main
- * [new tag]         v2.7.0     -> v2.7.0
-Updating f22d5a9..925810f
-Fast-forward
- .github/workflows/ci.yml                           |   6 +-
- .github/workflows/docker_hub_build.yml             |   8 +-
- .github/workflows/docker_hub_build_nightly.yml     |   6 +-
- api_service/automate_process.py                    |   4 +-
- api_service/blueprints/ai_search/routes.py         |  13 +-
- api_service/blueprints/automation/routes.py        |   5 +-
- api_service/blueprints/health/routes.py            |   9 +-
- api_service/blueprints/jobs/routes.py              |  50 ++++---
- api_service/blueprints/users/routes.py             |   3 +-
- api_service/config/config.py                       |   3 +-
- api_service/db/database_manager.py                 |   6 +
- api_service/handler/base_handler.py                |  29 +++-
- api_service/handler/jellyfin_handler.py            |  36 ++++-
- api_service/handler/plex_handler.py                |  50 +++++--
- api_service/jobs/discover_automation.py            |   7 +-
- api_service/jobs/job_manager.py                    |   3 +-
- api_service/jobs/queue_worker.py                   |   6 +-
- api_service/jobs/recommendation_automation.py      |  16 ++-
- api_service/jobs/system_job_sync.py                |   8 ++
- api_service/services/jellyfin/jellyfin_client.py   |  44 ++++++
- api_service/services/plex/plex_client.py           |  25 +++-
- api_service/services/seer/seer_client.py           |  30 +++-
- api_service/test/test_config.py                    |   1 +
- api_service/test/test_jellyfin_client.py           |  42 ++++++
- api_service/test/test_jobs_llm_routes.py           |  90 ++++++++++++
- api_service/test/test_media_handler_integration.py |  91 +++++++++++-
- api_service/test/test_plex_client.py               |  58 +++++++-
- api_service/test/test_seer_client.py               |  35 +++++
- api_service/utils/asyncio_loop.py                  |  68 +++++++++
- client/package.json                                |   4 +-
- client/src/api/api.js                              |   2 +
- client/src/components/ConfigWizard.vue             |   1 +
- client/src/components/DashboardPage.vue            |  14 +-
- .../configWizard/ContentFilterSettings.vue         |  14 +-
- client/src/components/settings/UserManagement.vue  | 158 ++++++++++++++++++++-
- client/src/components/settings/UserProfile.vue     |  62 +++++++-
- client/src/components/settings/jobs/JobFilters.vue |  10 ++
- client/src/components/settings/jobs/JobModal.vue   |   5 +-
- .../settings/jobs/RecommendationFilters.vue        |  25 ++++
- client/src/composables/useAuth.js                  |   5 +
- client/tsconfig.json                               |   1 -
- 41 files changed, 954 insertions(+), 99 deletions(-)
- create mode 100644 api_service/test/test_jobs_llm_routes.py
- create mode 100644 api_service/utils/asyncio_loop.py
+Already up to date.
 
 Array
 (
@@ -13319,13 +13292,7 @@ Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-p
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-ru_RU.xml... Downloading https://github.com/unraid/lang-ru_RU/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-sv_SE.xml... Downloading https://github.com/unraid/lang-sv_SE/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-no_NO.xml... Downloading https://github.com/unraid/lang-no_NO/archive/master.zip attempt 1...Success
-Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-pt_BR.xml... Downloading https://github.com/unraid/lang-pt_BR/archive/main.zip attempt 1...  End-of-central-directory signature not found.  Either this file is not
-  a zipfile, or it constitutes one disk of a multi-part archive.  In the
-  latter case the central directory and zipfile comment will be found on
-  the last disk(s) of this archive.
-unzip:  cannot find zipfile directory in one of /tmp/appFeed/language.zip or
-        /tmp/appFeed/language.zip.zip, and cannot find /tmp/appFeed/language.zip.ZIP, period.
-Success
+Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-pt_BR.xml... Downloading https://github.com/unraid/lang-pt_BR/archive/main.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-zh_TW.xml... Downloading https://github.com/unraid/lang-zh_TW/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-bn_BN.xml... Downloading https://github.com/unraid/lang-bn_BN/archive/master.zip attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/unraid/language-templates/limetech/lang-fr_FR.xml... Downloading https://github.com/unraid/lang-fr_FR/archive/master.zip attempt 1...Success
@@ -21667,17 +21634,7 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/par2cron-unRAID/main/plugin/dwpar2cron.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
-michuelnik/mediathekview-web
-michuelnik/mediathekview-web:latest Downloads: 3743  Stars: 0  Base: unknown
-bovive/unraid-duplicate-file-handler
-ghcr.io/bovive/unraid-duplicate-file-handler:latest Downloads:   Stars:   Base: unknown
-mackid1993/docker-roonserver
-mackid1993/docker-roonserver Downloads: 15007  Stars: 0  Base: unknown
-celsian/xteve-channel-alerts
-celsian/xteve-channel-alerts:latest Downloads: 550  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-coolercontrol/coolercontrold
-coolercontrol/coolercontrold Downloads: 96079  Stars: 6  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -21685,8 +21642,6 @@ coolercontrol/coolercontrold Downloads: 96079  Stars: 6  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-actualbudget/actual-server
-actualbudget/actual-server Downloads: 25488290  Stars: 67  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
