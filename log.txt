@@ -510,7 +510,27 @@ Processing /tmp/GitHub/repositoryClone/mash2k3/unraid-templates/decypharr.xml...
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   9e70ba4..fa88a72  main       -> origin/main
+ * [new tag]         v0.7.2     -> v0.7.2
+Updating 9e70ba4..fa88a72
+Fast-forward
+ package.json                                       |  2 +-
+ src/lib/changelog.ts                               | 11 ++++
+ src/lib/components/AppHeader.svelte                | 36 +------------
+ src/lib/components/PwaUpdateModal.svelte           | 62 ----------------------
+ .../0032_supplement_reminder_overrides.sql         | 13 +++++
+ src/lib/db/migrations/meta/_journal.json           |  7 +++
+ src/lib/db/schema.ts                               | 15 +++++-
+ src/lib/stores/pwa.svelte.ts                       | 47 ++++------------
+ .../api/supplement-reminder-overrides/+server.ts   | 59 ++++++++++++++++++++
+ src/routes/api/supplement-reminders/+server.ts     | 22 ++++++--
+ src/routes/supplements/+page.svelte                | 38 ++++++++-----
+ src/service-worker.ts                              |  6 +--
+ 12 files changed, 160 insertions(+), 158 deletions(-)
+ delete mode 100644 src/lib/components/PwaUpdateModal.svelte
+ create mode 100644 src/lib/db/migrations/0032_supplement_reminder_overrides.sql
+ create mode 100644 src/routes/api/supplement-reminder-overrides/+server.ts
 
 Array
 (
