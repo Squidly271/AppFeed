@@ -325,7 +325,36 @@ Success
 
 Downloading Script Dashboard
 
-Already up to date.
+From https://github.com/Berrysekk/Script-Dashboard
+   539491e..bfb280f  main       -> origin/main
+Updating 539491e..bfb280f
+Fast-forward
+ .claude/scheduled_tasks.lock                     |   1 +
+ .gitignore                                       |   5 +-
+ backend/main.py                                  |  42 ++-
+ backend/models.py                                |  30 +-
+ backend/routes/auth.py                           |  50 ++-
+ backend/routes/categories.py                     |  11 +-
+ backend/routes/runs.py                           |  80 +++--
+ backend/routes/scripts.py                        | 121 +++++--
+ backend/services/auth.py                         |  23 +-
+ backend/services/categories.py                   | 109 ++++--
+ backend/services/databases.py                    |  75 +++-
+ backend/services/executor.py                     | 416 +++++++++++++++++------
+ backend/services/log_manager.py                  |  41 ++-
+ backend/services/rate_limit.py                   |  28 +-
+ backend/services/venv_manager.py                 |  29 +-
+ backend/tests/test_venv_manager.py               |   8 +-
+ frontend/app/components/AppShell.tsx             |  11 +-
+ frontend/app/components/AuthGate.tsx             |  19 +-
+ frontend/app/components/CategoryManagerModal.tsx | 113 +++---
+ frontend/app/components/LogDrawer.tsx            | 121 +++++--
+ frontend/app/components/ScriptCard.tsx           |   7 +-
+ frontend/app/components/UploadModal.tsx          |  29 +-
+ frontend/app/page.tsx                            | 152 +++++++--
+ frontend/next-env.d.ts                           |   2 +-
+ 24 files changed, 1150 insertions(+), 373 deletions(-)
+ create mode 100644 .claude/scheduled_tasks.lock
 
 Array
 (
@@ -616,21 +645,7 @@ Processing /tmp/GitHub/repositoryClone/HabiRabbu/Musicseerr/templates/musicseerr
 
 Downloading sworcery's Repository
 
-From https://github.com/sworcery/ChannelHoarder
-   86aef42..2981606  main       -> origin/main
-Updating 86aef42..2981606
-Fast-forward
- README.md                           |   1 +
- backend/app/config.py               |   2 +-
- backend/pyproject.toml              |   2 +-
- backend/tests/__init__.py           |   0
- backend/tests/test_title_filter.py  | 157 ++++++++++++++++++++++++++++++++++++
- frontend/package.json               |   2 +-
- frontend/src/lib/api.ts             |   2 +-
- frontend/src/pages/ChannelsPage.tsx |  39 ++++++++-
- 8 files changed, 198 insertions(+), 7 deletions(-)
- create mode 100644 backend/tests/__init__.py
- create mode 100644 backend/tests/test_title_filter.py
+Already up to date.
 
 Array
 (
@@ -666,13 +681,7 @@ Processing /tmp/GitHub/repositoryClone/jaydenroberts/unraid-templates/tally.xml.
 
 Downloading JSONbored's Repository
 
-From https://github.com/JSONbored/awesome-unraid
-   8e85a32..fdb5382  main       -> origin/main
-Updating 8e85a32..fdb5382
-Fast-forward
- dify-aio.xml | 10 +++++-----
- mem0-aio.xml | 37 ++++++-------------------------------
- 2 files changed, 11 insertions(+), 36 deletions(-)
+Already up to date.
 
 Array
 (
@@ -1429,7 +1438,16 @@ Processing /tmp/GitHub/repositoryClone/mstrhakr/plugin-repository/compose.manage
 
 Downloading got3nks' Repository
 
-Already up to date.
+From https://github.com/got3nks/amutorrent
+   81a644d..d1516e1  main       -> origin/main
+ * [new tag]         v3.8.4     -> v3.8.4
+Updating 81a644d..d1516e1
+Fast-forward
+ CHANGELOG.md                     |  8 ++++++++
+ package.json                     |  2 +-
+ server/lib/downloadNormalizer.js | 13 +++++++++++--
+ server/package.json              |  2 +-
+ 4 files changed, 21 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -7611,7 +7629,12 @@ Processing /tmp/GitHub/repositoryClone/unraid/docker-templates/limetech/Connect.
 
 Downloading linuxserver's Repository
 
-Already up to date.
+From https://github.com/linuxserver/templates
+   2c37a72..58a5403  main       -> origin/main
+Updating 2c37a72..58a5403
+Fast-forward
+ unraid/webtop.xml | 23 ++++-------------------
+ 1 file changed, 4 insertions(+), 19 deletions(-)
 
 Array
 (
@@ -10931,9 +10954,7 @@ Array
    Success!
 Repo Branch: master
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/ioquake3.xml...Success
-Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PrometheusNodeExporter.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-prometheus_node_exporter/master/prometheus_node_exporter.plg attempt 1...Fatal: Plugin URL on xml template does not match PluginURL in .plg (https://raw.githubusercontent.com/ich777/unraid-prometheus_node_exporter/master/prometheus_node_exporter.plg vs https://github.com/ich777/unraid-prometheus_node_exporter/raw/master/prometheus_node_exporter.plg)
-
-Success
+Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/PrometheusNodeExporter.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-prometheus_node_exporter/master/prometheus_node_exporter.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/Coral-Driver.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-coral-driver/master/coral-driver.plg attempt 1...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/AssettoCorsaCompetizione.xml...Success
 Processing /tmp/GitHub/repositoryClone/ich777/docker-templates/ich777/MFT-Tools.xml... Downloading https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg attempt 1...Success
@@ -21840,20 +21861,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
-peterthepeter/groly
-ghcr.io/peterthepeter/groly:latest Downloads:   Stars:   Base: unknown
-githubyumao/mcsmanager-web
-githubyumao/mcsmanager-web:latest Downloads: 116829  Stars: 3  Base: unknown
-githubyumao/mcsmanager-daemon
-githubyumao/mcsmanager-daemon:latest Downloads: 131085  Stars: 3  Base: unknown
-anojht/invoiceninja
-anojht/invoiceninja Downloads: 98093  Stars: 2  Base: unknown
-sidkapahiii/curatarr
-sidkapahiii/curatarr:latest Downloads: 202  Stars: 0  Base: unknown
-pross/meshsimple
-ghcr.io/pross/meshsimple:latest Downloads:   Stars:   Base: unknown
-habirabbu/musicseerr
-ghcr.io/habirabbu/musicseerr:latest Downloads: 423  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
