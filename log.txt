@@ -510,7 +510,77 @@ Processing /tmp/GitHub/repositoryClone/mash2k3/unraid-templates/decypharr.xml...
 
 Downloading facro's Repository
 
-Already up to date.
+From https://github.com/peterthepeter/groly
+   fa88a72..6ade697  main       -> origin/main
+ * [new tag]         v0.7.3     -> v0.7.3
+Updating fa88a72..6ade697
+Fast-forward
+ messages/de.json                                   |  906 +++++-----
+ messages/en.json                                   |  906 +++++-----
+ package-lock.json                                  |   35 +-
+ package.json                                       |    3 +-
+ src/app.css                                        |    7 +
+ src/app.html                                       |    4 +-
+ src/hooks.server.ts                                |   93 +-
+ src/lib/audio/meditationAudio.ts                   |    8 +-
+ src/lib/changelog.ts                               |   17 +
+ src/lib/components/AppBottomNav.svelte             |    2 +-
+ src/lib/components/BottomNav.svelte                |    2 +-
+ src/lib/components/InfoModal.svelte                |   10 +
+ src/lib/components/MealPlanner.svelte              |  151 +-
+ .../components/recipe/RecipeAddToListModal.svelte  |  152 +-
+ src/lib/components/supplements/ActivityIcon.svelte |   83 +
+ .../supplements/CaffeineDrinkPickerSheet.svelte    |    6 +-
+ .../supplements/CaffeineTrackerCard.svelte         |    4 +-
+ .../supplements/MeditationTimerSheet.svelte        |  112 +-
+ .../supplements/MeditationTrackerCard.svelte       |    2 +-
+ .../supplements/MoodDayDetailSheet.svelte          |  158 ++
+ .../components/supplements/MoodEntrySheet.svelte   |  223 +++
+ .../components/supplements/MoodHistoryView.svelte  |  402 +++++
+ src/lib/components/supplements/MoodIcon.svelte     |   19 +
+ .../supplements/MoodReminderSheet.svelte           |  250 +++
+ .../components/supplements/MoodTrackerCard.svelte  |  113 ++
+ .../components/supplements/QuickLogSheet.svelte    |  403 +++--
+ .../components/supplements/WaterTrackerCard.svelte |    8 +-
+ src/lib/db/migrations/0033_mood_tracker.sql        |   30 +
+ src/lib/db/migrations/0034_mood_reminders.sql      |   12 +
+ src/lib/db/migrations/meta/0025_snapshot.json      | 1776 --------------------
+ src/lib/db/migrations/meta/_journal.json           |   14 +
+ src/lib/db/schema.ts                               |   40 +
+ src/lib/i18n.svelte.ts                             |   92 +
+ src/lib/mood.ts                                    |  155 ++
+ src/lib/userSettings.svelte.ts                     |   86 +-
+ src/lib/userSettingsTypes.ts                       |    2 +
+ src/routes/+layout.server.ts                       |   15 +-
+ src/routes/+layout.svelte                          |   21 +-
+ src/routes/+page.svelte                            |    2 +-
+ src/routes/api/mood-logs/+server.ts                |   79 +
+ src/routes/api/mood-logs/[date]/+server.ts         |   22 +
+ src/routes/api/mood-reminders/+server.ts           |   49 +
+ src/routes/api/mood-reminders/[id]/+server.ts      |   46 +
+ src/routes/listen/[id]/+page.svelte                |    2 +-
+ src/routes/rezepte/+page.svelte                    |    6 +-
+ src/routes/rezepte/[id]/+page.svelte               |  148 +-
+ src/routes/rezepte/[id]/bearbeiten/+page.svelte    |  202 ++-
+ src/routes/rezepte/neu/+page.svelte                |  191 ++-
+ src/routes/supplements/+page.svelte                |  180 +-
+ src/routes/supplements/verwalten/+page.svelte      |   55 +-
+ 50 files changed, 4040 insertions(+), 3264 deletions(-)
+ create mode 100644 src/lib/components/supplements/ActivityIcon.svelte
+ create mode 100644 src/lib/components/supplements/MoodDayDetailSheet.svelte
+ create mode 100644 src/lib/components/supplements/MoodEntrySheet.svelte
+ create mode 100644 src/lib/components/supplements/MoodHistoryView.svelte
+ create mode 100644 src/lib/components/supplements/MoodIcon.svelte
+ create mode 100644 src/lib/components/supplements/MoodReminderSheet.svelte
+ create mode 100644 src/lib/components/supplements/MoodTrackerCard.svelte
+ create mode 100644 src/lib/db/migrations/0033_mood_tracker.sql
+ create mode 100644 src/lib/db/migrations/0034_mood_reminders.sql
+ delete mode 100644 src/lib/db/migrations/meta/0025_snapshot.json
+ create mode 100644 src/lib/mood.ts
+ create mode 100644 src/routes/api/mood-logs/+server.ts
+ create mode 100644 src/routes/api/mood-logs/[date]/+server.ts
+ create mode 100644 src/routes/api/mood-reminders/+server.ts
+ create mode 100644 src/routes/api/mood-reminders/[id]/+server.ts
 
 Array
 (
@@ -2763,7 +2833,12 @@ Failed loading XML
 
 Downloading sarcasm's Repository
 
-Already up to date.
+From https://github.com/kroeberd/unraid-templates
+   6cdd2f2..3c5d094  main       -> origin/main
+Updating 6cdd2f2..3c5d094
+Fast-forward
+ templates/alldebrid-client.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -4631,13 +4706,7 @@ Processing /tmp/GitHub/repositoryClone/NicolasHaas/unraid-xml-templates/golang-k
 
 Downloading guniv's Repository
 
-From https://github.com/guniv/unraid-ca-apps
-   ce34844..8224a90  main       -> origin/main
-Updating ce34844..8224a90
-Fast-forward
- .last_release_coolercontrol |  2 +-
- CoolerControl.xml           | 58 ++++++++++++++++++++++++++++++++++++++++++++-
- 2 files changed, 58 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -21827,6 +21896,8 @@ Updating stats on containers
 
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
+ripleyxlr8/my-cinema-amazon-skill-for-kodi
+ghcr.io/ripleyxlr8/my-cinema-amazon-skill-for-kodi:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoDeploy/main/plugin/hakodeploy.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/wandercone/HakoMonitor/main/plugin/hakomonitor.plg attempt 1...
@@ -21846,8 +21917,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-zram/main/unraid-zram-card.plg attempt 1...
-netplexflix/mtdp
-netplexflix/mtdp:latest Downloads: 2500  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
@@ -21904,9 +21973,6 @@ netplexflix/mtdp:latest Downloads: 2500  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/Mainfrezzer/unraid-scrubber/raw/master/scrubber.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-WOL/master/plugin/m-wakeonlan.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Mainfrezzer/unRAID-RAM-Disk/main/plugin/RAM-DISK-Dockerlog.plg attempt 1...
-Tagged - Can't determine last update
-ne0ark/internxt-cli
-ne0ark/internxt-cli:main Downloads: 28274  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock-preview.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-fileactivity/main/plugin/file.activity.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-auto-unlock/main/plugin/auto-unlock.plg attempt 1...
@@ -22039,8 +22105,6 @@ ne0ark/internxt-cli:main Downloads: 28274  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-snuffydev/beatbump
-snuffydev/beatbump:latest Downloads: 63312  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -22062,16 +22126,6 @@ snuffydev/beatbump:latest Downloads: 63312  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-rekkyrosso/ampcast
-ghcr.io/rekkyrosso/ampcast:latest Downloads:   Stars:   Base: unknown
-4gray/iptvnator
-4gray/iptvnator:latest Downloads: 65220  Stars: 5  Base: unknown
-4gray/iptvnator-backend
-4gray/iptvnator-backend:latest Downloads: 3925828  Stars: 3  Base: unknown
-ngrok/ngrok
-ngrok/ngrok:latest Downloads: 2923764  Stars: 65  Base: unknown
-pepaondrugs/playitgg-docker
-pepaondrugs/playitgg-docker Downloads: 75058  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
