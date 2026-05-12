@@ -166,26 +166,21 @@ Processing /tmp/GitHub/repositoryClone/botmem/botmem/apps/web/public/sitemap.xml
 Downloading Jordibrw
 
 From https://github.com/jordibrouwer/nextdash
-   ac4eb9f..1cb4c63  main       -> origin/main
-Updating ac4eb9f..1cb4c63
+   1cb4c63..d96c6a4  main       -> origin/main
+ * [new tag]         1.1        -> 1.1
+ * [new tag]         1.1.2      -> 1.1.2
+Updating 1cb4c63..d96c6a4
 Fast-forward
- .claude/settings.local.json  |   7 -
- data/.custom-themes-reset-v1 |   1 -
- data/bookmarks-1.json        | 141 --------
- data/colors.json             | 813 -------------------------------------------
- data/finders.json            |   1 -
- data/pages.json              |   5 -
- data/preview-cache.json      |  58 ---
- data/settings.json           | 105 ------
- 8 files changed, 1131 deletions(-)
- delete mode 100644 .claude/settings.local.json
- delete mode 100644 data/.custom-themes-reset-v1
- delete mode 100644 data/bookmarks-1.json
- delete mode 100644 data/colors.json
- delete mode 100644 data/finders.json
- delete mode 100644 data/pages.json
- delete mode 100644 data/preview-cache.json
- delete mode 100644 data/settings.json
+ .gitignore                   |   5 ++
+ locales/de.json              |   8 +--
+ locales/en.json              |   8 +--
+ locales/fr.json              |   8 +--
+ locales/nl.json              |   8 +--
+ static/css/dashboard.css     |  40 +++++++++++
+ static/js/dashboard.js       | 165 +++++++++++++++++++++++++++++++++++++++++++
+ static/js/reorder.js         |   9 ++-
+ static/js/whats-new-modal.js |  29 +++++++-
+ 9 files changed, 260 insertions(+), 20 deletions(-)
 
 Array
 (
@@ -2079,7 +2074,12 @@ Success
 
 Downloading Lazaros Chalkidis' Repository
 
-Already up to date.
+From https://github.com/Lazaros-Chalkidis/unraid-CA
+   b9d7a8c..92f810b  main       -> origin/main
+Updating b9d7a8c..92f810b
+Fast-forward
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 
 Array
 (
@@ -4438,14 +4438,7 @@ Processing /tmp/GitHub/repositoryClone/DearTanker/Unraid-Docker-Template/OpenLis
 
 Downloading GillBates' Repository
 
-From https://github.com/Gill-Bates/unraid-app-templates
-   c501eb0..ef6a30d  main       -> origin/main
-Updating c501eb0..ef6a30d
-Fast-forward
- Readme.md                             |   3 +
- community-apps/03_unifi_os_server.xml | 163 ++++++++++++++++++++++++++++++++++
- 2 files changed, 166 insertions(+)
- create mode 100644 community-apps/03_unifi_os_server.xml
+Already up to date.
 
 Array
 (
@@ -15998,15 +15991,7 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-From https://github.com/Goobaroo/unraid-templates
-   2b51cdf..bd177a8  main       -> origin/main
-Updating 2b51cdf..bd177a8
-Fast-forward
- ftbevolution_server.xml   | 2 +-
- ftboceanblock2_server.xml | 2 +-
- ftbskies2_server.xml      | 2 +-
- ftbstoneblock4_server.xml | 2 +-
- 4 files changed, 4 insertions(+), 4 deletions(-)
+Already up to date.
 
 Array
 (
@@ -22393,6 +22378,8 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
+everythingsmarthome/everything-presence-mmwave-configurator
+everythingsmarthome/everything-presence-mmwave-configurator Downloads: 132236  Stars: 2  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
@@ -22446,10 +22433,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/zip_manager/main/plugin/zip_manager.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/vm-backup-and-restore/main/plugin/vm-backup-and-restore.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
-giiibates/unifi-os-server
-giiibates/unifi-os-server:latest Downloads: 97  Stars: 0  Base: unknown
-Pulling giiibates/unifi-os-server:latest
-Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
@@ -22623,10 +22606,20 @@ Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+Tagged - Can't determine last update
+dartsteven/nutify
+dartsteven/nutify:amd64-latest Downloads: 155040  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+13hannes11/ics-proxy
+ghcr.io/13hannes11/ics-proxy:latest Downloads: 165  Stars: 0  Base: unknown
+Tagged - Can't determine last update
+linotp/linotp
+linotp/linotp:3.4.4 Downloads: 672  Stars: 0  Base: unknown
+quay.io/mudler/localrecall
+quay.io/mudler/localrecall:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
