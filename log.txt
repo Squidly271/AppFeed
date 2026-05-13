@@ -146,7 +146,38 @@ Success
 
 Downloading botmem
 
-Already up to date.
+From https://github.com/botmem/botmem
+   7f59587..159a314  main       -> origin/main
+ * [new tag]         v0.35.27   -> v0.35.27
+Updating 7f59587..159a314
+Fast-forward
+ .agents/skills/botmem-cli/SKILL.md                 |   3 +-
+ apps/api/src/agent/agent.service.ts                |   4 +
+ apps/api/src/agent/dto/ask.dto.ts                  |   6 +
+ apps/api/src/mcp/mcp.service.ts                    |   2 +-
+ .../src/memory/__tests__/memory.service.test.ts    |  36 +++
+ apps/api/src/memory/dto/ask-memories.dto.ts        |  70 ++++-
+ apps/api/src/memory/dto/search-memories.dto.ts     |   5 +
+ apps/api/src/memory/memory.controller.ts           |   2 +
+ apps/api/src/memory/memory.service.ts              | 332 ++++++++++++++++-----
+ .../src/people/__tests__/people.service.test.ts    |  10 +
+ apps/api/src/people/people.service.ts              |  10 +-
+ apps/web/src/components/memory/ActiveFilters.tsx   |   3 +
+ apps/web/src/lib/__tests__/api.test.ts             |   2 +
+ apps/web/src/lib/api.ts                            |  26 +-
+ apps/web/src/store/memoryStore.ts                  |  23 +-
+ docs/agent-api/cli.md                              |   5 +
+ docs/agent-api/openclaw.md                         |   9 +-
+ packages/cli/src/client.ts                         |  16 +-
+ packages/cli/src/commands/agent.ts                 |   7 +-
+ packages/cli/src/commands/install-skill.ts         |   4 +-
+ packages/cli/src/commands/search.ts                |  28 +-
+ packages/openclaw-plugin/src/client.ts             |   4 +-
+ packages/openclaw-plugin/src/index.ts              |  34 ++-
+ .../src/templates/memory-instructions.ts           |   2 +
+ packages/shared/src/__tests__/agent-tools.test.ts  |   5 +
+ packages/shared/src/agent-tools.ts                 |  13 +-
+ 26 files changed, 546 insertions(+), 115 deletions(-)
 
 Array
 (
@@ -165,7 +196,12 @@ Processing /tmp/GitHub/repositoryClone/botmem/botmem/apps/web/public/sitemap.xml
 
 Downloading Jordibrw
 
-Already up to date.
+From https://github.com/jordibrouwer/nextdash
+   d96c6a4..c6fa4ed  main       -> origin/main
+Updating d96c6a4..c6fa4ed
+Fast-forward
+ .gitignore | 2 ++
+ 1 file changed, 2 insertions(+)
 
 Array
 (
@@ -4418,7 +4454,12 @@ Processing /tmp/GitHub/repositoryClone/DearTanker/Unraid-Docker-Template/OpenLis
 
 Downloading GillBates' Repository
 
-Already up to date.
+From https://github.com/Gill-Bates/unraid-app-templates
+   ef6a30d..6553d9f  main       -> origin/main
+Updating ef6a30d..6553d9f
+Fast-forward
+ community-apps/03_unifi_os_server.xml | 28 +++++++++++++++++-----------
+ 1 file changed, 17 insertions(+), 11 deletions(-)
 
 Array
 (
@@ -4433,6 +4474,8 @@ Array
    Success!
 Repo Branch: main
 Processing /tmp/GitHub/repositoryClone/Gill-Bates/unraid-app-templates/community-apps/03_unifi_os_server.xml...Possible environment variable within extra parameters.  This should be handled via a config element (type=variable)
+
+Privileged mode set.  This may not be necessary
 
 Success
 Processing /tmp/GitHub/repositoryClone/Gill-Bates/unraid-app-templates/community-apps/02_velociraptor.xml...Processing /tmp/GitHub/repositoryClone/Gill-Bates/unraid-app-templates/community-apps/01_fritzboxinflux.xml...Success
@@ -7306,40 +7349,7 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-From https://github.com/wizarrrr/wizarr
-   01b25b4f..dd18d47e  main       -> origin/main
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-Updating 01b25b4f..dd18d47e
-Fast-forward
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
- app/translations/ca/LC_MESSAGES/messages.po      | 244 ++++++++++++-----------
- app/translations/cs/LC_MESSAGES/messages.po      |   2 +-
- app/translations/da/LC_MESSAGES/messages.po      |   2 +-
- app/translations/de/LC_MESSAGES/messages.po      |   2 +-
- app/translations/es/LC_MESSAGES/messages.po      |  10 +-
- app/translations/fa/LC_MESSAGES/messages.po      |   2 +-
- app/translations/fr/LC_MESSAGES/messages.po      |   2 +-
- app/translations/gsw/LC_MESSAGES/messages.po     |   2 +-
- app/translations/he/LC_MESSAGES/messages.po      |   2 +-
- app/translations/hr/LC_MESSAGES/messages.po      |   2 +-
- app/translations/hu/LC_MESSAGES/messages.po      |   2 +-
- app/translations/is/LC_MESSAGES/messages.po      |   2 +-
- app/translations/it/LC_MESSAGES/messages.po      |   2 +-
- app/translations/lt/LC_MESSAGES/messages.po      |   2 +-
- app/translations/nb_NO/LC_MESSAGES/messages.po   |   2 +-
- app/translations/nl/LC_MESSAGES/messages.po      |   2 +-
- app/translations/pl/LC_MESSAGES/messages.po      |   2 +-
- app/translations/pt/LC_MESSAGES/messages.po      |   2 +-
- app/translations/pt_BR/LC_MESSAGES/messages.po   |   2 +-
- app/translations/ro/LC_MESSAGES/messages.po      |   2 +-
- app/translations/ru/LC_MESSAGES/messages.po      |   2 +-
- app/translations/sv/LC_MESSAGES/messages.po      |   2 +-
- app/translations/zh_Hans/LC_MESSAGES/messages.po |   2 +-
- app/translations/zh_Hant/LC_MESSAGES/messages.po |   2 +-
- messages.pot                                     |   2 +-
- 25 files changed, 153 insertions(+), 147 deletions(-)
+Already up to date.
 
 Array
 (
@@ -18784,7 +18794,9 @@ Processing /tmp/GitHub/repositoryClone/manuel-rw/unraid-templates/ca_profile.xml
 
 Downloading grtgbln's Repository
 
-Already up to date.
+From https://github.com/nwithan8/unraid_templates
+ + fa2b617...88938a2 main       -> origin/main  (forced update)
+                                                                                Successfully rebased and updated refs/heads/main.
 
 Array
 (
@@ -22391,8 +22403,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
-deucebucket/library-manager
-ghcr.io/deucebucket/library-manager:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
@@ -22486,12 +22496,8 @@ ghcr.io/deucebucket/library-manager:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-operacle/checkcle
-operacle/checkcle:latest Downloads: 229183  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
-iamspido/github-release-monitor
-ghcr.io/iamspido/github-release-monitor:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -22606,8 +22612,6 @@ ghcr.io/iamspido/github-release-monitor:latest Downloads:   Stars:   Base: unkno
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
-casbin/casdoor
-casbin/casdoor:latest Downloads: 1207590  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -22625,20 +22629,12 @@ casbin/casdoor:latest Downloads: 1207590  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
-shaneisrael/snapsmaps
-shaneisrael/snapsmaps:latest Downloads: 2265  Stars: 0  Base: unknown
+perber/leafwiki
+ghcr.io/perber/leafwiki:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
-zggis/plex-tvtime
-zggis/plex-tvtime Downloads: 27797  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-matrixconduit/matrix-conduit
-matrixconduit/matrix-conduit:latest Downloads: 530468  Stars: 12  Base: unknown
-enricoros/big-agi
-ghcr.io/enricoros/big-agi:latest Downloads:   Stars:   Base: unknown
-imagegenius/jenkins
-ghcr.io/imagegenius/jenkins Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
@@ -22655,7 +22651,7 @@ ghcr.io/imagegenius/jenkins Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/donimax/unraid-check-mk-agent/master/check_mk_agent23.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/rezo552/unraid-ltfs/main/unraid-ltfs.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Terebi42/unraid-asustor-pfd/main/unraid-asustorpfd.plg attempt 1...
-Privileged: 133
+Privileged: 134
 
 
 Updating GitHub
