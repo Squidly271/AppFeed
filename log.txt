@@ -30,13 +30,7 @@ Processing /tmp/GitHub/repositoryClone/brq-ae/boltarr-templates/boltarr.xml...Su
 
 Downloading GreiteTurtle
 
-From https://github.com/Greite/unraid-templates
-   699d0ee..6dd40e2  main       -> origin/main
-Updating 699d0ee..6dd40e2
-Fast-forward
- database-backup/database-backup.xml     | 1 -
- speedtest-monitor/speedtest-monitor.xml | 2 +-
- 2 files changed, 1 insertion(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -152,14 +146,7 @@ Success
 
 Downloading botmem
 
-From https://github.com/botmem/botmem
-   c39aa82..769d518  main       -> origin/main
- * [new tag]         v0.35.29   -> v0.35.29
- * [new tag]         v0.35.30   -> v0.35.30
-Updating c39aa82..769d518
-Fast-forward
- .github/workflows/deploy.yml | 57 ++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 57 insertions(+)
+Already up to date.
 
 Array
 (
@@ -543,7 +530,13 @@ Success
 
 Downloading Heisenbugger's Repository
 
-Already up to date.
+From https://github.com/prolife86/unraid-templates
+   64c4f5f..bd859c3  main       -> origin/main
+Updating 64c4f5f..bd859c3
+Fast-forward
+ WhiskyWise.xml | 4 ++--
+ ca_profile.xml | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
 
 Array
 (
@@ -556,10 +549,8 @@ Array
 )
    Success!
 Repo Branch: main
-Processing /tmp/GitHub/repositoryClone/prolife86/unraid-templates/ca_profile.xml...Failed
-Failed loading XML
-Processing /tmp/GitHub/repositoryClone/prolife86/unraid-templates/WhiskyWise.xml...Failed
-Failed loading XML
+Processing /tmp/GitHub/repositoryClone/prolife86/unraid-templates/ca_profile.xml...FOUND PROFILE
+Processing /tmp/GitHub/repositoryClone/prolife86/unraid-templates/WhiskyWise.xml...Success
 
 
 Downloading jsatk's unraid templates
@@ -835,16 +826,7 @@ Processing /tmp/GitHub/repositoryClone/Oratorian/unraid-templates/emby-watchpart
 
 Downloading AllAboutDuncan's Repository
 
-From https://github.com/allaboutduncan/clu-comics
-   eb4b3f2..a5d9a02  main       -> origin/main
-Updating eb4b3f2..a5d9a02
-Fast-forward
- extension/content.js      |  1 +
- extension/manifest.json   |  2 +-
- models/getcomics.py       |  6 +++---
- static/js/collection.js   | 14 ++++++++------
- templates/collection.html |  1 +
- 5 files changed, 14 insertions(+), 10 deletions(-)
+Already up to date.
 
 Array
 (
@@ -3237,7 +3219,83 @@ Processing /tmp/GitHub/repositoryClone/theodorecharles/unraid-templates/galleria
 
 Downloading shparikson's Repository
 
-Already up to date.
+From https://github.com/m3ue/m3u-editor
+   1b2dd4a3..c062dde8  master       -> origin/master
+ * [new tag]           v0.11.38     -> v0.11.38
+ * [new tag]           v0.11.38-dev -> v0.11.38-dev
+ * [new tag]           v0.11.37-dev -> v0.11.37-dev
+Updating 1b2dd4a3..c062dde8
+Fast-forward
+ Dockerfile                                         |   26 +-
+ app/Console/Commands/CompareVersion.php            |    2 +-
+ app/Console/Commands/SyncOfficialPlugins.php       |    2 +-
+ app/Filament/Pages/CustomDashboard.php             |    2 +-
+ app/Filament/Pages/M3uProxyStreamMonitor.php       |   23 +
+ app/Filament/Pages/Preferences.php                 |  186 ++-
+ .../PlaylistAuths/Pages/ListPlaylistAuths.php      |   17 +-
+ .../PlaylistAuths/PlaylistAuthResource.php         |  182 ++-
+ .../Resources/Playlists/PlaylistResource.php       |   82 +-
+ .../RelationManagers/EpisodesRelationManager.php   |   33 +-
+ app/Filament/Resources/Series/SeriesResource.php   |   64 +-
+ app/Filament/Resources/Vods/VodResource.php        |   46 +-
+ app/Http/Controllers/PlaylistController.php        |  126 ++
+ app/Jobs/ProbeChannelStreams.php                   |   10 +
+ app/Jobs/ProbeVodStreams.php                       |   30 +-
+ app/Jobs/ProbeVodStreamsComplete.php               |   28 +-
+ app/Jobs/ProcessM3uImport.php                      |   33 +
+ app/Jobs/UpdateXtreamStats.php                     |    2 +-
+ app/Listeners/AlertOnJobFailed.php                 |   40 +
+ app/Logging/AlertsHandler.php                      |   66 +
+ app/Models/Channel.php                             |    7 +
+ app/Models/Episode.php                             |    7 +
+ app/Models/PlaylistAlias.php                       |   26 +-
+ app/Providers/AppServiceProvider.php               |   13 +
+ app/Services/AlertService.php                      |   45 +
+ app/Services/M3uProxyService.php                   |   30 +-
+ app/Services/ProfileService.php                    |   47 +-
+ app/Services/StreamStatsService.php                |   76 +-
+ app/Settings/GeneralSettings.php                   |   15 +
+ bootstrap/app.php                                  |    1 +
+ composer.json                                      |    2 +
+ composer.lock                                      |  168 ++-
+ config/dev.php                                     |    6 +-
+ config/logging.php                                 |   10 +-
+ .../2026_05_11_000000_add_alert_settings.php       |   28 +
+ docker-compose.external-all-caddy.yml              |    2 +-
+ docker-compose.external-all.yml                    |    2 +-
+ docker-compose.proxy-vpn.yml                       |    2 +-
+ docker-compose.proxy.yml                           |    2 +-
+ docker/8.4/db-init.sh                              |   96 ++
+ docker/8.4/redis.conf                              |    4 +-
+ docker/8.4/supervisord.conf                        |   87 +-
+ lang/de.json                                       | 1282 ++++++++++----------
+ lang/en.json                                       | 1278 +++++++++----------
+ lang/es.json                                       | 1282 ++++++++++----------
+ lang/fr.json                                       | 1282 ++++++++++----------
+ lang/zh_CN.json                                    | 1282 ++++++++++----------
+ .../pages/m3u-proxy-stream-monitor.blade.php       |  186 ++-
+ .../partials/probed-stream-info-series.blade.php   |   91 ++
+ .../filament/partials/probed-stream-info.blade.php |  108 ++
+ .../resources/series/pages/view-series.blade.php   |  129 +-
+ .../resources/vods/pages/view-vod.blade.php        |  102 +-
+ routes/web.php                                     |    2 +
+ start-container                                    |  152 +--
+ tests/Feature/PlaylistAliasTest.php                |  106 ++
+ tests/Feature/PlaylistUpdateApiTest.php            |  232 ++++
+ tests/Feature/ProbeChannelStreamsTest.php          |   40 +
+ tests/Feature/StreamMonitorMediaInfoTest.php       |  101 ++
+ tests/Unit/SerieFileNameServiceTest.php            |    4 +-
+ tests/Unit/StreamStatsServiceHdrDetectionTest.php  |   93 ++
+ 60 files changed, 5741 insertions(+), 3687 deletions(-)
+ create mode 100644 app/Listeners/AlertOnJobFailed.php
+ create mode 100644 app/Logging/AlertsHandler.php
+ create mode 100644 app/Services/AlertService.php
+ create mode 100644 database/settings/2026_05_11_000000_add_alert_settings.php
+ create mode 100644 docker/8.4/db-init.sh
+ create mode 100644 resources/views/filament/partials/probed-stream-info-series.blade.php
+ create mode 100644 resources/views/filament/partials/probed-stream-info.blade.php
+ create mode 100644 tests/Feature/PlaylistUpdateApiTest.php
+ create mode 100644 tests/Unit/StreamStatsServiceHdrDetectionTest.php
 
 Array
 (
@@ -22386,6 +22444,10 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
+prolife86/whiskywise
+ghcr.io/prolife86/whiskywise:latest Downloads:   Stars:   Base: unknown
+Pulling ghcr.io/prolife86/whiskywise:latest
+Killed
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
@@ -22405,22 +22467,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://github.com/emaspa/wireview-hwmon-unraid/raw/main/wireview-hwmon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/emaspa/unraidclaw/main/packages/unraid-plugin/unraidclaw.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/chodeus/folder.view3/main/folder.view3.plg attempt 1...
-gibz104/spoolmansync
-ghcr.io/gibz104/spoolmansync:latest Downloads: 5442  Stars: 0  Base: unknown
-zcaddick/music-manager-for-plex
-zcaddick/music-manager-for-plex Downloads: 1870  Stars: 0  Base: unknown
-shish2k/shimmie2
-shish2k/shimmie2:latest Downloads: 43138  Stars: 4  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-aicliagents/main/unraid-aicliagents.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/johnpwhite/unraid-plg-zram/main/unraid-zram-card.plg attempt 1...
-kikootwo/readmeabook
-ghcr.io/kikootwo/readmeabook:latest Downloads:   Stars:   Base: unknown
-anthonymccann90/strmbridge
-anthonymccann90/strmbridge:latest Downloads: 381  Stars: 0  Base: unknown
-petelombardo/hdhomerun-signal-web
-petelombardo/hdhomerun-signal-web Downloads: 8723  Stars: 0  Base: unknown
-medzin/n8n
-medzin/n8n Downloads: 17151  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/davemachado/docker-stats/master/docker-stats.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/gthrift/activestreams-unraid/main/activestreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/WuSiYu/unraid-custom-css/raw/refs/heads/master/custom.css.plg attempt 1...
@@ -22454,8 +22502,6 @@ medzin/n8n Downloads: 17151  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jcofer555/vm-backup-and-restore/main/plugin/vm-backup-and-restore.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/ck9393/fanctrlplus/main/unraid/fanctrlplus.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Kurotaku-sama/unraid.user.scripts.enhanced/main/user.scripts.enhanced.plg attempt 1...
-meaning/pmda
-meaning/pmda:latest Downloads: 28077  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/LLDP-unRAID/main/plugin/ulldpd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/nAFP-unRAID/main/plugin/nafp.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/mirrorshuttle-unRAID/main/plugin/mirsht.plg attempt 1...
@@ -22473,8 +22519,6 @@ meaning/pmda:latest Downloads: 28077  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
-nspanelmanager/nspanelmanager-amd64
-nspanelmanager/nspanelmanager-amd64 Downloads: 18381  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg attempt 1...
@@ -22634,18 +22678,10 @@ nspanelmanager/nspanelmanager-amd64 Downloads: 18381  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-varthe/redirecterr
-varthe/redirecterr:latest Downloads: 23904  Stars: 0  Base: unknown
-nickshanks347/monitarr
-ghcr.io/nickshanks347/monitarr:latest Downloads:   Stars:   Base: unknown
-imagegenius/kopia
-ghcr.io/imagegenius/kopia Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/zhtengw/unraid-i915-sriov/master/i915-sriov.plg attempt 1...
-onerahmet/openai-whisper-asr-webservice
-onerahmet/openai-whisper-asr-webservice Downloads: 1794454  Stars: 100  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8125.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8168.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/jinlife/unraid-r8125-r8152-driver/main/unraid-r8126.plg attempt 1...
