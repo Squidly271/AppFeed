@@ -146,84 +146,7 @@ Success
 
 Downloading botmem
 
-From https://github.com/botmem/botmem
-   bbc6891..7f59587  main       -> origin/main
- * [new tag]         v0.35.26   -> v0.35.26
- * [new tag]         v0.35.24   -> v0.35.24
- * [new tag]         v0.35.25   -> v0.35.25
-Updating bbc6891..7f59587
-Fast-forward
- .github/workflows/deploy.yml                       |   6 +-
- .../accounts/__tests__/accounts.service.test.ts    |  25 ++++
- apps/api/src/accounts/accounts.controller.ts       |  11 +-
- apps/api/src/accounts/accounts.service.ts          |   2 +-
- apps/api/src/auth/auth.service.ts                  |  28 ++--
- .../connector-sync-policy.service.test.ts          |  15 +-
- .../__tests__/connectors.service.test.ts           |  35 +++++
- .../connectors/connector-sync-policy.service.ts    |   8 +-
- apps/api/src/connectors/connectors.service.ts      |  22 ++-
- .../migrations/0031_migrate_imessage_to_apple.sql  |  19 +++
- apps/api/src/db/migrations/meta/_journal.json      |   7 +
- apps/api/src/imsg-tunnel/imsg-tunnel.gateway.ts    |   2 +-
- apps/api/src/imsg-tunnel/imsg-tunnel.service.ts    |  10 +-
- apps/api/src/imsg-tunnel/ws-tunnel-transport.ts    |   2 +-
- .../src/jobs/__tests__/scheduler.service.test.ts   |  15 ++
- apps/api/src/jobs/__tests__/sync.processor.test.ts |  84 ++++++++++++
- apps/api/src/jobs/jobs.module.ts                   |   2 +
- apps/api/src/jobs/scheduler.service.ts             |   4 +
- apps/api/src/jobs/sync.processor.ts                | 104 ++++++++++++--
- apps/api/src/mcp/__tests__/mcp.service.test.ts     |   2 +
- apps/api/src/mcp/mcp.service.ts                    |   6 +-
- apps/api/src/me/me.service.ts                      |   1 +
- apps/api/src/people/people-pipeline.service.ts     |   2 +-
- .../__tests__/ConnectorSetupModal.test.tsx         |  82 ++++++++++-
- .../components/connectors/ConnectorAccountRow.tsx  |  64 +++++----
- .../components/connectors/ConnectorSetupModal.tsx  |  56 ++++++--
- apps/web/src/lib/connectorMeta.ts                  |   2 +
- apps/web/src/mock/connectors.ts                    |   8 +-
- apps/web/src/pages/ConnectorsPage.tsx              |  24 ++--
- .../web/src/store/__tests__/connectorStore.test.ts |  29 ++++
- apps/web/src/store/connectorStore.ts               |   4 +-
- docs/connectors/imessage.md                        |   6 +-
- e2e/connectors/imessage.e2e.test.ts                |  28 ++--
- e2e/playwright-report/index.html                   |   2 +-
- e2e/test-results/.last-run.json                    |   2 +-
- .../{imsg-bridge => apple-bridge}/package.json     |   6 +-
- packages/{imsg-bridge => apple-bridge}/src/cli.ts  |  10 +-
- packages/apple-bridge/src/contacts.ts              | 152 +++++++++++++++++++++
- .../{imsg-bridge => apple-bridge}/src/crypto.ts    |   2 +-
- packages/{imsg-bridge => apple-bridge}/src/db.ts   |   0
- .../{imsg-bridge => apple-bridge}/src/index.ts     |   0
- .../{imsg-bridge => apple-bridge}/src/preflight.ts |   2 +-
- .../src/rpc-handler.ts                             |   8 +-
- .../{imsg-bridge => apple-bridge}/src/tunnel.ts    |   6 +-
- .../{imsg-bridge => apple-bridge}/tsconfig.json    |   0
- packages/connector-sdk/src/types.ts                |   7 +
- .../imessage/src/__tests__/imessage.test.ts        |  53 ++++++-
- packages/connectors/imessage/src/imsg-client.ts    |  23 ++++
- packages/connectors/imessage/src/index.ts          |  99 ++++++++++++--
- packages/connectors/whatsapp/src/index.ts          |   1 +
- packages/openclaw-plugin/__tests__/index.test.ts   |   8 ++
- .../src/templates/memory-instructions.ts           |   4 +-
- packages/shared/src/agent-tools.ts                 |   6 +-
- packages/shared/src/types/index.ts                 |   5 +
- packages/shared/src/utils/__tests__/utils.test.ts  |   6 +-
- packages/shared/src/utils/index.ts                 |   1 +
- pnpm-lock.yaml                                     |   2 +-
- unraid/README.md                                   |   4 +-
- unraid/community-app-submission.md                 |  89 +++++++++++-
- 59 files changed, 1048 insertions(+), 165 deletions(-)
- create mode 100644 apps/api/src/db/migrations/0031_migrate_imessage_to_apple.sql
- rename packages/{imsg-bridge => apple-bridge}/package.json (76%)
- rename packages/{imsg-bridge => apple-bridge}/src/cli.ts (92%)
- create mode 100644 packages/apple-bridge/src/contacts.ts
- rename packages/{imsg-bridge => apple-bridge}/src/crypto.ts (98%)
- rename packages/{imsg-bridge => apple-bridge}/src/db.ts (100%)
- rename packages/{imsg-bridge => apple-bridge}/src/index.ts (100%)
- rename packages/{imsg-bridge => apple-bridge}/src/preflight.ts (98%)
- rename packages/{imsg-bridge => apple-bridge}/src/rpc-handler.ts (87%)
- rename packages/{imsg-bridge => apple-bridge}/src/tunnel.ts (97%)
- rename packages/{imsg-bridge => apple-bridge}/tsconfig.json (100%)
+Already up to date.
 
 Array
 (
@@ -4313,16 +4236,7 @@ Processing /tmp/GitHub/repositoryClone/CordlessWool/unraid-docker-templates/shrt
 
 Downloading TopHat17's Repository
 
-From https://github.com/tophat17/jelly-request
-   7500ab3..93b371d  main       -> origin/main
-Updating 7500ab3..93b371d
-Fast-forward
- Dockerfile       |  7 +++--
- config.py        |  4 +++
- header.py        |  3 ++
- imdb_scraper.py  | 88 +++++++++++++++++++++++++++++++++++++++-----------------
- requirements.txt |  1 +
- 5 files changed, 74 insertions(+), 29 deletions(-)
+Already up to date.
 
 Array
 (
@@ -7392,7 +7306,40 @@ Processing /tmp/GitHub/repositoryClone/Entree3k/Unraid-Templates/qbithelparr/qbi
 
 Downloading Official Wizarr Repository
 
-Already up to date.
+From https://github.com/wizarrrr/wizarr
+   01b25b4f..dd18d47e  main       -> origin/main
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+Updating 01b25b4f..dd18d47e
+Fast-forward
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+ app/translations/ca/LC_MESSAGES/messages.po      | 244 ++++++++++++-----------
+ app/translations/cs/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/da/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/de/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/es/LC_MESSAGES/messages.po      |  10 +-
+ app/translations/fa/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/fr/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/gsw/LC_MESSAGES/messages.po     |   2 +-
+ app/translations/he/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/hr/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/hu/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/is/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/it/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/lt/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/nb_NO/LC_MESSAGES/messages.po   |   2 +-
+ app/translations/nl/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/pl/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/pt/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/pt_BR/LC_MESSAGES/messages.po   |   2 +-
+ app/translations/ro/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/ru/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/sv/LC_MESSAGES/messages.po      |   2 +-
+ app/translations/zh_Hans/LC_MESSAGES/messages.po |   2 +-
+ app/translations/zh_Hant/LC_MESSAGES/messages.po |   2 +-
+ messages.pot                                     |   2 +-
+ 25 files changed, 153 insertions(+), 147 deletions(-)
 
 Array
 (
@@ -22444,6 +22391,8 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
+deucebucket/library-manager
+ghcr.io/deucebucket/library-manager:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
@@ -22537,8 +22486,12 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
+operacle/checkcle
+operacle/checkcle:latest Downloads: 229183  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
+iamspido/github-release-monitor
+ghcr.io/iamspido/github-release-monitor:latest Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/unraid/unraid-coral-driver/raw/master/coral-driver.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/unraid/cache_dirs/master/dlandon.cache.dirs.plg attempt 1...
@@ -22653,6 +22606,8 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dcflachs/swapfile_plugin/master/swapfile.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/b3rs3rk/gpustat-unraid/master/gpustat.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/GuildDarts/unraid-plugin-docker.folder/master/plugins/docker.folder.plg attempt 1...
+casbin/casdoor
+casbin/casdoor:latest Downloads: 1207590  Stars: 23  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/doron1/unraid-sas-spindown/master/sas-spindown.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/WOLforServices/master/WOL4Services.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/unraid.usbip/master/unraid.usbip.plg attempt 1...
@@ -22670,10 +22625,20 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+shaneisrael/snapsmaps
+shaneisrael/snapsmaps:latest Downloads: 2265  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
+zggis/plex-tvtime
+zggis/plex-tvtime Downloads: 27797  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
+matrixconduit/matrix-conduit
+matrixconduit/matrix-conduit:latest Downloads: 530468  Stars: 12  Base: unknown
+enricoros/big-agi
+ghcr.io/enricoros/big-agi:latest Downloads:   Stars:   Base: unknown
+imagegenius/jenkins
+ghcr.io/imagegenius/jenkins Downloads:   Stars:   Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
