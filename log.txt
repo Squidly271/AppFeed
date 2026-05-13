@@ -147,8 +147,72 @@ Success
 Downloading botmem
 
 From https://github.com/botmem/botmem
- * [new tag]         v0.35.28   -> v0.35.28
-Already up to date.
+   159a314..c39aa82  main       -> origin/main
+Updating 159a314..c39aa82
+Fast-forward
+ .env.example                                       |   1 +
+ .github/workflows/apple-bridge-release.yml         |  95 +++
+ AGENTS.md                                          |   8 +
+ apps/api/nest-cli.json                             |   4 +-
+ .../accounts/__tests__/accounts.controller.test.ts |   8 +-
+ apps/api/src/accounts/accounts.controller.ts       |   6 +-
+ apps/api/src/app.module.ts                         |   4 +-
+ .../apple-tunnel-transport.ts}                     |  10 +-
+ .../apple-tunnel.gateway.ts}                       |  15 +-
+ .../apple-tunnel.module.ts}                        |  10 +-
+ .../apple-tunnel.service.ts}                       | 117 +++-
+ apps/api/src/auth/__tests__/auth.service.test.ts   |  12 +-
+ apps/api/src/demo/__tests__/fake-data.spec.ts      |   6 +-
+ apps/api/src/demo/fake-data.ts                     |   4 +-
+ apps/api/src/jobs/__tests__/sync.processor.test.ts |  10 +-
+ apps/api/src/jobs/sync.processor.ts                |  14 +-
+ apps/api/src/main.ts                               |  35 +-
+ apps/api/src/memory/memory.service.ts              |  15 +-
+ .../src/people/__tests__/people.service.test.ts    |   1 +
+ apps/api/src/people/people.service.ts              |  26 +
+ .../user-auth/__tests__/user-auth.service.test.ts  |  12 +
+ apps/api/src/user-auth/user-auth.service.ts        |  24 +-
+ apps/api/src/worker.module.ts                      |   4 +-
+ apps/api/vitest.config.ts                          |   2 +-
+ .../__tests__/ConnectorAccountRow.test.tsx         |   4 +-
+ .../__tests__/ConnectorSetupModal.test.tsx         | 125 +++-
+ .../components/connectors/ConnectorSetupModal.tsx  | 110 +--
+ docs/connectors/imessage.md                        | 184 ++---
+ docs/plans/2026-02-26-imessage-connector-design.md |  18 +-
+ e2e/connectors/imessage.e2e.test.ts                |  28 +-
+ e2e/people/merge-split.e2e.test.ts                 |  43 +-
+ .../apple-bridge/macos/AppleBridgeNative.swift     | 521 ++++++++++++++
+ .../apple-bridge/macos/BotmemAppleBridge.swift     | 779 +++++++++++++++++++++
+ packages/apple-bridge/macos/Info.plist             |  38 +
+ packages/apple-bridge/package.json                 |   4 +
+ packages/apple-bridge/scripts/build-macos-app.mjs  | 226 ++++++
+ packages/apple-bridge/src/cli.ts                   | 310 ++++++--
+ packages/apple-bridge/src/crypto.ts                |   2 +-
+ packages/apple-bridge/src/db.ts                    |   6 +-
+ packages/apple-bridge/src/index.ts                 |   2 +-
+ packages/apple-bridge/src/preflight.ts             |  63 +-
+ packages/apple-bridge/src/rpc-handler.ts           |  12 +-
+ packages/apple-bridge/src/setup.ts                 | 229 ++++++
+ packages/apple-bridge/src/tunnel.ts                |   2 +
+ .../{imsg-client.test.ts => apple-client.test.ts}  |   6 +-
+ .../imessage/src/__tests__/imessage.test.ts        |  22 +-
+ .../src/{imsg-client.ts => apple-client.ts}        |   4 +-
+ packages/connectors/imessage/src/index.ts          |  16 +-
+ packages/connectors/imessage/src/transport.ts      |   4 +-
+ pnpm-lock.yaml                                     | 398 ++++++++++-
+ 50 files changed, 3162 insertions(+), 437 deletions(-)
+ create mode 100644 .github/workflows/apple-bridge-release.yml
+ rename apps/api/src/{imsg-tunnel/ws-tunnel-transport.ts => apple-tunnel/apple-tunnel-transport.ts} (72%)
+ rename apps/api/src/{imsg-tunnel/imsg-tunnel.gateway.ts => apple-tunnel/apple-tunnel.gateway.ts} (89%)
+ rename apps/api/src/{imsg-tunnel/imsg-tunnel.module.ts => apple-tunnel/apple-tunnel.module.ts} (53%)
+ rename apps/api/src/{imsg-tunnel/imsg-tunnel.service.ts => apple-tunnel/apple-tunnel.service.ts} (83%)
+ create mode 100644 packages/apple-bridge/macos/AppleBridgeNative.swift
+ create mode 100644 packages/apple-bridge/macos/BotmemAppleBridge.swift
+ create mode 100644 packages/apple-bridge/macos/Info.plist
+ create mode 100644 packages/apple-bridge/scripts/build-macos-app.mjs
+ create mode 100644 packages/apple-bridge/src/setup.ts
+ rename packages/connectors/imessage/src/__tests__/{imsg-client.test.ts => apple-client.test.ts} (98%)
+ rename packages/connectors/imessage/src/{imsg-client.ts => apple-client.ts} (96%)
 
 Array
 (
@@ -901,21 +965,30 @@ Processing /tmp/GitHub/repositoryClone/sworcery/mem-zero/unraid-template.xml...S
 
 Downloading BitCryptic's 2nd Repository
 
-Already up to date.
+From https://github.com/bitcryptic-gw/unraid-templates
+   dc5666d..6537a65  main       -> origin/main
+Updating dc5666d..6537a65
+Fast-forward
+ Paperclip.xml | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md     |  1 +
+ 2 files changed, 56 insertions(+)
+ create mode 100644 Paperclip.xml
 
 Array
 (
     [https://github.com/bitcryptic-gw/unraid-templates] => Array
         (
-            [0] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/ca_profile.xml
-            [1] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/PiNetworkNode.xml
-            [2] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/NanoClaw.xml
-            [3] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/ckpool-solo.xml
+            [0] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/Paperclip.xml
+            [1] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/ca_profile.xml
+            [2] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/PiNetworkNode.xml
+            [3] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/NanoClaw.xml
+            [4] => /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/ckpool-solo.xml
         )
 
 )
    Success!
 Repo Branch: main
+Processing /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/Paperclip.xml...Success
 Processing /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/ca_profile.xml...FOUND PROFILE
 Processing /tmp/GitHub/repositoryClone/bitcryptic-gw/unraid-templates/PiNetworkNode.xml...Port referenced in webUI does not correspond with a container port defined.  Entry changed to http://[IP]:[PORT:8000]/
 
@@ -3303,12 +3376,7 @@ Failed loading XML
 
 Downloading sarcasm's Repository
 
-From https://github.com/kroeberd/unraid-templates
-   51c19b7..ff8ea57  main       -> origin/main
-Updating 51c19b7..ff8ea57
-Fast-forward
- templates/alldebrid-client.xml | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -4425,12 +4493,7 @@ Processing /tmp/GitHub/repositoryClone/DearTanker/Unraid-Docker-Template/OpenLis
 
 Downloading GillBates' Repository
 
-From https://github.com/Gill-Bates/unraid-app-templates
-   6553d9f..75449b5  main       -> origin/main
-Updating 6553d9f..75449b5
-Fast-forward
- community-apps/03_unifi_os_server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -4475,7 +4538,12 @@ Processing /tmp/GitHub/repositoryClone/NickBorgers/unraid-apps/util.xml...Succes
 
 Downloading Kurotaku's Repository
 
-Already up to date.
+From https://github.com/Kurotaku-sama/Unraid-Plugins-Repository
+   96aad84..096900d  main       -> origin/main
+Updating 96aad84..096900d
+Fast-forward
+ user.scripts.enhanced.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Array
 (
@@ -22374,6 +22442,11 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
+bitcryptic/paperclip
+bitcryptic/paperclip:latest Downloads: 273  Stars: 0  Base: unknown
+Pulling bitcryptic/paperclip:latest
+Killed
+failed to register layer: write /app/node_modules/.pnpm/@anthropic-ai+claude-agent-sdk-linux-x64@0.2.121/node_modules/@anthropic-ai/claude-agent-sdk-linux-x64/claude: no space left on device
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
@@ -22444,8 +22517,6 @@ Updating stats on containers
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/tldr-unRAID/main/plugin/dwtldr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/desertwitch/SnapRAID-on-unRAID/main/plugin/dwsnap.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/VladoPortos/folder.view2/main/folder.view2.plg attempt 1...
-santiagosayshey/profilarr
-santiagosayshey/profilarr:latest Downloads: 3216321  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Piratkopia13/unraid-buddybackup/refs/heads/main/buddybackup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-webhookd/master/webhookd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/fejich/unraid-ctop/master/ctop.plg attempt 1...
@@ -22469,8 +22540,8 @@ santiagosayshey/profilarr:latest Downloads: 3216321  Stars: 3  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dkaser/unraid-motd/main/plugin/motd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.labelInjector/main/docker.labelInjector.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/phyzical/docker.versions/main/docker.versions.plg attempt 1...
-nousresearch/hermes-agent
-nousresearch/hermes-agent:latest Downloads: 1130318  Stars: 64  Base: unknown
+waazaafr/m3u-to-strm
+waazaafr/m3u-to-strm:latest Downloads: 1967  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/R3yn4ld/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Peuuuur-Noel/unraid-web-push-notification/master/plugin/web-push-notification.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/fuzzy01/autotweak/releases/latest/download/autotweak.plg attempt 1...
@@ -22526,12 +22597,6 @@ nousresearch/hermes-agent:latest Downloads: 1130318  Stars: 64  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlr/releases/latest/download/controlr.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://github.com/jbrodriguez/controlrd/releases/latest/download/controlrd.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Waseh/rclone-unraid/master/plugin/rclone.plg attempt 1...
-jlesage/crashplan-enterprise
-jlesage/crashplan-enterprise Downloads: 23609  Stars: 2  Base: unknown
-jlesage/thunderbird
-jlesage/thunderbird Downloads: 338898  Stars: 6  Base: unknown
-jlesage/firefox-esr
-jlesage/firefox-esr Downloads: 32647  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/itimpi/parity.check.tuning/master/parity.check.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-plexstreams/master/plexstreams.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/dorgan/Unraid-networkstats/master/networkstats.plg attempt 1...
@@ -22610,16 +22675,14 @@ jlesage/firefox-esr Downloads: 32647  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/SimonFair/USB_Manager_Serial_Options_addon/main/usb_manager_serial_options_addon.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/bobbintb/unraid_vm_template/master/bobbintb.system.unraidvm.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/IkerSaint/ZFS-Master-Unraid/main/zfs.master.plg attempt 1...
+collinheist/titlecardmaker
+collinheist/titlecardmaker:latest Downloads: 105846  Stars: 5  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/masterwishx/ca.mover.tuning/master/plugins/ca.mover.tuning.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.beta.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/unraid-appdata.backup/master/appdata.backup.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/Commifreak/ca.backup2/master/ca.backup2.plg attempt 1...
-anthonygress/lab-dash
-ghcr.io/anthonygress/lab-dash:latest Downloads:   Stars:   Base: unknown
-fintechstudios/davical
-fintechstudios/davical:latest Downloads: 32974  Stars: 3  Base: unknown
-xacnio/tweetcapture
-xacnio/tweetcapture:latest Downloads: 2706  Stars: 0  Base: unknown
+smp46/pingvin-share-x
+smp46/pingvin-share-x:latest Downloads: 10378  Stars: 1  Base: unknown
  Downloading https://ca.unraid.net/stats/https://github.com/giganode/unraid-i915-sriov/raw/master/i915-sriov.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/unraid-mqtt-pub-sub/master/mqtt-pub-sub.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/giganode/corsairpsu-unraid/master/corsairpsu.plg attempt 1...
