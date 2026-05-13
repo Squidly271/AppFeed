@@ -146,7 +146,84 @@ Success
 
 Downloading botmem
 
-Already up to date.
+From https://github.com/botmem/botmem
+   bbc6891..7f59587  main       -> origin/main
+ * [new tag]         v0.35.26   -> v0.35.26
+ * [new tag]         v0.35.24   -> v0.35.24
+ * [new tag]         v0.35.25   -> v0.35.25
+Updating bbc6891..7f59587
+Fast-forward
+ .github/workflows/deploy.yml                       |   6 +-
+ .../accounts/__tests__/accounts.service.test.ts    |  25 ++++
+ apps/api/src/accounts/accounts.controller.ts       |  11 +-
+ apps/api/src/accounts/accounts.service.ts          |   2 +-
+ apps/api/src/auth/auth.service.ts                  |  28 ++--
+ .../connector-sync-policy.service.test.ts          |  15 +-
+ .../__tests__/connectors.service.test.ts           |  35 +++++
+ .../connectors/connector-sync-policy.service.ts    |   8 +-
+ apps/api/src/connectors/connectors.service.ts      |  22 ++-
+ .../migrations/0031_migrate_imessage_to_apple.sql  |  19 +++
+ apps/api/src/db/migrations/meta/_journal.json      |   7 +
+ apps/api/src/imsg-tunnel/imsg-tunnel.gateway.ts    |   2 +-
+ apps/api/src/imsg-tunnel/imsg-tunnel.service.ts    |  10 +-
+ apps/api/src/imsg-tunnel/ws-tunnel-transport.ts    |   2 +-
+ .../src/jobs/__tests__/scheduler.service.test.ts   |  15 ++
+ apps/api/src/jobs/__tests__/sync.processor.test.ts |  84 ++++++++++++
+ apps/api/src/jobs/jobs.module.ts                   |   2 +
+ apps/api/src/jobs/scheduler.service.ts             |   4 +
+ apps/api/src/jobs/sync.processor.ts                | 104 ++++++++++++--
+ apps/api/src/mcp/__tests__/mcp.service.test.ts     |   2 +
+ apps/api/src/mcp/mcp.service.ts                    |   6 +-
+ apps/api/src/me/me.service.ts                      |   1 +
+ apps/api/src/people/people-pipeline.service.ts     |   2 +-
+ .../__tests__/ConnectorSetupModal.test.tsx         |  82 ++++++++++-
+ .../components/connectors/ConnectorAccountRow.tsx  |  64 +++++----
+ .../components/connectors/ConnectorSetupModal.tsx  |  56 ++++++--
+ apps/web/src/lib/connectorMeta.ts                  |   2 +
+ apps/web/src/mock/connectors.ts                    |   8 +-
+ apps/web/src/pages/ConnectorsPage.tsx              |  24 ++--
+ .../web/src/store/__tests__/connectorStore.test.ts |  29 ++++
+ apps/web/src/store/connectorStore.ts               |   4 +-
+ docs/connectors/imessage.md                        |   6 +-
+ e2e/connectors/imessage.e2e.test.ts                |  28 ++--
+ e2e/playwright-report/index.html                   |   2 +-
+ e2e/test-results/.last-run.json                    |   2 +-
+ .../{imsg-bridge => apple-bridge}/package.json     |   6 +-
+ packages/{imsg-bridge => apple-bridge}/src/cli.ts  |  10 +-
+ packages/apple-bridge/src/contacts.ts              | 152 +++++++++++++++++++++
+ .../{imsg-bridge => apple-bridge}/src/crypto.ts    |   2 +-
+ packages/{imsg-bridge => apple-bridge}/src/db.ts   |   0
+ .../{imsg-bridge => apple-bridge}/src/index.ts     |   0
+ .../{imsg-bridge => apple-bridge}/src/preflight.ts |   2 +-
+ .../src/rpc-handler.ts                             |   8 +-
+ .../{imsg-bridge => apple-bridge}/src/tunnel.ts    |   6 +-
+ .../{imsg-bridge => apple-bridge}/tsconfig.json    |   0
+ packages/connector-sdk/src/types.ts                |   7 +
+ .../imessage/src/__tests__/imessage.test.ts        |  53 ++++++-
+ packages/connectors/imessage/src/imsg-client.ts    |  23 ++++
+ packages/connectors/imessage/src/index.ts          |  99 ++++++++++++--
+ packages/connectors/whatsapp/src/index.ts          |   1 +
+ packages/openclaw-plugin/__tests__/index.test.ts   |   8 ++
+ .../src/templates/memory-instructions.ts           |   4 +-
+ packages/shared/src/agent-tools.ts                 |   6 +-
+ packages/shared/src/types/index.ts                 |   5 +
+ packages/shared/src/utils/__tests__/utils.test.ts  |   6 +-
+ packages/shared/src/utils/index.ts                 |   1 +
+ pnpm-lock.yaml                                     |   2 +-
+ unraid/README.md                                   |   4 +-
+ unraid/community-app-submission.md                 |  89 +++++++++++-
+ 59 files changed, 1048 insertions(+), 165 deletions(-)
+ create mode 100644 apps/api/src/db/migrations/0031_migrate_imessage_to_apple.sql
+ rename packages/{imsg-bridge => apple-bridge}/package.json (76%)
+ rename packages/{imsg-bridge => apple-bridge}/src/cli.ts (92%)
+ create mode 100644 packages/apple-bridge/src/contacts.ts
+ rename packages/{imsg-bridge => apple-bridge}/src/crypto.ts (98%)
+ rename packages/{imsg-bridge => apple-bridge}/src/db.ts (100%)
+ rename packages/{imsg-bridge => apple-bridge}/src/index.ts (100%)
+ rename packages/{imsg-bridge => apple-bridge}/src/preflight.ts (98%)
+ rename packages/{imsg-bridge => apple-bridge}/src/rpc-handler.ts (87%)
+ rename packages/{imsg-bridge => apple-bridge}/src/tunnel.ts (97%)
+ rename packages/{imsg-bridge => apple-bridge}/tsconfig.json (100%)
 
 Array
 (
@@ -4236,7 +4313,16 @@ Processing /tmp/GitHub/repositoryClone/CordlessWool/unraid-docker-templates/shrt
 
 Downloading TopHat17's Repository
 
-Already up to date.
+From https://github.com/tophat17/jelly-request
+   7500ab3..93b371d  main       -> origin/main
+Updating 7500ab3..93b371d
+Fast-forward
+ Dockerfile       |  7 +++--
+ config.py        |  4 +++
+ header.py        |  3 ++
+ imdb_scraper.py  | 88 +++++++++++++++++++++++++++++++++++++++-----------------
+ requirements.txt |  1 +
+ 5 files changed, 74 insertions(+), 29 deletions(-)
 
 Array
 (
@@ -5649,12 +5735,7 @@ Processing /tmp/GitHub/repositoryClone/cmoro-deusto/unraid-templates/ca_profile.
 
 Downloading sam10155's Repository
 
-From https://github.com/sam10155/unraid-templates
-   bbd7c7d..746dd84  main       -> origin/main
-Updating bbd7c7d..746dd84
-Fast-forward
- ftbdirewolf201.21_server.xml | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+Already up to date.
 
 Array
 (
@@ -9953,12 +10034,7 @@ Success
 
 Downloading Djoss' Repository
 
-From https://github.com/jlesage/docker-templates
-   54364c6..9a51747  master     -> origin/master
-Updating 54364c6..9a51747
-Fast-forward
- jlesage/mediainfo.xml | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -15981,12 +16057,7 @@ Processing /tmp/GitHub/repositoryClone/patrickstigler/unraid_app_templates/mqtt-
 
 Downloading Goobaroo's Repository
 
-From https://github.com/Goobaroo/unraid-templates
-   bd177a8..80241fe  main       -> origin/main
-Updating bd177a8..80241fe
-Fast-forward
- ftbdirewolf201.21_server.xml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Already up to date.
 
 Array
 (
@@ -22373,8 +22444,6 @@ Processing /tmp/GitHub/repositoryClone/ProphetSe7en/unraid-templates/containerne
 
 Updating stats on containers
 
-khak1s/arr-dashboard
-khak1s/arr-dashboard:latest Downloads: 73847  Stars: 0  Base: unknown
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/kaedinger/unspin/main/unspin.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/pacnpal/wireguard-watchdog/main/plugin/wg-watchdog.plg attempt 1...
  Downloading https://ca.unraid.net/stats/https://raw.githubusercontent.com/drohack/UptimeKumaPlugin/main/uptime-kuma.plg attempt 1...
